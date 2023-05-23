@@ -1,0 +1,57 @@
+---
+permalink: howto/creating-a-performance-policy-for-alerting.html 
+sidebar: sidebar 
+keywords:  
+summary: Le policy sulle performance consentono di monitorare e inviare avvisi quando vengono soddisfatte condizioni specifiche. 
+---
+= Creazione di policy sulle performance per gli avvisi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le policy sulle performance consentono di monitorare e inviare avvisi quando vengono soddisfatte condizioni specifiche.
+
+
+
+== A proposito di questa attività
+
+Ora che abbiamo annotato le nostre risorse, creiamo una policy sulle performance che possiamo utilizzare per avvisarci quando la latenza è superiore a 2 ms in qualsiasi array di storage nel nostro data center Sunnyvale (DC1_SVL). Quando si verificano queste condizioni, invieremo un'e-mail ai destinatari selezionati.
+
+
+
+== Fasi
+
+. Selezionare *Gestisci* > *Criteri di performance*.
++
+Viene visualizzata la pagina Performance policy. Sono già state impostate diverse policy predefinite che è possibile modificare in base alle proprie esigenze. Tuttavia, creeremo una nuova politica.
+
+. Fare clic sul pulsante *+Aggiungi*.
++
+Viene visualizzata la finestra di dialogo *Aggiungi policy*.
+
+. Nel campo *Nome policy*, immettere "`SVL Data Center Latency policy`".
++
+È necessario utilizzare un nome diverso da tutti gli altri nomi di policy per l'oggetto. Ad esempio, non è possibile avere due criteri denominati "latenza" per un volume interno; tuttavia, è possibile disporre di un criterio di "latenza" per un volume interno e di un altro criterio di "latenza" per un volume diverso. La procedura consigliata consiste nell'utilizzare sempre un nome univoco per qualsiasi policy, indipendentemente dal tipo di oggetto.
+
+. Per *Apply to objects of type* (Applica a oggetti di tipo), selezionare *Storage* (archiviazione).
+. Nel campo *con annotazione*, selezionare *il data center* è "C1_SVL `D`" (oppure scegliere il nome del data center desiderato).
+. Applicare dopo una finestra di *prima occorrenza* .
++
+L'opzione First ricorrenza attiva un avviso quando viene superata una soglia sul primo campione di dati. Tutte le altre opzioni attivano un avviso quando la soglia viene superata una volta e viene continuamente superata per almeno il periodo di tempo specificato.
+
+. Dall'elenco *con severità*, selezionare *Avviso*.
+. Nella sezione *destinatari email*, fare clic per ignorare l'elenco globale dei destinatari. Fare clic su**+**per aggiungere l'indirizzo e-mail del primo destinatario di avviso desiderato, quindi fare clic su *OK*. Ripetere l'operazione per tutti i destinatari di posta elettronica desiderati.
+. Lasciare l'opzione predefinita Create alert (Crea avviso) se si verifica una delle seguenti condizioni. In questo modo viene inviato un avviso se viene soddisfatta una qualsiasi delle soglie impostate. È inoltre possibile scegliere di inviare un avviso solo se vengono soddisfatte le soglie impostate per *tutte*.
+. Per impostare la prima soglia, selezionare *Latency - Total* (latenza - totale) nell'elenco a discesa e impostarla su un valore superiore a 2 ms.
+. Se lo si desidera, aggiungere ulteriori soglie per l'avviso facendo clic sul pulsante *Add threshold* (Aggiungi soglia). Una volta personalizzato il criterio come desiderato, fare clic su *Save* (Salva).
+. È inoltre possibile scegliere di *interrompere l'elaborazione di ulteriori policy se viene generato un avviso*. In questo modo, gli avvisi aggiuntivi relativi ai criteri verranno interrotte se le condizioni di questo criterio vengono soddisfatte.
+. È possibile aggiungere tutte le nuove policy desiderate, impostando avvisi per altri destinatari in base alle diverse condizioni, in base alle esigenze aziendali. Qualsiasi policy configurata senza destinatari specifici invierà avvisi all'elenco globale dei destinatari impostato nella pagina *Admin* > *Notifiche*
+
+
+
+
+== Al termine
+
+Ogni nuova policy viene attivata automaticamente al momento del salvataggio e i destinatari iniziano a ricevere avvisi quando le condizioni della policy vengono soddisfatte (nota come _violazione_). È inoltre possibile monitorare queste violazioni nella dashboard * > * dashboard violazioni*.

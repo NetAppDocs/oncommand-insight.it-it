@@ -1,0 +1,30 @@
+---
+permalink: config-admin/deleting-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile eliminare le query quando non raccolgono più informazioni utili sulle risorse. Non è possibile eliminare una query se utilizzata in una regola di annotazione. 
+---
+= Eliminazione delle query
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare le query quando non raccolgono più informazioni utili sulle risorse. Non è possibile eliminare una query se utilizzata in una regola di annotazione.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente di Insightweb.
+. Fare clic su *Query* e selezionare *Mostra tutte le query*.
++
+Viene visualizzata la pagina Query.
+
+. Posizionare il cursore sulla query che si desidera eliminare e fare clic su image:../media/trash-can-query.gif[""].
++
+Viene visualizzato un messaggio di conferma che chiede se si desidera eliminare la query.
+
+. Fare clic su *OK*.
+

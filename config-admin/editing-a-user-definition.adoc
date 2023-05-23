@@ -1,0 +1,40 @@
+---
+permalink: config-admin/editing-a-user-definition.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Un utente con privilegi di amministratore può modificare un account utente per modificare l"indirizzo e-mail o i ruoli per OnCommand Insight o DWH e le funzioni di reporting.' 
+---
+= Modifica di una definizione utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un utente con privilegi di amministratore può modificare un account utente per modificare l'indirizzo e-mail o i ruoli per OnCommand Insight o DWH e le funzioni di reporting.
+
+
+
+== Prima di iniziare
+
+Determinare il tipo di account utente (OnCommand Insight, DWH o una combinazione) da modificare.
+
+
+
+== A proposito di questa attività
+
+Per gli utenti LDAP, è possibile modificare l'indirizzo e-mail solo utilizzando questo metodo.
+
+
+
+== Fasi
+
+. Accedere con privilegi di amministratore.
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Fare clic su *Setup*.
+. Fare clic sulla scheda *utenti*.
+. Individuare la riga che visualizza l'account utente che si desidera modificare.
+. A destra delle informazioni sull'utente, fare clic sull'icona *Edit user account* (Modifica account utente).
+. Apportare le modifiche necessarie.
+. Fare clic su *Save* (Salva).
+

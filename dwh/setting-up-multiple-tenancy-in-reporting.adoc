@@ -1,0 +1,77 @@
+---
+permalink: dwh/setting-up-multiple-tenancy-in-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Il data warehouse di OnCommand Insight consente di gestire più tenancy (spesso abbreviate in "multi-tenancy" o "multi-tenancy") nel reporting, consentendo di associare gli utenti a una o più entità aziendali. Con questa funzione, gli amministratori possono separare dati o report in base agli attributi dell"utente o all"affiliazione dell"utente.' 
+---
+= Impostazione di tenancy multiple nel reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il data warehouse di OnCommand Insight consente di gestire più tenancy (spesso abbreviata in "`multitenancy`" o "`multiancy`") nel reporting, consentendo di associare gli utenti a una o più entità aziendali. Con questa funzione, gli amministratori possono separare dati o report in base agli attributi dell'utente o all'affiliazione dell'utente.
+
+Le entità di business utilizzano una gerarchia ai fini del chargeback della capacità utilizzando i seguenti valori:
+
+* Tenant: Utilizzato principalmente dai service provider per associare le risorse a un cliente, ad esempio NetApp.
+* Line of Business (LOB): Una linea di business all'interno di un'azienda, ad esempio "hardware" o "Software".
+* Business unit: Business unit tradizionale, ad esempio "Vendite" o "Marketing".
+* Project (progetto): Un progetto a cui si desidera assegnare il chargeback della capacità.
+
+
+Il processo di configurazione di più tenancy prevede i seguenti passaggi principali:
+
+* Configurare un account utente Data Warehouse.
+* Creare un gruppo in Reporting Portal.
+* Assegnare gli utenti a uno o più gruppi, che rappresentano le entità aziendali.
+* Assegnare gli utenti a una o più entità aziendali. Ad esempio, gli utenti associati a "NetApp" ottengono l'accesso a tutte le entità aziendali che hanno "`NetApp`" come tenant.
+* Verificare che gli utenti possano visualizzare solo i report che dovrebbero visualizzare.
+
+
+I seguenti punti riassumono il modo in cui gli utenti accedono ai dati di reporting:
+
+* Un utente, non assegnato a nessun gruppo, ottiene l'accesso a tutti i dati.
+* Un utente, assegnato a qualsiasi gruppo, non potrà accedere ai record senza entità aziendale.
+
+
+Ad esempio, potrebbe essere necessario disporre dei seguenti reparti e separare i report per gli utenti all'interno di tali reparti.
+
+|===
+
+
+| Utente | Progettazione | Supporto | Finanza | Legale 
+
+
+ a| 
+Utente1
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+Utente2
+ a| 
+ a| 
+ a| 
+X
+ a| 
+X
+
+
+
+ a| 
+Utente3
+ a| 
+ a| 
+X
+ a| 
+ a| 
+
+|===

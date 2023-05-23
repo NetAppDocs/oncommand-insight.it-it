@@ -1,0 +1,16 @@
+---
+permalink: reporting/managing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per ciascun report, è possibile selezionare il collegamento More (Altro) nella colonna Actions (azioni) e accedere a tutte le operazioni del report, ad esempio l"impostazione delle proprietà del report, la pianificazione dei report o l"invio tramite e-mail dei report. Gli amministratori dispongono di più opzioni di gestione rispetto ad altri utenti.' 
+---
+= Gestione dei report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per ciascun report, è possibile selezionare il collegamento *More* nella colonna Actions (azioni) e accedere a tutte le operazioni del report, ad esempio l'impostazione delle proprietà del report, la pianificazione dei report o l'invio tramite e-mail dei report. Gli amministratori dispongono di più opzioni di gestione rispetto ad altri utenti.
+
+Gli amministratori possono impostare le autorizzazioni per altri utenti di report in base al proprio ruolo OnCommand Insight.

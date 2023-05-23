@@ -1,0 +1,86 @@
+---
+permalink: howto/creating-a-simple-chargeback-report.html 
+sidebar: sidebar 
+keywords:  
+summary: 'I report di chargeback consentono ad amministratori e manager di valutare l"utilizzo della capacità per applicazione, entità aziendale, livello di servizio e Tier. I report di chargeback includono la responsabilità della capacità, la responsabilità storica della capacità e i dati di tendenza. I dati per questi report vengono creati e pianificati dal data warehouse di OnCommand Insight.' 
+---
+= Creazione di un semplice report di chargeback
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I report di chargeback consentono ad amministratori e manager di valutare l'utilizzo della capacità per applicazione, entità aziendale, livello di servizio e Tier. I report di chargeback includono la responsabilità della capacità, la responsabilità storica della capacità e i dati di tendenza. I dati per questi report vengono creati e pianificati dal data warehouse di OnCommand Insight.
+
+
+
+== Prima di iniziare
+
+Per creare il report di esempio, il sistema deve essere configurato in modo da riportare i costi per i Tier di storage. È necessario completare le seguenti attività:
+
+* Definire le annotazioni per i livelli.
+* Assegnare i costi alle annotazioni.
+* Definire le applicazioni per le quali si desidera tenere traccia dei dati.
+* Assegnare le applicazioni alle risorse.
+
+
+
+
+== A proposito di questa attività
+
+In questo esempio viene utilizzato lo strumento di reporting avanzato di Cognos Workspace per creare il report Chargeback. Con Workspace Advanced, è possibile creare report trascinando e rilasciando gli elementi dei dati in un pallet di report.
+
+
+
+== Fasi
+
+. Nell'interfaccia utente Web di OnCommand Insight, fare clic sull'icona di reporting.
+. Accedere al portale di reporting.
+. Nella barra degli strumenti di IBM Cognos Connection, fare clic su *Launch* > *Cognos Worksapce Advanced*
++
+Viene visualizzata la schermata del pacchetto Workspace Advanced.
+
+. Fare clic su *pacchetti* > *Chargeback*
++
+Viene visualizzata la schermata IBM Workspace Advanace.
+
+. Fare clic su *nuovo*
+. Nella finestra di dialogo *New* report (nuovo report), fare clic su *List* (elenco) per specificare un report a elenco.
++
+Viene visualizzata la tavolozza dei report e i messaggi "`Simple data mart`" e "`Advanced data mart`" vengono visualizzati sotto l'intestazione Source (origine).
+
+. Fare clic sulle frecce accanto a ciascun data mart per espanderlo.
++
+Viene visualizzato il contenuto completo dei data mart.
+
+. Trascinare "`Application`" da "`Simple Data Mart `" nella colonna più a sinistra della tavolozza dei report.
++
+Quando si trascina un elemento nella tavolozza, la colonna si restringe ed è evidenziata. Se si rilasciano i dati dell'applicazione nelle colonne evidenziate, tutte le applicazioni vengono elencate correttamente nella colonna.
+
+. Trascinare "`Tier`" da "`Simple Data Mart `" nella colonna successiva della tavolozza dei report.
++
+Il livello di storage associato a ciascuna applicazione viene aggiunto alla tavolozza.
+
+. Trascinare "`Tier Cost`" da "`Simple Data Mart `" nella colonna successiva della tavolozza dei report.
+. Trascinare "`Provised Capacity`" da "`Simple Data Mart `" nella colonna successiva della tavolozza dei report.
+. Tenere premuto il tasto *Ctrl* e selezionare le colonne "`Tier cost`" e "`provisioning Capacity`" nel pallet.
+. Fare clic con il pulsante destro del mouse in una delle colonne selezionate.
+. Fare clic su *Calculate* > *Tier cost * Provised Capacity DB*
++
+Una nuova colonna viene aggiunta al pallet con il titolo "Tier Cost * Provision Capacity GB".
+
+. Fare clic con il pulsante destro del mouse sulla colonna *Tier Cost * Provision Capacity GB*.
+. Fare clic su *Style* > *Data Type* (tipo di dati)
+. Fare clic su *tipo formato* > *valuta*
+. Fare clic su *OK*
++
+I dati della colonna sono ora formattati come valuta statunitense.
+
+. Fare clic con il pulsante destro del mouse su "`Tier Cost * Provision Capacity GB`" e selezionare *Edit Data Item Label*
+. Sostituire il campo Nome con "`Provised Capacity Cost`"
+. Per eseguire il report, fare clic su *Esegui* > *Esegui report - HTML*
++
+Viene visualizzato un report simile al seguente. image:../media/insight-chargeback-report.gif[""]
+
+

@@ -1,0 +1,53 @@
+---
+permalink: config-admin/setting-up-and-managing-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Gli account utente, l"autenticazione utente e l"autorizzazione utente possono essere definiti e gestiti in due modi: Nel server LDAP (protocollo di accesso directory leggero) o in un database utente OnCommand Insight interno. La disponibilità di un account utente diverso per ciascuna persona consente di controllare i diritti di accesso, le preferenze individuali e la responsabilità. Utilizzare un account con privilegi di amministratore per questa operazione.' 
+---
+= Impostazione e gestione degli account utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli account utente, l'autenticazione utente e l'autorizzazione utente possono essere definiti e gestiti in due modi: Nel server LDAP (protocollo di accesso alle directory leggero) di Microsoft Active Directory (versione 2 o 3) o in un database utente OnCommand Insight interno. La disponibilità di un account utente diverso per ciascuna persona consente di controllare i diritti di accesso, le preferenze individuali e la responsabilità. Utilizzare un account con privilegi di amministratore per questa operazione.
+
+
+
+== Prima di iniziare
+
+È necessario aver completato le seguenti attività:
+
+* Installare le licenze OnCommand Insight.
+* Assegnare un nome utente univoco per ciascun utente.
+* Determinare le password da utilizzare.
+* Assegnare i ruoli utente corretti.
+
+
+[NOTE]
+====
+Le Best practice di sicurezza impongono agli amministratori di configurare il sistema operativo host per impedire l'accesso interattivo di utenti non amministratori/standard.
+
+====
+
+
+== Fasi
+
+. Aprire Insight nel browser.
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Fare clic su *Setup*.
+. Selezionare la scheda **utenti**.
+. Per creare un nuovo utente, fare clic sul pulsante *azioni* e selezionare *Aggiungi utente*.
++
+Immettere *Nome*, *Password*, *Indirizzo e-mail* e selezionare uno degli utenti *ruoli* come Amministratore, utente o ospite.
+
+. Per modificare le informazioni di un utente, selezionarlo dall'elenco e fare clic sul simbolo *Edit user account* (Modifica account utente) a destra della descrizione dell'utente.
+. Per rimuovere un utente dal sistema OnCommand Insight, selezionarlo dall'elenco e fare clic su *Delete user account* (Elimina account utente) a destra della descrizione dell'utente.
+
+
+
+
+== Risultati
+
+Quando un utente accede a OnCommand Insight, il server tenta per primo di autenticarsi tramite LDAP, se LDAP è attivato. Se OnCommand Insight non riesce a individuare l'utente sul server LDAP, esegue la ricerca nel database Insight locale.

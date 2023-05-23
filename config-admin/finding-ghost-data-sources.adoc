@@ -1,0 +1,26 @@
+---
+permalink: config-admin/finding-ghost-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: Se è stata rimossa una periferica ma i dati rimangono, è possibile individuare eventuali origini dati fantasma in modo da poterle rimuovere. 
+---
+= Individuazione di origini dati fantasma
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se è stata rimossa una periferica ma i dati rimangono, è possibile individuare eventuali origini dati fantasma in modo da poterle rimuovere.
+
+
+
+== Fasi
+
+. Nell'interfaccia utente Web, fare clic su *Admin* e selezionare *Troubleshooting*.
+. Nella parte inferiore della pagina dell'area altre attività, fare clic sul collegamento *risoluzione avanzata dei problemi*.
+. Nella scheda *Report*, fare clic sul collegamento *origini dati fantasma*.
++
+OnCommand Insight crea un elenco di utenti che hanno generato le informazioni sul dispositivo.
+
+

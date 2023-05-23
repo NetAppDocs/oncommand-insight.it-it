@@ -1,0 +1,14 @@
+---
+permalink: howto/finding-assets-querying.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile trovare e visualizzare facilmente le risorse nel proprio ambiente utilizzando potenti query. 
+---
+= Ricerca delle risorse: Query
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile trovare e visualizzare facilmente le risorse nel proprio ambiente utilizzando potenti query.

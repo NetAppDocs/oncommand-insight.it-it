@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-datadomain-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Questa origine dati raccoglie le informazioni di storage e configurazione dai sistemi storage di deduplica EMC Data Domain. Per aggiungere l"origine dati, è necessario utilizzare istruzioni e comandi di configurazione specifici e conoscere i requisiti dell"origine dati e le raccomandazioni sull"utilizzo.' 
+---
+= Origine dati EMC Data Domain
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa origine dati raccoglie le informazioni di storage e configurazione dai sistemi storage di deduplica EMC Data Domain. Per aggiungere l'origine dati, è necessario utilizzare istruzioni e comandi di configurazione specifici e conoscere i requisiti dell'origine dati e le raccomandazioni sull'utilizzo.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati del dominio dati EMC. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Array
+ a| 
+Storage
+
+
+
+ a| 
+Porta
+ a| 
+Porta
+
+
+
+ a| 
+File
+ a| 
+Volume interno
+
+
+
+ a| 
+Mtree
+ a| 
+Qtree
+
+
+
+ a| 
+Quota
+ a| 
+Quota
+
+
+
+ a| 
+Condivisione NFS e CIFS
+ a| 
+FileShare
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Indirizzo IP del dispositivo Data Domain
+* Nome utente e password di sola lettura per lo storage Data Domain
+* Porta SSH 22
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Indirizzo IP
+ a| 
+L'indirizzo IP o il nome di dominio completo dell'array di storage Data Domain
+
+
+
+ a| 
+Nome utente
+ a| 
+Il nome utente dell'array di storage Data Domain
+
+
+
+ a| 
+Password
+ a| 
+La password per l'array di storage Data Domain
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 20 minuti)
+
+
+
+ a| 
+Timeout attesa processo SSH (sec)
+ a| 
+Timeout processo SSH (impostazione predefinita: 180 secondi)
+
+
+
+ a| 
+Porta SSH
+ a| 
+Porta di servizio SSH
+
+|===

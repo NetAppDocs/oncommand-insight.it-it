@@ -1,0 +1,28 @@
+---
+permalink: config-admin/default-storage-annotation-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per accelerare l"assegnazione delle annotazioni di storage alle risorse, OnCommand Insight include 21 regole di annotazione predefinite, che associano un livello di Tier a un modello di Tier di storage. Tutte le risorse di storage vengono automaticamente associate a un Tier al momento dell"acquisizione delle risorse nell"ambiente.' 
+---
+= Regole di annotazione dello storage predefinite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per accelerare l'assegnazione delle annotazioni di storage alle risorse, OnCommand Insight include 21 regole di annotazione predefinite, che associano un livello di Tier a un modello di Tier di storage. Tutte le risorse di storage vengono automaticamente associate a un Tier al momento dell'acquisizione delle risorse nell'ambiente.
+
+Le regole di annotazione predefinite applicano le annotazioni di un livello nel seguente modo:
+
+* Tier 1, Tier di qualità dello storage
++
+L'annotazione Tier 1 viene applicata ai seguenti vendor e alle loro famiglie specificate: EMC (Symmetrix), HDS (HDS9500V, HDS9900, HDS9900V, R600, R700, USP r, USP V), IBM (DS8000), NetApp (FAS6000 o FAS6200) e violino (memoria).
+
+* Tier 2, Tier di qualità dello storage
++
+L'annotazione Tier 2 viene applicata ai seguenti vendor e alle loro famiglie specificate: HP (3PAR StoreServ o EVA), EMC (CLARiiON), HDS (AMS o D800), IBM (XIV) e NetApp (FAS3000, FAS3100 e FAS3200).
+
+
+
+È possibile modificare le impostazioni predefinite di queste regole in modo che corrispondano ai requisiti del livello o rimuoverle se non sono necessarie.

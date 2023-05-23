@@ -1,0 +1,23 @@
+---
+permalink: config-admin/maintaining-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Che tu sia un nuovo utente di Insight e abbia un nuovo sistema da configurare o che il tuo sistema sia in funzione da qualche tempo, devi adottare le misure necessarie per garantire il funzionamento corretto di Insight e della tua rete. Il concetto chiave di manutenzione è che le modifiche della rete devono essere di solito soddisfatte in Insight. 
+---
+= Gestione delle informazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Che tu sia un nuovo utente di Insight e abbia un nuovo sistema da configurare o che il tuo sistema sia in funzione da qualche tempo, devi adottare le misure necessarie per garantire il funzionamento corretto di Insight e della tua rete. Il concetto chiave di manutenzione è che le modifiche della rete devono essere di solito soddisfatte in Insight.
+
+Di seguito sono riportate le attività di manutenzione più comuni:
+
+* Gestione dei backup Insight
+* Aggiornamento delle licenze Insight scadute
+* Coordinamento delle patch di origine dei dati
+* Aggiornamento della versione Insight su tutte le unità di acquisizione
+* Eliminazione delle origini dati rimosse da Insight
+

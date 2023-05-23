@@ -1,0 +1,64 @@
+---
+permalink: config-admin/defining-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se si desidera tenere traccia dei dati associati a applicazioni specifiche in esecuzione nell"ambiente, è necessario definire tali applicazioni.' 
+---
+= Definizione delle applicazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si desidera tenere traccia dei dati associati a applicazioni specifiche in esecuzione nell'ambiente, è necessario definire tali applicazioni.
+
+
+
+== Prima di iniziare
+
+Se si desidera associare l'applicazione a un'entità aziendale, è necessario che l'entità aziendale sia già stata creata.
+
+
+
+== A proposito di questa attività
+
+È possibile associare le applicazioni alle seguenti risorse: Host, macchine virtuali, volumi, volumi interni, qtree, condivisioni e hypervisor.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Fare clic su *Manage* (Gestisci) e selezionare *Applications* (applicazioni).
++
+Dopo aver definito un'applicazione, la pagina applicazioni visualizza il nome dell'applicazione, la relativa priorità e, se applicabile, l'entità aziendale associata all'applicazione.
+
++
+[NOTE]
+====
+Se è installato il motore di rilevamento delle anomalie, la pagina del pannello delle applicazioni mostra anche un punteggio di anomalia per l'applicazione. Per ulteriori informazioni sull'installazione e la configurazione del motore di rilevamento delle anomalie, consultare la _Guida alla configurazione e all'amministrazione di OnCommand Insight_.
+
+====
+. Fare clic su *Aggiungi*.
++
+Viene visualizzata la finestra di dialogo Add Application (Aggiungi applicazione).
+
+. Inserire un nome univoco per l'applicazione nella casella *Nome*.
+. Fare clic su *priorità* e selezionare la priorità (critica, alta, media o bassa) per l'applicazione nell'ambiente in uso.
+. Se si intende utilizzare questa applicazione con un'entità commerciale, fare clic su *entità commerciale* e selezionare l'entità dall'elenco.
+. *Opzionale*: Se non si utilizza la condivisione del volume, deselezionare la casella *convalida condivisione volume*.
++
+Ciò richiede la licenza di assicurazione. Impostare questa opzione quando si desidera garantire che ciascun host abbia accesso agli stessi volumi in un cluster. Ad esempio, gli host dei cluster ad alta disponibilità spesso devono essere mascherati sugli stessi volumi per consentire il failover; tuttavia, gli host delle applicazioni non correlate non hanno solitamente la necessità di accedere agli stessi volumi fisici. Inoltre, le policy normative potrebbero richiedere l'esplicitamente di impedire alle applicazioni non correlate di accedere agli stessi volumi fisici per motivi di sicurezza.
+
+. Fare clic su *Save* (Salva).
++
+L'applicazione viene visualizzata nella pagina applicazioni. Facendo clic sul nome dell'applicazione, Insight visualizza la pagina delle risorse dell'applicazione.
+
+
+
+
+
+== Al termine
+
+Dopo aver definito un'applicazione, è possibile accedere a una pagina di risorse per host, macchina virtuale, volume, volume interno o hypervisor per assegnare un'applicazione a una risorsa.

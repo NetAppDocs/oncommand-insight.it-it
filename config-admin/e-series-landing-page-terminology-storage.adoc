@@ -1,0 +1,31 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse di storage NetApp e-Series. 
+---
+= Storage e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse di storage NetApp e-Series.
+
+
+
+== Terminologia dello storage e-Series
+
+I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle landing page delle risorse di storage NetApp e-Series. Molti di questi termini si applicano anche ad altri data collezionisti.
+
+* Modello -- nome del modello del dispositivo.
+* Vendor -- stesso nome del vendor che si vedrebbe se si configurasse una nuova origine dati.
+* Serial number (numero di serie) - il numero di serie dell'array. Nei sistemi di storage con architettura cluster come NetApp Clustered Data ONTAP, questo numero di serie potrebbe essere meno utile dei singoli numeri di serie "nodi di torage `S`".
+* IP -- in genere sono gli IP o i nomi host configurati nell'origine dati.
+* Versione del microcodice -- firmware.
+* Capacità raw -- somma di base 2 di tutti i dischi fisici nel sistema, indipendentemente dal loro ruolo.
+* Latenza -- una rappresentazione di ciò che stanno sperimentando i carichi di lavoro dell'host, sia in lettura che in scrittura. Insight calcola una media ponderata degli IOPS derivata dai volumi nello storage.
+* Throughput: Il throughput totale dell'host dell'array. Insight somma il throughput dei volumi` per derivare questo valore.
+* Gestione -- potrebbe contenere un collegamento ipertestuale per l'interfaccia di gestione del dispositivo. Creato a livello di programmazione dall'origine dati Insight come parte del reporting dell'inventario.
+

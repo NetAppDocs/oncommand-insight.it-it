@@ -1,0 +1,23 @@
+---
+permalink: dwh/generating-a-manual-data-warehouse-build.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo aver forzato un aggiornamento delle annotazioni (esecuzione di dati transitori) in OnCommand Insight, è necessario avviare una creazione di data warehouse. È possibile attendere fino alla successiva build pianificata o iniziare subito una build.' 
+---
+= Generazione manuale di una build di Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver forzato un aggiornamento delle annotazioni (esecuzione di dati transitori) in OnCommand Insight, è necessario avviare una creazione di data warehouse. È possibile attendere fino alla successiva build pianificata o iniziare subito una build.
+
+
+
+== Fasi
+
+. Accedere come amministratore al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *Schedule* (Pianificazione).
+. Fare clic su *Crea ora*.
+

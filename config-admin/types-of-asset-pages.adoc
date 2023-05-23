@@ -1,0 +1,44 @@
+---
+permalink: config-admin/types-of-asset-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: Le pagine delle risorse riepilogano lo stato corrente di una risorsa e contengono collegamenti a informazioni aggiuntive sulla risorsa e sulle risorse correlate. 
+---
+= Tipi di pagine di risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le pagine delle risorse riepilogano lo stato corrente di una risorsa e contengono collegamenti a informazioni aggiuntive sulla risorsa e sulle risorse correlate.
+
+OnCommand Insight fornisce pagine di risorse per le seguenti risorse:
+
+* Macchina virtuale
+* Volume
+* Volume interno
+* Host fisico
+* Pool di storage
+* Storage
+* Datastore
+* Hypervisor
+* Applicazione
+* Nodo storage
+* Qtree
+* Disco
+* VMDK
+* Porta
+* Switch
+* Fabric
+* Storage a oggetti (ad esempio, Atmos, Centera, Amazon S3)
+* Zona
+
+
+Le informazioni di mappatura e mascheratura possono essere visualizzate nelle tabelle delle pagine delle risorse zone, Volume, VM e host/hypervisor.
+
+[NOTE]
+====
+Le informazioni di riepilogo sono disponibili per le risorse di storage a oggetti; tuttavia, è possibile accedere a queste informazioni solo dalla pagina Dettagli origini dati.
+
+====

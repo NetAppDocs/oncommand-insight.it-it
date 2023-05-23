@@ -1,0 +1,103 @@
+---
+permalink: dwh/connecting-data-warehouse-to-oncommand-insight-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: I connettori stabiliscono le connessioni dal data warehouse OnCommand Insight ai server OnCommand Insight. È possibile collegare il data warehouse a uno o più server OnCommand Insight. È possibile aggiungere o rimuovere connessioni a o da database OnCommand Insight. 
+---
+= Connessione del data warehouse ai server OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I connettori stabiliscono le connessioni dal data warehouse OnCommand Insight ai server OnCommand Insight. È possibile collegare il data warehouse a uno o più server OnCommand Insight. È possibile aggiungere o rimuovere connessioni a o da database OnCommand Insight.
+
+
+
+== A proposito di questa attività
+
+Data Warehouse assegna un ID univoco globale al connettore utilizzato insieme al nome del connettore. Dopo aver aggiunto un connettore, Data Warehouse richiede al database OnCommand Insight il nome e la versione del sito OnCommand Insight.
+
+È possibile scegliere di connettersi a un'origine dati con o senza SSL. La scelta dell'origine dati sicura impone alla connessione di utilizzare SSL durante la comunicazione con il database remoto di OnCommand Insight.
+
+Data warehouse può fornire una vista consolidata dei dati provenienti da più installazioni OnCommand Insight. Questo database consolidato fornisce le seguenti informazioni:
+
+* Identificatori univoci a livello globale
++
+A ciascun oggetto viene assegnato un ID univoco globale, indipendente dagli ID utilizzati dai singoli siti, per evitare conflitti di ID e consentire il rilevamento dei duplicati. Questi ID sono condivisi tra tutti i data mart. Questo ID è il GUID (Globally Unique ID) nella colonna Comment (Commento) delle tabelle dei data mart di inventario.
+
+* Nessuna duplicazione
++
+Le entità presenti in più database OnCommand Insight vengono registrate una sola volta nel database consolidato.
+
+* Record corrente
++
+I dati nel database consolidato (data mart di inventario) sono sempre i più aggiornati possibili.
+
+
+
+Quando si aggiunge o si modifica una connessione, è anche possibile testarla. Il test esegue le seguenti operazioni:
+
+* Verifica l'indirizzo IP dell'host, il nome utente e la password e garantisce che sia possibile stabilire una connessione.
++
+Le connessioni non valide vengono visualizzate in rosso.
+
+* Confronta la versione di OnCommand Insight con la versione del data warehouse.
++
+Se le versioni non sono compatibili, viene visualizzato un messaggio di errore.
+
+* Verifica che il database OnCommand Insight non sia stato modificato o ripristinato in un database diverso come visto dall'ultima elaborazione del data warehouse. In caso di modifica, viene visualizzato un messaggio di errore.
+
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *connettori*.
++
+La tabella Connectors (connettori) appare vuota e mostra le informazioni sul connettore dopo l'aggiunta di un connettore.
+
+. Fare clic su *New* (nuovo) per aggiungere un nuovo connettore.
+. Immettere quanto segue:
++
+** *Crittografia*
++
+Per abilitare le richieste di Data Warehouse da effettuare utilizzando la crittografia SSL, selezionare `Enabled`.
+
+** *Nome*
++
+Un nome di connettore che identificherà il connettore nella vista connettori.
+
+** *Host*
++
+Host IP address (Indirizzo IP host)
+
+** *Nome utente*
++
+"`inventory`"
+
++
+[NOTE]
+====
+Utilizzando questo nome utente e la password, è possibile accedere al database remoto di OnCommand Insight ed eseguire query sui dati.
+
+====
+** *Password*
++
+"SANscreen"
+
+
+
+. Per specificare la porta da utilizzare per le connessioni TCP all'host, fare clic su *Advanced* (Avanzate) e inserire il numero della porta TCP.
+. Per specificare la porta (diversa da quella predefinita) da utilizzare per le connessioni HTTPS all'host, fare clic su *Avanzate* e immettere il numero di porta.
+. Fare clic su *Test*.
++
+Data Warehouse verifica la connessione.
+
+. Fare clic su *Save* (Salva).
++
+Se si inseriscono più connessioni per installazioni multiple, Data Warehouse richiama processi di creazione indipendenti, uno per ogni database da cui estrarre i dati. Ciascun processo di creazione estrae i dati da un database OnCommand Insight e li carica nel database consolidato.
+
+

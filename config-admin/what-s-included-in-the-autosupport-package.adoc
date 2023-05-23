@@ -1,0 +1,55 @@
+---
+permalink: config-admin/what-s-included-in-the-autosupport-package.html 
+sidebar: sidebar 
+keywords:  
+summary: Il pacchetto AutoSupport contiene il backup del database e informazioni estese. 
+---
+= Contenuto del pacchetto ASUP (AutoSupport)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il pacchetto AutoSupport contiene il backup del database e informazioni estese.
+
+Il pacchetto AutoSupport include quanto segue:
+
+* Dati di inventario
+* Dati sulle performance (se selezionati per l'inclusione in ASUP)
+* Origini dati e impostazioni dell'origine dati
+* Pacchetti di integrazione
+* Unità di acquisizione remota
+* Unità di monitoraggio Ethernet
+* Impostazioni ASUP/proxy
+* Impostazioni della posizione di backup
+* Impostazioni della posizione di archiviazione
+* Impostazioni di notifica
+* Punteggi e dispositivi di rilevamento delle anomalie
+* Impostazioni dell'applicazione per il rilevamento delle anomalie
+* Utenti
+* Policy sulle performance
+* Entità aziendali e applicazioni
+* Regole e impostazioni di risoluzione del dispositivo
+* Dashboard e widget
+* Dashboard e widget personalizzati della pagina delle risorse
+* Query
+* Annotazioni e regole di annotazione
+* Registri
+* Licenze
+* Stato di acquisizione/origine dei dati
+* Stato di MySQL
+* Informazioni di sistema
+
+
+Il pacchetto AutoSupport non include:
+
+* Impostazioni dello strumento di sicurezza / informazioni sul vault (backup tramite processo CLI separato)
+* Dati sulle performance (se non selezionati per l'inclusione in ASUP)
+
+
+[NOTE]
+====
+Se si sceglie di includere i dati delle performance nell'ASUP, vengono inclusi i sette giorni più recenti di dati. I dati rimanenti saranno presenti nell'archivio, se la funzione è attivata. I dati di archivio non sono inclusi in ASUP.
+
+====

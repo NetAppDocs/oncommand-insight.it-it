@@ -1,0 +1,55 @@
+---
+permalink: config-admin/modifying-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile modificare il nome, la descrizione o i valori di un"annotazione oppure eliminare un"annotazione che non si desidera più utilizzare.' 
+---
+= Modifica delle annotazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare il nome, la descrizione o i valori di un'annotazione oppure eliminare un'annotazione che non si desidera più utilizzare.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insightweb.
+. Fare clic su *Gestisci* e selezionare *Annotazioni*.
++
+Viene visualizzata la pagina Annotazioni.
+
+. Posizionare il cursore sull'annotazione che si desidera modificare e fare clic su image:../media/edit-recipient-icon.gif[""].
++
+Viene visualizzata la finestra di dialogo *Edit Annotation* (Modifica annotazione).
+
+. È possibile apportare le seguenti modifiche a un'annotazione:
++
+.. Modificare il nome, la descrizione o entrambi.
++
+Tuttavia, è possibile inserire un massimo di 255 caratteri per il nome e la descrizione e non modificare il tipo di annotazione. Inoltre, per le annotazioni a livello di sistema, non è possibile modificare il nome o la descrizione; tuttavia, è possibile aggiungere o rimuovere valori se l'annotazione è un tipo di elenco.
+
++
+[NOTE]
+====
+Se un'annotazione personalizzata viene pubblicata nel Data Warehouse e viene rinominata, i dati storici andranno persi.
+
+====
+.. Per aggiungere un altro valore a un'annotazione di tipo di elenco, fare clic su image:../media/add-annotation-icon.gif[""].
+.. Per rimuovere un valore da un'annotazione di tipo di elenco, fare clic su image:../media/trash-can-query.gif[""].
++
+Non è possibile eliminare un valore di annotazione se tale valore è associato a un'annotazione contenuta in una regola di annotazione, una query o una policy di performance.
+
+
+
+. Al termine, fare clic su *Save* (Salva).
+
+
+
+
+== Al termine
+
+Se si intende utilizzare le annotazioni nel Data Warehouse, è necessario forzare un aggiornamento delle annotazioni nel Data Warehouse. Fare riferimento alla _Guida all'amministrazione del data warehouse di OnCommand Insight_.

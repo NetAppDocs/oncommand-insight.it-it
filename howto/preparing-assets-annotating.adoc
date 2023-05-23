@@ -1,0 +1,14 @@
+---
+permalink: howto/preparing-assets-annotating.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"annotazione consente di associare tag o etichette specifiche alle risorse scelte, agevolando la gestione e il reporting di tali risorse.' 
+---
+= Preparazione delle risorse: Annotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'annotazione consente di associare tag o etichette specifiche alle risorse scelte, agevolando la gestione e il reporting di tali risorse.

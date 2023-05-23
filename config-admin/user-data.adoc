@@ -1,0 +1,18 @@
+---
+permalink: config-admin/user-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Viene visualizzata la sezione User Data (dati utente) di una pagina di risorse che consente di modificare i dati definiti dall"utente, ad esempio applicazioni, entità aziendali e annotazioni.' 
+---
+= Dati dell'utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Viene visualizzata la sezione User Data (dati utente) di una pagina di risorse che consente di modificare i dati definiti dall'utente, ad esempio applicazioni, entità aziendali e annotazioni.
+
+Di seguito viene riportato un esempio di ciò che potrebbe essere visualizzato nella sezione User Data (dati utente) della pagina delle risorse di una macchina virtuale quando un'applicazione, un'entità aziendale e un'annotazione vengono assegnati alla risorsa:
+
+image::../media/user-data-section.bmp[sezione dati utente]

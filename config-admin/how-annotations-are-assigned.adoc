@@ -1,0 +1,34 @@
+---
+permalink: config-admin/how-annotations-are-assigned.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile assegnare le annotazioni manualmente o automaticamente utilizzando le regole di annotazione. OnCommand Insight assegna inoltre automaticamente alcune annotazioni all"acquisizione delle risorse e in base all"ereditarietà. Le annotazioni assegnate a una risorsa vengono visualizzate nella sezione User Data (dati utente) della pagina delle risorse.' 
+---
+= Modalità di assegnazione delle annotazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile assegnare le annotazioni manualmente o automaticamente utilizzando le regole di annotazione. OnCommand Insight assegna inoltre automaticamente alcune annotazioni all'acquisizione delle risorse e in base all'ereditarietà. Le annotazioni assegnate a una risorsa vengono visualizzate nella sezione User Data (dati utente) della pagina delle risorse.
+
+Le annotazioni vengono assegnate nei seguenti modi:
+
+* È possibile assegnare manualmente un'annotazione a una risorsa.
++
+Se un'annotazione viene assegnata direttamente a una risorsa, l'annotazione viene visualizzata come testo normale su una pagina risorsa. Le annotazioni assegnate manualmente hanno sempre la precedenza sulle annotazioni ereditate o assegnate dalle regole di annotazione.
+
+* È possibile creare una regola di annotazione per assegnare automaticamente le annotazioni alle risorse dello stesso tipo.
++
+Se l'annotazione viene assegnata in base alla regola, Insight visualizza il nome della regola accanto al nome dell'annotazione in una pagina asset.
+
+* Insight associa automaticamente un livello di Tier a un modello di Tier storage per accelerare l'assegnazione delle annotazioni di storage alle risorse al momento dell'acquisizione delle risorse.
++
+Alcune risorse di storage vengono automaticamente associate a un Tier predefinito (Tier 1 e Tier 2). Ad esempio, il Tier di storage Symmetrix si basa sulla famiglia Symmetrix e VMAX ed è associato al Tier 1. È possibile modificare i valori predefiniti in base ai requisiti del livello. Se l'annotazione è assegnata da Insight (ad esempio, Tier), viene visualizzato "System-defined `S`" quando si posiziona il cursore sul nome dell'annotazione in una pagina di risorse.
+
+* Alcune risorse (figli di una risorsa) possono derivare l'annotazione Tier predefinita dalla risorsa (principale).
++
+Ad esempio, se si assegna un'annotazione a uno storage, l'annotazione Tier viene derivata da tutti i pool di storage, volumi interni, volumi, qtree e condivisioni appartenenti allo storage. Se viene applicata un'annotazione diversa a un volume interno dello storage, l'annotazione viene successivamente derivata da tutti i volumi, qtree e condivisioni. "`derived`" viene visualizzato accanto al nome dell'annotazione in una pagina di risorse.
+
+

@@ -1,0 +1,119 @@
+---
+permalink: config-admin/netapp-host-and-vm-filesystems-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile utilizzare l"origine dati dei file system host e VM di NetApp per recuperare i dettagli del file system e le mappature delle risorse di storage per tutti i file system host e macchine virtuali Microsoft Windows e per tutte le macchine virtuali Linux supportate (solo quelle virtualmente mappate) Esistenti nel server Insight annotati con il gruppo di risorse di calcolo configurato.' 
+---
+= Origine dei dati dei file system host e VM di NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare l'origine dati dei file system VM e host di NetApp per recuperare i dettagli del file system e le mappature delle risorse di storage per tutti i file system host e VM (macchine virtuali) di Microsoft Windows e per tutte le macchine virtuali Linux supportate (solo quelle virtualmente mappate) Esistenti nel server Insight annotati con il gruppo di risorse di calcolo (CRG) configurato.
+
+
+
+== Requisiti generali
+
+* Questa funzione deve essere acquistata separatamente.
++
+Per assistenza, contatta il tuo rappresentante Insight.
+
+* Controllare la matrice di supporto Insight per verificare che il sistema operativo host o della macchina virtuale sia supportato.
++
+Per verificare che vengano creati collegamenti dai file system alle risorse di storage, verificare che il tipo e la versione del vendor di storage o virtualizzazione rilevanti segnalino i dati di identificazione del volume o del disco virtuale richiesti.
+
+
+
+
+
+== Requisiti di Microsoft Windows
+
+* Questa origine dati utilizza strutture di dati WMI (Window Management Instrumentation) per recuperare i dati.
++
+Questo servizio deve essere operativo e disponibile in remoto. In particolare, la porta 135 deve essere accessibile e deve essere aperta se dietro un firewall.
+
+* Gli utenti di dominio Windows devono disporre delle autorizzazioni appropriate per accedere alle strutture WMI.
+* Sono necessarie le autorizzazioni di amministratore.
+* Porte TCP dinamiche assegnate 1024-65535 per Windows 2003 e versioni precedenti
+* Porte 49152-65535 per Windows 2008
+
+
+[NOTE]
+====
+Come regola generale, quando si tenta di utilizzare un firewall tra Insight, un AU e questa origine dati, è necessario consultare il team Microsoft per identificare le porte che ritengono necessarie.
+
+====
+
+
+== Requisiti Linux
+
+* Questa origine dati utilizza una connessione Secure Shell (SSH) per eseguire comandi sulle macchine virtuali Linux.
++
+Il servizio SSH deve essere operativo e disponibile in remoto. In particolare, la porta 22 deve essere accessibile e deve essere aperta se dietro un firewall.
+
+* Gli utenti SSH devono disporre dei permessi sudo per eseguire i comandi di sola lettura sulle macchine virtuali Linux.
++
+Devi utilizzare la stessa password per accedere a SSH e per rispondere a qualsiasi sfida relativa alla password di sudo.
+
+
+
+
+
+== Consigli per l'utilizzo
+
+* Annotare un gruppo di host e macchine virtuali con credenziali comuni del sistema operativo utilizzando la stessa annotazione del gruppo di risorse di calcolo.
++
+Ogni gruppo dispone di un'istanza di questa origine dati che individua i dettagli del file system da tali host e macchine virtuali.
+
+* Se si dispone di un'istanza di questa origine dati per la quale il tasso di successo è basso (ad esempio, OnCommand Insight sta rilevando i dettagli del file system solo per 50 host su 1000 e macchine virtuali in un gruppo), È necessario spostare gli host e le macchine virtuali per cui il rilevamento ha esito positivo in un gruppo di risorse di calcolo separato.
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Nome utente
+ a| 
+Utente del sistema operativo con diritti appropriati per recuperare i dati del file system per gli utenti del sistema operativo Windows, questo deve includere il prefisso di dominio.
+
+
+
+ a| 
+Password
+ a| 
+Password per l'utente del sistema operativo
+
+
+
+ a| 
+Gruppo di risorse di calcolo
+ a| 
+Il valore di annotazione utilizzato per contrassegnare le macchine host e virtuali per l'origine dati rileva i file system.Un valore vuoto indica che l'origine dati rileva i file system per tutti gli host e le macchine virtuali non attualmente annotati con alcun gruppo di risorse di calcolo.
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo di polling dell'inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 360 minuti)
+
+|===

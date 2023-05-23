@@ -1,0 +1,31 @@
+---
+permalink: config-admin/viewing-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile visualizzare le query per monitorare le risorse e modificare il modo in cui le query visualizzano i dati relativi alle risorse. 
+---
+= Visualizzazione delle query
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare le query per monitorare le risorse e modificare il modo in cui le query visualizzano i dati relativi alle risorse.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Fare clic su *Query* e selezionare *Mostra tutte le query*.
+. È possibile modificare la modalità di visualizzazione delle query effettuando una delle seguenti operazioni:
++
+** È possibile inserire del testo nella casella *filter* per eseguire la ricerca e visualizzare query specifiche.
+** È possibile modificare l'ordinamento delle colonne nella tabella delle query in crescente (freccia su) o decrescente (freccia giù) facendo clic sulla freccia nell'intestazione della colonna.
+** Per ridimensionare una colonna, passare il mouse sull'intestazione della colonna fino a visualizzare una barra blu. Posizionare il mouse sulla barra e trascinarla verso destra o verso sinistra.
+** Per spostare una colonna, fare clic sull'intestazione della colonna e trascinarla verso destra o verso sinistra.
+** Quando si scorrono i risultati della query, tenere presente che i risultati potrebbero cambiare poiché Insight esegue automaticamente il polling delle origini dati. Ciò potrebbe causare la mancanza di alcuni elementi o la mancata visualizzazione di alcuni elementi in base all'ordinamento.
+
+
+

@@ -1,0 +1,44 @@
+---
+permalink: howto/defining-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Quando si personalizza OnCommand Insight per tenere traccia dei dati in base ai requisiti aziendali, è possibile definire annotazioni specializzate necessarie per fornire un quadro completo dei dati: Ad esempio, un"annotazione può definire la fine del ciclo di vita di una risorsa, il data center in cui risiede la risorsa o un Tier di storage che definisce il costo per GB dello storage.' 
+---
+= Definizione delle annotazioni da utilizzare con il chargeback
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si personalizza OnCommand Insight per tenere traccia dei dati in base ai requisiti aziendali, è possibile definire annotazioni specializzate necessarie per fornire un quadro completo dei dati: Ad esempio, un'annotazione può definire la fine del ciclo di vita di una risorsa, il data center in cui risiede la risorsa o un Tier di storage che definisce il costo per GB dello storage.
+
+
+
+== A proposito di questa attività
+
+L'esempio di report di chargeback in questa guida fornisce i dati per il livello di servizio e per il livello di livello. È necessario creare annotazioni per ogni livello di servizio e livello e quindi definire i costi per i livelli di servizio e livello.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di Insight
+. Fare clic su *Gestisci* > *Annotazioni*
++
+Viene visualizzata la pagina delle annotazioni.
+
+. Posizionare il cursore sul livello di servizio o sull'annotazione Tier e fare clic su image:../media/edit-annotation-icon.gif[""].
++
+Viene visualizzata la finestra di dialogo Edit Annotation (Modifica annotazione).
+
+. Fare clic su *ADD* per aggiungere nuovi livelli e costi.
++
+Nell'esempio del report, i nomi dei livelli di servizio e di livello utilizzano l'analogia con il metallo prezioso Gold, Sliver e Bronze. È possibile utilizzare qualsiasi convenzione di denominazione scelta dall'organizzazione, ad esempio Tier 1, Level 2, Supreme.
+
+. Immettere i valori per i livelli Gold-Fast, Gold, Silver e Bronze e i costi associati a ciascuno di essi.
++
+I valori immessi definiscono il costo per GB per lo storage utilizzato dalle applicazioni. Il costo del livello di servizio può essere il costo della fornitura del servizio o il prezzo effettivo per il servizio al consumatore. Questi costi verranno riportati nel report Chargeback.
+
+. Al termine, fare clic su *Save* (Salva).
+

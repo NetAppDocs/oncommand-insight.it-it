@@ -1,0 +1,52 @@
+---
+permalink: howto/servicenow-integration-install-python-and-libraries.html 
+sidebar: sidebar 
+keywords:  
+summary: Python può essere installato sul server Insight o su un host o una macchina virtuale standalone. 
+---
+= Installare Python e le librerie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Python può essere installato sul server Insight o su un host o una macchina virtuale standalone.
+
+
+
+== Fasi
+
+. Sulla macchina virtuale o sull'host, scaricare Python 3.6 o versione successiva.
+. Scegliere l'installazione personalizzata e scegliere le seguenti opzioni. Questi sono necessari per il corretto funzionamento dello script del connettore o sono altamente consigliati.
++
+** Installare il programma di avvio per tutti gli utenti
+** Aggiungi Python al PERCORSO
+** Installare pip (che consente a Python di installare altri pacchetti)
+** Installare tk/tcl e IDLE
+** Installare la suite di test Python
+** Installare py launcher per tutti gli utenti
+** Associare i file a Python
+** Creare collegamenti per le applicazioni installate
+** Aggiungere python alle variabili di ambiente
+** Precompilare la libreria standard
+
+
+. Dopo aver installato Python, installa le librerie Python "`requests`" e "`psnow`". Eseguire il seguente comando: `python -m pip install requests pysnow`
++
+*NOTA:* questo comando potrebbe non riuscire quando si opera in un ambiente proxy. Per risolvere questo problema, è necessario scaricare manualmente ciascuna delle librerie Python ed eseguire le richieste di installazione una alla volta e nell'ordine corretto.
+
++
+Il comando installerà diversi file.
+
+. Verificare che le librerie Python siano installate correttamente. Avviare Python utilizzando uno dei seguenti metodi:
++
+** Aprire un prompt cmd e digitare `python`
+** In Windows, aprire *Start* e scegliere *Python* > *python-<version>.exe*
+
+
+. Al prompt di Python, digitare `modules`
++
+Python ti chiederà di aspettare un attimo mentre raccoglie un elenco di moduli, che verrà visualizzato.
+
+

@@ -1,0 +1,68 @@
+---
+permalink: config-admin/security-management.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La versione 7.3.1 di OnCommand Insight ha introdotto funzionalità di sicurezza che consentono agli ambienti Insight di funzionare con una maggiore sicurezza. Le funzionalità includono miglioramenti alla crittografia, all"hashing delle password e alla possibilità di modificare le password utente interne e le coppie di chiavi che crittografano e decrittare le password. È possibile gestire queste funzionalità su tutti i server dell"ambiente Insight.' 
+---
+= Insight Security
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La versione 7.3.1 di OnCommand Insight ha introdotto funzionalità di sicurezza che consentono agli ambienti Insight di funzionare con una maggiore sicurezza. Le funzionalità includono miglioramenti alla crittografia, all'hashing delle password e alla possibilità di modificare le password utente interne e le coppie di chiavi che crittografano e decrittare le password. È possibile gestire queste funzionalità su tutti i server dell'ambiente Insight.
+
+L'installazione predefinita di Insight include una configurazione di sicurezza in cui tutti i siti dell'ambiente condividono le stesse chiavi e le stesse password predefinite. Per proteggere i dati sensibili, NetApp consiglia di modificare le chiavi predefinite e la password utente di acquisizione dopo un'installazione o un aggiornamento.
+
+Le password crittografate dell'origine dati vengono memorizzate nel database di Insight Server. Il server dispone di una chiave pubblica e crittografa le password quando un utente le inserisce in una pagina di configurazione dell'origine dati WebUI. Il server non dispone delle chiavi private necessarie per decrittare le password dell'origine dati memorizzate nel database del server. Solo le unità di acquisizione (LAU, RAU) dispongono della chiave privata dell'origine dati necessaria per decrittare le password dell'origine dati.
+
+
+
+== Codifica dei server
+
+L'utilizzo delle chiavi predefinite introduce una vulnerabilità a livello di sicurezza nell'ambiente in uso. Per impostazione predefinita, le password dell'origine dati vengono memorizzate crittografate nel database Insight. Vengono crittografati utilizzando una chiave comune a tutte le installazioni Insight. In una configurazione predefinita, un database Insight inviato a NetApp include password che in teoria potrebbero essere decifrate da NetApp.
+
+
+
+== Modifica della password utente di acquisizione
+
+L'utilizzo della password utente predefinita "Acquisition" (acquisizione) introduce una vulnerabilità di sicurezza nell'ambiente. Tutte le unità di acquisizione utilizzano l'utente "`Acquisition`" per comunicare con il server. Raus con password predefinite può in teoria connettersi a qualsiasi server Insight utilizzando password predefinite.
+
+
+
+== Considerazioni sull'aggiornamento e l'installazione
+
+Se il sistema Insight contiene configurazioni di sicurezza non predefinite (password ridigettate o modificate), è necessario eseguire il backup delle configurazioni di sicurezza. L'installazione di un nuovo software o, in alcuni casi, l'aggiornamento del software ripristina la configurazione di sicurezza predefinita del sistema. Quando il sistema torna alla configurazione predefinita, è necessario ripristinare la configurazione non predefinita per il corretto funzionamento del sistema.
+
+
+
+== Gestione delle chiavi in un ambiente di service provider complesso
+
+Un service provider può ospitare più clienti OnCommand Insight che raccolgono dati. Le chiavi proteggono i dati dei clienti dall'accesso non autorizzato da parte di più clienti sul server Insight. I dati di ciascun cliente sono protetti dalle coppie di chiavi specifiche.
+
+Questa implementazione di Insight può essere configurata come mostrato nell'illustrazione seguente.
+
+image::../media/serv-provider-keys.gif[chiavi del provider serv]
+
+In questa configurazione, è necessario creare singole chiavi per ciascun cliente. Il cliente A richiede chiavi identiche per entrambi i Raus. Il cliente B richiede un singolo set di chiavi.
+
+La procedura da seguire per modificare le chiavi di crittografia per il cliente A:
+
+. Eseguire un login remoto al server che ospita RAU1.
+. Avviare lo strumento di amministrazione della protezione.
+. Selezionare Change Encryption Key (Cambia chiave di crittografia) per sostituire le chiavi predefinite.
+. Selezionare Backup per creare un file zip di backup della configurazione di sicurezza.
+. Eseguire un login remoto al server che ospita RAU2.
+. Copiare il file zip di backup della configurazione di sicurezza in RAU2.
+. Avviare lo strumento di amministrazione della protezione.
+. Ripristinare il backup di sicurezza da RAU1 al server corrente.
+
+
+La procedura da seguire per modificare le chiavi di crittografia per il cliente B:
+
+. Eseguire un login remoto al server che ospita RAU3.
+. Avviare lo strumento di amministrazione della protezione.
+. Selezionare Change Encryption Key (Cambia chiave di crittografia) per sostituire le chiavi predefinite.
+. Selezionare Backup per creare un file zip di backup della configurazione di sicurezza.
+

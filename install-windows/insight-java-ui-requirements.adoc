@@ -1,0 +1,45 @@
+---
+permalink: install-windows/insight-java-ui-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Poiché il client di interfaccia utente Java di OnCommand funziona in un ambiente di runtime Java sul computer, è importante assicurarsi che l"ambiente soddisfi requisiti specifici di sistema operativo, CPU e memoria.' 
+---
+= Requisiti dell'interfaccia utente di Insight Java
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Poiché il client di interfaccia utente Java di OnCommand funziona in un ambiente di runtime Java sul computer, è importante assicurarsi che l'ambiente soddisfi requisiti specifici di sistema operativo, CPU e memoria.
+
+Per accedere al client dell'interfaccia utente Java, è necessario installare l'ambiente runtime Java (JRE) sul computer.
+
+Per OnCommand Insight 7.3.2 e versioni successive, è necessaria la versione a 64 bit di Java Runtime Environment (JRE) per eseguire il client.
+
+|===
+
+
+| Componente | Requisito 
+
+
+ a| 
+Sistema operativo
+ a| 
+Qualsiasi computer abilitato a Java 8. Il client basato su Java supporta le piattaforme Windows, Macintosh e Linux.
+
+
+
+ a| 
+CPU
+ a| 
+Sono richiesti 1.8 GHz o superiore.
+
+
+
+ a| 
+Memoria
+ a| 
+Si consiglia di utilizzare almeno 2 GB. Se si monitorano le performance di data center complessi (oltre 50,000 porte switch), il server richiede più memoria. Questo è applicabile solo se è installata la licenza Perform.
+
+|===

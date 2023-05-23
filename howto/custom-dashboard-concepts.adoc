@@ -1,0 +1,48 @@
+---
+permalink: howto/custom-dashboard-concepts.html 
+sidebar: sidebar 
+keywords:  
+summary: Dashboard e widget personalizzati consentono una grande flessibilità nella visualizzazione dei dati. Ecco alcuni concetti che ti aiuteranno a ottenere il massimo dalle dashboard personalizzate. Ogni concetto viene spiegato in maggiore dettaglio nelle sezioni seguenti. 
+---
+= Concetti della dashboard personalizzata
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dashboard e widget personalizzati consentono una grande flessibilità nella visualizzazione dei dati. Ecco alcuni concetti che ti aiuteranno a ottenere il massimo dalle dashboard personalizzate. Ogni concetto viene spiegato in maggiore dettaglio nelle sezioni seguenti.
+
+*Variabili*
+
+Le variabili consentono di modificare i dati visualizzati in alcuni o tutti i widget di una dashboard contemporaneamente. Impostando ciascun widget in modo che utilizzi una variabile comune, le modifiche apportate in un'unica posizione causano l'aggiornamento automatico dei dati visualizzati in ciascun widget.
+
+*Query e/o espressioni multiple*
+
+Ogni widget Time Series (grafici a linee, spline, area o area sovrapposta) può avere fino a cinque query e/o espressioni per determinare quali dati visualizzare, consentendo di confrontare diversi set di dati su un singolo grafico. Ad esempio, è possibile disporre di un grafico a linee che mostri gli IOPS per storage e macchine virtuali o di un singolo grafico che confronta throughput e latenza per tutti i pool di storage.
+
+*Rollup e raggruppamento*
+
+I dati visualizzati in ciascun widget vengono arrotolati dai punti dati raccolti. È possibile scegliere di eseguire il rolloup di questi dati in uno dei seguenti modi:
+
+* AVG: Consente di eseguire il rollup dei dati come media dei dati sottostanti
+* Max: Consente di eseguire il rollup dei dati al massimo dei dati sottostanti
+* Min: Consente di eseguire il rollup dei dati al minimo dei dati sottostanti
+* Somma: Consente di eseguire il roling dei dati come somma dei dati sottostanti
+
+
+Per impostazione predefinita, tutti i dati sottostanti vengono inseriti in una singola voce (tutti) nel grafico o nella tabella. È possibile scegliere di eseguire il rolloup dei dati per un attributo specifico, ad esempio un data center o un Tier, per distribuire i dati sottostanti nei gruppi desiderati. Il widget visualizza i dati solo per gli attributi selezionati.
+
+È possibile raggruppare i dati in un widget tabella in base all'attributo scelto. Ad esempio, è possibile scegliere di raggruppare la tavola in base al data center. I gruppi possono essere espansi o compressi a volontà. I dati relativi alle performance di una tabella vengono arrotolati nell'intestazione del gruppo in base al metodo di rollup impostato nel widget (Average, max, min o SUM).
+
+I widget delle tabelle possono essere ordinati in base a qualsiasi colonna e le colonne possono essere spostate o ridimensionate in base alle esigenze.
+
+*Superiore/inferiore*
+
+Utilizzare questa opzione per limitare il set di risultati nei widget grafico, per selezionare se visualizzare i risultati N superiori nel widget o i risultati N inferiori. È possibile scegliere questa opzione quando i dati non vengono arrotolati o vengono arrotolati da un attributo specifico.
+
+*Sostituire l'ora del dashboard*
+
+Per impostazione predefinita, la maggior parte dei widget aggiunti a una dashboard mostra i dati in base all'impostazione dell'intervallo di tempo della dashboard (3h, 24h, 3d, 7d, 30d o intervallo personalizzato). Tuttavia, è possibile ignorare questa impostazione di tempo nei singoli widget per costringerli a mostrare i dati in un contesto temporale specifico, indipendentemente dall'impostazione dell'ora del dashboard.
+
+Questi concetti sono spiegati in maggiore dettaglio nella sezione seguente.

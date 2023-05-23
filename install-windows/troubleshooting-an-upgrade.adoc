@@ -1,0 +1,44 @@
+---
+permalink: install-windows/troubleshooting-an-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: Se si verificano problemi dopo un aggiornamento del OnCommand Insight, potrebbe essere utile consultare le informazioni per la risoluzione dei problemi relative ad alcuni possibili problemi. 
+---
+= Risoluzione dei problemi di un aggiornamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si verificano problemi dopo un aggiornamento del OnCommand Insight, potrebbe essere utile consultare le informazioni per la risoluzione dei problemi relative ad alcuni possibili problemi.
+
+
+
+== Impossibile avviare Cognos dal menu Start di Windows
+
+L'esistenza di uno spazio prima `\SANscreen\cognos` nel nome del percorso è un problema. Per ulteriori informazioni, consulta la community NetApp Customer Success: https://forums.netapp.com/thread/62721[].
+
+
+
+== Messaggio di errore "`Not a valid win32 application`" (applicazione win32 non valida)
+
+Si tratta di un problema con Microsoft Windows. Per risolvere questo problema, è necessario inserire delle virgolette intorno al percorso dell'immagine nel registro. Per ulteriori informazioni, consultare la seguente documentazione: https://support.microsoft.com/en-us/kb/812486/en-us[].
+
+
+
+== Le annotazioni non sono presenti
+
+Quando un processo ETL di Data Warehouse richiede annotazioni da un'istanza Insight, a volte riceve una risposta vuota (risultato 0) per errore. Questo errore determina lo spostamento delle annotazioni per alcuni oggetti tra uno stato "`presente`" e "`non presente`" in Data Warehouse. Per ulteriori informazioni, vedere quanto segue: https://forums.netapp.com/docs/DOC-44167[]
+
+
+
+== Differenze nei valori visualizzati nei report
+
+Prima del 7.0, i report erano basati su numeri interi. Sono ora basati su cifre decimali; pertanto, dopo l'aggiornamento, si potrebbe notare un aumento o una diminuzione della visualizzazione dei valori.
+
+
+
+== I dati non vengono visualizzati nei report
+
+Nella versione 7.0.1, sono stati modificati diversi nomi di modelli (ad esempio, Symmetrix è stato modificato in Symmetrix VMAX). Di conseguenza, se un report contiene un filtro per "`Symmetrix`", non verranno visualizzati dati quando si esegue il report. Per modificare il report, aprire il report con Query Explorer in Report Studio, cercare il nome del modello, sostituirlo con il nuovo nome del modello e salvare il report.

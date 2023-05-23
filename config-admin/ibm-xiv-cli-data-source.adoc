@@ -1,0 +1,186 @@
+---
+permalink: config-admin/ibm-xiv-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"inventario delle origini dati di IBM XIV viene eseguito utilizzando l"interfaccia della riga di comando XIV. Le prestazioni di XIV si possono ottenere effettuando chiamate SMI-S all"array XIV, che esegue un provider SMI-S sulla porta 5989.' 
+---
+= Origine dati IBM XIV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'inventario delle origini dati IBM XIV (CLI) viene eseguito utilizzando l'interfaccia della riga di comando XIV. Le prestazioni di XIV si possono ottenere effettuando chiamate SMI-S all'array XIV, che esegue un provider SMI-S sulla porta 5989.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati di IBM XIV. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Sistema storage
+ a| 
+Storage
+
+
+
+ a| 
+Pool di storage
+ a| 
+Pool di storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Requisiti della porta: Porta TCP 7778
+* Indirizzo IP dell'interfaccia di gestione XIV
+* Nome utente e password di sola lettura
+* XIV CLI deve essere installato sul server Insight o RAU
+* Convalida dell'accesso: Accedere all'interfaccia utente XIV dal server Insight utilizzando il nome utente e la password.
+
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Indirizzo IP
+ a| 
+Indirizzo IP o nome di dominio completo per lo storage XIV
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente dello storage XIV
+
+
+
+ a| 
+Password
+ a| 
+Password per lo storage XIV
+
+
+
+ a| 
+Percorso completo alla directory CLI XIV
+ a| 
+Percorso completo alla directory XIV CLI
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 40 minuti)
+
+
+
+ a| 
+Timeout attesa processo CLI (ms)
+ a| 
+Timeout processo CLI (impostazione predefinita: 7200000 ms)
+
+
+
+ a| 
+IP HOST SMI-S.
+ a| 
+Indirizzo IP dell'host del provider SMI-S.
+
+
+
+ a| 
+Porta SMI-S.
+ a| 
+Porta utilizzata dall'host del provider SMI-S.
+
+
+
+ a| 
+Protocollo SMI-S.
+ a| 
+Protocollo utilizzato per connettersi al provider SMI-S.
+
+
+
+ a| 
+Spazio dei nomi SMI-S.
+ a| 
+Spazio dei nomi SMI-S.
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente dell'host del provider SMI-S.
+
+
+
+ a| 
+Password
+ a| 
+Password per l'host del provider SMI-S.
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+
+
+ a| 
+Numero di tentativi di connessione SMI-S.
+ a| 
+Numero di tentativi di connessione SMI-S.
+
+|===

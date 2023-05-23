@@ -1,0 +1,60 @@
+---
+permalink: config-admin/moving-mysql-data-using-the-command-line.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile utilizzare la migrazione della directory dei dati MySQL in un"altra directory. È possibile conservare la directory dei dati corrente. È possibile utilizzare l"opzione Migrate (migrazione) nel menu Troubleshooting (risoluzione dei problemi) oppure la riga di comando. Questa procedura descrive come utilizzare la riga di comando.' 
+---
+= Spostamento dei dati MySQL tramite la riga di comando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la migrazione della directory dei dati MySQL in un'altra directory. È possibile conservare la directory dei dati corrente. È possibile utilizzare l'opzione Migrate (migrazione) nel menu Troubleshooting (risoluzione dei problemi) oppure la riga di comando. Questa procedura descrive come utilizzare la riga di comando.
+
+
+
+== A proposito di questa attività
+
+Se si conserva la directory dei dati corrente, questa viene conservata come backup e rinominata.
+
+È possibile utilizzare l'utility Migrate MySQL Data o un `java -jar mysqldatamigrator.jar` Nel percorso OnCommand Insight di `\bin\mysqldatamigrator` dove devono essere utilizzati i seguenti parametri:
+
+* Parametri obbligatori
++
+** *-path*
++
+Il nuovo percorso di dati in cui verrà copiata la cartella di dati.
+
+
+
+* Parametri opzionali
++
+** *-myCnf <my .cnf file>*
++
+Il percorso del file .cnf. L'impostazione predefinita è `<install path>\mysql\my.cnf`. Utilizzare questo flag solo se si utilizza un MySQL non predefinito.
+
+** *-doBackup*
++
+Se questo indicatore è impostato, la cartella dei dati corrente verrà rinominata ma non eliminata.
+
+
+
+
+
+
+
+== Fasi
+
+. Accedere allo strumento della riga di comando qui: `<installation path>` mysqldatamigrator``
+
+
+
+
+== Esempio di utilizzo
+
+[listing]
+----
+java -jar mysqldatamigrator.jar -path "C:\<new path>" -doBackup
+----

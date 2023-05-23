@@ -1,0 +1,46 @@
+---
+permalink: howto/collecting-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile importare i dati di integrazione nel sistema OnCommand Insight. I dati possono essere importati utilizzando collectd, software open source che viene eseguito come daemon per raccogliere i dati sulle performance, oppure utilizzando l"origine dati SNMP di integrazione che consente di raccogliere dati SNMP generici.' 
+---
+= Raccolta dei dati di integrazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile importare i dati di integrazione nel sistema OnCommand Insight. I dati possono essere importati utilizzando collectd, software open source che viene eseguito come daemon per raccogliere i dati sulle performance, oppure utilizzando l'origine dati SNMP di integrazione che consente di raccogliere dati SNMP generici.
+
+
+
+== Flusso di dati per i dati di integrazione
+
+Quanto segue si applica alla quantità totale di dati di integrazione che è possibile presentare al server OnCommand Insight:
+
+* Viene mantenuta una coda di 100 chiamate.
++
+Quando un client attende nella coda per più di un minuto, si verifica un errore di timeout.
+
+* Il tasso di acquisizione consigliato per i dati di integrazione è una volta al minuto, per client.
+* È consentito un limite di 300 tipi di oggetti di integrazione.
+
+
+
+
+== Accesso al software e alla documentazione collectd
+
+È possibile accedere al software del plugin di output writer e alla documentazione da collectd sul sito GitHub di NetApp: https://github.com/NetApp/OCI_collectd[]
+
+
+
+== Backup e ripristino dei dati di integrazione
+
+Il backup e il ripristino dei dati di integrazione vengono modellati in base alle policy di backup e ripristino dei dati delle performance di OnCommand Insight. Quando un backup viene configurato per i dati delle performance, anche i dati di integrazione vengono inclusi nel backup. Come per il backup delle performance, i sette giorni più recenti di dati di integrazione sono inclusi nel backup. Tutti i dati di integrazione presenti in un backup vengono ripristinati durante un'operazione di ripristino.
+
+
+
+== Licenze
+
+Per la segnalazione dei dati di integrazione è necessaria una licenza Perform. Se non è presente una licenza Perform, viene visualizzato il messaggio "Perform License required to report Integration data" (eseguire la licenza richiesta per i dati di integrazione).

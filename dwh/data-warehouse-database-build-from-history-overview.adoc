@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-database-build-from-history-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile creare il database del data warehouse utilizzando i dati storici nel server OnCommand Insight. Data warehouse estrae i dati dai server OnCommand Insight e crea i data mart del data warehouse in base alla build dalla pianificazione della cronologia. 
+---
+= Creazione del database Data Warehouse dalla panoramica della cronologia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare il database del data warehouse utilizzando i dati storici nel server OnCommand Insight. Data warehouse estrae i dati dai server OnCommand Insight e crea i data mart del data warehouse in base alla build dalla pianificazione della cronologia.
+
+Questa opzione non richiede una licenza speciale e i dati di inventario sono inclusi nella build. Tuttavia, per creare informazioni sulla capacità, sono necessari il piano OnCommand Insight e le licenze OnCommand Insight Perform.
+
+Se è già stata eseguita una build (dalla cronologia o corrente), la build non può essere eseguita in date precedenti all'ultimo job. Ciò significa che se si esegue una build corrente, non è possibile creare dalla cronologia. In particolare, se hai eseguito build della cronologia terminate il 1° gennaio 2012, non puoi eseguire alcuna build nell'anno 2011.
+
+Se la creazione della cronologia non include uno o due giorni di processi ETL non riusciti, non tentare di creare la cronologia solo per questi giorni. I dati storici si riferiscono a periodi più lunghi e uno o due giorni non cambieranno in modo significativo i trend. Se si desidera ricostruire dalla cronologia, ricostruire l'intera cronologia.
+
+La vista Build from History (Crea dalla cronologia) visualizza tutti i lavori di creazione da tutti i connettori. Ad esempio, la vista potrebbe visualizzare un processo di inventario per ogni connettore, un processo di capacità delle porte per ogni esecuzione di creazione e un processo di annotazioni.
+
+Prima di configurare la build dalla cronologia, è necessario che si verifichi quanto segue:
+
+* I connettori devono essere configurati.
+* Le annotazioni devono essere inserite in OnCommand Insight e possono essere aggiornate manualmente utilizzando l'opzione *Imponi aggiornamento delle annotazioni per DWH* nel vecchio portale OnCommand Insight oppure verranno aggiornate automaticamente 15 minuti dopo l'impostazione.
+

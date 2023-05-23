@@ -1,0 +1,30 @@
+---
+permalink: dwh/including-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Per impostazione predefinita, ASUP invia al supporto tecnico solo i file di log di Data Warehouse per assistenza nella risoluzione dei problemi; tuttavia, è possibile anche scegliere di includere un backup del database Data Warehouse e selezionare il tipo di dati da inviare. 
+---
+= Incluso un backup del database Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per impostazione predefinita, ASUP invia al supporto tecnico solo i file di log di Data Warehouse per assistenza nella risoluzione dei problemi; tuttavia, è possibile anche scegliere di includere un backup del database Data Warehouse e selezionare il tipo di dati da inviare.
+
+
+
+== Fasi
+
+. Accedere al portale Data Warehouse all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *risoluzione dei problemi*.
+. Per specificare che ASUP deve includere un backup del database Data Warehouse, fare clic sull'elenco *include DWH Database Backup* (Includi backup database DWH) e selezionare una delle seguenti opzioni per il tipo di dati che il backup deve includere:
++
+** Tutti (incluse le performance)
+** Tutti tranne Performance
+** Solo inventario
+
+
+. Fare clic su *Aggiorna*.
+

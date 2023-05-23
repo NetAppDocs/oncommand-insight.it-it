@@ -1,0 +1,30 @@
+---
+permalink: install-windows/uninstalling-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Se necessario, è possibile disinstallare il server OnCommand Insight. 
+---
+= Disinstallazione del server OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se necessario, è possibile disinstallare il server OnCommand Insight.
+
+
+
+== Prima di iniziare
+
+Procedura consigliata: Prima di disinstallare Insight, eseguire il backup del database OnCommand Insight.
+
+
+
+== Fasi
+
+. Accedere al server OnCommand Insight utilizzando un account con privilegi di amministratore.
+. Assicurarsi che tutte le finestre Insight sul server siano chiuse.
+. Aprire la funzione *Disinstalla un programma* dal pannello di controllo e selezionare l'applicazione OnCommand Insight da rimuovere.
+. Fare clic su *Disinstalla* e seguire le istruzioni.
+

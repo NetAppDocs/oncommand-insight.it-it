@@ -1,0 +1,36 @@
+---
+permalink: config-admin/analyzing-correlated-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Quando si ricercano problemi di performance e si apre la pagina delle risorse di un dispositivo, utilizzare l"elenco delle risorse correlate principali per perfezionare i dati visualizzati nei grafici delle performance. Una risorsa con una percentuale elevata indica che la risorsa ha un"attività simile a quella della risorsa di base.' 
+---
+= Analisi delle risorse correlate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si ricercano problemi di performance e si apre la _pagina delle risorse_ per un dispositivo, utilizzare l'elenco delle risorse correlate principali per perfezionare i dati visualizzati nei grafici delle performance. Una risorsa con una percentuale elevata indica che la risorsa ha un'attività simile a quella della risorsa di base.
+
+
+
+== A proposito di questa attività
+
+Si sta esaminando un problema di performance e si apre la pagina delle risorse di un dispositivo.
+
+
+
+== Fasi
+
+. Nell'elenco *Top Correlated Resources*, la prima risorsa è la risorsa di base. Le risorse correlate nell'elenco sono classificate in base alla percentuale di attività correlate al primo dispositivo. Fare clic sulla percentuale di correlazione collegata per visualizzare i dettagli. In questo esempio, la correlazione del 70% è in uso, quindi sia la risorsa di base che questa risorsa correlata hanno un utilizzo altrettanto elevato.
++
+image::../media/correlation-new.gif[correlazione nuova]
+
+. Per aggiungere una risorsa correlata ai grafici delle performance, selezionare la casella di controllo nell'elenco *Top Correlated Resources* (risorse correlate principali) per la risorsa che si desidera aggiungere. Per impostazione predefinita, ciascuna risorsa fornisce i dati totali disponibili, ma è possibile selezionare solo dati di lettura o solo dati di scrittura dal menu della casella di controllo.
++
+Ogni risorsa nei grafici ha un colore diverso, in modo da poter confrontare le misurazioni delle performance per ogni risorsa. Per le metriche di misurazione selezionate viene plottato solo il tipo di dati appropriato. Ad esempio, i dati della CPU non includono le metriche di lettura o scrittura, pertanto sono disponibili solo i dati totali.
+
+. Fare clic sul nome collegato della risorsa correlata per visualizzarne la pagina delle risorse.
+. Se non viene visualizzata una risorsa elencata nelle risorse correlate principali che si ritiene debba essere considerata nell'analisi, è possibile utilizzare la casella *Cerca risorse* per trovare tale risorsa.
+

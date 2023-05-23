@@ -1,0 +1,123 @@
+---
+permalink: config-admin/dell-emc-ecs-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Questo data collector acquisisce i dati di inventario e performance dai sistemi storage EMC ECS. Per la configurazione, il data collector richiede un indirizzo IP del server ECS e un account di dominio di livello amministrativo. 
+---
+= Origine dati Dell EMC ECS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questo data collector acquisisce i dati di inventario e performance dai sistemi storage EMC ECS. Per la configurazione, il data collector richiede un indirizzo IP del server ECS e un account di dominio di livello amministrativo.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati EMC ECS. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Cluser
+ a| 
+Storage
+
+
+
+ a| 
+Tenant
+ a| 
+Pool di storage
+
+
+
+ a| 
+Bucket
+ a| 
+Volume interno
+
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Indirizzo IP della console di gestione ECS
+* Account di dominio di livello amministrativo per il sistema ECS
+* Porta 443 (HTTPS). Richiede la connettività in uscita alla porta TCP 443 sul sistema ECS.
+* Per le performance, nome utente e password di sola lettura per l'accesso ssh/SCP.
+* Per le prestazioni, è necessaria la porta 22.
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Host ECS
+ a| 
+Indirizzi IP o nomi di dominio pienamente qualificati del sistema ECS
+
+
+
+ a| 
+Porta host ECS
+ a| 
+Porta utilizzata per la comunicazione con l'host ECS
+
+
+
+ a| 
+ID fornitore ECS
+ a| 
+ID vendor per ECS
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per ECS
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (minuti)
+ a| 
+Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 360 minuti.
+
+|===

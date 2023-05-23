@@ -1,0 +1,109 @@
+---
+permalink: config-admin/locating-required-information-for-new-disk-model.html 
+sidebar: sidebar 
+keywords:  
+summary: Per individuare le informazioni sul modello del disco, identificare il fornitore e il numero di modello ed eseguire una ricerca su Internet. 
+---
+= Individuazione delle informazioni richieste per il nuovo modello di disco
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per individuare le informazioni sul modello del disco, identificare il fornitore e il numero di modello ed eseguire una ricerca su Internet.
+
+
+
+== A proposito di questa attività
+
+Individuare le informazioni sul modello di disco è semplice quanto eseguire una ricerca su Internet. Annotare il nome del vendor e il numero del modello del disco prima di eseguire la ricerca.
+
+
+
+== Fasi
+
+. Si consiglia di utilizzare una ricerca avanzata su Internet per il vendor, il modello e il tipo di documento "`PDF`" per trovare la scheda tecnica del vendor e/o la guida all'installazione del disco. Queste schede tecniche sono di solito la fonte migliore per le informazioni sui dischi dei vendor.
+. Le specifiche del vendor non forniscono sempre tutte le informazioni necessarie in base al numero di modello completo. Spesso è utile cercare diverse parti della stringa del numero di modello sul sito del vendor per individuare tutte le informazioni.
+. Individuare il nome del produttore del disco, il numero completo del modello, le dimensioni e la velocità del disco e il tipo di interfaccia per definire il nuovo modello di disco in OnCommand Insight, è possibile utilizzare la seguente tabella come guida per annotare queste informazioni man mano che vengono trovate:
++
+|===
+
+
+| Per questo campo: | Che è: | Inserire questo: 
+
+
+ a| 
+Numero di modello (noto anche come chiave)
+ a| 
+Obbligatorio
+ a| 
+
+
+
+ a| 
+Vendor
+ a| 
+Obbligatorio
+ a| 
+
+
+
+ a| 
+Velocità del disco (giri/min)
+ a| 
+Obbligatorio
+ a| 
+
+
+
+ a| 
+Dimensioni (in GB)
+ a| 
+Obbligatorio
+ a| 
+
+
+
+ a| 
+Tipo di interfaccia (selezionarne una)
+ a| 
+Obbligatorio
+ a| 
+ATA, SATA, SATA2, SATA3, FC, SAS, FATA, SSD, ALTRO
+
+
+
+ a| 
+Tempo di ricerca in ms.
+ a| 
+Opzionale
+ a| 
+
+
+
+ a| 
+Massima velocità di trasferimento in MB/sec
+ a| 
+Opzionale
+ a| 
+
+
+
+ a| 
+Velocità di trasferimento dell'interfaccia in MB/sec
+ a| 
+Opzionale
+ a| 
+
+
+
+ a| 
+Collegamento alle informazioni sul fornitore/modello
+ a| 
+Facoltativo ma consigliato
+ a| 
+
+|===
+. Immettere tali informazioni in `new_disk_models.txt` file. Vedere link:content-of-the-new-disk-models-txt-file.md#["Contenuto del file new_disk_models.txt"] per formato, ordine ed esempi.
+

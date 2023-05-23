@@ -1,0 +1,72 @@
+---
+permalink: config-admin/time-to-live-ttl-and-downsampling.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A partire da OnCommand Insight 7.3, la conservazione dei dati o il time-to-live (TTL) è stato aumentato da 7 a 90 giorni. Poiché ciò significa che vengono elaborati molti più dati per grafici e tabelle e il potenziale di decine di migliaia di datapoint, i dati vengono sottoposti a downsampling prima di essere visualizzati.' 
+---
+= TTL (Time-to-live) e dati downsampled
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partire da OnCommand Insight 7.3, la conservazione dei dati o il time-to-live (TTL) è stato aumentato da 7 a 90 giorni. Poiché ciò significa che vengono elaborati molti più dati per grafici e tabelle e il potenziale di decine di migliaia di datapoint, i dati vengono sottoposti a downsampling prima di essere visualizzati.
+
+Il downsampling fornisce un'approssimazione statistica dei dati nei grafici, offrendo una panoramica efficiente dei dati senza dover visualizzare ogni punto dati, mantenendo al contempo una visione accurata dei dati raccolti.
+
+
+
+== Perché è necessario eseguire il downsampling?
+
+Insight 7.3 aumenta il time-to-live (TTL) dei dati fino a 90 giorni. Ciò significa un aumento della quantità di elaborazione necessaria per preparare i dati per la visualizzazione in grafici e grafici. Per consentire la visualizzazione rapida ed efficiente dei grafici, i dati vengono sottoposti a downsampling in modo da mantenere la forma generale di un grafico senza dover elaborare ogni singolo punto dati per quel grafico.
+
+[NOTE]
+====
+Nessun dato effettivo viene perso durante il downsampling. È possibile scegliere di visualizzare i dati effettivi del grafico invece dei dati sottocampionati seguendo la procedura illustrata di seguito.
+
+====
+
+
+== Come funziona il downsampling
+
+I dati vengono sottoposti a downsampling nelle seguenti condizioni:
+
+* Quando l'intervallo di tempo selezionato include almeno 7 giorni di dati, non si verifica alcun downsampling. I grafici visualizzano i dati effettivi.
+* Quando l'intervallo di tempo selezionato include più di 7 giorni di dati ma meno di 1,000 punti dati, non si verifica alcun downsampling. I grafici visualizzano i dati effettivi.
+* Quando l'intervallo di tempo selezionato include più di 7 giorni di dati e più di 1,000 punti dati, i dati vengono sottoposti a downsampling. I grafici visualizzano i dati approssimati.
+
+
+I seguenti esempi mostrano il downsampling in azione. La prima illustrazione mostra i grafici di latenza e IOPS su una pagina di risorse Datastore per un periodo di 24 ore, come mostrato selezionando *24h* nel selettore di tempo della pagina delle risorse. È inoltre possibile visualizzare gli stessi dati selezionando *Custom* e impostando l'intervallo di tempo sullo stesso periodo di 24 ore.
+
+Poiché stiamo scegliendo un intervallo di tempo inferiore a 7 giorni e abbiamo meno di 1,000 punti dati da inserire nel grafico, i dati visualizzati sono dati effettivi. Non si verifica alcun downsampling.
+
+image::../media/downsampling-actual-chart.gif[downsampling grafico effettivo]
+
+Tuttavia, se si visualizzano i dati scegliendo *30d* nel selettore di tempo della pagina delle risorse, Oppure impostando un intervallo di tempo personalizzato di oltre 7 giorni (o nel caso in cui Insight abbia raccolto più di 1,000 campioni di dati per il periodo di tempo scelto), i dati vengono sottoposti a downsampling prima di essere visualizzati. Quando si esegue lo zoom avanti su un grafico sottocampionato, il display continua a mostrare i dati approssimati.
+
+[NOTE]
+====
+Quando si esegue lo zoom avanti su una mappa con sottocampionatura, lo zoom è uno zoom digitale. Il display continua a visualizzare i dati approssimati.
+
+====
+La figura seguente mostra l'intervallo di tempo impostato su 30d, quindi il grafico viene ingrandito per visualizzare lo stesso periodo di 24 ore di cui sopra.
+
+image::../media/downsampling-downsampled-chart.gif[downsampling grafico downsampling]
+
+I grafici sottocampionati mostrano lo stesso periodo di 24 ore dei grafici "effettivi" di cui sopra, quindi le linee seguono la stessa forma generale, consentendo di individuare rapidamente picchi o valli interessanti nei dati delle performance.
+
+[NOTE]
+====
+A causa del modo in cui i dati vengono approssimati per il downsampling, le linee del grafico potrebbero essere leggermente disattivate quando si confronta il downsampling con il dati effettivi, per consentire un migliore allineamento nei grafici. Tuttavia, la differenza è minima e non influisce sulla precisione complessiva dei dati visualizzati.
+
+====
+
+
+== Violazioni sui grafici downsampled
+
+Quando si visualizzano i grafici sottocampionati, tenere presente che le violazioni non vengono visualizzate. Per vedere le violazioni, è possibile eseguire una delle seguenti operazioni:
+
+* Visualizzare i dati effettivi per quell'intervallo di tempo selezionando Custom (personalizzato) nel selettore di tempo della pagina asset e immettendo un intervallo di tempo inferiore a 7 giorni. Passare il mouse su ciascun punto rosso. La descrizione del comando mostra la violazione che si è verificata.
+* Annotare l'intervallo di tempo e individuare le violazioni nella dashboard delle violazioni.
+

@@ -1,0 +1,57 @@
+---
+permalink: config-admin/configuring-annotation-rules-for-automatic-assignment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'In alternativa all"applicazione manuale delle annotazioni a singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione. Le annotazioni impostate manualmente su una singola pagina di risorse hanno la precedenza sulle annotazioni basate su regole quando Insight valuta le regole di annotazione.' 
+---
+= Creazione di regole di annotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In alternativa all'applicazione manuale delle annotazioni a singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione. Le annotazioni impostate manualmente su una singola pagina di risorse hanno la precedenza sulle annotazioni basate su regole quando Insight valuta le regole di annotazione.
+
+
+
+== Prima di iniziare
+
+È necessario aver creato una query per la regola di annotazione.
+
+
+
+== A proposito di questa attività
+
+Sebbene sia possibile modificare i tipi di annotazione durante la creazione delle regole, i tipi dovrebbero essere stati definiti in anticipo.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Fare clic su *Manage* (Gestisci) e selezionare *Annotation rules* (regole annotazione).
++
+La pagina Annotation Rules (regole di annotazione) visualizza l'elenco delle regole di annotazione esistenti.
+
+. Fare clic su image:../media/add-annotation-icon.gif[""].
++
+Viene visualizzata la finestra di dialogo Add Rule (Aggiungi regola).
+
+. Effettuare le seguenti operazioni:
++
+.. Nella casella *Nome*, immettere un nome univoco che descriva la regola.
++
+Questo nome viene visualizzato nella pagina Annotation Rules (regole di annotazione).
+
+.. Fare clic su *Query* e selezionare la query che OnCommand Insight deve utilizzare per applicare l'annotazione alle risorse.
+.. Fare clic su *Annotation* (Annotazione) e selezionare l'annotazione da applicare.
+.. Fare clic su *valore* e selezionare un valore per l'annotazione.
++
+Ad esempio, se si sceglie compleanno come annotazione, si specifica una data per il valore.
+
+
+
+. Fare clic su *Save* (Salva).
+. Fare clic su *Run All rules* (Esegui tutte le regole) se si desidera eseguire tutte le regole immediatamente; in caso contrario, le regole vengono eseguite a intervalli regolari pianificati.
+

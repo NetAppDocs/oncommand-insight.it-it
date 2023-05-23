@@ -1,0 +1,31 @@
+---
+permalink: howto/setting-up-syslog-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight può inviare eventi syslog per violazioni di capacità o percorso e avvisi sulle performance. 
+---
+= Impostazione di Syslog per la registrazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight può inviare eventi syslog per violazioni di capacità o percorso e avvisi sulle performance.
+
+
+
+== A proposito di questa attività
+
+Per configurare la notifica syslog in Insight, attenersi alla seguente procedura di base:
+
+
+
+== Fasi
+
+. Fare clic su *Admin* > *Notifications* e passare alla sezione *Syslog*.
+. Selezionare la casella di controllo *Syslog enabled*.
+. Nel campo *Server*, immettere l'indirizzo IP del server di log.
+. Nel campo *Facility*, selezionare il livello di struttura corrispondente al tipo di programma che sta registrando il messaggio.
+. Fare clic su *Save* (Salva).
+

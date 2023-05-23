@@ -1,0 +1,61 @@
+---
+section: reporting
+title: Creazione di report
+entries:
+- title: Benvenuti nel reporting OnCommand Insight
+  url: "/reporting/welcome-to-oncommand-insight-reporting.html"
+  entries:
+  - title: Accesso al portale di reporting OnCommand Insight
+    url: "/reporting/accessing-the-oncommand-insight-reporting-portal.html"
+  - title: Variazioni dovute alle licenze installate
+    url: "/reporting/variations-due-to-installed-licenses.html"
+  - title: Creazione di report sui ruoli utente
+    url: "/reporting/reporting-user-roles.html"
+  - title: Abilitazione delle intestazioni di sicurezza
+    url: "/reporting/enabling-security-headers.html"
+- title: Creazione di report semplificata
+  url: "/reporting/reporting-made-easy.html"
+  entries:
+  - title: Navigazione verso report OnCommand Insight predefiniti
+    url: "/reporting/navigating-to-the-pre-defined-oncommand-insight-reports-and-dashboards.html"
+  - title: Cosa ti consente di fare Storage Manager Dashboard
+    url: "/reporting/storage-manager-dashboard.html"
+  - title: Utilizzo di report predefiniti per rispondere a domande comuni
+    url: "/reporting/which-report-answers-your-question.html"
+  - title: Creazione di un report con Cognos 11
+    url: "/reporting/creating-a-report-cognos-11.html"
+- title: Gestione dei report
+  url: "/reporting/managing-reports.html"
+  entries:
+  - title: Personalizzazione del formato di output e della consegna di un report
+    url: "/reporting/customizing-a-report-s-output-format-and-delivery.html"
+  - title: Copia di un report negli Appunti
+    url: "/reporting/copying-a-report-to-the-clipboard.html"
+  - title: Apertura di report (xml) dagli Appunti
+    url: "/reporting/importing-existing-reports-to-cognos-11.html"
+- title: Creazione di report personalizzati ad hoc
+  url: "/reporting/creating-custom-ad-hoc-reports.html"
+  entries:
+  - title: Cosa occorre fare prima di progettare il report
+    url: "/reporting/what-you-need-to-do-before-you-design-your-report.html"
+  - title: Processo di creazione dei report
+    url: "/reporting/process-of-creating-custom-reports.html"
+    entries:
+    - title: Come pianificare i risultati del report personalizzato
+      url: "/reporting/how-to-plan-the-results-of-your-custom-report.html"
+    - title: Suggerimenti per la progettazione dei report
+      url: "/reporting/tips-for-designing-reports.html"
+- title: Modello di dati di reporting
+  url: "/reporting/reporting-data-model.html"
+  entries:
+  - title: Panoramica del modello di dati
+    url: "/reporting/data-model-overview.html"
+    entries:
+    - title: Modelli di dati OnCommand Insight
+      url: "/reporting/oncommand-insight-data-model-descriptions.html"
+    - title: Tabelle di dimensioni e fatti del modello di dati
+      url: "/reporting/data-model-fact-and-dimension-tables.html"
+    - title: Colori utilizzati negli elementi del modello di dati
+      url: "/reporting/colors-used-in-data-model-elements.html"
+    - title: Utilizzo di più modelli di dati in un unico report
+      url: "/reporting/using-multiple-data-models-in-one-report.html"

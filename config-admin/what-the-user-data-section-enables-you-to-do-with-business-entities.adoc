@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile definire entità di business per tenere traccia e generare report sui dati dell"ambiente a un livello più granulare. La sezione User Data (dati utente) di una pagina asset consente di modificare l"entità aziendale assegnata a un asset o di rimuovere un"entità aziendale da un asset.' 
+---
+= Utilizzo della sezione dati utente per assegnare o modificare le entità aziendali
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile definire entità di business per tenere traccia e generare report sui dati dell'ambiente a un livello più granulare. La sezione User Data (dati utente) di una pagina asset consente di modificare l'entità aziendale assegnata a un asset o di rimuovere un'entità aziendale da un asset.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Individuare una pagina di risorse effettuando una delle seguenti operazioni:
++
+** Nella barra degli strumenti Insight, fare clic su image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], digitare il nome della risorsa, quindi selezionare la risorsa dall'elenco.
+** Fare clic su *Dashboard*, selezionare *Dashboard delle risorse*, individuare il nome di una risorsa e fare clic su di essa. Viene visualizzata la pagina delle risorse.
+
+
+. È possibile effettuare le seguenti operazioni:
++
+** Per modificare l'entità assegnata o per assegnarla, fare clic su image:../media/pencil-icon-landing-page-be.gif[""] e selezionare un'entità dall'elenco.
+** Per rimuovere un'entità aziendale, fare clic su image:../media/trash-can-query.gif[""].
++
+[NOTE]
+====
+Non è possibile rimuovere un'entità derivata da un'applicazione assegnata alla risorsa.
+
+====
+
+
+

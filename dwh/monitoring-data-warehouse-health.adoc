@@ -1,0 +1,35 @@
+---
+permalink: dwh/monitoring-data-warehouse-health.html 
+sidebar: sidebar 
+keywords: suppress 
+summary: 'Il Data Warehouse (DWH) include un monitor dello stato di salute che visualizza informazioni sullo stato di DWH. I messaggi di allarme vengono visualizzati nelle pagine connettori e lavori del DWH, nonché inviati al server Insight connesso, dove vengono visualizzati nella pagina Amministrazione > Salute.' 
+---
+= Monitoraggio dello stato di Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il Data Warehouse (DWH) include un monitor dello stato di salute che visualizza informazioni sullo stato di DWH. I messaggi di allarme vengono visualizzati nelle pagine *connettori* e *lavori* del DWH, nonché inviati al server Insight connesso, dove vengono visualizzati nella pagina *Admin* > *Health*.
+
+DWH raccoglie le metriche ogni dieci minuti e visualizza un allarme nelle seguenti condizioni:
+
+* La connessione al server Insight non è attiva
+* L'utilizzo del disco è superiore al 90%
+* Il servizio di reporting (Cognos) non è attivo
+* Una query mantiene un blocco su qualsiasi tabella per un periodo di tempo prolungato
+* Un ordine di manutenzione è disattivato
+* Il backup automatico è disattivato
+* Rischio di protezione: Chiavi di crittografia predefinite rilevate
+
+
+Gli avvisi di monitoraggio dello stato di salute nel Data Warehouse possono essere soppressi per un massimo di 30 giorni.
+
+Quando viene attivata la notifica via email, questi eventi vengono segnalati anche tramite email. Tenere presente che l'e-mail non contiene allegati.
+
+Questi eventi vengono registrati in `dwh_troubleshoot.log` file nelle seguenti posizioni:
+
+* Finestre: `<install dir>\SANscreen\Wildfly\Standalone\Logs`
+* Linux: `/var/log/netapp/oci/wildfly/`
+

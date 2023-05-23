@@ -1,0 +1,36 @@
+---
+permalink: howto/creating-a-query-to-identify-netapp-root-aggregates.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le query forniscono ricerche a un livello granulare, in base ai criteri selezionati dall"utente. L"utilizzo di una query consente di cercare volumi interni nell"ambiente che contengono l"aggregato root NetApp.' 
+---
+= Creazione di una query per identificare gli aggregati root di NetApp nel tuo ambiente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le query forniscono ricerche a un livello granulare, in base ai criteri selezionati dall'utente. L'utilizzo di una query consente di cercare volumi interni nell'ambiente che contengono l'aggregato root NetApp.
+
+
+
+== Fasi
+
+. Nell'interfaccia utente Web di OnCommand Insight, creare una query per identificare gli aggregati root NetApp nell'ambiente: *Query* > *Nuova query* > *Seleziona tipo di risorsa*
+. Fare clic su *Storage Pool*
+. Immettere il nome dell'aggregato root
++
+In questo esempio viene utilizzato "`aggr0`" come nome. Quando si crea un aggregato, è necessario rispettare solo i seguenti requisiti per il nome:
+
++
+** Deve iniziare con una lettera o un carattere di sottolineatura (_).
+** Può contenere solo lettere, cifre e caratteri di sottolineatura.
+** Può contenere fino a 250 caratteri. Nella maggior parte dei casi l'aggregato è il nome aggr0, aggr_0 o qualcosa di simile. Potrebbe essere necessario un processo iterativo per identificare tutti gli aggregati root NetApp nel tuo ambiente.
+
+
+. Fare clic su *Save* (Salva) e immettere un nome per la nuova query.
++
+Come accennato in precedenza, questo potrebbe essere un processo iterativo e richiedere più query per identificare tutti gli aggregati root di NetApp.
+
+

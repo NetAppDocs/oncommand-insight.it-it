@@ -1,0 +1,43 @@
+---
+permalink: howto/use-an-expression-to-identify-alternate-metrics.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile utilizzare le espressioni per visualizzare le metriche non fornite dall"interfaccia utente Web, ad esempio gli IOPS generati dall"overhead di sistema.' 
+---
+= Utilizzare un'espressione per identificare metriche alternative
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare le espressioni per visualizzare le metriche non fornite dall'interfaccia utente Web, ad esempio gli IOPS generati dall'overhead di sistema.
+
+
+
+== A proposito di questa attività
+
+È possibile utilizzare un'espressione per visualizzare gli IOPS totali generati da operazioni non di lettura o non di scrittura, ad esempio operazioni di overhead per un volume interno.
+
+
+
+== Fasi
+
+. Aggiungere un widget alla dashboard. Scegliere *Area chart*.
+. Impostare il dispositivo predefinito su Volume interno: Fare clic su *Storage* > *Internal volume* > *IOPS Write*
+. Fare clic sul pulsante *Converti in espressione*.
+. La metrica *IOPS - Write* si trova ora nel campo della variabile alfabetica "`*a*`".
+. Nel campo della variabile "`*b*`", fare clic su *Select* e scegliere *IOPS - Read*.
+. Nel campo *espressione*, digitare *a + b*. Nella sezione *Display*, selezionare**Area chart** per l'espressione.
+. Nel campo *Filtra per*, immettere il nome del volume interno che si sta analizzando.
+. Il campo *Label* identifica l'espressione. Modificare l'etichetta con un valore significativo come "`R + W IOPS`".
+. Fare clic su **+Add**per aggiungere una riga per gli IOPS totali al widget.
+. Impostare il dispositivo predefinito su Volume interno: Fare clic su *Storage* > *Internal volume* > *IOPS Total*
+. Nel campo *Filtra per*, immettere il nome del volume interno analizzato.
++
+image::../media/expression-anl-how-to.gif[expression e a.]
+
++
+Il grafico mostra gli IOPS totali come una riga, mentre il grafico mostra la combinazione di IOPS di lettura e scrittura in blu. Il divario tra 9:30 e 9:45 mostra operazioni io (overhead) non in lettura e non in scrittura.
+
+

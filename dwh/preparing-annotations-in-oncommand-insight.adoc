@@ -1,0 +1,23 @@
+---
+permalink: dwh/preparing-annotations-in-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Le annotazioni devono essere preparate in OnCommand Insight prima di poter essere importate nel data warehouse. 
+---
+= Preparazione delle annotazioni in OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le annotazioni devono essere preparate in OnCommand Insight prima di poter essere importate nel data warehouse.
+
+
+
+== Fasi
+
+. Accedere al portale OnCommand Insight come amministratore `+https://hostname+`, dove `hostname` È il nome del sistema in cui è installato OnCommand Insight.
+. Fare clic su *Admin* > *Troubleshooting*. Nella parte inferiore della pagina, fare clic su *risoluzione avanzata dei problemi*.
+. Nella scheda *azioni*, fare clic su *Aggiorna annotazioni DWH (Includi eliminate)*.
+

@@ -1,0 +1,33 @@
+---
+permalink: config-admin/additional-data.html 
+sidebar: sidebar 
+keywords: landing 
+summary: È possibile visualizzare dati aggiuntivi in widget personalizzabili su ciascuna pagina di risorse. La personalizzazione della pagina per una risorsa applica la personalizzazione alle pagine per tutte le risorse di quel tipo. 
+---
+= Pagina delle risorse personalizzabile
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare dati aggiuntivi in widget personalizzabili su ciascuna pagina di risorse. La personalizzazione della pagina per una risorsa applica la personalizzazione alle pagine per tutte le risorse di quel tipo.
+
+È possibile personalizzare i widget della pagina delle risorse eseguendo le seguenti operazioni:
+
+. Aggiungere un widget alla pagina
+. Creare una query o un'espressione per il widget per mostrare i dati desiderati
+. Scegliere un filtro se si desidera
+. Scegliere un metodo di rollup o raggruppamento
+. Salvare il widget
+. Ripetere l'operazione per tutti i widget desiderati
+. Salvare la pagina delle risorse
+
+
+È inoltre possibile aggiungere variabili alla pagina delle risorse personalizzate che possono essere utilizzate per perfezionare ulteriormente i dati esposti nei widget. Oltre alle variabili normali, ogni tipo di risorsa può utilizzare un insieme di variabili "€this" per identificare rapidamente le risorse direttamente correlate alla risorsa corrente, ad esempio, tutte le macchine virtuali ospitate dallo stesso hypervisor che ospita la macchina virtuale corrente.
+
+Questa pagina di risorse personalizzate è unica per ogni utente e per ogni tipo di risorsa. Ad esempio, se l'utente A crea una pagina di risorse personalizzata per una macchina virtuale, tale pagina personalizzata verrà visualizzata per qualsiasi pagina di risorse della macchina virtuale per tale utente.
+
+Gli utenti possono solo visualizzare, modificare o eliminare le pagine di risorse personalizzate create.
+
+Le pagine di risorse personalizzate non sono incluse nella funzionalità di esportazione/importazione di Insight.

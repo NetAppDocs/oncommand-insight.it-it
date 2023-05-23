@@ -1,0 +1,36 @@
+---
+permalink: config-admin/deleting-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile eliminare una regola di annotazione quando non è più necessaria per monitorare gli oggetti nella rete. 
+---
+= Eliminazione delle regole di annotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare una regola di annotazione quando non è più necessaria per monitorare gli oggetti nella rete.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insightweb.
+. Fare clic su *Manage* (Gestisci) e selezionare *Annotation rules* (regole annotazione).
++
+La pagina Annotation Rules (regole di annotazione) visualizza l'elenco delle regole di annotazione esistenti.
+
+. Individuare la regola che si desidera eliminare:
++
+** Nella pagina Annotation Rules (regole di annotazione), è possibile filtrare le regole di annotazione immettendo un valore nella casella di filtro.
+** Fare clic su un numero di pagina per sfogliare le regole di annotazione per pagina se sono presenti più regole che si adattano a una singola pagina.
+
+
+. Posizionare il cursore sulla regola che si desidera eliminare, quindi fare clic su image:../media/trash-can-query.gif[""].
++
+Viene visualizzato un messaggio di conferma che richiede se si desidera eliminare la regola.
+
+. Fare clic su *OK*.
+

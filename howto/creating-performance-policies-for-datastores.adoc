@@ -1,0 +1,51 @@
+---
+permalink: howto/creating-performance-policies-for-datastores.html 
+sidebar: sidebar 
+keywords: performance policy,Datastore 
+summary: 'È possibile creare policy sulle performance con soglie per le metriche associate agli archivi dati che si riferiscono ai pool di storage che si stanno monitorando. Per impostazione predefinita, i criteri relativi alle performance si applicano a tutti i dispositivi del tipo specificato quando vengono creati. È possibile creare un"annotazione per includere solo un dispositivo specifico o una serie di dispositivi nella policy delle performance.' 
+---
+= Creazione di policy sulle performance per gli archivi dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare policy sulle performance con soglie per le metriche associate agli archivi dati che si riferiscono ai pool di storage che si stanno monitorando. Per impostazione predefinita, i criteri relativi alle performance si applicano a tutti i dispositivi del tipo specificato quando vengono creati. È possibile creare un'annotazione per includere solo un dispositivo specifico o una serie di dispositivi nella policy delle performance.
+
+
+
+== Prima di iniziare
+
+Quando si utilizza un'annotazione in una policy di performance, l'annotazione deve esistere prima della creazione della policy.
+
+
+
+== A proposito di questa attività
+
+Si crea un criterio di performance che fornisce una notifica quando uno o più datastore monitorati superano una soglia impostata. Il sistema potrebbe già contenere una policy globale che soddisfa le tue esigenze oppure una policy che utilizza le annotazioni potrebbe funzionare anche se annoti tuoi datastore.
+
+
+
+== Fasi
+
+. Dalla barra degli strumenti di Insight, selezionare *Gestisci* > *Criteri di performance*
++
+Viene visualizzata la pagina delle policy di performance. Esaminare le policy di performance esistenti per identificare le policy esistenti che affrontano le metriche delle soglie che si desidera monitorare.
+
+. Fare clic su *+Aggiungi* per aggiungere una nuova policy
+. Aggiungi un "`Policy Name`"
++
+È necessario utilizzare un nome diverso da tutti gli altri nomi di policy per l'oggetto. Ad esempio, non è possibile avere due policy denominate "latenza" per un volume interno; tuttavia, è possibile disporre di una policy di "latenza" per un volume interno e di un'altra policy di "latenza" per un archivio dati. La procedura consigliata consiste nell'utilizzare sempre un nome univoco per qualsiasi policy, indipendentemente dal tipo di oggetto.
+
+. Selezionare "datastore" come tipo di oggetto
+. Fare clic su "`First ricorrenza`"
++
+L'opzione First ricorrenza attiva un avviso quando viene superata una soglia sul primo campione di dati. Tutte le altre opzioni attivano un avviso quando la soglia viene superata una volta e viene continuamente superata per almeno il periodo di tempo specificato.
+
+. Fare clic su "`Warning`"
+. Per "`Create alert`", selezionare *Capacity ratio - over commit* e impostare il valore su *> 150*
++
+È possibile creare avvisi aggiuntivi relativi alla capacità, ad esempio **capacità totale**e *capacità utilizzata*.
+
+

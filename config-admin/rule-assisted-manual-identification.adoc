@@ -1,0 +1,57 @@
+---
+permalink: config-admin/rule-assisted-manual-identification.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Questa funzione viene utilizzata nei casi speciali in cui si desidera eseguire una regola specifica o un elenco di regole (con o senza un riordinamento una tantum) per risolvere host, dispositivi di storage e nastri sconosciuti o gruppi di essi.' 
+---
+= Identificazione manuale assistita da regole
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa funzione viene utilizzata nei casi speciali in cui si desidera eseguire una regola specifica o un elenco di regole (con o senza un riordinamento singolo) per risolvere host, dispositivi di storage e nastri sconosciuti o gruppi di essi.
+
+
+
+== Prima di iniziare
+
+Sono presenti diversi dispositivi non identificati e più regole che consentono di identificare correttamente altri dispositivi.
+
+
+
+== A proposito di questa attività
+
+[NOTE]
+====
+Se l'origine contiene solo una parte del nome di un host o di un dispositivo, utilizzare una regola di espressione regolare e formattarla per aggiungere il testo mancante.
+
+====
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Fare clic su *Gestisci* > *risoluzione del dispositivo*
+. Fare clic sulla scheda *FC Identify* (identificazione FC).
++
+Il sistema visualizza i dispositivi identificati e non identificati.
+
+. Selezionare più dispositivi non identificati.
+. Fare clic su *Identify* > *set host resolution* o *> set tape resolution*
++
+Il sistema visualizza la schermata Identify (identificazione) che contiene un elenco di tutte le regole che hanno identificato correttamente i dispositivi.
+
+. Modificare l'ordine delle regole in un ordine che soddisfi le proprie esigenze.
++
+L'ordine delle regole viene modificato nella schermata Identify (identificazione), ma non globalmente.
+
+. Selezionare il metodo più adatto alle proprie esigenze.
++
+OnCommand Insight esegue il processo di risoluzione dell'host nell'ordine in cui vengono visualizzati i metodi, iniziando da quelli in alto.
+
++
+Quando si incontrano le regole applicabili, i nomi delle regole vengono visualizzati nella colonna rules (regole) e identificati come manual (manuale).
+
+

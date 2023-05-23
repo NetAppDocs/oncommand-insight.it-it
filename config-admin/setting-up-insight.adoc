@@ -1,0 +1,25 @@
+---
+permalink: config-admin/setting-up-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Per configurare Insight, è necessario attivare le licenze Insight, configurare le origini dati, definire utenti e notifiche, abilitare i backup ed eseguire le procedure di configurazione avanzate richieste. 
+---
+= Configurazione di Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per configurare Insight, è necessario attivare le licenze Insight, configurare le origini dati, definire utenti e notifiche, abilitare i backup ed eseguire le procedure di configurazione avanzate richieste.
+
+Una volta installato il sistema OnCommand Insight, è necessario eseguire le seguenti operazioni di installazione:
+
+* Installare le licenze Insight.
+* Configura le origini dati in Insight.
+* Configurare gli account utente.
+* Configurare l'e-mail.
+* Definire le notifiche SNMP, e-mail o syslog, se necessario.
+* Abilita backup settimanali automatici del tuo database Insight.
+* Eseguire qualsiasi procedura di configurazione avanzata richiesta, inclusa la definizione di annotazioni e soglie.
+

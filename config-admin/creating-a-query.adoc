@@ -1,0 +1,74 @@
+---
+permalink: config-admin/creating-a-query.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile creare una query per consentire la ricerca delle risorse nell"ambiente a un livello granulare. Le query consentono di suddividere i dati aggiungendo filtri e quindi ordinando i risultati per visualizzare i dati di inventario e performance in un"unica vista.' 
+---
+= Creazione di una query
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare una query per consentire la ricerca delle risorse nell'ambiente a un livello granulare. Le query consentono di suddividere i dati aggiungendo filtri e quindi ordinando i risultati per visualizzare i dati di inventario e performance in un'unica vista.
+
+
+
+== A proposito di questa attività
+
+Ad esempio, è possibile creare una query per i volumi, aggiungere un filtro per trovare i dati memorizzati associati al volume selezionato, aggiungere un filtro per trovare un'annotazione particolare, ad esempio Tier 1, sugli storage selezionati, Infine, Aggiungi un altro filtro per trovare tutti gli storage con IOPS - Read (io/s) superiori a 25. Una volta visualizzati i risultati, è possibile ordinare le colonne delle informazioni associate alla query in ordine crescente o decrescente.
+
+Quando viene aggiunta una nuova origine dati che acquisisce le risorse o vengono effettuate annotazioni o assegnazioni di applicazioni, è possibile eseguire query per tali risorse, annotazioni o applicazioni dopo che le query sono state indicizzate, che si verifica a intervalli pianificati regolarmente.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Fare clic su *Query* e selezionare *+ Nuova query*.
+. Fare clic su *Select Resource Type* (Seleziona tipo di risorsa) e selezionare un tipo di risorsa.
++
+Quando si seleziona una risorsa per una query, vengono visualizzate automaticamente diverse colonne predefinite; è possibile rimuovere queste colonne o aggiungerne di nuove in qualsiasi momento.
+
+. Nella casella di testo *Nome*, digitare il nome della risorsa o una parte di testo da filtrare attraverso i nomi delle risorse.
++
+È possibile utilizzare una delle seguenti opzioni da sola o combinate per perfezionare la ricerca in qualsiasi casella di testo della pagina Nuova query:
+
++
+** Un asterisco consente di cercare tutto. Ad esempio, `vol*rhel` visualizza tutte le risorse che iniziano con "`vol`" e terminano con "`rhel`".
+** Il punto interrogativo consente di cercare un numero specifico di caratteri. Ad esempio, `BOS-PRD??-S12` Visualizza BOS-PRD12-S12, BOS-PRD13-S12 e così via.
+** L'operatore OR consente di specificare più entità. Ad esempio, `FAS2240 OR CX600 OR FAS3270` trova più modelli di storage.
+** L'operatore NOT consente di escludere il testo dai risultati della ricerca. Ad esempio, `NOT EMC*` Trova tutto ciò che non inizia con "`EMC`". È possibile utilizzare `NOT *` per visualizzare i campi che non contengono valori.
+
+
+. Fare clic su image:../media/check-box-ok.gif[""] per visualizzare le risorse.
+. Per aggiungere un criterio, fare clic su image:../media/more-button.gif[""]ed eseguire una delle seguenti operazioni:
++
+** Digitare per cercare un criterio specifico, quindi selezionarlo.
+** Scorrere l'elenco e selezionare un criterio.
+** Inserire un intervallo di valori se si sceglie una metrica delle performance come IOPS - Read (io/s). Le annotazioni predefinite fornite da Insight sono indicate da image:../media/annotation-icon.gif[""]; è possibile avere annotazioni con nomi duplicati.
+
+
++
+Viene aggiunta una colonna all'elenco risultati query per i criteri e i risultati della query nell'elenco vengono aggiornati.
+
+. Se si desidera, fare clic su image:../media/remove-criteria-button.gif[""] per rimuovere un'annotazione o una metrica delle prestazioni dai risultati della query.
++
+Ad esempio, se la query mostra la latenza massima e il throughput massimo per gli archivi dati e si desidera visualizzare solo la latenza massima nell'elenco dei risultati della query, fare clic su questo pulsante e deselezionare la casella di controllo *throughput - Max*. La colonna throughput - Max (MB/s) viene rimossa dall'elenco risultati query.
+
++
+[NOTE]
+====
+A seconda del numero di colonne visualizzate nella tabella dei risultati della query, potrebbe non essere possibile visualizzare ulteriori colonne aggiunte. È possibile rimuovere una o più colonne fino a quando le colonne desiderate non diventano visibili.
+
+====
+. Fare clic su *Save* (Salva), immettere un nome per la query e fare nuovamente clic su *Save* (Salva).
++
+Se si dispone di un account con ruolo di amministratore, è possibile creare dashboard personalizzate. Una dashboard personalizzata può comprendere qualsiasi widget della libreria di widget, molti dei quali consentono di rappresentare i risultati delle query in una dashboard personalizzata. Per ulteriori informazioni sui dashboard personalizzati, consulta la _Guida introduttiva di OnCommand Insight_.
+
+
+
+*Informazioni correlate*
+
+link:importing-and-exporting-user-data.md#["Importazione ed esportazione dei dati utente"]

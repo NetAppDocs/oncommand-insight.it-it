@@ -1,0 +1,20 @@
+---
+permalink: install-windows/back-up-the-security-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Quando l"ambiente Insight utilizza una configurazione di sicurezza non predefinita, è necessario eseguire il backup della configurazione di sicurezza e ripristinare la configurazione di sicurezza dopo l"installazione del nuovo software. Prima di ripristinare il backup del database Data Warehouse, è necessario ripristinare la configurazione di sicurezza.' 
+---
+= Backup della configurazione di sicurezza
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando l'ambiente Insight utilizza una configurazione di sicurezza non predefinita, è necessario eseguire il backup della configurazione di sicurezza e ripristinare la configurazione di sicurezza dopo l'installazione del nuovo software. Prima di ripristinare il backup del database Data Warehouse, è necessario ripristinare la configurazione di sicurezza.
+
+
+
+== A proposito di questa attività
+
+Si utilizza `securityadmin` per creare un backup della configurazione e ripristinare la configurazione salvata. Per ulteriori informazioni, cercare `securityadmin` Nel Centro documentazione OnCommand Insight: http://docs.netapp.com/oci-73/index.jsp[]

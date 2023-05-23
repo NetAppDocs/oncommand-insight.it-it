@@ -1,0 +1,25 @@
+---
+permalink: howto/compare-metrics-a-against-metrics-b-to-show-categories-and-anomalies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile utilizzare un grafico a dispersione per visualizzare due set di dati per ciascun oggetto. Ad esempio, è possibile specificare IOPS Read (lettura IOPS) e Latency Total (totale latenza) da visualizzare per ciascun oggetto. Utilizzando questo grafico è possibile identificare l"oggetto che si considera problematico in base agli IOPS e alla latenza combinata.' 
+---
+= Confronta le metriche A con quelle B per mostrare le categorie e le anomalie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare un grafico a dispersione per visualizzare due set di dati per ciascun oggetto. Ad esempio, è possibile specificare IOPS Read (lettura IOPS) e Latency Total (totale latenza) da visualizzare per ciascun oggetto. Utilizzando questo grafico è possibile identificare l'oggetto che si considera problematico in base agli IOPS e alla latenza combinata.
+
+
+
+== Fasi
+
+. Aggiungere un widget con un grafico a dispersione alla nuova dashboard: *Widget* > *grafico a dispersione*
+. Impostare il dispositivo predefinito su macchina virtuale: Fare clic su *Storage* > *Virtual Machine* > *latenza totale* > *IOPS Read*
++
+Il sistema visualizza un grafico a dispersione simile a quanto segue: image:../media/guid-a2c666db-f53d-42b8-82ef-62743b8b0fe2.gif[""]
+
+

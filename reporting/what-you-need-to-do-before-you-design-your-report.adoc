@@ -1,0 +1,23 @@
+---
+permalink: reporting/what-you-need-to-do-before-you-design-your-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Prima di progettare un report personalizzato, è necessario completare alcune attività preliminari. Se non vengono completati, i report potrebbero essere imprecisi o incompleti. 
+---
+= Cosa occorre fare prima di progettare il report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di progettare un report personalizzato, è necessario completare alcune attività preliminari. Se non vengono completati, i report potrebbero essere imprecisi o incompleti.
+
+Ad esempio, se non si completa il processo di identificazione del dispositivo, i report relativi alla capacità non saranno accurati. In alternativa, se non si finisce di impostare annotazioni (ad esempio Tier, business unit e data center), i report personalizzati potrebbero non riportare in modo preciso i dati nel dominio e potrebbero mostrare "N/A" per alcuni data point.
+
+Prima di progettare i report, completare le seguenti attività:
+
+* Configurare tutte le origini dati. Per ulteriori informazioni, consultare la _Guida alla configurazione e all'amministrazione di OnCommand Insight_.
+* Inserire annotazioni (ad esempio Tier, data center e business unit) sui dispositivi e sulle risorse del proprio ambiente. È vantaggioso che le annotazioni siano stabili prima di generare report, perché il data warehouse di OnCommand Insight raccoglie informazioni storiche.
+* Configurare il data warehouse di OnCommand Insight per accettare i dati dal server OnCommand Insight nel processo di estrazione, trasformazione e caricamento (ETL).
+

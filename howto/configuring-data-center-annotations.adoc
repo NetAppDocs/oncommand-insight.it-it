@@ -1,0 +1,73 @@
+---
+permalink: howto/configuring-data-center-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"annotazione del data center viene in genere utilizzata per associare un array di storage, uno switch o una risorsa host fisica a una posizione del data center. È possibile associare l"annotazione del data center anche ad altre risorse del proprio ambiente.' 
+---
+= Configurazione delle annotazioni del data center
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'annotazione del data center viene in genere utilizzata per associare un array di storage, uno switch o una risorsa host fisica a una posizione del data center. È possibile associare l'annotazione del data center anche ad altre risorse del proprio ambiente.
+
+Fasi:
+
+* Accedere a Insight come utente con autorizzazioni amministrative.
+* Selezionare *Gestisci* > *Annotazioni*.
+* Scegliere l'annotazione *Data Center* e fare clic sull'icona *Edit*.
+* Fare clic su *+Aggiungi* e aggiungere il nome e la descrizione del primo data center all'elenco delle annotazioni.
+* Fai lo stesso per gli altri data center.
+* Al termine, fare clic su *Save* (Salva).
+
+
+Esempi di annotazioni del data center:
+
+|===
+
+
+| Nome | Descrizione 
+
+
+ a| 
+DC1_SVL
+ a| 
+Bldg di Sunnyvale 1
+
+
+
+ a| 
+DC2_SVLb3
+ a| 
+SVL Bldg3 ITA
+
+
+
+ a| 
+DC3_NY
+ a| 
+New York
+
+
+
+ a| 
+DC4_Londra
+ a| 
+Londra
+
+
+
+ a| 
+...
+ a| 
+
+|===
+Insight è dotato di diversi tipi di annotazione pronti all'uso che consentono agli utenti di definire o modificare i valori in base alle proprie esigenze. Questi tipi di annotazione predefiniti saranno sempre disponibili per l'interfaccia utente Web Insight e per il reporting. Le annotazioni personalizzate appena create sono visibili nell'interfaccia utente Web di Insight, ma richiedono misure aggiuntive per renderle disponibili per il reporting. Per informazioni sull'inclusione di annotazioni personalizzate nei report. Contatta il tuo rappresentante del supporto clienti NetApp.
+
+[NOTE]
+====
+Alcuni utenti potrebbero essere inclini a utilizzare l'annotazione Paese per impostare le posizioni delle risorse, invece che in combinazione con l'annotazione del data center. Tuttavia, tenere presente che l'annotazione Country viene trattata come un tipo di annotazione personalizzato nel data warehouse Insight e pertanto potrebbe non essere visualizzata nei report con la stessa granularità del data center.
+
+====

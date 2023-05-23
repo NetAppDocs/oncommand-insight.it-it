@@ -1,0 +1,23 @@
+---
+permalink: howto/servicenow-integration-syncing-the-connector.html 
+sidebar: sidebar 
+keywords:  
+summary: Una volta configurati correttamente ServiceNow, Insight e il connettore, è possibile sincronizzare il connettore. 
+---
+= Sincronizzazione del connettore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta configurati correttamente ServiceNow, Insight e il connettore, è possibile sincronizzare il connettore.
+
+
+
+== Fasi
+
+. Aprire un prompt dei comandi e passare alla cartella OCI2SNOW.
+. Eseguire due volte il seguente comando. La prima sincronizzazione aggiorna gli elementi, la seconda aggiorna le relazioni: `oci_snow_sync.pyz sync`
+. Verificare che la tabella Storage Server nell'istanza di ServiceNow sia popolata. Aprire un server di storage e verificare che siano elencate le risorse correlate a tale storage.
+

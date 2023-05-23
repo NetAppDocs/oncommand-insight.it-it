@@ -1,0 +1,37 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile assegnare le applicazioni in esecuzione nel proprio ambiente a determinate risorse (host, macchine virtuali, volumi, volumi interni e hypervisor). La sezione User Data (dati utente) consente di modificare l"applicazione assegnata a una risorsa o di assegnare un"applicazione o applicazioni aggiuntive a una risorsa.' 
+---
+= Utilizzo della sezione User Data (dati utente) per assegnare o modificare le applicazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile assegnare le applicazioni in esecuzione nel proprio ambiente a determinate risorse (host, macchine virtuali, volumi, volumi interni e hypervisor). La sezione User Data (dati utente) consente di modificare l'applicazione assegnata a una risorsa o di assegnare un'applicazione o applicazioni aggiuntive a una risorsa.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Individuare una pagina di risorse effettuando una delle seguenti operazioni:
++
+** Nella barra degli strumenti Insight, fare clic su image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], digitare il nome della risorsa, quindi selezionare la risorsa dall'elenco.
+** Fare clic su *Dashboard*, selezionare *Dashboard delle risorse*, individuare il nome di una risorsa e fare clic su di essa. Viene visualizzata la pagina delle risorse.
+
+
+. È possibile effettuare le seguenti operazioni:
++
+** Per visualizzare la pagina delle risorse dell'applicazione, fare clic sul nome dell'applicazione.
+** Per modificare l'applicazione assegnata o per assegnare un'applicazione o altre applicazioni, posizionare il cursore sul nome dell'applicazione, se è assegnata un'applicazione, oppure su *Nessuno*, se non è assegnata alcuna applicazione, fare clic su image:../media/pencil-icon-landing-page-be.gif[""], digitare per cercare un'applicazione o selezionarne una dall'elenco, quindi fare clic su image:../media/check-box-ok.gif[""].
++
+Se si sceglie un'applicazione associata a un'entità aziendale, l'entità aziendale viene assegnata automaticamente all'asset. In questo caso, quando si posiziona il cursore sul nome dell'entità aziendale, viene visualizzata la parola _derived_. Se si desidera mantenere l'entità solo per la risorsa e non per l'applicazione associata, è possibile eseguire manualmente l'override dell'assegnazione dell'applicazione.
+
+** Per rimuovere un'applicazione, fare clic su image:../media/trash-can-query.gif[""].
+
+
+

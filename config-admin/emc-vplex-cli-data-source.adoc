@@ -1,0 +1,222 @@
+---
+permalink: config-admin/emc-vplex-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Per la configurazione, questa origine dati richiede un indirizzo IP del server VPLEX e un account di dominio di livello amministrativo. 
+---
+= Origine dati EMC VPLEX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per la configurazione, questa origine dati richiede un indirizzo IP del server VPLEX e un account di dominio di livello amministrativo.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati EMC VPLEX. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Motore
+ a| 
+Nodo di storage
+
+
+
+ a| 
+Device, System Extend
+ a| 
+Pool di storage back-end
+
+
+
+ a| 
+Volume virtuale
+ a| 
+Volume
+
+
+
+ a| 
+Porta front-end, porta back-end
+ a| 
+Porta
+
+
+
+ a| 
+Dispositivo distribuito
+ a| 
+Sincronizzazione dello storage
+
+
+
+ a| 
+Vista storage
+ a| 
+Mappa del volume, maschera del volume
+
+
+
+ a| 
+Volume di storage
+ a| 
+LUN back-end
+
+
+
+ a| 
+ITL
+ a| 
+Percorso back-end
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Indirizzo IP del server VPLEX
+* Account di dominio a livello amministrativo per il server VPLEX
+* Porta 443 (HTTPS). Richiede la connettività in uscita alla porta TCP 443 sulla stazione di gestione VPLEX.
+* Per le performance, nome utente e password di sola lettura per l'accesso ssh/SCP.
+* Per le prestazioni, è necessaria la porta 22.
+* Validare l'accesso: Verificare utilizzando `telnet` alla porta 443. Per una porta diversa da quella predefinita, con qualsiasi utilizzo da parte del browser
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Indirizzo IP della console di gestione VPLEX
+ a| 
+Indirizzo IP o nome di dominio completo della console di gestione VPLEX
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente per VPLEX CLI
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per VPLEX CLI
+
+
+
+ a| 
+Performance Remote IP Address (Indirizzo IP remoto delle prestazioni) della console di gestione VPLEX
+ a| 
+Performance Remote IP address (Indirizzo IP remoto delle performance) della console di gestione VPLEX
+
+
+
+ a| 
+Performance Remote User Name (Nome utente remoto performance)
+ a| 
+Performance Remote user name of VPLEX Management Console (Nome utente remoto delle performance di VPLEX Management
+
+
+
+ a| 
+Password remota delle performance
+ a| 
+Performance Remote Password di VPLEX Management Console
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Porta di comunicazione
+ a| 
+Porta utilizzata per VPLEX CLI
+
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 20 minuti)
+
+
+
+ a| 
+Timeout connessione (sec)
+ a| 
+Timeout di connessione (impostazione predefinita: 60 secondi)
+
+
+
+ a| 
+Numero di tentativi
+ a| 
+Numero di tentativi di inventario
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 600 secondi)
+
+
+
+ a| 
+Timeout attesa processo SSH performance (sec)
+ a| 
+Timeout processo SSH (impostazione predefinita: 600 secondi)
+
+
+
+ a| 
+Timeout attesa banner SSH (sec)
+ a| 
+Timeout di attesa banner SSH (impostazione predefinita: 20 secondi)
+
+
+
+ a| 
+Numero di tentativi
+ a| 
+Numero di tentativi di esecuzione
+
+|===

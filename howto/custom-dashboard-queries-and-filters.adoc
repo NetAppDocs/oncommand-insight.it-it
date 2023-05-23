@@ -1,0 +1,57 @@
+---
+permalink: howto/custom-dashboard-queries-and-filters.html 
+sidebar: sidebar 
+keywords:  
+summary: Il widget Query in a Dashboard è un potente strumento per gestire la visualizzazione dei dati. Di seguito sono riportate alcune informazioni da tenere presenti sulle query dei widget. 
+---
+= Query e filtri dei widget della dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il widget Query in a Dashboard è un potente strumento per gestire la visualizzazione dei dati. Di seguito sono riportate alcune informazioni da tenere presenti sulle query dei widget.
+
+Alcuni widget possono avere fino a cinque query. Ogni query traccia il proprio set di righe o grafici nel widget. L'impostazione di rollup, raggruppamento, risultati top/bottom, ecc. su una query non influisce su altre query per il widget.
+
+È possibile fare clic sull'icona occhio per nascondere temporaneamente una query. La visualizzazione del widget si aggiorna automaticamente quando si nasconde o si visualizza una query. Ciò consente di controllare i dati visualizzati per le singole query durante la creazione del widget.
+
+I seguenti tipi di widget possono avere più query:
+
+* Grafico ad area
+* Grafico ad area sovrapposta
+* Grafico a linee
+* Grafico di spline
+* Widget a valore singolo
+
+
+I restanti tipi di widget possono avere una sola query:
+
+* Tabella
+* Grafico a barre
+* Grafico a caselle
+* Grafico a dispersione
+
+
+
+
+== Filtraggio nelle query della dashboard
+
+È possibile filtrare utilizzando una delle seguenti opzioni per perfezionare la ricerca in qualsiasi campo di testo* della query:
+
+* Un asterisco consente di cercare tutto. Ad esempio, `vol*rhel` visualizza tutte le risorse che iniziano con "`vol`" e terminano con "`rhel`".
+* Il punto interrogativo consente di cercare un numero specifico di caratteri. Ad esempio, `BOS-PRD??-S12` Visualizza BOS-PRD12-S12, BOS-PRD13-S12 e così via.
+* L'operatore OR consente di specificare più entità. Ad esempio, `FAS2240 OR CX600 OR FAS3270` trova più modelli di storage.
+* L'operatore NOT consente di escludere il testo dai risultati della ricerca. Ad esempio, `NOT EMC*` Trova tutto ciò che non inizia con "`EMC`". È possibile utilizzare `NOT *` per visualizzare i campi che contengono valori nulli.
+
+
+Se racchiudi una stringa di filtro tra virgolette doppie, Insight tratta tutto ciò che va dalla prima all'ultima quotazione come una corrispondenza esatta. Tutti i caratteri speciali o gli operatori all'interno delle virgolette saranno trattati come valori letterali. Ad esempio, il filtraggio per "`*`" restituisce risultati che sono un asterisco letterale; in questo caso, l'asterisco non verrà trattato come carattere jolly. Gli operatori E, O e NON verranno trattati come stringhe letterali se racchiusi tra virgolette doppie.
+
+
+
+== Identificazione degli oggetti restituiti da query e filtri
+
+Gli oggetti restituiti dalle query e dai filtri sono simili a quelli mostrati nella seguente illustrazione. Gli oggetti con 'tag' assegnati sono annotazioni, mentre gli oggetti senza tag sono contatori delle prestazioni o attributi degli oggetti.
+
+image::../media/query-filter-objects.gif[oggetti filtro query]

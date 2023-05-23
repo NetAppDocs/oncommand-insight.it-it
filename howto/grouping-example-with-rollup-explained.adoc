@@ -1,0 +1,50 @@
+---
+permalink: howto/grouping-example-with-rollup-explained.html 
+sidebar: sidebar 
+keywords:  
+summary: I widget delle tabelle consentono di raggruppare i dati per una visualizzazione più semplice. 
+---
+= Esempio di raggruppamento (con spiegazione del rollup)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I widget delle tabelle consentono di raggruppare i dati per una visualizzazione più semplice.
+
+
+
+== A proposito di questa attività
+
+In questo esempio, creeremo un widget di tabella che mostra tutte le macchine virtuali raggruppate per data center.
+
+
+
+== Fasi
+
+. Creare o aprire una dashboard e aggiungere un widget *Table*.
+. Selezionare *Virtual Machine* come tipo di risorsa per questo widget.
+. Fare clic su Column Selector (selettore colonna) image:../media/column-picker-button.gif[""] E scegliere _Hypervisor name_ e _IOPS - Total_.
++
+Tali colonne vengono ora visualizzate nella tabella.
+
+. Ignoriamo qualsiasi macchina virtuale senza IOPS e includiamo solo macchine virtuali con IOPS totali superiori a 1. Fare clic sul pulsante *Filtra per +* e selezionare *IOPS - totale*. Fare clic su *qualsiasi* e nel campo *da* digitare 1. Lasciare vuoto il campo *to*. Fare clic sul pulsante di selezione per applicare il filtro.
++
+La tabella mostra ora tutte le macchine virtuali con IOPS totali maggiori o uguali a 1. Si noti che non esiste alcun raggruppamento nella tabella. Vengono visualizzate tutte le macchine virtuali.
+
+. Selezionare il pulsante *Raggruppa per +*.
++
+Poiché l'opzione *all* è selezionata come metodo di raggruppamento per impostazione predefinita, tutte le macchine virtuali vengono spostate in un singolo gruppo denominato "`all`".
+
+. Sopra la colonna _IOPS - Total_ è ora disponibile l'opzione *Roll-up*. Il metodo di rolloup predefinito è _Avg_. Ciò significa che il numero visualizzato per il gruppo corrisponde alla media di tutti gli IOPS totali riportati per ciascuna macchina virtuale all'interno del gruppo. Puoi scegliere di far scorrere questa colonna verso l'alto per _Avg_, _SUM_, _min_ o _Max_. È possibile eseguire il rollup singolo di ogni colonna visualizzata contenente metriche delle performance.
+. Fare clic su *tutto* e selezionare *Nome hypervisor*.
++
+L'elenco delle macchine virtuali è ora raggruppato in base all'hypervisor. È possibile espandere ciascun hypervisor per visualizzare le macchine virtuali ospitate dall'IT.
+
++
+image::../media/table-grouping-example.gif[esempio di raggruppamento di tabelle]
+
+. Fare clic su *Save* (Salva) per salvare la tabella nella dashboard. È possibile ridimensionare il widget.
+. Fare clic su *Save* (Salva) per salvare la dashboard.
+

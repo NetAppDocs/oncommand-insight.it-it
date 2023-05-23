@@ -1,0 +1,78 @@
+---
+permalink: howto/finding-the-right-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Le risorse Insight a cui puoi fare riferimento nei filtri e nelle ricerche dei widget variano a seconda del tipo di risorsa. 
+---
+= Best practice: Trovare le risorse giuste
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le risorse Insight a cui puoi fare riferimento nei filtri e nelle ricerche dei widget variano a seconda del tipo di risorsa.
+
+Nei dashboard, il tipo di risorsa intorno al quale si sta creando il widget determina gli altri contatori dei tipi di risorsa per i quali è possibile filtrare o aggiungere una colonna. Quando si crea il widget, tenere presente quanto segue:
+
+|===
+
+
+| Questo tipo di risorsa/contatore: | Può essere filtrato per sotto queste risorse: 
+
+
+ a| 
+Macchina virtuale
+ a| 
+VMDK
+
+
+
+ a| 
+Datastore
+ a| 
+VolumeVMDK interno
+
+Macchina virtuale
+
+Volume
+
+
+
+ a| 
+Hypervisor
+ a| 
+Macchina virtuale
+
+
+
+ a| 
+È un hypervisor
+ a| 
+Host
+
+
+
+ a| 
+Host
+ a| 
+Volume volumeinterno
+
+
+
+ a| 
+Cluster
+ a| 
+Macchina virtuale host
+
+
+
+ a| 
+Fabric
+ a| 
+Porta
+
+|===
+Non si tratta di un elenco completo.
+
+Procedura consigliata: Se si esegue il filtraggio per un determinato tipo di risorsa che non compare nell'elenco, provare a creare la query intorno a un tipo di risorsa alternativo.

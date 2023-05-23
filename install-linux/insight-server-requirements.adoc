@@ -1,0 +1,176 @@
+---
+permalink: install-linux/insight-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: Si consiglia di utilizzare un server dedicato. Non installare Insight su un server in cui sono installate altre applicazioni. Sono supportati server fisici e virtuali, a condizione che i requisiti del prodotto siano soddisfatti. 
+---
+= Requisiti di Insight Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si consiglia di utilizzare un server dedicato. Non installare Insight su un server in cui sono installate altre applicazioni. Sono supportati server fisici e virtuali, a condizione che i requisiti del prodotto siano soddisfatti.
+
+Per installare il software del server OnCommand Insight, è necessario disporre delle autorizzazioni sudo.
+
+Alcuni componenti Insight potrebbero richiedere pacchetti dipendenti durante l'installazione. Assicurarsi che il repository YUM sia accessibile prima di installare Insight.
+
+[NOTE]
+====
+Il dimensionamento per OnCommand Insight prevede diverse dipendenze, come tipo e dimensione dell'origine dati, numero di risorse nell'ambiente, intervalli di polling e altro ancora. I seguenti esempi di dimensionamento sono solo linee guida e rappresentano alcuni degli ambienti in cui Insight è stato testato. La modifica di questi o altri fattori nell'ambiente può modificare i requisiti di dimensionamento di Insight. Queste linee guida includono spazio su disco per un massimo di 90 giorni di dati di archiviazione delle performance.
+
+====
+Prima di installare o aggiornare Insight, si consiglia di contattare il Sales Engineer per ottenere informazioni dettagliate sul dimensionamento.
+
+*Esempi:*
+
+|===
+
+
+| Fattori ambientali: | Spazio su disco, CPU e memoria testati: 
+
+
+ a| 
+80 volumi di storage
+
+4,000 VM
+
+4,000 porte switch
+ a| 
+250 GB di spazio su disco 8 core
+
+32 GB DI RAM
+
+
+
+ a| 
+160 unità di storage 40.000 volumi
+
+8,000 VM
+
+8,000 porte switch
+ a| 
+1 TB di spazio su disco 12 core
+
+48 GB DI RAM
+
+|===
+*Requisiti:*
+
+|===
+
+
+| Componente | Obbligatorio 
+
+
+ a| 
+Sistema operativo
+ a| 
+Un computer che esegue una versione con licenza di uno dei seguenti sistemi, che non esegue altro software a livello di applicazione:
+
+* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+* CentOS 7.2, 7.5, 7.6, 7.7, 7.8, 7.9, CentOS 8 Stream
+* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+
+
+Una versione con licenza garantisce che le dipendenze richieste dall'installazione vengano risolte automaticamente dal sistema operativo.
+
+È necessario disinstallare MariaDB prima di installare Insight.
+
+[NOTE]
+====
+La disinstallazione di MariaDB rimuove anche Postfix Mail Transport Agent.
+
+====
+Si consiglia di utilizzare un server dedicato.
+
+
+
+ a| 
+Macchina virtuale (VM)
+ a| 
+Questo componente può essere eseguito in un ambiente virtuale, a condizione che le risorse di CPU e memoria per l'istanza siano riservate.
+
+
+
+ a| 
+Memoria e CPU
+ a| 
+24 - 256 GB DI RAM
+
+8 - 32 core
+
+
+
+ a| 
+Spazio su disco disponibile
+ a| 
+100 GB - 3 TB di spazio su disco per l'installazione
+
+50 GB - 1 TB di spazio su disco per l'archiviazione delle performance
+
+Per un ambiente da 500 GB di esempio, si consigliano i seguenti guasti alle partizioni:
+
+* Directory /opt -- 50 GB
+* Directory /var/log -- 100 GB
+* Directory /var/lib -- 350 GB
+
+
+Si tratta di una Best practice da montare `/opt` e. `/var` su dischi separati dal file system root (`/`).
+
+I dischi SSD sono consigliati per lo spazio di installazione Insight.
+
+
+
+ a| 
+Rete
+ a| 
+Connessione Ethernet e porte:
+
+* Connessione Ethernet a 100 Mbps o 1 Gbps con indirizzo IP dedicato (statico) e connettività IP a tutti i componenti della SAN, inclusi i dispositivi FC e le unità di acquisizione remota.
+* I requisiti delle porte per il processo del server OnCommand Insight sono 80, 443, 1090 - 1100, 3873, 8083, da 4444 a 4446, 5445, 5455, da 4712 a 4714, 5500, e 5501.
+* I requisiti delle porte per il processo di acquisizione sono 12123 e 5679.
+* Il requisito di porta per MySQL è 3306.
+* I requisiti delle porte per Elasticsearch sono 9200 e 9310
+
+
+Le porte 443 e 3306 richiedono l'accesso esterno attraverso qualsiasi firewall presente.
+
+
+
+ a| 
+Permessi
+ a| 
+Le autorizzazioni sudo sono richieste sul server OnCommand Insight.
+
+Se una delle seguenti cartelle è un collegamento simbolico, assicurarsi che le directory di destinazione dispongano dei permessi '755'.
+
+* /opt/netapp
+* /var/lib/netapp
+* /var/log/netapp
+
+
+
+
+ a| 
+Connettività remota
+ a| 
+Connettività Internet per consentire l'accesso a WebEx o una connessione desktop remota per facilitare l'installazione e il supporto post-installazione.
+
+
+
+ a| 
+Accessibilità
+ a| 
+È richiesto l'accesso HTTPS.
+
+
+
+ a| 
+Server HTTP o HTTPS
+ a| 
+I server HTTP Apache o altri server HTTPS non devono competere per le stesse porte (443) del server OnCommand Insight e non devono avviarsi automaticamente. Se devono ascoltare la porta 443, è necessario configurare il server OnCommand Insight in modo che utilizzi altre porte.
+
+|===

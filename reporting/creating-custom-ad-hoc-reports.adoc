@@ -1,0 +1,21 @@
+---
+permalink: reporting/creating-custom-ad-hoc-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare gli strumenti di creazione dei report per creare report personalizzati. Dopo aver creato i report, è possibile salvarli ed eseguirli in base a una pianificazione regolare. I risultati dei report possono essere inviati automaticamente via email a te e ad altri. 
+---
+= Creazione di report personalizzati ad hoc
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare gli strumenti di creazione dei report per creare report personalizzati. Dopo aver creato i report, è possibile salvarli ed eseguirli in base a una pianificazione regolare. I risultati dei report possono essere inviati automaticamente via email a te e ad altri.
+
+Gli esempi di questa sezione mostrano il seguente processo, che può essere utilizzato per qualsiasi modello di dati OnCommand Insight:
+
+* Identificazione di una domanda a cui rispondere con un report
+* Determinazione dei dati necessari per supportare i risultati
+* Selezione degli elementi dei dati per il report
+

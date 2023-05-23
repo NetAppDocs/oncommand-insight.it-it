@@ -1,0 +1,165 @@
+---
+permalink: install-windows/insight-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: Si consiglia di utilizzare un server dedicato. Non installare Insight su un server in cui sono installate altre applicazioni. Sono supportati server fisici e virtuali, a condizione che i requisiti del prodotto siano soddisfatti. 
+---
+= Requisiti di Insight Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si consiglia di utilizzare un server dedicato. Non installare Insight su un server in cui sono installate altre applicazioni. Sono supportati server fisici e virtuali, a condizione che i requisiti del prodotto siano soddisfatti.
+
+Per installare il software del server OnCommand Insight, è necessario disporre delle autorizzazioni di amministratore locale.
+
+[NOTE]
+====
+Il dimensionamento per OnCommand Insight prevede diverse dipendenze, come tipo e dimensione dell'origine dati, numero di risorse nell'ambiente, intervalli di polling e altro ancora. I seguenti esempi di dimensionamento sono solo linee guida e rappresentano alcuni degli ambienti in cui Insight è stato testato. La modifica di questi o altri fattori nell'ambiente può modificare i requisiti di dimensionamento di Insight. Queste linee guida includono spazio su disco per un massimo di 90 giorni di dati di archiviazione delle performance.
+
+====
+Prima di installare o aggiornare Insight, si consiglia di contattare il Sales Engineer per ottenere informazioni dettagliate sul dimensionamento.
+
+*Esempi:*
+
+|===
+
+
+| Fattori ambientali: | Spazio su disco, CPU e memoria testati: 
+
+
+ a| 
+80 volumi di storage
+
+4,000 VM
+
+4,000 porte switch
+ a| 
+250 GB di spazio su disco 8 core
+
+32 GB DI RAM
+
+
+
+ a| 
+160 unità di storage 40.000 volumi
+
+8,000 VM
+
+8,000 porte switch
+ a| 
+1 TB di spazio su disco 12 core
+
+48 GB DI RAM
+
+|===
+*Requisiti:*
+
+|===
+
+
+| Componente | Obbligatorio 
+
+
+ a| 
+Sistema operativo
+ a| 
+Un computer con Microsoft Windows Server 2012, 2012 R2, 2016 o 2019 a 64 bit con il service pack più recente.
+
+Il file system resiliente (REF) introdotto con Windows Server 2012 non è compatibile con OnCommand Insight. L'installazione di OnCommand Insight in Windows è supportata solo sul file system NTFS.
+
+Si consiglia di utilizzare un server dedicato.
+
+
+
+ a| 
+Macchina virtuale (VM)
+ a| 
+Questo componente può essere eseguito in un ambiente virtuale, a condizione che le risorse di CPU e memoria per l'istanza siano riservate.
+
+
+
+ a| 
+Memoria e CPU
+ a| 
+24 - 256 GB DI RAM
+
+8 - 32 core
+
+Si consiglia di impostare la dimensione del file di paging su "`Windows Managed`". I file di paging di piccole dimensioni possono interferire con la corretta memorizzazione dei dati delle performance Insight.
+
+
+
+ a| 
+Spazio su disco disponibile
+ a| 
+100 GB - 3 TB di spazio su disco per l'installazione
+
+50 GB - 1 TB di spazio su disco per l'archiviazione delle performance
+
+I dischi SSD sono consigliati per lo spazio di installazione Insight.
+
+
+
+ a| 
+Rete
+ a| 
+Connessione Ethernet e porte:
+
+* Connessione Ethernet a 100 Mbps o 1 Gbps con indirizzo IP dedicato (statico) e connettività IP a tutti i componenti della SAN, inclusi i dispositivi FC e le unità di acquisizione remota.
+* I requisiti delle porte per il processo del server OnCommand Insight sono 80, 443, 1090 - 1100, 3873, 8083, da 4444 a 4446, 5445, 5455, da 4712 a 4714, 5500, e 5501.
+* I requisiti delle porte per il processo di acquisizione sono 12123 e 5679.
+* Il requisito di porta per MySQL è 3306.
+* I requisiti delle porte per Elasticsearch sono 9200 e 9310
+* I requisiti delle porte dinamiche per Win2008/2012 vanno dalla versione 49152 alla 65535
+
+
+Le porte 443 e 3306 richiedono l'accesso esterno attraverso qualsiasi firewall presente.
+
+
+
+ a| 
+Permessi
+ a| 
+Sul server OnCommand Insight sono richieste le autorizzazioni di amministratore locale.
+
+Se una delle seguenti cartelle è un collegamento simbolico, assicurarsi che le directory di destinazione dispongano dei permessi '755'.
+
+* /opt/netapp
+* /var/lib/netapp
+* /var/log/netapp
+
+
+
+
+ a| 
+Connettività remota
+ a| 
+Connettività Internet per consentire l'accesso a WebEx o una connessione desktop remota per facilitare l'installazione e il supporto post-installazione.
+
+
+
+ a| 
+Accessibilità
+ a| 
+È richiesto l'accesso HTTPS.
+
+
+
+ a| 
+Scansione virus
+ a| 
+Durante l'installazione di questo componente di OnCommand Insight, è necessario disattivare completamente tutti i programmi antivirus. Dopo l'installazione, i percorsi utilizzati dal componente Insight (percorsi di installazione, backup e archiviazione) devono essere esclusi dalla scansione antivirus.
+
+Inoltre, è necessario escludere la cartella IBM/DB2 (ad esempio _C: Programmi IBM DB2_) dalla scansione antivirus dopo l'installazione.
+
+
+
+ a| 
+Server HTTP o HTTPS
+ a| 
+Microsoft Internet Information Services (IIS) o altri server HTTPS non devono competere per le stesse porte (443) del server OnCommand Insight e non devono avviarsi automaticamente. Se devono ascoltare la porta 443, è necessario configurare il server OnCommand Insight in modo che utilizzi altre porte.
+
+|===

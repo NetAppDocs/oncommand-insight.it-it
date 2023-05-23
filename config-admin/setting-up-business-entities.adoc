@@ -1,0 +1,43 @@
+---
+permalink: config-admin/setting-up-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: Dopo aver progettato la gerarchia delle entità di business per la tua azienda, puoi impostare le applicazioni e associare le entità di business alle applicazioni. Questo processo crea la struttura delle entità di business nel database OnCommand Insight. 
+---
+= Creazione di entità di business
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver progettato la gerarchia delle entità di business per la tua azienda, puoi impostare le applicazioni e associare le entità di business alle applicazioni. Questo processo crea la struttura delle entità di business nel database OnCommand Insight.
+
+
+
+== A proposito di questa attività
+
+L'associazione delle applicazioni alle entità aziendali è facoltativa; tuttavia, si tratta di una procedura consigliata.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di Insight.
+. Fare clic su *Manage* (Gestisci) e selezionare *Business Entities* (entità aziendali).
++
+Viene visualizzata la pagina entità di business.
+
+. Fare clic su image:../media/add-annotation-icon.gif[""] per iniziare a costruire una nuova entità.
++
+Viene visualizzata la finestra di dialogo *Aggiungi entità aziendale*.
+
+. Per ogni livello di entità (tenant, line of business, business unit e progetto), è possibile eseguire una delle seguenti operazioni:
++
+** Fare clic sull'elenco a livello di entità e selezionare un valore.
+** Digitare un nuovo valore e premere Invio.
+** Lasciare il valore del livello di entità come N/A se non si desidera utilizzare il livello di entità per l'entità aziendale.
+
+
+. Fare clic su *Save* (Salva).
+

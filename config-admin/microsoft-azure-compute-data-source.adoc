@@ -1,0 +1,107 @@
+---
+permalink: config-admin/microsoft-azure-compute-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insights utilizza Azure Compute Data Collector per acquisire dati di inventario e performance dalle istanze di calcolo di Azure. 
+---
+= Origine dei dati di calcolo di Microsoft Azure
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insights utilizza Azure Compute Data Collector per acquisire dati di inventario e performance dalle istanze di calcolo di Azure.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessarie le seguenti informazioni:
+
+* Requisito porta: 443 HTTPS
+* IP REST di Azure Management (management.azure.com)
+* Azure Service Principal Application (Client) ID (account utente)
+* Chiave di autenticazione Azure Service Principal (password utente)
+
+
+Devi configurare un account Azure per Insight Discovery. Una volta configurato correttamente l'account e registrato l'applicazione in Azure, si disporranno delle credenziali necessarie per rilevare l'istanza di Azure con Insight. Il seguente collegamento descrive come configurare l'account per il rilevamento:https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal
+
+
+
+== Configurazione
+
+Inserire i dati nei campi dell'origine dati in base alla tabella riportata di seguito:
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Azure Service Principal Application (Client) ID (ruolo di lettore richiesto)
+ a| 
+ID di accesso ad Azure. Richiede l'accesso al ruolo Reader.
+
+
+
+ a| 
+ID tenant Azure
+ a| 
+ID tenant Microsoft
+
+
+
+ a| 
+Chiave di autenticazione principale del servizio Azure
+ a| 
+Chiave di autenticazione per l'accesso
+
+
+
+ a| 
+Ho capito che Microsoft mi ha dato la bolletta per le richieste API
+ a| 
+Controlla questa sezione per verificare che Microsoft ti presenti la fattura per le richieste API effettuate tramite il polling Insight.
+
+|===
+
+
+== Configurazione avanzata
+
+Inserire i dati nei campi dell'origine dati in base alla tabella riportata di seguito:
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Il valore predefinito è 60
+
+
+
+ a| 
+Scegliere "Escludi" o "Includi" per applicare il filtro delle macchine virtuali in base ai tag
+ a| 
+Specificare se includere o escludere le macchine virtuali in base ai tag durante la raccolta dei dati. Se si seleziona '`include`', il campo Tag Key non può essere vuoto.
+
+
+
+ a| 
+Tag Key e valori su cui filtrare le macchine virtuali
+ a| 
+Fare clic su *+ Filter Tag* (Tag filtro) per scegliere quali macchine virtuali (e dischi associati) includere/escludere filtrando le chiavi e i valori corrispondenti alle chiavi e ai valori dei tag sulla macchina virtuale. Tag Key è obbligatorio, Tag Value è facoltativo. Quando il valore Tag è vuoto, la VM viene filtrata finché corrisponde alla chiave Tag.
+
+
+
+ a| 
+Performance poll Interval (sec)|
+ a| 
+Il valore predefinito è 300
+
+|===

@@ -1,0 +1,39 @@
+---
+permalink: config-admin/configuring-client-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile configurare le opzioni per il client dell"interfaccia utente Java di OnCommand Insight sul server.' 
+---
+= Configurazione delle impostazioni del client
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare le opzioni per il client dell'interfaccia utente Java di OnCommand Insight sul server.
+
+
+
+== Fasi
+
+. Sulla barra degli strumenti di Insight, fare clic su *Admin* e selezionare *Troubleshooting*.
+. Nella parte inferiore della pagina dell'area altre attività, fare clic sul collegamento *risoluzione avanzata dei problemi*.
+. Nel menu Avanzate della pagina successiva, fare clic sulla scheda *Impostazioni avanzate*.
+. Nel campo *Acquisition Dynamic Attributes* (attributi dinamici di acquisizione), immettere il numero di ore per ignorare le modifiche degli attributi dinamici.
+. Nel campo *Configure Client Settings* (Configura impostazioni client), immettere le seguenti informazioni.
++
+** *Initial Heap Size* (dimensione heap iniziale) è la dimensione dell'heap creato quando la macchina virtuale (macchina virtuale) viene avviata per eseguire il client. Questo numero viene utilizzato per costruire``-Xms<size>`` parametro a. `java`. Diminuendo questo numero, Java occupa meno memoria all'avvio. Tuttavia, è più probabile che Java debba riallocare l'heap quando supera questo numero, operazione costosa, quindi non si desidera rendere questo numero troppo piccolo.
+** *Max Heap Size* è il più grande che Java consentirà all'heap di crescere nella macchina virtuale che esegue il client. Questo numero viene utilizzato per costruire``-Xmx<size>`` parametro a. `java`.
+** Log Level controlla la quantità di dettagli generata nei log del client. Esistono due valori possibili:
++
+*** INFO - genera una quantità "normale" di informazioni.
+*** DEBUG - genera informazioni più dettagliate nel log del client per facilitare il debug.
+
+
+
+
+. Configurare gli avvisi dell'origine dati.
+. Configurare il messaggio di avviso di accesso visualizzato dal client.
+. Fare clic su *Save* (Salva).
+

@@ -1,0 +1,85 @@
+---
+permalink: config-admin/about-oncommand-insight-anomaly-detection.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight contiene analytics per il rilevamento delle anomalie di apprendimento automatico che forniscono visibilità all"interno dell"infrastruttura di un"applicazione e identificano le anomalie delle performance prima che diventino interruzioni del servizio.' 
+---
+= Come funziona il rilevamento delle anomalie OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight contiene analytics per il rilevamento delle anomalie di apprendimento automatico che forniscono visibilità all'infrastruttura di un'applicazione e identificano le anomalie delle performance prima che diventino interruzioni del servizio.
+
+L'analisi delle anomalie consente di identificare il normale intervallo di workload operativo per un'applicazione e di informare quando le variazioni delle performance non rientrano nei livelli previsti. Il motore di rilevamento delle anomalie applicative acquisisce le metriche di performance raccolte da Insight e identifica le anomalie nell'infrastruttura applicativa.
+
+È possibile utilizzare il rilevamento delle anomalie per eseguire le seguenti attività:
+
+* Identificare i cambiamenti significativi nel comportamento dell'infrastruttura applicativa
+* Tieni traccia di un'applicazione attraverso l'intero stack e diversi contatori
+* Diagnosticare la causa di eventi periodicamente ricorrenti in un carico di lavoro dell'applicazione
+* Fornire un set di informazioni più completo rispetto ai dati provenienti dai contatori delle performance che utilizzano valori di soglia statici
+* Monitoraggio in una modalità reattiva migliorata, con una vista end-to-end della topologia e la possibilità di concentrarsi sui comportamenti più anomali.
+
+
+Il motore di rilevamento delle anomalie utilizza i dati Insight per l'analisi applicativa. Quando il monitoraggio viene avviato per la prima volta, il motore di analisi può acquisire fino a 14 giorni di dati storici delle performance. I dati vengono raccolti per settimane o addirittura mesi, fornendo dati più accurati su una determinata risorsa. I dati includono i totali per i seguenti contatori:
+
+|===
+
+
+| Oggetti | Contatore 
+
+
+ a| 
+MACCHINA VIRTUALE
+ a| 
+Latenza, IOPS
+
+
+
+ a| 
+Hypervisor
+ a| 
+Utilizzo della CPU, IOPS
+
+
+
+ a| 
+Porta edge
+ a| 
+Credito BB zero
+
+
+
+ a| 
+Nodo di storage
+ a| 
+Latenza, utilizzo, IOPS
+
+
+
+ a| 
+Volume
+ a| 
+Latenza, IOPS
+
+
+
+ a| 
+Volume interno
+ a| 
+Latenza, IOPS
+
+
+
+ a| 
+Pool di storage
+ a| 
+IOPS, utilizzo
+
+|===
+I dati raccolti dal motore di rilevamento delle anomalie vengono archiviati quando l'archiviazione dei dati delle prestazioni è attivata sul server Insight. Consultare la pagina System Health (Stato del sistema) per determinare se l'archiviazione è attivata.
+
+Il motore di rilevamento delle anomalie viene eseguito su un server separato da quello Insight. Può essere configurato su una macchina fisica o su una macchina virtuale. Per ulteriori informazioni, consultare la Guida all'installazione di OnCommand Insight per Windows o Linux.

@@ -1,0 +1,34 @@
+---
+permalink: dwh/configuring-a-weekly-schedule.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sebbene sia possibile creare manualmente Data Warehouse utilizzando il controllo build Now in qualsiasi momento, è consigliabile pianificare le build automatiche, definendo quando e con quale frequenza creare il database Data Warehouse. Data Warehouse esegue un processo di creazione per ciascun connettore e per ciascun data mart. Data Warehouse esegue un processo di creazione per ciascun connettore per le licenze e l"inventario e tutti gli altri processi di creazione (ad esempio, capacità) vengono eseguiti sul database consolidato. Con una pianificazione settimanale, è possibile specificare l"ora in cui si desidera che la build venga eseguita per ogni giorno della settimana.' 
+---
+= Configurazione di una pianificazione settimanale
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sebbene sia possibile creare manualmente Data Warehouse utilizzando il controllo build Now in qualsiasi momento, è consigliabile pianificare le build automatiche, definendo quando e con quale frequenza creare il database Data Warehouse. Data Warehouse esegue un processo di creazione per ciascun connettore e per ciascun data mart. Data Warehouse esegue un processo di creazione per ciascun connettore per le licenze e l'inventario e tutti gli altri processi di creazione (ad esempio, la capacità) vengono eseguiti sul database consolidato. Con una pianificazione settimanale, è possibile specificare l'ora in cui si desidera che la build venga eseguita per ogni giorno della settimana.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *Edit Schedule* (Modifica pianificazione).
+. Scegliere la frequenza - settimanale.
+. Scegliere l'ora del giorno per ogni giorno in cui si desidera eseguire il processo.
+. Scegliere N/D per i giorni in cui non si desidera eseguire la build.
+. Per attivare la pianificazione, selezionare *Enabled* (attivato).
++
+[NOTE]
+====
+Se non si seleziona questa opzione, la generazione della pianificazione non viene eseguita.
+
+====
+. Fare clic su *Save* (Salva).
+. Per creare data warehouse al di fuori della build pianificata automatica, fare clic su *Crea ora*.
+

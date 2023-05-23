@@ -1,0 +1,18 @@
+---
+permalink: reporting/using-multiple-data-models-in-one-report.html 
+sidebar: sidebar 
+keywords:  
+summary: In genere, si utilizza un modello di dati per ogni report. Tuttavia, è possibile scrivere un report che combina i dati di più modelli di dati. 
+---
+= Utilizzo di più modelli di dati in un unico report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In genere, si utilizza un modello di dati per ogni report. Tuttavia, è possibile scrivere un report che combina i dati di più modelli di dati.
+
+Per scrivere un report che combina dati provenienti da più modelli di dati, scegliere uno dei modelli di dati da utilizzare come base, quindi scrivere query SQL per accedere ai dati dai data mart aggiuntivi. È possibile utilizzare la funzionalità di Unione SQL per combinare i dati delle diverse query in una singola query che è possibile utilizzare per scrivere il report.
+
+Ad esempio, supponiamo di voler utilizzare la capacità corrente per ciascun array di storage e di voler acquisire annotazioni personalizzate sugli array. È possibile creare il report utilizzando il modello di dati Storage Capacity. È possibile utilizzare gli elementi delle tabelle capacità e dimensioni correnti e aggiungere una query SQL separata per accedere alle informazioni sulle annotazioni nel modello di dati di inventario. Infine, è possibile combinare i dati collegando i dati dello storage di inventario alla tabella Storage Dimension utilizzando il nome dello storage e i criteri di Unione.

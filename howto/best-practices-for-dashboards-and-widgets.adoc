@@ -1,0 +1,14 @@
+---
+permalink: howto/best-practices-for-dashboards-and-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: Suggerimenti e trucchi per ottenere il massimo dalle potenti funzionalità di dashboard e widget. 
+---
+= Best practice per dashboard e widget
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Suggerimenti e trucchi per ottenere il massimo dalle potenti funzionalità di dashboard e widget.

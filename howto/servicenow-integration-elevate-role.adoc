@@ -1,0 +1,22 @@
+---
+permalink: howto/servicenow-integration-elevate-role.html 
+sidebar: sidebar 
+keywords:  
+summary: Devi elevare il tuo ruolo ServiceNow a Security_admin prima di poter integrare con Insight. 
+---
+= Elevare il ruolo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Devi elevare il tuo ruolo ServiceNow a Security_admin prima di poter integrare con Insight.
+
+
+
+== Fasi
+
+. Accedere all'istanza di ServiceNow con le autorizzazioni di amministratore.
+. Nell'elenco a discesa *System Administrator* (Amministratore di sistema), selezionare *Elevate Roles* (Eleva ruoli) e elevare il proprio ruolo a Security_admin. Fare clic su OK.
+

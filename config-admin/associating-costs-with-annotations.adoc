@@ -1,0 +1,35 @@
+---
+permalink: config-admin/associating-costs-with-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Prima di eseguire i report relativi ai costi, è necessario associare i costi alle annotazioni a livello di sistema livello di servizio, livello switch e livello, che consentono agli utenti dello storage di addebitarsi i costi in base all"effettivo utilizzo della produzione e della capacità replicata. Ad esempio, per il livello Tier, è possibile avere valori di livello Gold e Silver e assegnare un costo più elevato al livello Gold rispetto al livello Silver.' 
+---
+= Associare i costi alle annotazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di eseguire i report relativi ai costi, è necessario associare i costi alle annotazioni a livello di sistema livello di servizio, livello switch e livello, che consentono agli utenti dello storage di addebitarsi i costi in base all'effettivo utilizzo della produzione e della capacità replicata. Ad esempio, per il livello Tier, è possibile avere valori di livello Gold e Silver e assegnare un costo più elevato al livello Gold rispetto al livello Silver.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente di Insightweb.
+. Fare clic su Gestisci e selezionare *Annotazioni*.
++
+Viene visualizzata la pagina Annotation (Annotazione).
+
+. Posizionare il cursore sull'annotazione Service Level (livello di servizio), Switch Level (livello switch) o Tier (livello Tier) e fare clic su image:../media/edit-annotation-icon.gif[""].
++
+Viene visualizzata la finestra di dialogo Edit Annotation (Modifica annotazione).
+
+. Inserire i valori per i livelli esistenti nel campo *costo*.
++
+Le annotazioni Tier e Service Level presentano valori di Auto Tier e Object Storage, rispettivamente, che non è possibile rimuovere.
+
+. Fare clic su image:../media/edit-annotation-add-icon.gif[""] per aggiungere altri livelli.
+. Al termine, fare clic su *Save* (Salva).
+

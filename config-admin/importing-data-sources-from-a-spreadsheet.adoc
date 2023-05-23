@@ -1,0 +1,53 @@
+---
+permalink: config-admin/importing-data-sources-from-a-spreadsheet.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile importare più origini dati in OnCommand Insight da un foglio di calcolo. Questo potrebbe essere utile se si mantengono già le periferiche di rilevamento in un foglio di calcolo. Questo processo aggiunge nuove origini dati, ma non può essere utilizzato per aggiornare le origini dati esistenti. 
+---
+= Importazione di origini dati da un foglio di calcolo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile importare più origini dati in OnCommand Insight da un foglio di calcolo. Questo potrebbe essere utile se si mantengono già le periferiche di rilevamento in un foglio di calcolo. Questo processo aggiunge nuove origini dati, ma non può essere utilizzato per aggiornare le origini dati esistenti.
+
+
+
+== A proposito di questa attività
+
+OnCommand Insight include un foglio di calcolo che consente di creare origini dati. Questo foglio di calcolo presenta i seguenti attributi:
+
+* Il foglio di calcolo può essere utilizzato con Microsoft Excel 2003 o versioni successive.
+* Ciascuna scheda contiene un tipo di origine dati, ad esempio Brocade SSH/CLI.
+* Ogni riga rappresenta un'istanza di una nuova origine dati da creare.
+
+
+Il foglio di calcolo include una macro che crea una nuova origine dati in OnCommand Insight.
+
+
+
+== Fasi
+
+. Individuare il foglio di calcolo in `<install_directory>/SANscreen/acq/bin/acqcli/SiteSurvey_DataSourceImporter_w_Macro.zip`.
+. Nel foglio di calcolo, inserire le informazioni relative all'origine dei dati nelle celle a colori.
+. Elimina righe vuote.
+. Dal foglio di calcolo, eseguire `CreateDataSources` macro per creare le origini dati.
+. Quando vengono richieste le credenziali, immettere il nome utente e la password di amministrazione del server OnCommand Insight.
++
+I risultati vengono registrati nel registro di acquisizione.
+
+. Viene visualizzato un messaggio che chiede se sul computer che esegue la macro è installato OnCommand Insight.
++
+Selezionare una delle seguenti opzioni:
+
++
+** No: Selezionare "No" se viene creato un file batch che deve essere eseguito sulla macchina OnCommand Insight. Eseguire questo file batch dalla directory di installazione.
+** Sì: Selezionare "Sì" se OnCommand Insight è già installato e non sono necessari ulteriori passaggi per generare le informazioni sull'origine dati.
+
+
+. Per verificare l'aggiunta delle origini dati, aprire Insight nel browser.
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Controllare l'elenco origini dati per le origini dati importate.
+

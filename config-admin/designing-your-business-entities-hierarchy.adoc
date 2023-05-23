@@ -1,0 +1,31 @@
+---
+permalink: config-admin/designing-your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: È necessario comprendere gli elementi della struttura aziendale e i componenti da rappresentare nelle entità aziendali perché diventano una struttura fissa nel database OnCommand Insight. È possibile utilizzare le seguenti informazioni per configurare le entità aziendali. Non è necessario utilizzare tutti i livelli di gerarchia per raccogliere i dati in queste categorie. 
+---
+= Progettazione della gerarchia delle entità di business
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario comprendere gli elementi della struttura aziendale e i componenti da rappresentare nelle entità aziendali perché diventano una struttura fissa nel database OnCommand Insight. È possibile utilizzare le seguenti informazioni per configurare le entità aziendali. Non è necessario utilizzare tutti i livelli di gerarchia per raccogliere i dati in queste categorie.
+
+
+
+== Fasi
+
+. Esaminare ciascun livello della gerarchia delle entità di business per determinare se tale livello deve essere incluso nella gerarchia delle entità di business della propria azienda:
++
+** Il livello *tenant* è necessario se la tua azienda è un ISP e vuoi monitorare l'utilizzo delle risorse da parte dei clienti.
+** *La linea di business (LOB)* è necessaria nella gerarchia se è necessario tenere traccia dei dati delle diverse linee di prodotti.
+** *Business Unit* è necessaria per tenere traccia dei dati di diversi reparti. Questo livello della gerarchia è spesso utile per separare una risorsa che un reparto utilizza, ma non gli altri reparti.
+** Il livello *Project* può essere utilizzato per lavori specializzati all'interno di un reparto. Questi dati potrebbero essere utili per individuare, definire e monitorare le esigenze tecnologiche di un progetto separato rispetto ad altri progetti di un'azienda o di un reparto.
+
+
+. Creare un grafico che mostri ogni entità aziendale con i nomi di tutti i livelli all'interno dell'entità.
+. Controllare i nomi nella gerarchia per assicurarsi che siano intuitivi nelle visualizzazioni e nei report di OnCommand Insight.
+. Identificare tutte le applicazioni associate a ciascuna entità aziendale.
+

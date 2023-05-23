@@ -1,0 +1,25 @@
+---
+permalink: config-admin/setting-up-your-data-sources-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le origini dati sono il componente più critico quando si tenta di mantenere un ambiente Insight. Le origini dati rilevano le informazioni di rete utilizzate per l"analisi e la convalida. È necessario configurare le origini dati in Insight in modo che possano essere monitorate all"interno della rete.' 
+---
+= Configurazione delle origini dati in Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le origini dati sono il componente più critico quando si tenta di mantenere un ambiente Insight. Le origini dati rilevano le informazioni di rete utilizzate per l'analisi e la convalida. È necessario configurare le origini dati in Insight in modo che possano essere monitorate all'interno della rete.
+
+Per ciascuna origine dati, i requisiti specifici per definire l'origine dati dipendono dal vendor e dal modello dei dispositivi corrispondenti. Prima di aggiungere le origini dati, è necessario disporre di indirizzi di rete, informazioni sull'account e password per tutti i dispositivi e, eventualmente, di questi dettagli aggiuntivi:
+
+* Switch
+* Stazioni di gestione dei dispositivi
+* Sistemi storage dotati di connettività IP
+* Stazioni di gestione dello storage
+* Server host che eseguono software di gestione per dispositivi storage che non dispongono di connettività IP
+
+
+Per ulteriori informazioni sulle definizioni delle origini dati, vedere le informazioni "riferimento alle origini dati specifiche del vendor" in questa sezione.

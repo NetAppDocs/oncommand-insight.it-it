@@ -1,0 +1,16 @@
+---
+permalink: howto/expressions-in-dashboard-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: Le espressioni nei widget Time Series consentono di visualizzare i dati in base ai calcoli con metriche di propria scelta. 
+---
+= Espressioni nei widget della dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le espressioni nei widget Time Series consentono di visualizzare i dati in base ai calcoli con metriche di propria scelta.
+
+In una dashboard, qualsiasi widget Time Series (linea, spline, area, area sovrapposta) consente di creare espressioni a partire dalle metriche scelte e mostrare il risultato di tali espressioni in un singolo grafico. Gli esempi seguenti utilizzano espressioni per risolvere problemi specifici. Nel primo esempio, vogliamo mostrare gli IOPS in lettura come percentuale degli IOPS totali per tutte le risorse di storage nel nostro ambiente. Il secondo esempio ci dà visibilità sugli IOPS "di sistema" o "overhead" che si verificano nel nostro ambiente - quegli IOPS che non sono dalla lettura o dalla scrittura dei dati.

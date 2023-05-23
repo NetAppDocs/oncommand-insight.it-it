@@ -1,0 +1,23 @@
+---
+permalink: howto/introduction-to-root-volume-isolation.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Nei sistemi storage NetApp, l"aggregato root contiene il volume root. Il volume root contiene directory speciali e file di configurazione per la gestione e il controllo del sistema storage. Le operazioni di gestione e controllo potrebbero causare una grande quantità di attività nell"aggregato root. Quando interroga il sistema Insight per i primi 10 volumi interni con la densità io più elevata, i risultati potrebbero includere gli aggregati root di NetApp come membri dei primi 10 volumi.' 
+---
+= Garantire che i report sulla densità io descrivano solo i volumi di dati interni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nei sistemi storage NetApp, l'aggregato root contiene il volume root. Il volume root contiene directory speciali e file di configurazione per la gestione e il controllo del sistema storage. Le operazioni di gestione e controllo potrebbero causare una grande quantità di attività nell'aggregato root. Quando interroga il sistema Insight per i primi 10 volumi interni con la densità io più elevata, i risultati potrebbero includere gli aggregati root di NetApp come membri dei primi 10 volumi.
+
+Durante il monitoraggio dell'ambiente, è più importante determinare quali volumi di dati interni producono numeri di densità i/o elevati. Per identificare con precisione solo i volumi di dati, è necessario isolare i volumi interni di NetApp dalle query utilizzate per monitorare la densità di i/O.
+
+Questa guida descrive come identificare facilmente gli aggregati root di NetApp, isolarli dai risultati delle query di volume interne e creare regole che escludono eventuali nuovi aggregati root di NetApp man mano che vengono aggiunti al sistema. Le seguenti funzionalità Insight vengono utilizzate per garantire che i report di densità i/o derivino da volumi di dati interni.
+
+* Viene creata una query per identificare tutti gli aggregati root NetApp monitorati da Insight.
+* A ciascuno degli aggregati root di NetApp viene assegnata un'annotazione.
+* Viene creata una regola di annotazione per escludere gli aggregati NetApp
+

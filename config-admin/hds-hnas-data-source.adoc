@@ -1,0 +1,145 @@
+---
+permalink: config-admin/hds-hnas-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati HDS NAS è un"origine dati di inventario e configurazione per supportare il rilevamento dei cluster HDS NAS. Insight supporta il rilevamento delle condivisioni NFS e CIFS, dei file system (Insight Internal Volumes) e delle estensioni (Insight Storage Pools).' 
+---
+= Origine dati HDS NAS (HNAS)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati HDS NAS (HNAS) è un'origine dati di inventario e configurazione per supportare il rilevamento di cluster HDS NAS. Insight supporta il rilevamento di condivisioni NFS e CIFS, file system (Insight Internal Volumes) e span (Insight Storage Pools).
+
+Questa origine dati è basata su SSH, pertanto l'unità di acquisizione che la ospiterà deve essere in grado di avviare sessioni SSH su TCP 22 sull'HNAS stesso o sull'unità di gestione dei sistemi (SMU) a cui è connesso il cluster.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati HNAS. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Tier
+ a| 
+Gruppo di dischi
+
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo di storage
+
+
+
+ a| 
+Intervallo
+ a| 
+Pool di storage
+
+
+
+ a| 
+File System
+ a| 
+Volume interno
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+Di seguito sono riportati i requisiti per configurare e utilizzare questa origine dati:
+
+* Indirizzo IP del dispositivo
+* Porta 22, protocollo SSH
+* Nome utente e password - livello di privilegio: Supervisore
+* NOTA: Questo data collector è basato su SSH, quindi l'AU che lo ospita deve essere in grado di avviare sessioni SSH su TCP 22 sull'HNAS stesso o sull'unità di gestione dei sistemi (SMU) a cui è connesso il cluster.
+
+
+[NOTE]
+====
+Questo data collector è basato su SSH, quindi l'AU che lo ospita deve essere in grado di avviare sessioni SSH su TCP 22 sull'HNAS stesso o sull'unità di gestione dei sistemi (SMU) a cui è connesso il cluster.
+
+====
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Host HNAS
+ a| 
+Indirizzo IP o nome di dominio completo di HNAS Management host
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente per CLI HNAS
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per CLI HNAS
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 30 minuti)
+
+
+
+ a| 
+Timeout attesa banner SSH (sec)
+ a| 
+Timeout di attesa banner SSH (impostazione predefinita: 15 secondi)
+
+
+
+ a| 
+Timeout comando SSH (sec)
+ a| 
+Timeout comando SSH (impostazione predefinita: 30 secondi)
+
+|===

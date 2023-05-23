@@ -1,0 +1,23 @@
+---
+permalink: install-windows/insight-browser-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"interfaccia utente di OnCommand Insightweb basata su browser può funzionare con diversi browser.' 
+---
+= Browser supportati da OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interfaccia utente di OnCommand Insightweb basata su browser può funzionare con diversi browser.
+
+Insight supporta versioni non beta più recenti dei seguenti browser:
+
+* Mozilla Firefox
+* Google Chrome
+* Microsoft Edge
+
+
+Per un elenco completo delle versioni del browser idonee per OnCommand Insight, consultare la https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp"].

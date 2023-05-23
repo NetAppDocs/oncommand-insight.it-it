@@ -1,0 +1,31 @@
+---
+permalink: install-linux/device-identification-and-data-source-planning.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Nell"ambito della pianificazione dell"implementazione, è necessario raccogliere informazioni sui dispositivi presenti nell"ambiente.' 
+---
+= Identificazione dei dispositivi e pianificazione dell'origine dei dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nell'ambito della pianificazione dell'implementazione, è necessario raccogliere informazioni sui dispositivi presenti nell'ambiente.
+
+Sono necessari i seguenti software, connettività e informazioni su ciascun dispositivo nell'ambiente:
+
+* Indirizzo IP o nome host risolvibile dal server OCI
+* Nome di accesso e password
+* Tipo di accesso al dispositivo, ad esempio controller e stazione di gestione
++
+[NOTE]
+====
+L'accesso in sola lettura sarà sufficiente per la maggior parte dei dispositivi, ma alcuni richiedono autorizzazioni di amministratore.
+
+====
+* Connettività della porta al dispositivo in base ai requisiti della porta di origine dati
+* Per gli switch, stringa di comunità di sola lettura SNMP (ID utente o password per consentire l'accesso agli switch)
+* Qualsiasi software di terze parti richiesto sul dispositivo, ad esempio Solutions Enabler.
+* Per ulteriori informazioni sui requisiti e sulle autorizzazioni dell'origine dati, consultare la sezione "riferimento all'origine dati specifico del vendor" nella Guida dell'interfaccia utente Web o nella _Guida alla configurazione e all'amministrazione di OnCommand Insight_.
+

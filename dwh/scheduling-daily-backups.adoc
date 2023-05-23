@@ -1,0 +1,39 @@
+---
+permalink: dwh/scheduling-daily-backups.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sebbene sia possibile eseguire manualmente il backup di Data Warehouse utilizzando il controllo Backup/Restore in qualsiasi momento, è consigliabile pianificare backup automatici, definendo quando e con quale frequenza eseguire il backup del database Data Warehouse e dell"archivio di contenuti Cognos. I backup offrono protezione dalla perdita di dati, consentendo di ripristinare il database Data Warehouse, se necessario. È inoltre possibile utilizzare un backup quando si esegue la migrazione a un nuovo server Data Warehouse o quando si esegue l"aggiornamento a una nuova versione di Data Warehouse.' 
+---
+= Pianificazione dei backup giornalieri
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sebbene sia possibile eseguire manualmente il backup di Data Warehouse utilizzando il controllo Backup/Restore in qualsiasi momento, è consigliabile pianificare backup automatici, definendo quando e con quale frequenza eseguire il backup del database Data Warehouse e dell'archivio di contenuti Cognos. I backup offrono protezione dalla perdita di dati, consentendo di ripristinare il database Data Warehouse, se necessario. È inoltre possibile utilizzare un backup quando si esegue la migrazione a un nuovo server Data Warehouse o quando si esegue l'aggiornamento a una nuova versione di Data Warehouse.
+
+
+
+== A proposito di questa attività
+
+La pianificazione dei backup nei momenti in cui il server Data Warehouse non è occupato migliora le prestazioni di backup e riduce l'impatto sugli utenti.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *Schedule* (Pianificazione).
+. Nella finestra di dialogo *Backup Schedule*, fare clic su *Edit* (Modifica) per aggiungere una nuova pianificazione.
++
+image::../media/oci-dwh-admin-schedule-backup.gif[backup della pianificazione amministrativa di dwh oci]
+
+. Per attivare i backup pianificati, selezionare *Backup enabled*.
+. Specificare la posizione in cui si desidera memorizzare i file di backup.
+. Specificare i dati di cui si desidera eseguire il backup.
+. Specificare il giorno o i giorni in cui si desidera eseguire il backup.
+. Specificare l'ora in cui si desidera avviare il backup.
+. Specificare il numero di copie di backup precedenti che si desidera conservare.
+. Fare clic su *Save* (Salva).
+

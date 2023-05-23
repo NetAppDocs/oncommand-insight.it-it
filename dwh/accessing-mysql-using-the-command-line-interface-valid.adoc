@@ -1,0 +1,71 @@
+---
+permalink: dwh/accessing-mysql-using-the-command-line-interface-valid.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Oltre ad accedere agli elementi dei dati di Data Warehouse attraverso i tool di creazione dei report, puoi ottenere l"accesso agli elementi dei dati di Data Warehouse direttamente connettendoti come utente MySQL. È possibile connettersi come utente MySQL per utilizzare gli elementi dati nelle proprie applicazioni.' 
+---
+= Accesso a MySQL tramite l'interfaccia a riga di comando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oltre ad accedere agli elementi dei dati di Data Warehouse attraverso i tool di creazione dei report, puoi ottenere l'accesso agli elementi dei dati di Data Warehouse direttamente connettendoti come utente MySQL. È possibile connettersi come utente MySQL per utilizzare gli elementi dati nelle proprie applicazioni.
+
+
+
+== A proposito di questa attività
+
+Esistono diversi modi per connettersi. I seguenti passaggi mostrano un modo.
+
+Quando si accede a MySQL, connettersi al database MySQL sulla macchina in cui è installato Data Warehouse. La porta MySQL è 3306 per impostazione predefinita; tuttavia, è possibile modificarla durante l'installazione. Il nome utente e la password sono dwhuser/netapp123.
+
+
+
+== Fasi
+
+. Sul computer in cui è installato Data Warehouse, aprire una finestra della riga di comando.
+. Accedere alla directory MySQL nella directory OnCommand Insight.
+. Digitare il seguente nome utente e password: `mysql -udwhuser -pnetapp123`
++
+A seconda di dove è installato Data Warehouse, viene visualizzato quanto segue:
+
++
+[listing]
+----
+c:\Program Files\SANscreen\mysql\bin> mysql -udwhuser -pnetapp123
+----
++
+[listing]
+----
+Welcome to the MySQL monitor. Commands end with ; or \g.
+Your MySQL connection id is 882
+Server version: 5.1.28-rc-community MySQL Community Server (GPL)
+----
++
+[listing]
+----
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+----
+. Mostra i database del data warehouse: `show databases;`
++
+Viene visualizzato quanto segue:
+
++
+[listing]
+----
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| dwh_capacity            |
+| dwh_capacity_efficiency |
+| dwh_fs_util             |
+| dwh_inventory           |
+| dwh_performance         |
+| dwh_ports               |
++-------------------------+
+----
+

@@ -1,0 +1,53 @@
+---
+permalink: install-windows/upgrading-remote-acquisition-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo aver completato tutte le attività dei prerequisiti, è possibile accedere al server dell"unità di acquisizione remota ed eseguire il pacchetto di installazione per completare l"aggiornamento. Questa attività deve essere eseguita su tutti i server di acquisizione remoti del proprio ambiente.' 
+---
+= Aggiornamento dei server delle unità di acquisizione remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver completato tutte le attività dei prerequisiti, è possibile accedere al server dell'unità di acquisizione remota ed eseguire il pacchetto di installazione per completare l'aggiornamento. Questa attività deve essere eseguita su tutti i server di acquisizione remoti del proprio ambiente.
+
+
+
+== Prima di iniziare
+
+* È necessario aver aggiornato OnCommand Insight.
+* Il pacchetto di installazione di OnCommand Insight deve trovarsi sul server.
+
+
+
+
+== Fasi
+
+. Accedere al server dell'unità di acquisizione remota utilizzando un account che dispone delle autorizzazioni di amministratore locale di Windows.
+. Individuare il pacchetto di installazione Insight (`RAU-x64-version_number-build_number.msi`) Utilizzando Esplora risorse e fare doppio clic su di esso.
++
+Viene visualizzata l'installazione guidata di OnCommand Insight.
+
+. Spostare la finestra di avanzamento dell'installazione guidata dal centro della schermata e allontanarla dalla finestra dell'installazione guidata in modo che gli errori generati non vengano nascosti.
+. Seguire le istruzioni dell'installazione guidata.
++
+Si consiglia di lasciare selezionate tutte le impostazioni predefinite.
+
+
+
+
+
+== Al termine
+
+* Per verificare se l'aggiornamento è stato eseguito correttamente o se sono stati generati errori, controllare il log di aggiornamento nella seguente posizione: `<install directory>\SANscreen\bin\log`.
+* Utilizzare `securityadmin` tool per ripristinare la sicurezza salvata
++
+configurazione. Per ulteriori informazioni, cercare securityadmin in OnCommand Insight
+
++
+Centro di documentazione: http://docs.netapp.com/oci-73/index.jsp[]
+
+* Cancellare la cache e la cronologia del browser per assicurarsi di ricevere i dati più recenti dal server.
+

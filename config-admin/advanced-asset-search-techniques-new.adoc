@@ -1,0 +1,263 @@
+---
+permalink: config-admin/advanced-asset-search-techniques-new.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile utilizzare più tecniche di ricerca per cercare dati o oggetti nell"ambiente monitorato.' 
+---
+= Tecniche di ricerca avanzate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare più tecniche di ricerca per cercare dati o oggetti nell'ambiente monitorato.
+
+
+
+== Ricerca con caratteri jolly
+
+È possibile eseguire la ricerca di più caratteri jolly utilizzando il carattere *. Ad esempio, _appic*n_ restituirebbe l'applicazione.
+
+
+
+== Frasi utilizzate nella ricerca
+
+Una frase è un gruppo di parole racchiuse tra virgolette doppie, ad esempio "PAW VNX LUN 5". Puoi utilizzare le virgolette doppie per cercare documenti che contengono spazi nei loro nomi o attributi.
+
+
+
+== Operatori booleani
+
+Utilizzando gli operatori booleani, è possibile combinare più termini per formare una query più complessa.
+
+* *O*
++
+** L'operatore OR è l'operatore di congiunzione predefinito.
++
+Se non esiste un operatore booleano tra due termini, viene utilizzato L'operatore OR.
+
+** L'operatore OR collega due termini e trova un documento corrispondente se uno dei termini esiste in un documento.
++
+Ad esempio, "`storage OR netapp`" cerca i documenti che contengono "`storage`" o "`netapp`".
+
+** I punteggi più alti vengono assegnati ai documenti che corrispondono alla maggior parte dei termini.
+
+
+* *E*
++
+È possibile utilizzare L'operatore AND per trovare i documenti in cui entrambi i termini di ricerca esistono in un singolo documento. Ad esempio, "`aurora E netapp`" ricerca i documenti che contengono "`storage`" e "`netapp`".
+
++
+È possibile utilizzare il simbolo && invece della parola E.
+
+* *NON*
++
+Quando si utilizza L'operatore NOT, tutti i documenti che contengono il termine After NOT vengono esclusi dai risultati della ricerca. Ad esempio, "`storage NOT netapp`" ricerca i documenti che contengono solo "`storage`" e non "`netapp`".
+
++
+È possibile utilizzare il simbolo ! Invece della parola NO.
+
+
+
+
+
+== Ricerca di prefisso e suffisso
+
+* Non appena si inizia a digitare una stringa di ricerca, il motore di ricerca esegue una ricerca di prefisso e suffisso per trovare la corrispondenza migliore.
+* Alle corrispondenze esatte viene assegnato un punteggio più elevato rispetto a una corrispondenza con prefisso o suffisso. Il punteggio viene calcolato in base alla distanza del termine di ricerca dal risultato effettivo della ricerca. Ad esempio, abbiamo tre storage: "`aurora`", "`aurora1`" e "`aurora11`". La ricerca di "`aur`" restituirà tutti e tre gli storage. Tuttavia, il risultato della ricerca per "`aurora`" avrà il punteggio più alto perché ha la distanza più vicina alla stringa di ricerca del prefisso.
+* Il motore di ricerca cerca anche i termini in ordine inverso, che consente di eseguire una ricerca di suffissi. Ad esempio, quando si digita "`345`" nella casella di ricerca, il motore di ricerca cerca "`345`".
+* La ricerca non fa distinzione tra maiuscole e minuscole.
+
+
+
+
+== Ricerca con termini indicizzati
+
+Le ricerche che corrispondono a un maggior numero di termini indicizzati determinano punteggi più elevati.
+
+La stringa di ricerca viene divisa in termini di ricerca separati per spazio. Ad esempio, la stringa di ricerca "`storage aurora netapp`" è divisa in tre parole chiave: "`storage`", "`aurora`" e "`netapp`". La ricerca viene eseguita utilizzando tutti e tre i termini. I documenti che corrispondono alla maggior parte di questi termini avranno il punteggio più alto. Maggiori sono le informazioni fornite, migliori sono i risultati della ricerca. Ad esempio, è possibile cercare uno storage in base al nome e alla modalità.
+
+L'interfaccia utente visualizza i risultati della ricerca in diverse categorie, con i tre risultati principali per categoria. Se non è stato trovato un documento previsto, è possibile includere più termini nella stringa di ricerca per migliorare i risultati della ricerca.
+
+La tabella seguente fornisce un elenco di termini indicizzati che è possibile aggiungere alla stringa di ricerca.
+
+|===
+
+
+| Categoria | Termini indicizzati 
+
+
+ a| 
+Storage
+ a| 
+* "`storage`"
+* nome
+* vendor
+* modello
+
+
+
+
+ a| 
+StoragePool
+ a| 
+* "`storagepool`"
+* nome
+* nome dello storage
+* Indirizzi IP dello storage
+* numero di serie dello storage
+* vendor di soluzioni storage
+* modello di storage
+* nomi di tutti i volumi interni associati
+* nomi di tutti i dischi associati
+
+
+
+
+ a| 
+Volume interno
+ a| 
+* "`internalvolume`"
+* nome
+* nome dello storage
+* Indirizzi IP dello storage
+* numero di serie dello storage
+* vendor di soluzioni storage
+* modello di storage
+* nome del pool di storage
+* nomi di tutte le condivisioni associate
+* nomi di tutte le applicazioni e le entità aziendali associate
+
+
+
+
+ a| 
+Volume
+ a| 
+* "`volume`"
+* nome
+* etichetta
+* nomi di tutti i volumi interni
+* nome del pool di storage
+* nome dello storage
+* Indirizzi IP dello storage
+* numero di serie dello storage
+* vendor di soluzioni storage
+* modello di storage
+
+
+
+
+ a| 
+Nodo di storage
+ a| 
+* "`storagenode`"
+* nome
+* nome dello storage
+* Indirizzi IP dello storage
+* serialnumber dello storage
+* vendor di soluzioni storage
+* modello di storage
+
+
+
+
+ a| 
+Host
+ a| 
+* "`host`"
+* nome
+* Indirizzi IP
+* nomi di tutte le applicazioni e le entità aziendali associate
+
+
+
+
+ a| 
+Datastore
+ a| 
+* "`datastore`"
+* nome
+* IP del centro virtuale
+* nomi di tutti i volumi
+* nomi di tutti i volumi interni
+
+
+
+
+ a| 
+Macchine virtuali
+ a| 
+* "`virtualmachine`"
+* nome
+* Nome DNS
+* Indirizzi IP
+* nome dell'host
+* Indirizzi IP dell'host
+* nomi di tutti i datastore
+* nomi di tutte le applicazioni e le entità aziendali associate
+
+
+
+
+ a| 
+Switch (Regular e NPV)
+ a| 
+* "`sstrega`"
+* Indirizzo IP
+* wwn
+* nome
+* numero di serie
+* modello
+* ID dominio
+* nome del fabric
+* wwn del fabric
+
+
+
+
+ a| 
+Applicazione
+ a| 
+* "`application`"
+* nome
+* tenant
+* linea di business
+* unità aziendale
+* progetto
+
+
+
+
+ a| 
+Nastro
+ a| 
+* "`tape`"
+* Indirizzo IP
+* nome
+* numero di serie
+* vendor
+
+
+
+
+ a| 
+Porta
+ a| 
+* "`porta`"
+* wwn
+* nome
+
+
+
+
+ a| 
+Fabric
+ a| 
+* "`fabric`"
+* wwn
+* nome
+
+
+|===

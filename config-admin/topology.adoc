@@ -1,0 +1,20 @@
+---
+permalink: config-admin/topology.html 
+sidebar: sidebar 
+keywords:  
+summary: La sezione topologia, se applicata a una risorsa, consente di vedere come una risorsa di base è connessa alle risorse correlate. 
+---
+= Topologia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione topologia, se applicabile a una risorsa, consente di vedere come una risorsa di base è connessa alle risorse correlate.
+
+Di seguito viene riportato un esempio di ciò che potrebbe essere visualizzato nella sezione topologia della pagina delle risorse di una macchina virtuale.
+
+image::../media/topology-section.gif[sezione topologia]
+
+Se la topologia della risorsa è più grande di quella che si adatta alla sezione, viene visualizzato il collegamento *Click per visualizzare la topologia*.

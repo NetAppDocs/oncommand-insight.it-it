@@ -1,0 +1,33 @@
+---
+permalink: config-admin/restarting-the-oncommand-insight-server-or-acquisition-unit.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando si riavvia il server OnCommand Insight, aggiornare la pagina e accedere nuovamente al portale OnCommand Insight. 
+---
+= Riavvio del server OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si riavvia il server OnCommand Insight, aggiornare la pagina e accedere nuovamente al portale OnCommand Insight.
+
+
+
+== A proposito di questa attività
+
+[NOTE]
+====
+Entrambe queste opzioni devono essere utilizzate solo su richiesta del supporto clienti NetApp. Prima del riavvio non viene ricevuta alcuna conferma.
+
+====
+
+
+== Fasi
+
+. Sulla barra degli strumenti di Insight, fare clic su *Admin* e selezionare *Troubleshooting*.
+. Nella parte inferiore della pagina dell'area altre attività, fare clic sul collegamento *risoluzione avanzata dei problemi*.
+. Nella pagina successiva del menu Avanzate, fare clic sulla scheda *azioni*.
+. Fare clic su *Riavvia server*.
+

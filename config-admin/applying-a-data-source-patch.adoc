@@ -1,0 +1,41 @@
+---
+permalink: config-admin/applying-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le patch per l"origine dei dati sono periodicamente disponibili e consentono di risolvere problemi con un"origine dati esistente, aggiungere un"origine dati per un nuovo vendor o aggiungere un nuovo modello per un vendor.' 
+---
+= Applicazione di una patch di origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le patch per l'origine dei dati sono periodicamente disponibili e consentono di risolvere problemi con un'origine dati esistente, aggiungere un'origine dati per un nuovo vendor o aggiungere un nuovo modello per un vendor.
+
+
+
+== Prima di iniziare
+
+È necessario aver ottenuto il `.zip` file che contiene l'origine dati più recente `.patch` file dal supporto tecnico.
+
+
+
+== Fasi
+
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Fare clic su *Patch*.
+. Dal pulsante Actions (azioni), selezionare *Apply patch* (Applica patch).
+. Nella finestra di dialogo *Apply data source patch* (Applica patch origine dati), fare clic su *Browse* (Sfoglia) per individuare `.patch` file.
+. Esaminare i tipi di origine dei dati * * Patch name*, * Description* e * interessati*.
+. Se la patch selezionata è corretta, fare clic su *Apply Patch* (Applica patch).
++
+Se si sta applicando una patch che risolve i problemi con un'origine dati, tutte le origini dati dello stesso tipo vengono aggiornate con la patch ed è necessario approvare la patch. Le patch che non influiscono sulle origini dati configurate vengono approvate automaticamente.
+
+
+
+
+
+== Al termine
+
+Se si applica una patch che aggiunge un'origine dati per un nuovo vendor o un nuovo modello, è necessario aggiungere l'origine dati dopo l'applicazione della patch.

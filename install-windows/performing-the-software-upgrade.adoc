@@ -1,0 +1,14 @@
+---
+permalink: install-windows/performing-the-software-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: Dopo aver completato tutte le attività dei prerequisiti, è possibile aggiornare tutti i componenti Insight a una nuova release scaricando ed eseguendo il pacchetto di installazione applicabile su ciascun server. 
+---
+= Esecuzione dell'aggiornamento del software
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver completato tutte le attività dei prerequisiti, è possibile aggiornare tutti i componenti Insight a una nuova release scaricando ed eseguendo il pacchetto di installazione applicabile su ciascun server.

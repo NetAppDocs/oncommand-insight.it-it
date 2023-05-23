@@ -1,0 +1,46 @@
+---
+permalink: config-admin/scrubbing-data-for-transfer-to-support-webui.html 
+sidebar: sidebar 
+keywords:  
+summary: 'I clienti che dispongono di ambienti sicuri devono comunicare con il Servizio clienti NetApp per risolvere i problemi che si verificano senza compromettere le informazioni del database. Le utility di scrubbing di OnCommand Insight consentono di impostare un dizionario completo di parole chiave e modelli in modo da poter "pulire" i dati sensibili e inviare file scrubbed al supporto clienti.' 
+---
+= Scrubbing dei dati per il trasferimento al supporto
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I clienti che dispongono di ambienti sicuri devono comunicare con il Servizio clienti NetApp per risolvere i problemi che si verificano senza compromettere le informazioni del database. Le utility di scrubbing di OnCommand Insight consentono di impostare un dizionario completo di parole chiave e modelli in modo da poter "pulire" i dati sensibili e inviare file scrubbed al supporto clienti.
+
+
+
+== Fasi
+
+. Nell'interfaccia utente Web, fare clic su *Admin* e selezionare *Troubleshooting*.
+. Nella parte inferiore della pagina dell'area altre attività, fare clic sul collegamento *Utilità di scrub*.
++
+Esistono diverse sezioni di scrubbing: Ricerca nel dizionario, dati di scrubbing e dizionario di creazione, parole chiave personalizzate ed espressioni regolari.
+
+. 
++
+.. Nella sezione**Lookup in dictionary**, inserire un codice per visualizzare il valore che sostituisce o un valore per visualizzare il codice che lo sostituisce. Nota: Prima di eseguire una ricerca, è necessario *creare* il dizionario per identificare i valori da utilizzare per la pulizia dai dati di supporto.
+
+
+. Per aggiungere parole chiave personalizzate per eseguire lo scrubbing dai dati di supporto, nella sezione *parole chiave personalizzate*, fare clic su menu:azioni[Aggiungi parola chiave personalizzata]. Inserire una parola chiave e fare clic su *Save* (Salva). La parola chiave viene aggiunta al dizionario.
+. Espandere *modelli (regexp)*. Fare clic su *Aggiungi* per visualizzare la finestra di dialogo per l'immissione di un nuovo modello.
+. Per utilizzare un'espressione regolare per identificare le parole o le frasi da scrubbing, immettere uno o più modelli nella sezione *espressioni regolari*. Fare clic su menu:azioni[Aggiungi espressione regolare], immettere un Nome per il modello e l'espressione regolare nei campi e fare clic su *Salva*. Le informazioni sono state aggiunte al dizionario.
++
+[NOTE]
+====
+I modelli devono essere racchiusi tra parentesi di arrotondamento per identificare un gruppo di cattura di espressioni regolari.
+
+====
+. Nella sezione**Build Dictionary**, fare clic su *Build* per avviare la compilazione del dizionario di tutte le parole identificate come sensibili dal database OnCommand Insight.
++
+Al termine, viene visualizzato un prompt che informa che il dizionario aggiornato è disponibile. La descrizione del database include una riga che indica il numero di parole chiave presenti nel dizionario. Verificare la precisione delle parole chiave nel dizionario. Se si riscontrano problemi e si desidera ricostruire il dizionario, fare clic su *Ripristina* nel blocco database per rimuovere tutte le parole chiave raccolte dal database OnCommand Insight dal dizionario. Come indicato dal prompt, non verranno eliminate altre parole chiave. Tornare alle utilità di scrubbing e immettere nuovamente le parole chiave personalizzate.
+
+. Dopo aver creato un dizionario Scrub, è possibile utilizzarlo per eseguire lo scrubbing di un log, XML o di un altro file di testo per rendere i dati anonimi.
+. Per eseguire lo scrubbing di un file di log, XML o altro file di testo, nella sezione *dati di scrubbing*, selezionare Sfoglia per individuare il file e fare clic su *file di scrubbing*.
+

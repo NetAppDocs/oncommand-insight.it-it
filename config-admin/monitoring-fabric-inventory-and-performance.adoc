@@ -1,0 +1,26 @@
+---
+permalink: config-admin/monitoring-fabric-inventory-and-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Utilizzando le pagine delle risorse Fibre Channel di OnCommand, è possibile monitorare le performance e l"inventario dei fabric nel proprio ambiente ed essere consapevoli di eventuali modifiche che potrebbero causare problemi.' 
+---
+= Monitoraggio dell'ambiente Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzando le pagine delle risorse Fibre Channel di OnCommand, è possibile monitorare le performance e l'inventario dei fabric nel proprio ambiente ed essere consapevoli di eventuali modifiche che potrebbero causare problemi.
+
+
+
+== Pagine di risorse Fibre Channel
+
+Le pagine delle risorse di Insight contengono informazioni riepilogative sulla risorsa, sulla sua topologia (il dispositivo e le sue connessioni), sui grafici delle performance e sulle tabelle delle risorse associate. È possibile utilizzare le pagine delle risorse relative a fabric, switch e porte per monitorare l'ambiente Fibre Channel. Particolarmente utile per la risoluzione di un problema Fibre Channel è il grafico delle performance per ogni risorsa di porta, che mostra il traffico per la porta principale contributore selezionata. Inoltre, in questo grafico è possibile visualizzare anche le metriche di credito buffer-to-buffer e gli errori di porta, con Insight che visualizza un grafico delle performance separato per ciascuna metrica.
+
+
+
+== Policy sulle performance per le metriche delle porte
+
+Insight consente di creare policy sulle performance per monitorare la rete per rilevare diverse soglie e generare avvisi quando tali soglie vengono superate. È possibile creare criteri di performance per le porte in base alle metriche delle porte disponibili. Quando si verifica una violazione di una soglia, Insight la rileva e la segnala nella pagina delle risorse associata visualizzando un cerchio rosso continuo, un avviso via email, se configurato, e nella dashboard delle violazioni o in qualsiasi dashboard personalizzata che segnala le violazioni.

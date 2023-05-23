@@ -1,0 +1,42 @@
+---
+permalink: config-admin/managing-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight monitora il tuo ambiente, consentendoti di cercare potenziali problemi prima che venga segnalata una crisi. La dashboard delle risorse fornisce grafici a torta riepilogativi, mappe termiche per IOPS e un grafico interattivo dei primi 10 pool di storage utilizzati. 
+---
+= Gestione delle informazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight monitora il tuo ambiente, consentendoti di cercare potenziali problemi prima che venga segnalata una crisi. La dashboard delle risorse fornisce grafici a torta riepilogativi, mappe termiche per IOPS e un grafico interattivo dei primi 10 pool di storage utilizzati.
+
+
+
+== Fasi
+
+. Apri la dashboard Insight**Assets** e sposta il cursore sui grafici a torta per esaminare la distribuzione delle risorse in questi tre grafici:
++
+** La capacità per vendor indica la capacità raw totale dello storage di ciascun vendor.
+** Capacity by Tier (capacità per Tier): Indica la capacità totale utilizzabile per ciascun Tier di storage.
+** Il grafico a torta delle porte dello switch mostra i produttori di porte e la percentuale di porte utilizzate.
+
+
+. Visualizza *fatti sull'ambiente* per visualizzare informazioni sulla capacità utilizzata dell'ambiente, sull'efficienza della capacità, sulle risorse FC consumate e sulle statistiche dell'infrastruttura virtuale.
+. Posizionare il cursore su una barra del pool di storage nel grafico *Top 10 Used Pools* per visualizzare la capacità utilizzata e inutilizzata del pool di storage.
+. Fare clic su un nome di risorsa visualizzato in grande testo (che indica che la risorsa presenta problemi) nella mappa termica *Storage IOP* per visualizzare una pagina che riepiloga lo stato corrente della risorsa.
+. Nell'angolo in basso a destra della dashboard delle risorse*, fare clic sul nome di una risorsa che appare in grande formato (che indica che la risorsa presenta problemi) nella mappa termica di *Virtual Machine IOPS* per visualizzare una pagina che riepiloga lo stato corrente della risorsa.
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Notare le aree che mostrano cerchi rossi pieni.
++
+Nell'interfaccia utente di OnCommand Insightweb, i potenziali problemi sono contrassegnati da un cerchio rosso pieno.
+
+. Fare clic su *origini dati* per esaminare un elenco di tutte le origini dati monitorate.
++
+Esaminare qualsiasi origine dati con una colonna *Status* contenente un messaggio con un cerchio rosso pieno e con un *Impact* elencato come Alto o Medio. Questi sono nella parte superiore del tavolo. I problemi relativi a tali origini dati influiscono su una parte significativa della rete, che è necessario risolvere.
+
+. Fare clic su *Acquisition Units* (unità di acquisizione) per annotare lo stato di ciascun indirizzo IP che esegue Insight e, se necessario, riavviare un'unità di acquisizione
+. Fare clic su *Health* per visualizzare il monitoraggio delle istanze di alto livello dei server Insight.
+

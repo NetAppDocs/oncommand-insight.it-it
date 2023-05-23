@@ -1,0 +1,66 @@
+---
+permalink: dwh/adding-a-reporting-user.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È necessario aggiungere un nuovo account utente per ogni persona che richiede l"accesso al portale di reporting. La disponibilità di un account utente diverso per ciascuna persona consente di controllare i diritti di accesso, le preferenze individuali e la responsabilità.' 
+---
+= Aggiunta di un utente di Reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario aggiungere un nuovo account utente per ogni persona che richiede l'accesso al portale di reporting. La disponibilità di un account utente diverso per ciascuna persona consente di controllare i diritti di accesso, le preferenze individuali e la responsabilità.
+
+
+
+== Prima di iniziare
+
+Prima di aggiungere un utente di Reporting, è necessario aver assegnato un nome utente univoco, determinato la password da utilizzare e verificato il ruolo o i ruoli utente corretti. Questi ruoli sono specializzati nel portale Reporting.
+
+
+
+== Fasi
+
+. Accedere come amministratore al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *User Management* (Gestione utenti).
+. Nella finestra *User Management*, fare clic su *Add New User* (Aggiungi nuovo utente).
+. Inserire le seguenti informazioni per il nuovo utente di Reporting:
++
+** *Nome utente*
++
+Nome utente (alfanumerico, compreso a-z, A-Z e 0-9) per l'account
+
+** *Indirizzo e-mail*
++
+Indirizzo e-mail associato all'account utente e richiesto se l'utente si iscrive a qualsiasi report
+
+** *Password*
++
+Password per accedere a OnCommand Insight con questo account utente, che in genere viene selezionato dall'utente e confermato nell'interfaccia
+
+** *Ruolo Insight*
++
+Ruoli disponibili per l'utente con autorizzazioni appropriate
+
++
+[NOTE]
+====
+Le opzioni per il ruolo OnCommand Insight vengono visualizzate solo se OnCommand Insight è installato sullo stesso computer delle strutture di reporting, cosa non tipica.
+
+====
+** *Ruoli di reporting*
++
+Ruolo di reporting per questo account utente (ad esempio, Pro Author)
+
++
+[NOTE]
+====
+Il ruolo di amministratore è unico. È possibile aggiungere questo ruolo a qualsiasi utente.
+
+====
+
+
+. Fare clic su *Aggiungi*.
+

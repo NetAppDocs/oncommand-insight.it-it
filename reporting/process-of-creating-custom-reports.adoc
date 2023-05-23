@@ -1,0 +1,21 @@
+---
+permalink: reporting/process-of-creating-custom-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Il processo di creazione di report ad hoc prevede diverse attività. 
+---
+= Processo di creazione dei report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il processo di creazione di report ad hoc prevede diverse attività.
+
+* Pianificare i risultati del report.
+* Identifica i dati a supporto dei tuoi risultati.
+* Selezionare il modello di dati (ad esempio, modello di dati Chargeback, modello di dati di inventario e così via) che contiene i dati.
+* Selezionare gli elementi dei dati per il report.
+* Facoltativamente, è possibile formattare, ordinare e filtrare i risultati dei report.
+

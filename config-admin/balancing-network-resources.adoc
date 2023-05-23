@@ -1,0 +1,28 @@
+---
+permalink: config-admin/balancing-network-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Per risolvere i problemi di bilanciamento, utilizzare le pagine delle risorse per individuare i problemi e identificare i volumi ad alta capacità sottoutilizzati. 
+---
+= Bilanciamento delle risorse di rete
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per risolvere i problemi di bilanciamento, utilizzare le pagine delle risorse per individuare i problemi e identificare i volumi ad alta capacità sottoutilizzati.
+
+
+
+== Fasi
+
+. Aprire la dashboard delle risorse nel browser.
+. Nella mappa termica IOPS delle macchine virtuali, si nota il nome di una macchina virtuale in stampe molto grandi che spesso segnala problemi.
+. Fare clic sul nome della macchina virtuale per visualizzare la pagina delle risorse.
+. Verificare la presenza di messaggi di errore nel riepilogo.
+. Controllare i grafici delle performance e in particolare le principali risorse correlate per individuare eventuali volumi in conflitto.
+. Aggiungi volumi al grafico delle performance per confrontare i modelli di attività e visualizzare più pagine di risorse per altre risorse coinvolte nel problema.
+. Scorrere fino alla fine della pagina delle risorse per visualizzare gli elenchi di tutte le risorse associate alla macchina virtuale. Nota: Qualsiasi VMDK eseguito ad alta capacità. Questo è probabilmente la causa del conflitto.
+. Per risolvere il problema di bilanciamento, identificare una risorsa sottoutilizzata per ricevere il carico da una risorsa sovrautilizzata o rimuovere un'applicazione meno impegnativa dalla risorsa maggiormente utilizzata.
+

@@ -1,0 +1,64 @@
+---
+permalink: config-admin/opening-the-violations-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando Insight genera violazioni a causa delle soglie impostate nelle policy sulle performance, puoi visualizzarle utilizzando la dashboard delle violazioni. La dashboard elenca tutte le violazioni che si verificano nella rete e consente di individuare e risolvere i problemi. 
+---
+= Monitoraggio delle violazioni nella rete
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando Insight genera violazioni a causa delle soglie impostate nelle policy sulle performance, puoi visualizzarle utilizzando la dashboard delle violazioni. La dashboard elenca tutte le violazioni che si verificano nella rete e consente di individuare e risolvere i problemi.
+
+
+
+== Fasi
+
+. Aprire OnCommand Insight nel browser.
+. Nella barra degli strumenti di Insight, fare clic su *Dashboard* e selezionare *dashboard violazioni*.
++
+Viene visualizzata la dashboard delle violazioni.
+
+. È possibile utilizzare il grafico a torta *violazioni per policy* nei seguenti modi:
++
+** È possibile posizionare il cursore su qualsiasi sezione di un grafico per visualizzare la percentuale delle violazioni totali che si sono verificate per una determinata policy o metrica.
+** È possibile fare clic su una sezione di un grafico per "`ingrandire`", che consente di enfatizzare e studiare più attentamente la sezione spostandola dal resto del grafico.
+** Fare clic su image:../media/oci-widget-open-full-screen.gif[""] nell'angolo in alto a destra per visualizzare il grafico a torta in modalità a schermo intero, quindi fare clic su image:../media/oci-restore-size-icon.gif[""] di nuovo per ridurre a icona il grafico a torta. Un grafico a torta può contenere un massimo di cinque sezioni; pertanto, se si dispone di sei policy che generano violazioni, Insight combina la quinta e la sesta sezione in una sezione "`altre`". Insight assegna il maggior numero di violazioni alla prima sezione, la seconda più violazioni alla seconda sezione e così via.
+
+
+. Puoi utilizzare il grafico *Cronologia violazioni* nei seguenti modi:
++
+** È possibile posizionare il cursore sul grafico per visualizzare il numero totale di violazioni che si sono verificate in un determinato momento e il numero che si è verificato al di fuori del totale per ciascuna metrica specificata.
+** È possibile fare clic su un'etichetta della legenda per rimuovere i dati associati alla legenda dal grafico.
++
+Fare clic sulla legenda per visualizzare nuovamente i dati.
+
+** Fare clic su image:../media/oci-widget-open-full-screen.gif[""] nell'angolo in alto a destra per visualizzare il grafico a schermo intero, quindi fare clic su image:../media/oci-restore-size-icon.gif[""] di nuovo per ridurre a icona il grafico a torta.
+
+
+. È possibile utilizzare la *Tabella delle violazioni* nei seguenti modi:
++
+** Fare clic su image:../media/oci-widget-open-full-screen.gif[""] nell'angolo in alto a destra per visualizzare la tabella in modalità a schermo intero, quindi fare clic su image:../media/oci-restore-size-icon.gif[""] di nuovo per ridurre a icona il grafico a torta.
++
+Se le dimensioni della finestra sono troppo piccole, la tabella delle violazioni visualizza solo tre colonne, tuttavia quando si fa clic su image:../media/oci-widget-open-full-screen.gif[""], vengono visualizzate colonne aggiuntive (fino a sette).
+
+** È possibile visualizzare le violazioni per un determinato periodo di tempo (*1h*, *3h*, *24h*, *3d*, *7d*, E *30d*), con Insight che mostra un numero massimo di 1000 violazioni per il periodo di tempo selezionato.
+** È possibile utilizzare la casella *filter* per visualizzare solo le violazioni desiderate.
+** È possibile modificare l'ordinamento delle colonne in una tabella in modo che sia crescente (freccia verso l'alto) o decrescente (freccia verso il basso) facendo clic sulla freccia nell'intestazione della colonna; per tornare all'ordinamento predefinito, fare clic su un'altra intestazione di colonna.
++
+Per impostazione predefinita, la tabella visualizza le violazioni in ordine decrescente.
+
+** È possibile fare clic su una violazione nella colonna ID per visualizzare la pagina delle risorse per la durata della violazione.
+** È possibile fare clic sui collegamenti alle risorse (ad esempio, pool di storage e volume di storage) nella colonna Description (Descrizione) per visualizzare le pagine delle risorse associate a tali risorse.
+** È possibile fare clic sul collegamento al criterio di performance nella colonna Policy (criterio) per visualizzare la finestra di dialogo Edit Policy (Modifica criterio).
++
+È possibile modificare le soglie di una policy se si ritiene che generi troppe o poche violazioni.
+
+** È possibile fare clic su un numero di pagina per sfogliare i dati per pagina se sono presenti più dati di quelli contenuti in una singola pagina.
+** Fare clic su image:../media/oci-delete-policy-threshold-icon.gif[""] per eliminare la violazione.
+
+
+

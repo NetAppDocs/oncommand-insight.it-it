@@ -1,0 +1,45 @@
+---
+permalink: howto/assigning-applications-using-a-query.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile assegnare un"applicazione a una risorsa in modo da identificare le risorse della risorsa utilizzata dall"applicazione. Se un asset ha un costo assegnato all"IT, è possibile identificare il costo sostenuto dall"applicazione e, se la risorsa è misurata in base alla dimensione, è possibile determinare se la risorsa deve essere rifornita.' 
+---
+= Assegnazione di applicazioni a una risorsa mediante una query
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile assegnare un'applicazione a una risorsa in modo da identificare le risorse della risorsa utilizzata dall'applicazione. Se un asset ha un costo assegnato all'IT, è possibile identificare il costo sostenuto dall'applicazione e, se la risorsa è misurata in base alla dimensione, è possibile determinare se la risorsa deve essere rifornita.
+
+
+
+== A proposito di questa attività
+
+È possibile semplificare l'attività di assegnazione di più risorse a un'applicazione utilizzando una query.
+
+
+
+== Fasi
+
+. Creare una nuova query per identificare le risorse a cui si desidera assegnare un'applicazione. Ad esempio, se si desidera assegnarlo a un host con un nome specifico relativo a una posizione geografica, fare clic su *Query* > *+Nuova query*
+. Fare clic su *host*
+. Nel campo *Nome*, immettere `Chicago`
++
+Il sistema visualizza tutti gli host con `Chicago` come parte se il loro nome. image:../media/new-query.gif[""]
+
+. Selezionare uno o più host identificati dalla query.
+. Fare clic su *azioni* > *Aggiungi applicazione*
++
+image::../media/application-assign.gif[assegnazione dell'applicazione]
+
++
+Viene visualizzata la finestra di dialogo Assegna applicazione.
+
+. Selezionare l'applicazione che si desidera assegnare all'host e fare clic su image:../media/check-box-ok.gif[""]
+. Fare clic su *Save* (Salva)
++
+Il nome dell'applicazione viene visualizzato nella sezione User Data (dati utente).
+
+

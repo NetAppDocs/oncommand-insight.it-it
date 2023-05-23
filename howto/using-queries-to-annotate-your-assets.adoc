@@ -1,0 +1,16 @@
+---
+permalink: howto/using-queries-to-annotate-your-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Ora che hai creato le tue annotazioni iniziali, diamo un"occhiata a come associarle a risorse specifiche.' 
+---
+= Utilizzo delle query per annotare le risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ora che hai creato le tue annotazioni iniziali, diamo un'occhiata a come associarle a risorse specifiche.
+
+Negli esempi che seguono, applicheremo queste annotazioni a risorse specifiche. Ad esempio, creeremo una query per elencare tutti gli array di storage che risiedono in un data center specifico e contrassegneremo quelli con l'annotazione appropriata. Quindi, faremo lo stesso per le risorse appartenenti a un livello e a un livello di servizio specifici.

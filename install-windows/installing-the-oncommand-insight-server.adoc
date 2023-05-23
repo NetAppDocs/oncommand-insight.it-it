@@ -1,0 +1,93 @@
+---
+permalink: install-windows/installing-the-oncommand-insight-server.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile installare facilmente il server OnCommand Insight utilizzando l"installazione guidata di OnCommand Insight.' 
+---
+= Installazione del server OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile installare facilmente il server OnCommand Insight utilizzando l'installazione guidata di OnCommand Insight.
+
+
+
+== Prima di iniziare
+
+È necessario aver completato tutti i prerequisiti di installazione.
+
+
+
+== Fasi
+
+. Accedere al server Insight utilizzando un account con privilegi di amministratore.
+. Aprire Esplora risorse e accedere alla directory in cui si trovano i file di installazione.
+. Fare doppio clic su `.MSI` file scaricato.
+. Fare clic su *Avanti* per continuare.
+. Leggere il Contratto di licenza, selezionare la casella di controllo *Accetto i termini del Contratto di licenza*, quindi fare clic su *Avanti*.
+. Inserire il nome del cliente e il nome del sito nella finestra *informazioni sul cliente*, quindi fare clic su *Avanti*.
++
+*Best practice:* utilizzare il nome del cliente come prefisso per il sito, ad esempio NetApp.
+
+. Nella finestra *Customer Information: Configure NetApp ASUP* (informazioni sul cliente: Configurazione di NetApp ASUP*), procedere come segue:
++
+.. Selezionare il database contenente i dati che si desidera caricare in ASUP selezionando una delle seguenti opzioni:
++
+*** *Nessun backup del database*: Non viene inviato un backup ad ASUP.
+*** *Backup senza dati sulle prestazioni*: Viene eseguito un backup e inviato ad ASUP ma non include i dati sulle prestazioni.
+*** *Backup con dati sulle performance*: Viene eseguito un backup che include dati sulle performance, ma questo potrebbe generare un enorme `*.gz` file.
+
+
+
+
++
+[NOTE]
+====
+ASUP viene fornito utilizzando il protocollo HTTPS.
+
+====
++
+.. In *Logs*, selezionare se non si desidera alcun log, log di base o log esteso che contenga una registrazione dell'origine dati.
+.. Fare clic su *Avanti*.
+
+
+. Se si utilizza il modello di licenza Insight Consumption, selezionare la casella *Enable sending usage information to NetApp* (attiva invio delle informazioni sull'utilizzo a NetApp*) nella sezione *Send usage information* (Invia informazioni sull'utilizzo).
+. Fare clic su *Avanti*
+. Nella finestra *Configura server*, selezionare o impostare i parametri di configurazione appropriati per configurare il server OnCommand Insight:
++
+|===
+
+
+| Opzione | Descrizione 
+
+
+ a| 
+Porta portale (HTTP)
+ a| 
+Porte utilizzate dal server OnCommand Insight per supportare i servizi Web dell'utente, incluso un portale per eseguire attività di amministrazione. Utilizzare il valore predefinito (80); tuttavia, se la porta predefinita è in uso, cambiarla con un'altra porta.
+
+
+
+ a| 
+Porta portale (HTTPS)
+ a| 
+Porta utilizzata dalle unità di acquisizione remote per inviare informazioni sulle modifiche SAN al server OnCommand Insight attraverso un canale sicuro. Utilizzare il valore predefinito (443); tuttavia, se la porta predefinita è in uso, cambiarla con un'altra porta. Specificare lo stesso numero di porta durante la configurazione di Raus.
+
+
+
+ a| 
+Porta database interna (SQL)
+ a| 
+Porta utilizzata internamente dal PC in cui è in esecuzione il server OnCommand Insight, per fungere da punto di accesso al database. Utilizzare il valore predefinito (3306); tuttavia, se la porta predefinita è in uso, cambiarla con un'altra porta.
+
+|===
+. Fare clic su *Avanti*.
+. Fare clic su *Install* (Installa) per continuare.
++
+L'installazione richiede circa 20 minuti, a seconda delle applicazioni installate.
+
+. Fare clic su *fine*.
+

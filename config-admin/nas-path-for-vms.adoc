@@ -1,0 +1,43 @@
+---
+permalink: config-admin/nas-path-for-vms.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 7.3 supporta i percorsi NAS per le macchine virtuali e le condivisioni di storage. Questi percorsi sono simili ai percorsi NAS per gli host alle condivisioni di storage. Quando l"indirizzo IP di una macchina virtuale è autorizzato ad accedere a una condivisione, viene creato un percorso NAS.' 
+---
+= Percorso NAS per macchine virtuali
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3 supporta i percorsi NAS per le macchine virtuali e le condivisioni di storage. Questi percorsi sono simili ai percorsi NAS per gli host alle condivisioni di storage. Quando l'indirizzo IP di una macchina virtuale è autorizzato ad accedere a una condivisione, viene creato un percorso NAS.
+
+I percorsi NAS per le macchine virtuali vengono visualizzati nella landing page dei volumi interni. Questa pagina contiene un widget risorse di storage montate su guest che identifica i volumi interni a cui hanno accesso le macchine virtuali.
+
+* I percorsi NAS vengono creati quando le macchine virtuali hanno accesso alle condivisioni back-end. Non viene riconosciuto se le macchine virtuali accedono alle condivisioni o meno.
+* Il calcolo della correlazione si basa su latenze e IOPS e non include i casi in cui le macchine virtuali hanno percorsi NAS verso lo storage back-end.
+* L'utente può eseguire query sulla condivisione in base all'indirizzo IP dell'iniziatore, ma non è supportata la query in base al percorso.
+
+
+La tabella Compute Resources del volume interno ora visualizza anche le macchine virtuali con percorsi NAS. Per ogni macchina virtuale, CPU e memoria, vengono forniti dati relativi a utilizzo e performance.
+
+
+
+== Impatto del data warehouse
+
+Le modifiche apportate al data warehouse dopo l'aggiornamento a OnCommand Insight 7.3 includono quanto segue:
+
+* la tabella dwh_Inventory.nas_Logical viene rimossa dal data mart di inventario e sostituita con una vista.
++
+Tutti i report Insight 7.2.x contenenti la tabella dei percorsi NFS vengono conservati.
+
+* La tabella dwh_Inventory.nas_cr_Logical viene aggiunta al data mart di inventario e include quanto segue:
++
+** Risorsa di calcolo
+** Volume interno
+** Storage
+** Condivisione NAS
+
+
+

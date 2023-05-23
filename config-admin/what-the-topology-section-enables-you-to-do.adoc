@@ -1,0 +1,31 @@
+---
+permalink: config-admin/what-the-topology-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: La sezione topologia consente di visualizzare le modalità di connessione tra le risorse della rete e le informazioni relative alle risorse correlate. 
+---
+= Utilizzo della sezione topologia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione topologia consente di visualizzare le modalità di connessione tra le risorse della rete e le informazioni relative alle risorse correlate.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Individuare una pagina di risorse effettuando una delle seguenti operazioni:
++
+** Nella barra degli strumenti Insight, fare clic su image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], digitare il nome della risorsa, quindi selezionare la risorsa dall'elenco.
+** Fare clic su *Dashboard*, selezionare *Dashboard delle risorse*, individuare il nome di una risorsa e fare clic su di essa. Viene visualizzata la pagina delle risorse. La sezione topologia si trova nell'angolo in alto a destra della pagina delle risorse.
+
+
++
+Se la topologia della risorsa è più grande di quella che si adatta alla sezione, fare clic sul collegamento *fare clic per visualizzare il collegamento ipertestuale topologia*.
+
+. Per visualizzare ulteriori informazioni sulle risorse correlate alla risorsa di base, posizionare il cursore su una risorsa correlata nella topologia e fare clic sul relativo nome, che visualizza la relativa pagina.
+

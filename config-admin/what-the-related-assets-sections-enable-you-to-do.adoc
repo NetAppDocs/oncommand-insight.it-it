@@ -1,0 +1,56 @@
+---
+permalink: config-admin/what-the-related-assets-sections-enable-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: La sezione risorse correlate consente di visualizzare le risorse correlate alla risorsa di base. Ogni risorsa correlata viene visualizzata in una tabella insieme alle statistiche pertinenti per la risorsa. È possibile esportare le informazioni sulle risorse, visualizzare le statistiche delle risorse nei grafici delle prestazioni di Expert View o visualizzare un grafico che visualizza le statistiche solo per le risorse correlate. 
+---
+= Utilizzando la sezione risorse correlate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione risorse correlate consente di visualizzare le risorse correlate alla risorsa di base. Ogni risorsa correlata viene visualizzata in una tabella insieme alle statistiche pertinenti per la risorsa. È possibile esportare le informazioni sulle risorse, visualizzare le statistiche delle risorse nei grafici delle prestazioni di Expert View o visualizzare un grafico che visualizza le statistiche solo per le risorse correlate.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Individuare una pagina di risorse effettuando una delle seguenti operazioni:
++
+** Nella barra degli strumenti Insight, fare clic su image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], digitare il nome della risorsa, quindi selezionare la risorsa dall'elenco.
+** Fare clic su *Dashboard*, selezionare *Dashboard delle risorse*, individuare il nome di una risorsa e fare clic su di essa. Viene visualizzata la pagina delle risorse.
+
+
+. Per controllare il modo in cui le risorse vengono visualizzate nella tabella:
++
+** Fare clic sul nome di una risorsa per visualizzarne la pagina.
+** Utilizzare la casella *filter* per visualizzare solo risorse specifiche.
+** Se nella tabella sono presenti più di cinque risorse, fare clic su un numero di pagina per sfogliare le risorse per pagina.
+** Modificare l'ordinamento delle colonne di una tabella in crescente (freccia su) o decrescente (freccia giù) facendo clic sulla freccia nell'intestazione della colonna.
+** Aggiungi una risorsa correlata a qualsiasi grafico delle performance nella sezione visualizzazione esperto posizionando il cursore sulla risorsa correlata e facendo clic su image:../media/add-to-expert-view-graph.gif[""].
+
+
+. Per esportare le informazioni visualizzate nella tabella in un `.CSV` file:
++
+.. Fare clic su image:../media/export-to-csv.gif[""].
+.. Fare clic su *Apri con*, quindi su *OK* per aprire il file con Microsoft Excel e salvarlo in una posizione specifica oppure fare clic su *Salva file* e quindi su *OK* per salvare il file nella cartella Download.
++
+Tutti gli attributi degli oggetti per le colonne attualmente selezionate per la visualizzazione vengono esportati nel file. Verranno esportati solo gli attributi delle colonne visualizzate. Si noti che vengono esportate solo le prime 10,000 righe della tabella.
+
+
+
+. Per visualizzare le informazioni relative alle risorse in un grafico sotto la tabella, fare clic su image:../media/show-as-chart.gif[""] ed eseguire una delle seguenti operazioni:
++
+** Fare clic su *Read*,*Write* o *Total* per modificare i dati metrici visualizzati. *Total* è l'impostazione predefinita.
+** Fare clic su image:../media/pencil-icon-landing-page-be.gif[""] per selezionare una metrica diversa.
+** Fare clic su image:../media/change-chart-type-icon.gif[""] per modificare il tipo di grafico. *Grafico a linee* è l'impostazione predefinita.
+** Spostare il cursore sui punti dati nel grafico per vedere come cambia il valore della metrica nel periodo di tempo selezionato per ogni risorsa correlata.
+** Fare clic su una risorsa correlata nella legenda del grafico per aggiungerla o rimuoverla dal grafico.
+** Fare clic su un numero di pagina nella tabella delle risorse correlate per visualizzare altre risorse correlate nel grafico.
+** Fare clic su image:../media/close-chart-icon.gif[""] per chiudere il grafico.
+
+
+

@@ -1,0 +1,69 @@
+---
+permalink: install-linux/remote-acquisition-unit-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: 'È necessario installare un"unità di acquisizione remota (RAU) per acquisire informazioni da dispositivi SAN protetti da firewall, in un sito remoto, in una rete privata o in segmenti di rete diversi. Prima di installare la RAU, assicurarsi che l"ambiente soddisfi i requisiti di sistema operativo RAU, CPU, memoria e spazio su disco.' 
+---
+= Requisiti del server Remote Acquisition Unit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario installare un'unità di acquisizione remota (RAU) per acquisire informazioni da dispositivi SAN protetti da firewall, siti remoti, reti private o in segmenti di rete diversi. Prima di installare la RAU, assicurarsi che l'ambiente soddisfi i requisiti di sistema operativo RAU, CPU, memoria e spazio su disco.
+
+|===
+
+
+| Componente | Requisito 
+
+
+ a| 
+Sistema operativo
+ a| 
+Un computer che esegue una versione con licenza di uno dei seguenti sistemi, che non esegue altro software a livello di applicazione:
+
+* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+* CentOS 7.2, 7.5, 7.6, 7.7, 7.8, 7.9, CentOS 8 Stream
+* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+
+
+Si consiglia di utilizzare un server dedicato.
+
+
+
+ a| 
+CPU
+ a| 
+4 core CPU
+
+
+
+ a| 
+Memoria
+ a| 
+16 GB DI RAM
+
+
+
+ a| 
+Spazio su disco disponibile
+ a| 
+40 GB
+
+
+
+ a| 
+Rete
+ a| 
+Connessione Ethernet a 100 Mbps/1 Gbps, indirizzo IP statico, connettività IP a tutti i dispositivi FC e porta richiesta al server OnCommand Insight (80 o 443).
+
+
+
+ a| 
+Permessi
+ a| 
+Sudo permessi sul server RAU
+
+|===

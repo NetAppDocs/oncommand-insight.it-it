@@ -1,0 +1,153 @@
+---
+permalink: config-admin/brocade-sphereon-intrepid-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utilizza l"origine dati Brocade Sphereon/Intrepid Switch per rilevare l"inventario degli switch Brocade Sphereon o Intrepid.' 
+---
+= Origine dati Brocade Sphereon/Intrepid Switch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utilizza l'origine dati Brocade Sphereon/Intrepid Switch (SNMP) per rilevare l'inventario degli switch Brocade Sphereon o Intrepid.
+
+
+
+== Requisiti
+
+[NOTE]
+====
+Questo data collector non è disponibile a partire da OnCommand Insight 7.3.11.
+
+====
+* Deve essere presente una connettività IP a tutti gli switch del fabric. Se si seleziona la casella di controllo Discover All switch in the Fabric (rileva tutti gli switch nel fabric), OCI identifica tutti gli switch nel fabric; tuttavia, per rilevarli, richiede la connettività IP a questi switch aggiuntivi.
+* Stringa di comunità di sola lettura se si utilizza SNMP V1 o SNMP V2.
+* Accesso HTTP allo switch per ottenere informazioni sullo zoning.
+* Convalida dell'accesso eseguendo `snmpwalk` utility per lo switch (vedere `<install_path\>\bin\)`.
+
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Switch Sphereon
+ a| 
+Indirizzo IP o nome di dominio completo dello switch
+
+
+
+ a| 
+Versione SNMP
+ a| 
+Versione SNMP
+
+
+
+ a| 
+Community SNMP
+ a| 
+Stringa di comunità di sola lettura SNMP utilizzata per accedere allo switch
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente SMI-S per lo switch (solo SNMP v3)
+
+
+
+ a| 
+Password
+ a| 
+Password SMI-S per lo switch (solo SNMP v3)
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 15 minuti)
+
+
+
+ a| 
+Protocollo SNMP Auth
+ a| 
+Protocollo di autenticazione SNMP (solo SNMPv3)
+
+
+
+ a| 
+SNMP Privacy Protocol
+ a| 
+Protocollo di privacy SNMP (solo SNMPv3)
+
+
+
+ a| 
+Password per la privacy SNMP
+ a| 
+Password per la privacy SNMP
+
+
+
+ a| 
+Numero di tentativi SNMP
+ a| 
+Numero di tentativi SNMP
+
+
+
+ a| 
+Timeout SNMP (ms)
+ a| 
+Timeout SNMP (impostazione predefinita: 5000 ms)
+
+
+
+ a| 
+Nome fabric
+ a| 
+Nome del fabric che deve essere segnalato dall'origine dati. Lasciare vuoto per riportare il nome del fabric come WWN.
+
+
+
+ a| 
+Attivare il trapping
+ a| 
+Selezionare questa opzione per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo. Se si seleziona enable trapping (attiva trap), è necessario attivare anche SNMP.
+
+
+
+ a| 
+Tempo minimo tra Ttrap (secondi)
+ a| 
+Tempo minimo tra i tentativi di acquisizione attivati da trap (impostazione predefinita: 10 secondi)
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+|===

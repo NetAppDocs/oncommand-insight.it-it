@@ -1,0 +1,14 @@
+---
+permalink: howto/your-corporate-structure-setting-up-business-entities-and-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La comprensione degli elementi della struttura aziendale consente di tenere traccia dell"utilizzo delle risorse e di generare report sui costi.' 
+---
+= Struttura aziendale: Creazione di entità aziendali e applicazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La comprensione degli elementi della struttura aziendale consente di tenere traccia dell'utilizzo delle risorse e di generare report sui costi.

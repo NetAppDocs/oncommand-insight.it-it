@@ -1,0 +1,68 @@
+---
+permalink: faq/faq-configuration-and-supported-devices.html 
+sidebar: sidebar 
+keywords:  
+summary: Questa domanda frequente risponde alle domande più frequenti sulla configurazione OnCommand Insight e sui dispositivi supportati. 
+---
+= Configurazione e dispositivi supportati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa domanda frequente risponde alle domande più frequenti sulla configurazione OnCommand Insight e sui dispositivi supportati.
+
+
+
+== OCI apporta modifiche al mio ambiente?
+
+No OCI è uno strumento di sola lettura che raccoglie informazioni sull'ambiente. OCI non apporta alcuna modifica alle risorse o alle configurazioni.
+
+
+
+== Quale accesso a livello di autorizzazione richiede OCI ai miei dispositivi?
+
+Nella maggior parte dei casi in cui il dispositivo lo supporta, è necessario un accesso di sola lettura. Alcune soluzioni non consentono l'accesso in sola lettura e richiedono pertanto le autorizzazioni elevate appropriate.
+
+
+
+== Con quale frequenza OCI raccoglie informazioni?
+
+In genere, OCI raccoglie i dati delle performance ogni 5 minuti e scopre costrutti logici e fisici ogni ½ ora OCI imposta gli intervalli di polling predefiniti in base alle Best practice e alla scalabilità suggerite, ma consente all'utente di avere il controllo completo su questi intervalli.
+
+
+
+== Qual è l'impatto di OCI sul mio ambiente?
+
+Le comunicazioni IP senza agenti, out-of-band e passive di OCI contribuiscono a ridurre al minimo l'installazione, la manutenzione e l'impatto sull'ecosistema del data center. Il team di sviluppo delle performance di OCI adotta misure eccezionali per ridurre al minimo l'impatto sulle performance del data center nelle attività di monitoraggio delle performance stesse. L'impatto è considerato trascurabile nei normali ambienti operativi e può essere rilassato o inasprito nelle piattaforme tecnologiche altamente utilizzate o con performance inferiori. Per ulteriori informazioni, consultare la Guida all'installazione di OnCommand Insight.
+
+
+
+== Come posso elencare tutti gli host/VM in OCI?
+
+I widget e le possibilità di elenco delle query di OCI possono essere utilizzati per fornire elenchi di stili di inventario per le risorse del data center. È possibile rendere disponibili elenchi di macchine virtuali fino agli spindle e numerosi costrutti per query, widget, dashboard e report di data warehouse e accedere tramite l'API RESTful.
+
+
+
+== OCI offre lo stesso tipo di supporto per gli host non hypervisor correlati (ad esempio server fisici)?
+
+Gli hypervisor come VMware forniscono informazioni dettagliate sugli host ESXI e sulle macchine virtuali associate (VM). Per i server fisici, OCI raccoglie le metriche fino all'HBA host. OCI utilizza un metodo unico in cui rileva i server fisici utilizzando una tecnologia in attesa di brevetto. Una volta rilevato lo storage e/o gli switch, i nomi host dei server fisici sono contenuti nelle informazioni alias del fabric. OCI seleziona questi nomi host, li confronta in DNS e porta automaticamente gli host in OCI. Questa tecnica riduce notevolmente la necessità di aggiornamenti manuali dell'immissione e manutenzione dell'inventario degli strumenti.
+
+
+
+== OCI fornisce la stessa profondità metrica del dispositivo (parità) in ambienti eterogenei?
+
+Esistono diversi livelli di standardizzazione, compatibilità e nomenclatura per le piattaforme di terze parti e le tecnologie dei vendor. OCI tenta di normalizzare le informazioni su capacità e performance in un framework coerente. Alcune metriche di capacità e performance sono fornite in modo nativo dai contatori del dispositivo, come gli IOPS, la latenza e la capacità raw. Quando i contatori non sono forniti, OCI può tentare di riepilogare i valori (ad esempio, totalizzando gli IOPS o le capacità dei volumi sottostanti) e, nei casi in cui non sono disponibili, OCI tenterà di derivare i valori metrici attraverso vari algoritmi di calcolo. OCI offre una funzionalità di integrazione SNMP generica per incorporare metriche aggiuntive non attualmente raccolte da OCI.
+
+
+
+== OCI supporta gli switch Fibre Channel?
+
+Sì, oltre alla raccolta dei dati dalle risorse di storage, OCI acquisisce anche i dati di inventario e performance dagli switch Cisco, Brocade e QLogic del tuo ambiente.
+
+
+
+== Sono disponibili viste topopologie dell'intera infrastruttura? OCI mostra "`visibilità end-to-end`"?
+
+Sì, OCI rileva e mappa dinamicamente i costrutti logici e fisici, fornendo una vista topologia end-to-end interattiva di calcolo, fabric, virtualizzatori e storage back-end. Le icone della topologia consentono di accedere rapidamente alle risorse interessate e di identificare i carichi di lavoro e le violazioni negli ambienti di storage condivisi.

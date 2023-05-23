@@ -1,0 +1,31 @@
+---
+permalink: install-windows/restoring-the-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per i sistemi che eseguono l"archiviazione delle performance, il processo di aggiornamento ripristina solo sette giorni di dati di archivio. Una volta completato l"aggiornamento, è possibile ripristinare i dati di archivio rimanenti.' 
+---
+= Ripristino dell'archivio delle performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per i sistemi che eseguono l'archiviazione delle performance, il processo di aggiornamento ripristina solo sette giorni di dati di archivio. Una volta completato l'aggiornamento, è possibile ripristinare i dati di archivio rimanenti.
+
+
+
+== A proposito di questa attività
+
+Per ripristinare l'archivio delle prestazioni, attenersi alla procedura descritta di seguito.
+
+
+
+== Fasi
+
+. Sulla barra degli strumenti, fare clic su *Admin* > *Troubleshooting*
+. Nella sezione Restore (Ripristino), in *Load performance archive* (carica archivio prestazioni), fare clic su *Load* (carica).
++
+Il caricamento dell'archivio viene gestito in background. Il caricamento dell'archivio completo può richiedere molto tempo poiché i dati delle performance archiviati di ogni giorno vengono inseriti in Insight. Lo stato del caricamento dell'archivio viene visualizzato nella sezione archivio di questa pagina.
+
+

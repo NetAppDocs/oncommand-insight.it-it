@@ -1,0 +1,22 @@
+---
+permalink: reporting/data-model-fact-and-dimension-tables.html 
+sidebar: sidebar 
+keywords:  
+summary: Ogni modello di dati include tabelle di fatti e dimensioni. 
+---
+= Tabelle di dimensioni e fatti del modello di dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ogni modello di dati include tabelle di fatti e dimensioni.
+
+* Tabelle dei fatti: Contengono dati misurati, ad esempio quantità, capacità raw e utilizzabile. Contiene chiavi esterne per dimensionare le tabelle.
+* Dimension tables (tabelle delle dimensioni): Contiene informazioni descrittive su fatti, ad esempio, data center e business unit. Una dimensione è una struttura, spesso composta da gerarchie, che classifica i dati. Gli attributi dimensionali aiutano a descrivere i valori dimensionali.
+
+
+Utilizzando attributi di dimensione diversi o multipli (visti come colonne nei report), si creano report che accedono ai dati per ogni dimensione descritta nel modello di dati.
+
+Per una spiegazione di tutti gli elementi dei dati utilizzati per la creazione dei report, consultare il Data Glossary (Glossario dei dati).

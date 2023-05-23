@@ -1,0 +1,35 @@
+---
+permalink: config-admin/modifying-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Puoi modificare le policy sulle performance esistenti e predefinite per modificare il modo in cui Insight monitora le condizioni di interesse nella tua rete. Ad esempio, è possibile modificare la soglia di un criterio. 
+---
+= Modifica delle policy sulle performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le policy sulle performance esistenti e predefinite per modificare il modo in cui Insight monitora le condizioni di interesse nella tua rete. Ad esempio, è possibile modificare la soglia di un criterio.
+
+
+
+== Fasi
+
+. Aprire Insight nel browser.
+. Dal menu *Gestisci*, selezionare *Criteri di performance*.
++
+Viene visualizzata la pagina Performance Policies.
+
+. Posizionare il cursore del mouse sul nome di un criterio nell'elenco dei criteri di performance di un oggetto.
+. Fare clic su image:../media/oci-edit-threshold-policy-icon.gif[""].
++
+Viene visualizzata la finestra di dialogo Edit Policy (Modifica policy).
+
+. Apportare le modifiche richieste.
++
+Se si modifica un'opzione diversa dal nome della policy, Insight elimina tutte le violazioni esistenti per tale policy.
+
+. Fare clic su *Save.* (Salva)
+

@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-data-warehouse-documentation.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile rivedere le informazioni sullo schema del database Data Warehouse. 
+---
+= Visualizzazione della documentazione relativa allo schema del database Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile rivedere le informazioni sullo schema del database Data Warehouse.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Nella barra degli strumenti Data Warehouse, fare clic su image:../media/oci-7-help-icon-gif.gif[""] E selezionare *Schema*.
+

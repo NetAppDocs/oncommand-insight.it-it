@@ -1,0 +1,155 @@
+---
+permalink: config-admin/emc-isilon-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati ISILON SSH raccoglie l"inventario e le performance dallo storage NAS scale-out EMC Isilon.' 
+---
+= Fonte dei dati EMC Isilon
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati ISILON SSH raccoglie l'inventario e le performance dallo storage NAS scale-out EMC Isilon.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati EMC Isilon. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo di storage
+
+
+
+ a| 
+File System
+ a| 
+Volume interno
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Autorizzazioni di amministratore per lo storage Isilon
+* Accesso validato tramite `telnet` alla porta 22
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Indirizzo IP
+ a| 
+L'indirizzo IP o il nome di dominio completo del cluster Isilon
+
+
+
+ a| 
+Nome utente
+ a| 
+Il nome utente del cluster Isilon
+
+
+
+ a| 
+Password
+ a| 
+La password per il cluster Isilon
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 20 minuti)
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+
+
+ a| 
+Timeout di attesa processo SSH
+ a| 
+Timeout processo SSH (impostazione predefinita: 60 secondi)
+
+
+
+ a| 
+Porta SSH
+ a| 
+Porta di servizio SSH
+
+|===
+
+
+== Esecuzione dei comandi CLI
+
+A partire da OnCommand Insight versione 7.3.11 e Service Pack 9, l'origine dati EMC Isilon contiene un miglioramento che consentirà a Insight di eseguire più comandi CLI. Se si utilizza un utente non root all'interno dell'origine dati, è probabile che sia stato configurato un file "sudoers" per consentire a tale account utente di eseguire comandi CLI specifici tramite SSH.
+
+Per consentire a Insight di comprendere la funzione "Access Zones" di EMC, Insight eseguirà ora anche i seguenti nuovi comandi CLI:
+
+* `sudo isi zone zones list --format json –verbose`
+* `sudo isi zone zones list`
+
+
+Insight analizza l'output di questi comandi ed esegue più istanze di comandi esistenti per ottenere la configurazione logica di oggetti come qtree, quote e condivisioni/esportazioni NAS che risiedono in zone di accesso non predefinite. Insight ora riporta questi oggetti per le zone di accesso non predefinite come risultato di questo miglioramento. Poiché Insight ottiene tali dati eseguendo comandi esistenti (con opzioni diverse), non è necessario modificare il file dei sostutori per il funzionamento; è solo con l'introduzione dei nuovi comandi sopra descritti che la modifica è necessaria.
+
+Aggiorna il file di supporto per consentire all'account del servizio Insight di eseguire questi comandi prima di eseguire l'aggiornamento a questa versione di Insight. In caso contrario, le origini dati Isilon si guasteranno.
+
+
+
+== Statistiche del "file system"
+
+A partire da OnCommand Insight 7.3.12, il data collector EMC Isilon introduce le statistiche del "file system" sull'oggetto nodo per EMC Isilon. Le statistiche dei nodi esistenti riportate da OnCommand Insight sono basate su "disco", ad esempio, per gli IOPS e il throughput di un nodo di storage, cosa fanno i dischi in questo nodo in aggregato? Tuttavia, per i carichi di lavoro in cui le letture sono memorizzate nella cache e/o la compressione è in uso, il carico di lavoro del file system potrebbe essere sostanzialmente superiore a quello effettivamente presente sui dischi: Un set di dati che comprime 5:1 potrebbe quindi avere un valore di "throughput di lettura del file system" 5 volte il nodo di storage throughput di lettura, poiché quest'ultimo misura le letture del disco, che si espandono di 5 volte quando il nodo decomprime i dati per servire la richiesta di lettura del client.

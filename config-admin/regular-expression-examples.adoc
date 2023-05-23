@@ -1,0 +1,337 @@
+---
+permalink: config-admin/regular-expression-examples.html 
+sidebar: sidebar 
+keywords: OnCommand Insight 
+summary: 'Se è stato selezionato l"approccio alle espressioni regolari come strategia di denominazione di origine, è possibile utilizzare gli esempi di espressioni regolari come guide per le proprie espressioni utilizzate nei metodi di risoluzione automatica di OnCommand Insight.' 
+---
+= Esempi di espressioni regolari
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se è stato selezionato l'approccio alle espressioni regolari come strategia di denominazione di origine, è possibile utilizzare gli esempi di espressioni regolari come guide per le proprie espressioni utilizzate nei metodi di risoluzione automatica di OnCommand Insight.
+
+
+
+== Formattazione delle espressioni regolari
+
+Quando si creano espressioni regolari per la risoluzione automatica OnCommand Insight, è possibile configurare il formato di output immettendo i valori in un campo denominato `FORMAT`.
+
+L'impostazione predefinita è `\1`, ovvero il nome di una zona che corrisponde all'espressione regolare viene sostituito dal contenuto della prima variabile creata dall'espressione regolare. In un'espressione regolare, i valori delle variabili vengono creati dalle istruzioni tra parentesi. Se si verificano più istruzioni tra parentesi, le variabili vengono referenziate numericamente, da sinistra a destra. Le variabili possono essere utilizzate nel formato di output in qualsiasi ordine. Il testo costante può anche essere inserito nell'output, aggiungendolo al `FORMAT` campo.
+
+Ad esempio, per questa convenzione di denominazione delle zone potrebbero essere presenti i seguenti nomi di zona:
+
+[listing]
+----
+[Zone number]_[data center]_[hostname]_[device type]_[interface number]
+----
+* S123_Miami_hostname1_filer_FC1
+* S14_Tampa_hostname2_switch_FC4
+* S3991_Boston_hostname3_windows2K_FC0
+* S44_Raleigh_hostname4_solaris_FC1
+
+
+Inoltre, è possibile che l'output sia nel seguente formato:
+
+[listing]
+----
+
+        [hostname]-[data center]-[device type]
+----
+A tale scopo, è necessario acquisire i campi nome host, data center e tipo di dispositivo nelle variabili e utilizzarli nell'output. La seguente espressione regolare consente di eseguire questa operazione:
+
+[listing]
+----
+.*?_([a-zA-Z0-9]+)_([a-zA-Z0-9]+)_([a-zA-Z0-9]+)_.*
+----
+Poiché ci sono tre gruppi di parentesi, le variabili `\1`, `\2` e. `\3` verrà popolato.
+
+È quindi possibile utilizzare il seguente formato per ricevere l'output nel formato preferito:
+
+[listing]
+----
+\2-\1-\3
+----
+L'output sarà il seguente:
+
+[listing]
+----
+hostname1-Miami-filer
+hostname2-Tampa-switch
+hostname3-Boston-windows2K
+hostname4-Raleigh-solaris
+----
+I trattini tra le variabili forniscono un esempio di testo costante inserito nell'output formattato.
+
+
+
+== Esempio 1 che mostra i nomi delle zone
+
+In questo esempio, si utilizza l'espressione regolare per estrarre un nome host dal nome della zona. È possibile creare un'espressione regolare se si dispone di un'espressione simile ai seguenti nomi di zona:
+
+* S0032_myComputer1Name-HBA0
+* S0434_myComputer1Name-HBA1
+* S0432_myComputer1Name-HBA3
+
+
+L'espressione regolare che è possibile utilizzare per acquisire il nome host è:
+
+[listing]
+----
+ S[0-9]+_([a-zA-Z0-9]*)[_-]HBA[0-9]
+----
+Il risultato è una corrispondenza di tutte le zone che iniziano con S seguite da qualsiasi combinazione di cifre , seguite da un carattere di sottolineatura, dal nome host alfanumerico (myComputer1Name), da un carattere di sottolineatura o trattino, dalle lettere maiuscole HBA e da una singola cifra (0-9). Il solo nome host è memorizzato nella variabile * 1*.
+
+L'espressione regolare può essere suddivisa nei suoi componenti:
+
+* "S" rappresenta il nome della zona e inizia l'espressione. Corrisponde solo a una "S" all'inizio del nome della zona.
+* I caratteri [0-9] tra parentesi indicano che la seguente "S" deve essere una cifra compresa tra 0 e 9, inclusi.
+* Il segno + indica che l'occorrenza delle informazioni tra parentesi precedenti deve essere 1 o più volte.
+* _ (Carattere di sottolineatura) significa che le cifre dopo S devono essere immediatamente seguite da un carattere di sottolineatura nel nome della zona. In questo esempio, la convenzione di denominazione delle zone utilizza il carattere di sottolineatura per separare il nome della zona dal nome host.
+* Dopo il carattere di sottolineatura richiesto, le parentesi indicano che il modello contenuto in verrà memorizzato nella variabile 1.
+* I caratteri tra parentesi [a-za-Z0-9] indicano che i caratteri corrispondenti sono tutte lettere (indipendentemente dal maiuscolo/minuscolo) e numeri.
+* Il simbolo * (asterisco) che segue le parentesi indica che i caratteri tra parentesi si verificano 0 o più volte.
+* I caratteri tra parentesi [_-] (sottolineatura e trattino) indicano che il modello alfanumerico deve essere seguito da un trattino basso o un trattino.
+* Le lettere HBA nell'espressione regolare indicano che questa sequenza esatta di caratteri deve essere presente nel nome della zona.
+* Il set finale di caratteri tra parentesi [0-9] corrisponde a una singola cifra compresa tra 0 e 9.
+
+
+
+
+== Esempio 2
+
+In questo esempio, saltare fino al primo carattere di sottolineatura "_", quindi abbinare e e tutto ciò che segue fino al secondo "_", quindi saltare tutto ciò che segue.
+
+*Zona:* `Z_E2FHDBS01_E1NETAPP`
+
+*Nome host:* `E2FHDBS01`
+
+*RegExp:* `.*?_(E.*?)_.*?`
+
+
+
+== Esempio 3
+
+Le parentesi "( )" intorno all'ultima sezione dell'espressione regolare (di seguito) identificano quale parte è il nome host. Se si desidera che VSAN3 sia il nome host, si tratterebbe di: [A-za-Z0-9]+_([a-za-Z0-9]+).*
+
+*Zona:* `A_VSAN3_SR48KENT_A_CX2578_SPA0`
+
+*Nome host:* `SR48KENT`
+
+*RegExp:* `[a-zA-Z0-9]+_[a-zA-Z0-9]+_([a-zA-Z0-9]+).*`
+
+
+
+== Esempio 4 che mostra un modello di denominazione più complicato
+
+È possibile creare un'espressione regolare se si dispone di un'espressione simile ai seguenti nomi di zona:
+
+* MyComputerName123-HBA1_Symm1_FA3
+* MyComputerName123-HBA2_Symm1_FA5
+* MyComputerName123-HBA3_Symm1_FA7
+
+
+L'espressione regolare che è possibile utilizzare per acquisire questi elementi è:
+
+[listing]
+----
+([a-zA-Z0-9]*)_.*
+----
+Il `\1` la variabile contiene solo `myComputerName123` dopo essere stato valutato da questa espressione.
+
+L'espressione regolare può essere suddivisa nei suoi componenti:
+
+* Le parentesi indicano che il modello contenuto in verrà memorizzato nella variabile 1.
+* I caratteri tra parentesi [a-za-Z0-9] indicano che qualsiasi lettera (indipendentemente dal caso) o cifra corrisponde.
+* Il simbolo * (asterisco) che segue le parentesi indica che i caratteri tra parentesi si verificano 0 o più volte.
+* Il carattere _ (carattere di sottolineatura) nell'espressione regolare indica che il nome della zona deve avere un carattere di sottolineatura immediatamente dopo la stringa alfanumerica associata dalle parentesi precedenti.
+* Il . (punto) corrisponde a qualsiasi carattere (carattere jolly).
+* Il simbolo * (asterisco) indica che il carattere jolly del punto precedente può verificarsi 0 o più volte.
++
+In altre parole, la combinazione .* indica qualsiasi carattere, qualsiasi numero di volte.
+
+
+
+
+
+== Esempio 5 che mostra i nomi delle zone senza schema
+
+È possibile creare un'espressione regolare se si dispone di un'espressione simile ai seguenti nomi di zona:
+
+* MyComputerName_HBA1_Symm1_FA1
+* MyComputerName123_HBA1_Symm1_FA1
+
+
+L'espressione regolare che è possibile utilizzare per acquisire questi elementi è:
+
+[listing]
+----
+(.*?)_.*
+----
+La variabile conterrà _MyComputerName_ (nel primo esempio di nome di zona) o _myComputerName123_ (nell'esempio di nome della seconda zona). Questa espressione regolare corrisponde quindi a tutto ciò che precede il primo carattere di sottolineatura.
+
+L'espressione regolare può essere suddivisa nei suoi componenti:
+
+* Le parentesi indicano che il modello contenuto in verrà memorizzato nella variabile 1.
+* Il simbolo .* (punto asterisco) corrisponde a qualsiasi carattere, qualsiasi numero di volte.
+* Il simbolo * (asterisco) che segue le parentesi indica che i caratteri tra parentesi si verificano 0 o più volte.
+* Il ? il carattere rende la partita non avida. Questo costringe l'IT a interrompere la corrispondenza al primo underscore, piuttosto che all'ultimo.
+* I caratteri _.* corrispondono al primo carattere di sottolineatura trovato e a tutti i caratteri che lo seguono.
+
+
+
+
+== Esempio 6 che mostra i nomi dei computer con un modello
+
+È possibile creare un'espressione regolare se si dispone di un'espressione simile ai seguenti nomi di zona:
+
+* Storage1_Switch1_myComputerName123A_A1_FC1
+* Storage2_Switch2_myComputerName123B_A2_FC2
+* Storage3_Switch3_myComputerName123T_A3_FC3
+
+
+L'espressione regolare che è possibile utilizzare per acquisire questi elementi è:
+
+[listing]
+----
+ .*?_.*?_([a-zA-Z0-9]*[ABT])_.*
+----
+Poiché la convenzione di denominazione delle zone ha un modello più ampio, è possibile utilizzare l'espressione di cui sopra, che corrisponde a tutte le istanze di un nome host (MyComputerName nell'esempio) che termina con A, a B o a T, inserendo tale nome host nella variabile 1.
+
+L'espressione regolare può essere suddivisa nei suoi componenti:
+
+* Il simbolo .* (punto asterisco) corrisponde a qualsiasi carattere, qualsiasi numero di volte.
+* Il ? il carattere rende la partita non avida. Questo costringe l'IT a interrompere la corrispondenza al primo underscore, piuttosto che all'ultimo.
+* Il carattere di sottolineatura corrisponde al primo carattere di sottolineatura nel nome della zona.
+* Pertanto, la prima combinazione di .*?_ corrisponde ai caratteri _storage1__ nell'esempio del nome della prima zona.
+* La seconda combinazione .*?_ si comporta come la prima, ma corrisponde a _Switch1__ nell'esempio del nome della prima zona.
+* Le parentesi indicano che il modello contenuto in verrà memorizzato nella variabile 1.
+* I caratteri tra parentesi [a-za-Z0-9] indicano che qualsiasi lettera (indipendentemente dal caso) o cifra corrisponde.
+* Il simbolo * (asterisco) che segue le parentesi indica che i caratteri tra parentesi si verificano 0 o più volte.
+* I caratteri tra parentesi nell'espressione regolare [ABT] corrispondono a un singolo carattere nel nome della zona che deve essere A, B o T.
+* Il _ (carattere di sottolineatura) che segue le parentesi indica che la corrispondenza del carattere [ABT] deve essere seguita da un carattere di sottolineatura.
+* Il simbolo .* (punto asterisco) corrisponde a qualsiasi carattere, qualsiasi numero di volte.
+
+
+Di conseguenza, la variabile 1 contiene una stringa alfanumerica che:
+
+* è stato preceduto da un numero di caratteri alfanumerici e da due caratteri di sottolineatura
+* seguito da un carattere di sottolineatura (e da un numero qualsiasi di caratteri alfanumerici)
+* Aveva un carattere finale di A, B o T, prima del terzo trattino di sottolineatura.
+
+
+
+
+== Esempio 7
+
+*Zona:* `myComputerName123_HBA1_Symm1_FA1`
+
+*Nome host:* `myComputerName123`
+
+*RegExp:* `([a-zA-Z0-9]+)_.*`
+
+
+
+== Esempio 8
+
+Questo esempio trova tutto prima del primo _.
+
+*Zona:* `MyComputerName_HBA1_Symm1_FA1`
+
+`MyComputerName123_HBA1_Symm1_FA1`
+
+*Nome host:* `MyComputerName`
+
+*RegExp:* `(.*?)_.*`
+
+
+
+== Esempio 9
+
+Questo esempio trova tutto dopo il primo _ e fino al secondo _.
+
+*Zona:* `Z_MyComputerName_StorageName`
+
+*Nome host:* `MyComputerName`
+
+*RegExp:* `.*?_(.*?)_.*?`
+
+
+
+== Esempio 10
+
+Questo esempio estrae "MyComputerName123" dagli esempi di zona.
+
+*Zona:* `Storage1_Switch1_MyComputerName123A_A1_FC1`
+
+`Storage2_Switch2_MyComputerName123B_A2_FC2`
+
+`Storage3_Switch3_MyComputerName123T_A3_FC3`
+
+*Nome host:* `MyComputerName123`
+
+*RegExp:* `.*?_.*?_([a-zA-Z0-9]+)*[ABT]_.*`
+
+
+
+== Esempio 11
+
+*Zona:* `Storage1_Switch1_MyComputerName123A_A1_FC1`
+
+*Nome host:* `MyComputerName123A`
+
+*RegExp:* `.*?_.*?_([a-zA-z0-9]+)_.*?_`
+
+
+
+== Esempio 12
+
+Il termine {caret} (circumflex o caret) *all'interno delle parentesi quadre* nega l'espressione, ad esempio [{caret}FF] indica qualsiasi elemento tranne la lettera F maiuscola o minuscola, mentre [{caret}a-z] indica tutto tranne la lettera a-z minuscola e, nel caso precedente, qualsiasi elemento ad eccezione di _. L'istruzione format aggiunge "-" al nome host di output.
+
+*Zona:* `mhs_apps44_d_A_10a0_0429`
+
+*Nome host:* `mhs-apps44-d`
+
+*RegExp:* ``+([^_]+)_([AB]).*+``Formato in OnCommand Insight:
+
+``+([^_]+)_([^_]+).*+``Formato in OnCommand Insight:
+
+
+
+== Esempio 13
+
+In questo esempio, l'alias dello storage è delimitato da "" e l'espressione deve utilizzare "" per definire che la stringa è effettivamente utilizzata e che non fanno parte dell'espressione stessa.
+
+*Alias storage:* `\Hosts\E2DOC01C1\E2DOC01N1`
+
+*Nome host:* `E2DOC01N1`
+
+*RegExp:* `\\.*?\\.*?\\(.*?)`
+
+
+
+== Esempio 14
+
+Questo esempio estrae "PD-RV-W-ad-2" dagli esempi di zona.
+
+*Zona:* `PD_D-PD-RV-W-AD-2_01`
+
+*Nome host:* `PD-RV-W-AD-2`
+
+*RegExp:* `+[^-]+-(.*-\d+).*+`
+
+
+
+== Esempio 15
+
+In questo caso, l'impostazione del formato aggiunge "US-BV-" al nome host.
+
+*Zona:* `SRV_USBVM11_F1`
+
+*Nome host:* `US-BV-M11`
+
+*RegExp:* `SRV_USBV([A-Za-z0-9]+)_F[12]`
+
+*Formato:* `US-BV-\1`

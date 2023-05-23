@@ -1,0 +1,159 @@
+---
+permalink: config-admin/creating-device-resolution-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vengono create regole di risoluzione dei dispositivi per identificare host, storage e nastri che non vengono identificati automaticamente da OnCommand Insight. Le regole create consentono di identificare i dispositivi attualmente presenti nell"ambiente e i dispositivi simili man mano che vengono aggiunti all"ambiente.' 
+---
+= Creazione di regole di risoluzione dei dispositivi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vengono create regole di risoluzione dei dispositivi per identificare host, storage e nastri che non vengono identificati automaticamente da OnCommand Insight. Le regole create consentono di identificare i dispositivi attualmente presenti nell'ambiente e i dispositivi simili man mano che vengono aggiunti all'ambiente.
+
+
+
+== A proposito di questa attività
+
+Quando si creano regole, si inizia identificando l'origine delle informazioni su cui viene eseguita la regola, il metodo utilizzato per estrarre informazioni e se la ricerca DNS viene applicata ai risultati della regola.
+
+|===
+
+
+ a| 
+Origine utilizzata per identificare il dispositivo
+
+
+
+ a| 
+* Alias SRM per gli host
+* Alias dello storage contenente un nome host o nastro incorporato
+* Alias dello switch contenente un nome host o nastro incorporato
+* Nomi di zone contenenti un nome host incorporato
+
+
+
+
+ a| 
+Metodo utilizzato per estrarre il nome del dispositivo dall'origine
+
+
+
+ a| 
+* Così com'è (estrarre un nome da un SRM)
+* Delimitatori
+* Espressioni regolari
+
+
+
+
+ a| 
+Ricerca DNS
+
+
+
+ a| 
+Specifica se si utilizza il DNS per verificare il nome host.
+
+|===
+Le regole vengono create nella scheda regole di risoluzione automatica. I passaggi seguenti descrivono il processo di creazione delle regole.
+
+
+
+== Fasi
+
+. Fare clic su *Gestisci* > *risoluzione del dispositivo*
+. Nella scheda *regole di risoluzione automatica*, fare clic su *+Aggiungi*
++
+Viene visualizzata la schermata New Rule (Nuova regola).
+
++
+[NOTE]
+====
+La schermata New Rule (Nuova regola) include un'icona *?*, che fornisce aiuto ed esempi per la creazione di espressioni regolari.
+
+====
+. Nell'elenco *Type* (tipo), selezionare il dispositivo che si desidera identificare.
++
+È possibile selezionare host o Tape.
+
+. Nell'elenco *Source* (origine), selezionare l'origine che si desidera utilizzare per identificare l'host.
++
+In base all'origine scelta, Insight visualizza la seguente risposta:
+
++
+** Zones (zone) elenca le zone e il WWN che devono essere identificati da Insight.
+** SRM elenca gli alias non identificati che devono essere identificati da Insight
+** L'alias dello storage elenca gli alias dello storage e il WWN che devono essere identificati da Insight
+** L'alias dello switch elenca gli alias dello switch che devono essere identificati da Insight
+
+
+. Nell'elenco *Method* (metodo), selezionare il metodo da utilizzare per identificare l'host.
++
+|===
+
+
+| Origine | Metodo 
+
+
+ a| 
+SRM
+ a| 
+"`As is`", "`Delimiters`", "`Regular Expressions`"
+
+
+
+ a| 
+Alias storage
+ a| 
+"`delimiters`" o "`Regular Expressions`"
+
+
+
+ a| 
+Cambiare alias
+ a| 
+"`delimiters`" o "`Regular Expressions`"
+
+
+
+ a| 
+Zone
+ a| 
+"`delimiters`" o "`Regular Expressions`"
+
+|===
++
+** Le regole che utilizzano "`Delimiters`" richiedono i delimitatori e la lunghezza minima del nome host.
++
+La lunghezza minima del nome host è il numero di caratteri che Insight deve utilizzare per identificare un host. Insight esegue ricerche DNS solo per nomi host lunghi o più lunghi.
+
++
+Per le regole che utilizzano i delimitatori, la stringa di input viene token dal delimitatore e viene creato un elenco di nomi host candidati creando diverse combinazioni del token adiacente. L'elenco viene quindi ordinato, dal più grande al più piccolo. Ad esempio, per vipsnq03_hba3_emc3_12ep0 l'elenco risulterà nel seguente:
+
++
+*** vipsnq03_hba3_emc3_12ep0
+*** vipsnq03_hba3_emc3
+*** hba3 emc3_12ep0
+*** vipsnq03_hba3
+*** emc3_12ep0
+*** hba3_emc3
+*** vipsnq03
+*** 12p0
+*** emc3
+*** hba3
+
+
+** Le regole che utilizzano "`Regular Expression`" richiedono un'espressione regolare, il formato e la selezione della distinzione tra maiuscole e minuscole.
+
+
+. Fare clic su image:../media/runar.gif[""] Per eseguire tutte le regole, oppure fare clic sulla freccia rivolta verso il basso nel pulsante per eseguire la regola creata (e qualsiasi altra regola creata dall'ultima esecuzione completa di AR).
+
+
+
+
+== Risultati
+
+I risultati dell'esecuzione della regola vengono visualizzati nella scheda FC Identify (identificazione FC).

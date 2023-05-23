@@ -1,0 +1,38 @@
+---
+permalink: howto/file-system-utilization-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: Il chargeback per i file system viene sempre eseguito dal punto di vista dello storage. Gli array di storage associati alle macchine virtuali annotati per un particolare gruppo di risorse di calcolo verranno inclusi nei report di chargeback per quel gruppo di risorse. 
+---
+= Chargeback e reporting del file system
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il chargeback per i file system viene sempre eseguito dal punto di vista dello storage. Gli array di storage associati alle macchine virtuali annotati per un particolare gruppo di risorse di calcolo verranno inclusi nei report di chargeback per quel gruppo di risorse.
+
+
+
+== Prima di iniziare
+
+Tutte le macchine virtuali che si desidera includere nel chargeback di utilizzo del file system devono essere annotate con il nome appropriato del gruppo di risorse di calcolo. Gli array di storage associati a tali macchine virtuali devono essere annotati con le annotazioni Tier appropriate. L'ETL al data warehouse deve essere avvenuto dopo che queste annotazioni sono state inserite.
+
+
+
+== Fasi
+
+. Aprire un browser nel server di reporting, in genere `https://<host or IP>:9300/p2pd``http://<host or IP\>:9300/bi (7.3.3 or later)` ed effettuare l'accesso.
+. Scegliere il pacchetto *file System Utilization* e creare un nuovo report.
++
+image::../media/fs-util-pkg.gif[pkg]
+
+. Trascinare gli elementi dal data mart per creare il report.
++
+L'esempio seguente è un report molto semplice. È possibile creare report complessi basati sulle esigenze specifiche del business.
+
++
+image::../media/fs-simple-rpt.gif[rpt. semplice fs]
+
+

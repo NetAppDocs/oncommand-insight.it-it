@@ -1,0 +1,46 @@
+---
+permalink: config-admin/editing-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile modificare la priorità di un"applicazione, l"entità aziendale associata a un"applicazione o lo stato della condivisione del volume.' 
+---
+= Applicazioni di editing
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare la priorità di un'applicazione, l'entità aziendale associata a un'applicazione o lo stato della condivisione del volume.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Fare clic su *Manage* (Gestisci) e selezionare *Applications* (applicazioni).
+. Posizionare il cursore sull'applicazione che si desidera modificare e fare clic su image:../media/edit-recipient-icon.gif[""].
++
+Viene visualizzata la finestra di dialogo Edit Application (Modifica applicazione).
+
+. Effettuare una delle seguenti operazioni:
++
+** Fare clic su *priorità* e selezionare una priorità diversa.
++
+[NOTE]
+====
+Non è possibile modificare il nome dell'applicazione.
+
+====
+** Fare clic su *entità aziendale* e selezionare un'entità aziendale diversa a cui associare l'applicazione o selezionare *Nessuno* per rimuovere l'associazione dell'applicazione all'entità aziendale.
+** Fare clic per deselezionare o selezionare *Validate volume sharing* (convalida condivisione volume).
++
+[NOTE]
+====
+Questa opzione è disponibile solo se si dispone della licenza di assicurazione.
+
+====
+
+
+. Fare clic su *Save* (Salva).
+

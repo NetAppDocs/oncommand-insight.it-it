@@ -1,0 +1,55 @@
+---
+permalink: install-windows/restoring-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando si esegue il backup del database Data Warehouse, Data Warehouse crea un file .zip che può essere utilizzato in seguito per ripristinare lo stesso database. 
+---
+= Ripristino del database Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si esegue il backup del database Data Warehouse, Data Warehouse crea un `.zip` file che è possibile utilizzare in seguito per ripristinare lo stesso database.
+
+
+
+== A proposito di questa attività
+
+Quando si ripristina il database Data Warehouse, è possibile ripristinare anche le informazioni dell'account utente dal backup. Le tabelle di gestione degli utenti vengono utilizzate dal motore di report Data Warehouse in un'installazione solo Data Warehouse.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://fqdn/dwh+`.
+. Dal riquadro di navigazione a sinistra, fare clic su *Backup/Restore*.
+. Nella sezione *Restore Database and Reports* (Ripristina database e report), fare clic su *Browse* (Sfoglia) e individuare `.zip` File che contiene il backup del Data Warehouse.
+. È consigliabile lasciare entrambe le seguenti opzioni selezionate:
++
+** *Ripristinare il database*
++
+Include le impostazioni del Data Warehouse, i data mart, le connessioni e le informazioni sull'account utente.
+
+** *Ripristina report*
++
+Include report personalizzati, report predefiniti, modifiche apportate ai report predefiniti e impostazioni di reporting effettuate in Reporting Connection.
+
+
+
+. Fare clic su *Restore* (Ripristina).
++
+Non allontanarsi dallo stato di ripristino. In questo caso, lo stato di ripristino non viene più visualizzato e non viene visualizzata alcuna indicazione al termine dell'operazione di ripristino.
+
+. Per controllare il processo di aggiornamento, consultare `dwh_upgrade.log` file, che si trova nella seguente posizione: `<install directory>\SANscreen\wildfly\standalone\log`.
++
+Al termine del processo di ripristino, viene visualizzato un messaggio sotto il pulsante *Restore* (Ripristina). Se il processo di ripristino ha esito positivo, viene visualizzato il messaggio Success (riuscito). Se il processo di ripristino non riesce, il messaggio indica l'eccezione specifica che ha causato l'errore. In questo caso, contattare il supporto tecnico e fornirgli `dwh_upgrade.log` file. Se si verifica un'eccezione e l'operazione di ripristino non riesce, il database originale viene ripristinato automaticamente.
+
++
+[NOTE]
+====
+Se l'operazione di ripristino non riesce e viene visualizzato il messaggio "`Failed upding cognos content store`" (aggiornamento archivio contenuti cognos non riuscito), ripristinare il database Data Warehouse senza i relativi report (solo database) e utilizzare i backup dei report XML per importare i report.
+
+====
+

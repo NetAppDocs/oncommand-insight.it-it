@@ -1,0 +1,48 @@
+---
+permalink: config-admin/assigning-business-entities-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile assegnare un"entità aziendale a una risorsa (host, porta, storage, switch, macchina virtuale, qtree, share, volume o volume interno) senza aver associato l"entità aziendale a un"applicazione; tuttavia, le entità aziendali vengono assegnate automaticamente a un asset se tale risorsa è associata a un"applicazione correlata a un"entità aziendale.' 
+---
+= Assegnazione di entità aziendali alle risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile assegnare un'entità aziendale a una risorsa (host, porta, storage, switch, macchina virtuale, qtree, share, volume o volume interno) senza aver associato l'entità aziendale a un'applicazione; tuttavia, le entità aziendali vengono assegnate automaticamente a un asset se tale risorsa è associata a un'applicazione correlata a un'entità aziendale.
+
+
+
+== Prima di iniziare
+
+È necessario aver già creato un'entità aziendale.
+
+
+
+== A proposito di questa attività
+
+Sebbene sia possibile assegnare le entità aziendali direttamente alle risorse, si consiglia di assegnare le applicazioni alle risorse e quindi assegnare le entità aziendali alle risorse.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Individuare la risorsa a cui si desidera applicare l'entità aziendale effettuando una delle seguenti operazioni:
++
+** Fare clic sulla risorsa nella dashboard delle risorse.
+** Fare clic su image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] Nella barra degli strumenti per visualizzare la casella *Cerca risorse*, digitare il nome della risorsa, quindi selezionarla dall'elenco.
+
+
+. Nella sezione *dati utente* della pagina delle risorse, posizionare il cursore su *Nessuno* accanto a *entità aziendali* e fare clic su image:../media/pencil-icon-landing-page-be.gif[""].
++
+Viene visualizzato l'elenco delle entità di business disponibili.
+
+. Digitare la casella *Search* per filtrare l'elenco per un'entità specifica o scorrere l'elenco verso il basso; selezionare un'entità aziendale dall'elenco.
++
+Se l'entità aziendale scelta è associata a un'applicazione, viene visualizzato il nome dell'applicazione. In questo caso, la parola "`derived`" viene visualizzata accanto al nome dell'entità aziendale. Se si desidera mantenere l'entità solo per la risorsa e non per l'applicazione associata, è possibile eseguire manualmente l'override dell'assegnazione dell'applicazione.
+
+. Per eseguire l'override di un'applicazione derivata da un'entità aziendale, posizionare il cursore sul nome dell'applicazione e fare clic su image:../media/trash-can-query.gif[""], selezionare un'altra entità aziendale e selezionare un'altra applicazione dall'elenco.
+

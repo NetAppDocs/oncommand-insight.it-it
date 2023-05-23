@@ -1,0 +1,16 @@
+---
+permalink: howto/introduction-to-minimizing-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Negli odierni data center IT ibridi, gli amministratori sono costretti a estendere l"utilizzo delle risorse oltre i limiti fisici, utilizzando tecnologie per l"efficienza della capacità, come il thin provisioning, per controllare l"allocazione e sfruttare le capacità un tempo non disponibili.' 
+---
+= Introduzione alla riduzione dei rischi nel thin provisioning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Negli odierni data center IT ibridi, gli amministratori sono costretti a estendere l'utilizzo delle risorse oltre i limiti fisici, utilizzando tecnologie per l'efficienza della capacità, come il thin provisioning, per controllare l'allocazione e sfruttare le capacità un tempo non disponibili.
+
+OnCommand Insight fornisce informazioni sull'utilizzo e sull'utilizzo della capacità quasi in tempo reale in diversi layer con thin provisioning all'interno dello stack di servizi IT. La mancata gestione corretta del rischio di oversubscription potrebbe causare un downtime inopportuno per l'azienda.

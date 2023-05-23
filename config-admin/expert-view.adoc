@@ -1,0 +1,42 @@
+---
+permalink: config-admin/expert-view.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La sezione Expert View di una pagina di risorse consente di visualizzare un esempio di performance per la risorsa di base in base a un numero qualsiasi di metriche applicabili nel contesto con un periodo di tempo scelto (3 ore, 24 ore, 3 giorni, 7 giorni, o un periodo di tempo personalizzato) nel grafico delle performance e nelle risorse ad esso correlate.' 
+---
+= Vista degli esperti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione Expert View di una pagina di risorse consente di visualizzare un esempio di performance per la risorsa di base in base a un numero qualsiasi di metriche applicabili nel contesto con un periodo di tempo scelto (3 ore, 24 ore, 3 giorni, 7 giorni, o un periodo di tempo personalizzato) nel grafico delle performance e nelle risorse ad esso correlate.
+
+Di seguito viene riportato un esempio della sezione visualizzazione avanzata in una pagina di risorse per volumi:
+
+image::../media/expert-view-section.gif[sezione expert view]
+
+È possibile selezionare le metriche che si desidera visualizzare nel grafico delle performance per il periodo di tempo selezionato.
+
+La sezione risorse mostra il nome della risorsa di base e il colore che rappresenta la risorsa di base nel grafico delle performance. Se la sezione Top Correlated non contiene una risorsa che si desidera visualizzare nel grafico delle performance, è possibile utilizzare la casella *Search Assets* (Cerca risorse) nella sezione Additional Resources (risorse aggiuntive) per individuare la risorsa e aggiungerla al grafico delle performance. Quando si aggiungono risorse, queste vengono visualizzate nella sezione risorse aggiuntive.
+
+Nella sezione risorse, se applicabile, sono inoltre riportate le risorse correlate alla risorsa di base nelle seguenti categorie:
+
+* Correlato in alto
++
+Mostra le risorse con un'elevata correlazione (percentuale) con una o più metriche delle performance rispetto alla risorsa di base.
+
+* Principali collaboratori
++
+Mostra le risorse che contribuiscono (percentuale) alla risorsa di base.
+
+* Avido
++
+Mostra le risorse che allontanano le risorse di sistema dalla risorsa attraverso la condivisione delle stesse risorse, come host, reti e storage.
+
+* Degradato
++
+Mostra le risorse che sono esaurite dalle risorse di sistema a causa di questa risorsa.
+
+

@@ -1,0 +1,24 @@
+---
+permalink: howto/displaying-widget-legends.html 
+sidebar: sidebar 
+keywords:  
+summary: I widget nelle dashboard possono essere visualizzati con o senza legende. 
+---
+= Visualizzazione delle legende dei widget
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I widget nelle dashboard possono essere visualizzati con o senza legende.
+
+Le legende nei widget possono essere attivate o disattivate su una dashboard in due modi:
+
+. Quando si crea o si modifica il widget, selezionare la casella di controllo Legends (legende) e salvare il widget.
+. Con la dashboard in modalità Edit (Modifica), fare clic sul pulsante Options (Opzioni) sul widget e selezionare la casella di controllo Legends (legende) nel menu.
+
+
+Durante la modifica e la modifica dei dati visualizzati nel widget, la legenda del widget viene aggiornata dinamicamente.
+
+Quando vengono visualizzate le legende, se è possibile accedere alla pagina di destinazione della risorsa indicata dalla legenda, la legenda viene visualizzata come collegamento alla pagina della risorsa.

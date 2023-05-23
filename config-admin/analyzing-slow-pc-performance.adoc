@@ -1,0 +1,45 @@
+---
+permalink: config-admin/analyzing-slow-pc-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Se si ricevono chiamate da utenti di rete che lamentano un funzionamento lento dei computer, è necessario analizzare le prestazioni degli host e identificare le risorse interessate. 
+---
+= Analisi delle performance lente del PC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si ricevono chiamate da utenti di rete che lamentano un funzionamento lento dei computer, è necessario analizzare le prestazioni degli host e identificare le risorse interessate.
+
+
+
+== Prima di iniziare
+
+In questo esempio, il chiamante ha fornito il nome host.
+
+
+
+== Fasi
+
+. Aprire Insight nel browser.
+. Inserire il nome host nella casella *Cerca risorse* e fare clic sul nome host nei risultati della ricerca.
++
+Viene visualizzata la _pagina risorse_ della risorsa.
+
+. Nella pagina delle risorse dell'host, esaminare i grafici delle prestazioni al centro della pagina. È possibile visualizzare diversi tipi di dati oltre alla latenza e agli IOPS generalmente preselezionati. Fare clic sulle caselle di controllo per altri tipi di dati, ad esempio throughput, memoria, CPU o throughput IP, a seconda del tipo di dispositivo.
+. Per visualizzare una descrizione di un punto su un grafico, posizionare il puntatore del mouse sul punto.
+. È inoltre possibile modificare l'intervallo di tempo con la selezione nella parte superiore della pagina in modo che sia compreso tra 3 ore e 7 giorni o tutti i dati disponibili.
+. Esaminare l'elenco delle risorse correlate *principali* per verificare se sono presenti altre risorse con lo stesso modello di attività della risorsa di base.
++
+La prima risorsa nell'elenco è sempre la risorsa di base.
+
++
+.. Fare clic su una percentuale collegata accanto a una risorsa correlata per vedere se il modello di attività correlato è per IOPS o CPU per la risorsa di base e un'altra risorsa.
+.. Fare clic sulla casella di controllo relativa a una risorsa correlata per aggiungere i dati ai grafici delle performance.
+.. Fare clic sul nome collegato della risorsa correlata per visualizzarne la pagina delle risorse.
+
+
+. Per una macchina virtuale, come in questo esempio, individuare il pool di storage nella sezione *Top Correlated Resources* (risorse correlate principali) e fare clic sul nome del pool di storage.
+

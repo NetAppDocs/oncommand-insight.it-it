@@ -1,0 +1,37 @@
+---
+permalink: howto/servicenow-integration-scheduling-daily-sync.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare il Task Scheduler di Windows per sincronizzare automaticamente il connettore ServiceNow. 
+---
+= Pianificazione della sincronizzazione giornaliera
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare il Task Scheduler di Windows per sincronizzare automaticamente il connettore ServiceNow.
+
+
+
+== A proposito di questa attività
+
+La sincronizzazione automatica garantisce che i dati Insight vengano regolarmente spostati in ServiceNow. È possibile utilizzare qualsiasi metodo per la pianificazione. La seguente procedura utilizza Task Scheduler di Windows per eseguire la sincronizzazione automatica.
+
+
+
+== Fasi
+
+. Nella schermata di Windows, fare clic su *Start* e digitare *Esegui* > *Task Scheduler*.
+. Fare clic su *Crea attività di base...*
+. Immettere un nome significativo, ad esempio "`OCI2SNOW Connector Sync`". Inserire una descrizione dell'attività. Fare clic su *Avanti*.
+. Selezionare per eseguire l'attività *Daily*. Fare clic su *Avanti*.
+. Scegliere un'ora del giorno in cui eseguire l'attività. Fare clic su *Avanti*.
+. Per azione, selezionare *Avvia un programma*. Fare clic su *Avanti*.
+. Nel campo *Program/script*, immettere `C:\OCI2SNOW\oci_snow_sync_pyz`. Nel campo *argomenti*, immettere `sync`. Nel campo *Start in*, immettere `C:\OCI2SNOW`. Fare clic su *NEXT* (Avanti).
+. Esaminare i dettagli del riepilogo e fare clic su *fine*.
++
+La sincronizzazione è ora pianificata per essere eseguita quotidianamente.
+
+

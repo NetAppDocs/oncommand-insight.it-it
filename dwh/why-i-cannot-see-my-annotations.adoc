@@ -1,0 +1,16 @@
+---
+permalink: dwh/why-i-cannot-see-my-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Se non è possibile visualizzare le annotazioni in Data Warehouse, potrebbe essere necessario forzare un aggiornamento delle annotazioni e avviare una creazione di Data Warehouse. 
+---
+= Perché non riesco a vedere le mie annotazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se non è possibile visualizzare le annotazioni in Data Warehouse, potrebbe essere necessario forzare un aggiornamento delle annotazioni e avviare una creazione di Data Warehouse.
+
+Le annotazioni mancanti influiscono sul modo in cui i dati vengono importati in Data Warehouse e visualizzati nei report. Ad esempio, se l'annotazione "`Tier`" non è disponibile, non sarà possibile raggruppare i sistemi storage per Tier nei report Data Warehouse.

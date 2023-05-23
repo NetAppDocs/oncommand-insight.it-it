@@ -1,0 +1,38 @@
+---
+permalink: reporting/importing-existing-reports-to-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile aprire una specifica del report precedentemente copiata negli Appunti. 
+---
+= Apertura di report (xml) dagli Appunti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aprire una specifica del report precedentemente copiata negli Appunti.
+
+
+
+== A proposito di questa attività
+
+Per accedere all'interfaccia utente di Reporting, creare un nuovo report o aprire un report esistente
+
+
+
+== Fasi
+
+. Aprire il portale di reporting di Cognos 11: https://server-name:9300/bi/[]
+. Nella barra degli strumenti, fare clic su image:../media/new-report.gif[""]
+. Fare clic su *Report*
+. Fare clic sull'icona *pagine*image:../media/pages-icon.gif[""]
++
+Icona *Report* image:../media/report-icon.gif[""] viene visualizzato
+
+. Fare clic con il pulsante sinistro del mouse sull'icona *Report*
++
+Vengono visualizzate le opzioni del report.
+
+. Fare clic su *Apri report dagli Appunti*.
+

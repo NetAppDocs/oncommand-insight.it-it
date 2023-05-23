@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-xtremeio-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per configurare l"origine dati EMC XtremIO (HTTP), è necessario disporre dell"indirizzo host di XtremIO Management Server (XMS) e di un account con privilegi di amministratore.' 
+---
+= Fonte dei dati EMC XtremIO
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per configurare l'origine dati EMC XtremIO (HTTP), è necessario disporre dell'indirizzo host XtremIO Management Server (XMS) e di un account con privilegi di amministratore.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati EMC XtremIO. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco (SSD)
+ a| 
+Disco
+
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Controller
+ a| 
+Nodo di storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+Mappa LUN
+ a| 
+Mappa del volume
+
+
+
+ a| 
+Iniziatore, destinazione
+ a| 
+Maschera di volume
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Un indirizzo IP di ogni XtremIO Management Server
+* Un account con privilegi di amministratore
+* Accesso alla porta 443 (HTTPS)
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Host XMS
+ a| 
+Indirizzo IP o nome di dominio completo di XtremIO Management Server
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente di XtremIO Management Server
+
+
+
+ a| 
+Password
+ a| 
+Password per XtremIO Management Server
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Porta TCP
+ a| 
+Porta TCP utilizzata per la connessione a XTremIO Management Server (impostazione predefinita: 443 )
+
+
+
+ a| 
+Intervallo di polling dell'inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 60 minuti)
+
+
+
+ a| 
+Timeout connessione (sec)
+ a| 
+Timeout di connessione (impostazione predefinita: 60 secondi)
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+|===

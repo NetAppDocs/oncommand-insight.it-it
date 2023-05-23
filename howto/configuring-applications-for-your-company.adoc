@@ -1,0 +1,118 @@
+---
+permalink: howto/configuring-applications-for-your-company.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La comprensione delle applicazioni utilizzate nell"ambiente aziendale consente di tenere traccia dell"utilizzo delle risorse e di generare report sui costi. Qui configureremo le applicazioni della tua azienda e le assoceremo alle risorse appropriate.' 
+---
+= Configurazione delle applicazioni per la tua azienda
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La comprensione delle applicazioni utilizzate nell'ambiente aziendale consente di tenere traccia dell'utilizzo delle risorse e di generare report sui costi. Qui configureremo le applicazioni della tua azienda e le assoceremo alle risorse appropriate.
+
+
+
+== A proposito di questa attività
+
+Nella sezione _Configurazione delle entità di business per la tua azienda_, abbiamo creato alcune entità di business e ti consigliamo di elencare tutte le applicazioni associate a ciascuna entità di business. OnCommand Insight ci consente di tenere traccia dei dati associati a tali applicazioni per attività come l'utilizzo o il reporting dei costi.
+
+Prima di tenere traccia dei dati associati alle applicazioni in esecuzione nel proprio ambiente, è necessario definire tali applicazioni e associarle alle risorse appropriate. È possibile associare le applicazioni alle seguenti risorse: Host, macchine virtuali, volumi, volumi interni, qtree, condivisioni e hypervisor.
+
+In questa procedura dettagliata, desideriamo tenere traccia dell'utilizzo delle macchine virtuali utilizzato dal team di marketing per la posta elettronica Exchange. Ricorderai la seguente tabella creata durante la definizione delle nostre entità di business. Aggiungiamo una colonna a questo foglio di lavoro che elenca le applicazioni utilizzate da ciascuna entità aziendale. (Questa tabella è solo un esempio di foglio di lavoro. Non verrà visualizzata la colonna "`Applications`" nella tabella delle entità di business in Insight).
+
+|===
+
+
+| Tenant | Linea di business | Unità aziendale | Progetto | Applicazioni 
+
+
+ a| 
+NetApp
+ a| 
+Storage dei dati
+ a| 
+Legale
+ a| 
+Brevetti
+ a| 
+Oracle Identity Manager, Oracle on Demand, PatentWiz
+
+
+
+ a| 
+NetApp
+ a| 
+Storage dei dati
+ a| 
+Marketing
+ a| 
+Eventi commerciali
+ a| 
+Exchange, Oracle Shared Database, BlastOff Event Planner
+
+
+
+ a| 
+N/A.
+ a| 
+N/A.
+ a| 
+Sicurezza
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+...
+ a| 
+ a| 
+ a| 
+ a| 
+
+|===
+*Creazione di applicazioni in Insight:*
+
+
+
+== Fasi
+
+. Accedere a Insight come utente con autorizzazioni amministrative.
+. Selezionare *Gestisci* > *applicazioni*
+. Fare clic sul pulsante *+Aggiungi*
+. Immettere il nome dell'applicazione (ad esempio, immettere "`Exchange`")
+. Selezionare una priorità per l'applicazione
+. Se si desidera associare l'applicazione a un'entità aziendale, selezionarne una dall'elenco a discesa *entità aziendale*. In caso contrario, puoi lasciare l'opzione "`None`".
+. Se si desidera garantire che ciascun host abbia accesso agli stessi volumi in un cluster, assicurarsi che la casella *convalida condivisione volume* sia selezionata. Ad esempio, gli host dei cluster ad alta disponibilità spesso devono essere mascherati sugli stessi volumi per consentire il failover; tuttavia, gli host delle applicazioni non correlate non hanno solitamente la necessità di accedere agli stessi volumi fisici. Inoltre, le policy normative potrebbero richiedere l'esplicitamente di impedire alle applicazioni non correlate di accedere agli stessi volumi fisici per motivi di sicurezza. Se non si utilizza la condivisione del volume, deselezionare la casella *Validate volume sharing* (convalida condivisione volume). Ciò richiede la licenza di assicurazione.
+. Fare clic su Salva.
+. Ripetere l'operazione per tutte le altre applicazioni dell'ambiente.
+
+
+
+
+== Al termine
+
+Vediamo che il team di marketing utilizza l'applicazione Exchange. Vogliamo vedere l'utilizzo delle macchine virtuali per Exchange, per prevedere quando sarà necessario aggiungere ulteriore storage. Associiamo l'applicazione Exchange a tutte le macchine virtuali del marketing. Il modo più semplice per farlo è tramite una query.
+
+Seguendo questa procedura, è possibile associare ciascuna applicazione alle risorse appropriate.
+
+*Associazione delle applicazioni alle risorse:*
+
+Ora che hai creato le tue applicazioni (e le hai legate alle entità aziendali, come desiderato), possiamo associare tali applicazioni alle risorse del tuo ambiente. In questo esempio, l'applicazione Exchange verrà associata a diverse macchine virtuali della tua azienda. Il modo più semplice per eseguire questa operazione è la query.
+
+. Selezionare *Query* > *+Nuova query*.
+. Nell'elenco a discesa *Select Resource Type* (Seleziona tipo di risorsa), scegliere _Virtual Machine_
+. Supponiamo che il team di marketing nomina le proprie risorse con la stringa "`_mktg_`". Nella casella del filtro Nome, immettere "`_mktg_ `" (senza virgolette) e fare clic sul pulsante Applica (segno di spunta).
+. Viene visualizzato l'elenco di tutte le macchine virtuali con la stringa "`_mktg_ `".
+. Se lo si desidera, fare clic sull'elenco a discesa *More* (Altro) e aggiungere altri filtri.
+. Selezionare le macchine virtuali utilizzate per Exchange facendo clic sulla casella di controllo accanto al nome di ciascuna macchina virtuale desiderata oppure selezionare tutte le macchine virtuali facendo clic sulla casella di controllo nella parte superiore della colonna.
+. Una volta selezionate le macchine virtuali desiderate, fare clic sul pulsante *azioni* e scegliere *Aggiungi applicazione*.
+. Nella finestra di dialogo Assegna applicazione, fare clic sull'elenco a discesa *applicazione* e selezionare "`Exchange`".
+. Fare clic su *Save* (Salva).
+. Ripetere l'operazione secondo necessità per associare l'applicazione Exchange ad altre risorse (host, volumi, ecc.)
+

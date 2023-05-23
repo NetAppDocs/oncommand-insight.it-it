@@ -1,0 +1,24 @@
+---
+permalink: config-admin/your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile definire entità di business per tenere traccia e generare report sui dati dell"ambiente a un livello più granulare.' 
+---
+= Gerarchia delle entità di business
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile definire entità di business per tenere traccia e generare report sui dati dell'ambiente a un livello più granulare.
+
+In OnCommand Insight, la gerarchia delle entità di business contiene i seguenti livelli:
+
+* *Il tenant* viene utilizzato principalmente dai service provider per associare le risorse a un cliente, ad esempio NetApp.
+* *Line of Business (LOB)* è una linea di business o di prodotto all'interno di un'azienda, ad esempio lo storage dei dati.
+* *Business Unit* rappresenta una business unit tradizionale, ad esempio legale o marketing.
+* *Project* viene spesso utilizzato per identificare un progetto specifico all'interno di una business unit per cui si desidera un chargeback della capacità. Ad esempio, "brevetti" potrebbe essere un nome di progetto per l'unità aziendale legale e "Eventi commerciali" potrebbe essere un nome di progetto per l'unità aziendale di marketing. I nomi dei livelli possono includere spazi.
+
+
+Non è necessario utilizzare tutti i livelli nella progettazione della gerarchia aziendale.

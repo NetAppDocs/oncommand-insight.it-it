@@ -1,0 +1,228 @@
+---
+permalink: install-windows/upgrading-insight-to-version-7-3-12-or-later-windows.html 
+sidebar: sidebar 
+keywords: upgrade,previous version,wizard,backup,conversion 
+summary: 'Prima di eseguire l"aggiornamento da OnCommand Insight 7.3.10 - 7.3.11 alla versione 7.3.12 o successiva, è necessario eseguire lo strumento di migrazione dei dati OCI.' 
+---
+= Aggiornamento di Insight alla versione 7.3.12 o successiva - Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di eseguire l'aggiornamento da OnCommand Insight 7.3.10 - 7.3.11 alla versione 7.3.12 o successiva, è necessario eseguire lo strumento di migrazione dei dati OCI.
+
+
+
+== Sfondo
+
+OnCommand Insight versione 7.3.12 e successive utilizzano software sottostante che potrebbero essere incompatibili con le versioni precedenti. Le versioni 7.3.12 e successive di Insight includono un *Data Migration Tool* per l'aggiornamento.
+
+[NOTE]
+====
+Le versioni di OnCommand Insight 7.3.9 e precedenti non sono più supportate. Se si utilizza una di queste versioni, _è necessario_ eseguire l'aggiornamento a Insight versione 7.3.10 o successiva (si consiglia vivamente la versione 7.3.11) prima di eseguire l'aggiornamento alla versione 7.3.12 o successiva.
+
+====
+
+
+== Quali sono le funzioni di Data Migration Tool?
+
+Lo strumento di migrazione esegue un controllo iniziale della compatibilità e segue uno dei tre diversi percorsi di aggiornamento. Il percorso selezionato si basa sulla compatibilità dei dati della versione corrente.
+
+[NOTE]
+====
+Prima di eseguire l'aggiornamento, è necessario eseguire Data Migration Tool e seguire i passaggi consigliati.
+
+====
+
+
+== Prima di iniziare
+
+* Si consiglia vivamente di eseguire il backup del sistema OnCommand Insight prima di eseguire lo strumento di migrazione dei dati.
+* Il servizio Elasticsearch sul server deve essere attivo e funzionante.
+* Prima di aggiornare Insight, è necessario eseguire Data Migration Tool per il database e gli archivi delle performance.
+
+
+
+
+== Esecuzione dello strumento di migrazione dei dati
+
+. Scaricare la versione più recente del Data Migration Tool (ad esempio, _SANScreenDataMigrationTool-x86-7.3.12-97.zip_) sul server Insight e il file di installazione Insight appropriato. Decomprimere in una cartella di lavoro. I download sono disponibili sul https://mysupport.netapp.com/site/products/all/details/oncommand-insight/downloads-tab["Sito di supporto NetApp"].
+. Aprire una finestra di comando e accedere alla cartella di lavoro.
++
+** Aprire PowerShell come amministratore.
+
+
+. Eseguire lo strumento di migrazione dei dati utilizzando il seguente comando:
++
+** _`.` SANScreenDataMigrationTool.ps1_
+
+
+. Seguire le istruzioni, se necessario. Di seguito viene riportato un esempio.
+
+
+[listing]
+----
+.\SANScreenDataMigrationTool.ps1
+
+NetApp SANScreen Data Migration Tool 7.3.12-121
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.10 (139) is installed
+
+Getting installation parameters...
+Installation Directory:  C:\Program Files\SANscreen\
+Elasticsearch Rest Port: 9200
+
+Checking Elasticsearch service...
+Elasticsearch service is up
+
+Checking for obsolete (version 5) indexes...
+Found 54 obsolete indexes. Of these,
+    54 indexes may be migrated with OCI server running,
+       the most recent of which is for 2021-05-13
+
+Verifying migration component is present...
+SANscreen Server service is Running
+
+Proceed with online migration of 54 indexes (y or [n])?:
+----
+Il Data Migration Tool verificherà la presenza di indici obsoleti nel sistema e ne riferirà l'eventuale presenza. Se non sono presenti, lo strumento si chiude.
+
+Alcuni indici possono essere migrati mentre il servizio del server SANscreen è in esecuzione. È possibile eseguire la migrazione di altri utenti solo quando il server viene arrestato. Se non sono presenti indici che possono essere migrati, lo strumento viene chiuso. In caso contrario, seguire le istruzioni come richiesto.
+
+Una volta completato il Data Migration Tool, si verificherà nuovamente la presenza di indici obsoleti. Se tutti gli indici sono stati migrati, lo strumento informa che l'aggiornamento a OnCommand Insight 7.3.12 è supportato. Ora puoi procedere con l'aggiornamento di Insight.
+
+[listing]
+----
+.\SANScreenDataMigrationTool.ps1
+
+NetApp SANScreen Data Migration Tool 7.3.12-127
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.10 (139) is installed
+
+Getting installation parameters...
+Installation Directory:  D:\SANscreen\
+Elasticsearch Rest Port: 9200
+
+Checking Elasticsearch service...
+Elasticsearch service is up
+
+Checking for obsolete (version 5) indexes...
+Found 5 obsolete indexes. Of these,
+     5 indexes need to be migrated with OCI server stopped
+
+Verifying migration component is present...
+SANscreen Server service is Stopped
+
+Proceed with offline migration of 5 indexes (y or [n])?: y
+Preparing to perform migration...
+Preparing to migrate ociint-inventory-snmp_win2012_host: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate ociint-inventory-snmp_win2012_interface: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate ociint-inventory-snmp_win2012_load_average: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate ociint-inventory-snmp_win2012_storage: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate ociint-inventory-snmp_win2012_tcp_connection: copied; backup; delete old; restore new; cleanup; done.
+Execution time 0:00:15
+
+Checking for obsolete (version 5) indexes...
+No obsolete indexes found.  Upgrade to 7.3.12+ is supported.
+
+C:\Users\root\Desktop\SANScreenDataMigrationTool-x64-7.3.12-127>
+----
+Se viene richiesto di interrompere il servizio SANscreen, riavviarlo prima di eseguire l'aggiornamento.
+
+
+
+== Errori di convalida
+
+Nel caso in cui la convalida dell'indice non riesca, lo strumento di migrazione informa l'utente del problema prima di uscire.
+
+*OnCommand Insight non presente:*
+
+[listing]
+----
+.\SANScreenDataMigrationTool.ps1
+
+NetApp SANScreen Data Migration Tool V1.0
+
+Checking OnCommand Insight Installation...
+ERROR: OnCommand Insight is not installed
+----
+*Versione Insight non valida:*
+
+[listing]
+----
+.\SANScreenDataMigrationTool.ps1
+
+NetApp SANScreen Data Migration Tool 7.3.12-105
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.4 (126) is installed
+ERROR: The OCI Data Migration Tool is intended to be run against OCI 7.3.5 - 7.3.11
+----
+*Il servizio Elasticsearch non è in esecuzione:*
+
+[listing]
+----
+.\SANScreenDataMigrationTool.ps1
+
+NetApp SANScreen Data Migration Tool 7.3.12-105
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.11 (126) is installed
+
+Getting installation parameters...
+Installation Directory:  C:\Program Files\SANscreen\
+Elasticsearch Rest Port: 9200
+
+Checking Elasticsearch service...
+ERROR: The Elasticsearch service is not running
+
+Please start the service and wait for initialization to complete
+Then rerun OCI Data Migration Tool
+----
+
+
+== Opzioni della riga di comando
+
+Il Data Migration Tool include alcuni parametri opzionali che ne influenzano il funzionamento.
+
+|===
+
+
+| Opzione (Windows) | Funzione 
+
+
+ a| 
+-s
+ a| 
+Elimina tutti i prompt
+
+
+
+ a| 
+-perf_archive
+ a| 
+Se specificato, le voci di archivio esistenti per qualsiasi data di cui vengono migrati gli indici verranno sostituite. Il percorso deve puntare alla directory contenente i file zip della voce di archiviazione.
+
+È possibile specificare un argomento "-" per indicare che non è necessario aggiornare l'archivio delle performance.
+
+Se questo argomento è presente, il prompt per la posizione di archiviazione verrà eliminato.
+
+
+
+ a| 
+-check
+ a| 
+Se presente, lo script viene chiuso immediatamente dopo aver segnalato i conteggi degli indici.
+
+
+
+ a| 
+-dryrun
+ a| 
+Se presente, l'eseguibile di migrazione riporta le azioni che verranno intraprese (per migrare i dati e aggiornare le voci di archivio) ma non eseguirà le operazioni.
+
+|===

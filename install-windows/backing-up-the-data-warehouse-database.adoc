@@ -1,0 +1,262 @@
+---
+permalink: install-windows/backing-up-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile eseguire il backup del database Data Warehouse, che include anche un backup di Cognos, su un file e ripristinarlo successivamente utilizzando il portale Data Warehouse. Un backup di questo tipo consente di migrare a un server Data Warehouse diverso o di eseguire l"aggiornamento a una nuova versione di Data Warehouse.' 
+---
+= Backup del database Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire il backup del database Data Warehouse, che include anche un backup di Cognos, su un file e ripristinarlo successivamente utilizzando il portale Data Warehouse. Un backup di questo tipo consente di migrare a un server Data Warehouse diverso o di eseguire l'aggiornamento a una nuova versione di Data Warehouse.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://fqdn/dwh+`.
+. Dal riquadro di navigazione a sinistra, selezionare *Backup/Ripristino*.
+. Fare clic su *Backup* e selezionare la configurazione di backup:
++
+.. Tutti i Datamart tranne Performance Datamart
+.. Tutti i Datamart
+
+
++
+Questa operazione può richiedere 30 minuti o più.
+
++
++ Data Warehouse crea un file di backup e ne visualizza il nome.
+
+. Fare clic con il pulsante destro del mouse sul file di backup e salvarlo nella posizione desiderata.
++
+Potrebbe non essere necessario modificare il nome del file; tuttavia, è necessario memorizzare il file al di fuori del percorso di installazione di Data Warehouse.
+
++
+Il file di backup di Data Warehouse include MySQL dell'istanza DWH; schemi personalizzati (MySQL DBS) e tabelle; configurazione LDAP; origini dati che collegano Cognos al database MySQL (non le origini dati che collegano il server Insight ai dispositivi per acquisire dati); importazione ed esportazione di task che importavano o esportavano report; creazione di report su ruoli, gruppi e spazi dei nomi di sicurezza; account utente; Qualsiasi report modificato del portale di reporting e qualsiasi report personalizzato, indipendentemente dalla posizione in cui sono memorizzati, anche nella directory cartelle personali. Non viene eseguito il backup dei parametri di configurazione del sistema di Cognos, ad esempio le impostazioni del server SMTP e della memoria personalizzata di Cognos.
+
++
+Gli schemi predefiniti in cui viene eseguito il backup delle tabelle personalizzate includono quanto segue:
+
++
+|===
+
+
+ a| 
+dwh_capacity
+
+
+
+ a| 
+dwh_capacity_staging
+
+
+
+ a| 
+dimensioni_dwh
+
+
+
+ a| 
+dwh_fs_util
+
+
+
+ a| 
+dwh_inventory
+
+
+
+ a| 
+dwh_inventory_staging
+
+
+
+ a| 
+dwh_inventory_transitori
+
+
+
+ a| 
+gestione_dwh
+
+
+
+ a| 
+dwh_performance
+
+
+
+ a| 
+dwh_performance_staging
+
+
+
+ a| 
+porte_dwh
+
+
+
+ a| 
+report_dwh
+
+
+
+ a| 
+dwh_sa_staging
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+Gli schemi in cui le tabelle personalizzate sono escluse dal backup includono quanto segue:
+
++
+|===
+
+
+ a| 
+schema_informazioni
+
+
+
+ a| 
+acquisizione
+
+
+
+ a| 
+cloud_model
+
+
+
+ a| 
+host_data
+
+
+
+ a| 
+innodb
+
+
+
+ a| 
+inventario
+
+
+
+ a| 
+inventory_private
+
+
+
+ a| 
+tempo_inventario
+
+
+
+ a| 
+registri
+
+
+
+ a| 
+gestione
+
+
+
+ a| 
+mysql
+
+
+
+ a| 
+nas
+
+
+
+ a| 
+performance
+
+
+
+ a| 
+schema_performance
+
+
+
+ a| 
+performance_views
+
+
+
+ a| 
+SANscreen
+
+
+
+ a| 
+scrub
+
+
+
+ a| 
+serviceassurance
+
+
+
+ a| 
+test
+
+
+
+ a| 
+tmp
+
+
+
+ a| 
+banco di lavoro
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+In qualsiasi backup avviato manualmente, un `.zip` viene creato un file contenente i seguenti file:
+
++
+** Un backup giornaliero `.zip` File, che contiene le definizioni dei report di Cognos
+** Un backup dei report `.zip` File, che contiene tutti i report in Cognos, inclusi quelli nella directory cartelle personali
+** Un file di backup del database Data Warehouse oltre ai backup manuali, che è possibile eseguire in qualsiasi momento, Cognos crea un backup giornaliero (generato automaticamente ogni giorno in un file chiamato `DailyBackup.zip`) che include le definizioni del report. Il backup giornaliero include le cartelle principali e i pacchetti forniti con il prodotto. La directory cartelle personali e le directory create al di fuori delle cartelle principali del prodotto non sono incluse nel backup di Cognos.
+
+
++
+[NOTE]
+====
+A causa del modo in cui Insight nomina i file in `.zip` file, alcuni programmi di decompressione mostrano che il file è vuoto all'apertura. Fino a quando `.zip` il file ha una dimensione maggiore di 0 e non termina con a. `.bad` interno, il `.zip` il file è valido. È possibile aprire il file con un altro programma di decompressione come 7-zip o WinZip®.
+
+====
+

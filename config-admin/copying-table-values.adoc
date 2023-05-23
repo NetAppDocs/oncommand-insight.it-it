@@ -1,0 +1,31 @@
+---
+permalink: config-admin/copying-table-values.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile copiare i valori nelle tabelle per utilizzarli nelle caselle di ricerca o in altre applicazioni. 
+---
+= Copia dei valori della tabella
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile copiare i valori nelle tabelle per utilizzarli nelle caselle di ricerca o in altre applicazioni.
+
+
+
+== A proposito di questa attività
+
+Esistono due metodi per copiare i valori dalle tabelle o dai risultati delle query.
+
+
+
+== Fasi
+
+. Metodo 1: Evidenziare il testo desiderato con il mouse, copiarlo e incollarlo nei campi di ricerca o in altre applicazioni.
+. Metodo 2: Per i campi a valore singolo la cui lunghezza supera la larghezza della colonna della tabella, indicata da ellissi (...), posizionare il puntatore del mouse sul campo e fare clic sull'icona degli Appunti. Il valore viene copiato negli Appunti per essere utilizzato nei campi di ricerca o in altre applicazioni.
++
+Si noti che è possibile copiare solo i valori che sono collegamenti alle risorse. Si noti inoltre che solo i campi che includono valori singoli (ad esempio, non elenchi) hanno l'icona di copia.
+
+

@@ -1,0 +1,89 @@
+---
+permalink: config-admin/importing-and-exporting-user-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Le funzioni di importazione ed esportazione consentono di esportare annotazioni, regole di annotazione, query, policy di performance e dashboard personalizzati in un unico file. Questo file può quindi essere importato in server OnCommand Insight diversi. 
+---
+= Importazione ed esportazione dei dati utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le funzioni di importazione ed esportazione consentono di esportare annotazioni, regole di annotazione, query, policy di performance e dashboard personalizzati in un unico file. Questo file può quindi essere importato in server OnCommand Insight diversi.
+
+Le funzioni di esportazione e importazione sono supportate solo tra server che eseguono la stessa versione di OnCommand Insight.
+
+Per esportare o importare i dati utente, fare clic su *Admin* e selezionare *Setup*, quindi selezionare la scheda *Import/Export user data* (Importa/Esporta dati utente).
+
+Durante l'operazione di importazione, i dati vengono aggiunti, Uniti o sostituiti, a seconda degli oggetti e dei tipi di oggetti importati.
+
+* Tipi di annotazione
++
+** Aggiunge un'annotazione se nel sistema di destinazione non esiste alcuna annotazione con lo stesso nome.
+** Unisce un'annotazione se il tipo di annotazione è un elenco e un'annotazione con lo stesso nome esiste nel sistema di destinazione.
+** Sostituisce un'annotazione se il tipo di annotazione è diverso da un elenco ed esiste un'annotazione con lo stesso nome nel sistema di destinazione.
+
+
++
+[NOTE]
+====
+Se nel sistema di destinazione esiste un'annotazione con lo stesso nome ma con un tipo diverso, l'importazione non riesce. Se gli oggetti dipendono dall'annotazione non riuscita, potrebbero mostrare informazioni non corrette o indesiderate. Al termine dell'operazione di importazione, è necessario controllare tutte le dipendenze delle annotazioni.
+
+====
+* Regole di annotazione
++
+** Aggiunge una regola di annotazione se nel sistema di destinazione non esiste alcuna regola di annotazione con lo stesso nome.
+** Sostituisce una regola di annotazione se esiste una regola di annotazione con lo stesso nome nel sistema di destinazione.
+
+
++
+[NOTE]
+====
+Le regole di annotazione dipendono da query e annotazioni. Al termine dell'operazione di importazione, è necessario verificare la precisione di tutte le regole di annotazione.
+
+====
+* Policy
++
+** Aggiunge un criterio se nel sistema di destinazione non esiste alcun criterio con lo stesso nome.
+** Sostituisce un criterio se esiste un criterio con lo stesso nome nel sistema di destinazione.
+
+
++
+[NOTE]
+====
+Una volta completata l'operazione di importazione, i criteri potrebbero non essere in ordine. È necessario controllare l'ordine dei criteri dopo l'importazione. Se le annotazioni non sono corrette, le policy che dipendono dalle annotazioni potrebbero non riuscire. È necessario controllare tutte le dipendenze delle annotazioni dopo l'importazione.
+
++
+
+====
+* Query
++
+** Aggiunge una query se nel sistema di destinazione non esiste alcuna query con lo stesso nome.
+** Sostituisce una query se esiste una query con lo stesso nome nel sistema di destinazione, anche se il tipo di risorsa della query è diverso.
+
+
++
+[NOTE]
+====
+Se il tipo di risorsa di una query è diverso, dopo l'importazione, i widget della dashboard che utilizzano tale query potrebbero visualizzare risultati indesiderati o non corretti. Dopo l'importazione, è necessario controllare la precisione di tutti i widget basati su query. Se le annotazioni non sono corrette, le query che dipendono dalle annotazioni potrebbero non riuscire. È necessario controllare tutte le dipendenze delle annotazioni dopo l'importazione.
+
++
+
+====
+* Dashboard
++
+** Aggiunge una dashboard se nel sistema di destinazione non esiste una dashboard con lo stesso nome.
+** Sostituisce una dashboard se nel sistema di destinazione esiste una dashboard con lo stesso nome, anche se il tipo di risorsa della query è diverso.
+
+
++
+[NOTE]
+====
+Dopo l'importazione, è necessario controllare la precisione di tutti i widget basati su query nei dashboard. Se il server di origine ha più dashboard con lo stesso nome, vengono tutti esportati. Tuttavia, solo il primo verrà importato nel server di destinazione. Per evitare errori durante l'importazione, assicurarsi che i dashboard abbiano nomi univoci prima di esportarli.
+
++
+
+====
+

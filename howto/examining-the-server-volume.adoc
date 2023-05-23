@@ -1,0 +1,18 @@
+---
+permalink: howto/examining-the-server-volume.html 
+sidebar: sidebar 
+keywords:  
+summary: La landing page del volume mostra lo stesso picco IOPS familiare riscontrato nelle risorse correlate. 
+---
+= Esame del volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La landing page del volume mostra lo stesso picco IOPS familiare riscontrato nelle risorse correlate.
+
+image::../media/server-vol-lp.gif[vol. server lp]
+
+Nella sezione delle risorse viene identificata la VM per l'applicazione Travel Booking. Fare clic sul collegamento VM per visualizzare la landing page delle macchine virtuali.

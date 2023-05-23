@@ -1,0 +1,65 @@
+---
+permalink: config-admin/exporting-query-results-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile esportare i risultati di una query in un file .CSV per importare i dati in un"altra applicazione.' 
+---
+= Esportazione dei risultati della query in un file .CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile esportare i risultati di una query in un file .CSV per importare i dati in un'altra applicazione.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Fare clic su *Query* e selezionare *Mostra tutte le query*.
++
+Viene visualizzata la pagina Query.
+
+. Fare clic su una query.
+. Fare clic su image:../media/export-to-csv.gif[""] per esportare i risultati della query in un``.CSV`` file.
+. Effettuare una delle seguenti operazioni:
++
+** Fare clic su *Apri con*, quindi su *OK* per aprire il file con Microsoft Excel e salvarlo in una posizione specifica.
+** Fare clic su *Save file* (Salva file), quindi su *OK* per salvare il file nella cartella Downloads (Download). Verranno esportati solo gli attributi delle colonne visualizzate. Alcune colonne visualizzate, in particolare quelle che fanno parte di relazioni nidificate complesse, non vengono esportate.
+
+
++
+[NOTE]
+====
+Quando viene visualizzata una virgola nel nome di una risorsa, l'esportazione racchiude il nome tra virgolette, conservando il nome della risorsa e il formato .csv appropriato.
+
+====
++
++ quando si esportano i risultati delle query, tenere presente che *tutte le* righe della tabella dei risultati verranno esportate, non solo quelle selezionate o visualizzate sullo schermo, fino a un massimo di 10,000 righe.
+
++
++
+
++
+[NOTE]
+====
+Quando si apre un file .CSV esportato con Excel, se si dispone di un nome oggetto o di un altro campo nel formato NN:NN (due cifre seguite da due punti e altre due cifre), Excel a volte interpreta tale nome come formato orario, anziché come formato testo. Ciò può causare la visualizzazione di valori errati in tali colonne in Excel. Ad esempio, un oggetto denominato "81:45" viene visualizzato in Excel come "81:45:00". Per risolvere questo problema, importare il file .CSV in Excel seguendo la procedura riportata di seguito:
+
++
+
+....
+-   Open a new sheet in Excel.
+-   On the "Data" tab, choose "From Text".
+-   Locate the desired .CSV file and click "Import".
+-   In the Import wizard, choose "Delimited" and click Next.
+-   Choose "Comma" for the delimiter and click Next.
+-   Select the desired columns and choose "Text" for the column data format.
+-   Click Finish.
+Your objects should show in Excel in the proper format.
+....
++
+
+====
+

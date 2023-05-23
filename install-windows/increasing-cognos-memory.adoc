@@ -1,0 +1,41 @@
+---
+permalink: install-windows/increasing-cognos-memory.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Prima di ripristinare il database Data Warehouse, è necessario aumentare l"allocazione Java per Cognos da 768 MB a 2048 MB per ridurre il tempo di generazione dei report.' 
+---
+= Aumento della memoria Cognos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di ripristinare il database Data Warehouse, è necessario aumentare l'allocazione Java per Cognos da 768 MB a 2048 MB per ridurre il tempo di generazione dei report.
+
+
+
+== Fasi
+
+. Aprire una finestra del prompt dei comandi come amministratore sul server Data Warehouse.
+. Passare a. `disk drive:\install directory\SANscreen\cognos\c10_64\bin64` directory.
+. Digitare il seguente comando: `cogconfigw`
++
+Viene visualizzata la finestra IBM Cognos Configuration (Configurazione IBM Cognos).
+
++
+[NOTE]
+====
+L'applicazione di scelta rapida IBM Cognos Configuration punta a. `disk drive:\Program Files\SANscreen\cognos\c10_64\bin64\cognosconfigw.bat`. Se Insight è installato nella directory Program Files (spazio tra), che è l'impostazione predefinita, invece di ProgramFiles (senza spazio), il `.bat` il file non funziona. In questo caso, fare clic con il pulsante destro del mouse sul collegamento dell'applicazione e modificare `cognosconfigw.bat` a. `cognosconfig.exe` per correggere il collegamento.
+
+====
+. Dal riquadro di navigazione a sinistra, espandere *ambiente*, espandere *servizi IBM Cognos*, quindi fare clic su *IBM Cognos*.
+. Selezionare *memoria massima per Tomcat in MB* e modificare da 768 MB a 2048 MB.
+. Nella barra degli strumenti di configurazione di IBM Cognos, fare clic su image:../media/cognos-save-icon.gif[""](Salva).
++
+Viene visualizzato un messaggio informativo per informare dell'esecuzione delle attività di Cognos.
+
+. Fare clic su *Chiudi*.
+. Nella barra degli strumenti di configurazione di IBM Cognos, fare clic su image:../media/cognos-stop-icon.gif[""](Stop).
+. Nella barra degli strumenti di configurazione di IBM Cognos, fare clic su image:../media/cognos-start-icon.gif[""](Inizio).
+

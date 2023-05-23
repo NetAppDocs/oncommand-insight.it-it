@@ -1,0 +1,129 @@
+---
+permalink: reporting/which-report-answers-your-question.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight include report predefiniti che rispondono a una serie di requisiti di reporting comuni, fornendo informazioni critiche di cui gli stakeholder hanno bisogno per prendere decisioni informate sulla propria infrastruttura di storage. 
+---
+= Utilizzo di report predefiniti per rispondere a domande comuni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight include report predefiniti che rispondono a una serie di requisiti di reporting comuni, fornendo informazioni critiche di cui gli stakeholder hanno bisogno per prendere decisioni informate sulla propria infrastruttura di storage.
+
+I seguenti report predefiniti sono disponibili in *contenuto del team* > *Report* o *contenuto del team* > *Report specifici del fornitore*.
+
+Le versioni più recenti dei report potrebbero essere disponibili presso il NetApp Storage Automation Store. È necessario controllare regolarmente l'Automation Store per i report.
+
+* *AWS Cloud Cost Data*
++
+Il report sui costi del cloud offre una vista consolidata di tutte le risorse, in modo da poter monitorare, analizzare e ottimizzare l'utilizzo e i costi dei servizi basati sul cloud e on-premise in base alla scalabilità dinamica nel tuo ambiente.
+
++
+Il report offre una correlazione infrastruttura-costo, fornendo report chiari e pratici per garantire il giusto dimensionamento attraverso una pianificazione della capacità mirata e il rilevamento degli sprechi.
+
+* *Capacità e performance del livello di servizio dell'applicazione*
++
+Il report Application Service Level Capacity and Performance fornisce una panoramica di alto livello delle applicazioni. È possibile utilizzare queste informazioni per la pianificazione della capacità o per un piano di migrazione.
+
+* *Chargeback*
++
+Il report Chargeback fornisce informazioni di chargeback della capacità di storage e di responsabilità per host, applicazioni ed entità aziendali e include dati attuali e storici.
+
++
+Per evitare il doppio conteggio, non includere server ESX, monitorare solo le macchine virtuali.
+
++
+Una versione aggiornata di questo report è disponibile presso il NetApp Storage Automation Store.
+
+* *Origini dati*
++
+Il report origini dati mostra tutte le origini dati installate nel sito, lo stato dell'origine dati (operazione riuscita/non riuscita) e i messaggi di stato. Il report fornisce informazioni su dove iniziare la risoluzione dei problemi delle origini dati. Le origini dati non riuscite influiscono sull'accuratezza dei report Insight e sull'usabilità generale del prodotto.
+
+* *Prestazioni ESX vs VM*
++
+Il report sulle performance di ESX e VM offre un confronto tra server e macchine virtuali ESX, mostrando IOPS medi e di picco, throughput, latenza e utilizzo per server e macchine virtuali ESX. Per evitare il doppio conteggio, escludere i server ESX; includere solo le macchine virtuali.
+
++
+Una versione aggiornata di questo report è disponibile presso il NetApp Storage Automation Store.
+
+* *Riepilogo fabric*
++
+Il report Fabric Summary identifica le informazioni relative a switch e switch, inclusi il numero di porte, le versioni del firmware e lo stato della licenza. Il report non include le porte dello switch NPV.
+
+* *HBA host*
++
+Il report HBA host fornisce una panoramica degli host nell'ambiente e fornisce il vendor, il modello e la versione firmware degli HBA e il livello firmware degli switch a cui sono collegati. Questo report può essere utilizzato per analizzare la compatibilità del firmware quando si pianifica un aggiornamento del firmware per uno switch o un HBA.
+
+* *Capacità e performance del livello di servizio host*
++
+Il report host Service Level Capacity and Performance fornisce una panoramica dell'utilizzo dello storage per host per applicazioni a blocchi.
+
+* *Riepilogo host*
++
+Il report host Summary (Riepilogo host) fornisce una panoramica dell'utilizzo dello storage da parte di ciascun host selezionato con informazioni sugli host Fibre Channel e iSCSI. Il report consente di confrontare porte e percorsi, capacità Fibre Channel e ISCSI e conteggi delle violazioni.
+
+* *Dettagli licenza*
++
+Il report License Details (Dettagli licenza) mostra la quantità autorizzata di risorse per le quali si dispone della licenza in tutti i siti con licenze attive. Il report mostra anche una somma della quantità effettiva in tutti i siti con licenze attive. La somma può includere sovrapposizioni di array di storage gestiti da più server.
+
+* *Volumi mappati ma non mascherati*
++
+Il report Mapped but Not Masked Volumes (volumi mappati ma non mascherati) elenca i volumi il cui numero di unità logica (LUN) è stato mappato per l'utilizzo da parte di un determinato host, ma non è mascherato da tale host. In alcuni casi questi LUN potrebbero essere dismessi e non mascherati. Qualsiasi host può accedere ai volumi senza maschera, rendendoli vulnerabili alla corruzione dei dati.
+
+* *Capacità e performance NetApp*
++
+Il report NetApp Capacity and Performance fornisce dati globali per la capacità allocata, utilizzata e impegnata con dati di trend e performance per la capacità NetApp.
+
+* *Scheda di valutazione OCI*
++
+Il report Scorecard OCI fornisce un riepilogo e lo stato generale di tutte le risorse rilevate da OnCommand Insight. Lo stato è indicato da indicatori verdi, gialli e rossi:
+
++
+** Verde indica la condizione normale
+** Il giallo indica un potenziale problema nell'ambiente
+** Il rosso indica un problema che richiede attenzione. Tutti i campi del report sono descritti nel Dizionario dati fornito con il report.
+
+
+* *Riepilogo dello storage*
++
+Il report Storage Summary fornisce un riepilogo globale dei dati di capacità utilizzati e inutilizzati per i pool di storage raw, allocati e volumi. Questo report fornisce una panoramica di tutto lo storage rilevato.
+
++
+Una versione più recente di questo report è disponibile presso il NetApp Storage Automation Store.
+
+* *Capacità e performance delle macchine virtuali*
++
+Descrive l'ambiente della macchina virtuale (VM) e il relativo utilizzo della capacità. Gli strumenti delle macchine virtuali devono essere abilitati per visualizzare alcuni dati, ad esempio quando le macchine virtuali sono state spenti.
+
+* *Percorsi delle macchine virtuali*
++
+Il report sui percorsi delle macchine virtuali fornisce dati sulla capacità dell'archivio dati e metriche delle performance per le quali la macchina virtuale è in esecuzione su quale host, gli host che accedono a quali volumi condivisi, il percorso di accesso attivo e ciò che comprende l'allocazione e l'utilizzo della capacità.
+
+* *Capacità HDS di Thin Pool*
++
+Il report HDS Capacity by Thin Pool mostra la quantità di capacità utilizzabile in un pool di storage con thin provisioning.
+
+* *Capacità NetApp per aggregato*
++
+Il report NetApp Capacity by aggregate mostra lo spazio totale, totale, utilizzato, disponibile e impegnato degli aggregati.
+
+* *Symmetrix Capacity by Thick Array*
++
+Il report Symmetrix Capacity by Thick Array mostra capacità raw, capacità utilizzabile, capacità libera, mappata, mascherata, e capacità libera totale.
+
+* *Symmetrix Capacity by Thin Pool*
++
+Il report Symmetrix Capacity by Thin Pool mostra capacità raw, capacità utilizzabile, capacità utilizzata, capacità libera, percentuale utilizzata, capacità sottoscritta e tasso di abbonamento.
+
+* *XIV capacità per array*
++
+Il report XIV Capacity by Array (capacità XIV per array) mostra la capacità utilizzata e inutilizzata per l'array.
+
+* *XIV capacità per pool*
++
+Il report XIV Capacity by Pool mostra la capacità utilizzata e inutilizzata per i pool di storage.
+
+

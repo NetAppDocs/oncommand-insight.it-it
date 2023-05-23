@@ -1,0 +1,33 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse del pool di storage NetApp e-Series. 
+---
+= Pool di storage e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse del pool di storage NetApp e-Series.
+
+
+
+== Terminologia del pool di storage e-Series
+
+I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle landing page delle risorse del pool di storage NetApp e-Series. Molti di questi termini si applicano anche ad altri data collezionisti.
+
+* Storage -- su quale array di storage vive questo pool. Obbligatorio.
+* Type -- un valore descrittivo da un elenco di un elenco enumerato di possibilità. La maggior parte dei casi sarà "`Thin Provisioning`" o "`RAID Group`".
+* Nodo -- se l'architettura di questo array di storage è tale che i pool appartengano a un nodo di storage specifico, il suo nome verrà visualizzato qui come un collegamento ipertestuale alla propria landing page.
+* Utilizza il valore di Flash Pool -- Sì/No.
+* Ridondanza -- livello RAID o schema di protezione. E-Series riporta "`RAID 7`" per i pool DDP.
+* Capacità -- i valori qui sono la capacità logica utilizzata, la capacità utilizzabile e la capacità logica totale, e la percentuale utilizzata per questi. Entrambi questi valori includono la capacità "`preservation`" di e-Series, che consente di ottenere numeri e percentuali superiori a quelli visualizzati dall'interfaccia utente di e-Series.
+* Capacità con overcommit -- se utilizzando le tecnologie di efficienza è stata allocata una somma totale di capacità di volume superiore alla capacità logica del pool di storage, il valore percentuale qui sarà maggiore dello 0%.
+* Snapshot -- le capacità di snapshot utilizzate e totali, se l'architettura del pool di storage dedica parte della sua capacità a segmentare le aree esclusivamente per le snapshot.
+* Utilizzo - valore percentuale che indica la percentuale massima di occupato su disco di qualsiasi disco che contribuisce alla capacità di questo pool di storage. L'utilizzo dei dischi non ha necessariamente una forte correlazione con le performance degli array: L'utilizzo potrebbe essere elevato a causa di ricostruzioni dei dischi, attività di deduplica, ecc. in assenza di carichi di lavoro basati su host. Inoltre, le implementazioni di replica di molti array` possono guidare l'utilizzo del disco senza essere visualizzate come workload di volume.
+* IOPS - la somma degli IOPS di tutti i dischi che contribuiscono alla capacità di questo pool di storage.
+* Throughput - la somma del throughput di tutti i dischi che contribuiscono alla capacità di questo pool di storage.
+

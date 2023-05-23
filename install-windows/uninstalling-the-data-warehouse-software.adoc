@@ -1,0 +1,41 @@
+---
+permalink: install-windows/uninstalling-the-data-warehouse-software.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Prima di eseguire l"aggiornamento, è necessario disinstallare il software Data Warehouse.' 
+---
+= Disinstallazione del software Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di eseguire l'aggiornamento, è necessario disinstallare il software Data Warehouse.
+
+
+
+== Prima di iniziare
+
+Se sono state apportate modifiche ai report che si desidera conservare, è fondamentale creare un backup prima di disinstallare Data Warehouse. La disinstallazione di Data Warehouse elimina in modo permanente tutti i dati precedentemente raccolti e rimuove tutti i report, inclusi quelli appena creati o modificati.
+
+
+
+== Fasi
+
+. Accedere al server Data Warehouse.
+. Assicurarsi che tutte le finestre Insight sul server siano chiuse.
+. Per eseguire la disinstallazione utilizzando il pannello di controllo:
++
+.. Aprire *Disinstalla un programma* dal pannello di controllo e selezionare l'applicazione OnCommand Insight da rimuovere. Fare clic su *Disinstalla* e seguire le istruzioni.
+.. Selezionare l'applicazione IBM DB2 da rimuovere. Fare clic su *Disinstalla* e seguire le istruzioni.
+.. Eliminare la cartella di installazione DB2 (ad esempio _C: File di programma IBM DB2_) per rimuovere completamente il database DB2.
+
+
+. Per eseguire la disinstallazione utilizzando lo script fornito:
++
+.. Accedere alla cartella _<download location>_dwh_uninstall_ ed eseguire lo script _uninstall_oci_dwh.bat_.
+
+
+. Riavviare il server.
+

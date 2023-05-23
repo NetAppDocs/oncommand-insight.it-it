@@ -1,0 +1,156 @@
+---
+permalink: config-admin/pure-storage-flasharray-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati pure Storage FlashArray (HTTP) viene utilizzata per raccogliere informazioni da pure Storage Flash Array. Insight supporta sia l"inventario che la raccolta delle performance.' 
+---
+= Origine dati pure Storage FlashArray
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati pure Storage FlashArray (HTTP) viene utilizzata per raccogliere informazioni da pure Storage Flash Array. Insight supporta sia l'inventario che la raccolta delle performance.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati pure Storage FlashArray. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco (SSD)
+ a| 
+Disco
+
+
+
+ a| 
+Array
+ a| 
+Storage
+
+
+
+ a| 
+Controller
+ a| 
+Nodo di storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+Porta
+ a| 
+Porta
+
+
+
+ a| 
+LUN Map (host, gruppo host, porta di destinazione)
+ a| 
+Mappa del volume, maschera del volume
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Indirizzo IP del sistema di storage
+* Nome utente e password dell'account Administrator del sistema di storage pure.
+* Requisito porta: HTTP/HTTPS 80/443
+
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Host FlashArray
+ a| 
+Indirizzo IIP o nome di dominio completo di FlashArray Management Server
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente di FlashArray Management Server
+
+
+
+ a| 
+Password
+ a| 
+Password per FlashArray Management Server
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Tipo di connessione
+ a| 
+Server di gestione
+
+
+
+ a| 
+Porta TCP
+ a| 
+Porta TCP utilizzata per la connessione al server FlashArray (impostazione predefinita: 443 )
+
+
+
+ a| 
+Timeout connessione (sec)
+ a| 
+Timeout di connessione (impostazione predefinita: 60 secondi)
+
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 60 minuti)
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi di perfromance (impostazione predefinita: 300 secondi)
+
+|===

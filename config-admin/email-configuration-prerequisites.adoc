@@ -1,0 +1,20 @@
+---
+permalink: config-admin/email-configuration-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Prima di poter configurare OnCommand Insight per l"accesso al sistema di posta elettronica, è necessario individuare il nome host o l"indirizzo IP per identificare il server di posta (SMTP o Exchange) e assegnare un account di posta elettronica per i report OnCommand Insight.' 
+---
+= Prerequisiti per la configurazione della posta elettronica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di poter configurare OnCommand Insight per l'accesso al sistema di posta elettronica, è necessario individuare il nome host o l'indirizzo IP per identificare il server di posta (SMTP o Exchange) e assegnare un account di posta elettronica per i report OnCommand Insight.
+
+Chiedere all'amministratore dell'e-mail di creare un account e-mail per OnCommand Insight. Sono necessarie le seguenti informazioni:
+
+* Il nome host o l'indirizzo IP per identificare il server di posta (SMTP o Exchange) utilizzato dall'organizzazione. Queste informazioni sono disponibili nell'applicazione utilizzata per leggere l'e-mail. In Microsoft Outlook, ad esempio, è possibile trovare il nome del server visualizzando la configurazione dell'account: Strumenti - account di posta elettronica - Visualizza o modifica l'account di posta elettronica esistente.
+* Nome dell'account e-mail tramite il quale OnCommand Insight invierà regolarmente i report. L'account deve essere un indirizzo e-mail valido all'interno dell'organizzazione. (La maggior parte dei sistemi di posta non invia messaggi a meno che non vengano inviati da un utente valido). Se il server di posta elettronica richiede un nome utente e una password per inviare la posta, richiedere queste informazioni all'amministratore di sistema.
+

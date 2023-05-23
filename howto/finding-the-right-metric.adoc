@@ -1,0 +1,116 @@
+---
+permalink: howto/finding-the-right-metric.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight acquisisce contatori e metriche utilizzando nomi che a volte differiscono dall"origine dei dati all"origine dei dati.' 
+---
+= Best practice: Trovare la metrica giusta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight acquisisce contatori e metriche utilizzando nomi che a volte differiscono dall'origine dei dati all'origine dei dati.
+
+Quando si cerca la metrica o il contatore corretto per il widget dashboard, tenere presente che la metrica desiderata potrebbe essere sotto un nome diverso da quello a cui si sta pensando. Anche se gli elenchi a discesa in OnCommand Insight sono generalmente in ordine alfabetico, a volte un termine potrebbe non essere visualizzato nell'elenco in cui si ritiene opportuno. Ad esempio, termini come "capacità raw" e "capacità utilizzata" non vengono visualizzati insieme nella maggior parte degli elenchi.
+
+Procedura consigliata: Utilizzare la funzione di ricerca in campi come *Filtra per* o posizioni come il selettore di colonna image:../media/column-picker-button.gif[""] per trovare ciò che stai cercando. Ad esempio, la ricerca di "CAP" mostrerà tutte le metriche con "capacità" nei loro nomi, indipendentemente da dove si verifica. È quindi possibile selezionare facilmente le metriche desiderate dall'elenco breve.
+
+Ecco alcune frasi alternative che puoi provare quando cerchi le metriche:
+
+|===
+
+
+| Quando si desidera trovare: | Prova anche a cercare: 
+
+
+ a| 
+CPU
+ a| 
+Del processore
+
+
+
+ a| 
+Capacità
+ a| 
+Capacità utilizzata capacità raw
+
+Capacità fornita
+
+Capacità dei pool di storage
+
+capacità <other asset type>
+
+Capacità scritta
+
+
+
+ a| 
+Velocità del disco
+ a| 
+Velocità minima del disco tipo di disco con prestazioni inferiori
+
+
+
+ a| 
+Host
+ a| 
+HypervisorHost
+
+
+
+ a| 
+Hypervisor
+ a| 
+Hypervisor ostis
+
+
+
+ a| 
+Microcodice
+ a| 
+Firmware
+
+
+
+ a| 
+Nome
+ a| 
+Nome AliasHypervisor
+
+Nome dello storage
+
+nome <other asset type>
+
+Nome semplice
+
+Nome della risorsa
+
+Alias fabric
+
+
+
+ a| 
+Lettura/scrittura
+ a| 
+Scritture R/WPending parziali
+
+IOPS - scrittura
+
+Capacità scritta
+
+Latenza - lettura
+
+Utilizzo della cache - lettura
+
+
+
+ a| 
+Macchina virtuale
+ a| 
+VMIS virtuale
+
+|===
+Non si tratta di un elenco completo. Questi sono solo esempi di possibili termini di ricerca.

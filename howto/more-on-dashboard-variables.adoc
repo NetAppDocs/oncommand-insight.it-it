@@ -1,0 +1,76 @@
+---
+permalink: howto/more-on-dashboard-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: Le variabili della dashboard sono disponibili in diversi tipi, possono essere utilizzate in diversi campi e devono seguire le regole per la denominazione. Questi concetti sono spiegati qui. 
+---
+= Ulteriori informazioni sulle variabili della dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le variabili della dashboard sono disponibili in diversi tipi, possono essere utilizzate in diversi campi e devono seguire le regole per la denominazione. Questi concetti sono spiegati qui.
+
+
+
+== Tipi di variabili
+
+Una variabile può essere di uno dei seguenti tipi:
+
+*Testo*: Stringa alfanumerica. Questo è il tipo di variabile predefinito.
+
+*Numerico*: Un numero o un intervallo di numeri.
+
+*Booleano*: Utilizzare per i campi con valori True/False, Yes/No, 0/1, ecc. Per la variabile booleana, le scelte sono _Yes_, _No_, _None_, _Any_.
+
+*Data*: Una data o un intervallo di date.
+
+
+
+== Variabili "`Generic`"
+
+È possibile impostare una variabile generica o universale facendo clic sul pulsante *variabile* e selezionando uno dei tipi elencati sopra. Questi tipi vengono sempre visualizzati nella parte superiore dell'elenco a discesa. Alla variabile viene assegnato un nome predefinito, ad esempio "`` var1", e non è legato a un'annotazione o attributo specifico.
+
+La configurazione di una variabile generica consente di utilizzare tale variabile nei widget per filtrare i campi _any_ di quel tipo. Ad esempio, se si dispone di un widget di tabella che mostra _Name_, _Alias_ e _Vendor_ (che sono tutti attributi di tipo testo) e "`` var1" è una variabile di tipo testo, è possibile impostare i filtri per ciascuno di questi campi nel widget per utilizzare la variabile €var1. È possibile impostare altri widget in modo che utilizzino il valore di €var1 per questi o per qualsiasi campo di testo.
+
+Nella pagina della dashboard, impostando il valore di` var1 (ad esempio "`NetApp") si filtreranno _tutti_ i campi in _tutti_ widget impostati per utilizzare tale variabile. In questo modo, puoi aggiornare più widget contemporaneamente per evidenziare i dati della dashboard scelti a tuo ritmo.
+
+Poiché è possibile utilizzare variabili generiche per qualsiasi campo di quel tipo, è possibile modificare il nome di una variabile generica senza modificarne la funzionalità.
+
+[NOTE]
+====
+Tutte le variabili vengono trattate come variabili "generiche", anche quelle create per un attributo specifico, perché tutte le variabili configurate di un tipo vengono visualizzate quando si imposta un filtro per qualsiasi attributo o annotazione di quel tipo. Tuttavia, la procedura consigliata consiste nel creare una variabile generica quando la si utilizzerà per filtrare un valore in più campi, come nell'esempio _Name/Alias/Vendor_ riportato sopra.
+
+====
+
+
+== Naming variabile
+
+Nomi delle variabili:
+
+* Il prefisso deve essere sempre "``". Questa opzione viene aggiunta automaticamente quando si configura una variabile.
+* Non può contenere caratteri speciali; sono consentite solo le lettere a-z e le cifre 0-9.
+* Non può contenere più di 20 caratteri, incluso il simbolo "``".
+* Non sono sensibili al maiuscolo/minuscolo: Il nome della città e il nome della città sono la stessa variabile.
+* Non può essere uguale al nome di una variabile esistente.
+* Non può essere solo il simbolo "``".
+
+
+
+
+== Widget che utilizzano variabili
+
+Le variabili possono essere utilizzate con i seguenti widget:
+
+* Grafico ad area
+* Grafico a barre
+* Grafico a caselle
+* Grafico a linee
+* Grafico a dispersione
+* Widget a valore singolo
+* Grafico Spline
+* Grafico ad area sovrapposta
+* Widget tabella
+

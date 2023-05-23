@@ -1,0 +1,152 @@
+---
+permalink: config-admin/microsoft-hyper-v-wmi-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per la configurazione, l"origine dati Microsoft Hyper-V richiede l"indirizzo IP o il nome DNS risolvibile per l"host fisico (hypervisor). Questa origine dati utilizza PowerShell (precedentemente utilizzato WMI).' 
+---
+= Origine dati Microsoft Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per la configurazione, l'origine dati Microsoft Hyper-V richiede l'indirizzo IP o il nome DNS risolvibile per l'host fisico (hypervisor). Questa origine dati utilizza PowerShell (precedentemente utilizzato WMI).
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati Hyper-V. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco rigido virtuale
+ a| 
+Disco virtuale
+
+
+
+ a| 
+Host
+ a| 
+Host
+
+
+
+ a| 
+Macchina virtuale
+ a| 
+Macchina virtuale
+
+
+
+ a| 
+Cluster Shared Volumes (CSV), Volume di partizione
+ a| 
+Data Store
+
+
+
+ a| 
+Dispositivo SCSI Internet, LUN SCSI Multi Path
+ a| 
+LUN
+
+
+
+ a| 
+Porta Fibre Channel
+ a| 
+Porta
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Hyper-V richiede l'apertura della porta 5985 per la raccolta dei dati e l'accesso/gestione remota.
+* Indirizzo IP del nodo del gruppo di clustering
+* User e password dell'amministratore locale sull'hypervisor
+* Account utente di livello amministrativo
+* Requisiti delle porte: Porta 135 e porte TCP dinamiche assegnate 1024-65535 per Windows 2003 e versioni precedenti e 49152-65535 per Windows 2008.
+* La risoluzione DNS deve avere successo, anche se il data collector è rivolto solo a un indirizzo IP.
+* Ogni hypervisor Hyper-V deve avere "`Resource Metering`" attivato per ogni macchina virtuale, su ogni host. Ciò consente a ciascun hypervisor di avere più dati disponibili per Cloud Insights su ciascun guest. In caso contrario, vengono acquisite meno metriche di performance per ciascun ospite. Per ulteriori informazioni sulla misurazione delle risorse, consultare la documentazione microsoft:
++
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831661(v=ws.11)["Panoramica sulla misurazione delle risorse Hyper-V."]
+
++
+https://docs.microsoft.com/en-us/powershell/module/hyper-v/enable-vmresourcemetering?view=win10-ps["Enable-VMResourceMetering"]
+
+
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Indirizzo IP host fisico
+ a| 
+L'indirizzo IP o il nome di dominio completo per l'host fisico (hypervisor)
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente amministratore dell'hypervisor
+
+
+
+ a| 
+Password
+ a| 
+Password per l'hypervisor
+
+
+
+ a| 
+Dominio NT
+ a| 
+Il nome DNS utilizzato dai nodi nel cluster
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 20 minuti)
+
+
+
+ a| 
+Timeout connessione (ms)
+ a| 
+Timeout connessione (impostazione predefinita: 60000 ms)
+
+|===

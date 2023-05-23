@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-annotations-job-in-the-jobs-list.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile visualizzare il job Annotations (Annotazioni) nell"elenco Jobs (lavori) e applicare le modifiche dell"annotazione ai data mart di Data Warehouse.' 
+---
+= Visualizzazione del lavoro Annotazioni nell'elenco lavori
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare il job Annotations (Annotazioni) nell'elenco Jobs (lavori) e applicare le modifiche dell'annotazione ai data mart di Data Warehouse.
+
+
+
+== Fasi
+
+. Accedere come amministratore al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *Jobs*.
+

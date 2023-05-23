@@ -1,0 +1,30 @@
+---
+permalink: config-admin/searching-your-environment-for-specific-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile individuare informazioni su risorse specifiche utilizzando la funzione di ricerca. Ad esempio, se un utente del sistema contatta l"amministratore dello storage per un reclamo relativo a un determinato server, l"amministratore può cercare il nome del server e visualizzare una pagina delle risorse che riepiloga lo stato e fornisce ulteriori informazioni collegate.' 
+---
+= Ricerca di risorse specifiche nel tuo ambiente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile individuare informazioni su risorse specifiche utilizzando la funzione di ricerca. Ad esempio, se un utente del sistema contatta l'amministratore dello storage per un reclamo relativo a un determinato server, l'amministratore può cercare il nome del server e visualizzare una pagina delle risorse che riepiloga lo stato e fornisce ulteriori informazioni collegate.
+
+
+
+== Fasi
+
+. Aprire l'interfaccia utente Web di OnCommand.
+. Sulla barra degli strumenti, fare clic su image:../media/search-assets-icon.gif[""].
++
+Viene visualizzata la casella *Cerca risorse*.
+
+. Immettere il nome di una risorsa o parte del nome.
+. Selezionare la risorsa desiderata dai risultati della ricerca.
++
+Viene visualizzata la pagina delle risorse per tale risorsa.
+
+

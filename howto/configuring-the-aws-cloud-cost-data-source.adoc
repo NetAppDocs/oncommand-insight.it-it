@@ -1,0 +1,50 @@
+---
+permalink: howto/configuring-the-aws-cloud-cost-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Configuri l"origine dati dei costi di AWS Cloud come per qualsiasi origine dati Insight.' 
+---
+= Configurazione dell'origine dati dei costi di AWS Cloud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Configuri l'origine dati dei costi di AWS Cloud come per qualsiasi origine dati Insight.
+
+
+
+== Prima di iniziare
+
+Devi avere il tuo account Amazon AWS già configurato e preparato per la raccolta dati Insight e avere a portata di mano le seguenti informazioni.
+
+* Nome report
+* Nome bucket S3
+* Regione AWS in cui risiede il bucket S3.
+* Prefisso del percorso del report
+
+
+
+
+== A proposito di questa attività
+
+Una volta che l'account AWS è pronto e sono state impostate le autorizzazioni appropriate, è possibile configurare OnCommand Insight per la raccolta dei dati dei report di fatturazione.
+
+[NOTE]
+====
+Sarà necessario aggiungere un'origine dati dei costi AWS Cloud separata per ciascun utente/account fatturabile da cui si desidera recuperare i dati di fatturazione.
+
+====
+
+
+== Fasi
+
+. Accedere a OnCommand Insight come amministratore.
+. Fare clic su *Admin* > *Data Sources* per aprire la pagina Insight Data Source.
+. Fare clic su *+Aggiungi* per aggiungere una nuova origine dati. Scegliere *Amazon* e selezionare *AWS Cloud Cost*.
+. Nella sezione *Configurazione*, compilare i campi _Nome report_, _Nome bucket S3_, _Regione S3_ (deve essere la regione in cui si trova il bucket S3), _prefisso percorso report_, _ID chiave di accesso IAM AWS_ e _chiave di accesso segreta IAM AWS_. In caso di dubbi, rivolgersi al proprio provider di servizi cloud o al titolare dell'account AWS.
+. Fare clic sulla casella di controllo per verificare che AWS fatturare le richieste API e i trasferimenti di dati effettuati dall'origine dati Insight.
+. In *Advanced Configuration* (Configurazione avanzata), inserire la connessione HTTP e il timeout socket. L'impostazione predefinita è 300 secondi.
+. Fare clic su *Save* (Salva).
+

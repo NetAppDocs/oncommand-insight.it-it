@@ -1,0 +1,63 @@
+---
+permalink: howto/custom-dashboard-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: Le variabili della dashboard consentono di filtrare i dati in più widget su una dashboard in modo rapido e semplice. 
+---
+= Variabili della dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le variabili della dashboard consentono di filtrare i dati in più widget su una dashboard in modo rapido e semplice.
+
+
+
+== Prima di iniziare
+
+Questo esempio richiede l'impostazione dell'annotazione *Città* (chiamata anche attributo Città) su più risorse di storage.
+
+Per ottenere i migliori risultati, imposta diverse città su diversi storage.
+
+
+
+== A proposito di questa attività
+
+Le variabili offrono un metodo semplice e rapido per filtrare i dati visualizzati in alcuni o in tutti i widget di una dashboard personalizzata. I seguenti passaggi ti guideranno alla creazione di widget che utilizzano variabili e ti mostreranno come utilizzarli nella dashboard.
+
+
+
+== Fasi
+
+. Accedere a Insight come utente con autorizzazioni amministrative
+. Fare clic su *Dashboard* > *+New Dashboard*.
+. Prima di aggiungere widget, è necessario definire le variabili da utilizzare per filtrare i dati della dashboard. Fare clic sul pulsante *Variable* (variabile).
++
+Viene visualizzato l'elenco degli attributi.
+
+. Supponiamo di voler impostare la dashboard in modo che filtri in base alla città. Selezionare l'attributo *City* dall'elenco.
++
+Il campo della variabile città viene creato e aggiunto alla dashboard.
+
+. Quindi, dobbiamo dire ai nostri widget di utilizzare questa variabile. Il modo più semplice per illustrare questo aspetto consiste nell'aggiungere un widget di tabella che mostra la colonna Città. Fare clic sul pulsante *Widget* e selezionare il widget *Table*.
+. Per prima cosa, aggiungere il campo Città alla tavola selezionandolo dal selettore di colonne image:../media/column-picker-button.gif[""] pulsante.
++
+City è un attributo list-type, quindi contiene un elenco di scelte precedentemente definite. Puoi anche scegliere gli attributi text, boolean o date-type.
+
+. Quindi, fai clic sul pulsante *Filtra per +* e scegli *Città*.
+. Fare clic su *Any* per visualizzare le possibili opzioni di filtro per Città. Si noti che l'elenco include ora "`` City" nella parte superiore, oltre alle opzioni disponibili in precedenza. Selezionare "`` City" per utilizzare questa variabile della dashboard.
++
+La scelta "`` città" viene visualizzata solo se precedentemente definita nella pagina principale del dashboard. Se la variabile non è stata definita in precedenza, verranno visualizzate solo le scelte esistenti per il filtro. Solo le variabili applicabili al tipo di attributo selezionato verranno visualizzate nell'elenco a discesa del filtro.
+
++
+image::../media/customdash-variablecitydialog2.gif[customdash variabilitàdialog2]
+
+. *Salvare* il widget.
+. Nella pagina del dashboard, fare clic su *Any* accanto alla variabile City e selezionare la città o le città che si desidera visualizzare.
++
+Il widget della tabella viene aggiornato per visualizzare solo le città selezionate. È possibile modificare i valori della variabile città in base alle proprie esigenze e tutti i widget della dashboard impostati per l'utilizzo della variabile città verranno aggiornati automaticamente in modo da visualizzare solo i dati relativi ai valori selezionati.
+
+. Assicurarsi di *salvare* la dashboard una volta configurata come desiderato.
+

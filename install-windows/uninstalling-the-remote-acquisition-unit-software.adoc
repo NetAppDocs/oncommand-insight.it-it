@@ -1,0 +1,24 @@
+---
+permalink: install-windows/uninstalling-the-remote-acquisition-unit-software.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Prima di eseguire l"aggiornamento a una nuova versione, è necessario disinstallare la versione esistente del software dell"unità di acquisizione remota. Questa attività deve essere eseguita su tutti i server delle unità di acquisizione remote del proprio ambiente.' 
+---
+= Disinstallazione del software dell'unità di acquisizione remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di eseguire l'aggiornamento a una nuova versione, è necessario disinstallare la versione esistente del software dell'unità di acquisizione remota. Questa attività deve essere eseguita su tutti i server delle unità di acquisizione remote del proprio ambiente.
+
+
+
+== Fasi
+
+. Accedere al server dell'unità di acquisizione remota.
+. Assicurarsi che tutte le finestre di OnCommand Insight sul server siano chiuse.
+. Aprire la funzione *Disinstalla un programma* dal pannello di controllo e selezionare il programma dell'unità di acquisizione remota OnCommand Insight da rimuovere.
+. Fare clic su *Disinstalla* e seguire le istruzioni.
+

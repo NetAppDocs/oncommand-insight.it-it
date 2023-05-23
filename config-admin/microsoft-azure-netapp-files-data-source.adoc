@@ -1,0 +1,87 @@
+---
+permalink: config-admin/microsoft-azure-netapp-files-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Questa origine dati acquisisce i dati di inventario e performance per Azure NetApp Files. 
+---
+= Origine dati Azure NetApp Files
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa origine dati acquisisce i dati di inventario e performance per Azure NetApp Files (ANF).
+
+
+
+== Requisiti
+
+Di seguito sono riportati i requisiti per la configurazione di questa origine dati:
+
+* Requisito porta: 443 HTTPS
+* IP REST di Azure Management (management.azure.com)
+* Azure Service Principal Application (Client) ID (account utente)
+* Chiave di autenticazione Azure Service Principal (password utente)
+* È necessario impostare un account Azure per il rilevamento Cloud Insights.
++
+Una volta configurato correttamente l'account e registrata l'applicazione in Azure, si disporranno delle credenziali necessarie per rilevare l'istanza di Azure con Cloud Insights. Il seguente collegamento descrive come configurare l'account per il rilevamento:
+
++
+https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Azure Service Principal Application (Client) ID
+ a| 
+ID di accesso ad Azure
+
+
+
+ a| 
+ID tenant Azure
+ a| 
+ID tenant Azure
+
+
+
+ a| 
+Chiave di autenticazione principale del servizio Azure
+ a| 
+Chiave di autenticazione per l'accesso
+
+
+
+ a| 
+Ho capito che Microsoft mi ha dato la bolletta per le richieste API
+ a| 
+Controlla questa sezione per verificare che Microsoft ti presenti la fattura per le richieste API effettuate tramite il polling Insight.
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Il valore predefinito è 60 minuti
+
+|===

@@ -1,0 +1,21 @@
+---
+permalink: config-admin/testing-the-data-source-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Quando si aggiunge un"origine dati, è possibile verificare la correttezza della configurazione per comunicare con il dispositivo prima di salvare o aggiornare tale origine dati.' 
+---
+= Verifica della configurazione dell'origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si aggiunge un'origine dati, è possibile verificare la correttezza della configurazione per comunicare con il dispositivo prima di salvare o aggiornare tale origine dati.
+
+Quando si fa clic sul pulsante *Test* nella procedura guidata origine dati, viene selezionata la comunicazione con il dispositivo specificato. Il test produce uno dei seguenti risultati:
+
+* SUPERATO: L'origine dati è configurata correttamente.
+* ATTENZIONE: Il test è stato incompleto, probabilmente a causa del timeout durante l'elaborazione o dell'acquisizione non in esecuzione.
+* ERRORE: L'origine dati, come configurata, non può comunicare con il dispositivo specificato. Controllare le impostazioni di configurazione e ripetere il test.
+

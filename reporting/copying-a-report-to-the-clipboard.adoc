@@ -1,0 +1,32 @@
+---
+permalink: reporting/copying-a-report-to-the-clipboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Questa procedura consente di copiare un report negli Appunti. 
+---
+= Copia di un report negli Appunti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa procedura consente di copiare un report negli Appunti.
+
+
+
+== Fasi
+
+. Aprire il portale di reporting di Cognos 11: https://server-name:9300/bi/[]
+. Nella barra degli strumenti, fare clic su image:../media/new-report.gif[""]
+. Fare clic su *Report*
+. Fare clic sull'icona *pagine*image:../media/pages-icon.gif[""]
++
+Icona *Report* image:../media/report-icon.gif[""] viene visualizzato
+
+. Fare clic con il pulsante sinistro del mouse sull'icona *Report*
++
+Vengono visualizzate le opzioni del report.
+
+. Fare clic su *Copy Report to Clipboard* (Copia report negli Appunti).
+

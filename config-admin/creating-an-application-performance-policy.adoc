@@ -1,0 +1,140 @@
+---
+permalink: config-admin/creating-an-application-performance-policy.html 
+sidebar: sidebar 
+keywords: anomaly score 
+summary: 'È possibile creare una policy di performance applicativa in base al punteggio di anomalia per l"applicazione. L"superamento delle soglie attiva avvisi che avvisano l"utente in merito a problemi relativi alle risorse dell"applicazione.' 
+---
+= Creazione di un criterio di performance dell'applicazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare una policy di performance applicativa in base al punteggio di anomalia per l'applicazione. L'superamento delle soglie attiva avvisi che avvisano l'utente in merito a problemi relativi alle risorse dell'applicazione.
+
+
+
+== Prima di iniziare
+
+Il motore di rilevamento delle anomalie deve essere in esecuzione sul server Insight per poter monitorare le soglie impostate in una policy di performance applicativa.
+
+
+
+== A proposito di questa attività
+
+È possibile creare policy che forniscano avvisi su diversi tipi di punteggi di anomalie che si desidera monitorare:
+
+* Per identificare eventuali picchi di anomalie, creare una policy che avvisi alla prima occorrenza con una soglia impostata su un punteggio di anomalia elevato (> 90).
+* Per identificare un cambiamento di comportamento nel tempo, creare una policy che avvisi dopo 1 ora su un punteggio di anomalia medio-alto. Questa policy fornisce un avviso basato su 3 punteggi consecutivi di rilevamento delle anomalie.
+
+
+
+
+== Fasi
+
+. Aprire OnCommand Insight nel browser.
+. Fare clic su *Gestisci* > *Criteri di performance*
++
+Viene visualizzata la pagina Performance Policies (Criteri di performance).
+
+. Fare clic su *+Aggiungi*.
++
+Viene visualizzata la finestra di dialogo Add Policy (Aggiungi policy).
+
+. Immettere un nome univoco per la policy nel campo *Policy Name* (Nome policy).
++
+È necessario utilizzare un nome diverso da tutti gli altri nomi di policy per l'oggetto.
+
+. Dall'elenco *Apply to Objects of type* (Applica a oggetti di tipo), selezionare Application (applicazione).
+. Selezionare la priorità dell'applicazione dall'elenco *priorità applicazione*.
+. Dall'elenco *Apply after a window of* (Applica dopo una finestra di*), selezionare quando viene generato un avviso per indicare una violazione di soglia.
++
+L'opzione First ricorrenza attiva un avviso quando viene superata una soglia per il primo punteggio. Tutte le altre opzioni attivano un avviso quando la soglia viene superata una volta e viene continuamente superata per almeno il periodo di tempo specificato.
+
++
+Il punteggio di anomalia viene fornito a intervalli di 30 minuti (5 minuti dopo l'ora e 35 minuti dopo l'ora), pertanto devono essere selezionati solo periodi di tempo divisibili per 30.
+
++
+|===
+
+
+| Applica dopo la finestra di | Numero di bucket necessari per generare la violazione 
+
+
+ a| 
+Prima occorrenza
+ a| 
+1
+
+
+
+ a| 
+5 minuti
+ a| 
+2
+
+
+
+ a| 
+10 minuti
+ a| 
+2
+
+
+
+ a| 
+15 minuti
+ a| 
+2
+
+
+
+ a| 
+30 minuti
+ a| 
+2
+
+
+
+ a| 
+45 minuti
+ a| 
+3
+
+
+
+ a| 
+1 ora
+ a| 
+3
+
+
+
+ a| 
+2 ore
+ a| 
+4
+
+|===
+. Dall'elenco *Warning*, selezionare Critical (critico) o Warning (Avviso)
+. Configure Email (Configura e-mail) se si desidera modificare il metodo di notifica e-mail predefinito.
+. Nella sezione *Crea avviso IF*, selezionare un operatore, quindi immettere un valore per creare una soglia. Il punteggio delle anomalie è l'unico contatore delle performance utilizzato per le policy di performance applicative.
++
+È possibile creare una serie di avvisi utilizzando intervalli simili ai seguenti:
+
++
+** 0-20 Avviso di avviso
+** 21-50 Avviso di avviso
+** 51-80 Avviso di avviso
+** >80 allarme critico
+
+
+. Selezionare la casella di controllo *Arresta l'elaborazione di ulteriori criteri se viene generato un avviso* se si desidera che il criterio interrompa l'elaborazione quando si verifica un avviso.
+
+
+
+
+== Risultati
+
+Le notifiche non sono l'unico mezzo per visualizzare le violazioni. Le violazioni vengono visualizzate nella landing page dell'applicazione e nella dashboard delle violazioni, in cui è possibile filtrarle. Puoi anche creare una dashboard, aggiungere un widget della tabella delle violazioni e filtrare il nome della policy sulle performance per identificare le violazioni delle applicazioni.

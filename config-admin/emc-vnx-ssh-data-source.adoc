@@ -1,0 +1,105 @@
+---
+permalink: config-admin/emc-vnx-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per la configurazione, l"origine dati EMC VNX richiede l"indirizzo IP della stazione di controllo e un nome utente e una password di sola lettura.' 
+---
+= Origine dati EMC VNX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per la configurazione, l'origine dati EMC VNX (SSH) richiede l'indirizzo IP della stazione di controllo e un nome utente e una password di sola lettura.
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+IP VNX
+ a| 
+Indirizzo IP o nome di dominio completo della stazione di controllo VNX
+
+
+
+ a| 
+Nome utente VNX
+ a| 
+Nome utente della stazione di controllo VNX
+
+
+
+ a| 
+Password VNX
+ a| 
+Password per la stazione di controllo VNX
+
+|===
+
+
+== Requisiti
+
+* Indirizzo IP della stazione di controllo
+* Nome utente e password di sola lettura.
+* Convalida degli accessi: Verifica dell'accesso SSH tramite PuTTY.
+
+
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 40 minuti)
+
+
+
+ a| 
+Timeout attesa processo VNX SSH (sec)
+ a| 
+Timeout del processo VNX SSH (impostazione predefinita: 600 secondi)
+
+
+
+ a| 
+Tentativi di tentativo del comando Celerra
+ a| 
+Numero di tentativi di comando Celerra
+
+
+
+ a| 
+Timeout processo esterno CLARiiON per inventario (sec)
+ a| 
+Timeout processo esterno CLARiiON per inventario (valore predefinito: 1800 secondi)
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+
+
+ a| 
+Timeout processo esterno CLARiiON per le prestazioni (sec)
+ a| 
+Timeout processo esterno CLARiiON per le prestazioni (impostazione predefinita: 1800 secondi)
+
+|===

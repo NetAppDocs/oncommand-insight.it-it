@@ -1,0 +1,99 @@
+---
+permalink: config-admin/managing-security-on-the-local-acquisition-unit.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Il tool securityadmin consente di gestire le opzioni di sicurezza sull"utente di acquisizione locale. La gestione della sicurezza include la gestione di chiavi e password, il salvataggio e il ripristino delle configurazioni di sicurezza create o il ripristino delle impostazioni predefinite delle configurazioni.' 
+---
+= Gestione della sicurezza sull'unità di acquisizione locale
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il `securityadmin` Tool consente di gestire le opzioni di sicurezza sull'utente di acquisizione locale (LAU). La gestione della sicurezza include la gestione di chiavi e password, il salvataggio e il ripristino delle configurazioni di sicurezza create o il ripristino delle impostazioni predefinite delle configurazioni.
+
+
+
+== Prima di iniziare
+
+Devi avere `admin` privilegi per eseguire attività di configurazione della sicurezza.
+
+
+
+== A proposito di questa attività
+
+Si utilizza `securityadmin` tool per gestire la sicurezza:
+
+* Finestre - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux - `/bin/oci-securityadmin.sh`
+
+
+
+
+== Fasi
+
+. Eseguire un accesso remoto al server Insight.
+. Avviare lo strumento di amministrazione della protezione in modalità interattiva (-i).
++
+Il sistema richiede le credenziali di accesso.
+
+. Immettere il nome utente e la password di un account con credenziali "`Admin`".
+. Selezionare *Local Acquisition Unit* (unità di acquisizione locale) per riconfigurare la configurazione di sicurezza dell'unità di acquisizione locale.
++
+Vengono visualizzate le seguenti opzioni:
+
++
+** *Backup*
++
+Crea un file zip di backup del vault contenente tutte le password e le chiavi e colloca il file in una posizione specificata dall'utente o nelle seguenti posizioni predefinite:
+
++
+*** Finestre - `C:\Program Files\SANscreen\backup\vault`
+*** Linux - `/var/log/netapp/oci/backup/vault`
+
+
+** *Ripristina*
++
+Ripristina il backup zip del vault creato. Una volta ripristinato, tutte le password e le chiavi vengono ripristinate ai valori esistenti al momento della creazione del backup.
+
++
+[NOTE]
+====
+Il ripristino può essere utilizzato per sincronizzare password e chiavi su più server, ad esempio: - Modificare le chiavi di crittografia sul LAU - creare un backup del vault - ripristinare il backup del vault su ciascuno dei Raus
+
++
+
+====
+** *Modifica delle chiavi di crittografia*
++
+Modificare le chiavi di crittografia AU utilizzate per crittografare o decrittare le password del dispositivo.
+
++
+[NOTE]
+====
+Quando si modificano le chiavi di crittografia, è necessario eseguire il backup della nuova configurazione di protezione in modo da poterla ripristinare dopo un aggiornamento o un'installazione.
+
+====
+** *Aggiorna password*
++
+Modificare la password per l'account utente di 'acquisizione'.
+
++
+[NOTE]
+====
+Alcuni account devono essere sincronizzati quando si modificano le password. Ad esempio, se si modifica la password per l'utente di "acquisizione" sul server, è necessario modificare la password per l'utente di "acquisizione" su LAU, RAU e DWH in modo che corrisponda. Inoltre, quando si modificano le password, è necessario eseguire il backup della nuova configurazione di protezione in modo da poterla ripristinare dopo un aggiornamento o un'installazione.
+
+====
+** *Ripristina impostazioni predefinite*
++
+Ripristina la password utente di acquisizione e le chiavi di crittografia dell'utente di acquisizione sui valori predefiniti. I valori predefiniti sono quelli forniti durante l'installazione.
+
+** *Esci*
++
+Uscire da `securityadmin` tool.
+
+
+
+. Scegliere l'opzione che si desidera configurare e seguire le istruzioni.
+

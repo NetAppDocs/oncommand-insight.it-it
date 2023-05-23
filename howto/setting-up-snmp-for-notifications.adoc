@@ -1,0 +1,30 @@
+---
+permalink: howto/setting-up-snmp-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Insight può inviare notifiche SNMP su eventi di attivazione, ad esempio violazioni o quando vengono superate le soglie dell"origine dati.' 
+---
+= Impostazione di SNMP per le notifiche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight può inviare notifiche SNMP su eventi di attivazione, ad esempio violazioni o quando vengono superate le soglie dell'origine dati.
+
+
+
+== A proposito di questa attività
+
+Per configurare SNMP in Insight, attenersi alla seguente procedura di base:
+
+
+
+== Fasi
+
+. Fare clic su *Admin* > *Notifications* e passare alla sezione *SNMP*.
+. Fare clic su *azioni* e selezionare *Aggiungi origine trap*.
+. Nella finestra di dialogo *Aggiungi destinatari trap SNMP*, immettere l'indirizzo *IP* e *porta* a cui si desidera inviare i messaggi trap SNMP. Per *Community String*, utilizzare "`public`" per i messaggi trap SNMP.
+. Fare clic su *Save* (Salva).
+

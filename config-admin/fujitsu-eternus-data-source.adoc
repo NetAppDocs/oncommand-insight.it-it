@@ -1,0 +1,128 @@
+---
+permalink: config-admin/fujitsu-eternus-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati di Fujitsu Eternus richiede l"indirizzo IP dello storage. Non può essere delimitato da virgole.' 
+---
+= Fonte dei dati Fujitsu Eternus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati di Fujitsu Eternus richiede l'indirizzo IP dello storage. Non può essere delimitato da virgole.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati di Fujitsu Eternus. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Storage
+ a| 
+Storage
+
+
+
+ a| 
+Thin Pool, Tier Pool flessibile,
+
+Gruppo RAID
+ a| 
+Pool di storage
+
+
+
+ a| 
+Volume standard, volume dati snap (SDV),
+
+Volume del pool di dati Snap (SDPV),
+
+Volume di thin provisioning (TPV)
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Indirizzo IP dello storage Eternus, che non può essere delimitato da virgole
+* Nome utente e password a livello di amministrazione SSH
+* Porta 22
+* Assicurarsi che lo scorrimento della pagina sia disattivato. (clienv-show-more-scroll disattiva)
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Indirizzo IP dello storage Eternus
+ a| 
+Indirizzo IP dello storage Eternus
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente dello storage Eternus
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per lo sterno
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 20 minuti)
+
+
+
+ a| 
+Timeout attesa processo SSH (sec)
+ a| 
+Timeout processo SSH (impostazione predefinita: 600 secondi)
+
+|===

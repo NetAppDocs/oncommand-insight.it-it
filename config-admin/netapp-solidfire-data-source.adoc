@@ -1,0 +1,173 @@
+---
+permalink: config-admin/netapp-solidfire-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati NetApp SolidFire supporta configurazioni iSCSI e Fibre Channel SolidFire, sia per l"inventario che per la raccolta delle performance.' 
+---
+= Fonte dei dati NetApp SolidFire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati NetApp SolidFire supporta configurazioni iSCSI e Fibre Channel SolidFire, sia per l'inventario che per la raccolta delle performance.
+
+L'origine dati SolidFire utilizza l'API REST di SolidFire. L'unità di acquisizione in cui risiede l'origine dati deve essere in grado di avviare connessioni HTTPS alla porta TCP 443 sull'indirizzo IP di gestione del cluster SolidFire. L'origine dati necessita di credenziali in grado di eseguire query API REST sul cluster SolidFire.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati NetApp SolidFire. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo di storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+Porta Fibre Channel
+ a| 
+Porta
+
+
+
+ a| 
+Gruppo di accesso al volume, assegnazione LUN
+ a| 
+Mappa del volume
+
+
+
+ a| 
+Sessione iSCSI
+ a| 
+Maschera di volume
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+Di seguito sono riportati i requisiti per la configurazione di questa origine dati:
+
+* Indirizzo IP virtuale di gestione
+* Porta 443
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Management Virtual IP Address (MVIP) (Indirizzo IP virtuale di gestione)
+ a| 
+Indirizzo IP virtuale di gestione del cluster SolidFire
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utilizzato per accedere al cluster SolidFire
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per accedere al cluster SolidFire
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 60 minuti)
+
+
+
+ a| 
+Porta TCP
+ a| 
+Porta TCP utilizzata per la connessione al server SolidFire (impostazione predefinita: 443 )
+
+
+
+ a| 
+Timeout connessione (sec)
+ a| 
+Timeout di connessione (impostazione predefinita: 60 secondi)
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+|===
+
+
+== Risoluzione dei problemi
+
+Quando SolidFire segnala un errore, viene visualizzato in OnCommand Insight come segue:
+
+`An error message was received from a SolidFire device while trying to retrieve data. The call was <method> (<parameterString> ). The error message from the device was (check the device manual): <message>`
+
+Dove:
+
+* <method> è un metodo HTTP, ad esempio GET o PUT.
+* <parameterString> è un elenco separato da virgole di parametri inclusi nella chiamata DI PAUSA.
+* Il <message> corrisponde a quello che il dispositivo ha restituito come messaggio di errore.
+

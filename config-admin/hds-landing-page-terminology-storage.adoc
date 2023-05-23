@@ -1,0 +1,28 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse di storage HDS. 
+---
+= Storage HDS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse di storage HDS.
+
+
+
+== Terminologia dello storage HDS
+
+I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle landing page delle risorse di storage HDS. Molti di questi termini si applicano anche ad altri data collezionisti.
+
+* Name -- deriva direttamente dall'attributo "`name`" di HDS HiCommand Device Manager tramite la chiamata API XML GetStorageArray
+* Modello - viene fornito direttamente dall'attributo "`arrayType`" di HDS HiCommand Device Manager tramite la chiamata API XML GetStorageArray
+* Vendor -- HDS
+* Famiglia - proviene direttamente dall'attributo "`arrayFamily`" di HDS HiCommand Device Manager tramite la chiamata API XML GetStorageArray
+* IP -- Indirizzo IP di gestione dell'array, non un elenco completo di tutti gli indirizzi IP dell'array
+* Capacità raw - un valore base2 che rappresenta la somma della capacità totale di tutti i dischi di questo sistema, indipendentemente dal ruolo del disco.
+

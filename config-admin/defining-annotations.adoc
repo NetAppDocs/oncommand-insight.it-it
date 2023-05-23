@@ -1,0 +1,24 @@
+---
+permalink: config-admin/defining-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Quando si personalizza OnCommand Insight per tenere traccia dei dati in base ai requisiti aziendali, è possibile definire eventuali annotazioni specializzate necessarie per fornire un quadro completo dei dati: Ad esempio, fine del ciclo di vita delle risorse, data center, ubicazione dell"edificio, Tier di storage o volume, e livello di servizio del volume interno.' 
+---
+= Definizione delle annotazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si personalizza OnCommand Insight per tenere traccia dei dati in base ai requisiti aziendali, è possibile definire eventuali annotazioni specializzate necessarie per fornire un quadro completo dei dati: Ad esempio, fine del ciclo di vita delle risorse, data center, ubicazione dell'edificio, Tier di storage o volume, e livello di servizio del volume interno.
+
+
+
+== Fasi
+
+. Elencare qualsiasi terminologia del settore a cui devono essere associati i dati dell'ambiente.
+. Elencare la terminologia aziendale a cui devono essere associati i dati dell'ambiente, che non sono già stati monitorati utilizzando le entità aziendali.
+. Identificare i tipi di annotazione predefiniti che potrebbero essere utilizzabili.
+. Identificare le annotazioni personalizzate da creare.
+

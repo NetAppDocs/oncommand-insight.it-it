@@ -1,0 +1,31 @@
+---
+permalink: dwh/viewing-the-data-warehouse-database-schema.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile visualizzare lo schema del database per comprendere come utilizzare i dati in un"altra API o sviluppare query SQL. L"opzione schema elenca tutti i database, le tabelle e le colonne nello schema. È inoltre possibile esaminare i diagrammi dello schema del database che mostrano le relazioni della tabella.' 
+---
+= Visualizzazione dello schema del database Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare lo schema del database per comprendere come utilizzare i dati in un'altra API o sviluppare query SQL. L'opzione schema elenca tutti i database, le tabelle e le colonne nello schema. È inoltre possibile esaminare i diagrammi dello schema del database che mostrano le relazioni della tabella.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Fare clic su image:../media/oci-7-help-icon-gif.gif[""] Nella barra degli strumenti Data Warehouse, selezionare *documentazione*.
+. Selezionare *Schema database*.
+. Ad esempio, nel riquadro *Databases*, fare clic su *DWH_INVENTORY*.
+. Nel riquadro *All tables* (tutte le tabelle), scorrere verso il basso fino alla sezione *DWH_INVENTORY* e fare clic sulla tabella *annotation_value*.
++
+image::../media/oci-dwh-databaseschema-inventory-annotation-gif.gif[Tabella dei valori di annotazione del data mart di inventario]
+
++
+Viene visualizzata la tabella dwh_inventory.annotation.
+
+

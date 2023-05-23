@@ -1,0 +1,30 @@
+---
+permalink: config-admin/using-annotations-to-monitor-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Quando si personalizza OnCommand Insight per tenere traccia dei dati in base ai requisiti aziendali, è possibile definire note specializzate, denominate annotazioni, e assegnarle alle risorse. Ad esempio, è possibile annotare le risorse con informazioni come fine del ciclo di vita delle risorse, data center, posizione dell"edificio, Tier di storage o livello di servizio del volume.' 
+---
+= Utilizzo delle annotazioni per monitorare l'ambiente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si personalizza OnCommand Insight per tenere traccia dei dati in base ai requisiti aziendali, è possibile definire note specializzate, denominate _annotazioni_, e assegnarle alle risorse. Ad esempio, è possibile annotare le risorse con informazioni come fine del ciclo di vita delle risorse, data center, posizione dell'edificio, Tier di storage o livello di servizio del volume.
+
+L'utilizzo delle annotazioni per il monitoraggio dell'ambiente include le seguenti attività di alto livello:
+
+* Creazione o modifica delle definizioni per tutti i tipi di annotazione.
+* Visualizzazione delle pagine delle risorse e associazione di ciascuna risorsa a una o più annotazioni.
++
+Ad esempio, se una risorsa viene affittata e il leasing scade entro due mesi, potrebbe essere necessario applicare un'annotazione di fine ciclo di vita alla risorsa. In questo modo si impedisce ad altri di utilizzare tale risorsa per un periodo di tempo prolungato.
+
+* Creazione di regole per applicare automaticamente le annotazioni a più risorse dello stesso tipo.
+* Utilizzo dell'utility di importazione delle annotazioni per importare le annotazioni.
+* Filtrare le risorse in base alle annotazioni.
+* Raggruppare i dati nei report in base alle annotazioni e generare tali report.
++
+Per ulteriori informazioni sui report, consulta la _Guida ai report di OnCommand Insight_.
+
+

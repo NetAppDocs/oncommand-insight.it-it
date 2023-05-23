@@ -1,0 +1,16 @@
+---
+permalink: howto/examining-the-details-of-the-storage-pool.html 
+sidebar: sidebar 
+keywords: vm 
+summary: 'L"esame della landing page del pool di storage mostra lo stesso picco IOPS riscontrato nelle risorse correlate. Nella sezione risorse è possibile vedere che questa landing page del pool di storage si collega al volume dell"applicazione di viaggio. Fare clic sul volume per aprire la landing page del volume.' 
+---
+= Esaminare il pool di storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'esame della landing page del pool di storage mostra lo stesso picco IOPS riscontrato nelle risorse correlate. Nella sezione risorse è possibile vedere che questa landing page del pool di storage si collega al volume dell'applicazione di viaggio. Fare clic sul volume per aprire la landing page del volume.
+
+image::../media/storage-pool-landing-page.gif[landing page del pool di storage]

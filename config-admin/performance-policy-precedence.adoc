@@ -1,0 +1,24 @@
+---
+permalink: config-admin/performance-policy-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La pagina Performance Policies raggruppa i criteri in base al tipo di oggetto e Insight valuta i criteri nell"ordine in cui vengono visualizzati nell"elenco dei criteri di performance dell"oggetto. Puoi modificare l"ordine in cui Insight valuta le policy per mostrare le informazioni più importanti per te nella tua rete.' 
+---
+= Precedenza della valutazione dei criteri di performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Performance Policies raggruppa i criteri in base al tipo di oggetto e Insight valuta i criteri nell'ordine in cui vengono visualizzati nell'elenco dei criteri di performance dell'oggetto. Puoi modificare l'ordine in cui Insight valuta le policy per mostrare le informazioni più importanti per te nella tua rete.
+
+Insight valuta tutte le policy applicabili a un oggetto in sequenza quando vengono presi campioni di dati delle performance nel sistema per quell'oggetto; tuttavia, a seconda delle annotazioni, non tutte le policy si applicano a un gruppo di oggetti. Si supponga, ad esempio, che il volume interno abbia i seguenti criteri:
+
+* Policy 1 (policy predefinita fornita da Insight)
+* Policy 2 (con un'annotazione "`SService Level = Silver`" con l'opzione *Stop Processing further policies if alert is generated*
+* Policy 3 (con un'annotazione "`SService Level = Gold`")
+* Policy 4
+
+
+Per un Tier di volume interno con un'annotazione Gold, Insight valuta Policy 1, ignora Policy 2 e quindi valuta Policy 3 e Policy 4. Per un Tier senza annotazioni, Insight valuta in base all'ordine delle policy; pertanto, Insight valuta solo Policy 1 e Policy 4. Per un Tier di volume interno con un'annotazione Silver, Insight valuta Policy 1 e Policy 2; Tuttavia, se un avviso viene attivato quando la soglia del criterio viene superata una volta e viene continuamente attraversato per la finestra di tempo specificata nel criterio, Insight non valuta più gli altri criteri nell'elenco mentre valuta i contatori correnti per l'oggetto. Quando Insight acquisisce il successivo set di esempi di performance per l'oggetto, inizia di nuovo a valutare le policy di performance per l'oggetto in base al filtro e quindi a ordinare.

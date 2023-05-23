@@ -1,0 +1,42 @@
+---
+permalink: dwh/resetting-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile eliminare il contenuto dei data mart di Data Warehouse ed eliminare tutti i connettori configurati. Questa operazione potrebbe essere utile se un"installazione o un aggiornamento non sono stati completati correttamente e il database Data Warehouse è stato lasciato in uno stato intermedio. È inoltre possibile eliminare solo il modello di dati Inventory o il modello di dati Cognos Reporting.' 
+---
+= Reimpostazione del database Data Warehouse o del server di reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare il contenuto dei data mart di Data Warehouse ed eliminare tutti i connettori configurati. Questa operazione potrebbe essere utile se un'installazione o un aggiornamento non sono stati completati correttamente e il database Data Warehouse è stato lasciato in uno stato intermedio. È inoltre possibile eliminare solo il modello di dati Inventory o il modello di dati Cognos Reporting.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *Reset DWH database* (Ripristina database DWH).
+. Fare clic su una delle seguenti opzioni:
++
+** *Ripristinare il database DWH*
++
+In questo modo si elimina il contenuto di tutti i data mart del Data Warehouse e di tutti i connettori configurati e si posiziona il Data Warehouse nello stato di installazione predefinito senza alcuna configurazione personalizzata. È possibile scegliere questa opzione, ad esempio, se sono stati modificati i server connessi, ma è stato accidentalmente ripristinato un database Data Warehouse diverso sul server e se è necessario tornare allo stato di installazione predefinito. In questo modo non vengono cancellati i report. (I report vengono salvati nell'archivio contenuti di Cognos.)
+
+** *Ripristina solo inventario*
++
+In questo modo si elimina solo il contenuto del modello di dati di inventario. In questo modo non vengono cancellati i dati storici.
+
+** *Ripristina contenuto report*
++
+In questo modo viene ripristinato il contenuto del server di reporting. In questo modo vengono eliminati eventuali report personalizzati. Eseguire il backup dei report prima di scegliere questa opzione.
+
+
+
++
+Viene visualizzato un messaggio di avviso.
+
+. Per continuare, fare clic su *Sì*.
+

@@ -1,0 +1,18 @@
+---
+permalink: config-admin/violations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile utilizzare la sezione violazioni di una pagina di risorse per visualizzare le eventuali violazioni che si verificano nell"ambiente in seguito a una policy di performance assegnata a una risorsa. Le policy sulle performance monitorano le soglie di rete e consentono di rilevare immediatamente una violazione di una soglia, identificare le implicazioni e analizzare l"impatto e la causa del problema in modo da consentire una correzione rapida ed efficace.' 
+---
+= Violazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la sezione violazioni di una pagina di risorse per visualizzare le eventuali violazioni che si verificano nell'ambiente in seguito a una policy di performance assegnata a una risorsa. Le policy sulle performance monitorano le soglie di rete e consentono di rilevare immediatamente una violazione di una soglia, identificare le implicazioni e analizzare l'impatto e la causa del problema in modo da consentire una correzione rapida ed efficace.
+
+L'esempio seguente mostra la sezione delle violazioni che viene visualizzata in una pagina delle risorse per un hypervisor:
+
+image::../media/violations-section.gif[sezione violazioni]

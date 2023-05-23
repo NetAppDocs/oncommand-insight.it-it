@@ -1,0 +1,45 @@
+---
+permalink: config-admin/committing-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: Le informazioni contenute nel riepilogo delle patch consentono di stabilire se le prestazioni della patch sono corrette e quindi di assegnare la patch alla rete. 
+---
+= Eseguire il commit di una patch di origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le informazioni contenute nel riepilogo delle patch consentono di stabilire se le prestazioni della patch sono corrette e quindi di assegnare la patch alla rete.
+
+
+
+== Prima di iniziare
+
+È stata installata una patch e occorre decidere se la patch è stata installata correttamente e deve essere approvata.
+
+
+
+== Fasi
+
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Fare clic su *Patch*.
++
+Se non vengono installate patch, le patch attualmente in fase di revisione sono vuote.
+
+. In *patch attualmente in fase di revisione*, controllare lo stato delle patch dell'origine dati attualmente applicate.
+. Per esaminare i dettagli associati a una patch specifica, fare clic sul nome collegato della patch.
+. Nelle informazioni riepilogative sulle patch, mostrate in questo esempio, controllare i termini *Recommendation* e *Comments* per valutare l'avanzamento della patch.
++
+image::../media/oci-7-patch-approval-gif.gif[finestra di dialogo per l'approvazione delle patch]
+
+. Consultare la tabella *origini dati interessate* per visualizzare lo stato di ciascuna origine dati interessata prima e dopo la patch.
++
+Se si teme che si sia verificato un problema con una delle origini dati da applicare alle patch, fare clic sul nome collegato nella tabella origini dati interessate.
+
+. Se si conclude che la patch deve essere applicata a quel tipo di origine dati, fare clic su *approva*.
++
+Le origini dati vengono modificate e la patch viene rimossa dalle patch attualmente in fase di revisione.
+
+

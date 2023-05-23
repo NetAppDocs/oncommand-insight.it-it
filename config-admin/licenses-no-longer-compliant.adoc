@@ -1,0 +1,18 @@
+---
+permalink: config-admin/licenses-no-longer-compliant.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se viene visualizzato il messaggio "non conforme" nella pagina delle licenze Insight, Insight gestisce più terabyte di quelli concessi in licenza dall"azienda.' 
+---
+= Licenze non più conformi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se viene visualizzato il messaggio "non conforme" nella pagina delle licenze Insight, Insight gestisce più terabyte di quelli concessi in licenza dall'azienda.
+
+Il messaggio "non conforme" indica che la tua azienda ha pagato meno terabyte di quanto Insight stia attualmente gestendo. La differenza tra i terabyte gestiti e il numero di terabyte concessi in licenza viene visualizzata accanto al messaggio di non conformità.
+
+Il funzionamento del sistema Insight non viene compromesso, ma è necessario contattare il rappresentante NetApp per aumentare la copertura della licenza e aggiornare la licenza appropriata.

@@ -1,0 +1,195 @@
+---
+permalink: reporting/reporting-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: A ciascun account utente viene assegnato un ruolo con una serie di autorizzazioni. Il numero di utenti è limitato dal numero di licenze di Reporting associate a ciascun ruolo. 
+---
+= Creazione di report sui ruoli utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A ciascun account utente viene assegnato un ruolo con una serie di autorizzazioni. Il numero di utenti è limitato dal numero di licenze di Reporting associate a ciascun ruolo.
+
+Ciascun ruolo può eseguire le seguenti azioni:
+
+* *Destinatario*
++
+Visualizza i report del portale di reporting OnCommand Insight e imposta le preferenze personali, ad esempio quelle per le lingue e i fusi orari.
+
++
+[NOTE]
+====
+I destinatari non possono creare report, eseguire report, pianificare report, esportare report o eseguire attività amministrative.
+
+====
+* *Business Consumer*
++
+Esegue i report ed esegue tutte le opzioni dei destinatari.
+
+* *Business Author*
++
+Visualizza report pianificati, esegue report in modo interattivo, crea storie, oltre a eseguire tutte le opzioni Business Consumer.
+
+* *Pro Author*
++
+Crea report, crea pacchetti e moduli di dati, oltre a eseguire tutte le opzioni di Business Author.
+
+* *Amministratore*
++
+Esegue attività amministrative di reporting come l'importazione e l'esportazione delle definizioni dei report, la configurazione dei report, la configurazione delle origini dati e l'arresto e il riavvio delle attività di reporting.
+
+
+
+La tabella seguente mostra i privilegi e il numero massimo di utenti consentiti per ciascun ruolo:
+
+|===
+
+
+| Funzione | Destinatario | Consumer aziendale | Autore di business | Pro Author | Amministratore 
+
+
+ a| 
+Visualizzare i report nella scheda contenuto team
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Eseguire i report
+ a| 
+No
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Pianifica i report
+ a| 
+No
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Caricare file esterni
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+No
+
+
+
+ a| 
+Crea storie
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+No
+
+
+
+ a| 
+Creare report
+ a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+
+
+
+ a| 
+Creare pacchetti e moduli dati
+ a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+
+
+
+ a| 
+Eseguire attività amministrative
+ a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+
+
+
+ a| 
+Numero di utenti
+ a| 
+Numero di utenti OnCommand Insight
+ a| 
+20
+ a| 
+2
+ a| 
+1
+ a| 
+1
+
+|===
+Quando si aggiunge un nuovo utente di Data Warehouse e Reporting, se si supera il limite di un ruolo, l'utente viene aggiunto come "`deactivated,`" ed è necessario disattivare o rimuovere un altro utente con tale ruolo per assegnare un nuovo utente.
+
+[NOTE]
+====
+Le funzionalità di creazione dei report richiedono la licenza Insight Plan. Puoi aggiungere altri utenti Business Author e Pro Author acquistando IL PACCHETTO ARAP (Additional Report Authoring Package). Per assistenza, contattare il rappresentante OnCommand Insight.
+
+====
+Questi ruoli utente di reporting non influiscono sull'accesso diretto al database. Questi ruoli utente di reporting non influiscono sulla capacità di creare query SQL utilizzando i data mart.

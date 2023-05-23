@@ -1,0 +1,45 @@
+---
+permalink: install-windows/restoring-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se applicabile, è possibile ripristinare manualmente tutti i report personalizzati di cui è stato eseguito il backup prima dell"aggiornamento; tuttavia, è necessario eseguire questa operazione solo se si perdono i report di se sono stati danneggiati.' 
+---
+= Ripristino di report personalizzati di Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se applicabile, è possibile ripristinare manualmente tutti i report personalizzati di cui è stato eseguito il backup prima dell'aggiornamento; tuttavia, è necessario eseguire questa operazione solo se si perdono i report di se sono stati danneggiati.
+
+
+
+== Fasi
+
+. Aprire il report con un editor di testo, quindi selezionarne e copiarne il contenuto.
+. Accedere al portale di reporting all'indirizzo `+https://fqdn/reporting+`.
+. Nella barra degli strumenti Data Warehouse, fare clic su image:../media/oci-reporting-portal-icon.gif[""] Per aprire il portale Insight Reporting.
+. Dal menu Avvio, selezionare *Report Studio*.
+. Selezionare qualsiasi pacchetto.
++
+Viene visualizzato Report Studio.
+
+. Fare clic su *Crea nuovo*.
+. Selezionare *elenco*.
+. Dal menu Strumenti, selezionare *Apri report dagli Appunti*.
++
+Viene visualizzata la finestra di dialogo *Apri report dagli Appunti*.
+
+. Dal menu file, selezionare *Salva con nome* e salvare il report nella cartella rapporti personalizzati.
+. Aprire il report per verificare che sia stato importato.
++
+Ripetere questa attività per ciascun report.
+
++
+[NOTE]
+====
+Potrebbe essere visualizzato un "`errore di analisi dell'espressione`" quando si carica un report. Ciò significa che la query contiene un riferimento ad almeno un oggetto non esistente, il che significa che non è stato selezionato alcun pacchetto nella finestra origine per validare il report. In questo caso, fare clic con il pulsante destro del mouse su una dimensione del data mart nella finestra Source (origine), selezionare Report Package (pacchetto report), Quindi selezionare il pacchetto associato al report (ad esempio, il pacchetto di inventario se si tratta di un report di inventario o di uno dei pacchetti di performance se si tratta di un report sulle performance) in modo che Report Studio possa convalidarlo e quindi salvarlo.
+
+====
+

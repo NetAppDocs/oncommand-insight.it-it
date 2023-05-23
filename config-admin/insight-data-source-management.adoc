@@ -1,0 +1,28 @@
+---
+permalink: config-admin/insight-data-source-management.html 
+sidebar: sidebar 
+keywords:  
+summary: Le origini dati sono il componente più critico utilizzato per la manutenzione di un ambiente OnCommand Insight. Poiché sono la principale fonte di informazioni per Insight, è fondamentale mantenere le origini dati in uno stato di esecuzione. 
+---
+= Gestione delle origini dati Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le origini dati sono il componente più critico utilizzato per la manutenzione di un ambiente OnCommand Insight. Poiché sono la principale fonte di informazioni per Insight, è fondamentale mantenere le origini dati in uno stato di esecuzione.
+
+È possibile monitorare le origini dati nella rete selezionando un'origine dati per controllare gli eventi relativi al relativo stato e annotando eventuali modifiche che potrebbero aver causato problemi.
+
+Oltre a esaminare una singola origine dati, è possibile eseguire le seguenti operazioni:
+
+* Clonare un'origine dati per creare molte origini dati simili in Insight
+* Modificare le informazioni dell'origine dati
+* Modificare le credenziali
+* Polling del controllo
+* Eliminare l'origine dati
+* Installare le patch di origine dei dati
+* Installare una nuova origine dati da una patch
+* Preparare un report degli errori per il supporto clienti NetApp
+

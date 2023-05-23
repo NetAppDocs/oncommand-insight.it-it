@@ -1,0 +1,69 @@
+---
+permalink: install-windows/remote-acquisition-unit-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: 'È necessario installare un"unità di acquisizione remota (RAU) per acquisire informazioni da dispositivi SAN protetti da firewall, in un sito remoto, in una rete privata o in segmenti di rete diversi. Prima di installare la RAU, assicurarsi che l"ambiente soddisfi i requisiti di sistema operativo RAU, CPU, memoria e spazio su disco.' 
+---
+= Requisiti del server Remote Acquisition Unit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario installare un'unità di acquisizione remota (RAU) per acquisire informazioni da dispositivi SAN protetti da firewall, siti remoti, reti private o in segmenti di rete diversi. Prima di installare la RAU, assicurarsi che l'ambiente soddisfi i requisiti di sistema operativo RAU, CPU, memoria e spazio su disco.
+
+|===
+
+
+| Componente | Requisito 
+
+
+ a| 
+Sistema operativo
+ a| 
+Un computer con Microsoft Windows Server 2012, 2012 R2, 2016 o 2019 a 64 bit con il service pack più recente
+
+
+
+ a| 
+CPU
+ a| 
+4 core CPU
+
+
+
+ a| 
+Memoria
+ a| 
+16 GB DI RAM
+
+
+
+ a| 
+Spazio su disco disponibile
+ a| 
+40 GB
+
+
+
+ a| 
+Rete
+ a| 
+Connessione Ethernet a 100 Mbps/1 Gbps, indirizzo IP statico, connettività IP a tutti i dispositivi FC e porta richiesta al server OnCommand Insight (80 o 443).
+
+
+
+ a| 
+Permessi
+ a| 
+Autorizzazioni di amministratore locale sul server RAU
+
+
+
+ a| 
+Scansione virus
+ a| 
+Durante l'installazione di questo componente di OnCommand Insight, è necessario disattivare completamente tutti i programmi antivirus. Dopo l'installazione, i percorsi utilizzati dal componente Insight devono essere esclusi dalla scansione antivirus. Inoltre, è necessario escludere la cartella IBM/DB2 (ad esempio _C: Programmi IBM DB2_) dalla scansione antivirus dopo l'installazione.
+
+|===

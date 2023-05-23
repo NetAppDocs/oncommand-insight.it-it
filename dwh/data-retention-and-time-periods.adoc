@@ -1,0 +1,100 @@
+---
+permalink: dwh/data-retention-and-time-periods.html 
+sidebar: sidebar 
+keywords:  
+summary: Il data warehouse di OnCommand Insight conserva i dati ottenuti dal processo di estrazione, trasformazione e caricamento per diversi periodi di tempo in base ai diversi data mart e alla granularità temporale dei dati. 
+---
+= Conservazione dei dati, ETL e periodi di tempo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il data warehouse di OnCommand Insight conserva i dati ottenuti dal processo di estrazione, trasformazione e caricamento (ETL) per diversi periodi di tempo in base ai diversi data mart e alla granularità temporale dei dati.
+
+
+
+== Performance Mart e granularità oraria per volumi e volumi interni
+
+Il data warehouse di OnCommand Insight registra le medie orarie, i massimi orari e i bit di accesso per ogni ora del giorno (24 punti dati) per 14 giorni. Il bit di accesso è un valore booleano true se si accede al volume o false se non si accede al volume durante l'intervallo orario. Tutti i 24 punti dati del giorno precedente vengono ottenuti durante il primo processo ETL della giornata.
+
+Non è necessario eseguire un processo ETL all'ora per raccogliere i punti dati orari. L'esecuzione di processi ETL aggiuntivi durante la giornata non consente di ottenere informazioni sulle performance dai server OnCommand Insight.
+
+
+
+== Performance Mart e granularità giornaliera per volumi e volumi interni
+
+Ogni giorno in cui viene elaborato l'ETL, le medie giornaliere del giorno precedente vengono calcolate e popolate all'interno del Data Warehouse. La media giornaliera è un riepilogo dei 24 punti dati del giorno precedente. I data mart delle performance conservano riepiloghi giornalieri per volumi e volumi interni per 13 mesi.
+
+
+
+== Capacità e granularità giornaliera
+
+Le unità di misura della capacità forniscono misurazioni giornaliere di diversi dati relativi alla capacità per un periodo di 13 mesi. I dati relativi alla capacità nel Data Warehouse sono aggiornati all'ultima acquisizione dell'origine dati per il dispositivo prima dell'ETL.
+
+
+
+== Capacità e granularità mensile
+
+Data Warehouse conserva i dati di capacità giornalieri per 13 mesi. Una volta raggiunta la soglia di 13 mesi, i dati relativi alla capacità vengono riepilogati su base mensile. I dati mensili si basano sui valori riportati dalla data rappresentativa del mese.
+
+La tabella seguente mostra i dati mensili inclusi nel riepilogo mensile:
+
+|===
+
+
+| Data | È il valore rappresentativo del mese | Capacità allocata 
+
+
+ a| 
+1 gennaio
+ a| 
+1 (vero)
+ a| 
+50 TB
+
+
+
+ a| 
+2 gennaio
+ a| 
+0 (Falso)
+ a| 
+52 TB
+
+
+
+ a| 
+...
+ a| 
+...
+ a| 
+...
+
+
+
+ a| 
+Gennaio 31
+ a| 
+0 (Falso)
+ a| 
+65 TB
+
+
+
+ a| 
+1 febbraio
+ a| 
+1 (vero)
+ a| 
+65 TB
+
+|===
+In base alla tabella, un report mensile indicherebbe 50 TB allocati per gennaio e 65 TB allocati per febbraio. Tutti gli altri valori di capacità per gennaio non verranno inclusi nel riepilogo mensile.
+
+
+
+== Mart. Inventario
+
+Il data mart di inventario non è storico. Ogni volta che viene eseguito un processo ETL, il magazzino viene cancellato e ricostruito. Pertanto, qualsiasi report generato dal magazzino non riflette la configurazione dell'inventario cronologico.

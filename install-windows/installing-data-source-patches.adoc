@@ -1,0 +1,40 @@
+---
+permalink: install-windows/installing-data-source-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: Se applicabile, è necessario installare le patch più recenti disponibili per le origini dati per sfruttare le funzionalità e i miglioramenti più recenti. Dopo aver caricato una patch di origine dati, è possibile installarla su tutte le origini dati dello stesso tipo. 
+---
+= Installazione delle patch di origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se applicabile, è necessario installare le patch più recenti disponibili per le origini dati per sfruttare le funzionalità e i miglioramenti più recenti. Dopo aver caricato una patch di origine dati, è possibile installarla su tutte le origini dati dello stesso tipo.
+
+
+
+== Prima di iniziare
+
+Devi aver contattato il supporto tecnico e aver ottenuto il `.zip` che contiene le patch di origine dati più recenti, fornendo la versione da cui si sta eseguendo l'aggiornamento e la versione da cui si desidera eseguire l'aggiornamento.
+
+
+
+== Fasi
+
+. Posizionare il file di patch sul server Insight.
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Fare clic su *Patch*.
+. Dal pulsante Actions (azioni), selezionare *Apply patch* (Applica patch).
+. Nella finestra di dialogo *Apply data source patch* (Applica patch origine dati), fare clic su *Browse* (Sfoglia) per individuare il file di patch caricato.
+. Esaminare i tipi di origine dei dati * * Patch name*, * Description* e * interessati*.
+. Se la patch selezionata è corretta, fare clic su *Apply Patch* (Applica patch).
++
+Tutte le origini dati dello stesso tipo vengono aggiornate con questa patch. Insight impone automaticamente il riavvio dell'acquisizione quando si aggiunge un'origine dati. Il rilevamento include il rilevamento delle modifiche nella topologia di rete, inclusa l'aggiunta o l'eliminazione di nodi o interfacce.
+
+. Per forzare il processo di rilevamento manualmente, fare clic su *origini dati* e fare clic su *Esegui nuovamente il polling* accanto all'origine dati per forzare la raccolta dei dati immediatamente.
++
+Se l'origine dati è già in un processo di acquisizione, Insight ignora la richiesta di nuovo polling.
+
+

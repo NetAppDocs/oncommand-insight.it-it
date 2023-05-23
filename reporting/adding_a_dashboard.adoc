@@ -1,0 +1,24 @@
+---
+permalink: reporting/adding_a_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile visualizzare un gruppo di report della dashboard in una scheda per un facile accesso. È possibile aggiungere la scheda da User Preferences (Preferenze utente).' 
+---
+= Aggiunta di una dashboard da User Preferences (Preferenze utente)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare un gruppo di report della dashboard in una scheda per un facile accesso. È possibile aggiungere la scheda da User Preferences (Preferenze utente).
+
+.Fasi
+. Aprire il portale di reporting OnCommand Insight.
+. In alto a destra, fare clic sull'icona della persona per visualizzare un menu a discesa.
+. Selezionare My Preferences (Preferenze).
+. Nella vista Set preferences (Imposta preferenze), fare clic sulla scheda Portal Tabs (schede portale).
+. Nella scheda Portal Tabs (schede portale), fare clic sul collegamento Add (Aggiungi).
+. Nella cartella Public Folders and Dashboard (cartelle pubbliche e dashboard), individuare la dashboard desiderata come scheda e controllarla.
+. Fare clic sulla freccia per spostarla nella casella Selected Entries (voci selezionate), quindi fare clic su OK.
+

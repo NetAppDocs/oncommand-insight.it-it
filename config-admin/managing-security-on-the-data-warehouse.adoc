@@ -1,0 +1,100 @@
+---
+permalink: config-admin/managing-security-on-the-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Il tool securityadmin consente di gestire le opzioni di sicurezza sul server Data Warehouse. La gestione della sicurezza include l"aggiornamento delle password interne per gli utenti interni sul server DWH, la creazione di backup della configurazione di sicurezza o il ripristino delle configurazioni alle impostazioni predefinite.' 
+---
+= Gestione della sicurezza nel Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il `securityadmin` Consente di gestire le opzioni di sicurezza sul server Data Warehouse. La gestione della sicurezza include l'aggiornamento delle password interne per gli utenti interni sul server DWH, la creazione di backup della configurazione di sicurezza o il ripristino delle configurazioni alle impostazioni predefinite.
+
+
+
+== A proposito di questa attività
+
+Si utilizza `securityadmin` tool per gestire la sicurezza:
+
+* Finestre - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux - `/bin/oci-securityadmin.sh`
+
+
+
+
+== Fasi
+
+. Eseguire un login remoto al server Data Warehouse.
+. Avviare lo strumento di amministrazione della protezione in modalità interattiva: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
++
+Il sistema richiede le credenziali di accesso.
+
+. Immettere il nome utente e la password di un account con credenziali "`Admin`".
++
+Il sistema visualizza il menu Security admin per Data Warehouse:
+
++
+** *Backup*
++
+Crea un file zip di backup del vault contenente tutte le password e le chiavi e colloca il file in una posizione specificata dall'utente o nella posizione predefinita:
+
++
+*** Finestre - `C:\Program Files\SANscreen\backup\vault`
+*** Linux - `/var/log/netapp/oci/backup/vault`
+
+
+** *Ripristina*
++
+Ripristina il backup zip del vault creato. Una volta ripristinato, tutte le password e le chiavi vengono ripristinate ai valori esistenti al momento della creazione del backup.
+
++
+[NOTE]
+====
+Il ripristino può essere utilizzato per sincronizzare password e chiavi su più server, ad esempio: - Modificare le chiavi di crittografia su un server - creare un backup del vault - ripristinare il backup del vault sul secondo server
+
++
+
+====
+** *Modificare le chiavi di crittografia*
++
+Modificare la chiave di crittografia DWH utilizzata per crittografare o decrittare password come le password del connettore e le password SMPT.
+
+** *Aggiorna password*
++
+Modificare la password per un account utente specifico.
+
++
+*** _interno
+*** acquisizione
+*** cognos_admin
+*** dwh
+*** dwh_internal
+*** dwhuser
+*** host
+*** inventario
+*** root
+
+
+
+
++
+[NOTE]
+====
+Quando si modificano le password di dwhuser, host, inventario o root, è possibile utilizzare l'hashing delle password SHA-256. Questa opzione richiede che tutti i client che accedono agli account utilizzino connessioni SSL.
+
+====
++
+** *Ripristina impostazioni predefinite*
++
+Ripristina le chiavi di crittografia e le password ai valori predefiniti. I valori predefiniti sono quelli forniti durante l'installazione.
+
+** *Esci*
++
+Uscire da `securityadmin` tool.
+
+
+
+

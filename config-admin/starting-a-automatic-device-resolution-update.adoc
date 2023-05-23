@@ -1,0 +1,24 @@
+---
+permalink: config-admin/starting-a-automatic-device-resolution-update.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Un aggiornamento della risoluzione del dispositivo commuta le modifiche manuali aggiunte dall"ultima esecuzione automatica della risoluzione del dispositivo. L"esecuzione di un aggiornamento può essere utilizzata per salvare ed eseguire solo le nuove voci manuali della configurazione della risoluzione del dispositivo. Non viene eseguita alcuna risoluzione completa del dispositivo.' 
+---
+= Avvio di un aggiornamento automatico della risoluzione del dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un aggiornamento della risoluzione del dispositivo commuta le modifiche manuali aggiunte dall'ultima esecuzione automatica della risoluzione del dispositivo. L'esecuzione di un aggiornamento può essere utilizzata per salvare ed eseguire solo le nuove voci manuali della configurazione della risoluzione del dispositivo. Non viene eseguita alcuna risoluzione completa del dispositivo.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di Insight.
+. Fare clic su *Gestisci* > *risoluzione periferica*
+. Nella schermata *Device resolution* (risoluzione periferica), fare clic sulla freccia verso il basso nel pulsante *Run AR* (Esegui AR*).
+. Fare clic su *Aggiorna* per avviare l'aggiornamento.
+

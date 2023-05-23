@@ -1,0 +1,24 @@
+---
+permalink: howto/custom-dashboard-group-by.html 
+sidebar: sidebar 
+keywords:  
+summary: I dati in un widget tabella possono essere raggruppati in base a qualsiasi attributo disponibile, consentendo di visualizzare una panoramica dei dati e di approfonirne i dettagli. Le metriche nella tabella vengono inserite per una facile visualizzazione in ogni riga compressa. 
+---
+= Raggruppamento in widget tabella
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I dati in un widget tabella possono essere raggruppati in base a qualsiasi attributo disponibile, consentendo di visualizzare una panoramica dei dati e di approfonirne i dettagli. Le metriche nella tabella vengono inserite per una facile visualizzazione in ogni riga compressa.
+
+I widget tabella consentono di raggruppare i dati in base agli attributi impostati. Ad esempio, è possibile che la tabella mostri gli IOPS di storage totali raggruppati in base ai data center in cui risiedono tali storage. In alternativa, è possibile visualizzare una tabella di macchine virtuali raggruppate in base all'hypervisor che le ospita. Dall'elenco, è possibile espandere ciascun gruppo per visualizzare le risorse di quel gruppo.
+
+Il raggruppamento è disponibile solo nel tipo di widget *Table*.
+
+
+
+== Rolloup dei dati sulle performance
+
+Se si include una colonna per i dati delle performance (ad esempio, _IOPS - Total_) in un widget di tabella, quando si sceglie di raggruppare i dati è possibile scegliere un metodo di rolloup per tale colonna. Il metodo di rolloup predefinito consiste nella visualizzazione della _media_ dei dati sottostanti nella riga del gruppo. l'unità organizzativa può anche scegliere di visualizzare i dati _sum_, _minimum_ o _maximum_.

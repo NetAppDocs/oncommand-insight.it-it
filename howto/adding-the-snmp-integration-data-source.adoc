@@ -1,0 +1,66 @@
+---
+permalink: howto/adding-the-snmp-integration-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati SNMP di integrazione fornisce proprietà di configurazione SNMP comuni simili ad altre origini dati basate su SNMP incluse con le origini dati OnCommand Insight per Brocade e Cisco.' 
+---
+= Creazione di un'origine dati di integrazione SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati SNMP di integrazione fornisce proprietà di configurazione SNMP comuni simili ad altre origini dati basate su SNMP incluse con le origini dati OnCommand Insight per Brocade e Cisco.
+
+
+
+== Prima di iniziare
+
+Per utilizzare correttamente l'origine dati SNMP di integrazione per la raccolta, devono essere vere le seguenti condizioni:
+
+* È necessario aver già importato un pacchetto di integrazione da utilizzare per questa origine dati SNMP.
+* Tutti i dispositivi di destinazione condividono le stesse credenziali.
+* Tutti i dispositivi di destinazione implementano gli oggetti SNMP a cui fa riferimento il pacchetto di integrazione configurato.
+
+
+
+
+== A proposito di questa attività
+
+Per creare un'origine dati di integrazione SNMP, scegliere il vendor "Integration" (integrazione) e il modello "SNMP" nella creazione guidata dell'origine dati.
+
+
+
+== Fasi
+
+. Nell'interfaccia utente Web di OnCommand Insight, fare clic su *Amministratore* > *origini dati*
+. Fare clic su *+Aggiungi*
+. Immettere un nome per l'origine dati
+. Per Vendor (fornitore), selezionare *Integration* (integrazione)
+. Per modello, selezionare *SNMP*
++
+image::../media/add-integration-ds.gif[aggiungere i dati di integrazione]
+
+. Per cosa raccogliere, selezionare *integrazione*
++
+Questo è l'unico pacchetto su questa origine dati ed è selezionato per impostazione predefinita:
+
+. Fare clic su *Configuration* (Configurazione)
+. Inserire gli indirizzi IP dei sistemi da cui si desidera raccogliere i dati SNMP
+. Selezionare un SNMP Integration Pack importato
+. Impostare l'intervallo di polling dell'integrazione
+. Selezionare la versione SNMP
+. Immettere la stringa di comunità SNMP
++
+Per SNMP V1 e V2.
+
+. Aggiungere il nome utente e la password per i sistemi da cui verranno raccolti i dati.
++
+Per SNMP V3.
+
+. Fare clic su *Advanced Configuration* (Configurazione avanzata)
++
+Vengono visualizzate le impostazioni predefinite della configurazione avanzata. Apportare le modifiche necessarie a queste impostazioni.
+
+

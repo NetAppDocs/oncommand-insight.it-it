@@ -1,0 +1,24 @@
+---
+permalink: config-admin/data-source-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le patch di origine dei dati risolvono i problemi con le patch esistenti e consentono inoltre di aggiungere facilmente nuovi tipi di origine dati (vendor e modelli). Per ogni tipo di origine dati nella rete, è possibile caricare patch di origine dati. È inoltre possibile installare, testare e gestire il processo di patch. Tuttavia, per un tipo di origine dati può essere attiva una sola patch alla volta.' 
+---
+= Quali patch di origine dati sono
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le patch di origine dati risolvono i problemi con le patch esistenti e consentono inoltre di aggiungere facilmente nuovi tipi di origine dati (vendor e modelli). Per ogni tipo di origine dati nella rete, è possibile caricare patch di origine dati. È inoltre possibile installare, testare e gestire il processo di patch. Tuttavia, per un tipo di origine dati può essere attiva una sola patch alla volta.
+
+Per ciascuna patch, è possibile eseguire le seguenti operazioni:
+
+* Controllare prima e dopo il confronto di ciascuna origine dati che riceve la patch.
+* Scrivere commenti per spiegare le decisioni o riepilogare la ricerca.
+* Apportare modifiche a un'origine dati che non risponde correttamente alla patch.
+* Approvare la patch da applicare al server Insight.
+* Eseguire il rollback di una patch che non funziona come desiderato.
+* Sostituire una patch guasta con una diversa.
+

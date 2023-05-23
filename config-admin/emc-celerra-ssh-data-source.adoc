@@ -1,0 +1,156 @@
+---
+permalink: config-admin/emc-celerra-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati Celerra raccoglie le informazioni di inventario dallo storage Celerra. Per la configurazione, questa origine dati richiede l"indirizzo IP dei processori di storage e un nome utente e una password di sola lettura.' 
+---
+= Fonte dei dati EMC Celerra
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati Celerra (SSH) raccoglie le informazioni di inventario dallo storage Celerra. Per la configurazione, questa origine dati richiede l'indirizzo IP dei processori di storage e un nome utente e una password di sola lettura.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati EMC Celerra. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Server di rete Celerra
+ a| 
+Storage
+
+
+
+ a| 
+Celerra Meta Volume/Pool di storage Celerra
+ a| 
+Pool di storage
+
+
+
+ a| 
+File System
+ a| 
+Volume interno
+
+
+
+ a| 
+Data Mover. (Mover dati
+ a| 
+Controller
+
+
+
+ a| 
+File System montato su un Data Mover
+ a| 
+Condivisione file
+
+
+
+ a| 
+Esportazioni CIFS e NFS
+ a| 
+Condividere
+
+
+
+ a| 
+Volume del disco
+ a| 
+LUN back-end
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* L'indirizzo IP del processore di storage
+* Nome utente e password di sola lettura
+* Porta SSH 22
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Indirizzo di Celerra
+ a| 
+Indirizzo IP o nome di dominio completo del dispositivo Celerra
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utilizzato per accedere al dispositivo Celerra
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per accedere al dispositivo Celerra
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (minuti)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 20 minuti)
+
+
+
+ a| 
+Timeout attesa processo SSH (sec)
+ a| 
+Timeout processo SSH (impostazione predefinita: 600 secondi)
+
+
+
+ a| 
+Numero di tentativi
+ a| 
+Numero di tentativi di inventario
+
+
+
+ a| 
+Timeout attesa banner SSH (sec)
+ a| 
+Timeout di attesa banner SSH (impostazione predefinita: 20 secondi)
+
+|===

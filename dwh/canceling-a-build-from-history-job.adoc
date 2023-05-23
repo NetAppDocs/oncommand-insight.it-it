@@ -1,0 +1,23 @@
+---
+permalink: dwh/canceling-a-build-from-history-job.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile annullare tutti i lavori pianificati. Lo stato del lavoro diventa "interrotto".' 
+---
+= Annullamento di una build da un processo di cronologia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile annullare tutti i lavori pianificati. Lo stato del lavoro diventa "`Aborted`".
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *Build from History* (Crea dalla cronologia).
+. Fare clic su *Annulla*.
+

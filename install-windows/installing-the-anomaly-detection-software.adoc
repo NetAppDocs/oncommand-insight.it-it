@@ -1,0 +1,51 @@
+---
+permalink: install-windows/installing-the-anomaly-detection-software.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight contiene un software che applica il rilevamento delle anomalie dell"apprendimento automatico ai dati Insight. È possibile installare questo software separatamente dagli altri componenti di OnCommand Insight.' 
+---
+= Installazione del software di rilevamento delle anomalie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight contiene un software che applica il rilevamento delle anomalie dell'apprendimento automatico ai dati Insight. È possibile installare questo software separatamente dagli altri componenti di OnCommand Insight.
+
+
+
+== Prima di iniziare
+
+È necessario aver completato tutti i prerequisiti di installazione.
+
+
+
+== Fasi
+
+. Accedere al server di rilevamento delle anomalie utilizzando un account con privilegi sudo.
+. Copiare il `.zip` File che contiene il software di rilevamento delle anomalie sul server Linux.
+. Estrarre i file in `oci-prelert-<version>-linux-x86_64` directory.
+. Accedere alla directory in cui si trova il programma di installazione: `cd oci-prelert-<version>-linux-x86_64`
+. Installare il software di rilevamento delle anomalie: `sudo ./oci-prelert-install.sh`
++
+Durante l'installazione, viene richiesto di immettere il nome del server o l'indirizzo IP del server OnCommand Insight, nonché il nome utente e la password di un account con privilegi di amministratore.
+
++
+È possibile rimuovere il software di rilevamento delle anomalie utilizzando il seguente comando: `sudo /usr/bin/oci-prelert-uninstall.sh`
+
+
+
+
+
+== Risultati
+
+Il software viene automaticamente registrato con l'istanza di OnCommand Insight specificata nell'installazione. Il software può comunicare solo con l'istanza di OnCommand Insight con cui è registrato e solo un'istanza del software può essere registrata con un server OnCommand Insight.
+
+Se si riavvia il server che esegue il software di rilevamento delle anomalie o il server Insight, il processo di rilevamento delle anomalie viene riavviato automaticamente.
+
+[NOTE]
+====
+Se si installa il software di rilevamento delle anomalie tramite la riga di comando fornendo i parametri, invece di lasciare la richiesta di installazione per i parametri, non sarà possibile eseguire la registrazione con il server Insight, a meno che non si fornisca il seguente parametro: `--path rest/v1`
+
+====

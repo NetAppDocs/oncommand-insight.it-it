@@ -1,0 +1,231 @@
+---
+permalink: config-admin/metric-definitions.html 
+sidebar: sidebar 
+keywords:  
+summary: La sezione visualizzazione avanzata di una pagina di risorse visualizza diverse metriche in base al periodo di tempo selezionato per la risorsa. Ogni metrica viene visualizzata nel proprio grafico delle performance. Puoi aggiungere o rimuovere metriche e risorse correlate dai grafici a seconda dei dati che desideri visualizzare. 
+---
+= Definizioni metriche Expert View
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione visualizzazione avanzata di una pagina di risorse visualizza diverse metriche in base al periodo di tempo selezionato per la risorsa. Ogni metrica viene visualizzata nel proprio grafico delle performance. Puoi aggiungere o rimuovere metriche e risorse correlate dai grafici a seconda dei dati che desideri visualizzare.
+
+|===
+
+
+| Metrico | Descrizione 
+
+
+ a| 
+BB Credit zero Rx, Tx
+ a| 
+Numero di volte in cui il conteggio del credito buffer-to-buffer di ricezione/trasmissione è passato a zero durante il periodo di campionamento. Questa metrica rappresenta il numero di volte in cui la porta collegata ha dovuto interrompere la trasmissione perché questa porta non era in credito da fornire.
+
+
+
+ a| 
+Durata zero credito BB Tx
+ a| 
+Tempo in millisecondi durante il quale il credito BB trasmesso era pari a zero durante l'intervallo di campionamento.
+
+
+
+ a| 
+Percentuale di hit della cache (totale, lettura, scrittura) %
+ a| 
+Percentuale di richieste che generano riscontri nella cache. Maggiore è il numero di accessi rispetto agli accessi al volume, migliori sono le performance. Questa colonna è vuota per gli array di storage che non raccolgono le informazioni di accesso alla cache.
+
+
+
+ a| 
+Utilizzo della cache (totale) %
+ a| 
+Percentuale totale di richieste di cache che determinano accessi alla cache
+
+
+
+ a| 
+Scartati di classe 3
+ a| 
+Numero di scarti di trasporto dati Fibre Channel di classe 3.
+
+
+
+ a| 
+Utilizzo della CPU (totale) %
+ a| 
+Quantità di risorse CPU utilizzate attivamente, come percentuale del totale disponibile (su tutte le CPU virtuali).
+
+
+
+ a| 
+Errore CRC
+ a| 
+Numero di frame con CRC (Cyclic Redundancy Check) non validi rilevati dalla porta durante il periodo di campionamento
+
+
+
+ a| 
+Frame rate
+ a| 
+Frame rate di trasmissione in frame al secondo (FPS)
+
+
+
+ a| 
+Dimensione media frame (Rx, Tx)
+ a| 
+Rapporto tra traffico e dimensione del frame. Questa metrica consente di identificare la presenza di frame overhead nel fabric.
+
+
+
+ a| 
+Dimensione frame troppo lunga
+ a| 
+Numero di frame di trasmissione dati Fibre Channel troppo lunghi.
+
+
+
+ a| 
+Dimensione del frame troppo breve
+ a| 
+Numero di frame di trasmissione dati Fibre Channel troppo brevi.
+
+
+
+ a| 
+Densità i/o (totale, lettura, scrittura)
+ a| 
+Numero di IOPS diviso per la capacità utilizzata (acquisita dall'ultimo sondaggio di inventario dell'origine dati) per il volume, il volume interno o l'elemento di storage. Misurato in numero di operazioni di i/o al secondo per TB.
+
+
+
+ a| 
+IOPS (totale, lettura, scrittura)
+ a| 
+Numero di richieste di servizio i/o in lettura/scrittura che passano attraverso il canale i/o o una parte di tale canale per unità di tempo (misurato in i/o al secondo)
+
+
+
+ a| 
+Throughput IP (totale, lettura, scrittura)
+ a| 
+Total (totale): Tasso aggregato alla quale i dati IP sono stati trasmessi e ricevuti in megabyte al secondo. Lettura: Throughput IP (ricezione): Velocità media di ricezione dei dati IP in megabyte al secondo.
+
+Write: Throughput IP (trasmissione): Velocità media di trasmissione dei dati IP in megabyte al secondo.
+
+
+
+ a| 
+Latenza (totale, lettura, scrittura)
+ a| 
+Latenza (R&W): Velocità con cui i dati vengono letti o scritti sulle macchine virtuali in un periodo di tempo fisso. Il valore viene misurato in megabyte al secondo.
+
+Latenza: Tempo di risposta medio delle macchine virtuali in un archivio dati.
+
+Latenza massima: Il tempo di risposta più elevato dalle macchine virtuali in un archivio dati.
+
+
+
+ a| 
+Errore di collegamento
+ a| 
+Numero di errori di collegamento rilevati dalla porta durante il periodo di campionamento.
+
+
+
+ a| 
+Link RESET Rx, Tx
+ a| 
+Numero di ripristini del collegamento di ricezione o trasmissione durante il periodo di campionamento. Questa metrica rappresenta il numero di ripristini del collegamento emessi dalla porta collegata a questa porta.
+
+
+
+ a| 
+Utilizzo della memoria (totale) %
+ a| 
+Soglia per la memoria utilizzata dall'host.
+
+
+
+ a| 
+% Parziale R/W (totale)
+ a| 
+Numero totale di volte in cui un'operazione di lettura/scrittura attraversa un limite di stripe su qualsiasi modulo di disco in un LUN RAID 5, RAID 1/0 o RAID 0 generalmente, gli attraversamenti di stripe non sono vantaggiosi, perché ciascuno richiede un i/O. aggiuntivo Una percentuale bassa indica una dimensione efficiente degli elementi di stripe e indica un allineamento non corretto di un volume (o di un LUN NetApp).
+
+Per CLARiiON, questo valore è il numero di passaggi di stripe diviso per il numero totale di IOPS.
+
+
+
+ a| 
+Errori di porta
+ a| 
+Report degli errori di porta nel periodo di campionamento/intervallo di tempo specificato.
+
+
+
+ a| 
+Conteggio delle perdite di segnale
+ a| 
+Numero di errori di perdita del segnale. Se si verifica un errore di perdita del segnale, non è presente alcun collegamento elettrico e si è verificato un problema fisico.
+
+
+
+ a| 
+Tasso di swap (tasso totale, tasso in entrata, tasso in uscita)
+ a| 
+Velocità con cui la memoria viene scambiata in entrata, in uscita o entrambe le cose da disco a memoria attiva durante il periodo di campionamento. Questo contatore si applica alle macchine virtuali.
+
+
+
+ a| 
+Numero di perdite di sincronizzazione
+ a| 
+Numero di errori di perdita della sincronizzazione. Se si verifica un errore di perdita della sincronizzazione, l'hardware non può rilevare il traffico o bloccarsi su di esso. Tutte le apparecchiature potrebbero non utilizzare la stessa velocità di trasmissione dati oppure le ottiche o le connessioni fisiche potrebbero essere di scarsa qualità. La porta deve risincronizzarsi dopo ogni errore, con un impatto sulle prestazioni del sistema. Misurato in KB/sec.
+
+
+
+ a| 
+Throughput (totale, lettura, scrittura)
+ a| 
+Velocità con cui i dati vengono trasmessi, ricevuti o entrambi in un periodo di tempo fisso in risposta alle richieste di servizio i/o (misurata in MB al secondo).
+
+
+
+ a| 
+Timeout Discard frames - Tx
+ a| 
+Numero di frame di trasmissione scartati a causa del timeout.
+
+
+
+ a| 
+Velocità di traffico (totale, lettura, scrittura)
+ a| 
+Traffico trasmesso, ricevuto o entrambi ricevuti durante il periodo di campionamento, in megibyte al secondo.
+
+
+
+ a| 
+Utilizzo del traffico (totale, lettura, scrittura)
+ a| 
+Rapporto tra traffico ricevuto/trasmesso/totale e capacità di ricezione/trasmissione/totale, durante il periodo di campionamento.
+
+
+
+ a| 
+Utilizzo (totale, lettura, scrittura) %
+ a| 
+Percentuale della larghezza di banda disponibile utilizzata per la trasmissione (Tx) e la ricezione (Rx).
+
+
+
+ a| 
+Scrittura in sospeso (totale)
+ a| 
+Numero di richieste di servizio i/o in scrittura in sospeso.
+
+|===

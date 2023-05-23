@@ -1,0 +1,28 @@
+---
+permalink: reporting/reporting-data-model.html 
+sidebar: sidebar 
+keywords:  
+summary: La tua azienda può trarre vantaggio dai dati rilevati e memorizzati nel data warehouse di OnCommand Insight. Il data warehouse di OnCommand Insight è un repository centralizzato che memorizza i dati provenienti da più fonti di informazioni e li trasforma in un modello di dati comune e multidimensionale per eseguire query e analisi in modo efficiente. 
+---
+= Modello di dati di reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La tua azienda può trarre vantaggio dai dati rilevati e memorizzati nel data warehouse di OnCommand Insight. Il data warehouse di OnCommand Insight è un repository centralizzato che memorizza i dati provenienti da più fonti di informazioni e li trasforma in un modello di dati comune e multidimensionale per eseguire query e analisi in modo efficiente.
+
+Da questo repository, è possibile generare report personalizzati come chargeback, analisi dei consumi e report di previsione che rispondono a domande come le seguenti:
+
+* Di quale inventario dispongo?
+* Dov'è il mio inventario?
+* Chi utilizza le nostre risorse?
+* Qual è il chargeback per lo storage allocato per una business unit?
+* Quanto spazio di crescita ho sulle porte dello switch?
+* Per quanto tempo è necessario acquisire ulteriore capacità di storage?
+* Le business unit sono allineate lungo i livelli di storage appropriati?
+* Come cambia l'allocazione dello storage in un mese, un quarto o un anno?
+
+
+Utilizzando il modello di dati fornito con i report di OnCommand Insight, è possibile utilizzare gli strumenti di creazione dei report per progettare e pianificare i report.

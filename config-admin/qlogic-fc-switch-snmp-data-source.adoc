@@ -1,0 +1,124 @@
+---
+permalink: config-admin/qlogic-fc-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per la configurazione, l"origine dati QLogic FC Switch (SNMP) richiede l"indirizzo di rete del dispositivo FC Switch, specificato come indirizzo IP, e una stringa di comunità di sola lettura SNMP utilizzata per accedere al dispositivo.' 
+---
+= Origine dati QLogic FC Switch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per la configurazione, l'origine dati QLogic FC Switch (SNMP) richiede l'indirizzo di rete del dispositivo FC Switch, specificato come indirizzo IP, e una stringa di comunità SNMP di sola lettura utilizzata per accedere al dispositivo.
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Switch SANsurfer
+ a| 
+Indirizzo IP o nome di dominio completo per lo switch SANSurfer
+
+
+
+ a| 
+Versione SNMP
+ a| 
+Versione SNMP
+
+
+
+ a| 
+Community SNMP
+ a| 
+Stringa di comunità SNMP
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente dello switch SANSurfer
+
+
+
+ a| 
+Password
+ a| 
+Password per lo switch SANSurfer
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 15 minuti)
+
+
+
+ a| 
+Protocollo SNMP Auth
+ a| 
+Protocollo di autenticazione SNMP (solo SNMPv3)
+
+
+
+ a| 
+Tentativi SNMP
+ a| 
+Numero di tentativi SNMP
+
+
+
+ a| 
+Timeout SNMP (ms)
+ a| 
+Timeout SNMP (impostazione predefinita: 5000 ms)
+
+
+
+ a| 
+Attivare il trapping
+ a| 
+Selezionare per attivare il trapping
+
+
+
+ a| 
+Tempo minimo tra trap (sec)
+ a| 
+Tempo minimo tra i tentativi di acquisizione attivati da trap (impostazione predefinita: 10 secondi)
+
+
+
+ a| 
+Nome fabric
+ a| 
+Nome del fabric che deve essere segnalato dall'origine dati. Lasciare vuoto per riportare il nome del fabric come WWN.
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+|===

@@ -1,0 +1,57 @@
+---
+permalink: config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html 
+sidebar: sidebar 
+keywords:  
+summary: È necessario modificare la configurazione del data warehouse di OnCommand Insight per supportare gli accessi con smart card e certificati per il server Cognos. 
+---
+= Configurazione dei Cognos per l'accesso con smart card e certificato (da OnCommand Insight 7.3.5 a 7.3.9)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario modificare la configurazione del data warehouse di OnCommand Insight per supportare gli accessi con smart card (CAC) e certificati per il server Cognos.
+
+
+
+== Prima di iniziare
+
+Questa procedura si applica ai sistemi che eseguono OnCommand Insight dalla versione 7.3.5 alla 7.3.9.
+
+[NOTE]
+====
+Per le istruzioni più aggiornate sul CAC e sul certificato, consulta i seguenti articoli della Knowledge base (è richiesto l'accesso al supporto):
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["Come configurare l'autenticazione della scheda di accesso comune (CAC) per OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["Come configurare l'autenticazione della scheda di accesso comune (CAC) per il data warehouse OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["Come creare e importare un certificato firmato dall'autorità di certificazione (CA) in OnComand Insight e OnCommand Insight Data Warehouse 7.3.x"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["Come creare un certificato autofirmato in OnCommand Insight 7.3.X installato su un host Windows"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Come importare un certificato firmato dall'autorità di certificazione (CA) di Cognos in OnCommand DataWarehouse 7.3.3 e versioni successive"]
+
+
+====
+
+
+== Fasi
+
+. Aggiungere le autorità di certificazione (CA) al trustore Cognos.
++
+.. In una finestra di comando, passare a. `..\SANscreen\cognos\analytics\configuration\certs\`
+.. Utilizzare `keytool` Utility per elencare le CA attendibili: `..\..\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass NoPassWordSet`
++
+La prima parola in ciascuna riga indica l'alias della CA.
+
+.. Se non esistono file adatti, fornire un file di certificato CA, di solito un `.pem` file.
+.. Per includere le CA del cliente con le CA attendibili di OnCommand Insight, visitare il sito Web all'indirizzo `..\SANscreen\cognos\analytics\configuration\certs\`.
+.. Utilizzare `keytool` utility per importare `.pem` file: `..\..\jre\bin\keytool.exe -importcert -keystore CAMKeystore.jks -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
++
+`my_alias` È in genere un alias che identificherebbe facilmente la CA in``keytool -list`` operazione.
+
+.. Quando viene richiesta una password, immettere `NoPassWordSet`.
+.. Risposta `yes` quando viene richiesto di considerare attendibile il certificato.
+
+
+. Per attivare la modalità CAC, eseguire `..\SANscreen\bin\cognos_cac\enableCognosCAC.bat`
+. Per disattivare la modalità CAC, eseguire `..\SANscreen\bin\cognos_cac\disableCognosCAC.bat`
+

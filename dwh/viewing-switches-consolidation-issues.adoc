@@ -1,0 +1,67 @@
+---
+permalink: dwh/viewing-switches-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: I dati riportati per gli switch derivano dal data mart di inventario. Per tutti gli switch, è presente una riga per ciascun connettore che li segnala, oltre al connettore primario da cui ciascuno switch viene prelevato. 
+---
+= Visualizzazione dei problemi di consolidamento degli switch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I dati riportati per gli switch derivano dal data mart di inventario. Per tutti gli switch, è presente una riga per ciascun connettore che li segnala, oltre al connettore primario da cui ciascuno switch viene prelevato.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su**Troubleshooting** (risoluzione dei problemi).
+. Nella sezione *consolidamento dello chassis*, fare clic su *Switch SAN*.
+. Facoltativamente, filtrare i dati in questa vista digitando una parte del testo e facendo clic su *Filter* (filtro). Per deselezionare il filtro, deselezionare la casella Filter (filtro) e fare clic su *Filter* (filtro). È possibile filtrare in base al nome dello switch, all'IP dello switch, al modello del vendor o all'ID oggetto OnCommand Insight.
++
+Il filtro fa distinzione tra maiuscole e minuscole.
+
+. Esaminare i seguenti dati:
++
+** *GUID*
++
+Global Unique Identifier per questo tipo di dispositivo consolidato (storage array)
+
+** *Nome*
++
+Nome dell'array storage consolidato così come appare nel data warehouse
+
+** *IP*
++
+Indirizzo IP dello storage array consolidato
+
+** *Fornitore e modello*
++
+Nome del vendor che vende lo storage array consolidato e numero di modello del produttore
+
+** *WWN*
++
+WWN per lo switch di consolidamento
+
+** *Connettore principale*
++
+Nome del connettore OnCommand Insight che era l'origine effettiva dei dati
+
+** *Connettori disponibili*
++
+Tutti i connettori OnCommand Insight in cui risiede lo storage array consolidato
+
+** *Insight ID*
++
+ID dello storage array consolidato sullo chassis OnCommand Insight in cui risiede il connettore principale
+
+** *Insight Change Time*
++
+Quando si è verificato un aggiornamento in OnCommand Insight per lo storage array e quando lo stesso storage array è stato aggiornato in altri server OnCommand Insight
+
+
+
+

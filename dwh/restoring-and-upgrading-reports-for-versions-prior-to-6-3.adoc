@@ -1,0 +1,52 @@
+---
+permalink: dwh/restoring-and-upgrading-reports-for-versions-prior-to-6-3.html 
+sidebar: sidebar 
+keywords:  
+summary: Se si sta aggiornando una versione di Insight precedente alla 6.3, è necessario ripristinare manualmente gli artefatti di reporting. 
+---
+= Ripristino e aggiornamento dei report per le versioni precedenti alla 6.3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si sta aggiornando una versione di Insight precedente alla 6.3, è necessario ripristinare manualmente gli artefatti di reporting.
+
+
+
+== Prima di iniziare
+
+Seguire le istruzioni riportate negli argomenti "aggiornamento del data warehouse (DWH)" e "Backup di report personalizzati e artefatti di reporting".
+
+
+
+== Fasi
+
+. Per ripristinare gli artefatti di reporting dalle release precedenti alla versione 6.3, copiare il file Export Backup.zip creato e memorizzato nel `<install>\cognos\c10_64\deployment` directory.
+. Aprire un browser e accedere a. `http://<server>:<port>/reporting` per il server e la porta utilizzati durante l'installazione.
+. Inserire il nome utente e la password e fare clic su *Login*.
+. Dal menu *Launch*, selezionare *Insight Reporting Administration*.
+. Fare clic sulla scheda *Configurazione*.
++
+A causa delle modifiche apportate al modello di dati, i report nei vecchi pacchetti potrebbero non essere eseguiti e devono essere aggiornati.
+
+. Fare clic su *Content Administration* (Amministrazione contenuti).
+. Fare clic sul pulsante *New Import* (Nuova importazione).
+. Assicurarsi che l'archivio sia stato copiato nella directory di distribuzione (ad esempio, `backup6.0.zip`) E fare clic su *Avanti*.
+. Se è stata immessa una password per proteggere l'archivio, inserire la password e fare clic su *OK*.
+. Modificare il nome `+Export...+` a. `Import Backup` E fare clic su *Avanti*.
+. Fare clic sull'icona a forma di matita accanto al nome di ciascun pacchetto e, se necessario, inserire un nuovo nome di destinazione. Ad esempio, aggiungere un `_original` suffisso al nome esistente. Quindi fare clic su *OK*.
+. Dopo aver rinominato i nomi dei pacchetti di destinazione per tutti i pacchetti, selezionare tutte le cartelle blu e fare clic su *Avanti* per continuare.
+. Accettare tutti i valori predefiniti.
+. Fare clic su *fine*, quindi selezionare *Esegui*.
+. Verificare i dettagli dell'importazione e fare clic su *OK*.
+. Fare clic su *Refresh* (Aggiorna) per visualizzare lo stato dell'importazione.
+. Fare clic su *Close* (Chiudi) al termine dell'importazione.
+
+
+
+
+== Risultati
+
+Nella scheda cartelle pubbliche vengono visualizzati due set di pacchetti. Ad esempio, uno con un `7.0` suffisso (per la versione più recente) e uno con un `_original` (o qualsiasi altro elemento inserito durante la procedura di backup/ripristino) suffisso che contiene i vecchi report. A causa delle modifiche apportate al modello di dati, i report nei vecchi pacchetti potrebbero non essere eseguiti e devono essere aggiornati. Le schede del portale indicano ora la versione corrente delle pagine del portale.

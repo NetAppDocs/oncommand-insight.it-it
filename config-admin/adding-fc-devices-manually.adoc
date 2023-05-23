@@ -1,0 +1,46 @@
+---
+permalink: config-admin/adding-fc-devices-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile aggiungere manualmente un dispositivo Fibre Channel a OnCommand Insight utilizzando la funzione di aggiunta manuale disponibile nella scheda Device resolution FC Identify (identificazione FC risoluzione dispositivo). Questo processo potrebbe essere utilizzato per la pre-identificazione di un dispositivo che si prevede venga scoperto in futuro.' 
+---
+= Aggiunta manuale di un dispositivo Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere manualmente un dispositivo Fibre Channel a OnCommand Insight utilizzando la funzione di aggiunta manuale disponibile nella scheda Device resolution FC Identify (identificazione FC risoluzione dispositivo). Questo processo potrebbe essere utilizzato per la pre-identificazione di un dispositivo che si prevede venga scoperto in futuro.
+
+
+
+== Prima di iniziare
+
+Per aggiungere correttamente un identificativo del dispositivo al sistema, è necessario conoscere l'indirizzo WWN o IP e il nome del dispositivo.
+
+
+
+== A proposito di questa attività
+
+È possibile aggiungere manualmente un host, uno storage, un nastro o un dispositivo Fibre Channel sconosciuto.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di Insight
+. Fare clic su *Gestisci* > *risoluzione del dispositivo*
+. Fare clic sulla scheda *FC Identify* (identificazione FC).
+. Fare clic sul pulsante Aggiungi.
++
+Viene visualizzata la finestra di dialogo Add Device (Aggiungi dispositivo)
+
+. Immettere il numero WWN o l'indirizzo IP, il nome della periferica e selezionare il tipo di periferica.
+
+
+
+
+== Risultati
+
+Il dispositivo inserito viene aggiunto all'elenco dei dispositivi nella scheda FC Identify (identificazione FC). La "`regola`" è identificata come Manuale.

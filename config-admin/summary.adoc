@@ -1,0 +1,18 @@
+---
+permalink: config-admin/summary.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La sezione Summary (Riepilogo) di una pagina asset visualizza un riepilogo delle informazioni relative alla risorsa specifica e mostra i problemi relativi alla risorsa, indicati da un cerchio rosso, con collegamenti ipertestuali a informazioni aggiuntive sulle risorse correlate e a eventuali policy di performance assegnate alla risorsa.' 
+---
+= Riepilogo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione Summary (Riepilogo) di una pagina asset visualizza un riepilogo delle informazioni relative alla risorsa specifica e mostra i problemi relativi alla risorsa, indicati da un cerchio rosso, con collegamenti ipertestuali a informazioni aggiuntive sulle risorse correlate e a eventuali policy di performance assegnate alla risorsa.
+
+Nell'esempio riportato di seguito vengono illustrati alcuni tipi di informazioni disponibili nella sezione Summary (Riepilogo) di una pagina di risorse per una macchina virtuale. Qualsiasi elemento con un cerchio rosso fisso accanto ad esso indica potenziali problemi con l'ambiente monitorato.
+
+image::../media/summary-section.gif[sezione di riepilogo]

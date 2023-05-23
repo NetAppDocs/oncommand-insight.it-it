@@ -1,0 +1,123 @@
+---
+permalink: howto/configuring-business-entities-for-your-company.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La comprensione degli elementi di business della tua struttura aziendale ti aiuta a tenere traccia dell"utilizzo delle risorse e a generare report sui costi. Qui configureremo le tue entità aziendali.' 
+---
+= Configurazione delle entità di business per la tua azienda
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La comprensione degli elementi di business della tua struttura aziendale ti aiuta a tenere traccia dell'utilizzo delle risorse e a generare report sui costi. Qui configureremo le tue entità aziendali.
+
+
+
+== A proposito di questa attività
+
+OnCommand Insight consente di definire le entità di business in una gerarchia che include fino a quattro livelli di granularità.
+
+* *Tenant*
++
+Utilizzato principalmente dai service provider per associare le risorse a un cliente. Il livello di tenant è necessario se l'azienda è un ISP e si desidera tenere traccia dell'utilizzo delle risorse da parte dei clienti.
+
+* *Line of Business (LOB)*
++
+Una linea di business o di prodotto all'interno di un'azienda, ad esempio Data Storage. La linea di business è necessaria nella gerarchia se è necessario tenere traccia dei dati delle diverse linee di prodotti.
+
+* *Business Unit*
++
+Rappresenta una business unit tradizionale, ad esempio legale o di marketing. La Business Unit è necessaria per tenere traccia dei dati di diversi reparti. Questo livello della gerarchia è spesso utile per separare una risorsa che un reparto utilizza, ma non gli altri reparti.
+
+* *Progetto*
++
+Spesso utilizzato per identificare un progetto specifico all'interno di una business unit per cui si desidera un chargeback della capacità. Ad esempio, "`Patents`" potrebbe essere un nome di progetto per l'unità aziendale legale e "`Sales Events`" potrebbe essere un nome di progetto per l'unità aziendale marketing. I nomi dei livelli possono includere spazi.
+
+
+
+Un esempio di gerarchia di entità di business potrebbe essere:
+
+image::../media/businessentitieshierarchyexample.gif[businessentitieshierarchyexample]
+
+Best practice: Creare una tabella con ciascuna riga che mostri un'entità aziendale completa nella gerarchia:
+
+|===
+
+
+| Tenant | Linea di business | Unità aziendale | Progetto 
+
+
+ a| 
+NetApp Inc
+ a| 
+Storage dei dati
+ a| 
+Legale
+ a| 
+Brevetti
+
+
+
+ a| 
+NetApp Inc
+ a| 
+Storage dei dati
+ a| 
+Marketing
+ a| 
+Eventi commerciali
+
+
+
+ a| 
+N/A.
+ a| 
+N/A.
+ a| 
+Sicurezza
+ a| 
+N/A.
+
+
+
+ a| 
+...
+ a| 
+ a| 
+ a| 
+
+|===
+[NOTE]
+====
+Non è necessario utilizzare tutti i livelli nella progettazione della gerarchia aziendale. Puoi scegliere "`N/A`" per i livelli che non utilizzi.
+
+====
+Per creare una gerarchia di entità di business in Insight:
+
+
+
+== Fasi
+
+. Accedere a Insight come utente con autorizzazioni amministrative.
+. Selezionare *Gestisci* > *entità aziendali*.
+. Fare clic sul pulsante *+Aggiungi*
+. Fare clic sulla casella *tenant* e digitare il nome del tenant.
++
+Se sono già stati inseriti tenant per il proprio ambiente, viene visualizzato un elenco di tenant esistenti tra cui scegliere. È inoltre possibile scegliere N/A se il tenant non si applica a questa entità aziendale.
+
+. Ripetere l'operazione per *Line of Business*, *Business Unit* e *Project*.
+. Fare clic su *Save* (Salva)
+
+
+
+
+== Al termine
+
+Best practice:
+
+* Mappare la gerarchia di business in una tabella e verificare che i nomi nella gerarchia siano esplicativi nelle viste Insight e nei report.
+* Crea le tue entità di business in Insight prima di creare applicazioni.
+* Identificare ed elencare tutte le applicazioni che saranno associate a ciascuna entità aziendale.
+

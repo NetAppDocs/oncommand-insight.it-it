@@ -1,0 +1,14 @@
+---
+permalink: config-admin/related-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Se applicabile, una pagina di risorse visualizza una sezione risorse correlate. Ad esempio, una pagina delle risorse di un volume potrebbe mostrare informazioni su risorse come i pool di storage, le porte degli switch connessi e le risorse di calcolo. Ciascuna sezione comprende una tabella che elenca le risorse correlate di tale categoria, con collegamenti alle rispettive pagine di risorse e diverse statistiche sulle performance correlate. 
+---
+= Risorse correlate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se applicabile, una pagina di risorse visualizza una sezione risorse correlate. Ad esempio, una pagina delle risorse di un volume potrebbe mostrare informazioni su risorse come i pool di storage, le porte degli switch connessi e le risorse di calcolo. Ciascuna sezione comprende una tabella che elenca le risorse correlate di tale categoria, con collegamenti alle rispettive pagine di risorse e diverse statistiche sulle performance correlate.

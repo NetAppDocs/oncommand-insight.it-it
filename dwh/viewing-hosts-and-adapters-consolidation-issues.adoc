@@ -1,0 +1,93 @@
+---
+permalink: dwh/viewing-hosts-and-adapters-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: I dati riportati per gli host e gli adattatori associati sono derivati dal data mart di inventario. 
+---
+= Visualizzazione di problemi di consolidamento di host e adattatori
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I dati riportati per gli host e gli adattatori associati sono derivati dal data mart di inventario.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Nel riquadro di navigazione a sinistra, fare clic su *risoluzione dei problemi*.
+. Nella sezione *consolidamento chassis*, fare clic su *host e adattatori*.
++
+[NOTE]
+====
+La configurazione illustrata in questo esempio non è valida. I connettori principali e disponibili sull'host locale suggeriscono che Insight Server e DWH siano entrambi installati sullo stesso server. Lo scopo di questo esempio è quello di familiarizzare con la tabella di consolidamento.
+
+====
++
+image::../media/oci-dwh-admin-troubleshooting-hostsandadapters-gif.gif[Host e adattatori per il consolidamento dello chassis]
+
++
+Per tutti gli host e gli adattatori è presente una riga per ciascun connettore che riporta i relativi dati, oltre al connettore primario da cui vengono presi l'host e l'adattatore. Solo per host e adattatori, un host segnalato da un connettore potrebbe riportare i relativi adattatori da un connettore diverso.
+
++
+È inoltre possibile visualizzare il tempo di modifica OnCommand Insight di un host/adattatore per ciascun connettore. Utilizzando questo parametro, è possibile scoprire quando si è verificato un aggiornamento in OnCommand Insight per l'host/adattatore e quando lo stesso host/adattatore è stato aggiornato in altri server OnCommand Insight.
+
+. Facoltativamente, filtrare i dati in questa vista digitando una parte del testo e facendo clic su *Filter* (filtro). Per eliminare il filtro, eliminare il testo nella casella *Filter* e fare clic su *Filter*. È possibile filtrare in base al nome host, all'indirizzo IP host, al numero WWN dell'adattatore o all'ID oggetto OnCommand Insight.
++
+Il filtro fa distinzione tra maiuscole e minuscole.
+
+. Esaminare i seguenti dati:
++
+** *GUID host*
++
+Global Unique Identifier per questo tipo di dispositivo consolidato (host)
+
+** *Nome host*
++
+Nome dell'host consolidato così come appare nel data warehouse
+
+** *IP host*
++
+Indirizzo IP dell'host consolidato
+
+** *GUID adattatore*
++
+Identificatore univoco globale dell'adattatore host
+
+** *WWN adattatore*
++
+WWN dell'adattatore host
+
+** *Connettore principale*
++
+Nome del connettore OnCommand Insight che era l'origine effettiva dei dati
+
+** *Connettori disponibili*
++
+Tutti i connettori OnCommand Insight in cui risiede l'host/adattatore consolidato
+
+** *Insight ID*
++
+ID OnCommand Insight dell'host/adattatore consolidato per il relativo connettore di reporting
+
+** *Insight Change Time*
++
+Quando si è verificato un aggiornamento in OnCommand Insight per l'host/adattatore e quando lo stesso host/adattatore è stato aggiornato in altri server OnCommand Insight
+
+
+
+. Per ottenere informazioni dettagliate sul connettore, fare clic sul connettore.
++
+Sono disponibili le seguenti informazioni relative al connettore:
+
++
+** Nome host
+** L'ultima volta in cui è stato eseguito un processo Data Warehouse su quel connettore
+** L'ultima volta in cui è stata ricevuta una modifica da quel connettore
+** La versione del server OnCommand Insight indicata dal connettore
+
+
+

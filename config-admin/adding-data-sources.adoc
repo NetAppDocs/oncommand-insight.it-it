@@ -1,0 +1,73 @@
+---
+permalink: config-admin/adding-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile aggiungere rapidamente origini dati utilizzando la finestra di dialogo Aggiungi origine dati. 
+---
+= Aggiunta di origini dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere rapidamente origini dati utilizzando la finestra di dialogo Aggiungi origine dati.
+
+
+
+== Fasi
+
+. Aprire OnCommand Insight nel browser e accedere come utente con autorizzazioni amministrative.
+. Selezionare *Admin* e scegliere *origini dati*.
+. Fare clic sul pulsante *+Aggiungi*.
++
+Viene visualizzata la procedura guidata Add data source (Aggiungi origine dati).
+
+. Nella sezione *Impostazioni*, immettere le seguenti informazioni:
++
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Nome
+ a| 
+Immettere un nome di rete univoco per questa origine dati. NOTA: Nel nome dell'origine dati sono consentiti solo lettere, numeri e il carattere di sottolineatura (_).
+
+
+
+ a| 
+Vendor
+ a| 
+Scegliere il vendor dell'origine dati dal menu a discesa.
+
+
+
+ a| 
+Modello
+ a| 
+Scegliere il modello dell'origine dati dal menu a discesa.
+
+
+
+ a| 
+Dove correre
+ a| 
+Scegliere locale oppure scegliere un'unità di acquisizione remota se le RAU sono configurate nell'ambiente in uso.
+
+
+
+ a| 
+Cosa raccogliere
+ a| 
+Per la maggior parte delle origini dati, queste opzioni saranno inventario e prestazioni. L'inventario è sempre selezionato per impostazione predefinita e non può essere deselezionato. Si noti che alcune origini dati potrebbero avere opzioni diverse. Le opzioni di raccolta selezionate modificano i campi disponibili nelle sezioni Configurazione e Configurazione avanzata.
+
+|===
+. Fare clic sul collegamento *Configuration* (Configurazione) e immettere le informazioni di configurazione di base richieste per l'origine dati con il tipo di raccolta dati selezionato.
+. Se questo tipo di origine dati richiede di solito informazioni più dettagliate per la configurazione nella rete, fare clic sul collegamento *Advanced Configuration* (Configurazione avanzata) per inserire ulteriori informazioni.
+. Per ulteriori informazioni sulla configurazione o sulle informazioni di configurazione avanzate richieste o disponibili per l'origine dati specifica, consultare la link:vendor-specific-data-source-reference.md#["Riferimento all'origine dati specifica del vendor"].
+. Fare clic sul collegamento *Test* per verificare che l'origine dati sia configurata correttamente.
+. Fare clic su *Save* (Salva).
+

@@ -1,0 +1,78 @@
+---
+permalink: config-admin/using-options-in-the-preferences-tab.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La scheda Device resolution preferences (Preferenze risoluzione dispositivo) consente di creare una pianificazione di risoluzione automatica, specificare i vender di storage e nastri da includere o escludere dall"identificazione e impostare le opzioni di ricerca DNS.' 
+---
+= Impostazione delle opzioni nella scheda Preferenze
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La scheda Device resolution preferences (Preferenze risoluzione dispositivo) consente di creare una pianificazione di risoluzione automatica, specificare i vender di storage e nastri da includere o escludere dall'identificazione e impostare le opzioni di ricerca DNS.
+
+
+
+== Pianificazione automatica della risoluzione
+
+Un programma di risoluzione automatica può specificare quando eseguire la risoluzione automatica del dispositivo:
+
+|===
+
+
+| Opzione | Descrizione 
+
+
+ a| 
+Ogni
+ a| 
+Utilizzare questa opzione per eseguire la risoluzione automatica del dispositivo a intervalli di giorni, ore o minuti.
+
+
+
+ a| 
+Ogni giorno
+ a| 
+Utilizzare questa opzione per eseguire la risoluzione automatica giornaliera del dispositivo a un orario specifico.
+
+
+
+ a| 
+Manualmente
+ a| 
+Utilizzare questa opzione solo per eseguire manualmente la risoluzione automatica del dispositivo.
+
+
+
+ a| 
+Ad ogni cambiamento di ambiente
+ a| 
+Utilizzare questa opzione per eseguire la risoluzione automatica del dispositivo ogni volta che si verifica un cambiamento nell'ambiente.
+
+|===
+Se si specifica manualmente, la risoluzione automatica notturna del dispositivo viene disattivata.
+
+
+
+== Opzioni di elaborazione DNS
+
+Le opzioni di elaborazione DNS consentono di selezionare le seguenti funzioni:
+
+* Quando l'elaborazione dei risultati della ricerca DNS è attivata, è possibile aggiungere un elenco di nomi DNS da aggiungere ai dispositivi risolti.
+* È possibile selezionare "`Auto resolution of IP:`" (risoluzione automatica degli IP:) per abilitare la risoluzione automatica degli host per gli iniziatori iSCSI e gli host che accedono alle condivisioni NFS utilizzando la ricerca DNS. Se non viene specificato, viene eseguita solo la risoluzione basata su FC.
+* È possibile scegliere di consentire i caratteri di sottolineatura nei nomi host e di utilizzare un alias "connesso a" invece dell'alias della porta standard nei risultati.
+
+
+
+
+== Inclusi o esclusi vendor di storage e nastri specifici
+
+È possibile includere o escludere vendor di storage e nastri specifici per la risoluzione automatica. È possibile escludere vendor specifici se, ad esempio, si sa che un host specifico diventerà un host legacy e dovrebbe essere escluso dal nuovo ambiente. Puoi anche aggiungere di nuovo i vendor che hai precedentemente escluso, ma che non vuoi più escludere.
+
+[NOTE]
+====
+Le regole di risoluzione dei dispositivi per il nastro funzionano solo per i WWN in cui il fornitore per quel WWN è impostato su *incluso solo come nastro* nelle preferenze del vendor.
+
+====

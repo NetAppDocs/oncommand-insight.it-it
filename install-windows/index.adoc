@@ -1,0 +1,12 @@
+---
+permalink: install-windows/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Guida all'installazione di Microsoft® Windows®
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

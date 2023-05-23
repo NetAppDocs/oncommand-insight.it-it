@@ -1,0 +1,44 @@
+---
+permalink: howto/primary-and-secondary-axis-explained.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"asse secondario semplifica la visualizzazione dei dati da due diversi set di valori che utilizzano unità di misura diverse.' 
+---
+= Spiegazione degli assi primario e secondario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'asse secondario semplifica la visualizzazione dei dati da due diversi set di valori che utilizzano unità di misura diverse.
+
+
+
+== A proposito di questa attività
+
+Metriche diverse utilizzano unità di misura diverse per i dati che riportano in un grafico. Ad esempio, quando si guardano gli IOPS, l'unità di misura è il numero di operazioni di i/o al secondo di tempo (io/s), mentre la latenza è puramente una misura di tempo (millisecondi, microsecondi, secondi, ecc.). Quando si inseriscono entrambe le metriche in un singolo grafico utilizzando un singolo set di valori a per l'asse Y, i numeri di latenza (in genere una manciata di millisecondi) vengono inseriti nella stessa scala con gli IOPS (in genere numerati in migliaia) e la riga di latenza viene persa in quella scala.
+
+Tuttavia, è possibile inserire entrambi i set di dati in un singolo grafico significativo, impostando un'unità di misura sull'asse Y primario (lato sinistro) e l'altra unità di misura sull'asse Y secondario (lato destro). Ogni metrica viene tracciata in base alla propria scala.
+
+
+
+== Fasi
+
+. Creare o aprire una dashboard. Aggiungere un widget *grafico a linee*, *grafico a spline*, *grafico a aree* o *grafico a aree impilate* alla dashboard.
+. Selezionare un tipo di risorsa (ad esempio *Storage*) e scegliere *IOPS - Total* per la prima metrica. Impostare i filtri desiderati e scegliere un metodo di roll-up, se desiderato.
++
+La riga IOPS viene visualizzata sul grafico, con la relativa scala a sinistra.
+
+. Fare clic su *+Aggiungi* per aggiungere una seconda riga al grafico. Per questa riga, scegliere *latenza - totale* per la metrica.
++
+Notare che la riga viene visualizzata piatta nella parte inferiore del grafico. Questo perché viene tracciato alla stessa scala della linea IOPS.
+
+. Nella query di latenza, selezionare *asse Y: Secondario*.
++
+La linea di latenza viene ora tracciata in base alla propria scala, che viene visualizzata sul lato destro del grafico.
+
++
+image::../media/secondary-axis-example.gif[esempio di asse secondario]
+
+

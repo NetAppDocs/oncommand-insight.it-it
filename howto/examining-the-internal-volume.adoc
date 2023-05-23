@@ -1,0 +1,31 @@
+---
+permalink: howto/examining-the-internal-volume.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Esame del volume interno
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+image::../media/greedy-vol1.gif[volo1 avido]
+
+Nella landing page del volume interno, viene visualizzato:
+
+* I grafici delle performance per il volume interno corrispondono a quanto osservato in precedenza per le performance applicative sia per la latenza che per gli IOPS.
+* Nella sezione Resources (risorse), dove vengono visualizzate le risorse correlate, viene identificata una risorsa "`greedy`" (CDot_Boston:SP1:Vol_01).
+
+
+Una risorsa avida è identificata da analytics di correlazione di Insight. Le risorse avide/degradate sono "`peer`" che utilizzano la stessa risorsa condivisa. La risorsa avida ha IOPS o tassi di utilizzo che influiscono negativamente sugli IOPS o sulla latenza della risorsa degradata.
+
+Le risorse greedy e degradate possono essere identificate nelle landing page di macchine virtuali, volumi e volumi interni. Su ciascuna landing page verranno visualizzate al massimo due risorse utili.
+
+La selezione della classifica di correlazione (%) fornisce i risultati più avidi dell'analisi delle risorse. Ad esempio, facendo clic su un valore percentuale di riferimento si identifica l'operazione su una risorsa che influisce sull'operazione sulla risorsa degradata, in modo simile a quanto illustrato nell'esempio seguente.
+
+image::../media/greedy-percentage.gif[percentuale avida]
+
+Quando viene identificata una risorsa degradata, è possibile selezionare il punteggio degradata (%) per identificare l'operazione e la risorsa che ha un impatto sulla risorsa degradata.
+
+image::../media/guid-13582cf7-aedf-47d1-935e-edc7c5b1b921.gif[guid 13582cf7 aedf 47d1 935e edc7c5b1b921]

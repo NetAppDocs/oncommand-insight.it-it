@@ -1,0 +1,30 @@
+---
+permalink: dwh/sending-oncommand-insight-logs-to-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile inviare i registri ASUP al supporto tecnico per ricevere assistenza nella risoluzione dei problemi. ASUP for Data Warehouse è configurato per l"esecuzione automatica. Nel portale Data Warehouse, è possibile disattivare il processo di invio automatico, scegliere di includere un backup del database Data Warehouse o avviare una trasmissione ad ASUP. Quando si richiede un report ASUP, la richiesta di report viene visualizzata come job nella pagina Jobs del portale Data Warehouse.' 
+---
+= Invio dei registri Insight ad ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile inviare i registri ASUP al supporto tecnico per ricevere assistenza nella risoluzione dei problemi. ASUP for Data Warehouse è configurato per l'esecuzione automatica. Nel portale Data Warehouse, è possibile disattivare il processo di invio automatico, scegliere di includere un backup del database Data Warehouse o avviare una trasmissione ad ASUP. Quando si richiede un report ASUP, la richiesta di report viene visualizzata come job nella pagina Jobs del portale Data Warehouse.
+
+
+
+== A proposito di questa attività
+
+Il lavoro viene gestito dalla coda dei lavori in modo simile all'elaborazione di altri lavori. Se un lavoro ASUP è già in uno stato in sospeso o in esecuzione, viene visualizzato un messaggio di errore che indica che la richiesta di report ASUP non può essere aggiunta alla richiesta di lavoro, perché la coda contiene richieste in sospeso o in esecuzione.
+
+
+
+== Fasi
+
+. Accedere al portale Data Warehouse all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *risoluzione dei problemi*.
+. Nella sezione *OnCommand Insight ASUP* della pagina *risoluzione dei problemi*, fare clic su *Scarica report di risoluzione dei problemi DWH* per recuperare il report di risoluzione dei problemi.
+. Per inviare il report al server OnCommand Insight elencato come primo connettore nella pagina *connettori* del portale del data warehouse, fare clic su *Invia ora*.
+

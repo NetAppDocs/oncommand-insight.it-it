@@ -1,0 +1,51 @@
+---
+permalink: howto/compare-one-object-s-latency-total-to-the-latency-total-of-the-top-10-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: 'I seguenti passaggi mettono a confronto la latenza totale di una singola macchina virtuale con le macchine virtuali che riportano la latenza totale dei primi 10 nell"intera infrastruttura virtuale.' 
+---
+= Confronta il totale di latenza di un oggetto con il totale di latenza dei primi 10 oggetti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I seguenti passaggi mettono a confronto il totale di latenza di una singola macchina virtuale con le macchine virtuali che riportano il totale di latenza Top 10 nell'intera infrastruttura virtuale.
+
+
+
+== Fasi
+
+. Aggiungere un widget con un grafico a linee alla nuova dashboard: *Widget* > *grafico a linee*
++
+.. Impostare il dispositivo predefinito su macchina virtuale: Fare clic su *Storage* > *Virtual Machine* > *Latency-total*
++
+Il widget visualizza la latenza totale, per tutte le macchine virtuali, per le 24 ore predefinite in un grafico ad area.
+
+.. Creare una seconda visualizzazione in questo widget che mostri la latenza totale media per tutte le macchine virtuali: *Widget* > *grafico a linee*
+.. Impostare il dispositivo predefinito su macchina virtuale: Fare clic su *Storage* > *Virtual Machine* > *Latency-Total*
++
+Il widget visualizza il totale di latenza per il periodo di tempo predefinito di 24 ore utilizzando un grafico a linee.
+
+.. Fare clic su *X* nella barra *Roll-up* e selezionare *Show* > *Top* > *10*
+
+
++
+Il sistema visualizza le prime 10 macchine virtuali in base alla latenza - totale. image:../media/guid-7fe726e3-d15f-438a-9d1f-b02fb2daffe9.gif[""]
+
+. Aggiungere la macchina virtuale che si desidera confrontare con la Top 10:
++
+.. Fare clic su *+Aggiungi*
+.. Impostare il dispositivo predefinito su macchina virtuale: Fare clic su *Storage* > *Virtual Machine* > *latenza totale*
+.. Fare clic su *Filtra per* > *Nome* > * var1*
+
+
+. Fare clic su *Mostra legenda*
+
+
+
+
+== Risultati
+
+Una legenda identifica ciascuna delle macchine virtuali in analisi. È possibile identificare facilmente VM_Exchange_1 e determinare se presenta una latenza simile alle prime dieci macchine virtuali dell'ambiente.

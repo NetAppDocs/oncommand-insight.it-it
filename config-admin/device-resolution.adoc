@@ -1,0 +1,50 @@
+---
+permalink: config-admin/device-resolution.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È necessario individuare tutti i dispositivi che si desidera monitorare con OnCommand Insight. Il rilevamento è necessario per tenere traccia con precisione delle performance e dell"inventario nel tuo ambiente. In genere, la maggior parte dei dispositivi nell"ambiente viene rilevata tramite la risoluzione automatica dei dispositivi.' 
+---
+= Risoluzione del dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario individuare tutti i dispositivi che si desidera monitorare con OnCommand Insight. Il rilevamento è necessario per tenere traccia con precisione delle performance e dell'inventario nel tuo ambiente. In genere, la maggior parte dei dispositivi nell'ambiente viene rilevata tramite la risoluzione automatica dei dispositivi.
+
+[NOTE]
+====
+Se si sta eseguendo un aggiornamento e nel sistema da cui si sta eseguendo l'aggiornamento sono presenti regole di risoluzione automatica inattive, queste verranno eliminate durante l'aggiornamento. Per mantenere le regole di risoluzione automatica inattive, attivare le regole (selezionare la casella) prima di eseguire l'aggiornamento.
+
+====
+Dopo aver installato e configurato le origini dati, vengono identificati i dispositivi nell'ambiente, inclusi switch, storage array e l'infrastruttura virtuale di hypervisor e macchine virtuali. Tuttavia, questo non identifica normalmente il 100% dei dispositivi nell'ambiente in uso.
+
+Dopo aver configurato i dispositivi di origine dati, la procedura consigliata consiste nell'utilizzare le regole di risoluzione dei dispositivi per identificare i dispositivi sconosciuti rimanenti nell'ambiente. La risoluzione dei dispositivi può aiutare a risolvere i dispositivi sconosciuti come i seguenti tipi di dispositivi:
+
+* host fisici
+* storage array
+* nastri
+* switch
+
+
+I dispositivi che rimangono come "`sconosciuti`" dopo la risoluzione del dispositivo sono considerati dispositivi generici, che è possibile visualizzare anche nelle query e nei dashboard.
+
+Le regole create a loro volta identificheranno automaticamente i nuovi dispositivi con attributi simili man mano che vengono aggiunti all'ambiente. In alcuni casi, la risoluzione del dispositivo consente anche l'identificazione manuale ignorando le regole di risoluzione del dispositivo per i dispositivi non rilevati in Insight.
+
+L'identificazione incompleta dei dispositivi può causare problemi quali:
+
+* Percorsi incompleti
+* Connessioni multipath non identificate
+* L'impossibilità di raggruppare le applicazioni
+* Viste topopologie imprecise
+* Dati imprecisi nel data warehouse e report
+
+
+La funzione di risoluzione del dispositivo (*Gestisci* > *risoluzione del dispositivo*) include le seguenti schede, ciascuna delle quali svolge un ruolo nella pianificazione della risoluzione del dispositivo e nella visualizzazione dei risultati:
+
+* "`FC Identify`" contiene un elenco di WWN e informazioni sulle porte dei dispositivi Fibre Channel che non sono stati risolti mediante la risoluzione automatica dei dispositivi. La scheda identifica inoltre la percentuale di dispositivi identificati.
+* "`IP Identify`" contiene un elenco di dispositivi che accedono alle condivisioni CIFS e NFS e che non sono stati identificati tramite la risoluzione automatica del dispositivo. La scheda identifica inoltre la percentuale di dispositivi identificati.
+* "`Auto resolution rules`" (regole di risoluzione automatica) contiene l'elenco delle regole eseguite durante l'esecuzione della risoluzione del dispositivo Fibre Channel. Si tratta di regole create per risolvere i dispositivi Fibre Channel non identificati.
+* "`Preferences`" (Preferenze) fornisce le opzioni di configurazione utilizzate per personalizzare la risoluzione del dispositivo per l'ambiente in uso.
+

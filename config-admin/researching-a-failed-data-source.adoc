@@ -1,0 +1,38 @@
+---
+permalink: config-admin/researching-a-failed-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se in un"origine dati viene visualizzato il messaggio "Inventory failed!" (inventario non riuscito) O "Performance failed!" (prestazioni non riuscite) Messaggio e impatto alto o medio, è necessario ricercare questo problema utilizzando la pagina di riepilogo dell"origine dati con le relative informazioni collegate.' 
+---
+= Ricerca di un'origine dati guasta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se un'origine dati visualizza il messaggio "*Inventory failed !*" o "*Performance failed !*" e un impatto alto o medio, è necessario ricercare questo problema utilizzando la pagina di riepilogo dell'origine dati con le relative informazioni collegate.
+
+
+
+== Fasi
+
+. Fare clic sul collegamento *Nome* dell'origine dati per aprire la pagina Riepilogo.
+. Nella pagina Summary (Riepilogo), consultare l'area *Comments* (commenti) per leggere eventuali note lasciate da un altro tecnico che potrebbe anche indagare su questo guasto.
+. Annotare eventuali messaggi relativi alle prestazioni.
+. Se è stata applicata una patch a questa origine dati, fare clic sul collegamento per controllare la pagina *patch* per verificare se il problema è stato causato.
+. Spostare il puntatore del mouse sui segmenti del grafico *Timeline evento* per visualizzare ulteriori informazioni.
+. Selezionare un messaggio di errore per un dispositivo e visualizzato sotto la timeline dell'evento, quindi fare clic sull'icona *Dettagli errore* visualizzata a destra del messaggio.
++
+I dettagli relativi all'errore includono il testo del messaggio di errore, le cause più probabili, le informazioni in uso e i suggerimenti su come risolvere il problema.
+
+. Nell'area periferiche segnalate da questa origine dati, è possibile filtrare l'elenco in modo da visualizzare solo le periferiche di interesse, quindi fare clic sul collegamento *Nome* di una periferica per visualizzare la _pagina risorse_ relativa a tale periferica.
+. Per tornare alle pagine visualizzate in precedenza, utilizzare una delle seguenti tecniche:
++
+** Fare clic sulla freccia indietro del browser.
+** Fare clic con il pulsante destro del mouse sulla freccia indietro per visualizzare un elenco delle pagine e selezionare la pagina desiderata.
+
+
+. Per visualizzare informazioni dettagliate sulle altre risorse, fare clic su altri nomi collegati.
+. Quando si torna alla pagina di riepilogo dell'origine dati, controllare l'area *Changes* nella parte inferiore della pagina per verificare se il problema è stato causato da modifiche recenti.
+

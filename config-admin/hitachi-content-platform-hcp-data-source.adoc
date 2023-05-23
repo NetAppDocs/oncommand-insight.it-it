@@ -1,0 +1,134 @@
+---
+permalink: config-admin/hitachi-content-platform-hcp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Questo data collector supporta Hitachi Content Platform (HCP) utilizzando l"API di gestione HCP.' 
+---
+= Fonte dei dati Hitachi Content Platform (HCP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questo data collector supporta Hitachi Content Platform (HCP) utilizzando l'API di gestione HCP.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati HCP. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Cluster HCP
+ a| 
+Storage
+
+
+
+ a| 
+Tenant
+ a| 
+Pool di storage
+
+
+
+ a| 
+Namespace
+ a| 
+Volume interno
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti di inventario
+
+* Indirizzo IP del server HCP
+* Nome utente e password di sola lettura per il software HCP e privilegi peer
+
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Host HCP
+ a| 
+Indirizzo IP o nome di dominio completo dell'host HCP
+
+
+
+ a| 
+Porta HCP
+ a| 
+Il valore predefinito è 9090
+
+
+
+ a| 
+ID utente HCP
+ a| 
+Nome utente dell'host HCP
+
+
+
+ a| 
+Password HCP
+ a| 
+Password utilizzata per l'host HCP
+
+
+
+ a| 
+Tipo di autenticazione HCP
+ a| 
+Scegliere HCP_LOCAL o ACTIVE_DIRECTORY
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 60 minuti)
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 900 secondi)
+
+|===

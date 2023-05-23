@@ -1,0 +1,26 @@
+---
+permalink: install-linux/planning-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Per garantire una corretta implementazione, è necessario prendere in considerazione alcuni elementi di sistema prima di installare OnCommand Insight. 
+---
+= Pianificazione dell'implementazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per garantire una corretta implementazione, è necessario prendere in considerazione alcuni elementi di sistema prima di installare OnCommand Insight.
+
+
+
+== A proposito di questa attività
+
+La pianificazione dell'implementazione di Insight include la valutazione di questi elementi di sistema:
+
+* Architettura Insight
+* I componenti di rete da monitorare
+* Prerequisiti per l'installazione di Insight e requisiti del server
+* Requisiti del browser Web Insight
+

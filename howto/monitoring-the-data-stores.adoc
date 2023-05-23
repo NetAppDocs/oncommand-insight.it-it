@@ -1,0 +1,44 @@
+---
+permalink: howto/monitoring-the-data-stores.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La landing page di Datastore identifica i rapporti di oversubscription, l"utilizzo di LUN e dischi, le risorse correlate e mostra i casi di violazione delle policy che si sono verificati con il Datastore.' 
+---
+= Monitoraggio dei datastore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La landing page di Datastore identifica i rapporti di oversubscription, l'utilizzo di LUN e dischi, le risorse correlate e mostra i casi di violazione delle policy che si sono verificati con il Datastore.
+
+Utilizzare questa landing page per identificare i problemi relativi all'infrastruttura virtuale. Puoi tenere traccia dei trend di capacità e rapporto di capacità per anticipare i cambiamenti nella tua capacità.
+
+* *Riepilogo*
++
+Utilizzare questa sezione per comprendere:
+
++
+** Informazioni sulla capacità del datastore, tra cui la capacità fisica e la capacità di overcommit.
+** La percentuale di capacità in eccesso.
+** Metriche per latenza, IOPS e throughput.
+
+
+* *VMDK*
++
+La sezione VMDK mostra la capacità e le performance dei dischi virtuali.
+
+* *Risorse di storage*
++
+Questa sezione mostra la capacità utilizzata e le metriche delle performance per il volume interno correlato al datastore.
+
+* *Risorse*
++
+Utilizzare questa sezione per comprendere la correlazione tra VMDK e LUN e il percorso dell'applicazione da storage a macchina virtuale.
+
+* *Sezione violazioni*
++
+La sezione violazioni identifica eventuali violazioni alle policy di performance impostate per il datastore.
+
+

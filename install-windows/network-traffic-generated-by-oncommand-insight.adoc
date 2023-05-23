@@ -1,0 +1,32 @@
+---
+permalink: install-windows/network-traffic-generated-by-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Il traffico di rete generato da OnCommand Insight, la quantità di dati elaborati che attraversano la rete e il carico che OnCommand Insight carica sui dispositivi variano in base a diversi fattori. 
+---
+= Traffico di rete generato da OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il traffico di rete generato da OnCommand Insight, la quantità di dati elaborati che attraversano la rete e il carico che OnCommand Insight carica sui dispositivi variano in base a diversi fattori.
+
+Il traffico, i dati e il carico differiscono tra gli ambienti in base ai seguenti fattori:
+
+* I dati raw
+* Configurazione dei dispositivi
+* Topologia di implementazione di OnCommand Insight
+* Intervalli di polling diversi per l'origine dati di inventario e performance, che possono essere ridotti per consentire il rilevamento di dispositivi lenti o la conservazione della larghezza di banda
+
+
+I dati di configurazione raw raccolti da OnCommand Insight possono variare in modo significativo.
+
+Nell'esempio seguente viene illustrato come i dati di configurazione possono variare e come il traffico, i dati e il carico sono influenzati da molti fattori di configurazione. Ad esempio, potrebbero essere presenti due array con 1,000 dischi ciascuno:
+
+* Array 1: Dispone di 1,000 dischi SATA di dimensioni pari a 1 TB. Tutti i 1,000 dischi si trovano in un unico pool di storage e sono presenti 1,000 LUN, tutte presentate (mappate e mascherate) agli stessi 32 nodi in un cluster ESX.
+* Array 2: Dispone di 400 dischi dati da 2 TB, dischi FC da 560 600 GB e 40 SSD. Esistono 3 pool di storage, ma 320 dischi FC vengono utilizzati nei gruppi RAID tradizionali. Le LUN scavate nei gruppi RAID utilizzano un tipo di mascheramento tradizionale (symmaskdb), mentre le LUN basate su pool con thin provisioning utilizzano un tipo di mascheramento più recente (symaccess). Sono disponibili 600 LUN per 150 host diversi. Sono disponibili 200 BCVs (volumi di replica a blocchi completi di 200 delle 600 LUN). Esistono anche 200 volumi R2, volumi di replica remoti di volumi che esistono su un array in un sito diverso.
+
+
+Ciascuno di questi array dispone di 1,000 dischi e 1,000 volumi logici. Potrebbero essere fisicamente identici nella quantità di spazio rack consumata nel data center e potrebbero anche eseguire lo stesso firmware, ma il secondo array è molto più complesso nella sua configurazione rispetto al primo array.

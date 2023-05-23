@@ -1,0 +1,25 @@
+---
+permalink: install-windows/verifying-data-warehouse-has-historical-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Dopo aver ripristinato i report personalizzati, è necessario verificare che Data Warehouse stia raccogliendo dati storici visualizzando i report personalizzati. 
+---
+= Verificare che Data Warehouse disponga di dati storici
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver ripristinato i report personalizzati, è necessario verificare che Data Warehouse stia raccogliendo dati storici visualizzando i report personalizzati.
+
+
+
+== Fasi
+
+. Accedere al portale Data Warehouse all'indirizzo `+https://fqdn/dwh+`.
+. Nella barra degli strumenti Data Warehouse, fare clic su image:../media/oci-reporting-portal-icon.gif[""] Per aprire il portale Insight Reporting ed effettuare l'accesso.
+. Aprire la cartella contenente i report personalizzati (ad esempio, Report personalizzati).
+. Fare clic su image:../media/run-with-options.gif[""] per aprire le opzioni del formato di output per questo report.
+. Selezionare le opzioni desiderate e fare clic su *Esegui* per assicurarsi che siano popolate con dati storici di storage, calcolo e switch.
+

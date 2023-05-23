@@ -1,0 +1,87 @@
+---
+permalink: config-admin/emc-recoverpoint-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati EMC RecoverPoint raccoglie le informazioni di inventario dallo storage EMC RecoverPoint. Per la configurazione, l"origine dati richiede l"indirizzo IP dei processori di storage e un nome utente e una password di sola lettura.' 
+---
+= Fonte dei dati EMC RecoverPoint
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati EMC RecoverPoint raccoglie le informazioni di inventario dallo storage EMC RecoverPoint. Per la configurazione, l'origine dati richiede l'indirizzo IP dei processori di storage e un nome utente e una password di sola lettura.
+
+L'origine dati EMC RecoverPoint raccoglie le relazioni di replica volume-volume che RecoverPoint coordina tra altri array di storage. OnCommand Insight mostra un array di storage per ogni cluster RecoverPoint e raccoglie i dati di inventario per i nodi e le porte di storage su quel cluster. Non vengono raccolti dati di volumi o pool di storage.
+
+
+
+== Requisiti
+
+* Indirizzo IP o nome di dominio completo del processore di storage
+* Nome utente e password di sola lettura
+* Accesso API REST tramite la porta 443
+* Accesso SSH tramite putty
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Indirizzo di RecoverPoint
+ a| 
+Indirizzo IP o nome di dominio completo del cluster RecoverPoint
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente del cluster RecoverPoint
+
+
+
+ a| 
+Password
+ a| 
+Password per il cluster RecoverPoint
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Porta TCP
+ a| 
+Porta TCP utilizzata per la connessione al cluster Recoverpoint
+
+
+
+ a| 
+Intervallo polling inventario (minuti)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 20 minuti)
+
+
+
+ a| 
+Cluster esclusi
+ a| 
+Elenco separato da virgole di ID cluster o nomi da escludere durante il polling
+
+|===

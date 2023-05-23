@@ -1,0 +1,48 @@
+---
+permalink: howto/defining-applications-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se si desidera tenere traccia dei dati sui costi associati a applicazioni specifiche in esecuzione nell"ambiente, è necessario innanzitutto definire le applicazioni.' 
+---
+= Definizione delle applicazioni da utilizzare con il chargeback
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si desidera tenere traccia dei dati sui costi associati a applicazioni specifiche in esecuzione nell'ambiente, è necessario innanzitutto definire le applicazioni.
+
+
+
+== Prima di iniziare
+
+Se si desidera associare l'applicazione a un'entità aziendale, è necessario aver già creato l'entità aziendale.
+
+[NOTE]
+====
+Questo esempio non associa alcuna applicazione alle entità aziendali.
+
+====
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Fare clic su *Gestisci* > *applicazione*
++
+Dopo aver definito un'applicazione, la pagina applicazioni visualizza il nome dell'applicazione, la relativa priorità e, se applicabile, l'entità aziendale associata all'applicazione.
+
+. Fare clic su**Aggiungi**
++
+Viene visualizzata la finestra di dialogo Add Application (Aggiungi applicazione).
+
+. Inserire un nome univoco per l'applicazione nella casella Nome. Inserire le applicazioni identificate nel report: African Tours, APAC Commercial Sales e così via.
+. Fare clic su *priorità* e selezionare la priorità (critica, alta, media o bassa) per l'applicazione nell'ambiente in uso.
+. Se si prevede di utilizzare questa applicazione con un'entità aziendale, fare clic su *entità aziendale* e selezionare l'entità dall'elenco.
+. Non si utilizzerà la condivisione del volume. Fare clic per deselezionare la casella di condivisione del volume *convalida*.
+. Fare clic su *Save* (Salva).
++
+Le applicazioni vengono visualizzate nella pagina applicazioni. Facendo clic sul nome dell'applicazione, Insight visualizza la pagina delle risorse dell'applicazione. Dopo aver definito un'applicazione, è possibile accedere a una pagina di risorse per host, macchina virtuale, volume, volume interno o hypervisor per assegnare un'applicazione a una risorsa.
+
+

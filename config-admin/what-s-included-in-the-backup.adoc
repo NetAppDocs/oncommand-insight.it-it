@@ -1,0 +1,52 @@
+---
+permalink: config-admin/what-s-included-in-the-backup.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare backup settimanali e on-demand per la risoluzione dei problemi o la migrazione. 
+---
+= Cosa include il backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare backup settimanali e on-demand per la risoluzione dei problemi o la migrazione.
+
+Il backup settimanale o on-demand include quanto segue:
+
+* Dati di inventario
+* Dati sulle performance (se selezionati per l'inclusione nel backup)
+* Origini dati e impostazioni dell'origine dati
+* Pacchetti di integrazione
+* Unità di acquisizione remota
+* Unità di monitoraggio Ethernet
+* Impostazioni ASUP/proxy
+* Impostazioni della posizione di backup
+* Impostazioni della posizione di archiviazione
+* Impostazioni di notifica
+* Punteggi e dispositivi di rilevamento delle anomalie
+* Impostazioni dell'applicazione per il rilevamento delle anomalie
+* Utenti
+* Policy sulle performance
+* Entità aziendali e applicazioni
+* Regole e impostazioni di risoluzione del dispositivo
+* Dashboard e widget
+* Dashboard e widget personalizzati della pagina delle risorse
+* Query
+* Annotazioni e regole di annotazione
+
+
+Il backup settimanale non include:
+
+* Impostazioni dello strumento di sicurezza / informazioni sul vault (backup tramite processo CLI separato)
+* Log (possono essere salvati su un file .zip su richiesta)
+* Dati sulle performance (se non selezionati per l'inclusione nel backup)
+* Licenze
+
+
+[NOTE]
+====
+Se si sceglie di includere i dati delle performance nel backup, viene eseguito il backup dei dati più recenti per sette giorni. I dati rimanenti saranno presenti nell'archivio, se la funzione è attivata.
+
+====

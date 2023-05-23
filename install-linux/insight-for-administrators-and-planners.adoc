@@ -1,0 +1,32 @@
+---
+permalink: install-linux/insight-for-administrators-and-planners.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight fornisce informazioni essenziali per amministratori dello storage, manager e architetti dello storage per l"esecuzione di analisi e troubleshooting.' 
+---
+= Come Insight viene utilizzato da amministratori, manager e pianificatori
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight fornisce informazioni essenziali per amministratori dello storage, manager e architetti dello storage per l'esecuzione di analisi e troubleshooting.
+
+Gli amministratori dello storage esperti utilizzano OnCommand Insight insieme alle proprie conoscenze in materia di storage di rete per eseguire le seguenti attività tipiche:
+
+* Gestire l'ambiente SAN e NAS.
+* Collaborare con i tecnici SAN per risolvere i problemi di rete.
+* Valutare, testare e integrare nuove tecnologie di storage nell'ambiente.
+* Risolvere problemi di performance, avvisi, violazioni di policy, violazioni e vulnerabilità.
+
+
+I manager e i pianificatori di rete utilizzano OnCommand Insight per eseguire le seguenti attività di business:
+
+* Pianificazione della capacità
+* Sviluppo di budget e tempistiche dei progetti.
+* Valuta e rivedi i piani di progetto per soddisfare le mutevoli esigenze dei progetti. 
+* Gestire la pianificazione e le spese del progetto.
+* Acquistare hardware e software.
+* Fornire report di business per la gestione della capacità, la fatturazione di riaccredito, il dimensionamento corretto e gli accordi sui livelli di servizio.
+

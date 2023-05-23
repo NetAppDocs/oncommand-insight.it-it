@@ -1,0 +1,33 @@
+---
+permalink: config-admin/editing-multiple-data-sources.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: 'È possibile modificare la maggior parte delle informazioni per più origini dati dello stesso fornitore e modello contemporaneamente. Ad esempio, se queste origini dati condividono un nome utente e una password, è possibile modificare la password in un"unica posizione e aggiornare la password per tutte le origini dati selezionate.' 
+---
+= Modifica delle informazioni per più origini dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare la maggior parte delle informazioni per più origini dati dello stesso fornitore e modello contemporaneamente. Ad esempio, se queste origini dati condividono un nome utente e una password, è possibile modificare la password in un'unica posizione e aggiornare la password per tutte le origini dati selezionate.
+
+
+
+== A proposito di questa attività
+
+Le opzioni che non è possibile modificare per le origini dati selezionate appaiono in grigio o non vengono visualizzate nella finestra di dialogo Modifica origine dati. Inoltre, quando un'opzione visualizza il valore *Mixed*, il valore dell'opzione varia tra le origini dati selezionate. Ad esempio, se l'opzione *Timeout (sec)* per due origini dati selezionate è *Mixed*, un'origine dati potrebbe avere un valore di timeout pari a 60 e l'altra potrebbe avere un valore pari a 90; pertanto, se si modifica questo valore in 120 e si salvano le modifiche alle origini dati, l'impostazione di timeout per entrambe le origini dati diventa 120.
+
+
+
+== Fasi
+
+. Fare clic su *Admin* e passare alla vista elenco origine dati
+. Selezionare le origini dati che si desidera modificare. Le origini dati selezionate devono appartenere allo stesso vendor, modello e unità di acquisizione.
+. Fare clic sul pulsante *azioni* e selezionare l'opzione *Modifica*.
+. Nella finestra di dialogo di modifica, modificare le *Impostazioni* in base alle esigenze.
+. Fare clic sul collegamento *Configuration* (Configurazione) per modificare le opzioni di base per le origini dati.
+. Fare clic sul collegamento *Advanced Configuration* (Configurazione avanzata) per modificare le opzioni avanzate per le origini dati.
+. Fare clic su *Save* (Salva).
+

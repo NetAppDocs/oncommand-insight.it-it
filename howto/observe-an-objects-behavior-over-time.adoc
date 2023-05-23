@@ -1,0 +1,56 @@
+---
+permalink: howto/observe-an-objects-behavior-over-time.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile osservare il comportamento di un singolo oggetto per determinare se l"oggetto funziona entro i livelli operativi previsti.' 
+---
+= Osservare il comportamento di un oggetto nel tempo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile osservare il comportamento di un singolo oggetto per determinare se l'oggetto funziona entro i livelli operativi previsti.
+
+
+
+== Fasi
+
+. Utilizzare una query per identificare la macchina virtuale oggetto dell'analisi: *Query* > *+ Nuova query* > *macchina virtuale* > *"nome"*
++
+Lasciando vuoto il campo del nome, vengono restituite tutte le macchine virtuali. Selezionare la macchina virtuale che si desidera utilizzare in questo esercizio. È possibile selezionarla scorrendo l'elenco delle macchine virtuali.
+
+. Creare una nuova dashboard per le informazioni che si desidera raccogliere. Dalla barra degli strumenti, fare clic su *Dashboard* > *+Nuova dashboard*.
+. Nella nuova dashboard, selezionare *variabile* > *testo*.
++
+.. Aggiungere il nome della macchina virtuale dalla query come``$var1`` valore.
+.. Fare clic sulla casella di controllo.
+
+
++
+La variabile viene utilizzata per alternare facilmente diversi set di oggetti che si desidera analizzare. In altre fasi dell'analisi, è possibile riutilizzare questa variabile per un'analisi aggiuntiva rispetto alla singola macchina virtuale inizialmente scelta. Le variabili diventano più utili quando si identificano più oggetti.
+
+. Aggiungi un widget per il grafico a linee alla nuova dashboard: *Widget* > *grafico a linee*.
++
+.. Modificare il tipo di risorsa predefinito in macchina virtuale: Fare clic su *macchina virtuale* > *latenza-totale*.
+.. Fare clic su *Filtra per* > *Nome* > * var1*.
+.. Modificare il periodo di tempo sul dashboard: *Ignora ora ora dashboard* > *on* > *7 giorni*.
+
+
++
+È possibile modificare la durata della visualizzazione utilizzando una delle selezioni predefinite o specificando un intervallo di tempo personalizzato.
+
++
++ il dashboard visualizza il *IOPS-Total* della macchina virtuale per il periodo di tempo specificato.
+
+. Assegnare un nome al widget e salvarlo.
+
+
+
+
+== Risultati
+
+Il widget deve contenere dati simili ai seguenti: image:../media/guid-e7ea8edf-7fcc-4fc8-bd87-d8030e85a988.gif[""]
+
+La VM mostra un periodo di latenza eccessivamente elevata per un breve periodo di tempo nei 7 giorni visualizzati.

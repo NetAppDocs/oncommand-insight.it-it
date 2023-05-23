@@ -1,0 +1,32 @@
+---
+permalink: install-windows/verifying-the-extract-transform-and-load-process.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo l"aggiornamento, assicurarsi che il processo Estrai, trasforma e carica stia recuperando i dati dai database OnCommand Insight, trasformandoli e salvandoli nei data mart.' 
+---
+= Verifica della pianificazione di estrazione, trasformazione e caricamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo l'aggiornamento, assicurarsi che il processo di estrazione, trasformazione e caricamento (ETL) stia recuperando i dati dai database OnCommand Insight, trasformandoli e salvandoli nei data mart.
+
+
+
+== Fasi
+
+. Accedere al portale Data Warehouse all'indirizzo `+https://fqdn/dwh+`.
+. Dal riquadro di navigazione a sinistra, fare clic su *Schedule* (Pianificazione).
+. Fare clic su *Modifica pianificazione*.
+. Selezionare *giornaliero* o *settimanale* dall'elenco *tipo*.
++
+Si consiglia di programmare l'esecuzione di ETL una volta al giorno.
+
+. Verificare che l'ora selezionata sia l'ora in cui si desidera eseguire il lavoro.
++
+In questo modo, il processo di creazione viene eseguito automaticamente.
+
+. Fare clic su *Save* (Salva).
+

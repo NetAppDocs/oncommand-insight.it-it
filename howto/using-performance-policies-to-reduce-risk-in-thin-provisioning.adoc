@@ -1,0 +1,51 @@
+---
+permalink: howto/using-performance-policies-to-reduce-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È necessario creare policy sulle performance per generare avvisi in caso di violazione delle soglie dell"infrastruttura virtuale. Gli avvisi consentono di rispondere alle modifiche dell"ambiente prima che causino interruzioni o interruzioni delle operazioni.' 
+---
+= Utilizzo di policy sulle performance per ridurre i rischi nel thin provisioning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario creare policy sulle performance per generare avvisi in caso di violazione delle soglie dell'infrastruttura virtuale. Gli avvisi consentono di rispondere alle modifiche dell'ambiente prima che causino interruzioni o interruzioni delle operazioni.
+
+Le policy che aiutano a monitorare l'infrastruttura virtuale includono:
+
+* *Datastore*
++
+È possibile utilizzare i seguenti criteri nel datastore:
+
++
+** Rapporto di capacità - assegnazione in eccesso
+** Rapporto di capacità - utilizzato
+** Capacità - utilizzata
+** Capacità - totale
+
+
+* *Pool di storage*
++
+Le seguenti policy possono proteggere da interruzioni di capacità legate allo storage in ambienti con thin provisioning:
+
++
+** Provisioning della capacità
+** Capacità utilizzata
+** Rapporto di capacità - assegnazione in eccesso
+** Rapporto di capacità - utilizzato
+
+
+
+
+È possibile espandere queste policy per monitorare la capacità dell'infrastruttura virtuale, tra cui:
+
+* Volumi interni
+* LUN
+* Dischi
+* VMDK
+* Macchine virtuali
+
+
+È possibile configurare le policy utilizzando le annotazioni. Assegnare la stessa annotazione alle risorse specifiche che supportano un'applicazione. Ad esempio, è possibile assegnare annotazioni agli archivi dati e ai pool di storage di un'applicazione con thin provisioning. Le annotazioni potrebbero essere denominate produzione per l'ambiente di produzione, sviluppo per l'ambiente di sviluppo e così via. È possibile modificare le soglie e la criticità degli avvisi in base al tipo di applicazione supportata dalle risorse. Ad esempio, una violazione di una soglia per il datastore di un'applicazione di produzione potrebbe generare un _avviso critico_, mentre la stessa violazione per un ambiente di sviluppo potrebbe solo generare un _avviso_. L'integrazione di annotazioni all'interno di policy definite può contribuire a ridurre ulteriormente il rumore di avviso indesiderato per le risorse non critiche.

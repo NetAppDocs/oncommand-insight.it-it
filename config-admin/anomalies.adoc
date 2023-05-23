@@ -1,0 +1,24 @@
+---
+permalink: config-admin/anomalies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La sezione delle anomalie, che viene visualizzata solo su una pagina delle risorse dell"applicazione quando è installato il motore di rilevamento delle anomalie, consente di identificare il normale intervallo di workload operativo per un"applicazione e di identificare quando le variazioni delle performance non rientrano nei livelli previsti.' 
+---
+= Anomalie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione delle anomalie, che viene visualizzata solo su una pagina delle risorse dell'applicazione quando è installato il motore di rilevamento delle anomalie, consente di identificare il normale intervallo di workload operativo per un'applicazione e di identificare quando le variazioni delle performance non rientrano nei livelli previsti.
+
+L'analisi delle anomalie offre una visibilità proattiva dell'infrastruttura che supporta le applicazioni business-critical e informa l'utente delle anomalie delle performance prima che diventino interruzioni del servizio. Il motore di rilevamento delle anomalie applicative acquisisce le metriche di performance raccolte da Insight e identifica le anomalie nell'infrastruttura applicativa. Le anomalie sono elementi, eventi o osservazioni non conformi a uno schema previsto o ad altri elementi. Il rilevamento delle anomalie viene utilizzato per:
+
+* Monitorare le applicazioni critiche selezionate.
+* Identificare i cambiamenti significativi nel comportamento dell'infrastruttura applicativa.
+* Tieni traccia di un'applicazione attraverso l'intero stack e diversi contatori.
+* Diagnosticare la causa di eventi periodicamente ricorrenti in un carico di lavoro dell'applicazione.
+* Fornire un set di informazioni più completo rispetto ai dati provenienti dai contatori delle performance che utilizzano valori di soglia statici.
+* Monitoraggio della modalità reattiva migliorato con vista end-to-end della topologia e possibilità di concentrarsi sui comportamenti più anomali di un set di dati.
+

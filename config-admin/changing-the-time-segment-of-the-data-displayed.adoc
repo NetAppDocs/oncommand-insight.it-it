@@ -1,0 +1,69 @@
+---
+permalink: config-admin/changing-the-time-segment-of-the-data-displayed.html 
+sidebar: sidebar 
+keywords:  
+summary: Per impostazione predefinita, una pagina delle risorse visualizza le ultime 24 ore di dati; tuttavia, è possibile modificare il segmento di dati visualizzato selezionando un altro tempo fisso o un intervallo di tempo personalizzato per visualizzare un numero inferiore o superiore di dati. 
+---
+= Modifica dell'intervallo di tempo dei dati visualizzati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per impostazione predefinita, una pagina delle risorse visualizza le ultime 24 ore di dati; tuttavia, è possibile modificare il segmento di dati visualizzato selezionando un altro tempo fisso o un intervallo di tempo personalizzato per visualizzare un numero inferiore o superiore di dati.
+
+
+
+== A proposito di questa attività
+
+È possibile modificare l'intervallo temporale dei dati visualizzati utilizzando un'opzione che si trova in ogni pagina di risorsa, indipendentemente dal tipo di risorsa.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insightweb.
+. Individuare una pagina di risorse effettuando una delle seguenti operazioni:
++
+** Nella barra degli strumenti Insight, fare clic su image:../media/search-assets-icon.gif[""], digitare il nome della risorsa, quindi selezionare la risorsa dall'elenco.
+** Fare clic su *Dashboard*, selezionare *Dashboard delle risorse*, individuare il nome di una risorsa e fare clic su di essa. Viene visualizzata la pagina delle risorse.
+
+
+. Nell'angolo superiore sinistro della pagina, fare clic su una delle seguenti icone temporali per modificare il segmento di dati visualizzato:
++
+** *3 ore*
++
+Visualizza le ultime tre ore di dati.
+
+** *24 ore*
++
+Visualizza le ultime 24 ore di dati.
+
+** *3d*
++
+Visualizza gli ultimi tre giorni di dati.
+
+** *7d*
++
+Visualizza gli ultimi sette giorni di dati.
+
+** *30d*
++
+Visualizza gli ultimi trenta giorni di dati.
+
+** *Personalizzato*
++
+Visualizza una finestra di dialogo che consente di scegliere un intervallo di tempo personalizzato. È possibile visualizzare fino a 31 giorni di dati alla volta.
+
+
+
+. Se si sceglie *Custom*, procedere come segue:
++
+.. Fare clic sul campo della data e selezionare un mese, un giorno e un anno per la data di inizio.
+.. Fare clic sull'elenco delle ore e selezionare un'ora di inizio.
+.. Ripetere i passaggi a e b per i dati e l'ora di fine.
+.. Fare clic su image:../media/check-box-ok.gif[""].
+
+
+

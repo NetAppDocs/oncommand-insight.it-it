@@ -1,0 +1,140 @@
+---
+permalink: config-admin/brocade-efcm-9-5-to-9-7-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utilizza l"origine dati di Brocade Enterprise Fabric Connectivity Manager per rilevare l"inventario degli switch Brocade EFCM. Insight supporta le versioni EFCM 9.5, 9.6 e 9.7.' 
+---
+= Fonte dei dati Brocade Enterprise Fabric Connectivity Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utilizza l'origine dati di Brocade Enterprise Fabric Connectivity Manager (EFCM) per rilevare l'inventario degli switch Brocade EFCM. Insight supporta le versioni EFCM 9.5, 9.6 e 9.7.
+
+
+
+== Requisiti
+
+[NOTE]
+====
+Questo data collector non è disponibile a partire da OnCommand Insight 7.3.11.
+
+====
+* Indirizzo di rete o nome di dominio completo per il server EFCM
+* La versione dell'EFCM deve essere 9.5, 9.6 o 9.7
+* Indirizzo IP del server EFCM
+* Nome utente e password di sola lettura per il server EFCM
+* Accesso convalidato allo switch Connectrix da Telnet dal server Insight, utilizzando il nome utente e la password di sola lettura sulla porta 51512
+
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Server EFC
+ a| 
+Indirizzo IP o nome di dominio completo del server EFC
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente dello switch
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per lo switch
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 15 minuti)
+
+
+
+ a| 
+Nome fabric
+ a| 
+Nome del fabric che deve essere segnalato dall'origine dati EFCM. Lasciare vuoto per riportare il nome del fabric come WWN.
+
+
+
+ a| 
+Porta di comunicazione
+ a| 
+Porta utilizzata per la comunicazione con lo switch
+
+
+
+ a| 
+Attivare il trapping
+ a| 
+Selezionare questa opzione per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo. Se si seleziona enable trapping (attiva trap), è necessario attivare anche SNMP.
+
+
+
+ a| 
+Tempo minimo tra trap (sec)
+ a| 
+Tempo minimo tra i tentativi di acquisizione attivati da trap (impostazione predefinita: 15 secondi)
+
+
+
+ a| 
+Zonesets inattivi
+ a| 
+Elenco separato da virgole di zone inattive su cui eseguire l'acquisizione, oltre a eseguire l'acquisizione sui set di zone attive
+
+
+
+ a| 
+NIC da utilizzare
+ a| 
+Specificare l'interfaccia di rete da utilizzare sulla RAU quando si esegue la creazione di report sui dispositivi SAN
+
+
+
+ a| 
+Escludi dispositivi
+ a| 
+Elenco separato da virgole dei nomi di unità da includere o escludere dal polling
+
+
+
+ a| 
+Utilizzare il nome alternativo dello switch EFCM come nome dello switch Insight
+ a| 
+Selezionare per utilizzare il nome alternativo dello switch EFCM come nome dello switch Insight
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+|===

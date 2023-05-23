@@ -1,0 +1,16 @@
+---
+permalink: install-windows/insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight fornisce molti file di log per facilitare la ricerca e la risoluzione dei problemi. I registri disponibili sono elencati nella directory dei registri. È possibile utilizzare uno strumento per il monitoraggio dei log, ad esempio BareTail, per visualizzare tutti i log contemporaneamente. 
+---
+= Registri Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight fornisce molti file di log per facilitare la ricerca e la risoluzione dei problemi. I registri disponibili sono elencati nella directory dei registri. È possibile utilizzare uno strumento per il monitoraggio dei log, ad esempio BareTail, per visualizzare tutti i log contemporaneamente.
+
+I file di log si trovano in `<install directory>\SANscreen\wildfly\standalone\log` directory. I registri di acquisizione si trovano in `<install directory>\SANscreen\Acq\Log` directory.

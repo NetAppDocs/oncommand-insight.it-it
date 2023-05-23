@@ -1,0 +1,23 @@
+---
+permalink: howto/getting-started-with-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Una volta installato e concesso in licenza OnCommand Insight, è necessario iniziare a preparare l"ambiente per la presentazione dei dati importanti.' 
+---
+= Introduzione a Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta installato e concesso in licenza OnCommand Insight, è necessario iniziare a preparare l'ambiente per la presentazione dei dati importanti.
+
+Alcune delle attività eseguite in un ambiente tipico includono:
+
+. *Annotando le risorse* per prepararle alle query e ai report. Le annotazioni iniziali utili includono in genere data center, Tier e livello di servizio.
+. **Creazione di query** per mostrare dati importanti e aiutare la risoluzione dei problemi
+. *Assegnazione di applicazioni* e *entità aziendali* alle risorse
+. *Creazione di policy sulle performance* e *avvisi* per violazioni di tali policy
+. *Creazione di dashboard personalizzate* per evidenziare i dati in base alle esigenze o al ruolo dell'utente
+

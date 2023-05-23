@@ -1,0 +1,109 @@
+---
+permalink: install-linux/data-warehouse-server-requirements-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: Il server Data Warehouse deve essere eseguito su un computer compatibile con i requisiti hardware e software stabiliti. Assicurarsi che il server Web Apache o il software di reporting non siano già installati su questa macchina. 
+---
+= Requisiti del server Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il server Data Warehouse deve essere eseguito su un computer compatibile con i requisiti hardware e software stabiliti. Assicurarsi che il server Web Apache o il software di reporting non siano già installati su questa macchina.
+
+[NOTE]
+====
+Il dimensionamento per OnCommand Insight prevede più dipendenze, ad esempio il numero di risorse nell'ambiente, la quantità di dati storici conservati e molto altro ancora. I seguenti esempi di dimensionamento del data warehouse sono solo linee guida e rappresentano alcuni degli ambienti in cui Insight è stato testato. La modifica di questi o altri fattori nell'ambiente può modificare i requisiti di dimensionamento di Insight.
+
+====
+Prima di installare o aggiornare Insight, si consiglia di contattare il Sales Engineer per ottenere informazioni dettagliate sul dimensionamento.
+
+*Esempi:*
+
+|===
+
+
+| Fattori ambientali: | Spazio su disco, CPU e memoria testati: 
+
+
+ a| 
+18 storage array3,400 VM
+
+4,500 porte switch
+ a| 
+Disco rigido da 200 GB 8 core
+
+32 GB DI RAM
+
+
+
+ a| 
+110 array di storage 11,500 VM
+
+14,500 porte switch
+ a| 
+Disco rigido da 300 GB 8 core
+
+48 GB DI RAM
+
+|===
+*Requisiti:*
+
+|===
+
+
+| Componente | Obbligatorio 
+
+
+ a| 
+Sistema operativo
+ a| 
+Un computer che esegue una versione con licenza di uno dei seguenti sistemi, che non esegue altro software a livello di applicazione:
+
+* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+* CentOS 7.2, 7.5, 7.6, 7.7, 7.8, 7.9, CentOS 8 Stream
+* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+
+
+
+
+ a| 
+Macchina virtuale (VM)
+ a| 
+Questo componente può essere eseguito in un ambiente virtuale, a condizione che le risorse di CPU e memoria per l'istanza siano riservate.
+
+
+
+ a| 
+CPU
+ a| 
+8 - 40 core CPU
+
+
+
+ a| 
+Memoria
+ a| 
+32 GB - 2 TB DI RAM
+
+
+
+ a| 
+Spazio su disco disponibile
+ a| 
+200 GB - 512 GB di spazio su disco nel sistema devono essere presenti almeno 50 GB di spazio libero su disco `/var/lib` E 25 GB di spazio libero su disco in `/opt` e. `/var/log` partizioni.
+
+
+
+ a| 
+Rete
+ a| 
+* Connessione Ethernet a 100 Mbps o 1 Gbps
+* Indirizzo IP statico
+* Per il processo del server DWH OnCommand Insight, porte 80, 443, 1098, 1099, 3873, 8083 e da 4444 a 4446
+* Per MySQL, porta 3306
+
+
+|===

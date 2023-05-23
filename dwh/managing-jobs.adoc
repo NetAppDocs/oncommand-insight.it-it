@@ -1,0 +1,40 @@
+---
+permalink: dwh/managing-jobs.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile visualizzare un elenco dei lavori correnti e il relativo stato. Il primo lavoro di un ciclo di costruzione è in grassetto. La build che Data Warehouse esegue per ogni connettore e per ogni data mart è considerata un lavoro. 
+---
+= Gestione dei lavori
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare un elenco dei lavori correnti e il relativo stato. Il primo lavoro di un ciclo di costruzione è in grassetto. La build che Data Warehouse esegue per ogni connettore e per ogni data mart è considerata un lavoro.
+
+
+
+== A proposito di questa attività
+
+È possibile annullare qualsiasi processo in sospeso pianificato o iniziato. È inoltre possibile cancellare la cronologia dei lavori eseguiti in precedenza. È possibile cancellare la cronologia dei lavori che non sono in sospeso, in esecuzione o in corso di interruzione. È possibile cancellare tutta la cronologia o tutta la cronologia tranne le 24 ore precedenti per rimuovere tutte le voci tranne l'ultimo giorno.
+
+È possibile visualizzare informazioni sui seguenti tipi di job: Licenza, Pre Inventory, Inventory, Post Inventory, Dimensions, Preparazione dei datamarts, capacità, porte, efficienza dello storage, utilizzo del file system, Performance, Job Status Notification, History Build, annotazioni dinamiche, rimozione del connettore, Build, Phone Home e manutenzione ignorati.
+
+Un lavoro di manutenzione viene eseguito settimanalmente e utilizza i tool MySQL per ottimizzare il database.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *Jobs*.
++
+image::../media/oci-dwh-admin-jobs-gif.gif[Collegamento del menu principale di DWH]
+
++
+Se viene visualizzato uno stato Pending (in sospeso), viene visualizzato il collegamento Cancel (Annulla).
+
+. Per annullare un processo in sospeso, fare clic su *Annulla*.
+. Per rimuovere la cronologia dei lavori, fare clic su *tutto* o *tutto tranne le ultime 24 ore*.
+

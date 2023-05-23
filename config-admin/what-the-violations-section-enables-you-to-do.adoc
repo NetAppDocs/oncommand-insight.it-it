@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-violations-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: La sezione violazioni consente di visualizzare e gestire le violazioni che si verificano nella rete in seguito a una policy di performance assegnata a una risorsa. 
+---
+= Utilizzando la sezione violazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione violazioni consente di visualizzare e gestire le violazioni che si verificano nella rete in seguito a una policy di performance assegnata a una risorsa.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Individuare una pagina di risorse effettuando una delle seguenti operazioni:
++
+** Nella barra degli strumenti Insight, fare clic su image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], digitare il nome della risorsa, quindi selezionare la risorsa dall'elenco.
+** Fare clic su *Dashboard*, selezionare *Dashboard delle risorse*, individuare il nome di una risorsa e fare clic su di essa. Viene visualizzata la pagina delle risorse. La sezione violazioni visualizza l'ora in cui si è verificata la violazione e una descrizione della soglia superata, insieme a un collegamento ipertestuale alla risorsa in cui si è verificata la violazione (ad esempio "`2 viols abete ds-30 with latency - Total > 50`").
+
+
+. È possibile eseguire una delle seguenti attività facoltative:
++
+** Utilizzare la casella *filter* per visualizzare solo violazioni specifiche.
+** Se nella tabella sono presenti più di cinque violazioni, fare clic su un numero di pagina per scorrere le violazioni per pagina.
+** Modificare l'ordinamento delle colonne di una tabella in crescente (freccia su) o decrescente (freccia giù) facendo clic sulla freccia nell'intestazione della colonna.
+** Fare clic sul nome della risorsa in una descrizione per visualizzarne la pagina; un cerchio rosso indica i problemi che richiedono ulteriori analisi.
++
+È possibile fare clic sul criterio di performance, che visualizza la finestra di dialogo Modifica criterio, per esaminare il criterio di performance e apportare modifiche al criterio, se necessario.
+
+** Fare clic su image:../media/delete-icon.gif[""] rimuovere una violazione dall'elenco se si stabilisce che il problema non è più motivo di preoccupazione.
+
+
+

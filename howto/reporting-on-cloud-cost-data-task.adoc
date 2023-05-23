@@ -1,0 +1,46 @@
+---
+permalink: howto/reporting-on-cloud-cost-data-task.html 
+sidebar: sidebar 
+keywords:  
+summary: 'I dati mensili sui costi del cloud raccolti in Insight vengono inviati al data warehouse ed è disponibile nel datamart dei costi del cloud per l"utilizzo nei report.' 
+---
+= Reporting sui dati dei costi del cloud in Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I dati mensili sui costi del cloud raccolti in Insight vengono inviati al data warehouse ed è disponibile nel datamart dei costi del cloud per l'utilizzo nei report.
+
+
+
+== Prima di iniziare
+
+È necessario che le origini dati siano configurate per raccogliere i dati sui costi del cloud da AWS. Ogni utente/account fatturabile deve disporre di un'origine dati separata.
+
+Consentire a Insight di iniziare la raccolta dei dati per almeno 36 ore.
+
+Consentire l'esecuzione di ETL almeno una volta dopo tale periodo, per inviare i dati al data warehouse.
+
+
+
+== A proposito di questa attività
+
+Una volta raccolti e inviati i dati al data warehouse, è possibile visualizzarli in uno dei diversi report preconfigurati o creare report personalizzati. Insight memorizza i dati nel proprio datamart Cloud Cost.
+
+Per visualizzare i dati sui costi del cloud in uno dei report preconfigurati:
+
+
+
+== Fasi
+
+. Aprire Insight Reporting con uno dei seguenti metodi:
++
+** Fare clic sull'icona del portale di reporting image:../media/oci-reporting-portal-icon.gif[""] Nell'interfaccia utente Web di Insight Server o nell'interfaccia utente di Data Warehouse.
+** Avviare il reporting direttamente immettendo il seguente URL: `https://<dwh_server_name\>:9300/p2pd/servlet/dispatch` oppure `https://<dwh_server_name\>:9300/bi (7.3.3 and later)`
+
+
+. Una volta effettuato l'accesso a Reporting, fare clic su *cartelle pubbliche* e selezionare *costo cloud*.
+. È possibile visualizzare i dati di fatturazione di AWS nei report disponibili nella cartella *Cloud Cost* oppure creare un report personalizzato utilizzando il datamart * Cloud Cost disponibile nella cartella *Packages*.
+

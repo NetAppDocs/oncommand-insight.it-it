@@ -1,0 +1,22 @@
+---
+permalink: dwh/backing-up-custom-reports-and-report-artifacts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se sono stati creati report personalizzati in una versione di Insight precedente alla 7.0 e si desidera eseguire l"aggiornamento alla versione più recente di Insight, è necessario eseguire il backup dei report e segnalare gli artefatti prima dell"installazione dell"aggiornamento e ripristinarli dopo l"installazione dell"aggiornamento. Prestare attenzione anche alle cartelle utilizzate per memorizzare gli artefatti dei report.' 
+---
+= Backup di report personalizzati e artefatti di report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se sono stati creati report personalizzati in una versione di Insight precedente alla 7.0 e si desidera eseguire l'aggiornamento alla versione più recente di Insight, è necessario eseguire il backup dei report e segnalare gli artefatti prima dell'installazione dell'aggiornamento e ripristinarli dopo l'installazione dell'aggiornamento. Prestare attenzione anche alle cartelle utilizzate per memorizzare gli artefatti dei report.
+
+
+
+== A proposito di questa attività
+
+Se sono state apportate modifiche ai report predefiniti, creare le proprie copie di tali report in una cartella separata. In questo modo, quando si aggiornano gli artefatti predefiniti, le modifiche non vengono sovrascritte.
+
+Se si dispone di report nell'area cartelle personali, è necessario copiarli nelle cartelle rapporti personalizzati in modo che non vadano persi.

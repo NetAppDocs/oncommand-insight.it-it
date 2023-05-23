@@ -1,0 +1,27 @@
+---
+permalink: howto/introduction-to-configuring-your-system-for-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: I report di chargeback forniscono informazioni di chargeback della capacità di storage e di responsabilità per host, applicazioni ed entità aziendali e includono dati attuali e storici. 
+---
+= Configurazione del sistema per il report dei dati di chargeback
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I report di chargeback forniscono informazioni di chargeback della capacità di storage e di responsabilità per host, applicazioni ed entità aziendali e includono dati attuali e storici.
+
+Questa guida descrive come configurare Insight per generare un report di chargeback che fornisce la responsabilità per i costi del livello di servizio e di utilizzo dello storage. Lo scopo della guida è quello di fornire i passaggi necessari per creare un semplice report di chargeback e familiarizzare gli utenti Insight con le opzioni disponibili durante la configurazione del chargeback nel proprio ambiente specifico.
+
+Per ciascuna applicazione, il report di esempio identifica le risorse fornite e il costo delle risorse. L'output del report viene creato definendo i seguenti dati in Insight
+
+* Tier di storage
+* Costo associato a ciascun Tier di storage
+* Capacità di storage fornita
+* Livelli di servizio
+* Costo per livello di servizio
+
+
+Le sezioni seguenti descrivono i passaggi necessari per configurare questi dati in modo che possano essere accessibili da Insight Reporting.

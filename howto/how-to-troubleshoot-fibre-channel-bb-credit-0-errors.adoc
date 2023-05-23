@@ -1,0 +1,68 @@
+---
+permalink: howto/how-to-troubleshoot-fibre-channel-bb-credit-0-errors.html 
+sidebar: sidebar 
+keywords:  
+summary: Fibre Channel utilizza crediti da buffer a buffer per controllare il flusso di trasmissione. Il valore del credito viene decrementato quando un frame viene inviato da una porta e il valore del credito viene reintegro quando la porta riceve una risposta. Se i crediti BB nella porta non vengono riforniti, il flusso di trasmissione potrebbe risentire. Le porte necessitano di memoria o buffer per memorizzare temporaneamente i frame fino a quando non vengono assemblati in sequenza e consegnati. Il numero di buffer è il numero di frame che una porta può memorizzare ed è chiamato credito buffer. 
+---
+= Risoluzione dei problemi relativi agli errori di credito BB Fibre Channel 0
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fibre Channel utilizza crediti da buffer a buffer (crediti BB) per controllare il flusso di trasmissione. Il valore del credito viene decrementato quando un frame viene inviato da una porta e il valore del credito viene reintegro quando la porta riceve una risposta. Se i crediti BB nella porta non vengono riforniti, il flusso di trasmissione potrebbe risentire. Le porte necessitano di memoria o buffer per memorizzare temporaneamente i frame fino a quando non vengono assemblati in sequenza e consegnati. Il numero di buffer è il numero di frame che una porta può memorizzare ed è chiamato credito buffer.
+
+Poiché i crediti disponibili per una data porta si avvicinano a zero, un errore avverte che la porta interromperà la ricezione delle trasmissioni quando viene raggiunto lo zero e non riprenderà fino a quando i crediti BB non saranno riforniti.
+
+Le policy sulle performance di Insight consentono di impostare le soglie sulle seguenti metriche delle porte.
+
+|===
+
+
+ a| 
+Credito BB zero - Rx
+
+
+
+ a| 
+Numero di volte in cui il conteggio del credito buffer-to-buffer di ricezione è passato a zero durante il periodo di campionamento
+
+
+
+ a| 
+Credito BB zero - Tx
+
+
+
+ a| 
+Numero di volte in cui il conteggio del credito buffer-to-buffer di trasmissione è passato a zero durante il periodo di campionamento
+
+
+
+ a| 
+Credito BB zero - totale
+
+
+
+ a| 
+Numero di volte in cui questa porta ha dovuto interrompere la trasmissione perché la porta collegata non aveva crediti da fornire
+
+
+
+ a| 
+Durata zero credito BB - Tx
+
+
+
+ a| 
+Tempo in millisecondi durante il quale il credito Tx BB è stato pari a zero durante l'intervallo di campionamento
+
+|===
+Gli errori di credito BB potrebbero essere causati da alcuni dei seguenti scenari:
+
+* Se una data implementazione ha una percentuale elevata di frame FC di dimensioni significativamente inferiori alla dimensione massima, potrebbe essere necessario un numero maggiore di BB_Credits.
+* Modifiche dei carichi di lavoro nell'ambiente che potrebbero influire sulle porte o sui dispositivi connessi, ad esempio i nodi di storage.
+
+
+È possibile utilizzare le pagine delle risorse relative a fabric, switch e porte per monitorare l'ambiente Fibre Channel. Le pagine delle risorse delle porte contengono informazioni riepilogative sulla risorsa, sulla sua topologia (il dispositivo e le sue connessioni), sui grafici delle performance e sulle tabelle delle risorse associate. Durante la risoluzione dei problemi relativi a Fibre Channel, il grafico delle performance per ogni risorsa porta è utile perché mostra il traffico per la porta principale contributore selezionata. Le pagine delle risorse delle porte mostrano anche le metriche di credito buffer-to-buffer e gli errori delle porte in questo grafico, con Insight che visualizza un grafico delle performance separato per ciascuna metrica.

@@ -1,0 +1,16 @@
+---
+permalink: install-windows/upgrade-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Di norma, è necessario eseguire un aggiornamento su tutti i server Insight (server Insight, server Data Warehouse, unità di acquisizione remota, unità di monitoraggio Ethernet), ad eccezione del server che esegue il software di rilevamento delle anomalie. Consultare sempre le Note di rilascio per i requisiti di aggiornamento per una nuova release di OnCommand Insight.' 
+---
+= Aggiornamento di OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Di norma, è necessario eseguire un aggiornamento su tutti i server Insight (server Insight, server Data Warehouse, unità di acquisizione remota, unità di monitoraggio Ethernet), ad eccezione del server che esegue il software di rilevamento delle anomalie. Consultare sempre le Note di rilascio per i requisiti di aggiornamento per una nuova release di OnCommand Insight.
+
+Se non diversamente indicato, i requisiti e le procedure si applicano all'aggiornamento da Insight 7.x alla versione corrente di Insight. Se si esegue l'aggiornamento da una versione precedente alla 7.0, contattare il proprio rappresentante commerciale.

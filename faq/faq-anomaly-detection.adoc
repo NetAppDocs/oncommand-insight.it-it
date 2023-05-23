@@ -1,0 +1,142 @@
+---
+permalink: faq/faq-anomaly-detection.html 
+sidebar: sidebar 
+keywords:  
+summary: Questa FAQ risponde alle domande più frequenti sul rilevamento delle anomalie OnCommand Insight. 
+---
+= Rilevamento delle anomalie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa FAQ risponde alle domande più frequenti sul rilevamento delle anomalie OnCommand Insight.
+
+
+
+== Cos'è un'anomalia?
+
+Le anomalie sono eventi di cambiamento delle performance in IOPS, latenza, utilizzo, crediti buffer-to-buffer e CPU che non sono conformi ai modelli precedentemente osservati e previsti. Il rilevamento delle anomalie OCI riguarda un'infrastruttura applicativa che serve l'applicazione, alla ricerca di modifiche nei modelli e nei comportamenti di elaborazione. Questi modelli di elaborazione ciclici includono "`ebs and flows`" storici nelle performance dei carichi di lavoro durante le ore di lavoro e nei fine settimana. Il motore di rilevamento delle anomalie in OCI utilizza l'intelligenza di apprendimento automatico per stabilire un modello di riferimento "`normale`" e rileva quando un'applicazione definita devia dal comportamento previsto.
+
+
+
+== Come funziona il rilevamento delle anomalie in OCI?
+
+Il rilevamento delle anomalie di OCI `è un approccio di monitoraggio proattivo che sfrutta la Machine Learning Intelligence sulla base di informazioni storiche. La sua capacità di rilevare le anomalie delle performance emergenti molto prima delle soglie tradizionali offre agli amministratori un ulteriore tempo per discutere, pianificare e mitigare i problemi prima che gli SLO delle applicazioni o i servizi del data center ne risentano.
+
+Insight rileva e mappa automaticamente l'intero stack dell'infrastruttura che supporta l'applicazione, a partire dalle risorse di calcolo, attraverso lo switch fabric e fino alle risorse di storage. OCI raccoglie i principali contatori delle performance, tra cui IOPS, latenza, informazioni sui nodi, utilizzo del pool di storage, CPU hypervisor, E BB Credit Zero per ogni risorsa, quindi invia i dati al motore di rilevamento delle anomalie per l'utilizzo nell'analisi delle anomalie applicative. I risultati delle anomalie vengono aggiornati due volte all'ora e sono disponibili nella dashboard dell'applicazione, nelle landing page dell'applicazione e utilizzando il widget della tabella di query. Il punteggio delle anomalie viene eseguito risorsa per risorsa, contatore per contatore e viene fornito un punteggio complessivo per l'intera infrastruttura applicativa.
+
+
+
+== Quali versioni di OCI supportano il rilevamento delle anomalie?
+
+Il rilevamento delle anomalie è supportato per OCI 7.2 e versioni successive.
+
+
+
+== Per quante applicazioni è possibile abilitare OCI per il rilevamento delle anomalie?
+
+OCI supporta il monitoraggio di un massimo di 48 applicazioni business-critical.
+
+
+
+== Quanti motori di rilevamento delle anomalie (ADE) è possibile implementare?
+
+Un motore di rilevamento delle anomalie per server operativo OCI.
+
+
+
+== È possibile implementare ulteriori motori di rilevamento delle anomalie se si dispone di più di 48 applicazioni?
+
+Sì, attualmente OCI supporta l'associazione di un motore di rilevamento delle anomalie per server OCI. In ambienti server multi OCI, è possibile implementare motori di rilevamento delle anomalie aggiuntivi e server operativi OCI in modalità "`paired`". Ogni server avrebbe visibilità solo nelle proprie applicazioni con funzionalità di rilevamento delle anomalie abilitate.
+
+
+
+== Esistono limiti di scalabilità per le dimensioni di un cluster/gruppo di applicazioni?
+
+Le linee guida generali di progettazione OCI per un funzionamento e una scalabilità ottimali utilizzando le funzionalità di rilevamento delle anomalie Insight sono le seguenti: È supportato un motore di rilevamento delle anomalie per server Insight. In OCI è possibile monitorare fino a 48 applicazioni. Le infrastrutture applicative possono essere costituite da un massimo di 4000 oggetti. Le risorse insufficienti riducono la scala generale.
+
+
+
+== Quali sono le licenze OCI richieste per il rilevamento delle anomalie?
+
+L'analisi del rilevamento delle anomalie richiede il rilevamento e l'esecuzione delle licenze.
+
+
+
+== Quanto tempo occorre per iniziare a rilevare le anomalie e visualizzare i risultati?
+
+I risultati del punteggio delle anomalie verranno visualizzati in appena 2-3 ore dopo l'attivazione del monitoraggio dell'applicazione.
+
+
+
+== Quanto tempo devo aspettare prima di utilizzare i risultati in modo operativo?
+
+La qualità e la precisione dei risultati del motore di rilevamento delle anomalie migliorano nel tempo (settimane, mesi, quarter, ecc.). La valutazione ciclica (periodicità) inizia in genere intorno alla terza settimana. Per i modelli che coprono una durata di tempo maggiore (ad esempio mensile), il motore deve osservare gli eventi ripetuti prima di regolare i punteggi delle anomalie.
+
+
+
+== Per quanto tempo il motore di rilevamento delle anomalie mantiene il proprio apprendimento?
+
+Il motore di rilevamento delle anomalie è altamente efficiente nel modo in cui memorizza le informazioni di apprendimento. L'apprendimento statistico può essere misurato in mesi per i comportamenti anomali degli oggetti. Non esiste una "`retention`" come comunemente si pensa con i set di dati tipici in Insight. Il motore di rilevamento delle anomalie acquisisce e memorizza i dati che vengono determinati "`statisticamente significativi`" nel tempo e, se necessario, esaurisce i dati insignificanti. Questo meccanismo aumenta notevolmente la sua durata di apprendimento e riduce sia le risorse necessarie per memorizzare i dati che il tempo necessario per eseguire le analisi
+
+
+
+== Se abilito oggi il rilevamento delle anomalie, può dirmi quali anomalie sono state riscontrate la settimana scorsa?
+
+No, quando viene inizializzato il rilevamento delle anomalie, il server Insight carica tutti i dati delle performance esistenti dal server Insight per aumentare la comprensione dei motori di rilevamento delle anomalie delle applicazioni monitorate e delle relative infrastrutture. Le anomalie non verranno fornite sui dati delle performance "`preesistenti`" acquisiti. Le anomalie verranno segnalate solo sui nuovi dati in entrata mentre vengono analizzati rispetto ai dati preesistenti. Le anomalie appena rilevate iniziano a essere visualizzate in poche ore.
+
+
+
+== Come vengono calcolati i punteggi delle anomalie?
+
+Ogni punteggio di anomalia applicativa viene calcolato in base a un rollup dei vari punteggi delle singole risorse. Il motore di rilevamento delle anomalie sfrutta oltre 30 complessi algoritmi e formule per la determinazione delle anomalie e i punteggi forniti. Gli utenti possono confrontare questo tipo di tecnica di valutazione dell'analisi con valutazioni mediche simili, come ad esempio i punteggi dell'indice di massa corporea (BMI), costituiti da numerose variabili e misurazioni (peso, età, altezza, densità, ecc.).
+
+
+
+== Cosa rappresentano ciascuna delle barre blu?
+
+Ciascun blocco di 3 barre rappresenta una risorsa e il relativo intervallo di significatività delle anomalie. Maggiore è il numero di barre blu, maggiore è la variazione del comportamento osservato. Facendo clic sui blocchi si rivela il significato (dell'anomalia), le singole risorse e i contatori.
+
+
+
+== Perché i punteggi delle singole risorse non si sommano al punteggio totale dell'applicazione?
+
+Ogni risorsa viene valutata singolarmente in base alla sua deviazione nel comportamento osservato. Il significato del punteggio delle singole risorse ha un ruolo importante nel punteggio totale delle applicazioni, ma può anche includere altri fattori analitici e matematici.
+
+
+
+== È possibile configurare il rilevamento delle anomalie per monitorare entità aziendali o oggetti con annotazioni assegnate?
+
+Attualmente, il rilevamento delle anomalie può essere abilitato solo su applicazioni definite. Qualsiasi oggetto che può essere assegnato a un'applicazione (macchine virtuali, hypervisor, server, volumi e volumi interni) può essere raggruppato e monitorato.
+
+
+
+== OCI è in grado di fornire una notifica per i punteggi di anomalia elevati?
+
+Sì, è possibile creare policy sulle performance applicative basate sul punteggio di anomalia per l'applicazione. Il superamento delle soglie definite nel criterio attiva avvisi che avvisano l'utente in merito a problemi relativi alle risorse dell'applicazione.
+
+
+
+== Cosa succede quando si disattiva il rilevamento delle anomalie sull'applicazione?
+
+Tutte le informazioni apprese (anomalie cronologiche) per l'infrastruttura applicativa vengono eliminate dal motore di rilevamento delle anomalie. Tutti i risultati del rilevamento delle anomalie vengono cancellati dal database operativo Insight.
+
+
+
+== Quando è necessario utilizzare le soglie statiche?
+
+Le soglie statiche sono ideali per gli avvisi di Best practice sui limiti delle risorse dell'infrastruttura e per l'identificazione della durata dell'evento. Inoltre, aiutano nella gestione dei livelli di servizio e avvisano in caso di varie metriche del contatore degli errori, come link Reset, classe 3 Discards e Loss of Sync.
+
+
+
+== Quali sono i piani per includere altre metriche nel rilevamento delle anomalie?
+
+Il modello e gli algoritmi di apprendimento automatico delle anomalie continueranno a essere migliorati o modificati man mano che saranno disponibili nuovi dati statistici, feedback degli utenti e miglioramento del prodotto.
+
+
+
+== I risultati delle anomalie sono disponibili nel Data Warehouse (DWH)?
+
+I risultati delle anomalie di oggi non vengono inviati (ETL-ed) al data warehouse OCI. Gli utenti possono individuare i risultati nella landing page dell'applicazione OCI o nei widget della tabella Query definiti dall'utente.

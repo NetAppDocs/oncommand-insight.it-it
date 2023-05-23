@@ -1,0 +1,14 @@
+---
+permalink: install-windows/completing-post-upgrade-tasks.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo aver eseguito l"aggiornamento alla versione più recente di Insight, è necessario completare attività aggiuntive.' 
+---
+= Completamento delle attività post-aggiornamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver eseguito l'aggiornamento alla versione più recente di Insight, è necessario completare attività aggiuntive.

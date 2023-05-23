@@ -1,0 +1,16 @@
+---
+permalink: dwh/what-to-do-with-failing-historical-build-points.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puoi creare dalla cronologia, omettendo qualsiasi build non riuscita attivando l"opzione Ignora errori di creazione della cronologia.' 
+---
+= Cosa fare con i punti di costruzione storici non riusciti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare dalla cronologia, omettendo qualsiasi build non riuscita attivando l'opzione *Ignora errori di generazione della cronologia*.
+
+In questo caso, la build dalla storia continua. Se una build non riesce e questa opzione è attivata, Data Warehouse continua la creazione e ignora le build non riuscite. In questi casi, non esiste alcun punto dati nei dati storici per nessuna build saltata. Se non si attiva questa opzione e la creazione non riesce, tutti i lavori successivi vengono interrotti.

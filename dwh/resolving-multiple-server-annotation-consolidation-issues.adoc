@@ -1,0 +1,39 @@
+---
+permalink: dwh/resolving-multiple-server-annotation-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La vista Annotation Consolidation (consolidamento annotazioni) nella vista Data Warehouse Troubleshooting (risoluzione dei problemi di Data Warehouse) visualizza una tabella contenente tutti i tipi di annotazioni disponibili e i tipi di oggetti a cui è possibile applicarli.' 
+---
+= Risoluzione di problemi di consolidamento delle annotazioni su più server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La vista Annotation Consolidation (consolidamento annotazioni) nella vista Data Warehouse Troubleshooting (risoluzione dei problemi di Data Warehouse) visualizza una tabella contenente tutti i tipi di annotazioni disponibili e i tipi di oggetti a cui è possibile applicarli.
+
+
+
+== A proposito di questa attività
+
+Il consolidamento dei valori di annotazione si basa sul valore del tipo di annotazione. Un array di storage potrebbe avere due diversi valori di Tier, ciascuno proveniente da un connettore diverso. Pertanto, se in un connettore è presente un livello definito dal nome gold e in un secondo connettore un livello viene definito con il nome goldy, queste informazioni vengono visualizzate in Data Warehouse come due livelli separati.
+
+Poiché alcuni tipi di annotazione consentono l'assegnazione di più valori di annotazione allo stesso oggetto, Data Warehouse consente agli oggetti (ad esempio, "`host`") di assegnare più valori di annotazione (ad esempio, "`dATA center 1`" e "`dATA center 2" potrebbero essere assegnati allo stesso host).
+
+L'annotazione Tier sui volumi funziona in modo leggermente diverso dalle tabelle di annotazione generali. Potenzialmente, nell'ambiente potrebbe essere presente un numero molto elevato di volumi e la visualizzazione di tutti i volumi nel Data Warehouse potrebbe influire sull'usabilità delle informazioni. Pertanto, la vista Annotations Consolidation (consolidamento annotazioni) visualizza solo i volumi a cui sono stati assegnati più valori di Tier e lo storage che contiene ciascuno di tali volumi.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *risoluzione dei problemi*.
+. Nella sezione *Annotation Consolidation*, fare clic su *Show* (Mostra) nella riga dell'oggetto.
++
+Di seguito viene riportato un esempio di annotazioni per Data_Center:
+
++
+image::../media/oci-dwh-troubleshooting-annotations-gif.gif[Risolvere i problemi di consolidamento delle annotazioni]
+
+

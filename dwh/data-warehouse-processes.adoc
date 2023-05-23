@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-processes.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouse esegue diversi tipi di processi. 
+---
+= Processi di Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouse esegue diversi tipi di processi.
+
+* *Processo ETL*
++
+Il processo ETL (Extract Transform and Load) recupera i dati da più database OnCommand Insight, li trasforma e li salva nel data mart. Il processo di creazione del data warehouse è un processo ETL.
+
+* *Lavori*
++
+Data Warehouse esegue e crea report su processi come: Inventario, dimensioni, capacità, capacità delle porte, capacità delle macchine virtuali, utilizzo del file system, performance, efficienza della capacità, licenze, creazione della cronologia, Annotazioni dinamiche, rimozione del connettore, creazione ignorata, opzione ASUP e lavori di manutenzione.
+
+* *Processo di consolidamento*
++
+Data warehouse supporta il consolidamento di più server OnCommand Insight nello stesso database del data warehouse. In molte configurazioni, potrebbe accadere che lo stesso oggetto venga segnalato da più connettori (ovvero, lo stesso switch esiste in due istanze di OnCommand Insight). In questo caso, Data Warehouse consolida più oggetti in uno (viene scelto un connettore primario e i dati dell'oggetto vengono presi solo da quel connettore).
+
+

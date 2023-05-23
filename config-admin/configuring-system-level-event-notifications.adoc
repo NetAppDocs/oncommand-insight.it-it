@@ -1,0 +1,37 @@
+---
+permalink: config-admin/configuring-system-level-event-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight supporta le notifiche per eventi a livello di sistema, come guasti delle unità di acquisizione o errori delle origini dati. Per ricevere le notifiche, è necessario configurare Insight in modo che invii e-mail quando si verifica uno o più di questi eventi. 
+---
+= Configurazione delle notifiche degli eventi a livello di sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight supporta le notifiche per eventi a livello di sistema, come guasti delle unità di acquisizione o errori delle origini dati. Per ricevere le notifiche, è necessario configurare Insight in modo che invii e-mail quando si verifica uno o più di questi eventi.
+
+
+
+== Prima di iniziare
+
+È necessario aver configurato i destinatari e-mail per ricevere le notifiche in *Admin* > *Notifiche* > *metodi di invio*.
+
+
+
+== Fasi
+
+. Fare clic su *Admin* > *Notifications*.
+. Fare clic su *Eventi*.
+. Nella sezione *Eventi avviso di sistema* e-mail, selezionare il livello di gravità (*Avviso e superiore* o *critico*) per la notifica oppure scegliere *non inviare* se non si desidera ricevere notifiche di eventi a livello di sistema.
+. Fare clic su *Save* (Salva).
+. Fare clic su *Admin* > *System Alerts* per configurare gli avvisi.
+. Per aggiungere un nuovo avviso, fare clic su *+Aggiungi* e assegnare all'avviso un *Nome* univoco. È inoltre possibile fare clic sull'icona a destra per *modificare* un avviso esistente.
+. Scegliere il *tipo di evento* su cui avvisare, ad esempio _Acquisition Unit Failure_.
+. Scegliere un intervallo *Snooze* per eliminare le notifiche sugli eventi duplicati del tipo selezionato per l'intervallo di tempo selezionato. Se si seleziona _mai_, si riceveranno notifiche ripetute una volta al minuto fino a quando l'evento non si verifica più.
+. Scegliere *severità* (Avviso o critico) per la notifica dell'evento.
+. Per impostazione predefinita, le notifiche e-mail verranno inviate all'elenco globale dei destinatari di posta elettronica oppure è possibile fare clic sul collegamento fornito per ignorare l'elenco globale e inviare notifiche a destinatari specifici.
+. Fare clic su Save (Salva) per aggiungere l'avviso.
+

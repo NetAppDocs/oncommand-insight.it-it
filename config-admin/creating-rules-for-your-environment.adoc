@@ -1,0 +1,59 @@
+---
+permalink: config-admin/creating-rules-for-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"utilizzo di regole per identificare i dispositivi nell"ambiente è in genere un processo iterativo che richiede un"analisi completa dell"ambiente e la creazione di più regole per identificare il maggior numero possibile di dispositivi. Lo scenario migliore consiste nell"impostare l"obiettivo di identificare il 100% dei dispositivi nell"ambiente in uso.' 
+---
+= Pianificazione delle regole di risoluzione dei dispositivi per l'ambiente in uso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'utilizzo di regole per identificare i dispositivi nell'ambiente è in genere un processo iterativo che richiede un'analisi completa dell'ambiente e la creazione di più regole per identificare il maggior numero possibile di dispositivi. Lo scenario migliore consiste nell'impostare l'obiettivo di identificare il 100% dei dispositivi nell'ambiente in uso.
+
+L'ordine più efficiente per le regole consiste nel posizionare prima le regole più restrittive, con la conseguenza che la maggior parte delle voci non corrisponde al modello, mentre il processo procede a regole meno restrittive. Ciò consente a Insight di applicare più modelli a ciascuna voce, aumentando la possibilità di corrispondenza dei modelli e di identificazione positiva dell'host.
+
+Quando si creano regole, l'obiettivo deve essere quello di creare regole che affrontino il maggior numero possibile di dispositivi non identificati. Ad esempio, la creazione di regole che seguono un modello di copertura simile a quello riportato di seguito è molto più efficiente rispetto alla creazione di 30 regole con percentuali di copertura inferiori:
+
+|===
+
+
+| Regola | Percentuale di copertura 
+
+
+ a| 
+Regola 1
+ a| 
+60%
+
+
+
+ a| 
+Articolo 2
+ a| 
+25%
+
+
+
+ a| 
+Articolo 3
+ a| 
+8%
+
+
+
+ a| 
+Articolo 4
+ a| 
+4%
+
+
+
+ a| 
+Articolo 5
+ a| 
+1%
+
+|===

@@ -1,0 +1,20 @@
+---
+permalink: howto/custom-dashboard-override-dashboard-time.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile ignorare l"impostazione del time frame della dashboard principale nei singoli widget. Questi widget visualizzano i dati in base al periodo di tempo impostato, non al periodo di tempo della dashboard.' 
+---
+= Ignorare il tempo della dashboard per i singoli widget
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile ignorare l'impostazione del time frame della dashboard principale nei singoli widget. Questi widget visualizzano i dati in base al periodo di tempo impostato, non al periodo di tempo della dashboard.
+
+Per eseguire l'override dell'ora del dashboard e forzare un widget a utilizzare un proprio intervallo di tempo, nella modalità di modifica del widget impostare *Ignora ora ora ora dashboard* su *on* e selezionare un intervallo di tempo per il widget. *Salva* il widget nella dashboard.
+
+Il widget visualizza i dati in base all'intervallo di tempo impostato, indipendentemente dall'intervallo di tempo selezionato sulla dashboard stessa.
+
+L'intervallo di tempo impostato per un widget non influisce sugli altri widget della dashboard.

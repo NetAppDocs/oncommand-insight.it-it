@@ -1,0 +1,30 @@
+---
+permalink: install-windows/backing-up-the-insight-server-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Eseguire il backup del database Insight per assicurarsi di disporre di un backup recente se si verifica un problema dopo l"aggiornamento. Durante la fase di backup e ripristino, i dati relativi alle performance non vengono raccolti; pertanto, il backup deve avvenire il più vicino possibile al tempo di aggiornamento.' 
+---
+= Backup del database OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eseguire il backup del database Insight per assicurarsi di disporre di un backup recente se si verifica un problema dopo l'aggiornamento. Durante la fase di backup e ripristino, i dati relativi alle performance non vengono raccolti; pertanto, il backup deve avvenire il più vicino possibile al tempo di aggiornamento.
+
+
+
+== Fasi
+
+. Aprire Insight nel browser.
+. Fare clic su *Admin* > *Troubleshooting*.
+. Nella pagina *risoluzione dei problemi*, fare clic su *Backup*.
++
+Il tempo necessario per eseguire il backup del database può variare in base alle risorse disponibili (architettura, CPU e memoria), alle dimensioni del database e al numero di oggetti monitorati nell'ambiente.
+
++
+Una volta completato il backup, viene richiesto se si desidera scaricare il file.
+
+. Scaricare il file di backup.
+

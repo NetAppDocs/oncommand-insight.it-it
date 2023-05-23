@@ -1,0 +1,29 @@
+---
+permalink: config-admin/forcing-annotation-updates.html 
+sidebar: sidebar 
+keywords:  
+summary: Se le annotazioni sono state modificate e si desidera utilizzarle immediatamente nei report, utilizzare una delle opzioni di annotazione forzata. 
+---
+= Forzatura degli aggiornamenti delle annotazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se le annotazioni sono state modificate e si desidera utilizzarle immediatamente nei report, utilizzare una delle opzioni di annotazione forzata.
+
+
+
+== Fasi
+
+. Nell'interfaccia utente Web, fare clic su *Admin* e selezionare *Troubleshooting*.
+. Nella parte inferiore della pagina, fare clic sul collegamento *risoluzione avanzata dei problemi*.
+. Fare clic sulla scheda *azioni*.
+. Selezionare una delle seguenti opzioni:
++
+** *Aggiornare le annotazioni DWH* per forzare l'aggiornamento delle annotazioni nel data warehouse da utilizzare per i report.
+** *Aggiorna annotazioni DWH (incl cancellato)* per forzare l'aggiornamento delle annotazioni (inclusi gli oggetti cancellati) nel data warehouse da utilizzare per i report.
+
+
+

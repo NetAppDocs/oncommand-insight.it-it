@@ -1,0 +1,247 @@
+---
+permalink: config-admin/ibm-svc-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati IBM SVC raccoglie dati di inventario e performance utilizzando SSH, supportando una varietà di dispositivi che eseguono il sistema operativo SVC. L"elenco dei dispositivi supportati include modelli come SVC, v7000, v5000 e v3700. Per informazioni sui modelli e le versioni del firmware supportati, fare riferimento alla matrice di supporto di Insight Data Source.' 
+---
+= Origine dati IBM SVC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati IBM SVC raccoglie dati di inventario e performance utilizzando SSH, supportando una varietà di dispositivi che eseguono il sistema operativo SVC. L'elenco dei dispositivi supportati include modelli come SVC, v7000, v5000 e v3700. Per informazioni sui modelli e le versioni del firmware supportati, fare riferimento alla matrice di supporto di Insight Data Source.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati IBM SVC. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo di storage
+
+
+
+ a| 
+Gruppo Mdisk
+ a| 
+Pool di storage
+
+
+
+ a| 
+Disco virtuale
+ a| 
+Volume
+
+
+
+ a| 
+Mdisk
+ a| 
+LUN back-end
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti di inventario
+
+* Indirizzo IP di ciascun cluster SVC
+* Porta 22 disponibile
+* Coppia di chiavi pubbliche e private generate con Insight o riutilizzate una coppia di chiavi già in uso nel vostro SVC
++
+Se stai riutilizzando una coppia di chiavi esistente, devi convertirle dal formato Putty al formato OpenSSH.
+
+* Chiave pubblica installata nel cluster SVC
+* La chiave privata deve essere identificata nell'origine dati
+* Convalida dell'accesso: Aprire `ssh` Sessione al cluster SVC utilizzando la chiave privata
+
+
+[NOTE]
+====
+Non è necessario installare software di terze parti.
+
+====
+
+
+== Requisiti relativi alle performance
+
+* SVC Console, obbligatoria per qualsiasi cluster SVC e richiesta per il pacchetto di base Discovery SVC.
+* Livello di accesso amministrativo richiesto solo per la copia dei file di dati delle performance dai nodi del cluster al nodo di configurazione.
++
+[NOTE]
+====
+Poiché questo livello di accesso non è richiesto per il pacchetto di rilevamento della base SVC, l'utente della base SVC potrebbe non funzionare correttamente.
+
+====
+* Porta 22 richiesta
+* Per questo utente deve essere generata una chiave SSH pubblica e privata, in modo che sia accessibile dall'unità di acquisizione. Se l'utente di base SVC dispone delle autorizzazioni appropriate, lo stesso utente e la stessa chiave funzionano. La stessa chiave SSH può essere utilizzata per i dati di inventario e performance.
+* Abilitare la raccolta dati connettendosi al cluster SVC tramite SSH ed eseguendo: `svctask startstats -interval 1`
++
+[NOTE]
+====
+In alternativa, abilitare la raccolta dati utilizzando l'interfaccia utente di gestione SVC.
+
+====
+
+
+
+
+== Spiegazione del numero di serie principale
+
+Tradizionalmente Insight è in grado di riportare il numero di serie dello storage array o i numeri di serie dei singoli nodi di storage. Tuttavia, alcune architetture di storage array non sono perfettamente allineate a questo. Un cluster SVC può essere composto da 1-4 appliance e ogni appliance ha 2 nodi. Se l'appliance dispone di un numero di serie, tale numero non corrisponde né al numero di serie del cluster né ai nodi.
+
+L'attributo "Parent Serial Number" (numero di serie principale) sull'oggetto del nodo di storage viene popolato in modo appropriato per gli array IBM SVC quando i singoli nodi si trovano all'interno di un'appliance/enclosure intermedia che fa parte di un cluster più grande.
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+IP cluster/s.
+ a| 
+Indirizzo IP del nome di dominio completo per lo storage SVC
+
+
+
+ a| 
+Scegliere 'Password' o 'OpenSSH Key file' per specificare il tipo di credenziale
+ a| 
+Il tipo di credenziale utilizzato per la connessione al dispositivo tramite SSH
+
+
+
+ a| 
+Nome utente inventario
+ a| 
+Nome utente per la CLI SVC
+
+
+
+ a| 
+Password inventario
+ a| 
+Password per la CLI SVC
+
+
+
+ a| 
+Percorso completo alla chiave privata di inventario
+ a| 
+Percorso completo al file delle chiavi private di inventario
+
+
+
+ a| 
+Performance User Name (Nome utente performance)
+ a| 
+Nome utente di SVC CLC per la raccolta delle performance
+
+
+
+ a| 
+Password delle performance
+ a| 
+Password per SVC CLC per la raccolta delle performance
+
+
+
+ a| 
+Percorso completo alla chiave privata delle performance
+ a| 
+Percorso completo del file delle chiavi private Performance
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 40 minuti)
+
+
+
+ a| 
+Escludi dispositivi
+ a| 
+Elenco separato da virgole degli ID dei dispositivi da escludere dalla raccolta dell'inventario
+
+
+
+ a| 
+Timeout attesa processo SSH (sec)
+ a| 
+Timeout processo SSH (impostazione predefinita: 200 secondi)
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+
+
+ a| 
+Performance Escludi i dispositivi
+ a| 
+Elenco separato da virgole degli ID dei dispositivi da escludere dalla raccolta delle performance
+
+
+
+ a| 
+Timeout attesa processo SSH performance (sec)
+ a| 
+Timeout processo SSH (impostazione predefinita: 200 secondi)
+
+
+
+ a| 
+Per ripulire i file stats scaricati
+ a| 
+Selezionare per eliminare i file di statistiche scaricati
+
+|===

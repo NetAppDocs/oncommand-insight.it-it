@@ -1,0 +1,27 @@
+---
+permalink: config-admin/deleting-an-application.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile eliminare un"applicazione quando non soddisfa più le esigenze dell"ambiente.' 
+---
+= Eliminazione delle applicazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare un'applicazione quando non soddisfa più le esigenze dell'ambiente.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di Insight.
+. Fare clic su *Manage* (Gestisci) e selezionare *Applications* (applicazioni).
+. Posizionare il cursore sull'applicazione che si desidera eliminare e fare clic su image:../media/trash-can-query.gif[""].
++
+Viene visualizzata una finestra di dialogo di conferma che chiede se si desidera eliminare l'applicazione.
+
+. Fare clic su *OK*.
+

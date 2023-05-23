@@ -1,0 +1,38 @@
+---
+permalink: config-admin/insight-syslog-contents.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile abilitare un syslog su un server per raccogliere messaggi di avviso relativi alle violazioni Insight e alle performance che includono dati di utilizzo e traffico. 
+---
+= Contenuti di Insight syslog
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile abilitare un syslog su un server per raccogliere messaggi di avviso relativi alle violazioni Insight e alle performance che includono dati di utilizzo e traffico.
+
+
+
+== Tipi di messaggio
+
+Insight syslog elenca tre tipi di messaggi:
+
+* Violazioni del percorso SAN
+* Violazioni generali
+* Avvisi sulle prestazioni
+
+
+
+
+== Dati forniti
+
+Le descrizioni delle violazioni includono gli elementi coinvolti, l'ora dell'evento e la relativa severità o priorità della violazione.
+
+Gli avvisi relativi alle performance includono i seguenti dati:
+
+* Percentuali di utilizzo
+* Tipi di traffico
+* Velocità di traffico misurata in MB
+

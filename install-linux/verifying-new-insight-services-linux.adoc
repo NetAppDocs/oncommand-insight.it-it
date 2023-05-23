@@ -1,0 +1,37 @@
+---
+permalink: install-linux/verifying-new-insight-services-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo l"installazione, verificare l"esistenza dei nuovi componenti sul server.' 
+---
+= Verifica dell'installazione dei nuovi componenti Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo l'installazione, verificare l'esistenza dei nuovi componenti sul server.
+
+
+
+== Fasi
+
+. Per visualizzare un elenco dei servizi attualmente operativi sul server a cui si è connessi, digitare:
++
+`sudo oci-service.sh status all`
+
+. A seconda del server a cui hai effettuato l'accesso, controlla i seguenti servizi Insight nell'elenco e assicurati che abbiano lo stato "`running`".
++
+** Server Insight: Wildfly, acquisizione, mysql, elasticsearch
+** Server Data Warehouse: Wildfly, mysql
+** Remote Acquisition Server (Server di acquisizione remoto): Acquisizione
+
+
+
+
+
+
+== Risultati
+
+Se questi componenti non sono elencati, contattare il supporto tecnico.

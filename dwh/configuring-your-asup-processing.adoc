@@ -1,0 +1,25 @@
+---
+permalink: dwh/configuring-your-asup-processing.html 
+sidebar: sidebar 
+keywords:  
+summary: Tutti i prodotti NetApp sono dotati di funzionalità automatizzate per fornire il miglior supporto possibile per la risoluzione dei problemi che si verificano nel tuo ambiente. ASUP invia periodicamente informazioni specifiche predefinite al supporto clienti. Per impostazione predefinita, ASUP è attivato per Data Warehouse; tuttavia, è possibile disattivarlo se non si desidera più inviare le informazioni. 
+---
+= Disattivazione delle trasmissioni automatiche ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tutti i prodotti NetApp sono dotati di funzionalità automatizzate per fornire il miglior supporto possibile per la risoluzione dei problemi che si verificano nel tuo ambiente. ASUP invia periodicamente informazioni specifiche predefinite al supporto clienti. Per impostazione predefinita, ASUP è attivato per Data Warehouse; tuttavia, è possibile disattivarlo se non si desidera più inviare le informazioni.
+
+
+
+== Fasi
+
+. Dal riquadro di navigazione a sinistra, fare clic su *risoluzione dei problemi*.
+. Fare clic su *Disable* (Disattiva) per impedire ad ASUP di inviare un report giornaliero.
++
+Viene visualizzato il messaggio ASUP is disabled (ASUP disattivato).
+
+

@@ -1,0 +1,29 @@
+---
+permalink: howto/assigning-annotations-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Questa guida descrive come creare e personalizzare le annotazioni per il proprio ambiente da utilizzare per eseguire query, filtrare, inviare notifiche di avviso e creare report. 
+---
+= Creazione di annotazioni per la tua azienda
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa guida descrive come creare e personalizzare le annotazioni per il proprio ambiente da utilizzare per eseguire query, filtrare, inviare notifiche di avviso e creare report.
+
+Un'annotazione è una nota o un tag che si associa a risorse specifiche nel proprio ambiente. OnCommand Insight offre diverse annotazioni che è possibile configurare per le risorse in base alle necessità oppure creare annotazioni personalizzate in base alle esigenze aziendali.
+
+Gli esempi che seguono sono quelli generalmente configurati per primi nei nuovi ambienti dei clienti, per fungere da riferimento per ulteriori azioni. Le tue esigenze di annotazione possono variare, ma i passaggi descritti nel presente documento possono essere utilizzati come guida per la configurazione di eventuali annotazioni necessarie sulle risorse che desideri.
+
+Questa guida si basa sui seguenti presupposti:
+
+* Il server OnCommand Insight è installato e concesso in licenza.
+* Vuoi esplorare le Best practice, non tutte le opzioni disponibili.
+* Comprendete che questi sono solo esempi e che le vostre esigenze specifiche possono variare.
+
+
+Questa guida illustra la modifica delle annotazioni esistenti e la creazione di annotazioni personalizzate
+
+Nel nostro ambiente di esempio, desideriamo essere in grado di elencare le risorse in base a data center, Tier, livello di servizio e ambiente.

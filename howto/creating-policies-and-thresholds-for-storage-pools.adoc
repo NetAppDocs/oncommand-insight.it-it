@@ -1,0 +1,66 @@
+---
+permalink: howto/creating-policies-and-thresholds-for-storage-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile creare policy sulle performance che attivino avvisi per notificare il superamento delle soglie per le risorse dello Storage Pool. 
+---
+= Creazione di policy sulle performance per i pool di storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare policy sulle performance che attivino avvisi per notificare il superamento delle soglie per le risorse dello Storage Pool.
+
+
+
+== Prima di iniziare
+
+Questa procedura presuppone che sia stato eseguito il thin provisioning del pool di storage.
+
+
+
+== A proposito di questa attività
+
+Si desidera creare policy che monitorino e segnalino le modifiche in un pool di storage che potrebbero contribuire alle interruzioni. Per il pool di storage fisico con thin provisioning, si desidera monitorare la capacità fisica e il rapporto di overcommit.
+
+
+
+== Fasi
+
+. Aprire OnCommand Insight nel browser.
+. Selezionare *Gestisci* > *Criteri di performance*
++
+Viene visualizzata la pagina Performance Policies (Criteri di performance). I criteri sono organizzati in base all'oggetto e vengono valutati nell'ordine in cui vengono visualizzati nell'elenco. Se le notifiche sono attivate (*Admin* > *Notifiche*), puoi configurare Insight per l'invio di e-mail in caso di violazione delle policy di performance.
+
+. Fare clic su **+Add**per creare una nuova policy.
+. In *Policy Name* (Nome policy), immettere un nome di policy per il pool di storage.
+. In *Applica a oggetti di tipo* selezionare Storage Pool.
+. In *Apply after window of* inserire la prima occorrenza.
+. In *con severità* inserire critico
+. Configurare i destinatari e-mail a cui si desidera inviare una notifica in caso di superamento delle soglie.
++
+Per impostazione predefinita, gli avvisi e-mail sulle violazioni dei criteri vengono inviati ai destinatari nell'elenco e-mail globale. È possibile ignorare queste impostazioni in modo che gli avvisi relativi a una determinata policy vengano inviati a destinatari specifici.
+
++
+Fare clic sul collegamento per aprire l'elenco dei destinatari, quindi fare clic sul pulsante + per aggiungere i destinatari. Gli avvisi di violazione per questa policy verranno inviati a tutti i destinatari dell'elenco.
+
+. In *Create alert (Crea avviso), se uno dei seguenti valori è vero*, immettere Capacity Ratio - used > 85%
+
+
+
+
+== Risultati
+
+Questa configurazione comporta l'invio di un messaggio di avviso critico quando si utilizza più del 85% della capacità fisica del pool di storage. L'utilizzo del 100% della memoria fisica causerà un errore dell'applicazione.
+
+
+
+== Creare policy aggiuntive per il pool di storage
+
+
+
+=== A proposito di questa attività
+
+Creare un ulteriore criterio "`Capacity Ratio - used`" che genera un messaggio di avviso quando la capacità dello Storage Pool utilizzata supera il 75%. Se le notifiche sono attivate (*Admin* > *Notifiche*), puoi configurare Insight per l'invio di e-mail in caso di violazione delle policy di performance.

@@ -1,0 +1,27 @@
+---
+permalink: install-windows/backing-up-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se sono stati creati report personalizzati e non si dispone dei file di origine .xml, eseguire il backup di questi report prima dell"aggiornamento. Quindi, è necessario copiarli su un server diverso dal server Data Warehouse.' 
+---
+= Backup dei report personalizzati di Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se sono stati creati report personalizzati e non si dispone di `.xml` file di origine, quindi eseguire il backup di questi report prima dell'aggiornamento. Quindi, è necessario copiarli su un server diverso dal server Data Warehouse.
+
+
+
+== Fasi
+
+. Accedere al portale Data Warehouse all'indirizzo `+https://fqdn/dwh+`.
+. Nella barra degli strumenti Data Warehouse, fare clic su image:../media/oci-reporting-portal-icon.gif[""] Per aprire il portale di reporting ed effettuare l'accesso.
+. Selezionare *file* > *Apri*.
+. Selezionare la cartella in cui si trova il report, selezionarlo e fare clic su *Apri*.
+. Selezionare *Strumenti* > *Copia report negli Appunti*.
+. Aprire un editor di testo, incollare il contenuto del report e salvare il file con nome `report_name.txt`, dove `report _name` è il nome del report.
+. Memorizzare i report su un server diverso dal server Data Warehouse.
+

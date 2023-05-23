@@ -1,0 +1,31 @@
+---
+permalink: config-admin/deleting-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile eliminare un criterio di performance se si ritiene che non sia più applicabile al monitoraggio degli oggetti nella rete. 
+---
+= Eliminazione delle policy sulle performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare un criterio di performance se si ritiene che non sia più applicabile al monitoraggio degli oggetti nella rete.
+
+
+
+== Fasi
+
+. Aprire Insight nel browser.
+. Dal menu *Gestisci*, selezionare *Criteri di performance*.
++
+Viene visualizzata la pagina Performance Policies.
+
+. Posizionare il cursore del mouse sul nome di un criterio nell'elenco dei criteri di performance di un oggetto.
+. Fare clic su image:../media/oci-delete-policy-threshold-icon.gif[""].
++
+Viene visualizzato un messaggio che chiede se si desidera eliminare il criterio.
+
+. Fare clic su *OK*.
+

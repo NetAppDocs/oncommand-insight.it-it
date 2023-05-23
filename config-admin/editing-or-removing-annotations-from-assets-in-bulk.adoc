@@ -1,0 +1,51 @@
+---
+permalink: config-admin/editing-or-removing-annotations-from-assets-in-bulk.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile modificare più annotazioni per le risorse o rimuovere più annotazioni dalle risorse utilizzando una query invece di doverle modificare o rimuovere manualmente. 
+---
+= Modifica o rimozione di più annotazioni dalle risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare più annotazioni per le risorse o rimuovere più annotazioni dalle risorse utilizzando una query invece di doverle modificare o rimuovere manualmente.
+
+
+
+== Prima di iniziare
+
+È necessario aver già creato una query che trovi tutte le risorse che si desidera modificare.
+
+
+
+== Fasi
+
+. Fare clic su *Query* e selezionare *Mostra tutte le query*.
++
+Viene visualizzata la pagina Query.
+
+. Fare clic sul nome della query che trova le risorse.
++
+Viene visualizzato l'elenco delle risorse associate alla query.
+
+. Selezionare le risorse desiderate nell'elenco o fare clic su image:../media/select-assets.gif[""] Per selezionare *tutto*.
++
+Viene visualizzato il pulsante *azioni*.
+
+. Per aggiungere un'annotazione alle risorse o modificare il valore di un'annotazione assegnata alle risorse, fare clic su image:../media/actions-button.gif[""]E selezionare *Edit Annotation* (Modifica annotazione).
++
+.. Fare clic su *Annotation* (Annotazione) e selezionare un'annotazione per la quale si desidera modificare il valore oppure selezionare una nuova annotazione per assegnarla a tutte le risorse.
+.. Fare clic su *valore* e selezionare un valore per l'annotazione.
+.. Fare clic su *Save* (Salva).
+
+
+. Per rimuovere un'annotazione assegnata alle risorse, fare clic su image:../media/actions-button.gif[""]E selezionare *Remove Annotation* (Rimuovi annotazione).
++
+.. Fare clic su *Annotation* (Annotazione) e selezionare l'annotazione che si desidera rimuovere dalle risorse.
+.. Fare clic su *Delete* (Elimina).
+
+
+

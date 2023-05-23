@@ -1,0 +1,18 @@
+---
+permalink: reporting/colors-used-in-data-model-elements.html 
+sidebar: sidebar 
+keywords:  
+summary: I colori sugli elementi del modello di dati hanno indicazioni diverse. 
+---
+= Colori utilizzati negli elementi del modello di dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I colori sugli elementi del modello di dati hanno indicazioni diverse.
+
+* Risorse gialle: Rappresentano le misurazioni.
+* Risorse non gialle: Rappresentano gli attributi. Questi valori non vengono aggregati.
+

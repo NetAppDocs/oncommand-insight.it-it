@@ -1,0 +1,14 @@
+---
+permalink: howto/assigning-application-to-assets-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo aver definito le applicazioni, è necessario associarle a risorse specifiche. È possibile utilizzare un semplice metodo ad hoc per applicare un"applicazione a una risorsa. Gli utenti che desiderano applicare le applicazioni in blocco devono utilizzare un metodo di query per identificare le risorse da assegnare a un"applicazione.' 
+---
+= Assegnazione di applicazioni alle risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver definito le applicazioni, è necessario associarle a risorse specifiche. È possibile utilizzare un semplice metodo ad hoc per applicare un'applicazione a una risorsa. Gli utenti che desiderano applicare le applicazioni in blocco devono utilizzare un metodo di query per identificare le risorse da assegnare a un'applicazione.

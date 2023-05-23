@@ -1,0 +1,144 @@
+---
+permalink: config-admin/hpe-nimble-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"agile data collector HPE supporta dati di inventario e performance per gli array storage agili HPE.' 
+---
+= Origine dei dati agile HPE
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'agile data collector HPE supporta dati di inventario e performance per gli array storage agili HPE.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati HPE agile. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Array
+ a| 
+Storage
+
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Piscina
+ a| 
+Pool di storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+Iniziatore
+ a| 
+Alias host storage
+
+
+
+ a| 
+Controller
+ a| 
+Nodo di storage
+
+
+
+ a| 
+Interfaccia Fibre Channel
+ a| 
+Controller
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* L'array deve essere installato e configurato e raggiungibile dal client tramite il relativo FQDN (Fully Qualified Domain Name) o l'indirizzo IP di gestione dell'array.
+* L'array deve eseguire NimbleOS 2.3.x o versione successiva.
+* È necessario disporre di un nome utente e di una password validi per l'array.
+* La porta 5392 deve essere aperta sull'array.
+
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Array Management IP Address (Indirizzo IP gestione array)
+ a| 
+FQDN (Fully Qualified Domain Name) o indirizzo IP di gestione dell'array.
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente dell'array nimble
+
+
+
+ a| 
+Password
+ a| 
+Password per l'array nimble
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Porta
+ a| 
+Porta utilizzata da nimble REST API. Il valore predefinito è 5392.
+
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 60 minuti)
+
+|===
+Nota: L'intervallo di polling delle prestazioni predefinito è di 300 secondi e non può essere modificato. Questo è l'unico intervallo supportato da nimble.

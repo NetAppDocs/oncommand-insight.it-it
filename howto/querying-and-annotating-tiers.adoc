@@ -1,0 +1,67 @@
+---
+permalink: howto/querying-and-annotating-tiers.html 
+sidebar: sidebar 
+keywords:  
+summary: Le query vengono utilizzate per associare le annotazioni alle risorse appropriate nel proprio ambiente. In questo caso, verranno associati tali livelli alle risorse appropriate. 
+---
+= Query e annotazione dei livelli
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le query vengono utilizzate per associare le annotazioni alle risorse appropriate nel proprio ambiente. In questo caso, verranno associati tali livelli alle risorse appropriate.
+
+In precedenza, abbiamo impostato le annotazioni per i tuoi livelli. In questo esempio, verranno associati i Tier ai pool di storage e si presuppone che le annotazioni dei Tier siano configurate come segue:
+
+|===
+
+
+| Valore | Descrizione | Costo per GB 
+
+
+ a| 
+SSD di livello 1
+ a| 
+All Flash Array
+ a| 
+0.5
+
+
+
+ a| 
+SAS di livello 2
+ a| 
+SAS
+ a| 
+0.25
+
+
+
+ a| 
+SATA Tier 3
+ a| 
+SATA
+ a| 
+0.1
+
+|===
+Cerchiamo tutti i dischi SSD nel tuo ambiente e associiamo l'annotazione "`SSD Tier 1`".
+
+* Accedere a Insight come utente con autorizzazioni amministrative
+* Selezionare *Query* > *+Nuova query*
+* Selezionare il campo *Cerca...* e scegliere *Pool di storage*. Viene visualizzato un elenco di tutti i pool di storage.
+* Il campo *Nome* potrebbe non essere utile questa volta, quindi usiamo un altro campo. Fare clic sull'elenco a discesa *More* (Altro) e selezionare "`Least Performing Disk type`" (tipo di disco meno performante). Questo campo elenca i tipi di dischi a cui siamo interessati. Immettere "`SSD`" nel campo e fare clic suimage:../media/check-box-ok.gif[""] pulsante. L'elenco dei risultati della query mostra solo i pool di storage SSD.
+* È possibile filtrare ulteriormente facendo clic sull'elenco a discesa *More* (Altro) e selezionando altri campi.
+* Selezionare i pool di storage che si desidera associare a questo livello. Una volta selezionati tutti i pool di storage desiderati, fare clic sul pulsante *azioni* e selezionare *Modifica annotazione*.
+* Nella finestra di dialogo *Add Annotation* (Aggiungi annotazione), selezionare l'annotazione *Tier*.
+* Scegliere il *valore* desiderato dall'elenco. Per questo esempio, scegliere "`SSD Tier 1`".
+* Fare clic su *Save* (Salva).
+* Se la colonna Tier non è visibile nella pagina Query Results, selezionarla facendo clic sul pulsante *Columns* e scegliendo *Tier*. Dovrebbe essere visualizzata l'annotazione appropriata associata alle risorse.
+* Salvare la query facendo clic sul pulsante *Save* nell'angolo in alto a destra della pagina Query e assegnando un nome univoco ed esplicito. Ad esempio, "`Storage Pools - Tier 1 SSD`".
+
+
+Se si desidera associare l'annotazione "`SSD Tier 1`" ad altre risorse, creare una nuova query e seguire questi passaggi per ciascun tipo di risorsa desiderato.
+
+Ripetere questi passaggi per le risorse in ciascuno dei livelli rimanenti.

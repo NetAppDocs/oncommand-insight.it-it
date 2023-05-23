@@ -1,0 +1,68 @@
+---
+permalink: reporting/accessing-the-oncommand-insight-reporting-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile accedere al portale di reporting OnCommand Insight direttamente da un browser Web, dal data warehouse o dal server Insight . Il portale di reporting consente di accedere a report predefiniti o di creare report personalizzati utilizzando i dati del data warehouse. 
+---
+= Accesso al portale di reporting OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile accedere al portale di reporting OnCommand Insight direttamente da un browser Web, dal data warehouse o dal server Insight . Il portale di reporting consente di accedere a report predefiniti o di creare report personalizzati utilizzando i dati del data warehouse.
+
+
+
+== Accedere al portale di reporting da un browser Web
+
+
+
+=== Fasi
+
+. Aprire un browser Web.
+. Immettere il seguente URL: `+https://server-name:9300/bi+`
++
+9300 rappresenta la porta predefinita specificata durante l'installazione. Se è stata specificata un'altra porta, è necessario modificarla.
+
+. Immettere il nome utente e la password, quindi fare clic su *OK*.
+
+
+
+
+== Accesso al portale di reporting dal server Insight
+
+
+
+=== Fasi
+
+. Aprire un browser Web.
+. Immettere il seguente URL per accedere al server Insight: `+https://server-name+`
+. Immettere il nome utente e la password, quindi fare clic su *OK*.
+. Nella barra degli strumenti Insight, fare clic su image:../media/oci-reporting-portal-icon.gif[""].
+. Nella pagina di accesso visualizzata, immettere il nome utente e la password, quindi fare clic su *OK*.
+
+
+
+
+== Accesso al portale di reporting dal Data Warehouse
+
+
+
+=== Fasi
+
+. Aprire un browser Web.
+. Immettere il seguente URL per accedere al Data Warehouse: `+https://server-name/dwh+`
+. Immettere il nome utente e la password, quindi fare clic su *OK*.
+. Nella barra degli strumenti Data Warehouse, fare clic su image:../media/oci-reporting-portal-icon.gif[""].
+. Nella pagina di accesso visualizzata, immettere il nome utente e la password, quindi fare clic su *OK*.
+
+
+
+
+=== Risultati
+
+Viene visualizzata la pagina di benvenuto di IBM Cognos Analytics. Questa è la landing page predefinita del portale di reporting OnCommand Insight.
+
+image::../media/cognos-welcome.gif[benvenuto a cognos]

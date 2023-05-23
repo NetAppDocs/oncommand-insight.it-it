@@ -1,0 +1,48 @@
+---
+permalink: install-windows/submitting-an-online-technical-support-request.html 
+sidebar: sidebar 
+keywords:  
+summary: 'In caso di problemi con l"installazione di Insight, in qualità di cliente registrato, puoi inviare una richiesta di supporto tecnico online.' 
+---
+= Invio di una richiesta di supporto tecnico online
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In caso di problemi con l'installazione di Insight, in qualità di cliente registrato, puoi inviare una richiesta di supporto tecnico online.
+
+
+
+== Prima di iniziare
+
+Utilizzando l'indirizzo e-mail aziendale, è necessario registrarsi come cliente del supporto per ottenere servizi di supporto online. La registrazione viene eseguita tramite il sito di supporto (http://support.netapp.com[]).
+
+
+
+== A proposito di questa attività
+
+Per aiutare il supporto clienti a risolvere il problema di installazione, è necessario raccogliere il maggior numero possibile di informazioni, tra cui:
+
+* Numero di serie di Insight
+* Descrizione del problema
+* Tutti i file di log Insight
+* Cattura dello schermo di eventuali messaggi di errore
+
+
+
+
+== Fasi
+
+. Creare un `.zip` file delle informazioni raccolte per creare un pacchetto di risoluzione dei problemi.
+. Accedere al sito di supporto all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"] E selezionare *Assistenza tecnica*.
+. Fare clic su *Apri un caso*.
+. Seguire le istruzioni del pacchetto di dati.
+
+
+
+
+== Al termine
+
+Per seguire la richiesta, puoi utilizzare *verifica stato caso* nella pagina Assistenza tecnica.

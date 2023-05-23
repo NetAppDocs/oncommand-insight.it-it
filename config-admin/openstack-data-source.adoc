@@ -1,0 +1,195 @@
+---
+permalink: config-admin/openstack-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dei dati OpenStack (REST API/KVM) raccoglie informazioni sulle istanze hardware di OpenStack. Questa origine dati raccoglie i dati di inventario per tutte le istanze di OpenStack e, facoltativamente, i dati sulle performance delle macchine virtuali.' 
+---
+= Origine dati OpenStack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati OpenStack (REST API / KVM) raccoglie informazioni sulle istanze hardware di OpenStack. Questa origine dati raccoglie i dati di inventario per tutte le istanze di OpenStack e, facoltativamente, i dati sulle performance delle macchine virtuali.
+
+
+
+== Requisiti
+
+Di seguito sono riportati i requisiti per la configurazione dell'origine dati OpenStack.
+
+* Indirizzo IP del controller OpenStack
+* Si consigliano le credenziali del ruolo di amministratore di OpenStack e l'accesso sudo all'hypervisor KVM Linux.
++
+[NOTE]
+====
+Se non si utilizza un account admin o privilegi equivalenti, è comunque possibile acquisire dati dall'origine dati. Sarà necessario modificare il file di configurazione dei criteri (ad esempio etc/nova/policy.json) per consentire agli utenti con ruolo non amministrativo di chiamare l'API:
+
+====
++
+** "os_compute_api:os-availability-zone:detail": ""
+** "os_compute_api:hypervisor del sistema operativo": ""
+** os_compute_api:server:dettaglio:get_all_tenant": ""
+
+
+* Per la raccolta delle performance, il modulo OpenStack Ceilometer deve essere installato e configurato. La configurazione del Ceilometer viene eseguita modificando il `nova.conf` File per ciascun hypervisor e riavviare il servizio Nova Compute su ciascun hypervisor. Il nome dell'opzione cambia per le diverse versioni di OpenStack:
++
+** Icehouse
+** Juno
+** Chilo
+** Libertà
+** Mitaka
+** Newton
+** Ocata
+
+
+* Per le statistiche CPU, "compute_monitors=ComputeDriverCPUMonitor" deve essere attivato in /etc/nova/nova.conf sui nodi di calcolo.
+* Requisiti delle porte:
++
+** 5000 per http e 13000 per https, per il servizio Keystone
+** 22 per KVM SSH
+** 8774 per Nova Compute Service
+** 8776 per Cinder Block Service
+** 8777 per Ceilometer Performance Service
+** 9292 per Glance Image Service
++
+[NOTE]
+====
+La porta viene associata al servizio specifico e il servizio può essere eseguito sul controller o su un altro host in ambienti più grandi.
+
+====
+
+
+
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Indirizzo IP controller OpenStack
+ a| 
+Indirizzo IP o nome di dominio completo del controller OpenStack
+
+
+
+ a| 
+Amministratore di OpenStack
+ a| 
+Nome utente di un amministratore OpenStack
+
+
+
+ a| 
+Password OpenStack
+ a| 
+Password utilizzata per OpenStack Admin
+
+
+
+ a| 
+Tenant amministratore OpenStack
+ a| 
+Tenant amministratore OpenStack
+
+
+
+ a| 
+Utente KVM sudo
+ a| 
+Nome utente di KVM sudo
+
+
+
+ a| 
+Scegliere 'Password' o 'OpenSSH Key file' per specificare il tipo di credenziale
+ a| 
+Il tipo di credenziale utilizzato per la connessione al dispositivo tramite SSH
+
+
+
+ a| 
+Percorso completo alla chiave privata di inventario
+ a| 
+Percorso completo alla chiave privata di inventario
+
+
+
+ a| 
+Password KVM sudo
+ a| 
+Password KVM sudo
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Abilita il rilevamento dell'inventario dell'hypervisor tramite SSH
+ a| 
+Selezionare questa opzione per abilitare il rilevamento dell'inventario dell'hypervisor tramite SSH
+
+
+
+ a| 
+Porta URL OpenStack Admin
+ a| 
+Porta URL OpenStack Admin
+
+
+
+ a| 
+Utilizzare HTTPS
+ a| 
+Selezionare per utilizzare HTTP sicuro
+
+
+
+ a| 
+Timeout connessione HTTP (sec)
+ a| 
+Timeout per connessione HTTP (impostazione predefinita: 300 secondi)
+
+
+
+ a| 
+Porta SSH
+ a| 
+Porta utilizzata per SSH
+
+
+
+ a| 
+Timeout attesa processo SSH (sec)
+ a| 
+Timeout processo SSH (impostazione predefinita: 30 secondi)
+
+
+
+ a| 
+Tentativi di processo SSH
+ a| 
+Numero di tentativi di inventario
+
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 20 minuti)
+
+|===

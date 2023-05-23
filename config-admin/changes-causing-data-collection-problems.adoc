@@ -1,0 +1,29 @@
+---
+permalink: config-admin/changes-causing-data-collection-problems.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se si verificano problemi di raccolta dati in OnCommand Insight, è probabile che le modifiche nell"ambiente siano la causa principale. Come regola generale di manutenzione, è necessario tenere conto anche di eventuali modifiche nell"ambiente in Insight.' 
+---
+= Modifiche che causano problemi di raccolta dei dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si verificano problemi di raccolta dati in OnCommand Insight, è probabile che le modifiche nell'ambiente siano la causa principale. Come regola generale di manutenzione, è necessario tenere conto anche di eventuali modifiche nell'ambiente in Insight.
+
+È possibile utilizzare questo elenco di controllo per identificare le modifiche alla rete che potrebbero causare problemi:
+
+* Hai modificato le password? Tali password sono state modificate in Insight?
+* Hai rimosso una periferica dalla rete? È inoltre necessario rimuovere il dispositivo da OnCommand Insight per evitare che venga riscoperto e reintrodotto.
+* Hai aggiornato il software dell'infrastruttura (ad esempio HP CommandView EVA o EMC Solutions Enabler)?
++
+Assicurarsi che sull'unità di acquisizione siano installate le versioni appropriate degli strumenti client. Se i guasti dell'origine dati persistono, è necessario contattare il supporto tecnico per richiedere assistenza ed eventualmente una patch dell'origine dati.
+
+* Tutte le unità di acquisizione OnCommand Insight utilizzano la stessa versione di OnCommand Insight? Se le unità di acquisizione remota e l'unità di acquisizione locale utilizzano versioni OnCommand Insight diverse, installare la stessa versione su tutte le unità per correggere il problema di raccolta dei dati.
++
+Se è necessario installare una nuova versione di OnCommand Insight su tutte le unità di acquisizione, accedere al sito di supporto e scaricare la versione corretta.
+
+* Sono stati modificati nomi di dominio o aggiunti nuovi domini? È necessario aggiornare i metodi di risoluzione del dispositivo (in precedenza Auto Resolution).
+

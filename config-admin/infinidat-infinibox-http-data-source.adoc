@@ -1,0 +1,154 @@
+---
+permalink: config-admin/infinidat-infinibox-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati Infinidat InfiniBox /HTTP viene utilizzata per raccogliere informazioni dallo storage Infinidat InfiniBox. È necessario disporre dell"accesso a InfiniBox Management Node.' 
+---
+= Fonte di dati Infinidat InfiniBox
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati Infinidat InfiniBox (HTTP) viene utilizzata per raccogliere informazioni dallo storage Infinidat InfiniBox. È necessario disporre dell'accesso a InfiniBox Management Node.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati InfiniBox. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+InfiniBox
+ a| 
+Storage
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo di storage
+
+
+
+ a| 
+Piscina
+ a| 
+Pool di storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+Porta FC
+ a| 
+Porta
+
+
+
+ a| 
+Filesystem
+ a| 
+Volume interno
+
+
+
+ a| 
+Filesystem
+ a| 
+FileShare
+
+
+
+ a| 
+Esportazioni di file system
+ a| 
+Condividere
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Host InfiniBox
+ a| 
+Indirizzo IP o nome di dominio completo di InfiniBox Management Node
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente di InfiniBox Management Node
+
+
+
+ a| 
+Password
+ a| 
+Password per InfiniBox Management Node
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Porta TCP
+ a| 
+Porta TCP utilizzata per la connessione a InfiniBox Server (impostazione predefinita: 443 )
+
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 60 minuti)
+
+
+
+ a| 
+Timeout connessione
+ a| 
+Timeout di connessione (impostazione predefinita: 60 secondi)
+
+|===

@@ -1,0 +1,29 @@
+---
+permalink: dwh/accessing-the-data-warehouse-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Il portale del data warehouse di OnCommand Insight è un"interfaccia utente basata su web che può essere utilizzata per aggiornare le informazioni del connettore, visualizzare le code dei processi, pianificare le build giornaliere, selezionare le annotazioni, impostare le notifiche via email, visualizzare le informazioni di sistema, creare il database, ripristinare il data warehouse, eseguire il backup e il ripristino del database, risolvere i problemi, Gestisci gli account utente del portale Data Warehouse e Reporting e accedi alla documentazione e ai diagrammi dello schema.' 
+---
+= Accesso al portale Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il portale del data warehouse di OnCommand Insight è un'interfaccia utente basata su web che può essere utilizzata per aggiornare le informazioni del connettore, visualizzare le code dei processi, pianificare le build giornaliere, selezionare le annotazioni, impostare le notifiche via email, visualizzare le informazioni di sistema, creare il database, ripristinare il data warehouse, eseguire il backup e il ripristino del database, risolvere i problemi, Gestisci gli account utente del portale Data Warehouse e Reporting e accedi alla documentazione e ai diagrammi dello schema.
+
+
+
+== Fasi
+
+. Accedere al portale Data Warehouse all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Immettere il nome utente e la password.
+. Fare clic su *Login*.
++
+Il portale Data Warehouse apre:
+
++
+image::../media/oci-dwh-admin-login-gif.gif[On Command Insight DWH Login (accesso DWH su Command Insight)]
+
+

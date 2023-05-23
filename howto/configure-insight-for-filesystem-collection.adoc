@@ -1,0 +1,79 @@
+---
+permalink: howto/configure-insight-for-filesystem-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per configurare Insight per la raccolta dei dati di utilizzo del file system, è necessario installare la licenza host Utilization Pack e configurare l"origine dati dei file system VM e host di NetApp.' 
+---
+= Configurare Insight per la raccolta del file system
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per configurare Insight per la raccolta dei dati di utilizzo del file system, è necessario installare la licenza host Utilization Pack e configurare l'origine dati dei file system VM e host di NetApp.
+
+
+
+== Prima di iniziare
+
+Se non lo si è già fatto, installare la licenza host Utilization Pack. È possibile verificare la licenza nella pagina *Admin* > *Setup*, nella scheda *Licenses*.
+
+L'origine dati dei file system host e VM riporta solo l'utilizzo del file system e i metadati del file system per le risorse di calcolo note (host e macchine virtuali) attualmente raccolte o scoperte in Insight:
+
+* Le macchine virtuali vengono raccolte da origini dati hypervisor come Hyper-V e VMware.
+* Gli host vengono rilevati tramite la risoluzione del dispositivo.
+
+
+Le annotazioni Tier appropriate devono essere presenti sulle risorse di storage appropriate.
+
+Sono supportati i seguenti dispositivi di storage a blocchi collegati:
+
+* CDOT (NetApp Clustered Data ONTAP)
+* NetApp 7-Mode
+* CLARiiON
+* Windows: Dischi virtuali VMware (VMDK) per FC, iSCSI
+* Linux: VMDK VMware (iSCSI e FC non supportati)
+
+
+Un *Compute Resource Group* è un'annotazione che consente il raggruppamento di host e/o macchine virtuali che condividono una credenziale amministrativa comune.
+
+
+
+== Fasi
+
+. Per prima cosa, annotare gli host e/o le macchine virtuali da includere nel proprio *Compute Resource Group*. Vai a *Query* > *+Nuova query* e cerca le risorse di _Virtual Machine_.
++
+È necessario ripetere questi passaggi per le risorse _host_.
+
+. Fare clic sul selettore di colonna a destra della tabella e selezionare la colonna *Compute Resource Group* per visualizzarla nella tabella dei risultati della query.
+. Selezionare le macchine virtuali che si desidera aggiungere al gruppo di risorse di calcolo desiderato. È possibile utilizzare un filtro per cercare risorse specifiche.
+. Fare clic sul pulsante *azioni* e scegliere *Modifica annotazione*.
+. Selezionare l'annotazione _Compute Resource Group_, quindi scegliere il nome del gruppo di risorse desiderato nel campo _value_.
++
+L'annotazione del gruppo di risorse viene aggiunta alle macchine virtuali selezionate. Il nome del gruppo di risorse deve corrispondere al nome che verrà configurato in seguito nell'origine dati dei file system host e VM.
+
+. Per configurare l'origine dati dei file system host e VM per un gruppo di risorse di calcolo, fare clic su *Admin* > *origini dati* e *Aggiungi* l'origine dati _NetApp host and VM file Systems_.
++
+image::../media/hostutil-dsconfig.gif[hostutil dsconfig]
+
+. Nella sezione *Configurazione*, immettere *Nome utente* e *Password* per un utente del sistema operativo con i diritti appropriati per recuperare i dati del file system. Per gli utenti del sistema operativo Windows, questo deve includere il prefisso di dominio se utilizzato dall'ambiente Windows.
++
+Si noti che un'unità di acquisizione Insight (AU) installata su Linux può generare report sulle risorse di calcolo Linux, mentre un'unità AU installata su Windows può comunicare con risorse di calcolo Linux o Windows.
+
+. Immettere il nome del gruppo di risorse di calcolo* per le risorse da cui si desidera raccogliere i dati di utilizzo del file system. Questo nome deve corrispondere al nome del gruppo di risorse utilizzato per annotare le risorse di cui sopra.
++
+Se si lascia vuoto il campo Compute Resource Group, l'origine dati raccoglierà i dati per gli host o le macchine virtuali che non dispongono di annotazione Compute Resource Group.
+
+. Nella sezione **Advanced Configuration**, inserire l'intervallo di polling desiderato per questa origine dati. Il valore predefinito di 6 ore è generalmente adeguato.
+. Si consiglia di *testare* la connessione all'origine dati prima di salvarla. Il risultato di una connessione riuscita mostra anche il numero di destinazioni delle risorse di calcolo contenute nel gruppo.
+. Fare clic su *Save* (Salva). L'origine dati dei file system host e VM inizierà a raccogliere i dati al prossimo sondaggio.
+. Una volta raccolti i dati del file system, è possibile visualizzarli nella pagina delle risorse dell'host o della macchina virtuale, nel widget file system:
++
+image::../media/hostutil-vmlpfstable.gif[hostutil vmlpfstable]
+
+. Ripetere questi passaggi per ciascun gruppo di risorse di calcolo. Ciascun gruppo di risorse di calcolo deve essere associato alla propria origine dati dei file system host e VM.
++
+Si noti che le informazioni sul file system verranno raccolte per host e macchine virtuali già acquisiti da qualsiasi origine dati VMware o Hyper-V tradizionale nel proprio ambiente.
+
+

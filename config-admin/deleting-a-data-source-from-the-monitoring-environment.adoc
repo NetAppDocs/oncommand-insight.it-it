@@ -1,0 +1,29 @@
+---
+permalink: config-admin/deleting-a-data-source-from-the-monitoring-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se è stata rimossa un"origine dati dall"ambiente, è necessario eliminarla anche dall"ambiente di monitoraggio di OnCommand Insight.' 
+---
+= Eliminazione di un'origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se è stata rimossa un'origine dati dall'ambiente, è necessario eliminarla anche dall'ambiente di monitoraggio di OnCommand Insight.
+
+
+
+== Fasi
+
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
++
+Viene visualizzato l'elenco origini dati.
+
+. Selezionare l'origine dati che si desidera eliminare.
+. Fare clic sul nome dell'origine dati collegata.
+. Controllare le informazioni relative all'origine dati selezionata nella pagina di riepilogo per assicurarsi che si tratti dell'origine che si desidera eliminare.
+. Fare clic su *Delete* (Elimina).
+. Fare clic su *OK* per confermare l'operazione.
+

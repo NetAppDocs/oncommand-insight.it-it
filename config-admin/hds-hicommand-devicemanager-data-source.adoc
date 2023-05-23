@@ -1,0 +1,282 @@
+---
+permalink: config-admin/hds-hicommand-devicemanager-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le origini dati HDS HiCommand e HiCommand Lite supportano il server HiCommand Device Manager. OnCommand Insight comunica con il server di gestione dispositivi HiCommand utilizzando l"API HiCommand standard.' 
+---
+= Origine dati di HDS HiCommand Device Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le origini dati HDS HiCommand e HiCommand Lite supportano il server HiCommand Device Manager. OnCommand Insight comunica con il server di gestione dispositivi HiCommand utilizzando l'API HiCommand standard.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dalle origini dati HDS HiCommand e HiCommand Lite. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+PDEV
+ a| 
+Disco
+
+
+
+ a| 
+Pool di giornale
+ a| 
+Gruppo di dischi
+
+
+
+ a| 
+Array di storage
+ a| 
+Storage
+
+
+
+ a| 
+Port Controller (Controller porta)
+ a| 
+Nodo di storage
+
+
+
+ a| 
+Gruppo di array, DP Pool
+ a| 
+Pool di storage
+
+
+
+ a| 
+Unità logica, LDEV
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti di inventario
+
+* Indirizzo IP del server HiCommand Device Manager
+* Nome utente e password di sola lettura per il software HiCommand Device Manager e privilegi peer
+* Requisiti delle porte: 2001 (http) o 2443 (https)
+* Convalidare l'accesso:
++
+** Accedere al software HiCommand Device Manager utilizzando il nome utente e la password peer.
+** Verificare l'accesso all'API di HiCommand Device Manager: `telnet <HiCommand Device_Manager_server_ip\> 2001`
+
+
+
+
+
+
+== Requisiti relativi alle performance
+
+* Prestazioni di HDS USP, USP V e VSP
++
+** Performance Monitor deve essere concesso in licenza.
+** Lo switch di monitoraggio deve essere attivato.
+** Lo strumento di esportazione (`Export.exe`) Deve essere copiato sul server OnCommand Insight.
+** La versione dello strumento di esportazione deve corrispondere alla versione del microcodice dell'array di destinazione.
+
+
+* Performance di HDS AMS
++
+** Performance Monitor deve essere concesso in licenza.
+** L'utility CLI Storage Navigator Modular 2 (SNM2) deve essere installata sul server OnCommand Insight.
+** È necessario registrare tutti gli storage array AMS, WMS e SMS le cui performance devono essere acquisite da OnCommand Insight utilizzando il seguente comando:
++
+
+
+** Assicurarsi che tutti gli array registrati siano elencati nell'output di questo comando: `auunitref.exe`.
+
+
+
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Server HiCommand
+ a| 
+Indirizzo IP o nome di dominio completo del server HiCommand Device Manager
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente del server HiCommand Device Manager.
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per il server HiCommand Device Manager.
+
+
+
+ a| 
+DISPOSITIVI: STORAGE VSP G1000 (R800), VSP (R700), HUS VM (HM700) E USP
+ a| 
+Elenco dei dispositivi per storage VSP G1000 (R800), VSP (R700), HUS VM (HM700) e USP. Ogni storage richiede:
+
+* IP dell'array: Indirizzo IP dello storage
+* User Name (Nome utente): Nome utente dello storage
+* Password: Password per lo storage
+* Cartella contenente file JAR dell'utility di esportazione: La cartella contenente l'utility di esportazione `.jar` file
+
+
+
+
+ a| 
+SNM2Devices - Storage WMS/SMS/AMS
+ a| 
+Elenco dei dispositivi per gli storage WMS/SMS/AMS. Ogni storage richiede:
+
+* IP dell'array: Indirizzo IP dello storage
+* Percorso CLI di Storage Navigator: Percorso CLI SNM2
+* Account Authentication Valid (autenticazione account valida): Selezionare questa opzione per scegliere un'autenticazione account valida
+* User Name (Nome utente): Nome utente dello storage
+* Password: Password per lo storage
+
+
+
+
+ a| 
+Scegli Tuning Manager per le performance
+ a| 
+Scegliere Tuning Manager per le performance e ignorare altre opzioni di performance
+
+
+
+ a| 
+Tuning Manager host
+ a| 
+Indirizzo IP o nome di dominio completo del tuning manager
+
+
+
+ a| 
+Porta Tuning Manager
+ a| 
+Porta utilizzata per Tuning Manager
+
+
+
+ a| 
+Nome utente Tuning Manager
+ a| 
+Nome utente di Tuning Manager
+
+
+
+ a| 
+Password Tuning Manager
+ a| 
+Password per Tuning Manager
+
+|===
+[NOTE]
+====
+In HDS USP, USP V e VSP, qualsiasi disco può appartenere a più di un gruppo di array.
+
+====
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Porta del server HiCommand
+ a| 
+Porta utilizzata per HiCommand Device Manager
+
+
+
+ a| 
+HTTPS attivato
+ a| 
+Selezionare per attivare HTTPS
+
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 40 minuti)
+
+
+
+ a| 
+Scegliere 'Escludi' o 'Includi' per specificare un elenco
+ a| 
+Specificare se includere o escludere l'elenco di array riportato di seguito durante la raccolta dei dati
+
+
+
+ a| 
+Escludere o includere i dispositivi
+ a| 
+Elenco separato da virgole di ID dispositivo o nomi di array da includere o escludere
+
+
+
+ a| 
+Query host Manager (Gestore host query)
+ a| 
+Selezionare per eseguire query sul gestore host
+
+
+
+ a| 
+Timeout HTTP (sec)
+ a| 
+Timeout connessione HTTP (impostazione predefinita: 60 secondi)
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+
+
+ a| 
+Timeout di esportazione in secondi
+ a| 
+Timeout utility di esportazione (impostazione predefinita: 300 secondi)
+
+|===

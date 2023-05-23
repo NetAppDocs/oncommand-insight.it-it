@@ -1,0 +1,30 @@
+---
+permalink: dwh/administrative-tasks-you-can-perform-using-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Data warehouse di OnCommand Insight è un"interfaccia utente basata su web che consente agli utenti di configurare e risolvere i problemi dei dati nel data warehouse di OnCommand Insight e di impostare le pianificazioni per recuperare i dati da OnCommand Insight.' 
+---
+= Attività amministrative che è possibile eseguire utilizzando Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data warehouse di OnCommand Insight è un'interfaccia utente basata su web che consente agli utenti di configurare e risolvere i problemi dei dati nel data warehouse di OnCommand Insight e di impostare le pianificazioni per recuperare i dati da OnCommand Insight.
+
+Utilizzando il portale Data Warehouse, è possibile eseguire le seguenti attività amministrative:
+
+* Verificare lo stato dei processi o delle query correnti in esecuzione
+* Gestire le annotazioni
+* Configurare le notifiche e-mail
+* Accesso e creazione di report personalizzati
+* Esaminare la documentazione e lo schema del database di Data Warehouse
+* Modificare il nome del sito
+* Identificare la versione di Data Warehouse e la cronologia degli aggiornamenti
+* Crea i dati del data warehouse dalla cronologia
+* Ripristinare il database Data Warehouse
+* Eseguire il backup e il ripristino del database Data Warehouse
+* Risolvere i problemi relativi al data warehouse e consultare i registri OnCommand Insight
+* Gestire gli account utente
+

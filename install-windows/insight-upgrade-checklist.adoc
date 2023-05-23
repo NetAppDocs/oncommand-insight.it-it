@@ -1,0 +1,148 @@
+---
+permalink: install-windows/insight-upgrade-checklist.html 
+sidebar: sidebar 
+keywords: 6.4 
+summary: 'È possibile utilizzare gli elenchi di controllo forniti per registrare i progressi durante la preparazione all"aggiornamento. Queste attività hanno lo scopo di ridurre il rischio di errori di upgrade e accelerare le attività di recovery e ripristino.' 
+---
+= Checklist per l'upgrade di OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare gli elenchi di controllo forniti per registrare i progressi durante la preparazione all'aggiornamento. Queste attività hanno lo scopo di ridurre il rischio di errori di upgrade e accelerare le attività di recovery e ripristino.
+
+
+
+== Checklist per la preparazione all'aggiornamento (obbligatorio)
+
+|===
+
+
+| Condizione | Completato? 
+
+
+ a| 
+Assicurarsi di disporre delle autorizzazioni di amministratore locale di Windows, necessarie per eseguire il processo di aggiornamento, su tutti i server Insight.
+ a| 
+
+
+
+ a| 
+Se i server Insight, Data Warehouse o Remote Acquisition Unit risiedono su piattaforme a 32 bit, è necessario aggiornare i server alle piattaforme a 64 bit. A partire da Insight 7.x, gli aggiornamenti sono disponibili solo per le piattaforme a 64 bit.
+ a| 
+
+
+
+ a| 
+Assicurarsi di disporre delle autorizzazioni necessarie per modificare o disattivare il software antivirus su tutti i server dell'ambiente. Per evitare un errore di aggiornamento dovuto a un software di scansione virus attivo, è necessario escludere la directory di installazione Insight (`disk drive:\install directory\sanscreen` dall'accesso alla scansione antivirus durante l'aggiornamento. Dopo aver aggiornato tutti i componenti, è possibile riattivare il software antivirus in modo sicuro; tuttavia, assicurarsi di configurare la scansione in modo da escludere tutti i componenti presenti nella directory di installazione di Insight.
+
+Inoltre, è necessario escludere la cartella IBM/DB2 (ad esempio _C: Programmi IBM DB2_) dalla scansione antivirus dopo l'installazione.
+ a| 
+
+|===
+
+
+== Checklist per la preparazione all'aggiornamento (Best practice)
+
+|===
+
+
+| Condizione | Completato? 
+
+
+ a| 
+Pianifica quando intendi eseguire l'upgrade, tenendo conto del fatto che la maggior parte degli aggiornamenti richiede un minimo di 4-8 ore; le aziende più grandi richiederanno più tempo. I tempi di aggiornamento possono variare in base alle risorse disponibili (architettura, CPU e memoria), alle dimensioni dei database e al numero di oggetti monitorati nell'ambiente.
+ a| 
+
+
+
+ a| 
+Contatta il tuo account representative per informazioni sui tuoi piani di aggiornamento e fornisci la versione di Insight installata e a quale versione desideri eseguire l'aggiornamento.
+ a| 
+
+
+
+ a| 
+Assicurarsi che le risorse correnti allocate a Insight, Data Warehouse e Remote Acquisition Unit soddisfino ancora le specifiche consigliate. Consulta le linee guida per il dimensionamento consigliato per tutti i server.in alternativa, puoi contattare il tuo rappresentante commerciale per discutere delle linee guida per il dimensionamento.
+ a| 
+
+
+
+ a| 
+Assicurarsi di disporre di spazio su disco sufficiente per il processo di backup e ripristino del database. I processi di backup e ripristino richiedono circa cinque volte lo spazio su disco utilizzato dal file di backup sui server Insight e Data Warehouse. Ad esempio, un backup da 50 GB richiede da 250 a 300 GB di spazio libero su disco.
+ a| 
+
+
+
+ a| 
+Assicurarsi di avere accesso a Firefox® o al browser Chrome™ quando si esegue il backup dei database Insight e Data Warehouse. Internet Explorer non è consigliato, perché si verificano alcuni problemi durante il caricamento e il download di file di dimensioni superiori a 4 GB.
+ a| 
+
+
+
+ a| 
+Eliminare `.tmp` File sul server Insight, che si trovano nella seguente posizione: `<install directory>\SANscreen\wildfly\standalone\tmp`.
+ a| 
+
+
+
+ a| 
+Rimuovere le origini dati duplicate e le origini dati decommissionate dal client Insight. La rimozione di origini dati dismesse o duplicate riduce il tempo necessario per eseguire l'aggiornamento e riduce l'opportunità di corruzione dei dati.
+ a| 
+
+
+
+ a| 
+Se sono stati modificati i report predefiniti forniti con Insight, è necessario salvarli con un nome diverso e salvarli nella cartella Report clienti in modo da non perdere il report modificato durante l'aggiornamento o il ripristino del sistema.
+ a| 
+
+
+
+ a| 
+Se si dispone di report personalizzati o modificati di Data Warehouse creati dall'utente o da servizi professionali, creare un backup di tali report esportandoli in XML e spostandoli nella cartella Report clienti. Assicurarsi che il backup non si trovi sul server Data Warehouse. Se i report non vengono spostati nelle cartelle consigliate, il processo di aggiornamento potrebbe non eseguire il backup di tali report. Per le versioni precedenti di Insight, la mancata individuazione dei report nelle cartelle appropriate può causare la perdita di report personalizzati e modificati.
+ a| 
+
+
+
+ a| 
+Registrare tutte le impostazioni nell'utility di configurazione di IBM Cognos, poiché non sono incluse nel backup di Data Warehouse; è necessario riconfigurare queste impostazioni dopo l'aggiornamento. L'utility si trova in `disk drive:\install directory\SANscreen\cognos\c10_64\bin64` Sul server Data Warehouse ed è possibile eseguirlo utilizzando `cogconfigw` Command.in alternativa, è possibile eseguire un backup completo di Cognos e importare tutte le impostazioni. Per ulteriori informazioni, consultare la documentazione di IBM Cognos.
+ a| 
+
+|===
+
+
+== Checklist per la preparazione all'aggiornamento (se applicabile)
+
+|===
+
+
+| Condizione | Completato? 
+
+
+ a| 
+Se sono stati sostituiti i certificati autofirmati creati dall'installazione di Insight a causa di avvisi di sicurezza del browser con certificati firmati dall'autorità di certificazione interna, eseguire il backup del file keystore, che si trova nella seguente posizione: `disk drive:\install directory\SANscreen\wildfly\standalone\configuration` e ripristinarlo dopo l'aggiornamento. Questo sostituisce i certificati autofirmati creati da Insight con i certificati firmati.
+ a| 
+
+
+
+ a| 
+Se una delle origini dati è stata modificata per l'ambiente in uso e non si è certi che queste modifiche siano disponibili nella versione Insight alla quale si sta eseguendo l'aggiornamento, creare una copia della seguente directory, che consente di risolvere eventuali problemi di ripristino: `disk drive:\install directory\SANscreen\wildfly\standalone\deployments\datasources.war`.
+ a| 
+
+
+
+ a| 
+Eseguire il backup di tutte le tabelle e le viste del database personalizzate utilizzando `mysqldump` Tool della riga di comando.il ripristino di tabelle di database personalizzate richiede un accesso privilegiato al database. Contattare il supporto tecnico per assistenza sul ripristino di queste tabelle.
+ a| 
+
+
+
+ a| 
+Assicurarsi che non siano memorizzati in script di integrazione personalizzati, componenti di terze parti necessari per origini dati Insight, backup o altri dati richiesti `disk drive:\install directory\sanscreen` Poiché il contenuto di questa directory viene cancellato dal processo di aggiornamento.assicurarsi di spostare tali elementi da `\sanscreen` directory in un'altra posizione. Ad esempio, se l'ambiente contiene script di integrazione personalizzati, assicurarsi di copiare il seguente file in una directory diversa da `\sanscreen` directory:
+
+`\install_dir\SANscreen\wildfly\standalone\deployments\datasources.war\new_disk_models.txt`.
+ a| 
+
+|===

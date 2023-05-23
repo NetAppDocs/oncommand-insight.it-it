@@ -1,0 +1,18 @@
+---
+permalink: install-windows/disable-virus-scan-software.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se sul sistema è attivo un software antivirus, l"installazione di OnCommand Insight non riesce. È possibile evitare questo problema disattivando il software antivirus prima dell"installazione.' 
+---
+= Software di scansione virus non disponibile
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se sul sistema è attivo un software antivirus, l'installazione di OnCommand Insight non riesce. È possibile evitare questo problema disattivando il software antivirus prima dell'installazione.
+
+Per evitare un errore di installazione dovuto a un software di scansione virus attivo, durante l'installazione di ciascun componente di OnCommand Insight, è necessario disattivare completamente tutti i programmi antivirus. Dopo l'installazione, i percorsi utilizzati dal componente Insight (percorsi di installazione, backup e archiviazione) devono essere esclusi dalla scansione antivirus.
+
+Inoltre, è necessario escludere la cartella IBM/DB2 (ad esempio _C: Programmi IBM DB2_) dalla scansione antivirus dopo l'installazione.

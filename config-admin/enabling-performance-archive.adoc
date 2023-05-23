@@ -1,0 +1,34 @@
+---
+permalink: config-admin/enabling-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per abilitare l"archiviazione dei dati sulle performance, attenersi alla seguente procedura.' 
+---
+= Abilitazione dell'archiviazione delle performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per abilitare l'archiviazione dei dati sulle performance, attenersi alla seguente procedura.
+
+
+
+== Fasi
+
+. Sulla barra degli strumenti, fare clic su *Admin* > *Setup*.
+. Selezionare la scheda *Backup & Archive*.
+. Nella sezione Performance Archive (Archivio delle performance), assicurarsi che sia selezionata l'opzione**Enable performance archive** (attiva archivio delle performance).
+. Specificare un percorso di archiviazione valido.
++
+Non è possibile specificare una cartella nella cartella di installazione di Insight.
+
++
+Procedura consigliata: Non specificare la stessa cartella per l'archiviazione della posizione di backup di Insight.
+
+. Fare clic su *Save* (Salva).
++
+Il processo di archiviazione viene gestito in background e non interferisce con altre attività Insight.
+
+

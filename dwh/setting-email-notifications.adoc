@@ -1,0 +1,54 @@
+---
+permalink: dwh/setting-email-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile fare in modo che Data Warehouse invii un"e-mail a un indirizzo e-mail specifico quando i processi Data Warehouse non vengono completati correttamente.' 
+---
+= Impostazione delle notifiche e-mail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile fare in modo che Data Warehouse invii un'e-mail a un indirizzo e-mail specifico quando i processi Data Warehouse non vengono completati correttamente.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *Email Notification* (notifica e-mail).
+. Immettere quanto segue:
++
+** Indirizzo del server SMTP
++
+Specifica il server che funge da server SMTP nell'organizzazione, identificato utilizzando un nome host o un indirizzo IP utilizzando il formato nnn.nnn.nnn.nnn.nnn. Se si specifica un nome host, assicurarsi che il DNS sia in grado di risolverlo.
+
+** Nome utente e password del server SMTP
++
+Specifica il nome utente per accedere al server di posta elettronica ed è richiesto solo se il server SMTP richiede l'accesso di un utente al server. Si tratta dello stesso nome utente utilizzato per accedere all'applicazione e all'e-mail.
+
+** Notifiche attivate
++
+*Sì* attiva le notifiche; *No* disattiva le notifiche.
+
+** Email del mittente
++
+Specifica l'indirizzo e-mail utilizzato per inviare le notifiche. Deve essere un indirizzo e-mail valido all'interno dell'organizzazione.
+
+** Email del destinatario
++
+Specifica l'indirizzo e-mail o gli indirizzi della persona o delle persone che riceveranno sempre l'e-mail. Separare più indirizzi con virgole.
+
+** Oggetto dell'e-mail
++
+Specifica l'oggetto della notifica.
+
+** Firma e-mail
++
+Specifica le informazioni visualizzate nella parte inferiore del messaggio di posta elettronica, ad esempio il nome del reparto.
+
+
+
+

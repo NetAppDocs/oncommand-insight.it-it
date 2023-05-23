@@ -1,0 +1,130 @@
+---
+permalink: install-windows/data-warehouse-and-reporting-server-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: È necessario eseguire il Data Warehouse e il server di reporting su un computer compatibile con i requisiti hardware e software stabiliti, assicurandosi che il server Web Apache o il software di reporting non siano già installati su questa macchina. 
+---
+= Requisiti del data warehouse e del server di reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario eseguire il Data Warehouse e il server di reporting su un computer compatibile con i requisiti hardware e software stabiliti, assicurandosi che il server Web Apache o il software di reporting non siano già installati su questa macchina.
+
+[NOTE]
+====
+Il dimensionamento per OnCommand Insight prevede più dipendenze, ad esempio il numero di risorse nell'ambiente, la quantità di dati storici conservati e molto altro ancora. I seguenti esempi di dimensionamento del data warehouse sono solo linee guida e rappresentano alcuni degli ambienti in cui Insight è stato testato. La modifica di questi o altri fattori nell'ambiente può modificare i requisiti di dimensionamento di Insight.
+
+====
+Prima di installare o aggiornare Insight, si consiglia di contattare il Sales Engineer per ottenere informazioni dettagliate sul dimensionamento.
+
+*Esempi:*
+
+|===
+
+
+| Fattori ambientali: | Spazio su disco, CPU e memoria testati: 
+
+
+ a| 
+18 storage array3,400 VM
+
+4,500 porte switch
+ a| 
+Disco rigido da 200 GB 8 core
+
+32 GB DI RAM
+
+
+
+ a| 
+110 array di storage 11,500 VM
+
+14,500 porte switch
+ a| 
+Disco rigido da 300 GB 8 core
+
+48 GB DI RAM
+
+|===
+*Requisiti:*
+
+|===
+
+
+| Componente | Obbligatorio 
+
+
+ a| 
+Sistema operativo
+ a| 
+Computer che esegue Microsoft Windows Server 2012, 2012 R2, 2016 o 2019 a 64 bit con il service pack più recente.
+
+
+
+ a| 
+Macchina virtuale (VM)
+ a| 
+Questo componente può essere eseguito in un ambiente virtuale, a condizione che le risorse di CPU e memoria per l'istanza siano riservate.
+
+
+
+ a| 
+CPU
+ a| 
+8 - 40 core CPU
+
+
+
+ a| 
+Memoria
+ a| 
+32 GB - 2 TB di RAM Best practice: Si consiglia di impostare la dimensione del file di paging su "`Windows Managed`". I file di paging di piccole dimensioni possono interferire con la corretta memorizzazione dei dati delle performance Insight.
+
+
+
+ a| 
+Spazio su disco disponibile
+ a| 
+200 GB - 2 TB di spazio su disco. L'installazione richiede almeno 20 GB di spazio libero sull'unità C.
+
+
+NOTE: In Windows, Insight Data Warehouse con Reporting richiede che il supporto per la creazione del nome 8dot3 sia abilitato sul disco di installazione prima dell'installazione. L'unità C: In genere ha questa opzione attivata per impostazione predefinita. È possibile verificare se la creazione del nome 8dot3 è attivata sul disco di installazione di destinazione eseguendo il seguente comando (sostituire D: Con il disco di installazione di destinazione):
+
+fsutil 8dot3name query D:
+
+Per abilitare la creazione del nome 8dot3, eseguire il seguente comando (sostituire D: Con il disco di installazione di destinazione):
+
+fsutil 8dot3name set D: 0
+
+
+
+ a| 
+Rete
+ a| 
+* Connessione Ethernet a 100 Mbps o 1 Gbps
+* Indirizzo IP statico
+* La porta 50000 deve essere disponibile prima di installare Data Warehouse con Reporting su Windows
+* Per il processo del server DWH OnCommand Insight, porte 80, 443, 1098, 1099, 3873, 8083 e da 4444 a 4446
+* Per il motore di reporting, porte 1527, 9362, 9300 e 9399
+* Per MySQL, porta 3306
+* Assicurarsi che il DNS funzioni correttamente eseguendo una `nslookup` rispetto all'host
+
+
+
+
+ a| 
+Virus Scan (scansione virus)
+ a| 
+Durante l'installazione di questo componente di OnCommand Insight, è necessario disattivare completamente tutti i programmi antivirus. Dopo l'installazione, i percorsi utilizzati dal componente Insight (percorsi di installazione, backup e archiviazione) e tutti i percorsi di installazione dei componenti DWH (SANscreen, DB2 e percorsi di backup) devono essere esclusi dalla scansione antivirus.
+
+
+
+ a| 
+Visual Studio
+ a| 
+Visual Studio 2019 https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist["ridistribuibili"] Deve essere installato prima di installare Data Warehouse con Reporting su Windows.
+
+|===

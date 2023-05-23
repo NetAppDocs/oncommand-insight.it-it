@@ -1,0 +1,43 @@
+---
+permalink: dwh/skipping-failed-builds.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo la prima generazione, a volte si potrebbe riscontrare una build non riuscita. Per garantire che tutti i processi dopo una creazione non riuscita siano stati completati correttamente, è possibile attivare l"opzione Ignora errori di creazione della cronologia.' 
+---
+= Saltare le build non riuscite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo la prima generazione, a volte si potrebbe riscontrare una build non riuscita. Per garantire che tutti i lavori dopo una creazione non riuscita siano stati completati correttamente, è possibile attivare l'opzione *Ignora errori di creazione della cronologia*.
+
+
+
+== A proposito di questa attività
+
+Se una build non riesce e l'opzione *Skip history build failures* è attivata, Data Warehouse continua a costruire e ignora le build guaste. In questo caso, non ci sarà un punto dati nei dati storici per nessuna build saltata.
+
+Utilizzare questa opzione solo se la creazione non riesce.
+
+Se una build non riesce nella generazione dalla cronologia e la casella di controllo *Ignora errori di creazione della cronologia* non è selezionata, tutti i processi successivi vengono interrotti.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *build from history* (Crea dalla cronologia).
++
+image::../media/oci-dwh-admin-buildfromhistory-gif.gif[Build from History View (Crea dalla vista cronologia)]
+
+. Fare clic su *Configura*.
+. Configurare la build.
+. Fare clic su *Save* (Salva).
+. Per ignorare le build non riuscite, selezionare *Ignora errori di generazione della cronologia*.
++
+Questa casella di controllo viene visualizzata solo se il pulsante *Esegui* è attivato.
+
+. Per eseguire una build al di fuori della build pianificata automatica, fare clic su *Esegui*.
+

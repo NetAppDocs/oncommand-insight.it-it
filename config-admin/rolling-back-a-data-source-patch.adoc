@@ -1,0 +1,40 @@
+---
+permalink: config-admin/rolling-back-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se una patch di origine dati non funziona nel modo previsto, è possibile eseguire il rollback. Il rollback di una patch lo elimina e ripristina la versione precedente come prima dell"applicazione della patch.' 
+---
+= Eseguire il rollback di una patch di origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se una patch di origine dati non funziona nel modo previsto, è possibile eseguire il rollback. Il rollback di una patch lo elimina e ripristina la versione precedente come prima dell'applicazione della patch.
+
+
+
+== Fasi
+
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Fare clic su *Patch*.
+. In *Patch attualmente in fase di revisione*, fare clic sul nome collegato della patch che sembra non essere riuscita.
+. Nella pagina delle patch per l'origine dati, esaminare le seguenti informazioni:
++
+** *Summary* descrive quando è stata applicata la patch, le origini dati interessate e i commenti sulla patch forniti da te o da altri membri del tuo team.
+** *Origini dati interessate* elenca tutte le origini dati con patch e include un confronto dello stato prima e dopo l'applicazione delle patch.
+
+
+. Per visualizzare i dettagli di un'origine dati che non sta elaborando correttamente la patch, fare clic sul collegamento *Nome*.
++
+.. Controllare le informazioni di riepilogo.
+.. Controllare la * timeline evento* per visualizzare eventuali dati di configurazione o performance che potrebbero influire su questa origine dati.
+
+
+. Se si conclude che la patch non avrà esito positivo, fare clic sulla freccia indietro del browser per tornare alla pagina di riepilogo delle patch.
+. Fare clic su *Ripristina* per rimuovere la patch.
++
+Se si conosce una patch diversa che potrebbe avere successo, fare clic su *Sostituisci patch* e caricare la nuova patch.
+
+

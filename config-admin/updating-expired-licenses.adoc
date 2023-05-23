@@ -1,0 +1,33 @@
+---
+permalink: config-admin/updating-expired-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: Se una o più licenze Insight sono scadute, è possibile aggiornarle rapidamente utilizzando la stessa procedura utilizzata per installare le licenze originali. 
+---
+= Aggiornamento delle licenze scadute in corso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se una o più licenze Insight sono scadute, è possibile aggiornarle rapidamente utilizzando la stessa procedura utilizzata per installare le licenze originali.
+
+
+
+== Fasi
+
+. In un editor di testo, ad esempio blocco note, aprire il nuovo file di licenza ricevuto dal supporto NetApp e copiare il testo della chiave di licenza negli Appunti di Windows.
+. Aprire OnCommand Insight nel browser.
+. Fare clic su *Admin* nella barra degli strumenti.
+. Fare clic su *Setup*.
+. Fare clic sulla scheda *Licenses* (licenze).
+. Fare clic su *Update License* (Aggiorna licenza).
+. Copiare il testo della chiave di licenza nella casella di testo *licenza*.
+. Selezionare l'operazione *Update (più comune)*.
++
+Questa operazione aggiunge le nuove licenze a tutte le licenze Insight attualmente attive.
+
+. Fare clic su *Save* (Salva).
+. Se si utilizza il modello di licenza Insight Consumption, è necessario selezionare la casella *Enable sending usage information to NetApp* (attiva invio delle informazioni sull'utilizzo a NetApp*) nella sezione Usage (utilizzo). Il proxy deve essere configurato e attivato correttamente per l'ambiente in uso.
+

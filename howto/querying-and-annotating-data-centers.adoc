@@ -1,0 +1,39 @@
+---
+permalink: howto/querying-and-annotating-data-centers.html 
+sidebar: sidebar 
+keywords:  
+summary: Le query vengono utilizzate per associare le annotazioni alle risorse appropriate nel proprio ambiente. In questo esempio, verranno associate le annotazioni del data center alle risorse selezionate. 
+---
+= Query e annotazione dei data center
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le query vengono utilizzate per associare le annotazioni alle risorse appropriate nel proprio ambiente. In questo esempio, verranno associate le annotazioni del data center alle risorse selezionate.
+
+Durante l'acquisizione della fonte di dati, Insight raccoglie (tra le altre informazioni) i nomi di ogni risorsa che rileva. In questo esempio, si presuppone che tutti gli array di storage siano stati denominati in base al data center in cui risiedono, ad esempio "`SVL_NN_<label>`" per gli array residenti in Sunnyvale. Le query Insight semplificano l'annotazione di queste risorse.
+
+* Accedere a Insight come utente con autorizzazioni amministrative
+* Selezionare *Query* > *+Nuova query*
+* Selezionare il campo *Cerca...* e scegliere *Storage*. Viene visualizzato un elenco di tutti gli array di storage.
+* Nel campo del filtro *Nome*, digitare "`SVL`" e fare clic su image:../media/check-box-ok.gif[""] (O premere Invio). L'elenco dei risultati della query viene ora aggiornato per mostrare solo gli array che contengono la stringa "`SVL`".
+* Durante il filtraggio, è possibile utilizzare uno qualsiasi dei seguenti caratteri da solo o combinati per perfezionare la ricerca in qualsiasi casella di testo della pagina Query:
++
+** Un asterisco consente di cercare tutto. Ad esempio, "`vol*rhel`" visualizza le risorse che iniziano con "`vol`" e terminano con "`rhel`".
+** Il punto interrogativo consente di cercare un numero specifico di caratteri. Ad esempio, il filtraggio per "`SVL-PRD??-S12`" visualizza SVL-PRD12-S12, SVL-PRD13-S12 e così via.
+** L'operatore OR consente di specificare più entità. Ad esempio, "`FAS2240, CX600 O FAS3270`" trova più modelli di storage.
+
+
+* Selezionare gli array di storage che si desidera associare al data center. Una volta selezionati tutti gli array desiderati, fare clic sul pulsante *Actions* (azioni) e selezionare *Edit annotation* (Modifica annotazione).
+* Nella finestra di dialogo *Add Annotation* (Aggiungi annotazione), selezionare l'annotazione *Data Center*.
+* Scegliere il *valore* desiderato, ad esempio "`DC1_SVL`".
+* Fare clic su *Save* (Salva).
+* Se la colonna Data Center non è visibile nella pagina risultati query, selezionarla facendo clic sul pulsante *colonne* e scegliendo *Data Center*.
+* Se lo si desidera, è possibile salvare la query per un utilizzo futuro facendo clic sul pulsante *Save* (Salva) nell'angolo superiore destro della pagina Query e assegnando un nome univoco ed esplicito. Ad esempio, "`Storage Arrays - SVL data center`".
+
+
+Se si desidera associare l'annotazione "`SVL`" ad altre risorse, creare una nuova query e seguire questa procedura per ciascun tipo di risorsa desiderato.
+
+Ripetere questi passaggi per le risorse di ciascun data center.

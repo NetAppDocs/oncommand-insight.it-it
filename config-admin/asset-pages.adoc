@@ -1,0 +1,18 @@
+---
+permalink: config-admin/asset-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le pagine delle risorse forniscono dati sulla risoluzione dei problemi relativi alle performance e presentano informazioni riepilogative su una risorsa di base (ad esempio una macchina virtuale o un volume) e sulle risorse correlate utilizzate (ad esempio pool di storage, nodi di storage e porte di switch connesse), con collegamenti a informazioni aggiuntive.' 
+---
+= Dati della pagina delle risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le pagine delle risorse forniscono dati sulla risoluzione dei problemi relativi alle performance e presentano informazioni riepilogative su una risorsa di base (ad esempio una macchina virtuale o un volume) e sulle risorse correlate utilizzate (ad esempio pool di storage, nodi di storage e porte switch connesse), con collegamenti a informazioni aggiuntive.
+
+A partire da OnCommand Insight 7.3.1, tutte le pagine delle risorse hanno una pagina *principale* e una pagina *dati aggiuntivi*. Nella pagina principale sono riportati un riepilogo delle risorse e diverse sezioni relative a grafici, topologia e altre informazioni. La pagina *dati aggiuntivi* consente di configurare una pagina dashboard personalizzabile per il tipo di risorsa corrente.
+
+Un cerchio rosso fisso accanto a una riga o a un messaggio nella scheda principale della pagina delle risorse indica potenziali problemi con l'ambiente monitorato.

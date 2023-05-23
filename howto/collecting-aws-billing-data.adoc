@@ -1,0 +1,22 @@
+---
+permalink: howto/collecting-aws-billing-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati dei costi Amazon AWS Cloud importa i dati di fatturazione generati da Amazon in Insight come dati di integrazione, rendendolo disponibile per il data warehouse per il reporting.' 
+---
+= Raccolta e reporting dei dati di fatturazione AWS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati dei costi Amazon AWS Cloud importa i dati di fatturazione generati da Amazon in Insight come dati di integrazione, rendendolo disponibile per il data warehouse per il reporting.
+
+I dati di fatturazione del cloud sono disponibili per Insight in tre parti:
+
+Verifica delle informazioni dell'account AWS.
+
+Configurazione dell'origine dati dei costi AWS Cloud in Insight per la raccolta dei dati.
+
+Invio dei dati al Data Warehouse tramite ETL per l'utilizzo nei report.

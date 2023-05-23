@@ -1,0 +1,38 @@
+---
+permalink: reporting/reporting-made-easy.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile generare report predefiniti dal portale di reporting OnCommand Insight, inviarli via email ad altri utenti e persino modificarli. Diversi report consentono di filtrare per dispositivo, entità aziendale o Tier. Gli strumenti di reporting utilizzano IBM Cognos come base e offrono numerose opzioni di presentazione dei dati. 
+---
+= Creazione di report semplificata
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile generare report predefiniti dal portale di reporting OnCommand Insight, inviarli via email ad altri utenti e persino modificarli. Diversi report consentono di filtrare per dispositivo, entità aziendale o Tier. Gli strumenti di reporting utilizzano IBM Cognos come base e offrono numerose opzioni di presentazione dei dati.
+
+* I report predefiniti di OnCommand Insight mostrano l'inventario, la capacità dello storage, il chargeback, le performance, l'efficienza dello storage, e dati sui costi del cloud. È possibile modificare questi report predefiniti e salvare le modifiche.
+
+
+I dati del report disponibili sono controllati da diversi elementi, tra cui:
+
+* Accesso al portale di reporting OnCommand Insight, definito in base ai ruoli.
+* La configurazione del data warehouse di OnCommand InsightData, che memorizza i dati per i report.
+
+
+È possibile generare report in diversi formati, tra cui HTML, PDF, CSV, XML, Ed Excel.
+
+OnCommand Insight consente di gestire più tenancy nel reporting, consentendo di associare gli utenti alle business unit. Con questa funzione, gli amministratori possono separare i dati o i report in base agli attributi di un utente o della sua affiliazione.
+
+[NOTE]
+====
+Con Cognos versione 11.1.2 in poi, gli URL di reporting non sono considerati "stabili" e sono soggetti a modifiche. Se si dispone di URL di reporting con segnalibri, questi segnalibri potrebbero non riuscire. Ulteriori informazioni sono disponibili qui: http://queryvision.com/ibm-analytics-11-x-urls-they-are-a-changing/[]
+
+====
+[NOTE]
+====
+OnCommand Insight non supporta i dashboard creati utilizzando pacchetti in IBM Cognos, a meno che non si utilizzi la nuova funzione modulo dati.
+
+====

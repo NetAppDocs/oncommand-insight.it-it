@@ -1,0 +1,54 @@
+---
+permalink: config-admin/what-the-expert-view-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: La sezione visualizzazione avanzata consente di visualizzare i grafici delle performance di una risorsa in base a un numero qualsiasi di metriche applicabili in un determinato periodo di tempo e di aggiungere risorse correlate per confrontare e confrontare le performance delle risorse e delle risorse correlate in diversi periodi di tempo. 
+---
+= Utilizzando la sezione visualizzazione avanzata
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione visualizzazione avanzata consente di visualizzare i grafici delle performance di una risorsa in base a un numero qualsiasi di metriche applicabili in un determinato periodo di tempo e di aggiungere risorse correlate per confrontare e confrontare le performance delle risorse e delle risorse correlate in diversi periodi di tempo.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Individuare una pagina di risorse effettuando una delle seguenti operazioni:
++
+** Nella barra degli strumenti Insight, fare clic su image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], digitare il nome della risorsa, quindi selezionare la risorsa dall'elenco.
+** Fare clic su *Dashboard*, selezionare *Dashboard delle risorse*, individuare il nome di una risorsa e fare clic su di essa. Viene visualizzata la pagina delle risorse. Per impostazione predefinita, il grafico delle performance mostra due metriche per il periodo di tempo selezionato per la pagina delle risorse. Ad esempio, per uno storage, il grafico delle performance mostra la latenza e gli IOPS totali per impostazione predefinita. La sezione risorse visualizza il nome della risorsa e una sezione risorse aggiuntive, che consente di cercare le risorse. A seconda della risorsa, è possibile visualizzare le risorse anche nelle sezioni Top Correlated, Top Contributor, Greedy e Degraded.
+
+
+. È possibile fare clic su *Select metrics to show* (Seleziona metriche da visualizzare) e selezionare una metrica per aggiungere un grafico delle performance per una metrica.
++
+Viene aggiunto un grafico delle performance per la metrica selezionata. Il grafico visualizza i dati relativi al periodo di tempo selezionato. È possibile modificare il periodo di tempo facendo clic su un altro periodo di tempo nell'angolo in alto a sinistra della pagina delle risorse.
+
++
+È possibile eseguire di nuovo il passo e fare clic su per cancellare una metrica. Il grafico delle prestazioni per la metrica viene rimosso.
+
+. È possibile posizionare il cursore sul grafico e modificare i dati metrici visualizzati facendo clic su una delle seguenti opzioni, a seconda della risorsa:
++
+** *Read* o *Write*
+** **Tx**o *Rx* *Total* è l'impostazione predefinita.
+
+
+. È possibile trascinare il cursore sui punti dati nel grafico per vedere come cambia il valore della metrica nel periodo di tempo selezionato.
+. Nella sezione *risorse*, è possibile effettuare una delle seguenti operazioni, se applicabile, per aggiungere eventuali risorse correlate ai grafici delle performance:
++
+** È possibile selezionare una risorsa correlata nelle sezioni Top Correlated, Top Contributors, Greedy o Degraded per aggiungere i dati da tale risorsa al grafico delle performance per ciascuna metrica selezionata. Le risorse devono avere una correlazione o un contributo minimo del 15% per essere mostrate.
++
+Dopo aver selezionato la risorsa, viene visualizzato un blocco di colori accanto alla risorsa per indicare il colore dei punti dati nel grafico.
+
+** Per qualsiasi risorsa visualizzata, è possibile fare clic sul nome della risorsa per visualizzarne la pagina oppure fare clic sulla percentuale in cui la risorsa è correlata o contribuisce alla risorsa di base per visualizzare ulteriori informazioni sulle risorse correlate alla risorsa di base.
++
+Ad esempio, facendo clic sulla percentuale collegata accanto a una risorsa correlata in alto viene visualizzato un messaggio informativo che confronta il tipo di correlazione della risorsa con la risorsa di base.
+
+** Se la sezione Top Correlated non contiene una risorsa che si desidera visualizzare in un grafico delle performance a scopo di confronto, è possibile utilizzare la casella *Search Assets* (Cerca risorse) nella sezione Additional Resources (risorse aggiuntive) per individuare altre risorse. Una volta selezionata, la risorsa viene visualizzata nella sezione risorse aggiuntive. Se non si desidera più visualizzare informazioni sulla risorsa, fare clic su image:../media/trash-can-query.gif[""].
+
+
+

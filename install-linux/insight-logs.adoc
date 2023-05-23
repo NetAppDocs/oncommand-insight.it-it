@@ -1,0 +1,16 @@
+---
+permalink: install-linux/insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight fornisce molti file di log per facilitare la ricerca e la risoluzione dei problemi. I registri disponibili sono elencati nella directory dei registri. È possibile utilizzare uno strumento per il monitoraggio dei log, ad esempio BareTail, per visualizzare tutti i log contemporaneamente. 
+---
+= Registri Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight fornisce molti file di log per facilitare la ricerca e la risoluzione dei problemi. I registri disponibili sono elencati nella directory dei registri. È possibile utilizzare uno strumento per il monitoraggio dei log, ad esempio BareTail, per visualizzare tutti i log contemporaneamente.
+
+I file di log si trovano in `/var/log/netapp/oci/wildfly/` directory. I registri di acquisizione si trovano in `/var/log/netapp/oci/acq` directory. I file di dati si trovano in `/var/lib/netapp/oci`.

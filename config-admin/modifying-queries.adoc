@@ -1,0 +1,36 @@
+---
+permalink: config-admin/modifying-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile modificare i criteri associati a una query quando si desidera modificare i criteri di ricerca per le risorse che si stanno interrogando. 
+---
+= Modifica delle query
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare i criteri associati a una query quando si desidera modificare i criteri di ricerca per le risorse che si stanno interrogando.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente di Insightweb.
+. Fare clic su *Query* e selezionare *Mostra tutte le query*.
++
+Viene visualizzata la pagina Query.
+
+. Fare clic sul nome della query.
+. Per rimuovere un criterio dalla query, fare clic su image:../media/trash-can-query.gif[""].
+. Per aggiungere un criterio alla query, fare clic su image:../media/more-button.gif[""]e selezionare un criterio dall'elenco.
+. Effettuare una delle seguenti operazioni:
++
+** Fare clic su *Save* (Salva) per salvare la query con il nome utilizzato inizialmente.
+** Fare clic su *Save As* (Salva con nome) per salvare la query con un altro nome.
+** Fare clic su *Rename* (Rinomina) per modificare il nome della query utilizzato inizialmente.
+** Fare clic su *Ripristina* per ripristinare il nome della query a quello utilizzato inizialmente.
+
+
+

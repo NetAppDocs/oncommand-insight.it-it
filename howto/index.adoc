@@ -1,0 +1,12 @@
+---
+permalink: howto/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Guide "come fare"
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

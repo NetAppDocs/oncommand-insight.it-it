@@ -1,0 +1,28 @@
+---
+permalink: dwh/etl-frequency.html 
+sidebar: sidebar 
+keywords:  
+summary: Eseguire il processo Estrai, trasforma e carica almeno una volta al giorno; tuttavia, se necessario, si sceglie di eseguire ETL più volte. 
+---
+= Frequenza ETL e dati di data
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario eseguire il processo ETL (Extract, Transform, and Load) almeno una volta al giorno; tuttavia, si sceglie di eseguire ETL più volte, se necessario.
+
+Per impostazione predefinita, il motore di reporting Cognos considera tutti i dati relativi a capacità e performance come additivi. Di conseguenza, se il processo ETL viene eseguito più volte al giorno senza i filtri temporali appropriati, sussiste il rischio di raddoppiare i dati di capacità di conteggio.
+
+Due elementi dei dati nella dimensione Date sono correlati al processo ETL giornaliero. La dimensione Date, utilizzata in diversi modelli di dati, include i seguenti elementi di dati che sono interessati dall'ETL:
+
+* *È un rappresentante giornaliero*
++
+L'elemento di dati "is Day Representative" viene impostato su un valore pari a 1 (true) durante il primo processo ETL eseguito in un determinato giorno. Se il primo processo ETL viene eseguito alle ore 1:00, è il rappresentante del giorno viene impostato su 1 per tutti i dati caricati durante le ore 1:00 Processo ETL. Se viene pianificato un secondo ETL in un secondo momento (ad esempio, alle 13:00), il valore è Day Representative (rappresentante giorno) impostato su 0 (falso) per i dati caricati durante il processo ETL.
+
+* *È l'ultimo*
++
+Il membro "is latest" viene impostato su un valore pari a 1 (true) al termine di ogni processo ETL. Se il primo processo ETL viene eseguito alle ore 1:00, l'opzione è più recente viene impostata su 1 per tutti i dati caricati durante le ore 1:00 Processo ETL. Se viene pianificato un altro processo ETL in un secondo momento (ad esempio, alle 13:00), l'opzione è più recente viene impostata su 1 per i dati caricati durante le 13:00 Processo ETL. Il processo ETL imposta anche l'1:00 del mattino Il carico ETL è l'ultima voce a 0 (falso).
+
+

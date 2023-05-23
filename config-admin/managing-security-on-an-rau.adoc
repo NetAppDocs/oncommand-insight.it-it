@@ -1,0 +1,101 @@
+---
+permalink: config-admin/managing-security-on-an-rau.html 
+sidebar: sidebar 
+keywords: rekey 
+summary: Lo strumento securityadmin consente di gestire le opzioni di sicurezza su Raus. Potrebbe essere necessario eseguire il backup o il ripristino di una configurazione del vault, modificare le chiavi di crittografia o aggiornare le password per le unità di acquisizione. 
+---
+= Gestione della sicurezza su una RAU
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il `securityadmin` Tool consente di gestire le opzioni di sicurezza su Raus. Potrebbe essere necessario eseguire il backup o il ripristino di una configurazione del vault, modificare le chiavi di crittografia o aggiornare le password per le unità di acquisizione.
+
+
+
+== A proposito di questa attività
+
+Si utilizza `securityadmin` tool per gestire la sicurezza:
+
+* Finestre - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux - `/bin/oci-securityadmin.sh`
+
+
+Uno scenario per l'aggiornamento della configurazione di sicurezza per LAU, RAU, è quello di aggiornare la password utente di 'acquisizione' quando la password per quell'utente è stata modificata sul server. Tutti i sistemi Raus e LAU utilizzano la stessa password dell'utente di 'acquisizione' del server per comunicare con il server.
+
+[NOTE]
+====
+
+====
+L'utente di "acquisizione" esiste solo sul server Insight. RAU o LAU accedono come tale utente quando si connettono al server.
+
+Per gestire le opzioni di sicurezza su una RAU, attenersi alla procedura riportata di seguito:
+
+
+
+== Fasi
+
+. Eseguire un accesso remoto al server che esegue RAU
+. Avviare lo strumento di amministrazione della protezione in modalità interattiva: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
++
+Il sistema richiede le credenziali di accesso.
+
+. Immettere il nome utente e la password di un account con credenziali "`Admin`".
++
+Il sistema visualizza il menu della RAU.
+
++
+** *Backup*
++
+Crea un file zip di backup del vault contenente tutte le password e le chiavi e colloca il file in una posizione specificata dall'utente o nelle seguenti posizioni predefinite:
+
++
+*** Finestre - `C:\Program Files\SANscreen\backup\vault`
+*** Linux - `/var/log/netapp/oci/backup/vault`
+
+
+** *Ripristina*
++
+Ripristina il backup zip del vault creato. Una volta ripristinato, tutte le password e le chiavi vengono ripristinate ai valori esistenti al momento della creazione del backup.
+
++
+[NOTE]
+====
+Il ripristino può essere utilizzato per sincronizzare password e chiavi su più server, ad esempio: - Modificare le chiavi di crittografia su un server - creare un backup del vault - ripristinare il backup del vault sul secondo server
+
++
+
+====
+** *Modifica delle chiavi di crittografia*
++
+Modificare le chiavi di crittografia RAU utilizzate per crittografare o decrittare le password del dispositivo.
+
++
+[NOTE]
+====
+Quando si modificano le chiavi di crittografia, è necessario eseguire il backup della nuova configurazione di protezione in modo da poterla ripristinare dopo un aggiornamento o un'installazione.
+
+====
+** *Aggiorna password*
++
+Modificare la password per l'account utente di 'acquisizione'.
+
++
+[NOTE]
+====
+Alcuni account devono essere sincronizzati quando si modificano le password. Ad esempio, se si modifica la password per l'utente di "acquisizione" sul server, è necessario modificare la password per l'utente di "acquisizione" su LAU, RAU e DWH in modo che corrisponda. Inoltre, quando si modificano le password, è necessario eseguire il backup della nuova configurazione di protezione in modo da poterla ripristinare dopo un aggiornamento o un'installazione.
+
+====
+** *Ripristina impostazioni predefinite*
++
+Ripristina le chiavi di crittografia e le password ai valori predefiniti. I valori predefiniti sono quelli forniti durante l'installazione.
+
+** *Esci*
++
+Uscire da `securityadmin` tool.
+
+
+
+

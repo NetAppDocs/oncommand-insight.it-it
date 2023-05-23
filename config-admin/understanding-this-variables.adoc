@@ -1,0 +1,60 @@
+---
+permalink: config-admin/understanding-this-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le variabili speciali della pagina personalizzabile "dati aggiuntivi" di una risorsa consentono di mostrare facilmente informazioni aggiuntive direttamente correlate alla risorsa corrente.' 
+---
+= Comprendere le variabili
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le variabili speciali sulla pagina personalizzabile "dati aggiuntivi" di una risorsa consentono di mostrare facilmente informazioni aggiuntive direttamente correlate alla risorsa corrente.
+
+
+
+== A proposito di questa attività
+
+Per utilizzare le variabili "` questo`" nei widget nella landing page personalizzabile della risorsa, segui la procedura riportata di seguito. Per questo esempio, aggiungeremo un widget di tabella.
+
+[NOTE]
+====
+le variabili "``" sono valide solo per la landing page personalizzabile di una risorsa. Non sono disponibili per altre dashboard Insight. Le variabili "`` this" disponibili variano in base al tipo di risorsa.
+
+====
+
+
+== Fasi
+
+. Accedere a una pagina di risorse per una risorsa di propria scelta. Per questo esempio, scegliamo una pagina di risorse della macchina virtuale (VM). Eseguire una query o cercare una macchina virtuale e fare clic sul collegamento per accedere alla pagina delle risorse della macchina virtuale.
++
+Viene visualizzata la pagina delle risorse per la macchina virtuale.
+
+. Fare clic sull'elenco a discesa *Change view:* > *Additional Virtual Machine data* (dati macchina virtuale aggiuntivi) per accedere alla landing page personalizzabile della risorsa.
+. Fai clic sul pulsante *Widget* e scegli *Table widget*.
++
+Viene visualizzato il widget Table per la modifica. Per impostazione predefinita, tutti gli storage vengono visualizzati nella tabella.
+
+. Vogliamo mostrare tutte le macchine virtuali. Fare clic sul selettore delle risorse e modificare *Storage* in *Virtual Machine*.
++
+Tutte le macchine virtuali sono ora visualizzate nella tabella.
+
+. Fare clic sul pulsante *selettore colonna*image:../media/column-picker-button.gif[""]e aggiungere il campo *hypervisor name* alla tabella.
++
+Il nome dell'hypervisor viene visualizzato per ogni VM nella tabella.
+
+. Ci interessa solo l'hypervisor che ospita la macchina virtuale corrente. Fare clic sul pulsante**+**del campo *Filtra per* e selezionare *nome hypervisor*.
+. Fare clic su *qualsiasi* e selezionare la variabile * this.host.name*. Fare clic sul pulsante di controllo per salvare il filtro.
++
+image::../media/variable-this-example-1.gif[variabile questo esempio 1]
+
+. La tabella mostra ora tutte le macchine virtuali ospitate dall'hypervisor della macchina virtuale corrente. Fare clic su *Save* (Salva).
+
+
+
+
+== Risultati
+
+La tabella creata per questa pagina di risorse della macchina virtuale verrà visualizzata per qualsiasi pagina di risorse della macchina virtuale visualizzata. L'utilizzo della variabile * this.host.name* nel widget significa che nella tabella verranno visualizzate solo le macchine virtuali di proprietà dell'hypervisor delle risorse correnti.

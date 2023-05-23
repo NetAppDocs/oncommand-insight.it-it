@@ -1,0 +1,40 @@
+---
+permalink: config-admin/assigning-applications-to-assets.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Dopo aver definito le applicazioni con o senza entità di business, è possibile associarle alle risorse. 
+---
+= Assegnazione di applicazioni alle risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver definito le applicazioni con o senza entità di business, è possibile associarle alle risorse.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Individuare la risorsa (host, macchina virtuale, volume o volume interno) a cui si desidera applicare l'applicazione effettuando una delle seguenti operazioni:
++
+** Fare clic su *Dashboard*, selezionare *Dashboard delle risorse* e fare clic sulla risorsa.
+** Fare clic su image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] Nella barra degli strumenti per visualizzare la casella *Cerca risorse*, digitare il nome della risorsa, quindi selezionarla dall'elenco.
+
+
+. Nella sezione *dati utente* della pagina risorse, posizionare il cursore sul nome dell'applicazione attualmente assegnata alla risorsa (se non è stata assegnata alcuna applicazione, viene visualizzato *Nessuno*), quindi fare clic su image:../media/pencil-icon-landing-page-be.gif[""] (Modifica applicazione).
++
+Viene visualizzato l'elenco delle applicazioni disponibili per la risorsa selezionata. Le applicazioni attualmente associate alla risorsa sono precedute da un segno di spunta.
+
+. È possibile digitare nella casella Cerca per filtrare i nomi delle applicazioni oppure scorrere l'elenco.
+. Selezionare le applicazioni che si desidera associare alla risorsa.
++
+È possibile assegnare più applicazioni all'host, alla macchina virtuale e al volume interno; tuttavia, è possibile assegnare una sola applicazione al volume.
+
+. Fare clic su image:../media/check-box-ok.gif[""] per assegnare l'applicazione o le applicazioni selezionate alla risorsa.
++
+I nomi delle applicazioni vengono visualizzati nella sezione User Data (dati utente); se l'applicazione è associata a un'entità aziendale, anche il nome dell'entità aziendale viene visualizzato in questa sezione.
+
+

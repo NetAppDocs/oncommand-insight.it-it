@@ -1,0 +1,14 @@
+---
+permalink: dwh/multiple-server-chassis-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile visualizzare i connettori che riportano gli host e gli adattatori, gli switch SAN e gli array di storage. È inoltre possibile visualizzare i vari connettori che riportano un oggetto e identificano il connettore primario, che è il connettore scelto per l"oggetto.' 
+---
+= Problemi di consolidamento di più chassis server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare i connettori che riportano gli host e gli adattatori, gli switch SAN e gli array di storage. È inoltre possibile visualizzare i vari connettori che riportano un oggetto e identificano il connettore primario, che è il connettore scelto per l'oggetto.

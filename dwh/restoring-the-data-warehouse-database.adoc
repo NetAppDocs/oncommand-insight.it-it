@@ -1,0 +1,51 @@
+---
+permalink: dwh/restoring-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile ripristinare un database Data Warehouse utilizzando il file .zip creato al momento del backup del database Data Warehouse. 
+---
+= Ripristino del database Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile ripristinare un database Data Warehouse utilizzando `.zip` File creato al momento del backup del database Data Warehouse.
+
+
+
+== A proposito di questa attività
+
+Quando si ripristina un database Data Warehouse, è possibile ripristinare anche le informazioni dell'account utente dal backup. Le tabelle di gestione degli utenti vengono utilizzate dal motore di report Data Warehouse in un'installazione solo Data Warehouse.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema su cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *Backup/Restore*.
+. Nella sezione *Restore Database and Reports* (Ripristina database e report), fare clic su *Browse* (Sfoglia) e individuare `.zip` File che contiene il backup di Data Warehouse.
+. Se si desidera ripristinare i report o i dati dell'account utente, selezionare una o entrambe le seguenti caselle di controllo:
++
+** *Ripristinare il database*
++
+Include le impostazioni del Data Warehouse, i data mart, le connessioni e le informazioni sull'account utente.
+
+** *Ripristina report*
++
+Include report personalizzati, report predefiniti, modifiche apportate ai report predefiniti e impostazioni di reporting create in Reporting Portal.
+
++
+[NOTE]
+====
+Se il backup del database contiene un report personalizzato con una barra (/) o una parentesi aperta ([) nel nome (ad esempio, US IT Center Switch Port Boston/July), l'operazione di ripristino rinomina il report, sostituendo la barra o la parentesi aperta con un trattino basso (ad esempio, US IT Center Switch Port Boston_luglio).
+
+====
+
+
+. Fare clic su *Restore* (Ripristina).
++
+Al termine del processo di ripristino, viene visualizzato un messaggio sotto il pulsante Restore (Ripristina). Se il processo di ripristino ha esito positivo, viene visualizzato il messaggio Success (riuscito). Se il processo di ripristino non riesce, il messaggio riporta l'eccezione specifica che ha causato l'errore. Se si verifica un'eccezione e il processo di ripristino non riesce, il database originale viene ripristinato automaticamente.
+
+

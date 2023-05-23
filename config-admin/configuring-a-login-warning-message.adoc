@@ -1,0 +1,42 @@
+---
+permalink: config-admin/configuring-a-login-warning-message.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight consente agli amministratori di impostare un messaggio di testo personalizzato che viene visualizzato quando gli utenti accedono. 
+---
+= Impostazione di un messaggio di avviso di accesso
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight consente agli amministratori di impostare un messaggio di testo personalizzato che viene visualizzato quando gli utenti accedono.
+
+
+
+== Fasi
+
+. Per impostare il messaggio nel server OnCommand Insight:
++
+.. Accedere al menu:Admin[risoluzione dei problemi > risoluzione dei problemi avanzata > Impostazioni avanzate].
+.. Inserire il messaggio di accesso nell'area di testo.
+.. Fare clic sulla casella di controllo *il client visualizza il messaggio di avviso di accesso*.
+.. Fare clic su *Save* (Salva).
++
+Il messaggio viene visualizzato al momento dell'accesso per tutti gli utenti.
+
+
+
+. Per impostare il messaggio in Data Warehouse (DWH) e Reporting (Cognos):
++
+.. Selezionare *System Information* (informazioni di sistema) e fare clic sulla scheda *Login Warning* (Avviso di accesso).
+.. Inserire il messaggio di accesso nell'area di testo.
+.. Fare clic su *Save* (Salva).
++
+Il messaggio viene visualizzato quando si accede a DWH e Cognos Reporting per tutti gli utenti.
+
+
+
+

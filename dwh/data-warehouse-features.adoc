@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-features.html 
+sidebar: sidebar 
+keywords:  
+summary: Il data warehouse di OnCommand Insight è un database indipendente composto da diversi data mart. 
+---
+= Funzionalità di Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il data warehouse di OnCommand Insight è un database indipendente composto da diversi data mart.
+
+Data Warehouse include le seguenti funzionalità:
+
+* Dati di configurazione e inventario attuali e storici che consentono di creare report di trend utili per la previsione e la pianificazione
+* Diversi data mart storici multidimensionali e un data mart aggiuntivo di inventario solo corrente
+* Database ottimizzato per query predefinite o definite dall'utente
+* Una piattaforma per l'integrazione con motori di reporting e business intelligence di terze parti, tra cui:
++
+** Database per la gestione della configurazione
+** Sistemi di contabilità finanziaria
+** Sistemi di gestione delle risorse
+
+
+

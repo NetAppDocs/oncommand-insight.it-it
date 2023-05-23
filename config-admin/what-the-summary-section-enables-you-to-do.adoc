@@ -1,0 +1,51 @@
+---
+permalink: config-admin/what-the-summary-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile visualizzare la sezione Summary (Riepilogo) per visualizzare informazioni generali su una risorsa. In particolare, è utile verificare se eventuali metriche (ad esempio, memoria, capacità e latenza) o policy sulle performance sono fonte di preoccupazione, come indicato da OnCommand Insight visualizzando un cerchio rosso accanto alla metrica o alla policy sulle performance.' 
+---
+= Utilizzando la sezione Summary (Riepilogo)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare la sezione Summary (Riepilogo) per visualizzare informazioni generali su una risorsa. In particolare, è utile verificare se le metriche (ad esempio, memoria, capacità e latenza) o le policy sulle performance sono fonte di preoccupazione, come indicato da OnCommand Insight visualizzando un cerchio rosso accanto alla metrica o alla policy sulle performance.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Individuare una pagina di risorse effettuando una delle seguenti operazioni:
++
+** Nella barra degli strumenti Insight, fare clic su image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], digitare il nome della risorsa, quindi selezionare la risorsa dall'elenco.
+** Fare clic su *Dashboard*, selezionare *Dashboard delle risorse*, individuare il nome di una risorsa e fare clic su di essa. Viene visualizzata la pagina delle risorse.
+
+
++
+[NOTE]
+====
+Le informazioni visualizzate nella sezione Riepilogo dipendono dal tipo di pagina delle risorse che si sta visualizzando.
+
+====
+. È possibile fare clic su uno dei collegamenti alle risorse per visualizzarne le pagine.
++
+Ad esempio, se si sta visualizzando un nodo di storage, è possibile fare clic su un collegamento per visualizzare la pagina delle risorse dello storage a cui è associato oppure fare clic per visualizzare la pagina delle risorse del partner ha.
+
+. È possibile visualizzare le metriche associate alla risorsa.
++
+Un cerchio rosso accanto a una metrica indica che potrebbe essere necessario diagnosticare e risolvere potenziali problemi.
+
++
+[NOTE]
+====
+È possibile che la capacità del volume sia superiore al 100% su alcune risorse di storage. Ciò è dovuto ai metadati relativi alla capacità del volume che fa parte dei dati di capacità consumata riportati dall'asset.
+
+====
+. Se applicabile, è possibile fare clic su un collegamento al criterio di performance per visualizzare il criterio o i criteri di performance associati alla risorsa.
++
+Se viene visualizzato un cerchio rosso accanto a un criterio di performance, significa che un asset ha superato la soglia definita dal criterio di performance. Per diagnosticare ulteriormente il problema, è necessario esaminare la policy sulle performance.
+
+

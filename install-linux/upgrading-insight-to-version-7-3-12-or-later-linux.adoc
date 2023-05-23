@@ -1,0 +1,250 @@
+---
+permalink: install-linux/upgrading-insight-to-version-7-3-12-or-later-linux.html 
+sidebar: sidebar 
+keywords: upgrade,previous version,wizard,backup,conversion 
+summary: 'Prima di eseguire l"aggiornamento da OnCommand Insight 7.3.10 - 7.3.11 alla versione 7.3.12 o successiva, è necessario eseguire lo strumento di migrazione dei dati OCI.' 
+---
+= Aggiornamento di Insight alla versione 7.3.12 o successiva - Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di eseguire l'aggiornamento da OnCommand Insight 7.3.10 - 7.3.11 alla versione 7.3.12 o successiva, è necessario eseguire lo strumento di migrazione dei dati OCI.
+
+
+
+== Sfondo
+
+OnCommand Insight versione 7.3.12 e successive utilizzano software sottostante che potrebbero essere incompatibili con le versioni precedenti. Le versioni 7.3.12 e successive di Insight includono un *Data Migration Tool* per l'aggiornamento.
+
+[NOTE]
+====
+Le versioni di OnCommand Insight 7.3.9 e precedenti non sono più supportate. Se si utilizza una di queste versioni, _è necessario_ eseguire l'aggiornamento a Insight versione 7.3.10 o successiva (si consiglia vivamente la versione 7.3.11) prima di eseguire l'aggiornamento alla versione 7.3.12 o successiva.
+
+====
+
+
+== Quali sono le funzioni di Data Migration Tool?
+
+Lo strumento di migrazione esegue un controllo iniziale della compatibilità e segue uno dei tre diversi percorsi di aggiornamento. Il percorso selezionato si basa sulla compatibilità dei dati della versione corrente.
+
+[NOTE]
+====
+Prima di eseguire l'aggiornamento, è necessario eseguire Data Migration Tool e seguire i passaggi consigliati.
+
+====
+
+
+== Prima di iniziare
+
+* Si consiglia vivamente di eseguire il backup del sistema OnCommand Insight prima di eseguire lo strumento di migrazione dei dati.
+* Il servizio Elasticsearch sul server deve essere attivo e funzionante.
+* Prima di aggiornare Insight, è necessario eseguire Data Migration Tool per il database e gli archivi delle performance.
+
+
+
+
+== Esecuzione dello strumento di migrazione dei dati
+
+. Scaricare la versione più recente del Data Migration Tool (ad esempio, _SANScreenDataMigrationTool-x86-7.3.12-97.zip_) sul server Insight e il file di installazione Insight appropriato. Decomprimere in una cartella di lavoro. I download sono disponibili sul https://mysupport.netapp.com/site/products/all/details/oncommand-insight/downloads-tab["Sito di supporto NetApp"].
+. Aprire una finestra di comando e accedere alla cartella di lavoro.
++
+** Si consiglia di utilizzare la shell bash.
+
+
+. Eseguire lo strumento di migrazione dei dati utilizzando il seguente comando:
++
+** _`sudo ./SANScreenDataMigrationTool.sh`_
+
+
+. Seguire le istruzioni, se necessario. Di seguito viene riportato un esempio.
+
+
+[listing]
+----
+sudo ./SanscreenDataMigrationTool.sh
+
+NetApp SANScreen Data Migration Tool 7.3.12-132
+
+OCI 7.3.10.8.139 is installed
+Elasticsearch REST port = 9200
+
+Checking Elasticsearch service...
+Elasticsearch service is up
+
+Checking for obsolete (version 5) indexes...
+Found 54 obsolete indexes. Of these,
+    54 indexes may be migrated with OCI server running,
+       the most recent of which is for 2021-05-13
+
+Verifying migration component is present...
+SANscreen Server service is Running
+
+Proceed with online migration of 54 indexes (y or [n])?:
+----
+Il Data Migration Tool verificherà la presenza di indici obsoleti nel sistema e ne riferirà l'eventuale presenza. Se non sono presenti, lo strumento si chiude.
+
+Alcuni indici possono essere migrati mentre il servizio del server SANscreen è in esecuzione. È possibile eseguire la migrazione di altri utenti solo quando il server viene arrestato. Se non sono presenti indici che possono essere migrati, lo strumento viene chiuso. In caso contrario, seguire le istruzioni come richiesto.
+
+Una volta completato il Data Migration Tool, si verificherà nuovamente la presenza di indici obsoleti. Se tutti gli indici sono stati migrati, lo strumento informa che l'aggiornamento a OnCommand Insight 7.3.12 è supportato. Ora puoi procedere con l'aggiornamento di Insight.
+
+[listing]
+----
+sudo ./SanscreenDataMigrationTool.sh
+
+NetApp SANScreen Data Migration Tool 7.3.12-132
+
+OCI 7.3.10.8.139 is installed
+Elasticsearch REST port = 9200
+
+Checking for obsolete (version 5) indexes...
+Found 76 obsolete OCI indexes. Of these,
+76 indexes may be migrated with OCI server running
+
+SANscreen Server service is running
+
+Proceed with online migration of 76 indexes (y or [n])? y
+If you supply performance archive location, entries for any dates with migrated
+indexes will be replaced. Each orginal entry will be renamed and you may delete
+it after migration is completed.
+When prompted enter the archive location including the site-name directory.
+
+Enter the location of the performance archive or blank if none:
+Performance archive entries will not be updated
+
+Running the migration application with options -u http://localhost:9200 --online -sa -
+
+Preparing to migrate oci-timeseries-disk-2021-03-22: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate oci-timeseries-internalvolume-2021-03-22: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate oci-timeseries-port-2021-03-22: copied; backup; delete old; restore new; cleanup; done.
+...
+Preparing to migrate oci-timeseries-disk-2021-03-27: copied; backup; delete old; restore new; cleanup; done.
+Execution time 0:08:17
+Checking for obsolete (version 5) indexes...
+
+No obsolete indexes found. Upgrade and Inline Upgrade to 7.3.12+ are supported
+----
+Se viene richiesto di interrompere il servizio SANscreen, riavviarlo prima di eseguire l'aggiornamento.
+
+
+
+== Errori di convalida
+
+Nel caso in cui la convalida dell'indice non riesca, lo strumento di migrazione informa l'utente del problema prima di uscire.
+
+*OnCommand Insight non presente:*
+
+[listing]
+----
+./SanscreenDataMigrationTool.sh
+
+NetApp SANScreen Data Migration Tool V1.0
+
+Checking OnCommand Insight Installation...
+ERROR: OnCommand Insight is not installed
+----
+*Versione Insight non valida:*
+
+[listing]
+----
+./SanscreenDataMigrationTool.sh
+
+NetApp SANScreen Data Migration Tool 7.3.12-105
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.4 (126) is installed
+ERROR: The OCI Data Migration Tool is intended to be run against OCI 7.3.5 - 7.3.11
+----
+*Il servizio Elasticsearch non è in esecuzione:*
+
+[listing]
+----
+./SanscreenDataMigrationTool.sh
+NetApp SANScreen Data Migration Tool 7.3.12-105
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.11 (126) is installed
+
+Getting installation parameters...
+Elasticsearch Rest Port: 9200
+
+Checking Elasticsearch service...
+ERROR: The Elasticsearch service is not running
+
+Please start the service and wait for initialization to complete
+Then rerun OCI Data Migration Tool
+----
+
+
+== Opzioni della riga di comando
+
+Il Data Migration Tool include alcuni parametri opzionali che ne influenzano il funzionamento.
+
+|===
+
+
+| Opzione (Linux) | Funzione 
+
+
+ a| 
+-s | --silenzioso
+ a| 
+Elimina tutti i prompt
+
+
+
+ a| 
+-a | --archivio
+ a| 
+Se specificato, le voci di archivio esistenti per qualsiasi data di cui vengono migrati gli indici verranno sostituite. Il percorso deve puntare alla directory contenente i file zip della voce di archiviazione.
+
+È possibile specificare un argomento "-" per indicare che non è necessario aggiornare l'archivio delle performance.
+
+Se questo argomento è presente, il prompt per la posizione di archiviazione verrà eliminato.
+
+
+
+ a| 
+-c | --check
+ a| 
+Se presente, lo script viene chiuso immediatamente dopo aver segnalato i conteggi degli indici.
+
+
+
+ a| 
+-d | --dryrun
+ a| 
+Se presente, l'eseguibile di migrazione riporta le azioni che verranno intraprese (per migrare i dati e aggiornare le voci di archivio) ma non eseguirà le operazioni.
+
+
+
+ a| 
+-p | --porta
+ a| 
+Se presente, utilizzare il valore fornito come porta REST di Elasticsearch. Se assente, ottenere il valore dall'installazione, se possibile; in caso contrario, utilizzare il valore predefinito 9200.
+
+
+NOTE: In alcune installazioni di Linux OnCommand Insight, la porta REST di Elasticsearch potrebbe non essere in esecuzione sulla porta predefinita 9200. in questo caso, utilizzare l'opzione --port per fornire il valore
+
+
+
+ a| 
+-h | --help
+ a| 
+Visualizzare le informazioni sull'utilizzo
+
+|===
+
+
+== Risoluzione dei problemi
+
+Se le voci di archivio sono state aggiornate, è _necessario_ assicurarsi che la proprietà e le autorizzazioni degli archivi aggiornati siano corrette. Dovrebbero essere *ocisys ocisys 644*. In caso contrario, accedere alla cartella di archiviazione delle prestazioni ed eseguire i seguenti comandi:
+
+[listing]
+----
+chown ocisys *
+chgrp ocisys *
+chmod 644 *
+----

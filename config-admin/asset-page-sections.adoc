@@ -1,0 +1,14 @@
+---
+permalink: config-admin/asset-page-sections.html 
+sidebar: sidebar 
+keywords:  
+summary: Una pagina delle risorse visualizza diverse sezioni contenenti informazioni relative alla risorsa. Le sezioni visualizzate dipendono dal tipo di risorsa. 
+---
+= Sezioni della pagina delle risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una pagina delle risorse visualizza diverse sezioni contenenti informazioni relative alla risorsa. Le sezioni visualizzate dipendono dal tipo di risorsa.

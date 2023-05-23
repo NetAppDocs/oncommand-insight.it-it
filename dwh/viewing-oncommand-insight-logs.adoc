@@ -1,0 +1,106 @@
+---
+permalink: dwh/viewing-oncommand-insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: In OnCommand Insight è possibile visualizzare diversi log di data warehouse e Cognos. 
+---
+= Visualizzazione dei registri OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In OnCommand Insight è possibile visualizzare diversi log di data warehouse e Cognos.
+
+
+
+== A proposito di questa attività
+
+È possibile esaminare le informazioni relative alla risoluzione dei problemi e allo stato nei file di log di Cognos e Data Warehouse.
+
+
+
+== Fasi
+
+. Accedere al portale Data Warehouse all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Nel riquadro di navigazione a sinistra, fare clic su *risoluzione dei problemi*.
+. Nella sezione *Logs*, fare clic su *Log Files*.
++
+Vengono visualizzati i seguenti file di log:
+
++
+|===
+
+
+ a| 
+dwh.log
+
+
+
+ a| 
+Elenca lo stato dei job di Data Warehouse
+
+
+
+ a| 
+wildfly.log
+
+
+
+ a| 
+Fornisce informazioni sul server applicativo WildFly
+
+
+
+ a| 
+registro dwh_upgrade
+
+
+
+ a| 
+Fornisce informazioni sull'aggiornamento su Data Warehouse
+
+
+
+ a| 
+ldap.log
+
+
+
+ a| 
+Registra i messaggi relativi all'autenticazione LDAP
+
+
+
+ a| 
+dwh_troubleshoot.log
+
+
+
+ a| 
+Registra i messaggi che possono aiutare a risolvere i problemi di DWH
+
+
+
+ a| 
+sanscreenap.log
+
+
+
+ a| 
+Fornisce informazioni sulla connessione al server, l'autenticazione e l'accesso al repository Cognos e informazioni su altri processi
+
+
+
+ a| 
+cognosserver.log
+
+
+
+ a| 
+Log di Cognos
+
+|===
+. Fare clic sul nome del file di log che si desidera visualizzare.
+

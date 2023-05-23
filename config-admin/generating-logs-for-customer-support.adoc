@@ -1,0 +1,33 @@
+---
+permalink: config-admin/generating-logs-for-customer-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se richiesto dal supporto clienti, generare un server, un"acquisizione o un log remoto per la risoluzione dei problemi.' 
+---
+= Generazione di log per il supporto clienti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se richiesto dal supporto clienti, generare un server, un'acquisizione o un log remoto per la risoluzione dei problemi.
+
+
+
+== A proposito di questa attività
+
+Se il supporto clienti NetApp richiede, utilizzare questa opzione per generare i registri.
+
+
+
+== Fasi
+
+. Sulla barra degli strumenti di Insight, fare clic su *Admin* e selezionare *Troubleshooting*.
+. Nella parte inferiore della pagina dell'area altre attività, fare clic su *risoluzione avanzata dei problemi*.
+. Nella pagina successiva del menu Avanzate, fare clic sul collegamento *risoluzione dei problemi*.
+. Fare clic sulla scheda *Logs* e selezionare il file di log da scaricare.
++
+Viene visualizzata una finestra di dialogo che consente di aprire il log o di salvarlo localmente.
+
+

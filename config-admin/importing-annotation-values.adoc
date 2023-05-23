@@ -1,0 +1,171 @@
+---
+permalink: config-admin/importing-annotation-values.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se si mantengono annotazioni su oggetti SAN (come storage, host e macchine virtuali) in un file CSV, è possibile importare tali informazioni in OnCommand Insight. È possibile importare applicazioni, entità aziendali o annotazioni, ad esempio Tier e building.' 
+---
+= Importazione dei valori di annotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si mantengono annotazioni su oggetti SAN (come storage, host e macchine virtuali) in un file CSV, è possibile importare tali informazioni in OnCommand Insight. È possibile importare applicazioni, entità aziendali o annotazioni, ad esempio Tier e building.
+
+
+
+== A proposito di questa attività
+
+Si applicano le seguenti regole:
+
+* Se un valore di annotazione è vuoto, l'annotazione viene rimossa dall'oggetto.
+* Quando si annotano volumi o volumi interni, il nome dell'oggetto è una combinazione di nome dello storage e nome del volume utilizzando il separatore trattino e freccia (->):
++
+[listing]
+----
+<storage_name>-><volume_name>
+----
+* Quando lo storage, gli switch o le porte sono annotati, la colonna Application (applicazione) viene ignorata.
+* Le colonne di tenant, Line_of_Business, Business_Unit e Project costituiscono un'entità aziendale.
++
+I valori possono essere lasciati vuoti. Se un'applicazione è già correlata a un'entità aziendale diversa dai valori di input, l'applicazione viene assegnata alla nuova entità aziendale.
+
+
+
+L'utility di importazione supporta i seguenti tipi di oggetti e chiavi:
+
+|===
+
+
+| Tipo | Chiave 
+
+
+ a| 
+Host
+ a| 
+`+id-><id>+` oppure `<Name>` oppure `<IP>`
+
+
+
+ a| 
+MACCHINA VIRTUALE
+ a| 
+`+id-><id>+` oppure `<Name>`
+
+
+
+ a| 
+Pool di storage
+ a| 
+`+id-><id>+` oppure `<Storage_name>`/->``<Storage_Pool_name>``
+
+
+
+ a| 
+Volume interno
+ a| 
+`+id-><id>+` oppure `<Storage_name>`/->``<Internal_volume_name>``
+
+
+
+ a| 
+Volume
+ a| 
+`+id-><id>+` oppure `<Storage_name>`/->``<Volume_name>``
+
+
+
+ a| 
+Storage
+ a| 
+`+id-><id>+` oppure `<Name>` oppure `<IP>`
+
+
+
+ a| 
+Switch
+ a| 
+`+id-><id>+` oppure `<Name>` oppure `<IP>`
+
+
+
+ a| 
+Porta
+ a| 
+`+id-><id>+` oppure `<WWN>`
+
+
+
+ a| 
+Condividere
+ a| 
+`+id-><id>+` oppure `+<Storage Name>-><Internal Volume Name>-><Share Name>-><Protocol>+` [`+-><Qtree Name >+`]`<Qtree>` è facoltativo se esiste un qtree predefinito.
+
+
+
+ a| 
+Qtree
+ a| 
+`+id-><id>+` oppure `+<Storage Name>-><Internal Volume Name>-><Qtree Name>+`
+
+|===
+Il file CSV deve avere il seguente formato:
+
+[listing]
+----
+, , <Annotation Type> [, <Annotation Type> ...]
+[, Application] [, Tenant] [, Line_Of_Business] [,
+Business_Unit] [, Project]
+
+<Object Type Value 1>, <Object Key 1>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+
+...
+
+<Object Type Value N>, <Object Key N>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+----
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di Insight.
+. Fare clic su *Admin* e selezionare *Troubleshooting*.
++
+Viene visualizzata la pagina risoluzione dei problemi.
+
+. Nella sezione *altre attività* della pagina, fare clic sul collegamento *Portale OnCommand Insight*.
+. Fare clic su *Insight Connect API*.
+. Accedere al portale.
+. Fare clic su *Annotation Import Utility*.
+. Salvare `.zip` file, decomprimerlo e leggere `readme.txt` file per ulteriori informazioni ed esempi.
+. Posizionare il file CSV nella stessa cartella di `.zip` file.
+. Nella finestra della riga di comando, immettere quanto segue:
++
+[listing]
+----
+java -jar rest-import-utility.jar [-uusername] [-ppassword]
+[-aserver name or IP address] [-bbatch size] [-ccase sensitive:true/false]
+[-lextra logging:true/false] csv filename
+----
++
+Per impostazione predefinita, l'opzione -l, che attiva la registrazione aggiuntiva, e l'opzione -c, che attiva la distinzione tra maiuscole e minuscole, sono impostate su false. Pertanto, è necessario specificarli solo quando si desidera utilizzare le funzioni.
+
++
+[NOTE]
+====
+Non ci sono spazi tra le opzioni e i relativi valori.
+
+====
++
+[NOTE]
+====
+Le seguenti parole chiave sono riservate e impediscono agli utenti di specificarle come nomi di annotazione: - Applicazione - priorità_applicazione - tenant - linea_di_business - unità_business - errori di progetto vengono generati se si tenta di importare un tipo di annotazione utilizzando una delle parole chiave riservate. Se i nomi delle annotazioni sono stati creati utilizzando queste parole chiave, è necessario modificarli in modo che lo strumento di importazione funzioni correttamente.
+
++
+
+====
+

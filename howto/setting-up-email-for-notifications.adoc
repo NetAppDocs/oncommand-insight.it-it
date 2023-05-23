@@ -1,0 +1,42 @@
+---
+permalink: howto/setting-up-email-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight può inviare notifiche e-mail sugli eventi di attivazione, ad esempio le violazioni delle policy sulle performance. 
+---
+= Impostazione dell'e-mail per le notifiche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight può inviare notifiche e-mail sugli eventi di attivazione, ad esempio le violazioni delle policy sulle performance.
+
+
+
+== A proposito di questa attività
+
+Per configurare le notifiche e-mail, attenersi alla seguente procedura di base:
+
+
+
+== Fasi
+
+. Fare clic su *Admin* > *Notifiche* e passare alla sezione *e-mail*.
+. Nella casella *Server*, immettere il nome del server SMTP. È possibile immettere un nome di dominio completo o un indirizzo IP.
+. Inserire il nome utente SMTP e la password (se richiesta dal server SMTP).
+. Nella casella *email mittente*, inserisci l'account email del mittente che verrà identificato come mittente nelle notifiche.
++
+Questo account deve essere un account e-mail valido all'interno dell'organizzazione.
+
+. Nella casella *Firma email*, immettere il testo che si desidera inserire in ogni messaggio inviato.
+. Nella casella *destinatari*, fare clic su image:../media/add-email-recipient-icon.gif[""]Per inserire un indirizzo e-mail, quindi fare clic su *OK*.
+. Fare clic su *Save* (Salva).
++
+Per modificare o rimuovere un indirizzo e-mail o per inviare un'e-mail di prova, selezionare l'indirizzo e fare clic sul pulsante appropriato visualizzato.
+
++
+Nota: È possibile configurare Insight in modo che invii notifiche e-mail per violazioni specifiche dei criteri di performance a singoli individui o gruppi. Ad esempio, è possibile inviare violazioni delle risorse cloud a un gruppo e gli eventi dell'host fisico a un altro. Accedere a *Manage* > *Performance policy* per configurare le notifiche delle singole policy.
+
+

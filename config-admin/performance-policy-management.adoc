@@ -1,0 +1,44 @@
+---
+permalink: config-admin/performance-policy-management.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight consente di creare policy sulle performance per monitorare la rete alla ricerca di diverse soglie e per generare avvisi quando tali soglie vengono superate. Utilizzando le policy sulle performance, è possibile rilevare immediatamente una violazione di una soglia, identificare l"implicazione e analizzare l"impatto e la causa del problema in modo da consentire una correzione rapida ed efficace.' 
+---
+= Gestione delle policy sulle performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight consente di creare policy sulle performance per monitorare la rete alla ricerca di diverse soglie e per generare avvisi quando tali soglie vengono superate. Utilizzando le policy sulle performance, è possibile rilevare immediatamente una violazione di una soglia, identificare l'implicazione e analizzare l'impatto e la causa del problema in modo da consentire una correzione rapida ed efficace.
+
+Una policy sulle performance consente di impostare soglie su qualsiasi oggetto (datastore, disco, hypervisor, volume interno, porta, Storage, nodo storage, pool storage, VMDK, macchina virtuale, E volume) con i contatori delle performance riportati (ad esempio, IOPS totali). Quando si verifica una violazione di una soglia, Insight la rileva e la segnala nella pagina delle risorse associate, visualizzando un cerchio rosso continuo, un avviso via e-mail, se configurato, e nella dashboard delle violazioni o in qualsiasi dashboard personalizzata che segnala le violazioni.
+
+Insight fornisce alcune policy di performance predefinite, che è possibile modificare o eliminare se non applicabili all'ambiente in uso, per i seguenti oggetti:
+
+* Hypervisor
++
+Esistono policy di swapping ESX e utilizzo ESX.
+
+* Volume e volume interni
++
+Sono disponibili due policy di latenza per ciascuna risorsa, una annotata per il Tier 1 e l'altra per il Tier 2.
+
+* Porta
++
+Esiste una policy per lo zero del credito BB.
+
+* Nodo storage
++
+Esiste una policy per l'utilizzo del nodo.
+
+* Macchina virtuale
++
+Esistono lo swapping delle macchine virtuali e policy di memoria e CPU ESX.
+
+* Volume
++
+Vi sono latenza per Tier e policy di volume disallineate.
+
+

@@ -1,0 +1,120 @@
+---
+permalink: config-admin/netapp-e-series-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dei dati NetApp e-Series raccoglie informazioni sull"inventario e sulle performance. Esistono due configurazioni possibili (firmware 6.x e firmware 7.x+), entrambe con gli stessi valori.' 
+---
+= Fonte di dati NetApp e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dei dati NetApp e-Series raccoglie informazioni sull'inventario e sulle performance. Esistono due configurazioni possibili (firmware 6.x e firmware 7.x+), entrambe con gli stessi valori.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati NetApp e-Series. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Gruppo di volumi
+ a| 
+Gruppo di dischi
+
+
+
+ a| 
+Array di storage
+ a| 
+Storage
+
+
+
+ a| 
+Controller
+ a| 
+Nodo di storage
+
+
+
+ a| 
+Gruppo di volumi
+ a| 
+Pool di storage
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* L'indirizzo IP di ciascun controller dell'array
+* Requisito di porta 2463
+
+
+
+
+== Configurazione
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Elenco separato da virgole degli IP controller SANtricity array
+ a| 
+Indirizzi IP e/o nomi di dominio pienamente qualificati per i controller degli array
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 30 minuti)
+
+
+
+ a| 
+Intervallo di polling delle performance (fino a 3600 secondi)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+|===

@@ -1,0 +1,26 @@
+---
+permalink: reporting/enabling-security-headers.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le intestazioni HTTP possono essere configurate per migliorare la sicurezza generale dell"applicazione web Cognos Analytics.' 
+---
+= Abilitazione delle intestazioni di sicurezza
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le intestazioni HTTP possono essere configurate per migliorare la sicurezza generale dell'applicazione web Cognos Analytics.
+
+Per aggiungere le intestazioni delle risposte:
+
+* Accedere all'interfaccia utente di Cognos Analytics e selezionare *Gestisci> Configurazione> sistema> Impostazioni avanzate*
+* Aggiungere la seguente chiave/valore e applicare:
++
+** Chiave: `BIHeaderFilter.responseHeaders`
+** Valore: `[{"name":"X-FRAME-OPTIONS","value":"SAMEORIGIN"},{"name":"X-XSS-Protection","value":"1"},{"name":"X-Content-Type-Options","value":"nosniff"}]`
+
+
+* Aggiornare il browser per attivare le intestazioni.
+

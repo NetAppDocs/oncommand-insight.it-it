@@ -1,0 +1,50 @@
+---
+permalink: howto/importing-snmp-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'I pacchetti di integrazione SNMP vengono importati in OnCommand Insight utilizzando l"interfaccia utente Web. I pacchetti di integrazione sono identificati dal valore "IntegrationPackName" definito nel file di configurazione Integration.json contenuto nel file ZIP.' 
+---
+= Importazione di pacchetti di integrazione SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I pacchetti di integrazione SNMP vengono importati in OnCommand Insight utilizzando l'interfaccia utente Web. I pacchetti di integrazione sono identificati dal valore "IntegrationPackName" definito in `integration.json` File di configurazione contenuto nel file ZIP.
+
+
+
+== Prima di iniziare
+
+È necessario aver creato un file ZIP formattato correttamente che contenga il pacchetto di integrazione che si desidera importare nel server OnCommand Insight.
+
+
+
+== A proposito di questa attività
+
+Per importare i pacchetti di integrazione SNMP nel server Insight, procedere come segue.
+
+
+
+== Fasi
+
+. Fare clic su *Admin* > *Setup* > *SNMP Integration*
++
+Viene visualizzata la schermata Import SNMP package (Importa pacchetto SNMP): image:../media/oci-import-snmp.gif[""]
+
+. Fare clic su *Select file* (Seleziona file) per selezionare il file locale contenente il pacchetto SNMP.
++
+Il file selezionato viene visualizzato nella casella file.
+
++
+[NOTE]
+====
+Qualsiasi pacchetto di integrazione esistente con lo stesso nome viene sovrascritto.
+
+====
+. Fare clic su *Importa*
++
+Il file viene importato nel server Insight.
+
+

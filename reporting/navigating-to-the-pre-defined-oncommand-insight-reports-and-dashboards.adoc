@@ -1,0 +1,26 @@
+---
+permalink: reporting/navigating-to-the-pre-defined-oncommand-insight-reports-and-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando si apre il portale di reporting, la cartella del contenuto del team è il punto di partenza per selezionare il tipo di informazioni necessarie nei report di OnCommand Insight. 
+---
+= Navigazione verso report OnCommand Insight predefiniti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si apre il portale di reporting, la cartella del contenuto del team è il punto di partenza per selezionare il tipo di informazioni necessarie nei report di OnCommand Insight.
+
+
+
+== Fasi
+
+. Nel riquadro di spostamento di sinistra, fare clic su *contenuto del team* e selezionare la categoria di informazioni che si desidera utilizzare.
++
+image::../media/cognos-menu.gif[menu cognos]
+
+. Fare clic su *Report* per accedere ai report predefiniti.
+. Fare clic su *Get Started*, *Samples* o *Tutorial* per informazioni su come creare i report.
+

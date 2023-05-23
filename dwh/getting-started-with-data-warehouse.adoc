@@ -1,0 +1,41 @@
+---
+permalink: dwh/getting-started-with-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Data warehouse di OnCommand Insight consente di configurare le opzioni necessarie prima di generare report che includono i dati. Data Warehouse contiene molte funzionalità; tuttavia, è necessario utilizzarne solo alcune per iniziare. Per configurare Data Warehouse, utilizzare le opzioni nel portale Data Warehouse. 
+---
+= Introduzione a Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data warehouse di OnCommand Insight consente di configurare le opzioni necessarie prima di generare report che includono i dati. Data Warehouse contiene molte funzionalità; tuttavia, è necessario utilizzarne solo alcune per iniziare. Per configurare Data Warehouse, utilizzare le opzioni nel portale Data Warehouse.
+
+
+
+== A proposito di questa attività
+
+Per configurare il data warehouse di OnCommand Insight, un amministratore dello storage deve completare le seguenti procedure:
+
+* Accesso al portale Data Warehouse
+* Connessione del data warehouse ai server OnCommand Insight
+* Creazione del database dalla cronologia
+* Impostazione dei processi di backup e ripristino
+
+
+Inoltre, un amministratore dello storage potrebbe voler completare le seguenti procedure.
+
+* Accesso a MySQL tramite l'interfaccia a riga di comando
+* Pianificazione delle build giornaliere
+* Impostazione di tenancy multiple nel reporting
+* Risoluzione dei problemi di installazione
++
+** Perché non riesco a vedere le mie annotazioni?
+** Cosa devo fare con i punti di costruzione storici non riusciti?
+
+
+
+
+Se si utilizza il portale Data Warehouse per la prima volta, è necessario configurare Data Warehouse prima di poter visualizzare qualsiasi informazione nella pagina Jobs. È inoltre necessario ripetere questo processo di configurazione dopo aver reimpostato il database Data Warehouse.

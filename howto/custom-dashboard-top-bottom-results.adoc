@@ -1,0 +1,32 @@
+---
+permalink: howto/custom-dashboard-top-bottom-results.html 
+sidebar: sidebar 
+keywords:  
+summary: In un widget grafico su una dashboard personalizzata, è possibile visualizzare i risultati superiori o inferiori per i dati arrotolati e scegliere il numero di risultati visualizzati. In un widget tabella, è possibile selezionare il numero di righe visualizzate e ordinare in base a qualsiasi colonna. 
+---
+= Visualizzazione dei risultati in alto/in basso nei widget della dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In un widget grafico su una dashboard personalizzata, è possibile visualizzare i risultati superiori o inferiori per i dati arrotolati e scegliere il numero di risultati visualizzati. In un widget tabella, è possibile selezionare il numero di righe visualizzate e ordinare in base a qualsiasi colonna.
+
+
+
+== Widget grafico in alto/in basso
+
+In un widget grafico, quando si sceglie di eseguire il rollup dei dati in base a un attributo specifico, è possibile visualizzare i risultati in alto N o in basso N. Nota: Non è possibile scegliere i risultati superiori o inferiori quando si sceglie di eseguire il rollup in base agli attributi _all_.
+
+È possibile scegliere i risultati da visualizzare scegliendo *Top* o *Bottom* nel campo *Show* della query e selezionando un valore dall'elenco fornito.
+
+
+
+== Il widget tabella mostra le voci
+
+In un widget tabella, è possibile selezionare il numero di risultati visualizzati nella tabella dei risultati. È possibile scegliere tra 5, 10, 20 o 50 risultati. Non è possibile scegliere i risultati superiori o inferiori, in quanto la tabella consente di ordinare in ordine crescente o decrescente in base a qualsiasi colonna su richiesta.
+
+È possibile scegliere il numero di risultati da visualizzare nella tabella della dashboard selezionando un valore dal campo *Mostra voci* della query.
+
+Si noti che più risultati si sceglie di visualizzare, più alto sarà il widget quando lo si salva nella dashboard. Non sarà possibile ridimensionare il widget più piccolo del numero di righe visualizzate.

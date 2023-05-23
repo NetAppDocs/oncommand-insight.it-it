@@ -1,0 +1,31 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse di storage NetApp Clustered Data ONTAP. 
+---
+= Storage Clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse di storage NetApp Clustered Data ONTAP.
+
+
+
+== Terminologia dello storage Clustered Data ONTAP
+
+I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle landing page delle risorse di storage NetApp Clustered Data ONTAP. Molti di questi termini si applicano anche ad altri data collezionisti.
+
+* Modello -- un elenco delimitato da virgole dei nomi dei modelli di nodi discreti univoci all'interno di questo cluster. Se tutti i nodi nei cluster sono dello stesso tipo di modello, viene visualizzato un solo nome di modello.
+* Vendor -- stesso nome del vendor che si vedrebbe se si configurasse una nuova origine dati.
+* Serial number (numero di serie) - il numero di serie dell'array. Nei sistemi di storage con architettura cluster come NetApp Clustered Data ONTAP, questo numero di serie potrebbe essere meno utile dei singoli numeri di serie "nodi di torage `S`".
+* IP -- in genere sono gli IP o i nomi host configurati nell'origine dati.
+* Versione del microcodice -- firmware.
+* Capacità raw -- somma di base 2 di tutti i dischi fisici nel sistema, indipendentemente dal loro ruolo.
+* Latenza -- una rappresentazione di ciò che stanno sperimentando i carichi di lavoro dell'host, sia in lettura che in scrittura. Idealmente, OCI sta reperendo questo valore direttamente, ma spesso non è così. Al posto dell'array che offre questo up, OCI sta generalmente eseguendo un calcolo ponderato per gli IOPS derivato dalle statistiche dei singoli volumi interni`'.
+* Throughput -- aggregato da volumi interni.
+* Gestione -- potrebbe contenere un collegamento ipertestuale per l'interfaccia di gestione del dispositivo. Creato a livello di programmazione dall'origine dati Insight come parte del reporting dell'inventario.
+

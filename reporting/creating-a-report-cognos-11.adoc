@@ -1,0 +1,63 @@
+---
+permalink: reporting/creating-a-report-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: La creazione di report con Cognos 11 è diversa dalle versioni precedenti di Cognos. Utilizzare questa procedura per creare un report utilizzando i report OnCommand Insight predefiniti. 
+---
+= Creazione di un report con Cognos 11
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La creazione di report con Cognos 11 è diversa dalle versioni precedenti di Cognos. Utilizzare questa procedura per creare un report utilizzando i report OnCommand Insight predefiniti.
+
+
+
+== A proposito di questa attività
+
+Per generare un semplice report sulla capacità fisica dei pool di storage e storage in diversi data center, procedere come segue.
+
+
+
+== Fasi
+
+. Nella barra degli strumenti, fare clic su image:../media/new-report.gif[""]
+. Fare clic su *Report*
+. Fare clic su *modelli* > *vuoto*
+. Fare clic su *Temi* > *Blu* > *OK*
++
+Vengono visualizzate le schede origine e dati
+
+. Fare clic su *origine* > *image:../media/new-report.gif[""]*
+. Nella finestra di dialogo Apri file, fare clic su *contenuto del team* > *pacchetti*
++
+Viene visualizzato un elenco dei pacchetti disponibili.
+
+. Fare clic su *Storage and Storage Pool Capacity* > *Open*
+. Fare clic su image:../media/new-report.gif[""]
++
+Vengono visualizzati gli stili disponibili per il report.
+
+. Fare clic su *List* (elenco)
++
+Aggiungere i nomi appropriati per elenco e query
+
+. Fare clic su *OK*
+. Espandere *capacità fisica*
+. Espandere fino al livello più basso di *Data Center*
+. Trascinare image:../media/data-center.gif[""] Al palato dei report.
+. Espandere *capacità (MB)*
+. Trascinare *Capacity (MB)* sul tavolozza dei report.
+. Trascinare *capacità utilizzata (MB)* sul tavolozza dei report.
+. Eseguire il report facendo clic su image:../media/run-report.gif[""] e selezionando un tipo di output.
+
+
+
+
+== Risultati
+
+Viene creato un report simile al seguente:
+
+image::../media/cognos-11-report.gif[relazione cognos 11]

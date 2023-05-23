@@ -1,0 +1,20 @@
+---
+permalink: reporting/managing-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight offre raggruppamenti di report sotto forma di dashboard dinamiche per mostrare viste diverse dei dati relativi a un problema di gestione specifico. Facendo clic sugli elementi nelle dashboard vengono visualizzate informazioni più dettagliate. 
+---
+= Gestione dei dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight offre raggruppamenti di report sotto forma di dashboard dinamiche per mostrare viste diverse dei dati relativi a un problema di gestione specifico. Facendo clic sugli elementi nelle dashboard vengono visualizzate informazioni più dettagliate.
+
+A proposito di questa attività, i dashboard raggruppano informazioni su un argomento di interesse e forniscono le seguenti funzionalità dinamiche:
+
+Fare clic sugli elementi del grafico per rigenerare i grafici che mostrano ulteriori dettagli per gli elementi selezionati. Link ad altri report e informazioni più dettagliate. Se si dispone di una dashboard preferita, è possibile aggiungere una scheda utilizzando uno dei seguenti metodi:
+
+Aggiungere la scheda Dashboard dalle cartelle pubbliche. Aggiungere la scheda Dashboard da User Preferences (Preferenze utente).

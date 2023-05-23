@@ -1,0 +1,33 @@
+---
+permalink: config-admin/adding-a-new-data-source-patch-us26313-fr.html 
+sidebar: sidebar 
+keywords:  
+summary: Le nuove origini dati vengono rilasciate come file di patch che possono essere caricati nel sistema utilizzando il processo di patch. Questo processo consente di rendere disponibili nuove origini dati tra le release pianificate di OnCommand Insight. 
+---
+= Aggiunta di una nuova origine dati tramite patch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le nuove origini dati vengono rilasciate come file di patch che possono essere caricati nel sistema utilizzando il processo di patch. Questo processo consente di rendere disponibili nuove origini dati tra le release pianificate di OnCommand Insight.
+
+
+
+== Prima di iniziare
+
+È necessario aver caricato il file di patch che si desidera installare.
+
+
+
+== Fasi
+
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Selezionare *Patch*.
+. Selezionare *azioni* > *Installa service pack o patch*.
+. Nella finestra di dialogo *Installa Service Pack o Patch*, fare clic su *Sfoglia* per individuare e selezionare il file di patch caricato.
+. Fare clic su *Avanti* nella finestra di dialogo *Riepilogo patch*.
+. Esaminare le informazioni *Leggimi* e fare clic su *Avanti* per continuare.
+. Nella finestra di dialogo *Installa*, fare clic su *fine*.
+

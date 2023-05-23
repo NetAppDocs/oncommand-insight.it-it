@@ -1,0 +1,107 @@
+---
+permalink: config-admin/auditing-system-and-user-activities.html 
+sidebar: sidebar 
+keywords:  
+summary: Se si desidera individuare modifiche impreviste, è possibile visualizzare un audit trail del sistema OnCommand Insight e delle relative attività utente. I messaggi del registro di controllo possono essere inviati a syslog in aggiunta alla visualizzazione nella pagina Audit. 
+---
+= Controllo delle attività del sistema e dell'utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si desidera individuare modifiche impreviste, è possibile visualizzare un audit trail del sistema OnCommand Insight e delle relative attività utente. I messaggi del registro di controllo possono essere inviati a syslog in aggiunta alla visualizzazione nella pagina Audit.
+
+
+
+== A proposito di questa attività
+
+Insight genera voci di audit per le attività degli utenti che influiscono sulla rete di storage o sulla sua gestione, tra cui:
+
+* Accesso in corso
+* Autorizzare o annullare l'autorizzazione di un percorso
+* Aggiornamento di un percorso autorizzato
+* Impostazione di policy o soglie globali
+* Aggiunta o rimozione di un'origine dati
+* Avvio o interruzione di un'origine dati
+* Aggiornamento delle proprietà dell'origine dati
+* Aggiunta, modifica o eliminazione di un'attività
+* Rimozione di un gruppo di applicazioni
+* Identificazione o modifica dell'identificazione di un dispositivo
+* Creare un utente
+* Eliminare un utente
+* Modifica del ruolo dell'utente
+* Modifica di un utente (Guest à Admin)
+* Disconnessione di un utente (disconnessione forzata o disconnessione manuale)
+* Eliminazione di un'unità di acquisizione
+* Aggiorna licenza
+* Attivazione del backup
+* Disattivazione del backup in corso
+* Abilitazione di ASUP (l'abilitazione del proxy sulla stessa pagina viene riportata nel registro di controllo)
+* Disattivazione di ASUP (la disattivazione del proxy sulla stessa pagina viene riportata nel registro di controllo)
+* Security (sicurezza) - digitare nuovamente le password di sistema e modificarle.
+* Rimozione/aggiunta di annotazioni sulle risorse
+* Accesso/disconnessione utente CAC
+* Timeout sessione utente CAC
+
+
+
+
+== Fasi
+
+. Aprire Insight nel browser.
+. Fare clic su *Admin* e selezionare *Audit*.
++
+La pagina Audit visualizza le voci di audit in una tabella.
+
+. È possibile visualizzare i seguenti dettagli nella tabella:
++
+** *Ora*
++
+Data e ora in cui sono state apportate le modifiche
+
+** *Utente*
++
+Nome dell'utente associato alla voce di audit
+
+** *Ruolo*
++
+Ruolo dell'account utente, guest, utente o amministratore
+
+** *IP*
++
+Indirizzo IP associato alla voce di audit
+
+** *Azione*
++
+Tipo di attività nella voce di audit
+
+** *Dettagli*
++
+Dettagli della voce di audit
+
++
+Se un'attività dell'utente influisce su una risorsa, ad esempio un'origine dati o un'applicazione, i dettagli includono un collegamento alla landing page della risorsa.
+
++
+[NOTE]
+====
+Quando un'origine dati viene eliminata, i dettagli dell'attività dell'utente relativi all'origine dati non contengono più un collegamento alla landing page dell'origine dati.
+
+====
+
+
+. È possibile visualizzare le voci di audit scegliendo un determinato periodo di tempo (1 ora, 3 ore, 24 ore, 3 giorni e 7 giorni), Con Insight che mostra un numero massimo di 1000 violazioni per il periodo di tempo selezionato.
++
+È possibile fare clic su un numero di pagina sotto la tabella per sfogliare i dati per pagina se sono presenti più dati che si adattano a una singola pagina.
+
+. È possibile modificare l'ordinamento delle colonne di una tabella in ordine crescente (freccia su) o decrescente (freccia giù) facendo clic sulla freccia nell'intestazione della colonna; per tornare all'ordinamento predefinito, fare clic su un'altra intestazione di colonna.
++
+Per impostazione predefinita, la tabella visualizza le voci in ordine decrescente.
+
+. È possibile utilizzare la casella *filter* per visualizzare solo le voci desiderate nella tabella.
++
+Per visualizzare solo le voci di audit da parte dell'utente `izzyk`, digitare `izzyk` nella casella *filter*.
+
+

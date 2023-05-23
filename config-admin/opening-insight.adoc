@@ -1,0 +1,48 @@
+---
+permalink: config-admin/opening-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo aver installato OnCommand Insight, è necessario installare le licenze e configurare Insight per il monitoraggio dell"ambiente. A tale scopo, utilizzare un browser Web per accedere all"interfaccia utente Web di Insight.' 
+---
+= Accesso all'interfaccia utente Web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver installato OnCommand Insight, è necessario installare le licenze e configurare Insight per il monitoraggio dell'ambiente. A tale scopo, utilizzare un browser Web per accedere all'interfaccia utente Web di Insight.
+
+
+
+== Fasi
+
+. Effettuare una delle seguenti operazioni:
++
+** Aprire Insight sul server Insight:
++
+`+https://fqdn+`
+
+** Apri Insight da qualsiasi altra posizione:
++
+`+https://fqdn:port+`
+
++
+Il numero della porta è 443 o un'altra porta configurata al momento dell'installazione del server Insight. Il numero di porta predefinito è 443 se non viene specificato nell'URL.
+
+
+
++
+Viene visualizzata la finestra di dialogo OnCommand Insight:image:../media/oci-login-dialog-box.gif[""]
+
+. Inserire il nome utente e la password e fare clic su *Login*.
++
+Se le licenze sono state installate, viene visualizzata la pagina di configurazione dell'origine dati.
+
++
+[NOTE]
+====
+Una sessione del browser Insight inattiva per 30 minuti è scaduta e l'utente viene disconnesso automaticamente dal sistema. Per una maggiore sicurezza, si consiglia di chiudere il browser dopo la disconnessione da Insight.
+
+====
+

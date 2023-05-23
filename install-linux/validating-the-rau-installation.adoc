@@ -1,0 +1,26 @@
+---
+permalink: install-linux/validating-the-rau-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per convalidare l"installazione corretta dell"unità di acquisizione remota, è possibile visualizzare lo stato delle unità di acquisizione remota collegate al server.' 
+---
+= Convalida dell'installazione dell'unità di acquisizione remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per convalidare l'installazione corretta dell'unità di acquisizione remota, è possibile visualizzare lo stato delle unità di acquisizione remota collegate al server.
+
+
+
+== Fasi
+
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Fare clic su *Acquisition Units (unità di acquisizione)
+. Verificare che la nuova unità di acquisizione remota sia stata registrata correttamente e che abbia uno stato di connessione.
++
+In caso contrario, contattare il supporto tecnico.
+
+

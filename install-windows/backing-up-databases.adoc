@@ -1,0 +1,16 @@
+---
+permalink: install-windows/backing-up-databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Prima di eseguire l"aggiornamento, è necessario eseguire il backup dei database Data Warehouse e OnCommand Insight. L"aggiornamento richiede un backup del database Data Warehouse in modo da poter ripristinare il database in un secondo momento del processo di aggiornamento. L"aggiornamento in-place per Insight esegue il backup del database; tuttavia, è necessario eseguire il backup del database prima dell"aggiornamento come Best practice.' 
+---
+= Backup dei database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di eseguire l'aggiornamento, è necessario eseguire il backup dei database Data Warehouse e OnCommand Insight. L'aggiornamento richiede un backup del database Data Warehouse in modo da poter ripristinare il database in un secondo momento del processo di aggiornamento. L'aggiornamento in-place per Insight esegue il backup del database; tuttavia, è necessario eseguire il backup del database prima dell'aggiornamento come Best practice.
+
+Per evitare errori di reporting dei dati, è necessario eseguire il backup del database Data Warehouse prima di eseguire il backup del database Insight. Inoltre, se si dispone di un ambiente di test, si consiglia di assicurarsi di poter ripristinare il backup prima di continuare con l'aggiornamento.

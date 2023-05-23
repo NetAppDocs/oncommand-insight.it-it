@@ -1,0 +1,42 @@
+---
+permalink: config-admin/assets-used-in-queries-and-dashboards.html 
+sidebar: sidebar 
+keywords: queryable,Data Store,objects,custom landing page 
+summary: 'Le query Insight e i widget della dashboard possono essere utilizzati con un"ampia gamma di tipi di risorse' 
+---
+= Risorse utilizzate in query e dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le query Insight e i widget della dashboard possono essere utilizzati con un'ampia gamma di tipi di risorse
+
+I seguenti tipi di risorse possono essere utilizzati in query, widget dashboard e pagine di risorse personalizzate. I campi e i contatori disponibili per i filtri, le espressioni e la visualizzazione variano in base al tipo di risorsa. Non tutte le risorse possono essere utilizzate in tutti i tipi di widget.
+
+* Applicazione
+* Datastore
+* Disco
+* Fabric
+* Dispositivo generico
+* Host
+* Volume interno
+* Sessione iSCSI
+* Portale di rete iSCSI
+* Percorso
+* Porta
+* Qtree
+* Quota
+* Condividere
+* Storage
+* Nodo di storage
+* Pool di storage
+* Switch
+* Nastro
+* VMDK
+* Macchina virtuale
+* Volume
+* Zona
+* Membro di zona
+

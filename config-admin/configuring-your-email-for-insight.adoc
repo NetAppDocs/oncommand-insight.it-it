@@ -1,0 +1,39 @@
+---
+permalink: config-admin/configuring-your-email-for-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Se gli utenti desiderano ricevere i report Insight nei propri account di posta elettronica, è necessario configurare il server di posta elettronica per attivare questa funzione. 
+---
+= Configurazione dell'e-mail per Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se gli utenti desiderano ricevere i report Insight nei propri account di posta elettronica, è necessario configurare il server di posta elettronica per attivare questa funzione.
+
+
+
+== Fasi
+
+. Sulla barra degli strumenti di Insight, fare clic su *Admin* e selezionare *Notifications*.
+. Scorrere verso il basso fino alla sezione *Email* della pagina.
+. Nella casella *Server*, immettere il nome del server SMTP dell'organizzazione, identificato utilizzando un nome host o un indirizzo IP (formato_nnn.nnn.nnn.nnn.nnn_).
++
+Se si specifica un nome host, assicurarsi che il nome possa essere risolto tramite DNS.
+
+. Nella casella *Nome utente*, immettere il proprio nome utente.
+. Nella casella *Password*, immettere la password per accedere al server di posta elettronica, necessaria solo se il server SMTP è protetto da password. Si tratta della stessa password utilizzata per accedere all'applicazione che consente di leggere l'e-mail. Se è richiesta una password, è necessario immetterla una seconda volta per la verifica.
+. Nella casella *e-mail mittente*, immettere l'account e-mail del mittente che verrà identificato come mittente in tutti i report OnCommand Insight.
++
+Questo account deve essere un account e-mail valido all'interno dell'organizzazione.
+
+. Nella casella *Firma email*, immettere il testo che si desidera inserire in ogni messaggio inviato.
+. Nella casella destinatari, fare clic su image:../media/add-email-recipient-icon.gif[""], Inserire un indirizzo e-mail e fare clic su *OK*.
++
+Per modificare un indirizzo e-mail, selezionarlo e fare clic su image:../media/edit-recipient-icon.gif[""]. Per eliminare un indirizzo e-mail, selezionarlo e fare clic su image:../media/delete-recipient-icon.gif[""].
+
+. Per inviare un messaggio di posta elettronica di prova a destinatari specifici, fare clic su image:../media/test-email-icon.gif[""].
+. Fare clic su *Save* (Salva).
+

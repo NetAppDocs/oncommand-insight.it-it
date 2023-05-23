@@ -1,0 +1,14 @@
+---
+permalink: config-admin/using-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le query consentono di monitorare e risolvere i problemi della rete effettuando una ricerca delle risorse nell"ambiente a un livello granulare in base a criteri selezionati dall"utente (annotazioni e metriche delle performance). Inoltre, le regole di annotazione, che assegnano automaticamente le annotazioni alle risorse, richiedono una query.' 
+---
+= Esecuzione di query sulle risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le query consentono di monitorare e risolvere i problemi della rete effettuando una ricerca delle risorse nell'ambiente a un livello granulare in base a criteri selezionati dall'utente (annotazioni e metriche delle performance). Inoltre, le regole di annotazione, che assegnano automaticamente le annotazioni alle risorse, richiedono una query.

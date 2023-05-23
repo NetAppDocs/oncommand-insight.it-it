@@ -1,0 +1,57 @@
+---
+permalink: howto/expressions-example-read-iops-percentage.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilizzando le espressioni, è possibile visualizzare le metriche in modi alternativi, ad esempio in percentuale del totale. 
+---
+= Esempio di espressioni: Percentuale IOPS di lettura
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzando le espressioni, è possibile visualizzare le metriche in modi alternativi, ad esempio in percentuale del totale.
+
+
+
+== A proposito di questa attività
+
+In questo esempio si desidera visualizzare gli IOPS in lettura come percentuale degli IOPS totali. Si può pensare a questo come alla seguente formula:
+
+* Percentuale di lettura = (IOPS di lettura/IOPS totali) x 100
+
+
+Questi dati possono essere visualizzati in un grafico a linee sulla dashboard. A tale scopo, attenersi alla seguente procedura:
+
+
+
+== Fasi
+
+. Creare una nuova dashboard o aprirne una esistente in *modalità di modifica*.
+. Aggiungere un widget alla dashboard. Scegliere *Area chart*.
++
+Il widget si apre in modalità di modifica. Per impostazione predefinita, viene visualizzata una query che mostra *IOPS - Total* per le risorse *Storage*. Se lo si desidera, selezionare un tipo di risorsa diverso.
+
+. Fare clic sul pulsante *Converti in espressione*.
++
+La query corrente viene convertita in modalità espressione. Non è possibile modificare il tipo di risorsa in modalità espressione. In modalità espressione, il pulsante cambia in *Ripristina query*. Fare clic su questa opzione per tornare alla modalità Query in qualsiasi momento. Tenere presente che il passaggio da una modalità all'altra ripristinerà i valori predefiniti dei campi.
+
++
+Per il momento, rimanere in modalità *Expression*.
+
+. La metrica *IOPS - Total* si trova ora nel campo della variabile alfabetica "`a`". Nel campo della variabile "`b`", fai clic su *Seleziona* e scegli *IOPS - lettura*.
++
+È possibile aggiungere fino a un totale di cinque variabili alfabetiche per l'espressione facendo clic sul pulsante**+**che segue i campi delle variabili. Per il nostro esempio di percentuale di lettura, abbiamo bisogno solo di IOPS totali ("`a`") e IOPS di lettura ("`b`").
+
+. Nel campo *espressione*, utilizzare le lettere corrispondenti a ciascuna variabile per creare l'espressione. Sappiamo che _percentuale di lettura = (IOPS di lettura / IOPS totali) x 100_, quindi scriveremmo questa espressione come: `(b / a) * 100`
+. Il campo *Label* identifica l'espressione. Modificare l'etichetta in "`Read percent`" (percentuale di lettura) o in qualcosa di altrettanto significativo per l'utente.
+. Modificare il campo *unità* in "`%`" o "`Percent`".
++
+Il grafico mostra la percentuale di lettura IOPS nel tempo per i dispositivi di storage selezionati. Se lo si desidera, è possibile impostare un filtro o scegliere un metodo di rollup diverso. Tenere presente che se si seleziona *Sum* come metodo di rollup, tutti i valori percentuali vengono sommati, che potrebbero superare il 100%.
+
+. Fare clic su *Save* (Salva) per salvare il grafico nella dashboard.
++
+È inoltre possibile utilizzare le espressioni nei widget *Line Chart*, *Spline Chart* o *Stacked Area Chart*.
+
+

@@ -1,0 +1,62 @@
+---
+permalink: howto/configure-custom-environment-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"annotazione Environment è un"annotazione personalizzata per associare le risorse con la rispettiva posizione ambientale o utilizzo, ad esempio Lab, R&D, produzione, ecc. Creando l"annotazione Environment e impostandola su queste risorse, è possibile trovare, filtrare e creare report sulle risorse di laboratorio separatamente dalle risorse di produzione, ad esempio.' 
+---
+= Configurare le annotazioni dell'ambiente personalizzate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'annotazione Environment è un'annotazione personalizzata per associare le risorse con la rispettiva posizione ambientale o utilizzo, ad esempio Lab, R&D, produzione, ecc. Creando l'annotazione Environment e impostandola su queste risorse, è possibile trovare, filtrare e creare report sulle risorse di laboratorio separatamente dalle risorse di produzione, ad esempio.
+
+Fasi:
+
+* Selezionare *Gestisci* > *Annotazioni*.
+* Fare clic sul pulsante *+Aggiungi* nella parte superiore della pagina.
+* Per *Nome*, immettere '`*ambiente*`'.
+* Per *Description*, immettere '`*Asset environment type*`'.
+* Per *tipo*, selezionare *elenco*. Vengono visualizzati nuovi campi per la creazione dell'elenco.
+* Per il momento, lasciare deselezionato *Aggiungi nuove risorse in tempo reale*. Selezionare questa opzione se si desidera aggiungere nuovi ambienti all'elenco di opzioni contemporaneamente all'associazione con le risorse.
+* Immettere il nome e la descrizione del primo ambiente.
+* Fare clic su *+Aggiungi* e fare lo stesso per gli altri ambienti.
+* Al termine, fare clic su *Save* (Salva).
+
+
+Esempi di annotazioni di ambiente:
+
+|===
+
+
+| Nome | Descrizione 
+
+
+ a| 
+Laboratorio
+ a| 
+Laboratorio
+
+
+
+ a| 
+Sviluppo
+ a| 
+Sviluppo
+
+
+
+ a| 
+PRD
+ a| 
+Produzione
+
+
+
+ a| 
+...
+ a| 
+
+|===

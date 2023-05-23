@@ -1,0 +1,56 @@
+---
+permalink: howto/preparing-aws-for-insight-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"account AWS deve essere configurato correttamente per consentire a Insight di raccogliere dati sui costi del cloud.' 
+---
+= Preparazione di AWS per la raccolta di dati Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'account AWS deve essere configurato correttamente per consentire a Insight di raccogliere dati sui costi del cloud.
+
+
+
+== A proposito di questa attività
+
+I seguenti passaggi vengono eseguiti tramite l'account AWS. Per ulteriori informazioni, consulta la documentazione di Amazon: https://docs.aws.amazon.com["http://docs.aws.amazon.com"]. Se non conosci la configurazione di un account cloud AWS, contatta il tuo cloud provider per ricevere assistenza.
+
+[NOTE]
+====
+Questi passaggi sono forniti qui a titolo di cortesia e sono ritenuti corretti al momento della pubblicazione. NetApp non garantisce la correttezza di questi passaggi. Per informazioni o assistenza sulla configurazione dell'account AWS, contattare il provider cloud o il titolare dell'account AWS.
+
+====
+Best practice: Insight consiglia di creare un utente IAM primario sullo stesso account proprietario del bucket S3 in cui vengono caricati i report di fatturazione e di utilizzarlo per configurare e raccogliere i dati di fatturazione AWS.
+
+Per configurare l'account AWS in modo da consentire a Insight di raccogliere dati, attenersi alla seguente procedura:
+
+
+
+== Fasi
+
+. Accedere al proprio account AWS come utente IAM (Identity Access Management). Per ottenere una raccolta corretta, accedere all'account IAM principale, invece di un account IAM di gruppo.
+. Vai su *Amazon S3* per creare il tuo bucket. Immettere un nome bucket univoco e verificare la regione corretta.
+. Attiva Amazon Cost and Usage Report. Vedere https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html[] per informazioni.
++
+.. Vai alla sezione AWS **Billing and Cost Management Dashboard**e scegli *Report*.
+.. Fare clic su *Create report* (Crea report) e immettere il nome del report. Per *unità di tempo*, scegliere giornaliera. Selezionare la casella per includere *ID risorsa*, quindi fare clic su *Avanti*.
+.. Fare clic sul collegamento *Sample Policy* nella pagina Select delivery options. Copiare il testo della policy di esempio nella casella negli Appunti. Fare clic su *Chiudi*.
+.. Tornare al bucket S3 creato, fare clic sulla scheda *Permissions* e selezionare il pulsante *Bucket Policy*.
+.. Incollare il testo dalla policy di esempio e sostituirlo `<bucketname>` con il nome effettivo del bucket in ogni riga che contiene quanto segue: `"Resource": "arn:aws:s3:: <bucketname>"`. *Salvare* la policy.
+.. Tornare alla schermata Create Report (Crea report), inserire il bucket S3 e fare clic sul pulsante *Verify* (verifica). Fare clic su *Avanti*.
+.. Verificare le informazioni e fare clic su *Rivedi e completa*.
+
+
+. Per consentire a Insight di raccogliere i dati da AWS, è necessario concedere le autorizzazioni. Il seguente collegamento fornisce informazioni dettagliate su come concedere le autorizzazioni a *Elenca tutti i bucket* (fase 4.1) e impostare le autorizzazioni sugli oggetti nella cartella (fase 5.2): https://docs.aws.amazon.com/AmazonS3/latest/dev/walkthrough1.html[].
+. Nella console IAM, selezionare *Policy* e fare clic su *Create policy*.
+. Immettere un nome nel campo *Policy Name* (Nome policy) e fare clic su *Create policy* (Crea policy) in basso.
+. Nella console di IAM, selezionare l'utente, quindi selezionare *Add Inline Policy* (Aggiungi policy in linea) nella parte inferiore della schermata.
+. Fare clic su *Scegli un servizio* e selezionare S3.
+. Selezionare la scheda *JSON*. Copiare il testo di esempio JSON dal punto 5.1.2.g della procedura dettagliata AWS nella casella JSON.
+. Sostituire i campi _companybucket_ e _Development_ in JSON con le informazioni S3.
+. Fare clic su *Review Policy* (esamina policy) per rivedere le impostazioni dei criteri.
+

@@ -1,0 +1,132 @@
+---
+permalink: config-admin/importing-an-ssl-certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile aggiungere certificati SSL per abilitare l"autenticazione e la crittografia avanzate per migliorare la sicurezza dell"ambiente OnCommand Insight.' 
+---
+= Importazione di certificati SSL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere certificati SSL per abilitare l'autenticazione e la crittografia avanzate per migliorare la sicurezza dell'ambiente OnCommand Insight.
+
+
+
+== Prima di iniziare
+
+Assicurarsi che il sistema soddisfi il livello di bit minimo richiesto (1024 bit).
+
+
+
+== A proposito di questa attività
+
+[NOTE]
+====
+Prima di tentare di eseguire questa procedura, è necessario eseguire il backup di quella esistente `server.keystore` e assegnare un nome al backup `server.keystore.old`. Corrompendo o danneggiando `server.keystore` Dopo il riavvio del server Insight, il file potrebbe causare l'inoperabilità di un server Insight. Se si crea un backup, è possibile ripristinare il file precedente in caso di problemi.
+
+====
+
+
+== Fasi
+
+. Creare una copia del file keystore originale: `cp c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore.old`
+. Elencare i contenuti del keystore: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Quando viene richiesta una password, immettere `changeit`.
+
+
++
+Il sistema visualizza il contenuto del keystore. Deve essere presente almeno un certificato nel keystore, `"ssl certificate"`.
+
+. Eliminare `"ssl certificate"`: `keytool -delete -alias "ssl certificate" -keystore c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore`
+. Generare una nuova chiave: `C:\Program Files\SANscreen\java64\bin\keytool.exe -genkey -alias "ssl certificate" -keyalg RSA -keysize 2048 -validity 365 -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Quando viene richiesto di inserire il nome e il cognome, immettere il nome di dominio completo (FQDN) che si desidera utilizzare.
+.. Fornire le seguenti informazioni sull'organizzazione e sulla struttura organizzativa:
++
+*** Paese: Abbreviazione ISO di due lettere per il proprio paese (ad esempio, Stati Uniti)
+*** Stato o provincia: Nome dello stato o della provincia in cui si trova la sede centrale dell'organizzazione (ad esempio, Massachusetts)
+*** Località: Nome della città in cui si trova la sede centrale dell'organizzazione (ad esempio, Waltham)
+*** Nome dell'organizzazione: Nome dell'organizzazione proprietaria del nome di dominio (ad esempio, NetApp)
+*** Nome dell'unità organizzativa: Nome del reparto o del gruppo che utilizzerà il certificato (ad esempio, supporto)
+*** Domain Name/ Common Name (Nome dominio/Nome comune): Il nome FQDN utilizzato per le ricerche DNS del server (ad esempio, www.example.com). Il sistema risponde con informazioni simili a quanto segue: `Is CN=www.example.com, OU=support, O=NetApp, L=Waltham, ST=MA, C=US correct?`
+
+
+.. Invio `Yes` Quando il nome comune (CN) è uguale all'FQDN.
+.. Quando viene richiesta la password della chiave, immetterla o premere il tasto Invio per utilizzare la password del keystore esistente.
+
+
+. Generare un file di richiesta del certificato: `C:\Program Files\SANscreen\java64\bin\keytool.exe -certreq -alias "ssl certificate" -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file c:\localhost.csr`
++
+Il `c:\localhost.csr` file è il file di richiesta del certificato appena generato.
+
+. Inviare il `c:\localhost.csr` File all'autorità di certificazione (CA) per l'approvazione.
++
+Una volta approvato il file di richiesta del certificato, si desidera che il certificato venga restituito in `.der` formato. Il file potrebbe essere restituito o meno come `.der` file. Il formato file predefinito è `.cer` Per i servizi Microsoft CA.
+
++
+La maggior parte delle CA delle organizzazioni utilizza un modello di catena di trust, inclusa una CA principale, che spesso non è in linea. Ha firmato i certificati solo per alcune CA figlio, note come CA intermedie.
+
++
+È necessario ottenere la chiave pubblica (certificati) per l'intera catena di trust, ovvero il certificato per la CA che ha firmato il certificato per il server OnCommand Insight e tutti i certificati compresi tra la CA che ha firmato e la CA principale dell'organizzazione.
+
++
+In alcune organizzazioni, quando invii una richiesta di firma, potresti ricevere una delle seguenti informazioni:
+
++
+** Un file PKCS12 contenente il certificato firmato e tutti i certificati pubblici nella catena di trust
+** R `.zip` file contenente singoli file (incluso il certificato firmato) e tutti i certificati pubblici nella catena di trust
+** Solo il certificato firmato
++
+È necessario ottenere i certificati pubblici.
+
+
+
+. Importare il certificato approvato per server.keystore: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -alias OCI.hostname.com -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Quando richiesto, inserire la password del keystore.
++
+Viene visualizzato il seguente messaggio: `Certificate reply was installed in keystore`
+
+
+
+. Importare il certificato approvato per server.trustore: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -alias OCI.hostname.com -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.trustore"`
++
+.. Quando richiesto, inserire la password trustore.
++
+Viene visualizzato il seguente messaggio: `Certificate reply was installed in trustore`
+
+
+
+. Modificare il `SANscreen\wildfly\standalone\configuration\standalone-full.xml` file:
++
+Sostituire la seguente stringa alias: `alias="cbc-oci-02.muccbc.hq.netapp.com"`. Ad esempio:
+
++
+`<keystore path="server.keystore" relative-to="jboss.server.config.dir" keystore-password="${VAULT::HttpsRealm::keystore_password::1}" alias="cbc-oci-02.muccbc.hq.netapp.com" key-password="${VAULT::HttpsRealm::key_password::1}"/>`
+
+. Riavviare il servizio del server SANscreen.
++
+Una volta eseguito Insight, fare clic sull'icona del lucchetto per visualizzare i certificati installati nel sistema.
+
++
+Se viene visualizzato un certificato contenente informazioni "emesse a" che corrispondono alle informazioni "emesse da", è ancora installato un certificato autofirmato. I certificati autofirmati generati dal programma di installazione Insight hanno una scadenza di 100 anni.
+
++
+NetApp non può garantire che questa procedura rimuoverà gli avvisi dei certificati digitali. NetApp non può controllare la configurazione delle workstation degli utenti finali. Considerare i seguenti scenari:
+
++
+** Microsoft Internet Explorer e Google Chrome utilizzano la funzionalità di certificazione nativa di Microsoft su Windows.
++
+Ciò significa che se gli amministratori di Active Directory spingono i certificati CA dell'organizzazione nei trust dei certificati dell'utente finale, gli utenti di questi browser vedranno scomparire gli avvisi dei certificati quando i certificati autofirmati di OnCommand Insight sono stati sostituiti con quelli firmati dall'infrastruttura CA interna.
+
+** Java e Mozilla Firefox dispongono di archivi di certificati personalizzati.
++
+Se gli amministratori di sistema non automatizzano l'acquisizione dei certificati CA negli archivi di certificati attendibili di queste applicazioni, utilizzando il client Insight Java o il browser Firefox potrebbe continuare a generare avvisi di certificato a causa di un certificato non attendibile, anche quando il certificato autofirmato è stato sostituito. L'installazione della catena di certificati della tua organizzazione nel trustore è un requisito aggiuntivo.
+
+
+
+

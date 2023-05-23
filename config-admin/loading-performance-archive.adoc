@@ -1,0 +1,34 @@
+---
+permalink: config-admin/loading-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per caricare l"archivio dei dati sulle prestazioni, attenersi alla procedura descritta di seguito.' 
+---
+= Caricamento dell'archivio delle performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per caricare l'archivio dei dati sulle prestazioni, attenersi alla procedura descritta di seguito.
+
+
+
+== Prima di iniziare
+
+Prima di caricare l'archivio dei dati sulle prestazioni, è necessario ripristinare un backup settimanale o manuale valido.
+
+
+
+== Fasi
+
+. Sulla barra degli strumenti, fare clic su *Admin* > *Troubleshooting*.
+. Nella sezione Restore (Ripristino), in *Load performance archive* (carica archivio prestazioni), fare clic su *Load* (carica).
++
+[NOTE]
+====
+Il caricamento dell'archivio viene gestito in background. Il caricamento dell'archivio completo può richiedere molto tempo poiché i dati delle performance archiviati di ogni giorno vengono inseriti in Insight. Lo stato del caricamento dell'archivio viene visualizzato nella sezione archivio di questa pagina.
+
+====
+

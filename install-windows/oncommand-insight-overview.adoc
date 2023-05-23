@@ -1,0 +1,16 @@
+---
+permalink: install-windows/oncommand-insight-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight consente di semplificare la gestione operativa di ambienti IT virtuali e cloud ibridi e privati complessi. Insight è un"unica soluzione per consentire la gestione e l"analisi delle risorse multi-vendor su più domini in reti, storage e server in ambienti fisici e virtuali.' 
+---
+= Panoramica di OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight consente di semplificare la gestione operativa di ambienti IT virtuali e cloud ibridi e privati complessi. Insight è un'unica soluzione per consentire la gestione e l'analisi delle risorse multi-vendor su più domini in reti, storage e server in ambienti fisici e virtuali.
+
+Insight può aiutarti a ottimizzare la tua infrastruttura attuale, consentendoti di dimensionare correttamente le operazioni per soddisfare le esigenze del business. Semplifica il processo di determinazione di cosa e quando acquistare. Inoltre, riduce i rischi durante complesse migrazioni tecnologiche, come ad esempio il passaggio a un cloud ibrido, identificando i carichi di lavoro candidati alla migrazione del cloud. Con Insight, puoi gestire l'infrastruttura IT come servizio end-to-end integrando le risorse nell'intera catena di erogazione dei servizi IT dell'azienda.

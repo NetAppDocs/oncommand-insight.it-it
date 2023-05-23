@@ -1,0 +1,60 @@
+---
+permalink: config-admin/configuring-snmp-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight supporta le notifiche SNMP per le modifiche alla configurazione e ai criteri di percorso globale, nonché per le violazioni. Ad esempio, le notifiche SNMP vengono inviate quando vengono superate le soglie dell"origine dati.' 
+---
+= Configurazione delle notifiche SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight supporta le notifiche SNMP per le modifiche alla configurazione e ai criteri di percorso globale, nonché per le violazioni. Ad esempio, le notifiche SNMP vengono inviate quando vengono superate le soglie dell'origine dati.
+
+
+
+== Prima di iniziare
+
+È necessario completare le seguenti operazioni:
+
+* Identificazione dell'indirizzo IP del server che consolida i trap per ciascun tipo di evento.
++
+Potrebbe essere necessario consultare l'amministratore di sistema per ottenere queste informazioni.
+
+* Identificazione del numero di porta attraverso il quale il computer designato ottiene i trap SNMP per ciascun tipo di evento.
++
+La porta predefinita per i trap SNMP è 162.
+
+* Compilazione del MIB presso il sito.
++
+Il MIB proprietario viene fornito con il software di installazione per supportare le trap OnCommand Insight. NetApp MIB è compatibile con tutti i software di gestione SNMP standard ed è disponibile sul server Insight in `<install dir>\SANscreen\MIBS\sanscreen.mib`.
+
+
+
+
+
+== Fasi
+
+. Fare clic su *Admin* e selezionare *Notifications*.
+. Scorrere verso il basso fino alla sezione *SNMP* della pagina.
+. Fare clic su *azioni* e selezionare *Aggiungi origine trap*.
+. Nella finestra di dialogo *Aggiungi destinatari trap SNMP*, immettere i seguenti valori:
++
+** *IP*
++
+L'indirizzo IP a cui OnCommand Insight invia i messaggi trap SNMP.
+
+** *Porta*
++
+Il numero di porta a cui OnCommand Insight invia i messaggi trap SNMP.
+
+** *Stringa di comunità*
++
+Utilizzare "`public`" per i messaggi trap SNMP.
+
+
+
+. Fare clic su *Save* (Salva).
+

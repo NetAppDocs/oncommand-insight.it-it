@@ -1,0 +1,43 @@
+---
+permalink: howto/monitoring-the-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Ogni landing page del pool di storage fornisce rapporti di oversubscription, identifica le risorse correlate, l"utilizzo di LUN e dischi, nonché violazioni e violazioni delle policy che si sono verificate con il pool di storage.' 
+---
+= Monitoraggio del pool di storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ogni landing page del pool di storage fornisce rapporti di oversubscription, identifica le risorse correlate, l'utilizzo di LUN e dischi, nonché violazioni e violazioni delle policy che si sono verificate con il pool di storage.
+
+Utilizza la landing page del pool di storage per identificare eventuali problemi con le risorse fisiche che supportano l'infrastruttura virtuale. È possibile tenere traccia dei trend dei rapporti di capacità e capacità per 30 giorni o utilizzare un intervallo di tempo personalizzato. Prestare attenzione ai dati nelle sezioni seguenti per monitorare lo stato del pool di storage.
+
+* *Riepilogo*
++
+Utilizzare questa sezione per comprendere:
+
++
+** Informazioni sulla capacità del pool di storage, tra cui la capacità fisica e la capacità di overcommit.
+** Se l'aggregato è sovrascruto e in base alla quantità.
+** Eventuali violazioni delle policy che si sono verificate.
+
+
+* *Risorse di storage e dischi*
++
+La sezione delle risorse di storage mostra l'utilizzo del LUN.
+
++
+La sezione dischi mostra i singoli dischi che compongono il pool di storage.
+
+* *Risorse*
++
+Utilizzare questa sezione per comprendere la correlazione tra VMDK e LUN e il percorso dell'applicazione da storage a macchina virtuale.
+
+* *Sezione violazioni*
++
+La sezione violazioni identifica eventuali violazioni alle policy di performance impostate per il pool di storage.
+
+

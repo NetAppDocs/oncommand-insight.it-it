@@ -1,0 +1,31 @@
+---
+permalink: howto/servicenow-integration-install-update-set.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Nell"ambito dell"integrazione tra ServiceNow e OnCommand Insight, è necessario installare un set di aggiornamenti, che carica i dati preconfigurati in ServiceNow per fornire al connettore campi e tabelle specifici per l"estrazione e il caricamento dei dati.' 
+---
+= Installare il set di aggiornamenti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nell'ambito dell'integrazione tra ServiceNow e OnCommand Insight, è necessario installare un set di aggiornamenti, che carica i dati preconfigurati in ServiceNow per fornire al connettore campi e tabelle specifici per l'estrazione e il caricamento dei dati.
+
+
+
+== Fasi
+
+. Accedere alla tabella dei set di aggiornamenti remoti in ServiceNow cercando "`set di aggiornamenti recuperati`".
+. Fare clic su *Importa set di aggiornamenti da XML*.
+. Il set di aggiornamenti si trova nel file .zip di Python Connector precedentemente scaricato sul disco locale (nel nostro esempio, il `C:\OCI2SNOW` ) in `\update_sets` sotto-cartella. Fare clic su *Choose file* (Scegli file) e selezionare il file .xml in questa cartella. Fare clic su *carica*.
+. Una volta caricato il set di aggiornamenti, aprirlo e fare clic su *Preview Update Set* (Anteprima set di aggiornamenti).
++
+Se vengono rilevati errori, è necessario correggerli prima di poter eseguire il commit del set di aggiornamenti.
+
+. Se non si verificano errori, fare clic su *Commit Update Set* (Esegui commit Update Set).
++
+Una volta eseguito il commit, il set di aggiornamenti viene visualizzato nella pagina *System Update Sets* > *Update Sources*.
+
+

@@ -1,0 +1,36 @@
+---
+permalink: faq/oci-faq-netapp-storage-iops.html 
+sidebar: sidebar 
+keywords:  
+summary: Questa domanda frequente risponde alle domande più frequenti su come i numeri IOPS derivano dai sistemi storage Data ONTAP. 
+---
+= IOPS dello storage Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa domanda frequente risponde alle domande più frequenti su come i numeri IOPS derivano dai sistemi storage Data ONTAP.
+
+
+
+== Come vengono derivati gli IOPS dello storage dai sistemi storage Data ONTAP
+
+* Gli IOPS a livello di array di storage vengono aggregati dagli IOPS dei volumi interni
+* Gli IOPS a livello di nodo di storage includono OPS meta-dati
+* Gli IOPS a livello di pool di storage escludono gli OPS dei meta-dati; misura solo i dischi
+* Gli IOPS interni a livello di volume includono OPS di lettura e scrittura (operazioni) + altri OPS
+
+
+
+
+== Domanda - in che modo gli IOPS aggregati possono essere a volte superiori agli IOPS del nodo?
+
+Prima di CDOT 8.3.1, gli IOPS dei nodi sono costituiti da IOPS del protocollo. In CDOT 8.3.1. e in seguito, sono costituiti da metriche dei componenti del sistema. Includono richieste 'solo' di dati, richieste che arrivano dalla porta d'ingresso, ma non includono attività di back-end come snapmirrors, deduplica e così via. D'altra parte, queste attività producono IOPS su disco, quindi aggregano IOPS. Di conseguenza, è possibile che gli IOPS aggregati siano superiori agli IOPS del nodo.
+
+
+
+== Domanda - come vengono calcolati i metadati o altri OPS
+
+Altri OPS = totale - (lettura + scrittura)

@@ -1,0 +1,57 @@
+---
+permalink: howto/expressions-example-system-i-o.html 
+sidebar: sidebar 
+keywords:  
+summary: Le espressioni ti offrono la libertà di inserire dati che possono essere calcolati da altre metriche. 
+---
+= Esempio di espressioni: I/o "di sistema"
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le espressioni ti offrono la libertà di inserire dati che possono essere calcolati da altre metriche.
+
+
+
+== A proposito di questa attività
+
+Esempio 2: OnCommand Insight acquisisce molte metriche da origini dati. Tra questi vi sono IOPS totali, di lettura e scrittura. Tuttavia, il numero totale di IOPS riportati dall'acquisizione talvolta include IOPS "di sistema", che sono operazioni io che non fanno parte diretta della lettura o scrittura dei dati. Questo i/o di sistema può anche essere considerato come un i/o "overhead", necessario per il corretto funzionamento del sistema ma non direttamente correlato alle operazioni sui dati.
+
+Per visualizzare questi i/o di sistema, è possibile sottrarre gli IOPS di lettura e scrittura dai IOPS totali riportati dall'acquisizione. La formula potrebbe essere simile alla seguente:
+
+* IOPS di sistema = IOPS totali - (IOPS di lettura + IOPS di scrittura)
+
+
+Questi dati possono quindi essere visualizzati in un grafico a linee sulla dashboard. A tale scopo, attenersi alla seguente procedura:
+
+
+
+== Fasi
+
+. Creare una nuova dashboard o aprirne una esistente in *modalità di modifica*.
+. Aggiungere un widget alla dashboard. Scegliere *Line chart*.
++
+Il widget si apre in modalità di modifica. Per impostazione predefinita, viene visualizzata una query che mostra *IOPS - Total* per le risorse *Storage*. Se lo si desidera, selezionare un tipo di risorsa diverso.
+
+. Fare clic sul pulsante per creare una copia della query.
++
+Un duplicato della query viene aggiunto sotto l'originale.
+
+. Nella seconda query, fare clic sul pulsante *Converti in espressione*.
++
+La query corrente viene convertita in modalità espressione. Fare clic su *Ripristina query* se si desidera tornare alla modalità Query in qualsiasi momento. Tenere presente che il passaggio da una modalità all'altra ripristinerà i valori predefiniti dei campi.
+
++
+Per il momento, rimanere in modalità *Expression*.
+
+. La metrica *IOPS - Total* si trova ora nel campo della variabile alfabetica "`a`". Fare clic su *IOPS - Total* (IOPS - totale) e impostarlo su *IOPS - Read* (IOPS - lettura). .
+. Nel campo della variabile "`b`", fai clic su *Select* e scegli *IOPS - Write*.
+. Nel campo *espressione*, utilizzare le lettere corrispondenti a ciascuna variabile per creare l'espressione. Scriveremmo la nostra espressione semplicemente come: `a + b`. Nella sezione *Display*, selezionare**grafico area** per questa espressione.
+. Il campo *Label* identifica l'espressione. Cambia l'etichetta in "`SSystem IOPS`", o qualcosa di altrettanto significativo per te.
++
+Il grafico mostra gli IOPS totali come grafico a linee, con un grafico a aree che mostra la combinazione di IOPS di lettura e scrittura sottostante. Il divario tra i due indica gli IOPS che non sono direttamente correlati alle operazioni di lettura o scrittura dei dati.
+
+. Fare clic su *Save* (Salva) per salvare il grafico nella dashboard.
+

@@ -1,0 +1,33 @@
+---
+permalink: config-admin/configuring-performance-policy-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per impostazione predefinita, Insight valuta i criteri di un oggetto in sequenza. Puoi configurare l"ordine in cui Insight valuta le policy di performance. Ad esempio, se si dispone di una policy configurata per interrompere l"elaborazione quando si verifica una violazione per lo storage di livello Gold, è possibile inserire tale policy prima nell"elenco ed evitare di visualizzare violazioni più generiche per la stessa risorsa di storage.' 
+---
+= Modifica della precedenza di una policy di performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per impostazione predefinita, Insight valuta in sequenza le policy di un oggetto. Puoi configurare l'ordine in cui Insight valuta le policy di performance. Ad esempio, se si dispone di una policy configurata per interrompere l'elaborazione quando si verifica una violazione per lo storage di livello Gold, è possibile inserire tale policy prima nell'elenco ed evitare di visualizzare violazioni più generiche per la stessa risorsa di storage.
+
+
+
+== Fasi
+
+. Aprire Insight nel browser.
+. Dal menu *Gestisci*, selezionare *Criteri di performance*.
++
+Viene visualizzata la pagina Performance Policies.
+
+. Posizionare il cursore del mouse sul nome di un criterio nell'elenco dei criteri di performance di un tipo di oggetto.
++
+Le frecce di precedenza vengono visualizzate a destra del criterio.
+
+. Per spostare un criterio in alto nell'elenco, fare clic sulla freccia verso l'alto; per spostarlo in basso nell'elenco, fare clic sulla freccia verso il basso.
++
+Per impostazione predefinita, i nuovi criteri vengono aggiunti in sequenza all'elenco di criteri di un oggetto.
+
+

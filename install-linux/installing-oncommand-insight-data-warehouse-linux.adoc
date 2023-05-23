@@ -1,0 +1,55 @@
+---
+permalink: install-linux/installing-oncommand-insight-data-warehouse-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"installazione è autonoma e include gli elementi necessari per eseguire e utilizzare il data warehouse OnCommand Insight.' 
+---
+= Installazione del data warehouse di OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'installazione è autonoma e include gli elementi necessari per eseguire e utilizzare il data warehouse di OnCommand Insight (DWH).
+
+
+
+== Prima di iniziare
+
+È necessario aver completato tutti i prerequisiti di installazione.
+
+
+
+== A proposito di questa attività
+
+Data Warehouse dispone di funzionalità di reporting di Cognos. Se si installa Insight su un server Linux, è tuttavia possibile utilizzare queste funzionalità solo se si installa Data Warehouse su un server Windows. Per informazioni sull'installazione del data warehouse su Windows e sulle funzionalità di reporting di Cognos, fare riferimento alla _Guida all'installazione di OnCommand Insight per Microsoft Windows_.
+
+
+
+== Fasi
+
+. Accedere al server Data Warehouse utilizzando un account con privilegi sudo.
+. Accedere alla directory del server in cui si trovano i file di installazione e digitare il seguente comando:
++
+`unzip oci-dwh-<version>-linux-x86_64.zip`
+
++
+Verificare il numero di versione del file di installazione; il numero di versione potrebbe essere diverso da quello visualizzato nel comando.
+
+. È possibile visualizzare la sintassi, gli argomenti dei comandi e l'utilizzo dei parametri per `oci-install.sh` prima di iniziare l'installazione:
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh --help`
+
+. Eseguire lo script di installazione:
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
+
+. Leggere il Contratto di licenza, accettarlo e seguire le istruzioni.
+
+
+
+
+== Risultati
+
+Dopo aver risposto a tutte le richieste, l'installazione inizia e richiede circa 10 minuti, a seconda delle applicazioni installate.

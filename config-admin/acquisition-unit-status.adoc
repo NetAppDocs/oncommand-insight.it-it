@@ -1,0 +1,29 @@
+---
+permalink: config-admin/acquisition-unit-status.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La schermata Acquisition Unit (unità di acquisizione) fornisce una vista di tutte le unità di acquisizione, inclusi lo stato e gli eventuali errori presenti.' 
+---
+= Stato dell'unità di acquisizione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La schermata Acquisition Unit (unità di acquisizione) fornisce una vista di tutte le unità di acquisizione, inclusi lo stato e gli eventuali errori presenti.
+
+Lo stato delle unità di acquisizione Insight collegate al server viene visualizzato nella tabella *Admin* > *Acquisition Units* (unità di acquisizione). Questa tabella mostra le seguenti informazioni per ciascuna unità di acquisizione:
+
+* *Nome*
+* *IP*
+* *Status* è lo stato operativo dell'unità di acquisizione.
+* **Ultimo report**Visualizza l'ultima volta in cui un'origine dati si è connessa all'unità di acquisizione segnalata.
+* *Nota* Visualizza una nota inserita dall'utente relativa all'AU.
+
+
+Se un'unità di acquisizione nell'elenco presenta un problema, nel campo Status (Stato) viene visualizzato un cerchio rosso con brevi informazioni sul problema. È necessario esaminare eventuali problemi delle unità di acquisizione, poiché potrebbero influire sulla raccolta dei dati.
+
+Per riavviare un'unità di acquisizione, passare il mouse sull'unità e fare clic sul pulsante _Restart Acquisition Unit_ (Riavvia unità di acquisizione) visualizzato.
+
+Per aggiungere una nota di testo, passare il mouse su un'unità di acquisizione e fare clic sul pulsante _Add Note_ (Aggiungi nota) visualizzato. Viene visualizzata solo la nota inserita più di recente.

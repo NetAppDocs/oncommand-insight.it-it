@@ -1,0 +1,38 @@
+---
+permalink: howto/custom-dashboard-roll-up.html 
+sidebar: sidebar 
+keywords:  
+summary: I dati visualizzati nei widget della dashboard vengono arrotolati dai punti dati acquisiti, consentendo flessibilità e concisione nelle dashboard. 
+---
+= Roll-up e aggregazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I dati visualizzati nei widget della dashboard vengono arrotolati dai punti dati acquisiti, consentendo flessibilità e concisione nelle dashboard.
+
+I dati visualizzati in ciascun widget vengono arrotolati dai punti dati sottostanti raccolti durante l'acquisizione. Ad esempio, se nel tempo si dispone di un widget grafico a linee che mostra gli IOPS dello storage, potrebbe essere necessario visualizzare una riga separata per ciascuno dei data center, per un rapido confronto. È possibile scegliere di eseguire il rolloup di questi dati in uno dei seguenti modi:
+
+* *Media*: Visualizza ciascuna riga come _media_ dei dati sottostanti.
+* *Max*: Visualizza ogni riga come _massimo_ dei dati sottostanti.
+* *Min*: Visualizza ogni riga come _minimo_ dei dati sottostanti.
+* *SUM*: Visualizza ogni riga come _somma_ dei dati sottostanti.
+
+
+Per farlo, nella query del widget, scegli prima un tipo di risorsa (ad esempio, _Storage_) e una metrica (ad esempio __IOPS - Tota__l). Per *Roll up*, scegliere un metodo di rollup (ad esempio _Avg_) e selezionare un attributo o un'annotazione in base alla quale eseguire il rollup dei dati (ad esempio, _Data Center_). Il widget si aggiorna automaticamente e mostra una riga per ciascun data center.
+
+Puoi anche scegliere di eseguire il rollup di _tutti_ i dati sottostanti nel grafico o nella tabella. In questo caso, otterrai una singola riga per ogni query nel widget, che mostrerà la media, il minimo, il massimo o la somma della metrica scelta per tutte le risorse sottostanti.
+
+Se è stato impostato un filtro per la query, i dati di cui viene eseguito il rollup si basano sui dati filtrati.
+
+Nota: Quando scegli di eseguire il rollup di un widget per qualsiasi campo (ad esempio, _Model_), dovrai comunque *Filtra per* quel campo per visualizzare correttamente i dati di quel campo sul grafico o sulla tabella.
+
+*Aggregando i dati:* è possibile allineare ulteriormente i grafici delle serie temporali (linee, aree, ecc.) aggregando i punti dati in bucket di minuti, ore o giorni prima che i dati vengano successivamente arrotolati per attributo (se scelto). È possibile scegliere di aggregare i punti dati in base al valore medio, massimo, minimo o somma oppure in base all'ultimo punto dati raccolto durante l'intervallo selezionato. Per scegliere un metodo di aggregazione, fare clic su *altre opzioni* nella sezione delle query del widget.
+
+L'intervallo minimo consentito è di dieci minuti. Un piccolo intervallo combinato con un lungo intervallo di tempo può determinare un "intervallo di aggregazione che ha determinato un numero eccessivo di punti dati". attenzione. Questo potrebbe essere visualizzato se si dispone di un intervallo limitato e si aumenta l'intervallo di tempo del dashboard a 7 giorni. In questo caso, Insight aumenterà temporaneamente l'intervallo di aggregazione a 1 ora fino a quando non si seleziona un intervallo di tempo inferiore.
+
+Puoi anche aggregare i dati nel widget per grafici a barre e nel widget a valore singolo.
+
+Per impostazione predefinita, la maggior parte dei contatori delle risorse viene aggregata a _Avg_. Per impostazione predefinita, alcuni contatori vengono aggregati a _Max_, _min_ o _SUM_. Ad esempio, per impostazione predefinita, gli errori di porta si aggregano a _SUM_, dove gli IOPS dello storage si aggregano a _Avg_.

@@ -1,0 +1,20 @@
+---
+permalink: config-admin/data-source-support-information.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Nell"ambito della pianificazione della configurazione, è necessario assicurarsi che i dispositivi nel proprio ambiente possano essere monitorati da Insight. A tale scopo, è possibile consultare la matrice di supporto dell"origine dati per informazioni dettagliate su sistemi operativi, dispositivi specifici e protocolli. Alcune origini dati potrebbero non essere disponibili su tutti i sistemi operativi.' 
+---
+= Informazioni di supporto dell'origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nell'ambito della pianificazione della configurazione, è necessario assicurarsi che i dispositivi nel proprio ambiente possano essere monitorati da Insight. A tale scopo, è possibile consultare la matrice di supporto dell'origine dati per informazioni dettagliate su sistemi operativi, dispositivi specifici e protocolli. Alcune origini dati potrebbero non essere disponibili su tutti i sistemi operativi.
+
+
+
+== Posizione della versione più aggiornata della matrice di supporto Data Source
+
+La matrice di supporto origine dati OnCommand Insight viene aggiornata con ogni release di service pack. La versione più recente del documento è disponibile nella https://mysupport.netapp.com/api/content-service/staticcontents/content/products/oncommandinsight/DatasourceSupportMatrix_7.3.x.pdf["Sito di supporto NetApp"]. .

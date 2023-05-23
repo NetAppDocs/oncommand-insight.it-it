@@ -1,0 +1,20 @@
+---
+permalink: reporting/data-model-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight fornisce diversi modelli di dati da utilizzare nello sviluppo di report. Ogni modello di dati è un"aggregazione che riepiloga i dati in modo da poterli interrogare e ricercare. Ad esempio, i report sulla pianificazione della capacità utilizzano il modello di dati della capacità.' 
+---
+= Panoramica del modello di dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight fornisce diversi modelli di dati da utilizzare nello sviluppo di report. Ogni modello di dati è un'aggregazione che riepiloga i dati in modo da poterli interrogare e ricercare. Ad esempio, i report sulla pianificazione della capacità utilizzano il modello di dati della capacità.
+
+I modelli di dati di reporting Enterprise di OnCommand Insight forniscono elementi di dati e relazioni interattive tra gli elementi di dati che forniscono viste di business dei dati. Utilizzando gli elementi e le relazioni dei dati, è possibile creare report utilizzando gli strumenti di generazione report di IBM Cognos Analytics consigliati da NetApp.
+
+OnCommand Insight fornisce inoltre data mart che possono essere utilizzati per sviluppare le query SQL. Esiste una distinzione tra questi data mart di query SQL e i modelli di dati utilizzati nel reporting. I singoli modelli di dati di reporting di OnCommand Insight utilizzano lo schema di database OnCommand Insight sottostante fornito nei data mart; tuttavia, i modelli di dati utilizzano tabelle aggiuntive e talvolta nuovi elementi nelle tabelle. Ad esempio, il modello di dati include una tabella dati mensile di capacità nel modello di dati di capacità di storage che si basa sulla tabella dati di capacità dello schema del database e del data mart. Il modello di dati filtra i valori dalla tabella dello schema del database per mostrare solo le informazioni del mese.
+
+Un altro esempio di differenza tra lo schema di database utilizzato nei data mart e il modello di dati è rappresentato dalla tabella delle violazioni e dalla colonna tipo di violazione. Il modello di dati traduce i valori denominati a livello di programmazione nel database in modo che corrispondano al testo visualizzato nell'interfaccia utente Web di OnCommand Insight.

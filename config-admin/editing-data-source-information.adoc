@@ -1,0 +1,29 @@
+---
+permalink: config-admin/editing-data-source-information.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile modificare rapidamente le informazioni di configurazione dell"origine dati.' 
+---
+= Modifica delle informazioni dell'origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare rapidamente le informazioni di configurazione dell'origine dati.
+
+
+
+== Fasi
+
+. Fare clic su *Admin* e passare alla vista elenco origine dati
+. Individuare l'origine dati che si desidera modificare.
+. Utilizzare uno dei seguenti metodi per iniziare le modifiche:
++
+** Fare clic su *Edit data source* (Modifica origine dati) a destra dell'origine dati selezionata.
+** Fare clic sul nome collegato dell'origine dati selezionata e fare clic su *Edit* (Modifica). Entrambi i metodi aprono la finestra di dialogo Modifica origine dati.
+
+
+. Apportare le modifiche desiderate e fare clic su *Save* (Salva).
+

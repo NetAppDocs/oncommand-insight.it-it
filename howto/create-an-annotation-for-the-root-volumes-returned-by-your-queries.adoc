@@ -1,0 +1,35 @@
+---
+permalink: howto/create-an-annotation-for-the-root-volumes-returned-by-your-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le annotazioni sono note specializzate assegnate alle risorse, che consentono di filtrare le risorse in base alle annotazioni. L"annotazione creata verrà utilizzata per identificare gli aggregati root di NetApp nel tuo ambiente e garantire che non siano inclusi in un report specifico.' 
+---
+= Creare un'annotazione per i volumi root restituiti dalle query
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le annotazioni sono note specializzate assegnate alle risorse, che consentono di filtrare le risorse in base alle annotazioni. L'annotazione creata verrà utilizzata per identificare gli aggregati root di NetApp nel tuo ambiente e garantire che non siano inclusi in un report specifico.
+
+
+
+== Prima di iniziare
+
+È necessario aver identificato tutti gli aggregati root che si desidera escludere dal report "`High i/o Density`".
+
+
+
+== Fasi
+
+. Creare un'annotazione per associare tutti gli aggregati root NetApp identificati con le query: *Gestisci* > *Annotazioni*
+. Fare clic su *Aggiungi*
++
+.. Inserire il nome dell'annotazione: *RootAgg*
+.. Inserire una descrizione dell'annotazione: *Rimuovere l'aggregato root dal report "High i/o Density"*
+.. Inserire il tipo di annotazione: *Booleano*
+
+
+. Fare clic su *Save* (Salva)
+

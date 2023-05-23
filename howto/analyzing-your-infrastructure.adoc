@@ -1,0 +1,31 @@
+---
+permalink: howto/analyzing-your-infrastructure.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le procedure descritte in questo argomento sono quelle che è possibile utilizzare per eseguire un"analisi di parti dell"infrastruttura nel proprio ambiente. I passaggi, le viste e i dati raccolti in questo esercizio utilizzano oggetti di calcolo virtuale come esempio. L"analisi di altre risorse nel tuo ambiente seguirà passaggi simili utilizzando contatori pertinenti per ogni risorsa specifica. Lo scopo di questo esercizio è quello di familiarizzare con la varietà di opzioni offerte da Insight per monitorare e comprendere le caratteristiche delle risorse nel data center.' 
+---
+= Analisi dell'infrastruttura
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le procedure descritte in questo argomento sono quelle che è possibile utilizzare per eseguire un'analisi di parti dell'infrastruttura nel proprio ambiente. I passaggi, le viste e i dati raccolti in questo esercizio utilizzano oggetti di calcolo virtuale come esempio. L'analisi di altre risorse nel tuo ambiente seguirà passaggi simili utilizzando contatori pertinenti per ogni risorsa specifica. Lo scopo di questo esercizio è quello di familiarizzare con la varietà di opzioni offerte da Insight per monitorare e comprendere le caratteristiche delle risorse nel data center.
+
+
+
+== A proposito di questa attività
+
+Alcune delle azioni che è possibile intraprendere per analizzare lo stato dell'infrastruttura potrebbero includere quanto segue:
+
+* Osservare il comportamento di un oggetto nel tempo
+* Confronta le metriche di un oggetto con le metriche dei primi 10 oggetti simili
+* Confronta i numeri per gli oggetti
+* Confronta i primi 10 oggetti con la media
+* Confronta le metriche A con B per molti oggetti per mostrare categorie e anomalie
+* Confronta un intervallo di oggetti con altri oggetti
+* Utilizzare un'espressione per visualizzare le metriche non disponibili nell'interfaccia utente Web
+
+
+È possibile creare tutte queste viste degli oggetti nell'infrastruttura in una dashboard utilizzando i widget per ogni analisi eseguita. I dashboard possono essere salvati per fornire un rapido accesso ai dati correnti sulla tua infrastruttura.

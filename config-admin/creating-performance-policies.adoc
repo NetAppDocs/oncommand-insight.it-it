@@ -1,0 +1,72 @@
+---
+permalink: config-admin/creating-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vengono create policy di performance per impostare soglie che attivano avvisi per segnalare problemi relativi alle risorse della rete. Ad esempio, è possibile creare una policy sulle performance per avvisare l"utente quando l"utilizzo totale per i pool di storage è superiore al 60%.' 
+---
+= Creazione di policy sulle performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vengono create policy di performance per impostare soglie che attivano avvisi per segnalare problemi relativi alle risorse della rete. Ad esempio, è possibile creare una policy sulle performance per avvisare l'utente quando l'utilizzo totale per i pool di storage è superiore al 60%.
+
+
+
+== Fasi
+
+. Aprire OnCommand Insight nel browser.
+. Selezionare *Gestisci* > *Criteri di performance*.
++
+Viene visualizzata la pagina Performance Policies (Criteri di performance).image:../media/performance-policies-page.gif[""]
+
++
+I criteri sono organizzati in base all'oggetto e vengono valutati nell'ordine in cui vengono visualizzati nell'elenco relativo a tale oggetto.
+
+. Fare clic su *Aggiungi nuovo criterio*.
++
+Viene visualizzata la finestra di dialogo Add Policy (Aggiungi policy).
+
+. Nel campo *Nome policy*, immettere un nome per la policy.
++
+È necessario utilizzare un nome diverso da tutti gli altri nomi di policy per l'oggetto. Ad esempio, non è possibile avere due criteri denominati "`latenza`" per un volume interno; tuttavia, è possibile disporre di un criterio "`latenza`" per un volume interno e di un altro criterio "`latenza`" per un volume diverso. La procedura consigliata consiste nell'utilizzare sempre un nome univoco per qualsiasi policy, indipendentemente dal tipo di oggetto.
+
+. Dall'elenco *Apply to objects of type* (Applica a oggetti di tipo), selezionare il tipo di oggetto a cui si applica il criterio.
+. Dall'elenco *con annotazione*, selezionare un tipo di annotazione, se applicabile, e inserire un valore per l'annotazione nella casella *valore* per applicare la policy solo agli oggetti che hanno questo particolare set di annotazioni.
+. Se si seleziona *Port* come tipo di oggetto, dall'elenco *Connected to* (connesso a), selezionare la porta a cui è connessa.
+. Dall'elenco *Apply after a window of* (Applica dopo una finestra di*), selezionare quando viene generato un avviso per indicare una violazione di soglia.
++
+L'opzione First ricorrenza attiva un avviso quando viene superata una soglia sul primo campione di dati. Tutte le altre opzioni attivano un avviso quando la soglia viene superata una volta e viene continuamente superata per almeno il periodo di tempo specificato.
+
+. Dall'elenco *con severità*, selezionare la severità per la violazione.
+. Per impostazione predefinita, gli avvisi e-mail sulle violazioni delle policy verranno inviati ai destinatari nell'elenco e-mail globale. È possibile ignorare queste impostazioni in modo che gli avvisi relativi a una determinata policy vengano inviati a destinatari specifici.
++
+** Fare clic sul collegamento per aprire l'elenco dei destinatari, quindi fare clic sul pulsante *+* per aggiungere i destinatari. Gli avvisi di violazione per tale policy verranno inviati a tutti i destinatari dell'elenco.
+
+
+. Fare clic sul collegamento *Any* nella sezione *Create alert if any of the following are true* (Crea avviso se una delle seguenti affermazioni è vera) per controllare la modalità di attivazione degli avvisi:
++
+** *qualsiasi*
++
+Questa è l'impostazione predefinita, che crea avvisi quando una qualsiasi delle soglie relative a un criterio viene superata.
+
+** *tutto*
++
+Questa impostazione crea un avviso quando tutte le soglie di un criterio vengono superate. Quando si seleziona *tutto*, la prima soglia creata per un criterio di performance viene definita regola primaria. È necessario assicurarsi che la soglia della regola principale sia la violazione di cui si è maggiormente preoccupati per la policy sulle performance.
+
+
+
+. Nella sezione *Create alert if*, selezionare un contatore delle prestazioni e un operatore, quindi immettere un valore per creare una soglia.
+. Fare clic su *Add threshold* (Aggiungi soglia) per aggiungere altre soglie.
+. Per rimuovere una soglia, fare clic sull'icona del cestino.
+. Selezionare la casella di controllo *Arresta l'elaborazione di ulteriori criteri se viene generato un avviso* se si desidera che il criterio interrompa l'elaborazione quando si verifica un avviso.
++
+Ad esempio, se si dispone di quattro criteri per gli archivi dati e il secondo è configurato per interrompere l'elaborazione quando si verifica un avviso, il terzo e il quarto criterio non vengono elaborati mentre è attiva una violazione del secondo criterio.
+
+. Fare clic su *Save* (Salva).
++
+Viene visualizzata la pagina Performance Policies (Criteri di performance) e il criterio di performance viene visualizzato nell'elenco dei criteri per il tipo di oggetto.
+
+

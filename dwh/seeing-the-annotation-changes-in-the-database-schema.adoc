@@ -1,0 +1,45 @@
+---
+permalink: dwh/seeing-the-annotation-changes-in-the-database-schema.html 
+sidebar: sidebar 
+keywords:  
+summary: Lo schema del database riflette le modifiche apportate nella tabella specifica. 
+---
+= Visualizzazione delle modifiche delle annotazioni nello schema del database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lo schema del database riflette le modifiche apportate nella tabella specifica.
+
+
+
+== A proposito di questa attività
+
+Ad esempio, se si aggiungono annotazioni a un array di storage, queste vengono visualizzate nella tabella dello storage o dello switch nell'inventario o in altri data mart.
+
+Se si aggiornano le annotazioni sulle risorse utilizzando l'interfaccia utente di OnCommand Insight e si avvia o si attende la successiva generazione del data warehouse, viene visualizzata una nuova colonna aggiunta o rimossa nell'oggetto corrispondente nell'inventario (dwh_Inventory) e anche nella tabella delle dimensioni corrispondente (nel data mart appropriato). I risultati vengono visualizzati nelle seguenti tabelle:
+
+* dwh_inventory.annotation_value
+* dwh_inventory.object_to_annotation
+
+
+
+
+== Fasi
+
+. Fare clic su image:../media/oci-7-help-icon-gif.gif[""] Sulla barra degli strumenti Data Warehouse e selezionare *documentazione*.
+. Selezionare *Schema database*.
+. Nel riquadro *Schema database* a sinistra, scorrere fino alla sezione *DWH_INVENTORY* e fare clic su *switch*.
++
+image::../media/oci-dwh-databaseschema-inventory-switch-gif.gif[Tabella degli switch dello schema del database di inventario DWH]
+
+. La tabella *dwh_Inventory.switch* riflette le modifiche:
++
+image::../media/oci-dwh-databaseschema-capacity-sd-gif.gif[Tabella delle dimensioni dello storage dello schema del database DWH Capacity]
+
++
+La colonna di annotazione del data center viene visualizzata nella tabella storage_dimensions.
+
+

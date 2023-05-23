@@ -1,0 +1,80 @@
+---
+permalink: config-admin/netapp-clustered-data-ontap-for-unified-manager-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Questa origine dati raccoglie i dati ONTAP 8.1.x dal database Unified Manager 6.0+. Utilizzando questa origine dati, Insight rileva tutti i cluster configurati e popolati in UM. Per l"efficienza, Insight non chiama ZAPI sul cluster stesso. Le performance non sono supportate in questa origine dati.' 
+---
+= NetApp Clustered Data ONTAP per l'origine dati di Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa origine dati raccoglie i dati di ONTAP 8.1.x dal database Unified Manager (UM) 6.0+. Utilizzando questa origine dati, Insight rileva tutti i cluster configurati e popolati in UM. Per l'efficienza, Insight non chiama ZAPI sul cluster stesso. Le performance non sono supportate in questa origine dati.
+
+
+
+== Configurazione
+
+[NOTE]
+====
+Questo data collector non è più disponibile a partire da OnCommand Insight 7.3.11.
+
+====
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+IP di Unified Manager
+ a| 
+Indirizzo IP o nome di dominio completo di Unified Manager
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente di Unified Manager
+
+
+
+ a| 
+Password
+ a| 
+Password per Unified Manager
+
+
+
+ a| 
+Porta
+ a| 
+Porta utilizzata per la comunicazione con Unified Manager (impostazione predefinita: 3306)
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| *Campo* | *Descrizione* 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 15 minuti)
+
+
+
+ a| 
+Escludi cluster
+ a| 
+Elenco separato da virgole degli IP del cluster da escludere
+
+|===

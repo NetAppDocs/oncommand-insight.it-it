@@ -1,0 +1,554 @@
+---
+permalink: install-windows/oncommand-insight-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight opera con licenze che abilitano funzionalità specifiche sul server Insight. 
+---
+= Licenze OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight opera con licenze che abilitano funzionalità specifiche sul server Insight.
+
+* *Scoprire*
++
+Discover è la licenza Insight di base che supporta l'inventario. Per utilizzare OnCommand Insight, è necessario disporre di una licenza Discover e la licenza Discover deve essere associata ad almeno una delle licenze di assicurazione, esecuzione o piano.
+
+* *Rassicurare*
++
+Una licenza Assurance fornisce supporto per la funzionalità Assurance, incluse policy di percorso globali e SAN e gestione delle violazioni. Una licenza di assicurazione consente inoltre di visualizzare e gestire le vulnerabilità.
+
+* *Eseguire*
++
+Una licenza Perform supporta il monitoraggio delle performance su pagine di risorse, widget dashboard, query e così via, oltre a gestire policy e violazioni delle performance.
+
+* *Piano*
++
+Una licenza Plan supporta le funzioni di pianificazione, incluso l'utilizzo e l'allocazione delle risorse.
+
+* *Pacchetto di utilizzo host*
++
+Una licenza di utilizzo host supporta l'utilizzo del file system su host e macchine virtuali.
+
+* *Creazione report*
++
+Una licenza per la creazione di report supporta altri autori per la creazione di report. Questa licenza richiede la licenza Plan.
+
+
+
+I moduli OnCommand Insight sono concessi in licenza per un periodo annuale o perpetuo:
+
+* Per terabyte di capacità monitorata per i moduli di rilevamento, assicurazione, pianificazione ed esecuzione
+* In base al numero di host per il pacchetto di utilizzo host
+* In base al numero di unità aggiuntive di pro-autori Cognos richieste per l'authoring dei report
+
+
+Le chiavi di licenza sono un insieme di stringhe univoche generate per ciascun cliente. È possibile ottenere le chiavi di licenza dal proprio rappresentante OnCommand Insight.
+
+Le licenze installate controllano le seguenti opzioni disponibili nel software:
+
+* *Scoprire*
++
+Acquisire e gestire l'inventario (base)
+
++
+Monitorare le modifiche e gestire le policy di inventario
+
+* *Rassicurare*
++
+Visualizza e gestisci le violazioni e le policy dei percorsi SAN
+
++
+Visualizzare e gestire le vulnerabilità
+
++
+Visualizza e gestisci task e migrazioni
+
+* *Piano*
++
+Visualizzare e gestire le richieste
+
++
+Visualizzare e gestire le attività in sospeso
+
++
+Visualizzare e gestire le violazioni delle prenotazioni
+
++
+Visualizzare e gestire le violazioni del bilanciamento delle porte
+
+* *Eseguire*
++
+Monitorare i dati delle performance, inclusi i dati nei widget dashboard, nelle pagine di risorse e nelle query
+
++
+Visualizza e gestisci le policy e le violazioni delle performance
+
+
+
+Le seguenti tabelle forniscono informazioni dettagliate sulle funzionalità disponibili con e senza la licenza Perform per gli utenti admin e non-admin.
+
+|===
+
+
+| Funzione (admin) | Con Perform License | Senza licenza di esecuzione 
+
+
+ a| 
+Applicazione
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance; nessun widget correlato al rilevamento delle anomalie
+
+
+
+ a| 
+Macchina virtuale
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Hypervisor
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Host
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Datastore
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+VMDK
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Volume interno
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Volume
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Pool di storage
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Disco
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Storage
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Nodo storage
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Fabric
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Porta dello switch
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle prestazioni; "`Port Errors`" mostra "`N/A`"
+
+
+
+ a| 
+Porta di storage
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Porta NPV
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Switch
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Switch NPV
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Qtree
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Quota
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Percorso
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Zona
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Membro della zona
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Dispositivo generico
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Nastro
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Mascheratura
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Sessioni ISCSI
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Portali di rete ICSI
+ a| 
+Sì
+ a| 
+Nessun grafico o dati sulle performance
+
+
+
+ a| 
+Cerca
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Amministratore
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Dashboard
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Widget
+ a| 
+Sì
+ a| 
+Parzialmente disponibile (sono disponibili solo i widget asset, query e admin)
+
+
+
+ a| 
+Dashboard delle violazioni
+ a| 
+Sì
+ a| 
+Nascosto
+
+
+
+ a| 
+Dashboard delle risorse
+ a| 
+Sì
+ a| 
+Parzialmente disponibile (i widget IOPS di storage e IOPS delle macchine virtuali sono nascosti)
+
+
+
+ a| 
+Gestire le policy sulle performance
+ a| 
+Sì
+ a| 
+Nascosto
+
+
+
+ a| 
+Gestire le annotazioni
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Gestire le regole di annotazione
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Gestire le applicazioni
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Query
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Gestire le entità di business
+ a| 
+Sì
+ a| 
+Sì
+
+|===
+|===
+
+
+| Funzione | Utente - con licenza Perform | Guest - con licenza Perform | Utente - senza licenza Perform | Guest - senza licenza di esecuzione 
+
+
+ a| 
+Dashboard delle risorse
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Parzialmente disponibile (i widget IOPS di storage e IOPS delle macchine virtuali sono nascosti)
+ a| 
+Parzialmente disponibile (i widget IOPS di storage e IOPS delle macchine virtuali sono nascosti)
+
+
+
+ a| 
+Dashboard personalizzato
+ a| 
+Sola visualizzazione (nessuna opzione di creazione, modifica o salvataggio)
+ a| 
+Sola visualizzazione (nessuna opzione di creazione, modifica o salvataggio)
+ a| 
+Sola visualizzazione (nessuna opzione di creazione, modifica o salvataggio)
+ a| 
+Sola visualizzazione (nessuna opzione di creazione, modifica o salvataggio)
+
+
+
+ a| 
+Gestire le policy sulle performance
+ a| 
+Sì
+ a| 
+Nascosto
+ a| 
+Nascosto
+ a| 
+Nascosto
+
+
+
+ a| 
+Gestire le annotazioni
+ a| 
+Sì
+ a| 
+Nascosto
+ a| 
+Sì
+ a| 
+Nascosto
+
+
+
+ a| 
+Gestire le applicazioni
+ a| 
+Sì
+ a| 
+Nascosto
+ a| 
+Sì
+ a| 
+Nascosto
+
+
+
+ a| 
+Gestire le entità di business
+ a| 
+Sì
+ a| 
+Nascosto
+ a| 
+Sì
+ a| 
+Nascosto
+
+
+
+ a| 
+Query
+ a| 
+Sì
+ a| 
+Solo visualizzazione e modifica (nessuna opzione di salvataggio)
+ a| 
+Sì
+ a| 
+Solo visualizzazione e modifica (nessuna opzione di salvataggio)
+
+|===

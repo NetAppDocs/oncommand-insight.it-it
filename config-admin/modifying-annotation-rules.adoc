@@ -1,0 +1,38 @@
+---
+permalink: config-admin/modifying-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile modificare una regola di annotazione per modificare il nome della regola, l"annotazione, il valore dell"annotazione o la query associata alla regola.' 
+---
+= Modifica delle regole di annotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare una regola di annotazione per modificare il nome della regola, la relativa annotazione, il valore dell'annotazione o la query associata alla regola.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insightweb.
+. Fare clic su *Manage* (Gestisci) e selezionare *Annotation rules* (regole annotazione).
++
+La pagina Annotation Rules (regole di annotazione) visualizza l'elenco delle regole di annotazione esistenti.
+
+. Individuare la regola che si desidera modificare:
++
+** Nella pagina Annotation Rules (regole di annotazione), è possibile filtrare le regole di annotazione immettendo un valore nella casella di filtro.
+** Fare clic su un numero di pagina per sfogliare le regole di annotazione per pagina se sono presenti più regole che si adattano a una pagina.
+
+
+. Per visualizzare la finestra di dialogo *Modifica regola*, eseguire una delle seguenti operazioni:
++
+** Nella pagina Annotation Rules (regole di annotazione), posizionare il cursore sulla regola di annotazione e fare clic su image:../media/edit-annotation-icon.gif[""].
+** Se ci si trova in una pagina di risorse, posizionare il cursore sull'annotazione associata alla regola, posizionare il cursore sul nome della regola quando viene visualizzata, quindi fare clic sul nome della regola.
+
+
+. Apportare le modifiche richieste e fare clic su *Save* (Salva).
+

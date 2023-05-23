@@ -1,0 +1,25 @@
+---
+permalink: reporting/tips-for-designing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Durante la progettazione dei report, potrebbero essere utili diversi suggerimenti. 
+---
+= Suggerimenti per la progettazione dei report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durante la progettazione dei report, potrebbero essere utili diversi suggerimenti.
+
+* Determinare se è necessario utilizzare dati correnti o storici.
++
+La maggior parte dei report deve solo generare report sui dati più recenti disponibili nel Data Warehouse.
+
+* Data Warehouse fornisce informazioni storiche su capacità e performance, ma non sull'inventario.
+* Tutti vedono tutti i dati; tuttavia, potrebbe essere necessario limitare i dati a un pubblico specifico.
++
+Per segmentare le informazioni per diversi utenti, è possibile creare report e impostare autorizzazioni di accesso per tali utenti.
+
+

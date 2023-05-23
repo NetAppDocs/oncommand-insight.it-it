@@ -1,0 +1,28 @@
+---
+permalink: config-admin/determining-data-source-acquisition-status.html 
+sidebar: sidebar 
+keywords:  
+summary: Poiché le origini dati sono la principale fonte di informazioni per Insight, è fondamentale assicurarsi che rimangano in uno stato di esecuzione. 
+---
+= Determinazione dello stato di acquisizione dell'origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Poiché le origini dati sono la principale fonte di informazioni per Insight, è fondamentale assicurarsi che rimangano in uno stato di esecuzione.
+
+La possibilità di visualizzare lo stato di acquisizione dell'origine dati è disponibile in ogni pagina delle risorse per tutte le risorse acquisite direttamente. È possibile che si verifichi uno dei seguenti scenari di acquisizione, in cui lo stato viene visualizzato nell'angolo superiore destro della pagina delle risorse:
+
+* Acquisizione riuscita dall'origine dati
++
+Visualizza lo stato "`acquisito `xxxx``", where `xxxx` indica il tempo di acquisizione più recente delle origini dati dell'asset.
+
+* Si è verificato un errore di acquisizione.
++
+Visualizza lo stato "`acquisito `xxxx``", where `xxxx` indica il tempo di acquisizione più recente di una o più origini dati dell'asset con image:../media/acquisition-icon.gif[""]. Quando si fa clic su image:../media/acquisition-icon.gif[""], una finestra visualizza ogni origine dati per l'asset, lo stato dell'origine dati e l'ultima volta che i dati sono stati acquisiti. Facendo clic su un'origine dati viene visualizzata la pagina dei dettagli dell'origine dati.
+
+
+
+Se un asset non viene acquisito direttamente, non viene visualizzato alcun stato.

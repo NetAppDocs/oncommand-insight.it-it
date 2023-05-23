@@ -1,0 +1,14 @@
+---
+permalink: config-admin/monitoring-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight ti aiuta a prevenire i problemi nel tuo ambiente e a risolvere rapidamente i potenziali problemi. 
+---
+= Monitoraggio dell'ambiente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight ti aiuta a prevenire i problemi nel tuo ambiente e a risolvere rapidamente i potenziali problemi.

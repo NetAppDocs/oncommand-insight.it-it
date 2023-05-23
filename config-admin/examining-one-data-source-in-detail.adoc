@@ -1,0 +1,52 @@
+---
+permalink: config-admin/examining-one-data-source-in-detail.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se si rileva un errore o un rallentamento di un"origine dati, è possibile esaminare un riepilogo dettagliato delle informazioni relative a tale origine dati per determinare la causa del problema. Le origini dati con condizioni che richiedono attenzione sono contrassegnate da un cerchio rosso pieno.' 
+---
+= Analisi dettagliata di un'origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si rileva un errore o un rallentamento di un'origine dati, è possibile esaminare un riepilogo dettagliato delle informazioni relative a tale origine dati per determinare la causa del problema. Le origini dati con condizioni che richiedono attenzione sono contrassegnate da un cerchio rosso pieno.
+
+
+
+== Fasi
+
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
++
+Viene visualizzato l'elenco *origini dati*. Tutte le origini dati elencate con potenziali problemi sono contrassegnate da un cerchio rosso fisso. I problemi più gravi sono in cima alla lista.
+
+. Selezionare l'origine dati che causa il problema.
+. Fare clic sul collegamento relativo al nome dell'origine dati.
+. Nella pagina di riepilogo dell'origine dati, controllare le informazioni in una delle seguenti sezioni:
++
+** *Timeline dell'evento*
++
+Elenca gli eventi legati allo stato corrente visualizzato nell'elenco origini dati. Gli eventi in questo riepilogo vengono visualizzati per dispositivo. Gli errori sono visualizzati in rosso. È possibile posizionare il puntatore del mouse sugli elementi della timeline per visualizzare ulteriori informazioni.
+
+** *Dispositivi segnalati da questa origine dati*
++
+Elenca i tipi di periferiche, i relativi indirizzi IP e i collegamenti a informazioni più dettagliate per ciascuna periferica.
+
+** *Modifiche segnalate da questa fonte di dati (ultime 3 settimane)*
++
+Elenca tutti i dispositivi aggiunti o rimossi o che hanno subito modifiche alla configurazione.
+
+
+
+. Dopo aver esaminato le informazioni relative all'origine dati, è possibile eseguire una di queste operazioni utilizzando i pulsanti nella parte superiore della pagina:
++
+** *Modifica* la descrizione dell'origine dati per correggere il problema.
+** *Polling again* forza il polling a rivelare se il problema era persistente o intermittente.
+** *Posticipare* il polling dell'origine dati per 3, 7 o 30 giorni per consentirti di cercare il problema e interrompere i messaggi di avviso.
+** *Installare una patch* sull'origine dati per risolvere il problema.
+** Preparare un *report degli errori* per il supporto tecnico.
+** *Elimina* l'origine dati dall'ambiente di monitoraggio Insight.
+
+
+

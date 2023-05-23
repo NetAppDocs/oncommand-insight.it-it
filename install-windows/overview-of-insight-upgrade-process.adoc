@@ -1,0 +1,44 @@
+---
+permalink: install-windows/overview-of-insight-upgrade-process.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Prima di iniziare l"aggiornamento di Insight, è importante comprendere il processo di aggiornamento. Il processo di aggiornamento è lo stesso per la maggior parte delle versioni di Insight.' 
+---
+= Panoramica del processo di aggiornamento di OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di iniziare l'aggiornamento di Insight, è importante comprendere il processo di aggiornamento. Il processo di aggiornamento è lo stesso per la maggior parte delle versioni di Insight.
+
+Il processo di aggiornamento di Insight include le seguenti attività di alto livello:
+
+* Scaricare i pacchetti di installazione
+* Backup del database Data Warehouse
++
+Per evitare la possibilità di generare report errati dei dati, è necessario eseguire il backup del database Data Warehouse prima di eseguire il backup del database Insight.
+
+* Backup del database Insight
++
+Il backup del database Insight viene eseguito automaticamente quando si esegue l'aggiornamento in-place. È consigliabile eseguire il backup del database prima dell'aggiornamento e collocarlo in una posizione diversa da quella del server Insight. Durante il processo di aggiornamento, Insight non raccoglie nuovi dati. Per ridurre al minimo la quantità di dati non raccolti, è necessario avviare il backup del database entro un'ora o due del tempo di aggiornamento pianificato.
+
+* Eseguire il backup della configurazione di sicurezza Data Warehouse e Remote Acquisition Unit se la configurazione è stata modificata dalla configurazione predefinita.
++
+La configurazione di sicurezza non predefinita deve essere ripristinata nel Data Warehouse e nel server RAU al termine dell'aggiornamento e prima che il database Data Warehouse venga ripristinato nel sistema.
+
+* Backup di report personalizzati di Data Warehouse
++
+Quando si esegue il backup del database Data Warehouse, vengono inclusi report personalizzati. Il file di backup viene creato sul server Data Warehouse. Si consiglia di eseguire il backup dei report personalizzati in una posizione diversa dal server Data Warehouse.
+
+* Disinstallazione del software Data Warehouse e dell'unità di acquisizione remota, se applicabile
++
+Il server Insight dispone di un aggiornamento in-place; non è necessario disinstallare il software. L'aggiornamento in-place esegue il backup del database, disinstalla il software, installa la nuova versione e ripristina il database.
+
+* Aggiornamento del software sul server Insight, sul data warehouse e sulle unità di acquisizione remota
++
+Tutte le licenze applicate in precedenza rimangono nel registro; non è necessario riapplicarle.
+
+* Completamento delle attività di post-aggiornamento
+

@@ -1,0 +1,16 @@
+---
+permalink: config-admin/pruning-of-inventory-history.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A partire dalla versione 7.3.2, Insight mantiene la cronologia delle modifiche dell"inventario per 90 giorni. Le versioni precedenti di Insight conservavano tutta la cronologia delle modifiche dell"inventario dal momento dell"installazione. A seguito di un aggiornamento da una versione precedente di Insight, la cronologia dell"inventario precedente viene ridotta e mantenuta a 90 giorni.' 
+---
+= Eliminazione della cronologia dell'inventario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partire dalla versione 7.3.2, Insight mantiene la cronologia delle modifiche dell'inventario (base) per 90 giorni. Le versioni precedenti di Insight conservavano tutta la cronologia delle modifiche dell'inventario dal momento dell'installazione. A seguito di un aggiornamento da una versione precedente di Insight, la cronologia dell'inventario precedente viene ridotta e mantenuta a 90 giorni.
+
+Dopo aver eseguito l'aggiornamento alla versione corrente di OnCommand Insight, la cronologia viene aggiornata ai 90 giorni più recenti. Insight pota la storia in 30 giorni di pezzi che si verificano una volta al giorno, a partire dalla più vecchia, fino a 90 giorni di storia rimane. Quindi, la cronologia viene annullata ogni giorno, per mantenere solo 90 giorni`' di cronologia delle modifiche dell'inventario.

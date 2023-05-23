@@ -1,0 +1,105 @@
+---
+permalink: config-admin/creating-custom-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilizzando le annotazioni, è possibile aggiungere dati personalizzati specifici del business che corrispondano alle esigenze del business alle risorse. Sebbene OnCommand Insight fornisca una serie di annotazioni predefinite, è possibile che si desideri visualizzare i dati in altri modi. I dati contenuti nelle annotazioni personalizzate integrano i dati dei dispositivi già raccolti, ad esempio il produttore dello switch, il numero di porte e le statistiche sulle prestazioni. I dati aggiunti utilizzando le annotazioni non vengono rilevati da Insight. 
+---
+= Creazione di annotazioni personalizzate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzando le annotazioni, è possibile aggiungere dati personalizzati specifici del business che corrispondano alle esigenze del business alle risorse. Sebbene OnCommand Insight fornisca una serie di annotazioni predefinite, è possibile che si desideri visualizzare i dati in altri modi. I dati contenuti nelle annotazioni personalizzate integrano i dati dei dispositivi già raccolti, ad esempio il produttore dello switch, il numero di porte e le statistiche sulle prestazioni. I dati aggiunti utilizzando le annotazioni non vengono rilevati da Insight.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di Insight.
+. Fare clic su *Gestisci* e selezionare *Annotazioni*.
++
+La pagina Annotazioni visualizza l'elenco delle annotazioni.
+
+. Fare clic su image:../media/add-annotation-icon.gif[""].
++
+Viene visualizzata la finestra di dialogo *Add Annotation* (Aggiungi annotazione).
+
+. Immettere un nome e una descrizione nei campi *Nome* e *Descrizione*.
++
+È possibile inserire fino a 255 caratteri in questi campi.
+
++
+[NOTE]
+====
+I nomi delle annotazioni che iniziano o terminano con un punto "." non sono supportati.
+
+====
+. Fare clic su *Type* (tipo), quindi selezionare una delle seguenti opzioni che rappresentano il tipo di dati consentiti in questa annotazione:
++
+** Booleano
++
+In questo modo viene creato un elenco a discesa con le opzioni Sì e No Ad esempio, l'annotazione "`Dirett attached`" è booleana.
+
+** Data
++
+In questo modo viene creato un campo che contiene una data. Ad esempio, se l'annotazione sarà una data, selezionare questa opzione.
+
+** Elenco
++
+In questo modo è possibile creare una delle seguenti opzioni:
+
++
+*** Un elenco a discesa fisso
++
+Quando altri utenti assegnano questo tipo di annotazione su un dispositivo, non possono aggiungere altri valori all'elenco.
+
+*** Un elenco a discesa flessibile
++
+Se si seleziona l'opzione *Aggiungi nuovi valori al volo* quando si crea questo elenco, altri utenti assegnano questo tipo di annotazione su un dispositivo possono aggiungere altri valori all'elenco.
+
+
+
+** Numero
++
+In questo modo si crea un campo in cui l'utente che assegna l'annotazione può inserire un numero. Ad esempio, se il tipo di annotazione è "`Floor`", l'utente può selezionare il tipo di valore "`number`" e inserire il numero di piano.
+
+** Testo
++
+In questo modo viene creato un campo che consente il testo in formato libero. Ad esempio, è possibile immettere "`Language`" come tipo di annotazione, selezionare "`Text`" come tipo di valore e immettere una lingua come valore.
+
+
+
++
+[NOTE]
+====
+Dopo aver impostato il tipo e salvato le modifiche, non è possibile modificare il tipo di annotazione. Se è necessario modificare il tipo, eliminare l'annotazione e crearne una nuova.
+
+====
+. Se si seleziona **Elenca**come tipo di annotazione, procedere come segue:
++
+.. Selezionare *Add new values on the fly* (Aggiungi nuovi valori in tempo reale) se si desidera aggiungere altri valori all'annotazione quando ci si trova in una pagina di risorse, che crea un elenco flessibile.
++
+Si supponga, ad esempio, di trovarsi in una pagina di risorse e di avere l'annotazione City (Città) con i valori Detroit, Tampa e Boston. Se è stata selezionata l'opzione *Aggiungi nuovi valori al volo*, è possibile aggiungere valori aggiuntivi a Città come San Francisco e Chicago direttamente nella pagina delle risorse, invece di andare alla pagina Annotazioni per aggiungerli. Se non si sceglie questa opzione, non è possibile aggiungere nuovi valori di annotazione quando si applica l'annotazione; in questo modo si crea un elenco fisso.
+
+.. Immettere un valore e un nome nei campi *valore* e *Descrizione*.
+.. Fare clic suimage:../media/edit-annotation-dialog-box-add-icon.gif[""] per aggiungere altri valori.
+.. Fare clic su image:../media/trash-can-query.gif[""] per rimuovere un valore.
+
+
+. Fare clic su *Save* (Salva).
++
+Le annotazioni vengono visualizzate nell'elenco della pagina Annotazioni.
+
+
+
+
+
+== Al termine
+
+Nell'interfaccia utente Web, l'annotazione è immediatamente disponibile per l'utilizzo. Per utilizzare l'annotazione nel client Java, è necessario riavviare qualsiasi client Java in esecuzione prima di poter applicare l'annotazione. Se si aggiungono o modificano i valori delle annotazioni o si elimina un tipo di annotazione, non è necessario riavviare il client Java.
+
+*Informazioni correlate*
+
+link:importing-and-exporting-user-data.md#["Importazione ed esportazione dei dati utente"]

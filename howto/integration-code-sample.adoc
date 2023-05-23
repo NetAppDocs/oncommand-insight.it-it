@@ -1,0 +1,126 @@
+---
+permalink: howto/integration-code-sample.html 
+sidebar: sidebar 
+keywords:  
+summary: Il file Integration.json identifica il payload . 
+---
+= Informazioni sul file Integration.json
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il file Integration.json identifica il payload .
+
+La seguente illustrazione fornisce una rappresentazione codificata a colori di un semplice file Integration.json. La tabella allegata identifica la funzione degli oggetti nel file.
+
+image::../media/color-code-example.gif[esempio di codice colore]
+
+
+
+== Informazioni sui file Integration.json
+
+Ciascun campo presenta le seguenti caratteristiche:
+
+* La sezione "identificatori" forma una chiave composta univoca per creare un nuovo "oggetto" in Insight
+* Gli "attributi" forniscono metadati di supporto relativi all'oggetto.
++
+In entrambi i casi, viene conservato solo il valore dell'ultimo report per l'oggetto (identificato dagli identificatori).
+
+* I "datapoint" sono dati di serie temporali e devono essere valori numerici. Insight mantiene ogni valore riportato qui per 90 giorni (per impostazione predefinita) e li collega all'oggetto identificato.
+
+
+
+
+== Espressioni numeriche
+
+Per impostazione predefinita, tutte le espressioni di valore vengono riportate come stringhe nel payload di integrazione. gli "identificatori" e gli "attributi" possono definire solo valori di stringa. I "datapoint" possono definire valori numerici o di stringa. I valori numerici vengono definiti utilizzando uno dei seguenti tasti modificatori:
+
+* num - numero totale di byte ricevuti dall'ultima inizializzazione del contatore
+* delta - il numero di byte ricevuti durante l'intervallo di polling
+* rate (tasso) - la velocità di ricezione media durante l'intervallo di polling in byte al secondo
++
+È possibile ottenere una velocità di ricezione media in megabyte al secondo durante l'intervallo di polling utilizzando una combinazione di velocità e operazioni matematiche
+
+
+
+
+
+== Operazioni matematiche
+
+Il `integration.json` il file supporta le seguenti operazioni matematiche: aggiungere, sottrarre, moltiplicare, dividere. Nell'esempio seguente vengono illustrate le operazioni di moltiplicazione, divisione e somma in un file JSON.
+
+image::../media/net-util-rhel.gif[netto util rhel]
+
+
+
+== Parole chiave
+
+Una parola chiave del pacchetto di integrazione, string, viene implementata per forzare le stringhe DI OTTETTI o i tipi proprietari derivati da UNA STRINGA DI OTTETTI che normalmente sarebbe rappresentata in formato esadecimale per essere invece rappresentata come caratteri ASCII.
+
+Spesso le stringhe DI OTTETTI contengono dati binari, ad esempio indirizzi MAC e WWN:
+
+[listing]
+----
+        "interface_mac": {
+                  "mibModuleName":      "IF-MIB",
+                  "objectName":         "ifPhysAddress"
+                 }
+----
+IfPhysAddress è di tipo PhysAddress, che è solo una STRINGA DI OTTETTI:
+
+[listing]
+----
+  PhysAddress ::= TEXTUAL-CONVENTION
+                DISPLAY-HINT "1x:"
+                STATUS       current
+                DESCRIPTION
+                                "Represents media- or physical-level addresses."
+                SYNTAX       OCTET STRING
+----
+Quando ifPhysAddress viene visualizzato come esadecimale per impostazione predefinita, il risultato è:
+
+[listing]
+----
+"interface_mac": "00:50:56:A2:07:E7"
+----
+Tuttavia, se si dispone di UNA STRINGA DI OTTETTI o di un tipo proprietario derivato dalla STRINGA DI OTTETTI che si desidera interpretare come ASCII, è possibile utilizzare la parola chiave "string":
+
+[listing]
+----
+        "string_test_1": {
+          "string": {
+            "mibModuleName":      "IF-MIB",
+            "objectName":         "ifPhysAddress"
+          }
+        },
+
+        "string_test_2": {
+          "string": [
+            {
+              "mibModuleName":      "IF-MIB",
+              "objectName":         "ifPhysAddress"
+            },
+            {
+              "const": "JSD"
+            },
+            {
+              "mibModuleName":      "IF-MIB",
+              "objectName":         "ifPhysAddress"
+            }
+          ]
+        }
+----
+La parola chiave segue le regole di concatenazione delle stringhe esistenti, inserendo un singolo spazio tra i termini nel seguente esempio:
+
+[listing]
+----
+      "string_test_1": "PV¢ç",
+              "string_test_2": "PV¢ç JSD PV¢ç"
+----
+La parola chiave "string" agisce su un singolo termine o su un elenco di termini, ma non su espressioni nidificate. Le espressioni nidificate sono supportate solo per le espressioni datapoint. Se si tenta di utilizzare un'espressione "stringa" in un'espressione datapoint, si verificherà un errore simile al seguente:
+
+_java.lang.IllegalArgumentException: Integration pack 'GenericSwitch32' index 'nmp_generic_interface_32' sezione chiave 'daPoints' 'string_test_3' espressione numerica JSON '{"string":{"mibModuleName":"IF-MIB","objectName":"ifPhysAddress"}}'
+
+Alcuni tipi di STRINGA DI OTTETTI derivati, come DisplayString, SnmpAdminString, hanno la precedenza hard-coded sulla parola chiave "string". Questo perché SnmpAdminString è specificamente codificato in UTF-8 e vogliamo gestirlo correttamente, mentre la parola chiave "string" forza la rappresentazione della stringa predefinita restituita da snmp_Framework, che presuppone punti di codice ascii a byte singolo per carattere.

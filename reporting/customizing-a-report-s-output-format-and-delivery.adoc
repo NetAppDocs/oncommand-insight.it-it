@@ -1,0 +1,37 @@
+---
+permalink: reporting/customizing-a-report-s-output-format-and-delivery.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile personalizzare il formato e il metodo di consegna dei report. 
+---
+= Personalizzazione del formato di output e della consegna di un report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile personalizzare il formato e il metodo di consegna dei report.
+
+
+
+== Fasi
+
+. Aprire il portale dei report OnCommand Insight e selezionare il report che si desidera personalizzare, quindi fare clic su *[...]*.
++
+image::../media/run-report.gif[eseguire il report]
+
+. Fare clic su *Proprietà* > *Pianificazione*
++
+image::../media/email-report.gif[report via email]
+
+. È possibile impostare le seguenti opzioni:
++
+** *Pianificazione* per l'esecuzione dei report.
+** *Format* l'output del report.
+** *Consegna* stampare, salvare o inviare via email il report.
+** *Lingue* definisce la lingua in cui viene consegnato il report.
+
+
+. Fare clic su *Create* (Crea) per produrre il report utilizzando le selezioni effettuate.
+

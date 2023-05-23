@@ -1,0 +1,80 @@
+---
+permalink: howto/configure-tier-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"annotazione Tier viene utilizzata per associare le risorse ai rispettivi Tier, ad esempio per la contabilità dei costi. Insight viene fornito con una serie di annotazioni Tier predefinite; è possibile modificarle in base alle convenzioni di denominazione dei tiering o creare livelli personalizzati in base alle esigenze.' 
+---
+= Configurare le annotazioni Tier
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'annotazione Tier viene utilizzata per associare le risorse ai rispettivi Tier, ad esempio per la contabilità dei costi. Insight viene fornito con una serie di annotazioni Tier predefinite; è possibile modificarle in base alle convenzioni di denominazione dei tiering o creare livelli personalizzati in base alle esigenze.
+
+Quando si impostano le annotazioni Tier, tenere presente quanto segue:
+
+* Il costo è per gigabyte.
+* I Tier 1, 2, 3 sono Tier predefiniti configurati a livello di storage array, in base al tipo di disco. Tuttavia, molti clienti avranno diversi tipi di dischi all'interno di un array o tra array dello stesso tipo.
+* La Best practice consiste nel creare annotazioni Tier in base al tipo di disco e/o alla velocità del disco. Si tratta di una tipica metodologia Tier; le tue esigenze potrebbero variare.
+
+
+Fasi:
+
+* Scegliere l'annotazione *Tier* e fare clic sull'icona *Edit*.
+* Se lo si desidera, fare clic su *+Aggiungi* e aggiungere il nome e la descrizione del primo livello all'elenco delle annotazioni.
+* Fai lo stesso per gli altri livelli.
+* Al termine, fare clic su *Save* (Salva).
+
+
+Annotazioni Tier di esempio:
+
+|===
+
+
+| Nome | Descrizione | Costo per GB 
+
+
+ a| 
+Tier automatico
+ a| 
+Tier di storage automatico
+ a| 
+0.5
+
+
+
+ a| 
+SSD di livello 1
+ a| 
+All Flash Array
+ a| 
+0.5
+
+
+
+ a| 
+SAS di livello 2
+ a| 
+SAS
+ a| 
+0.25
+
+
+
+ a| 
+SATA Tier 3
+ a| 
+SATA
+ a| 
+0.1
+
+
+
+ a| 
+...
+ a| 
+ a| 
+
+|===

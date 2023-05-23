@@ -1,0 +1,25 @@
+---
+permalink: howto/downloading-the-servicenow-connector.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È necessario scaricare l"integrazione di Python Connector for ServiceNow ed estrarla in una posizione a propria scelta.' 
+---
+= Download del connettore Python ServiceNow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario scaricare l'integrazione di Python Connector for ServiceNow ed estrarla in una posizione a propria scelta.
+
+
+
+== Fasi
+
+. Scaricare il connettore di integrazione * ServiceNow dal https://automationstore.netapp.com/onCommandInsight.shtml["NetApp Storefront"].
+. Ad esempio, estrarre il file .zip in una cartella `c:\OCI2SNOW`.
++
+Lo script del connettore di integrazione viene denominato `oci_snow_sync.pyz`.
+
+

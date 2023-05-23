@@ -1,0 +1,270 @@
+---
+permalink: config-admin/brocade-fc-switch-firmware-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utilizza l"origine dati dello switch FC Brocade per rilevare l"inventario dei dispositivi switch Brocade o con marchio rebranded che eseguono il firmware del sistema operativo factored 4.2 e versioni successive. Sono supportati i dispositivi in entrambe le modalità switch FC e Access Gateway.' 
+---
+= Origine dati dello switch FC Brocade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utilizza l'origine dati dello switch FC Brocade (SSH) per rilevare l'inventario dei dispositivi switch Brocade o rebranded con firmware FOS 4.2 e versioni successive. Sono supportati i dispositivi in entrambe le modalità switch FC e Access Gateway.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati dello switch FC Brocade. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Switch
+ a| 
+Switch
+
+
+
+ a| 
+Porta
+ a| 
+Porta
+
+
+
+ a| 
+Fabric virtuale, fabric fisico
+ a| 
+Fabric
+
+
+
+ a| 
+Zona
+ a| 
+Zona
+
+
+
+ a| 
+Switch logico
+ a| 
+Switch logico
+
+
+
+ a| 
+Zona LSAN
+ a| 
+Zona IVR
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* L'unità di acquisizione (locale o remota) avvia le connessioni alla porta TCP 22 sugli switch Brocade per raccogliere i dati di inventario. L'AU avvierà inoltre le connessioni alla porta UDP 161 per la raccolta dei dati sulle prestazioni.
+* Deve essere presente una connettività IP a tutti gli switch del fabric. Se si seleziona la casella di controllo Discover All switch in the Fabric (rileva tutti gli switch nel fabric), OCI identifica tutti gli switch nel fabric; tuttavia, per rilevarli, richiede la connettività IP a questi switch aggiuntivi.
+* Lo stesso account è necessario a livello globale per tutti gli switch del fabric. È possibile utilizzare putty (emulatore di terminale open source) per confermare l'accesso.
+* Se è installata la licenza Perform, le porte 161 e 162 devono essere aperte per tutti gli switch del fabric per il polling delle prestazioni SNMP.
+* Stringa di comunità di sola lettura SNMP
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+IP dello switch
+ a| 
+Indirizzo IP o nome di dominio completo dello switch
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente dello switch
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per lo switch
+
+
+
+ a| 
+Versione SNMP
+ a| 
+Versione SNMP
+
+
+
+ a| 
+Stringa di comunità SNMP
+ a| 
+Stringa di comunità di sola lettura SNMP utilizzata per accedere allo switch
+
+
+
+ a| 
+Nome utente SNMP
+ a| 
+Nome utente del protocollo della versione SNMP (valido solo per SNMP v3)
+
+
+
+ a| 
+Password SNMP
+ a| 
+Password del protocollo della versione SNMP (applicabile solo a SNMP v3)
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Nome fabric
+ a| 
+Nome del fabric che deve essere segnalato dall'origine dati. Lasciare vuoto per riportare il nome del fabric come WWN.
+
+
+
+ a| 
+Escludi dispositivi
+ a| 
+Elenco separato da virgole degli ID dei dispositivi da escludere dal polling
+
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 15 minuti)
+
+
+
+ a| 
+Timeout (sec)
+ a| 
+Timeout di connessione (impostazione predefinita: 30 secondi)
+
+
+
+ a| 
+Timeout attesa banner (sec)
+ a| 
+Timeout di attesa banner SSH (impostazione predefinita: 5 secondi)
+
+
+
+ a| 
+Domini amministrativi attivi
+ a| 
+Selezionare se si utilizzano i domini di amministrazione
+
+
+
+ a| 
+Recuperare i dati MPR
+ a| 
+Selezionare per acquisire i dati di routing dal router multiprotocollo (MPR)
+
+
+
+ a| 
+Attivare il trapping
+ a| 
+Selezionare questa opzione per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo. Se si seleziona enable trapping (attiva trap), è necessario attivare anche SNMP.
+
+
+
+ a| 
+Tempo minimo tra trap (sec)
+ a| 
+Tempo minimo tra i tentativi di acquisizione attivati da trap (impostazione predefinita: 10 secondi)
+
+
+
+ a| 
+Scopri tutti gli switch del fabric
+ a| 
+Selezionare per rilevare tutti gli switch nel fabric
+
+
+
+ a| 
+Scegli di favorire HBA vs Alias zona
+ a| 
+Scegliere se favorire gli alias HBA o di zona
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+
+
+ a| 
+Protocollo SNMP Auth
+ a| 
+Protocollo di autenticazione SNMP (solo SNMP v3)
+
+
+
+ a| 
+SNMP Privacy Protocol
+ a| 
+Protocollo di privacy SNMP (solo SNMP v3)
+
+
+
+ a| 
+Password per la privacy SNMP
+ a| 
+Password per la privacy SNMP (solo SNMP v3)
+
+
+
+ a| 
+Tentativi SNMP
+ a| 
+Numero di tentativi SNMP
+
+
+
+ a| 
+Timeout SNMP (ms)
+ a| 
+Timeout SNMP (impostazione predefinita: 5000 ms)
+
+|===

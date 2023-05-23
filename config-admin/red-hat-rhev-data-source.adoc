@@ -1,0 +1,84 @@
+---
+permalink: config-admin/red-hat-rhev-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati Red Hat Enterprise Virtualization (REST) raccoglie informazioni sulle istanze RHEV tramite HTTPS.' 
+---
+= Origine dati Red Hat (RHEV)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati Red Hat Enterprise Virtualization (REST) raccoglie informazioni sulle istanze RHEV tramite HTTPS.
+
+
+
+== Requisiti
+
+* Indirizzo IP del server RHEV sulla porta 443 tramite API REST
+* Nome utente e password di sola lettura
+* RHEV versione 3.0+
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Indirizzo IP del server RHEV
+ a| 
+Indirizzo IP o nome di dominio completo del server RHEV
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente del server RHEV
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per il server RHEV
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Porta di comunicazione HTTPS
+ a| 
+Porta utilizzata per la comunicazione HTTPS con RHEV
+
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 20 minuti)
+
+
+
+ a| 
+Timeout connessione (sec)
+ a| 
+Timeout di connessione (impostazione predefinita: 60 secondi)
+
+|===

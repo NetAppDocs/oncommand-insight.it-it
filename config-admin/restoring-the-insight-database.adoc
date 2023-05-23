@@ -1,0 +1,37 @@
+---
+permalink: config-admin/restoring-the-insight-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Per ripristinare il database Insight da un file di backup verificato, utilizzare le opzioni di risoluzione dei problemi. Questa operazione sostituisce completamente i dati OnCommand Insight correnti. 
+---
+= Ripristino del database Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per ripristinare il database Insight da un file di backup verificato, utilizzare le opzioni di risoluzione dei problemi. Questa operazione sostituisce completamente i dati OnCommand Insight correnti.
+
+
+
+== Prima di iniziare
+
+**Best practice:**prima di ripristinare il database OnCommand Insight, utilizzare il processo di backup manuale per creare una copia del database corrente. Controllare il file di backup che si desidera ripristinare per assicurarsi che sia stato eseguito correttamente il backup contenente i file che si desidera ripristinare.
+
+
+
+== Fasi
+
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
+. Fare clic su *risoluzione dei problemi*.
++
+image::../media/oci-7-backup-restore-gif.gif[pagina di backup e ripristino]
+
+. Nella sezione Restore a database (Ripristina database), selezionare il file di backup che si desidera ripristinare dal menu *Select Backup* (Seleziona backup).
+. Fare clic su *Restore* (Ripristina).
+. Quando viene visualizzato l'avviso che tutti i dati verranno sostituiti, fare clic su *OK*
++
+Lo stato dell'attività di ripristino viene visualizzato nella pagina di ripristino.
+
+

@@ -1,0 +1,28 @@
+---
+permalink: install-windows/downloading-the-oncommand-insight-installer.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile scaricare il programma di installazione di OnCommand Insight dal sito del supporto NetApp. 
+---
+= Download del programma di installazione di OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile scaricare il programma di installazione di OnCommand Insight dal sito del supporto NetApp.
+
+
+
+== Prima di iniziare
+
+È necessario disporre di un accesso al sito di supporto NetApp all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"].
+
+
+
+== Fasi
+
+. Accedere al server su cui si desidera installare OnCommand Insight.
+. Scaricare il file di installazione dal sito del supporto NetApp.
+

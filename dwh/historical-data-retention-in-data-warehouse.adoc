@@ -1,0 +1,243 @@
+---
+permalink: dwh/historical-data-retention-in-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: I dati vengono conservati nel Data Warehouse in base a una pianificazione. Man mano che i dati invecchiano, la conservazione dei record di dati viene ridotta. 
+---
+= Come vengono conservati i dati storici nel Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I dati vengono conservati nel Data Warehouse in base a una pianificazione. Man mano che i dati invecchiano, la conservazione dei record di dati viene ridotta.
+
+Data Warehouse conserva i dati storici in base ai data mart e alla granularità dei dati, come mostrato nella tabella seguente.
+
+|===
+
+
+| Data mart | Oggetto misurato | Granularità | Periodo di conservazione 
+
+
+ a| 
+Performance mart
+ a| 
+Volumi e volumi interni
+ a| 
+Ogni ora
+ a| 
+14 giorni
+
+
+
+ a| 
+Performance mart
+ a| 
+Volumi e volumi interni
+ a| 
+Ogni giorno
+ a| 
+13 mesi
+
+
+
+ a| 
+Performance mart
+ a| 
+Applicazione
+ a| 
+Ogni ora
+ a| 
+13 mesi
+
+
+
+ a| 
+Performance mart
+ a| 
+Host
+ a| 
+Ogni ora
+ a| 
+13 mesi
+
+
+
+ a| 
+Performance mart
+ a| 
+Prestazioni dello switch per la porta
+ a| 
+Ogni ora
+ a| 
+5 settimane
+
+
+
+ a| 
+Performance mart
+ a| 
+Prestazioni dello switch per host, storage e nastro
+ a| 
+Ogni ora
+ a| 
+13 mesi
+
+
+
+ a| 
+Performance mart
+ a| 
+Nodo storage
+ a| 
+Ogni ora
+ a| 
+14 giorni
+
+
+
+ a| 
+Performance mart
+ a| 
+Nodo storage
+ a| 
+Ogni giorno
+ a| 
+13 mesi
+
+
+
+ a| 
+Performance mart
+ a| 
+Performance delle macchine virtuali
+ a| 
+Ogni ora
+ a| 
+14 giorni
+
+
+
+ a| 
+Performance mart
+ a| 
+Performance delle macchine virtuali
+ a| 
+Ogni giorno
+ a| 
+13 mesi
+
+
+
+ a| 
+Performance mart
+ a| 
+Performance dell'hypervisor
+ a| 
+Ogni ora
+ a| 
+14 giorni
+
+
+
+ a| 
+Performance mart
+ a| 
+Performance dell'hypervisor
+ a| 
+Ogni giorno
+ a| 
+13 mesi
+
+
+
+ a| 
+Performance mart
+ a| 
+Performance VMDK
+ a| 
+Ogni ora
+ a| 
+14 giorni
+
+
+
+ a| 
+Performance mart
+ a| 
+Performance VMDK
+ a| 
+Ogni giorno
+ a| 
+13 mesi
+
+
+
+ a| 
+Performance mart
+ a| 
+Performance del disco
+ a| 
+Ogni ora
+ a| 
+14 giorni
+
+
+
+ a| 
+Performance mart
+ a| 
+Performance del disco
+ a| 
+Ogni giorno
+ a| 
+13 mesi
+
+
+
+ a| 
+Capacità
+ a| 
+Tutti (tranne i singoli volumi)
+ a| 
+Ogni giorno
+ a| 
+13 mesi
+
+
+
+ a| 
+Capacità
+ a| 
+Tutti (tranne i singoli volumi)
+ a| 
+Rappresentante mensile
+ a| 
+14 mesi e oltre
+
+
+
+ a| 
+Inventario Mart
+ a| 
+Singoli volumi
+ a| 
+Stato corrente
+ a| 
+1 giorno (o fino al prossimo ETL)
+
+|===
+Dopo 13 mesi (configurabile), Data Warehouse conserva un solo record al mese invece di un record al giorno per dati su capacità, performance e risorse nelle seguenti tabelle dei fatti:
+
+* Tabella dei fatti di chargeback (dwh_capacity.chargeback_fact)
+* Tabella dati sull'utilizzo del file system (dwh_fs_util.fs_util_fact)
+* Tabella dati host (dwh_sa.sa_host_Fact)
+* Tabella dati capacità volume interna (dwh_capacity.internal_volume_capacity_fact)
+* Tabella delle porte (dwh_ports.ports_fact)
+* Tabella dati delle capacità del qtree (dwh_Capacity.qtree_Capacity_Fact)
+* Tabella dati sulla capacità dello storage e del pool di storage (dwh_Capacity.storage_and_storage_pool_Capacity_Fact)
+* Tabella dati sulla capacità del volume (dwh_Capacity.vm_Capacity_Fact)
+* Tabelle dei fatti Storage Node Hourly Performance (Storage_Node_Hourly_performance_Fact) e Storage Node Daily Performance (Storage_Node_Daily_performance_Fact)
+

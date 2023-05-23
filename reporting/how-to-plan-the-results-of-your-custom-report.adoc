@@ -1,0 +1,33 @@
+---
+permalink: reporting/how-to-plan-the-results-of-your-custom-report.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Prima di aprire gli strumenti di progettazione dei report, è possibile pianificare i risultati desiderati dal report. Con gli strumenti per la creazione di report, è possibile creare report in modo semplice e senza bisogno di una grande pianificazione; tuttavia, è consigliabile avere un"idea dei requisiti dei report da parte del richiedente.' 
+---
+= Come pianificare i risultati del report personalizzato
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di aprire gli strumenti di progettazione dei report, è possibile pianificare i risultati desiderati dal report. Con gli strumenti per la creazione di report, è possibile creare report in modo semplice e senza bisogno di una grande pianificazione; tuttavia, è consigliabile avere un'idea dei requisiti dei report da parte del richiedente.
+
+* Identificare la domanda esatta a cui si desidera rispondere. Ad esempio:
++
+** Quanta capacità ho ancora a disposizione?
+** Quali sono i costi di chargeback per business unit?
+** Qual è la capacità per Tier per garantire che le business unit siano allineate al livello di storage appropriato?
+** Come posso prevedere i requisiti di alimentazione e raffreddamento? (Aggiungere metadati personalizzati aggiungendo annotazioni alle risorse).
+
+
+* Identificare gli elementi dei dati necessari per supportare la risposta.
+* Identificare le relazioni tra i dati che si desidera visualizzare nella risposta. Non includere relazioni illogiche nella domanda, ad esempio "`desidero visualizzare le porte relative alla capacità`".
+* Identificare i calcoli necessari sui dati.
+* Determinare i tipi di filtraggio necessari per limitare i risultati.
+* Determinare se è necessario utilizzare dati correnti o storici.
+* Determinare se è necessario impostare i privilegi di accesso sui report per limitare i dati a un pubblico specifico.
+* Identificare la modalità di distribuzione del report. Ad esempio, deve essere inviato tramite e-mail in base a una pianificazione prestabilita o incluso nell'area della cartella dei contenuti del team?
+* Determinare chi gestirà il report. Questo potrebbe influire sulla complessità del progetto.
+* Creare un modello del report.
+

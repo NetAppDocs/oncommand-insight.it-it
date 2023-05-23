@@ -1,0 +1,34 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse dei nodi di storage NetApp e-Series. 
+---
+= Nodo storage e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse dei nodi di storage NetApp e-Series.
+
+
+
+== Terminologia dei nodi di storage e-Series
+
+I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle landing page delle risorse del pool di storage NetApp e-Series. Molti di questi termini si applicano anche ad altri data collezionisti.
+
+* Storage -- a quale array di storage fa parte questo nodo. Obbligatorio.
+* Partner HA -- sulle piattaforme in cui un nodo eseguirà il failover su un nodo e solo su un altro nodo, in genere viene visualizzato qui.
+* Stato -- integrità del nodo. Disponibile solo quando l'array è abbastanza integro da essere inventorato da un'origine dati.
+* Modello -- nome del modello del nodo.
+* Version -- nome della versione del dispositivo.
+* Serial number (numero di serie) - il numero di serie del nodo.
+* Memoria -- memoria base 2, se disponibile.
+* Utilizzo -- l'utilizzo non è attualmente disponibile per NetApp e-Series.
+* IOPS -- calcolato sommando tutti gli IOPS per i volumi che appartengono esclusivamente a questo nodo.
+* Latency (latenza) - un numero che rappresenta la latenza tipica dell'host o il tempo di risposta su questo controller. Insight calcola una media ponderata degli IOPS dai volumi che appartengono esclusivamente a questo nodo.
+* Throughput - un numero che rappresenta il throughput basato su host su questo controller. Calcolato sommando tutto il throughput per i volumi che appartengono esclusivamente a questo nodo.
+* Processori -- numero di CPU.
+

@@ -1,0 +1,159 @@
+---
+permalink: config-admin/ibm-ds-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati IBM DS (CLI) supporta solo i dispositivi DS6xxx e DS8xxx. I dispositivi DS3xxx, DS4xxx e DS5xxx sono supportati dall"origine dati NetApp e-Series. Per i modelli e le versioni del firmware supportati, fare riferimento alla matrice di supporto di Insight Data Source.' 
+---
+= Origine dati IBM DS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati IBM DS (CLI) supporta solo i dispositivi DS6xxx e DS8xxx. I dispositivi DS3xxx, DS4xxx e DS5xxx sono supportati dall'origine dati NetApp e-Series. Per i modelli e le versioni del firmware supportati, fare riferimento alla matrice di supporto di Insight Data Source.
+
+
+
+== Terminologia
+
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati IBM DS. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Modulo unità disco
+ a| 
+Disco
+
+
+
+ a| 
+Immagine di storage
+ a| 
+Storage
+
+
+
+ a| 
+Pool di estensione
+ a| 
+Pool di storage
+
+
+
+ a| 
+Volume a blocchi fisso
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Indirizzo IP di ciascun array DS
+* Storage Display Name è opzionale e solo cosmetico
+* Nome utente e password di sola lettura su ciascun array DS
+* Software di terze parti installato sul server Insight: IBM dscli
+* Convalida dell'accesso: Eseguire `dscli` comandi che utilizzano il nome utente e la password
+* Requisiti delle porte: 80, 443 e 1750
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Storage DS
+ a| 
+Indirizzo IP o nome di dominio completo di DS Storage host
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utilizzato per la CLI DS
+
+
+
+ a| 
+Password
+ a| 
+Password utilizzata per la CLI DS
+
+
+
+ a| 
+Percorso eseguibile dscli.exe
+ a| 
+Percorso completo di ``dscli.exe``utility.
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 40 minuti)
+
+
+
+ a| 
+Nome visualizzato dello storage
+ a| 
+Nome dello storage array IBM DS
+
+
+
+ a| 
+Inventario Escludi i dispositivi
+ a| 
+Elenco separato da virgole dei numeri di serie dei dispositivi da escludere dalla raccolta dell'inventario
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+
+
+ a| 
+Tipo di filtro delle prestazioni
+ a| 
+Includi: Dati raccolti solo dai dispositivi presenti nell'elenco. Escludi: Non vengono raccolti dati da questi dispositivi
+
+
+
+ a| 
+Elenco dispositivi filtro prestazioni
+ a| 
+Elenco separato da virgole degli ID dei dispositivi da includere o escludere dalla raccolta delle performance
+
+|===

@@ -1,0 +1,16 @@
+---
+permalink: howto/setting-up-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile configurare Insight in modo che invii notifiche su eventi di attivazione come policy di performance, percorsi globali o violazioni della capacità tramite e-mail, SNMP o Syslog. È inoltre possibile configurare Insight in modo che invii notifiche e-mail su eventi a livello di sistema come errori di origine dati o guasti dell"unità di acquisizione.' 
+---
+= Impostazione delle notifiche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare Insight in modo che invii notifiche su eventi di attivazione come policy di performance, percorsi globali o violazioni della capacità tramite e-mail, SNMP o Syslog. È inoltre possibile configurare Insight in modo che invii notifiche e-mail su eventi a livello di sistema come errori di origine dati o guasti dell'unità di acquisizione.
+
+Queste sono istruzioni di base. Per ulteriori informazioni sulle notifiche, vedere Configurazione e amministrazione > Configurazione e amministrazione di Insight > Configurazione di Insight.

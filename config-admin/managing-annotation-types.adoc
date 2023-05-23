@@ -1,0 +1,14 @@
+---
+permalink: config-admin/managing-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight fornisce alcuni tipi di annotazione predefiniti, ad esempio il ciclo di vita delle risorse (compleanno o fine del ciclo di vita), la posizione dell"edificio o del data center e il Tier, che è possibile personalizzare per visualizzare nei report. È possibile definire i valori per i tipi di annotazione predefiniti o creare tipi di annotazione personalizzati. È possibile modificare questi valori in un secondo momento.' 
+---
+= Gestione dei tipi di annotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight fornisce alcuni tipi di annotazione predefiniti, come il ciclo di vita delle risorse (compleanno o fine del ciclo di vita), la posizione dell'edificio o del data center e il Tier, che è possibile personalizzare per visualizzare nei report. È possibile definire i valori per i tipi di annotazione predefiniti o creare tipi di annotazione personalizzati. È possibile modificare questi valori in un secondo momento.

@@ -1,0 +1,55 @@
+---
+permalink: config-admin/assigning-annotations-using-a-query.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: 'L"assegnazione di un"annotazione a un gruppo di risorse consente di identificare o utilizzare più facilmente tali risorse correlate in query o dashboard.' 
+---
+= Assegnazione di annotazioni a più risorse utilizzando una query
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'assegnazione di un'annotazione a un gruppo di risorse consente di identificare o utilizzare più facilmente tali risorse correlate in query o dashboard.
+
+
+
+== Prima di iniziare
+
+Le annotazioni che si desidera assegnare alle risorse devono essere state create in precedenza.
+
+
+
+== A proposito di questa attività
+
+È possibile semplificare l'attività di assegnazione di un'annotazione a più risorse utilizzando una query. Ad esempio, se si desidera assegnare un'annotazione di indirizzo personalizzata a tutti gli array in una posizione specifica del data center.
+
+
+
+== Fasi
+
+. Creare una nuova query per identificare le risorse su cui si desidera assegnare un'annotazione. Fare clic su *Query* > *+Nuova query*.
+. Nell'elenco a discesa *Cerca...*, selezionare *Storage*. È possibile impostare i filtri in modo da restringere ulteriormente l'elenco delle memorie visualizzate.
+. Nell'elenco di archivi visualizzato, selezionare uno o più archivi facendo clic sulla casella di controllo accanto al nome dello storage. È inoltre possibile selezionare tutti gli storage visualizzati facendo clic sulla casella di controllo principale nella parte superiore dell'elenco.
+. Una volta selezionati tutti gli storage desiderati, fare clic su *azioni* > *Modifica annotazione*.
++
+Viene visualizzata la finestra di dialogo Add Annotation (Aggiungi annotazione).
+
+. Selezionare *Annotation* (Annotazione) e *value* che si desidera assegnare alle memorie e fare clic su *Save* (Salva).
++
+Se si visualizza la colonna per l'annotazione, questa viene visualizzata su tutti gli storage selezionati.
+
+. È ora possibile utilizzare l'annotazione per filtrare le memorie in un widget o in una query. In un widget, è possibile effettuare le seguenti operazioni:
++
+.. Creare una dashboard o aprirne una esistente. Aggiungere una *variabile* e scegliere l'annotazione impostata sui dati memorizzati sopra. La variabile viene aggiunta alla dashboard.
+.. Nel campo della variabile appena aggiunto, fare clic su *Any* e immettere il valore appropriato su cui filtrare. Fare clic sul segno di spunta per salvare il valore della variabile.
+.. Aggiungere un widget. Nella query del widget, fare clic sul pulsante**Filtra per****+**e selezionare l'annotazione appropriata dall'elenco.
+.. Fare clic su *Any* e selezionare la variabile di annotazione aggiunta in precedenza. Le variabili create iniziano con "``" e vengono visualizzate nell'elenco a discesa.
+.. Impostare gli altri filtri o campi desiderati, quindi fare clic su *Save* (Salva) quando il widget viene personalizzato in base alle proprie preferenze.
+
+
++
+Il widget sulla dashboard visualizza i dati solo per le memorie a cui è stata assegnata l'annotazione.
+
+

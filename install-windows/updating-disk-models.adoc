@@ -1,0 +1,31 @@
+---
+permalink: install-windows/updating-disk-models.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo l"aggiornamento, è necessario disporre di modelli di dischi aggiornati; tuttavia, se per qualche motivo Insight non è riuscito a rilevare nuovi modelli di dischi, è possibile aggiornarli manualmente.' 
+---
+= Aggiornamento dei modelli di dischi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo l'aggiornamento, è necessario disporre di modelli di dischi aggiornati; tuttavia, se per qualche motivo Insight non è riuscito a rilevare nuovi modelli di dischi, è possibile aggiornarli manualmente.
+
+
+
+== Prima di iniziare
+
+È necessario aver ottenuto dal supporto tecnico `.zip` file che contiene le patch più recenti per l'origine dei dati.
+
+
+
+== Fasi
+
+. Arrestare il servizio SANscreen acq.
+. Accedere alla seguente directory: `<install directory>\SANscreen\wildfly\standalone\deployments\datasources.war`.
+. Spostare la corrente `diskmodels.jar` file in una posizione diversa.
+. Copiare il nuovo `diskmodels.jar` file in `datasources.war` directory.
+. Avviare il servizio SANscreen acq.
+

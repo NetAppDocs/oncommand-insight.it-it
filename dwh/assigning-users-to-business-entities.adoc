@@ -1,0 +1,43 @@
+---
+permalink: dwh/assigning-users-to-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È necessario completare una serie di passaggi per assegnare gli utenti alle entità aziendali. Data Warehouse consente di gestire più tenancy (spesso abbreviata in "multi-tenancy" o "multi-tenancy") nel reporting, consentendo di associare gli utenti a una o più entità aziendali. Ciò consente agli amministratori di separare i dati o i report in base agli attributi dell"utente o all"affiliazione dell"utente.' 
+---
+= Assegnazione di utenti a entità aziendali
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario completare una serie di passaggi per assegnare gli utenti alle entità aziendali. Data Warehouse consente di gestire più tenancy (spesso abbreviata in "`multiancy`" o "`multitenancy`") nel reporting, consentendo di associare gli utenti a una o più entità aziendali. Ciò consente agli amministratori di separare i dati o i report in base agli attributi dell'utente o all'affiliazione dell'utente.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal come amministratore all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Nella barra degli strumenti Data Warehouse, fare clic su image:../media/oci-reporting-portal-icon.gif[""] Per aprire il portale di reporting.
+. Inserire il nome utente e la password e fare clic su *Login*.
+. Dal menu Avvio, selezionare *IBM Cognos Administration*.
+. Fare clic sulla scheda *Security*:
+. Nella directory, selezionare *Cognos*.
+. Creare una nuova sottocartella nella cartella Cognos denominata "`BES`", per le entità aziendali.
+. Aprire la cartella BES.
+. Fare clic sull'icona *nuovo gruppo* per aggiungere gruppi che corrispondono a diversi livelli di autorizzazione.
++
+Questi livelli di autorizzazione possono essere il nome completo dell'entità aziendale (ad esempio, NetApp.N/A) o un prefisso (ad esempio, NetApp.N/A.Finance). Entrambi questi formati consentono l'accesso a tutti i progetti all'interno dell'entità aziendale (NetApp.N/A.Finance).
+
++
+Viene visualizzata la procedura guidata nuovo gruppo.
+
+. Completare le pagine della procedura guidata.
+. Selezionare un'entità aziendale e fare clic su *Altro*.
+. Fare clic su *Imposta membri*.
+. Fare clic su *Aggiungi*.
+. Selezionare la directory SANscreen.
+. Dall'elenco degli utenti, selezionare ciascun utente che si desidera includere nell'entità aziendale e aggiungerlo alla casella voci selezionate.
+. Fare clic su *OK*.
+. Ripetere il processo di aggiunta di membri a ciascuno dei gruppi di entità aziendali.
+

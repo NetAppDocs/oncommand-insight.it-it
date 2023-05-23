@@ -1,0 +1,18 @@
+---
+permalink: config-admin/mapping-data-source-tags-to-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Quando un"origine dati è configurata per eseguire il polling dei dati dei tag, Insight imposta automaticamente i valori di annotazione per un"annotazione Insight esistente con lo stesso nome di un tag.' 
+---
+= Mappatura dei tag di origine dei dati alle annotazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando un'origine dati è configurata per eseguire il polling dei dati dei tag, Insight imposta automaticamente i valori di annotazione per un'annotazione Insight esistente con lo stesso nome di un tag.
+
+Quando l'annotazione Insight esiste prima che i tag siano attivati nell'origine dati, i dati del tag origine dati vengono aggiunti automaticamente all'annotazione Insight.
+
+Quando si crea un'annotazione dopo l'attivazione del tag, il polling iniziale dell'origine dati non aggiorna automaticamente l'annotazione. Si verifica un ritardo nel tempo necessario per sostituire o popolare l'annotazione Insight. Per evitare il ritardo, è possibile forzare l'aggiornamento delle annotazioni posticipando e riprendendo l'origine dati.

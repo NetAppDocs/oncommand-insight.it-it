@@ -1,0 +1,21 @@
+---
+permalink: config-admin/insight-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: A ciascun account utente viene assegnato uno dei tre livelli di autorizzazione possibili. 
+---
+= Ruoli utente Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A ciascun account utente viene assegnato uno dei tre livelli di autorizzazione possibili.
+
+* Guest consente di accedere a Insight e di visualizzare le varie pagine. Questo tipo di account non consente di eseguire azioni come l'identificazione di dispositivi generici e la definizione dei criteri nell'interfaccia utente Java.
+* L'utente consente tutti i privilegi di livello guest, oltre all'accesso alle operazioni Insight, come la definizione di policy e l'identificazione di dispositivi generici. Il tipo di account utente non consente di eseguire operazioni di origine dati, né di aggiungere o modificare account utente diversi dal proprio.
+* Administrator (Amministratore) consente di eseguire qualsiasi operazione, inclusi l'aggiunta di nuovi utenti e la gestione delle origini dati.
+
+
+*Best practice:* limita il numero di utenti con autorizzazioni di amministratore creando la maggior parte degli account per utenti o ospiti.

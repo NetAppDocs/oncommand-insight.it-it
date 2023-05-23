@@ -1,0 +1,26 @@
+---
+permalink: howto/host-and-vm-filesystem-utilization.html 
+sidebar: sidebar 
+keywords: filesystem 
+summary: 'L"origine dati dei file system host e VM, combinata con la licenza di utilizzo degli host, consente la creazione di report e il chargeback a livello di file system per host e macchine virtuali noti.' 
+---
+= Raccolta dei dati di utilizzo del file system host e VM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati dei file system host e VM, combinata con la licenza di utilizzo degli host, consente la creazione di report e il chargeback a livello di file system per host e macchine virtuali noti.
+
+OnCommand Insight raccoglie i dati dai dispositivi di storage, la maggior parte dei quali riporta i propri volumi come dispositivi a blocchi. Ciò consente a Insight di creare report sull'utilizzo a livello di storage, ma non a livello di file system. Gli array di storage in genere sanno quali blocchi sono stati scritti, ma non quali sono stati liberati.
+
+Gli host client e le macchine virtuali implementano file system (ntfs, ext*...) in cima a questi dispositivi a blocchi. La maggior parte dei file system conserva un sommario contenente metadati di directory e file. Quando i file vengono cancellati, le relative voci vengono semplicemente rimosse dal sommario. I blocchi consumati da questi file sono ora idonei per il riutilizzo da parte del file system, ma lo storage array non lo sa. Affinché Insight possa generare report sull'utilizzo del file system, deve essere raccolto dal punto di vista dell'host client o della macchina virtuale per un chargeback accurato.
+
+Insight consente questo livello di raccolta dei dati di utilizzo del file system attraverso l'origine dati *NetApp host and VM file System*, in combinazione con la licenza *host Utilization*. Le macchine virtuali devono essere annotate con il nome *Compute Resource Group* appropriato e gli storage array associati devono essere annotati con le annotazioni *Tier* appropriate con i costi appropriati per un reporting dei costi accurato.
+
+[NOTE]
+====
+La licenza di utilizzo host è basata sulle risorse, invece che sulla capacità come altre licenze Insight.
+
+====

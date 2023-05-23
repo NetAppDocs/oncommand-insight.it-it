@@ -1,0 +1,107 @@
+---
+permalink: config-admin/ibm-tivoli-monitoring-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Questa origine dati viene utilizzata esclusivamente per l"utilizzo del file system. Comunica direttamente con il database di monitoraggio di Tivoli, noto anche come database di monitoraggio di Tivoli. Sono supportati i database Oracle e DB2.' 
+---
+= Origine dati IBM Tivoli Monitoring
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa origine dati viene utilizzata esclusivamente per l'utilizzo del file system. Comunica direttamente con il database di monitoraggio di Tivoli, noto anche come database di monitoraggio di Tivoli. Sono supportati i database Oracle e DB2.
+
+
+
+== Messaggio di errore Oracle
+
+[NOTE]
+====
+Questo data collector non è più disponibile a partire da OnCommand Insight 7.3.11.
+
+====
+Se il SID specificato genera il messaggio di errore "ora-12154" quando si tenta di connettersi, controllare due volte la configurazione del servizio di rete Oracle DB. Se la configurazione di accesso specifica un nome host completo (ad esempio, "NAMES.DEFAULT_DOMAIN"), provare a inserire il nome del servizio completo nel campo SID. Un semplice esempio è che la connessione al SID `testdb` Si sta guastando e la configurazione Oracle specifica un dominio di``company.com``. È possibile utilizzare la seguente stringa al posto del SID di base per tentare la connessione: `testdb.company.com`.
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+IP del database di monitoraggio Tivoli
+ a| 
+Indirizzo IP o nome di dominio completo del server di monitoraggio Tivoli
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente del server di monitoraggio Tivoli
+
+
+
+ a| 
+Password
+ a| 
+Password per il server di monitoraggio Tivoli
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Porta del database di monitoraggio Tivoli
+ a| 
+Porta utilizzata per il database di monitoraggio Tivoli
+
+
+
+ a| 
+Oracle SID o DB2 Database Name (Nome database DB2)
+ a| 
+ID servizio listener Oracle o nome database DB2
+
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 60 minuti)
+
+
+
+ a| 
+Driver di database da utilizzare
+ a| 
+Scegliere driver database da utilizzare
+
+
+
+ a| 
+Protocollo utilizzato per la connessione al database
+ a| 
+Protocollo utilizzato per la connessione al database
+
+
+
+ a| 
+Schema del database
+ a| 
+Inserire lo schema del database
+
+|===

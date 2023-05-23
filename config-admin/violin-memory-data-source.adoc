@@ -1,0 +1,153 @@
+---
+permalink: config-admin/violin-memory-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"origine dati di Violin 6000-Series Flash Memory Array (HTTP) raccoglie le informazioni di rete per l"analisi e la convalida dagli array di memoria flash serie 6000 di Violin.' 
+---
+= Origine dati Violin Flash Memory Array
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'origine dati HTTP (Flash Memory Array) di Violin 6000-Series raccoglie le informazioni di rete per l'analisi e la convalida dagli array di memoria flash serie 6000 di Violin.
+
+
+
+== Terminologia
+
+[NOTE]
+====
+Questo data collector non è più disponibile a partire da OnCommand Insight 7.3.11.
+
+====
+OnCommand Insight acquisisce le seguenti informazioni di inventario dall'origine dati dell'array di memoria flash serie 6000 di Violin. Per ogni tipo di risorsa acquisita da Insight, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questa origine dati, tenere presente la seguente terminologia:
+
+|===
+
+
+| Vendor/modello | Termine Insight 
+
+
+ a| 
+Modulo VIMM (Intelligent Memory Module) per violino
+ a| 
+Disco
+
+
+
+ a| 
+Container
+ a| 
+Storage
+
+
+
+ a| 
+Gateway di memoria
+ a| 
+Nodo di storage
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+
+
+ a| 
+Initiator, Initiator Group, Target
+ a| 
+Mappa del volume, maschera del volume
+
+|===
+[NOTE]
+====
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+====
+
+
+== Requisiti
+
+* Sono necessari un nome utente e una password di sola lettura per lo storage.
+* Convalidare l'accesso con un browser Web utilizzando l'indirizzo IP dello storage.
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Indirizzo IP o FQDN del gateway principale dell'array di memoria violino
+ a| 
+Indirizzo IP o nome di dominio completo del gateway principale di Violin Memory Array
+
+
+
+ a| 
+Nome utente
+ a| 
+Nome utente del gateway principale di Violin Memory Array
+
+
+
+ a| 
+Password
+ a| 
+Password per il gateway principale di Violin Memory Array
+
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+ a| 
+Porta di comunicazione
+ a| 
+Porta utilizzata per la comunicazione con array Violin
+
+
+
+ a| 
+HTTPS attivato
+ a| 
+Selezionare per utilizzare HTTPS
+
+
+
+ a| 
+Intervallo polling inventario (min)
+ a| 
+Intervallo tra i sondaggi di inventario (impostazione predefinita: 20 minuti)
+
+
+
+ a| 
+Timeout connessione (sec)
+ a| 
+Timeout di connessione (impostazione predefinita: 60 secondi)
+
+
+
+ a| 
+Intervallo di polling delle performance (sec)
+ a| 
+Intervallo tra i sondaggi delle prestazioni (impostazione predefinita: 300 secondi)
+
+|===

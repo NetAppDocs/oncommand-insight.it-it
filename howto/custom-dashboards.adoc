@@ -1,0 +1,55 @@
+---
+permalink: howto/custom-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 7.3 include funzionalità avanzate di dashboard personalizzato per offrire agli utenti una vista operativa dei dati importanti per loro e fornire una vista unificata di tali dati. 
+---
+= Creazione di dashboard personalizzati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3 include funzionalità avanzate di dashboard personalizzato per offrire agli utenti una vista operativa dei dati importanti per loro e fornire una vista unificata di tali dati.
+
+OnCommand Insight offre agli utenti la flessibilità necessaria per creare dati dell'infrastruttura con viste operative su piattaforme IT, consentendo di creare dashboard personalizzate con una vasta gamma di widget, ciascuno dei quali offre una flessibilità estesa nella visualizzazione e nella creazione di grafici dei dati. In questa procedura verrà creata una dashboard di esempio per evidenziare le performance delle macchine virtuali.
+
+Questa procedura dovrebbe servire solo come esempio e non copre tutti gli scenari possibili. I concetti e le procedure qui descritti possono essere utilizzati per creare dashboard personalizzati per evidenziare i dati specifici per le esigenze specifiche.
+
+*Panoramica*
+
+È possibile creare una dashboard personalizzata utilizzando uno dei seguenti metodi:
+
+* *Dashboard* > *+Nuova dashboard*
+* *Dashboard* > *Mostra tutte le dashboard* e fai clic su *+Aggiungi*
+
+
+La schermata New Dashboard (Nuova dashboard) dispone di diversi comandi:
+
+* *Time selector*: Consente di visualizzare i dati della dashboard per un intervallo di tempo compreso tra 3 ore e 90 giorni utilizzando il selettore di intervalli di date personalizzato. È possibile scegliere di ignorare questo intervallo di tempo globale nei singoli widget.
+* Pulsante *Modifica*: Selezionando "`on`" si attiva la modalità Modifica, che consente di apportare modifiche alla dashboard. Per impostazione predefinita, vengono aperti nuovi dashboard in modalità di modifica.
+* Pulsante *Salva*: Consente di salvare, rinominare o eliminare la dashboard.
+* Pulsante *variabile*: È possibile aggiungere variabili ai dashboard. La modifica della variabile consente di aggiornare tutti i widget contemporaneamente. Per ulteriori informazioni sulle variabili, vedere link:custom-dashboard-concepts.md#["Concetti della dashboard personalizzata"]
+* *Widget*, che consente di aggiungere un numero qualsiasi di tabelle, grafici o altri widget alla dashboard.
+
+
+I widget possono essere ridimensionati e ricollocati in diverse posizioni all'interno della dashboard, per offrire la migliore visualizzazione dei dati in base alle esigenze attuali.
+
+*Tipi di widget*
+
+È possibile scegliere tra i seguenti tipi di widget:
+
+Widget *Table*: Una tabella che visualizza i dati in base ai filtri e alle colonne scelti. I dati delle tabelle possono essere combinati in gruppi che possono essere compressi ed espansi.
+
+*Grafici di linee, spline, area, area impilata*: Sono widget grafici di serie temporali su cui è possibile visualizzare le performance e altri dati nel tempo.
+
+Widget *valore singolo*: Widget che consente di visualizzare un singolo valore che può essere derivato direttamente da un contatore o calcolato utilizzando una query o un'espressione. Ad esempio, è possibile visualizzare la somma degli IOPS totali per tutto lo storage nell'ambiente come singolo valore nella parte superiore della dashboard.
+
+Grafico *Bar*: Un grafico per visualizzare 5, 10, 20 o 50 valori in alto o in basso.
+
+Grafico *Box Plot*: Un grafico del minimo, massimo, mediano e dell'intervallo tra il quartile inferiore e quello superiore dei dati in un singolo grafico.
+
+Grafico *Scatter Plot*: Traccia i dati correlati come punti, ad esempio IOPS e latenza. In questo esempio, si vedranno rapidamente le risorse con latenza elevata e IOPS bassi.
+
+Inoltre, è possibile scegliere tra diversi widget legacy. Nell'elenco a discesa *Widget*, selezionare **Mostra altri...**per visualizzare questi widget.

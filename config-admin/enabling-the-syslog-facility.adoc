@@ -1,0 +1,56 @@
+---
+permalink: config-admin/enabling-the-syslog-facility.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile identificare una posizione per il registro delle violazioni OnCommand Insight e degli avvisi sulle prestazioni, nonché i messaggi di controllo e attivare il processo di registrazione. 
+---
+= Attivazione della funzione syslog
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile identificare una posizione per il registro delle violazioni OnCommand Insight e degli avvisi sulle prestazioni, nonché i messaggi di controllo e attivare il processo di registrazione.
+
+
+
+== Prima di iniziare
+
+* È necessario disporre dell'indirizzo IP del server su cui memorizzare il log di sistema.
+* È necessario conoscere il livello di struttura che corrisponde al tipo di programma che registra il messaggio, ad esempio LOCAL1 o USER.
+
+
+
+
+== A proposito di questa attività
+
+Il syslog include i seguenti tipi di informazioni:
+
+* Messaggi di violazione
+* Avvisi sulle prestazioni
+* Facoltativamente, i messaggi del registro di controllo
+
+
+Nel syslog vengono utilizzate le seguenti unità:
+
+* Metriche di utilizzo: Percentuale
+* Metriche di traffico: MB
+* Velocità di traffico: MB/s.
+
+
+
+
+== Fasi
+
+. Sulla barra degli strumenti di Insight, fare clic su *Admin* e selezionare *Notifications*.
+. Scorrere verso il basso fino alla sezione *Syslog* della pagina.
+. Selezionare la casella di controllo *Enable syslog* (attiva syslog).
+. Se si desidera, selezionare la casella di controllo *Invia audit*. I nuovi messaggi del registro di controllo verranno inviati a syslog oltre a essere visualizzati nella pagina Audit. Si noti che i messaggi del registro di controllo già esistenti non verranno inviati a syslog; verranno inviati solo i messaggi di registro generati di recente.
+. Nel campo *Server*, immettere l'indirizzo IP del server di log.
++
+È possibile specificare una porta personalizzata aggiungendo i due punti alla fine dell'IP del server (ad esempio server:porta). Se la porta non è specificata, viene utilizzata la porta syslog predefinita 514.
+
+. Nel campo *Facility*, selezionare il livello di struttura corrispondente al tipo di programma che sta registrando il messaggio.
+. Fare clic su *Save* (Salva).
+

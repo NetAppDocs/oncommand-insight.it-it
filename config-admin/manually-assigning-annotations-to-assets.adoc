@@ -1,0 +1,52 @@
+---
+permalink: config-admin/manually-assigning-annotations-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"assegnazione di annotazioni alle risorse consente di ordinare, raggruppare e creare report sulle risorse in modi rilevanti per la tua azienda. Sebbene sia possibile assegnare automaticamente annotazioni a risorse di un tipo particolare, utilizzando le regole di annotazione, è possibile assegnare annotazioni a una singola risorsa utilizzando la relativa pagina delle risorse.' 
+---
+= Assegnazione manuale delle annotazioni alle risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'assegnazione di annotazioni alle risorse consente di ordinare, raggruppare e creare report sulle risorse in modi rilevanti per la tua azienda. Sebbene sia possibile assegnare automaticamente annotazioni a risorse di un tipo particolare, utilizzando le regole di annotazione, è possibile assegnare annotazioni a una singola risorsa utilizzando la relativa pagina delle risorse.
+
+
+
+== Prima di iniziare
+
+È necessario aver creato l'annotazione che si desidera assegnare.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Individuare la risorsa a cui si desidera applicare l'annotazione effettuando una delle seguenti operazioni:
++
+** Fare clic sulla risorsa nella dashboard delle risorse.
+** Fare clic su image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] Nella barra degli strumenti per visualizzare la casella *Cerca risorse*, digitare il tipo o il nome della risorsa, quindi selezionare la risorsa dall'elenco visualizzato.
++
+Viene visualizzata la pagina delle risorse.
+
+
+
+. Nella sezione *dati utente* della pagina delle risorse, fare clic su image:../media/add-annotation-icon.gif[""].
++
+Viene visualizzata la finestra di dialogo Add Annotation (Aggiungi annotazione).
+
+. Fare clic su *Annotation* (Annotazione) e selezionare un'annotazione dall'elenco.
+. Fare clic su *valore* ed eseguire una delle seguenti operazioni, a seconda del tipo di annotazione selezionato:
++
+** Se il tipo di annotazione è list, date o booleano, selezionare un valore dall'elenco.
+** Se il tipo di annotazione è testo, digitare un valore.
+
+
+. Fare clic su *Save* (Salva).
+. Se si desidera modificare il valore dell'annotazione dopo l'assegnazione, fare clic su image:../media/change-annotation-value.gif[""] e selezionare un valore diverso.
++
+Se l'annotazione è di tipo elenco per cui è selezionata l'opzione *Aggiungi valori dinamicamente all'assegnazione dell'annotazione*, è possibile digitare per aggiungere un nuovo valore oltre alla selezione di un valore esistente.
+
+

@@ -1,0 +1,242 @@
+---
+permalink: config-admin/predefined-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommandInsight offre alcuni tipi di annotazione predefiniti. Queste annotazioni possono essere utilizzate per filtrare o raggruppare i dati e per filtrare i report dei dati. 
+---
+= Tipi di annotazione predefiniti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommandInsight offre alcuni tipi di annotazione predefiniti. Queste annotazioni possono essere utilizzate per filtrare o raggruppare i dati e per filtrare i report dei dati.
+
+È possibile associare le risorse ai tipi di annotazione predefiniti, ad esempio:
+
+* Ciclo di vita delle risorse, ad esempio compleanno, tramonto o fine vita
+* Informazioni sulla posizione di un dispositivo, ad esempio data center, edificio o piano
+* Classificazione delle risorse, ad esempio per qualità (Tier), per dispositivi connessi (livello di switch) o per livello di servizio
+* Stato, ad esempio hot (utilizzo elevato)
+
+
+La tabella seguente elenca i tipi di annotazione predefiniti. È possibile modificare i nomi delle annotazioni in base alle proprie esigenze.
+
+|===
+
+
+| Tipi di annotazione | Descrizione | Tipo 
+
+
+ a| 
+Alias
+ a| 
+Nome intuitivo per una risorsa.
+ a| 
+Testo
+
+
+
+ a| 
+Compleanno
+ a| 
+Data in cui il dispositivo è stato o sarà portato online.
+ a| 
+Data
+
+
+
+ a| 
+Edificio
+ a| 
+Posizione fisica delle risorse di host, storage, switch e nastro.
+ a| 
+Elenco
+
+
+
+ a| 
+Città
+ a| 
+Posizione in comune di host, storage, switch e risorse su nastro.
+ a| 
+Elenco
+
+
+
+ a| 
+Gruppo di risorse di calcolo
+ a| 
+Assegnazione del gruppo utilizzata dall'origine dati dei filesystem host e VM.
+ a| 
+Elenco
+
+
+
+ a| 
+Continente
+ a| 
+Posizione geografica delle risorse di host, storage, switch e nastro.
+ a| 
+Elenco
+
+
+
+ a| 
+Paese
+ a| 
+Posizione nazionale di host, storage, switch e risorse su nastro.
+ a| 
+Elenco
+
+
+
+ a| 
+Data center
+ a| 
+Posizione fisica della risorsa ed è disponibile per host, storage array, switch e nastri.
+ a| 
+Elenco
+
+
+
+ a| 
+Collegamento diretto
+ a| 
+Indica (Sì o No) se una risorsa di storage è connessa direttamente agli host.
+ a| 
+Booleano
+
+
+
+ a| 
+Fine del ciclo di vita
+ a| 
+Data in cui un dispositivo verrà portato offline, ad esempio, se il leasing è scaduto o l'hardware viene ritirato.
+ a| 
+Data
+
+
+
+ a| 
+Alias fabric
+ a| 
+Nome intuitivo per un fabric.
+ a| 
+Testo
+
+
+
+ a| 
+Piano
+ a| 
+Posizione di un dispositivo su un piano di un edificio. Può essere impostato per host, storage array, switch e nastri.
+ a| 
+Elenco
+
+
+
+ a| 
+Caldo
+ a| 
+Dispositivi già in uso su base regolare o alla soglia di capacità.
+ a| 
+Booleano
+
+
+
+ a| 
+Nota
+ a| 
+Commenti che si desidera associare a una risorsa.
+ a| 
+Testo
+
+
+
+ a| 
+Rack
+ a| 
+Rack in cui risiede la risorsa.
+ a| 
+Testo
+
+
+
+ a| 
+Camera
+ a| 
+Spazio all'interno di un edificio o di un'altra ubicazione di risorse host, storage, switch e nastro.
+ a| 
+Elenco
+
+
+
+ a| 
+SAN
+ a| 
+Partizione logica della rete. Disponibile su host, storage array, nastri, switch e applicazioni.
+ a| 
+Elenco
+
+
+
+ a| 
+Livello di servizio
+ a| 
+Un insieme di livelli di servizio supportati che è possibile assegnare alle risorse. Fornisce un elenco di opzioni ordinate per volumi interni, qtree e volumi. Modificare i livelli di servizio per impostare le policy di performance per diversi livelli.
+ a| 
+Elenco
+
+
+
+ a| 
+Stato/Provincia
+ a| 
+Stato o provincia in cui si trova la risorsa.
+ a| 
+Elenco
+
+
+
+ a| 
+Tramonto
+ a| 
+Soglia impostata dopo la quale non è possibile assegnare nuove allocazioni a quel dispositivo. Utile per migrazioni pianificate e altre modifiche di rete in sospeso.
+ a| 
+Data
+
+
+
+ a| 
+Livello switch
+ a| 
+Include opzioni predefinite per l'impostazione delle categorie per gli switch. In genere, queste designazioni rimangono valide per la durata del dispositivo, anche se è possibile modificarle, se necessario. Disponibile solo per gli switch.
+ a| 
+Elenco
+
+
+
+ a| 
+Tier
+ a| 
+Può essere utilizzato per definire diversi livelli di servizio all'interno del proprio ambiente. I Tier possono definire il tipo di livello, ad esempio la velocità necessaria (ad esempio, oro o argento). Questa funzione è disponibile solo su volumi interni, qtree, storage array, storage pool e volumi.
+ a| 
+Elenco
+
+
+
+ a| 
+Severità della violazione
+ a| 
+Classificazione (ad esempio, maggiore) di una violazione (ad esempio, porte host mancanti o ridondanza mancante), in una gerarchia di importanza da massima a minima.
+ a| 
+Elenco
+
+|===
+[NOTE]
+====
+Alias, data center, hot, livello di servizio, Sunset, Livello switch, livello di servizio, livello e severità delle violazioni sono annotazioni a livello di sistema che non è possibile eliminare o rinominare; è possibile modificare solo i valori assegnati.
+
+====

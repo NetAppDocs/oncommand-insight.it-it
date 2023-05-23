@@ -1,0 +1,31 @@
+---
+permalink: dwh/editing-the-site-name-and-viewing-system-information.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile visualizzare le informazioni di aggiornamento di sistema, modulo, licenza e Data Warehouse. 
+---
+= Visualizzazione delle informazioni di sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare le informazioni di aggiornamento di sistema, modulo, licenza e Data Warehouse.
+
+
+
+== Fasi
+
+. Accedere al Data Warehouse Portal all'indirizzo `+https://hostname/dwh+`, dove `hostname` È il nome del sistema in cui è installato il data warehouse di OnCommand Insight.
+. Dal riquadro di navigazione a sinistra, fare clic su *System Information* (informazioni di sistema).
+. Nella scheda *sistema*, esaminare le informazioni di sistema e modificare il nome del sito, se necessario, effettuando le seguenti operazioni:
++
+.. Fare clic su *Edit Site Name* (Modifica nome sito)
+.. Inserire il nuovo nome del sito e fare clic su *Save* (Salva).
+
+
+. Per visualizzare le informazioni sull'applicazione (nome dell'applicazione, modulo, versione e data di installazione), fare clic sulla scheda *Info applicazione*.
+. Per visualizzare le informazioni sulla licenza (protocollo, codice, data di scadenza e quantità), fare clic sulla scheda *Licenses* (licenze).
+. Per visualizzare le informazioni sull'aggiornamento dell'applicazione (nome dell'applicazione, da data, a data, ora, utente, E dimensione del file), fare clic su *Cronologia aggiornamenti*.
+

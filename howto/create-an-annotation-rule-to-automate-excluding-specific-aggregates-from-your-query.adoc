@@ -1,0 +1,40 @@
+---
+permalink: howto/create-an-annotation-rule-to-automate-excluding-specific-aggregates-from-your-query.html 
+sidebar: sidebar 
+keywords:  
+summary: 'In alternativa all"applicazione manuale delle annotazioni a singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione. Le regole di annotazione si basano sulle query create e, quando vengono eseguite sul sistema, aggiungono nuove risorse a set di risorse esistenti. Quando questi set di asset sono esclusi da un report, anche i nuovi asset vengono automaticamente esclusi.' 
+---
+= Creare una regola di annotazione per automatizzare l'esclusione di aggregati specifici dal report di densità i/O.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In alternativa all'applicazione manuale delle annotazioni a singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione. Le regole di annotazione si basano sulle query create e, quando vengono eseguite sul sistema, aggiungono nuove risorse a set di risorse esistenti. Quando questi set di asset sono esclusi da un report, anche i nuovi asset vengono automaticamente esclusi.
+
+
+
+== Prima di iniziare
+
+È necessario aver creato e salvato una query che identifichi gli aggregati root NetApp identificati nel proprio ambiente.
+
+
+
+== Fasi
+
+. Accedere all'interfaccia utente Web di OnCommand Insight.
+. Fare clic su *Manage* (Gestisci) > *Annotation rules* (regole annotazione)
+. Fare clic su *Aggiungi*
++
+Viene visualizzata la finestra di dialogo Add Rule (Aggiungi regola).
+
+. Effettuare le seguenti operazioni:
++
+.. Nella casella Nome, immettere un nome univoco che descriva la regola: "`RootAggrExclude`"
+.. Fare clic su Query e selezionare la query che Insight deve utilizzare per applicare la regola di annotazione a:"` Aggregate0`"
+.. Fare clic su Annotation (Annotazione) e selezionare "`Root Agg Exclude`" (Escludi agg
+.. Fare clic su valore e immettere True
+
+
+

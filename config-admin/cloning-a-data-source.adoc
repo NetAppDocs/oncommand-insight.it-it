@@ -1,0 +1,40 @@
+---
+permalink: config-admin/cloning-a-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Utilizzando la funzione di clonazione, è possibile aggiungere rapidamente un"origine dati con le stesse credenziali e attributi di un"altra origine dati. La clonazione consente di configurare facilmente più istanze dello stesso tipo di dispositivo.' 
+---
+= Clonazione di un'origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzando la funzione di clonazione, è possibile aggiungere rapidamente un'origine dati con le stesse credenziali e attributi di un'altra origine dati. La clonazione consente di configurare facilmente più istanze dello stesso tipo di dispositivo.
+
+
+
+== Fasi
+
+. Nella barra degli strumenti Insight, fare clic su *Admin*.
++
+Viene visualizzato l'elenco origini dati.
+
+. Evidenziare l'origine dati con le informazioni di configurazione che si desidera utilizzare per la nuova origine dati.
+. A destra dell'origine dati evidenziata, fare clic sull'icona *Clone*.
++
+La finestra di dialogo Clone this data source (Clona questa origine dati) elenca le informazioni da fornire per l'origine dati selezionata, come mostrato in questo esempio per un'origine dati NetApp:
+
++
+image::../media/oci-7-clone-gif.gif[Clonare questa finestra di dialogo origine dati]
+
+. Inserire le informazioni richieste nei campi; tali informazioni non possono essere copiate dall'origine dati esistente.
+. Fare clic su *Clone*.
+
+
+
+
+== Risultati
+
+L'operazione di clonazione copia tutti gli altri attributi e impostazioni per creare la nuova origine dati.

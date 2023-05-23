@@ -1,0 +1,39 @@
+---
+permalink: config-admin/adding-or-removing-business-entities-from-multiple-assets.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: È possibile assegnare o rimuovere entità aziendali da più risorse utilizzando una query invece di dover assegnarle o rimuoverle manualmente. 
+---
+= Assegnazione o rimozione di entità aziendali da più risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile assegnare o rimuovere entità aziendali da più risorse utilizzando una query invece di dover assegnarle o rimuoverle manualmente.
+
+
+
+== Prima di iniziare
+
+È necessario aver già creato le entità aziendali da aggiungere alle risorse desiderate.
+
+
+
+== Fasi
+
+. Creare una nuova query o aprire una query esistente.
+. Se lo si desidera, filtrare le risorse a cui si desidera aggiungere entità aziendali.
+. Selezionare le risorse desiderate nell'elenco o fare clic su image:../media/select-assets.gif[""] Per selezionare *tutto*.
++
+Viene visualizzato il pulsante *azioni*.
+
+. Per aggiungere un'entità aziendale alle risorse selezionate, fare clic su image:../media/actions-button.gif[""]. Se al tipo di risorsa selezionato possono essere assegnate entità aziendali, viene visualizzata la voce di menu *Add Business Entity* (Aggiungi entità aziendale). Selezionare questa opzione.
+. Selezionare l'entità aziendale desiderata dall'elenco e fare clic su *Save* (Salva).
++
+Qualsiasi nuova entità aziendale assegnata ha la priorità su tutte le entità aziendali già assegnate alla risorsa. L'assegnazione delle applicazioni alle risorse sovrascriverà anche le entità aziendali assegnate nello stesso modo. L'assegnazione di entità aziendali a come risorsa può anche sovrascrivere qualsiasi applicazione assegnata a tale risorsa.
+
+. Per rimuovere un'entità aziendale assegnata alle risorse, fare clic su image:../media/actions-button.gif[""] E selezionare *Remove Business Entity*.
+. Selezionare l'entità aziendale desiderata dall'elenco e fare clic su *Delete* (Elimina).
+

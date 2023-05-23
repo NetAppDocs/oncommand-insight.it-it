@@ -1,0 +1,35 @@
+---
+permalink: config-admin/controlling-data-source-polling.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo aver apportato una modifica a un"origine dati, potrebbe essere necessario eseguire immediatamente il polling per verificare le modifiche oppure posticipare la raccolta di dati su un"origine dati per uno, tre o cinque giorni mentre si lavora su un problema.' 
+---
+= Controllo del polling dell'origine dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver apportato una modifica a un'origine dati, potrebbe essere necessario eseguire immediatamente il polling per verificare le modifiche oppure posticipare la raccolta di dati su un'origine dati per uno, tre o cinque giorni mentre si lavora su un problema.
+
+
+
+== Fasi
+
+. Fare clic su *Admin* e passare alla vista elenco origine dati
+. Selezionare l'origine dati per cui si desidera controllare il polling.
+. Fare clic sul collegamento relativo al nome dell'origine dati.
+. Nella pagina di riepilogo dell'origine dati, controllare le informazioni e fare clic su una di queste due opzioni di polling:
++
+** *Eseguire nuovamente il polling* per forzare l'origine dati a raccogliere immediatamente i dati.
+** *Posticipare* e selezionare la durata del ritardo di polling da 3, 7 o 30 giorni.
+
+
+
+
+
+
+== Al termine
+
+Se la raccolta dati è stata posticipata su un'origine dati e si desidera riavviare la raccolta, fare clic su *Riprendi* nella pagina di riepilogo.

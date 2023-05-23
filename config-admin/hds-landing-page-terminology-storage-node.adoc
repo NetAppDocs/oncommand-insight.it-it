@@ -1,0 +1,24 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse dei nodi di storage HDS. 
+---
+= Nodo storage HDS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termini applicabili a oggetti o riferimenti che si possono trovare nelle landing page delle risorse dei nodi di storage HDS.
+
+
+
+== Terminologia dei nodi di storage HDS
+
+I seguenti termini si applicano agli oggetti o ai riferimenti che si possono trovare nelle landing page delle risorse dei nodi di storage HDS. Molti di questi termini si applicano anche ad altri data collezionisti.
+
+* Name (Nome) - il nome del Front-End Director (FED) o dell'adattatore di canale sugli array monolitici o il nome del controller su un array modulare. Un determinato array HDS avrà 2 o più nodi di storage
+* Volumes (volumi) - la tabella Volume mostra qualsiasi volume mappato a qualsiasi porta di proprietà di questo nodo di storage
+
