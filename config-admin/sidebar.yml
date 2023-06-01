@@ -455,6 +455,8 @@ entries:
         url: "/config-admin/hds-landing-page-terminology-storage-pool.html"
       - title: Nodo storage HDS
         url: "/config-admin/hds-landing-page-terminology-storage-node.html"
+    - title: Centro operativo HDS
+      url: "/collector_hds_ops_center.html"
     - title: Origine dati HDS NAS (HNAS)
       url: "/config-admin/hds-hnas-data-source.html"
     - title: Origine dati HP CommandView AE
