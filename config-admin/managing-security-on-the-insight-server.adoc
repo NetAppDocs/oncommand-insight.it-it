@@ -28,9 +28,14 @@ Si utilizza `securityadmin` tool per gestire la sicurezza:
 == Fasi
 
 . Eseguire un accesso remoto al server Insight.
-. Avviare lo strumento di amministrazione della protezione in modalità interattiva: `securityadmin -i`
+. Avviare lo strumento di amministrazione della protezione in modalità interattiva:
++
+** Finestre - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux - `/bin/oci-securityadmin.sh -i`
 +
 Il sistema richiede le credenziali di accesso.
+
+
 
 . Immettere il nome utente e la password di un account con credenziali "`Admin`".
 . Selezionare *Server*.
@@ -55,8 +60,6 @@ Ripristina il backup zip del vault creato. Una volta ripristinato, tutte le pass
 [NOTE]
 ====
 Il ripristino può essere utilizzato per sincronizzare password e chiavi su più server, ad esempio: - Modificare la chiave di crittografia del server su un server - creare un backup del vault - ripristinare il backup del vault sul secondo server
-
-+
 
 ====
 ** *Cambia chiave di crittografia*
@@ -85,22 +88,23 @@ Modificare la password per gli account interni utilizzati da Insight. Vengono vi
 
 
 
-+
+
+
 [NOTE]
 ====
 Alcuni account devono essere sincronizzati quando si modificano le password. Ad esempio, se si modifica la password per l'utente di "acquisizione" sul server, è necessario modificare la password per l'utente di "acquisizione" su LAU, RAU e DWH in modo che corrisponda. Inoltre, quando si modificano le password, è necessario eseguire il backup della nuova configurazione di protezione in modo da poterla ripristinare dopo un aggiornamento o un'installazione.
 
 ====
-+
-** *Ripristina impostazioni predefinite*
+* *Ripristina impostazioni predefinite*
 +
 Ripristina i valori predefiniti delle chiavi e delle password. I valori predefiniti sono quelli forniti durante l'installazione.
 
-** *Esci*
+* *Esci*
 +
 Uscire da `securityadmin` tool.
 
++
+.. Scegliere l'opzione che si desidera modificare e seguire le istruzioni.
 
 
-. Scegliere l'opzione che si desidera modificare e seguire le istruzioni.
 

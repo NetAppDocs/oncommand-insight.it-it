@@ -25,10 +25,6 @@ Si utilizza `securityadmin` tool per gestire la sicurezza:
 
 Uno scenario per l'aggiornamento della configurazione di sicurezza per LAU, RAU, è quello di aggiornare la password utente di 'acquisizione' quando la password per quell'utente è stata modificata sul server. Tutti i sistemi Raus e LAU utilizzano la stessa password dell'utente di 'acquisizione' del server per comunicare con il server.
 
-[NOTE]
-====
-
-====
 L'utente di "acquisizione" esiste solo sul server Insight. RAU o LAU accedono come tale utente quando si connettono al server.
 
 Per gestire le opzioni di sicurezza su una RAU, attenersi alla procedura riportata di seguito:
@@ -38,9 +34,14 @@ Per gestire le opzioni di sicurezza su una RAU, attenersi alla procedura riporta
 == Fasi
 
 . Eseguire un accesso remoto al server che esegue RAU
-. Avviare lo strumento di amministrazione della protezione in modalità interattiva: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
+. Avviare lo strumento di amministrazione della protezione in modalità interattiva:
++
+** Finestre - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux - `/bin/oci-securityadmin.sh -i`
 +
 Il sistema richiede le credenziali di accesso.
+
+
 
 . Immettere il nome utente e la password di un account con credenziali "`Admin`".
 +
@@ -64,8 +65,6 @@ Ripristina il backup zip del vault creato. Una volta ripristinato, tutte le pass
 [NOTE]
 ====
 Il ripristino può essere utilizzato per sincronizzare password e chiavi su più server, ad esempio: - Modificare le chiavi di crittografia su un server - creare un backup del vault - ripristinare il backup del vault sul secondo server
-
-+
 
 ====
 ** *Modifica delle chiavi di crittografia*

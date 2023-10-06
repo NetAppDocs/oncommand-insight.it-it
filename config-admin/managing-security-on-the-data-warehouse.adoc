@@ -28,9 +28,14 @@ Si utilizza `securityadmin` tool per gestire la sicurezza:
 == Fasi
 
 . Eseguire un login remoto al server Data Warehouse.
-. Avviare lo strumento di amministrazione della protezione in modalità interattiva: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
+. Avviare lo strumento di amministrazione della protezione in modalità interattiva:
++
+** Finestre - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux - `/bin/oci-securityadmin.sh -i`
 +
 Il sistema richiede le credenziali di accesso.
+
+
 
 . Immettere il nome utente e la password di un account con credenziali "`Admin`".
 +

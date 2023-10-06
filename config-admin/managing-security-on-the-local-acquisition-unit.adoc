@@ -34,9 +34,14 @@ Si utilizza `securityadmin` tool per gestire la sicurezza:
 == Fasi
 
 . Eseguire un accesso remoto al server Insight.
-. Avviare lo strumento di amministrazione della protezione in modalità interattiva (-i).
+. Avviare lo strumento di amministrazione della protezione in modalità interattiva:
++
+** Finestre - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux - `/bin/oci-securityadmin.sh -i`
 +
 Il sistema richiede le credenziali di accesso.
+
+
 
 . Immettere il nome utente e la password di un account con credenziali "`Admin`".
 . Selezionare *Local Acquisition Unit* (unità di acquisizione locale) per riconfigurare la configurazione di sicurezza dell'unità di acquisizione locale.
@@ -61,8 +66,6 @@ Ripristina il backup zip del vault creato. Una volta ripristinato, tutte le pass
 [NOTE]
 ====
 Il ripristino può essere utilizzato per sincronizzare password e chiavi su più server, ad esempio: - Modificare le chiavi di crittografia sul LAU - creare un backup del vault - ripristinare il backup del vault su ciascuno dei Raus
-
-+
 
 ====
 ** *Modifica delle chiavi di crittografia*
