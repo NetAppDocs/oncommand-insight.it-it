@@ -165,7 +165,9 @@ Non ci sono spazi tra le opzioni e i relativi valori.
 ====
 Le seguenti parole chiave sono riservate e impediscono agli utenti di specificarle come nomi di annotazione: - Applicazione - priorità_applicazione - tenant - linea_di_business - unità_business - errori di progetto vengono generati se si tenta di importare un tipo di annotazione utilizzando una delle parole chiave riservate. Se i nomi delle annotazioni sono stati creati utilizzando queste parole chiave, è necessario modificarli in modo che lo strumento di importazione funzioni correttamente.
 
+====
 +
 
-====
+NOTE: L'utilità di importazione delle annotazioni richiede Java 8 o Java 11. Assicurarsi che uno di questi sia installato prima di eseguire l'utilità di importazione. Si consiglia di utilizzare l'ultima versione di OpenJDK 11.
+
 

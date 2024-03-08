@@ -37,7 +37,7 @@ Viene visualizzata la finestra di dialogo Add Annotation (Aggiungi annotazione).
 
 . Fare clic su *Save* (Salva).
 +
-L'annotazione viene assegnata alla risorsa. È possibile filtrare le risorse in un secondo momento mediante un'annotazione utilizzando una query. Se si desidera raggruppare le risorse in base alle annotazioni, è necessario utilizzare l'interfaccia utente Java.
+L'annotazione viene assegnata alla risorsa. È possibile filtrare le risorse in un secondo momento mediante un'annotazione utilizzando una query.
 
 . Se si desidera modificare il valore dell'annotazione dopo l'assegnazione, fare clic su image:../media/change-annotation-value.gif[""] e selezionare un valore diverso.
 +

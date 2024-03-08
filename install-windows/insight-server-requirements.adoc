@@ -2,7 +2,7 @@
 permalink: install-windows/insight-server-requirements.html 
 sidebar: sidebar 
 keywords: redhat 
-summary: Si consiglia di utilizzare un server dedicato. Non installare Insight su un server in cui sono installate altre applicazioni. Sono supportati server fisici e virtuali, a condizione che i requisiti del prodotto siano soddisfatti. 
+summary: 'Requisiti per l"installazione del componente del server OnCommand Insight.' 
 ---
 = Requisiti di Insight Server
 :allow-uri-read: 
@@ -66,7 +66,7 @@ Prima di installare o aggiornare Insight, si consiglia di contattare il Sales En
  a| 
 Sistema operativo
  a| 
-Un computer con Microsoft Windows Server 2012, 2012 R2, 2016 o 2019 a 64 bit con il service pack più recente.
+Un computer con Microsoft Windows Server 2016, 2019 o 2022 a 64 bit con il Service Pack più recente.
 
 Il file system resiliente (REF) introdotto con Windows Server 2012 non è compatibile con OnCommand Insight. L'installazione di OnCommand Insight in Windows è supportata solo sul file system NTFS.
 

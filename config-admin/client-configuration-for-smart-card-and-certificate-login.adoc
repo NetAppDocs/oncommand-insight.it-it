@@ -39,32 +39,3 @@ Di seguito sono riportati i requisiti di configurazione del client più comuni:
 * Modifica del browser IE (vedere http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf[])
 * Modifica del browser Firefox (vedere https://militarycac.com/firefox2.htm[])
 
-
-Ulteriori passaggi per la configurazione includono quanto segue:
-
-
-
-== Fasi
-
-. Disattivare le finestre di dialogo non necessarie quando si avvia il client Java:
-+
-.. Aprire il pannello di controllo "`Java`".
-.. Selezionare la scheda "`Avanzate`".
-.. Selezionare "`Advanced Security Settings`" (Impostazioni di protezione avanzate).
-.. Deselezionare l'opzione "`Usa certificati e chiavi nel keystore del browser`".
-
-
-. Importare certificati soft nei certificati personali di un utente utilizzando il browser Chrome:
-+
-.. Accedere a "`Advanced Settings`" (Impostazioni avanzate).
-.. Seleziona "`Manage Certificates`"
-.. Selezionare la scheda "`Personal" Certificates`".
-.. Selezionare "`Importa...`".
-.. Scegliere il file .p12.
-.. Completare la procedura guidata, assicurandosi di inserire nel campo della password la password utilizzata per creare il certificato.
-
-
-+
-Per configurare i browser Internet Explorer e Firefox sono necessari passaggi simili.
-
-

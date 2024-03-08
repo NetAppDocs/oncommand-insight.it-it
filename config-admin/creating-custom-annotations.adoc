@@ -94,12 +94,6 @@ Le annotazioni vengono visualizzate nell'elenco della pagina Annotazioni.
 
 
 
-
-
-== Al termine
-
-Nell'interfaccia utente Web, l'annotazione è immediatamente disponibile per l'utilizzo. Per utilizzare l'annotazione nel client Java, è necessario riavviare qualsiasi client Java in esecuzione prima di poter applicare l'annotazione. Se si aggiungono o modificano i valori delle annotazioni o si elimina un tipo di annotazione, non è necessario riavviare il client Java.
-
 *Informazioni correlate*
 
 link:importing-and-exporting-user-data.md#["Importazione ed esportazione dei dati utente"]

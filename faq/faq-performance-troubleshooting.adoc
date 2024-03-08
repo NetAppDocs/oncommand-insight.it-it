@@ -17,7 +17,7 @@ Questa domanda frequente risponde alle domande più frequenti sulla risoluzione 
 
 == Come posso creare un elenco di tutte le risorse più utili del mio ambiente?
 
-Gli analytics di correlazione di OCI aiutano a identificare le risorse avide e degradate per un percorso di servizio specifico. L'analisi generata dalla funzione di correlazione viene eseguita in tempo reale durante la visualizzazione di ciascun oggetto. L'analisi fornita riduce notevolmente il tempo necessario per la risoluzione dei problemi di performance e l'identificazione della causa principale. L'esplorazione delle violazioni generate delle policy di performance definite è un punto di partenza per scoprire risorse avide o degradate. Le funzionalità di rilevamento delle anomalie di OCI possono anche essere utilizzate come approccio più proattivo per identificare le risorse avide o degradate di un'infrastruttura applicativa prima che diventino interruzioni del servizio. Widget e dashboard che utilizzano le più recenti funzionalità di query consentono di filtrare, ordinare e visualizzare le risorse con IOPS (avidi), utilizzo o latenza superiori al previsto.
+Gli analytics di correlazione di OCI aiutano a identificare le risorse avide e degradate per un percorso di servizio specifico. L'analisi generata dalla funzione di correlazione viene eseguita in tempo reale durante la visualizzazione di ciascun oggetto. L'analisi fornita riduce notevolmente il tempo necessario per la risoluzione dei problemi di performance e l'identificazione della causa principale. L'esplorazione delle violazioni generate delle policy di performance definite è un punto di partenza per scoprire risorse avide o degradate. Widget e dashboard che utilizzano le più recenti funzionalità di query consentono di filtrare, ordinare e visualizzare le risorse con IOPS (avidi), utilizzo o latenza superiori al previsto.
 
 
 
@@ -28,8 +28,6 @@ Sì. Il troubleshooting delle performance in OCI può essere affrontato in diver
 La dashboard delle violazioni di OCI consente agli utenti di assegnare priorità alle attività in base al numero di eventi, alla durata e all'ora del giorno. Un esempio di diversi tipi di avviso potrebbe essere latenza, IOPS, utilizzo, severità, business unit o persino applicazione associata.
 
 L'analisi della correlazione di OCI aiuta gli amministratori a confrontare gli oggetti associati alla risorsa interessata e a determinarne l'impatto su IOPS, latenza, utilizzo, CPU e crediti BB.
-
-Gli ultimi progressi di OCI nel rilevamento delle anomalie e nel monitoraggio ethernet offrono un approccio più aggressivo e proattivo per rilevare comportamenti delle risorse devianti prima che diventino interruzioni del servizio o interruzioni.
 
 La tecnologia Query di OCI e le dashboard dei widget consentono di individuare le specifiche in viste organizzate che riguardano le aree problematiche all'interno del data center.
 

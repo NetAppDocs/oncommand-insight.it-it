@@ -15,8 +15,6 @@ OnCommand Insight supporta l'utilizzo di smart card (CAC) e certificati per aute
 
 Dopo aver configurato il sistema per il supporto di CAC e certificati, la navigazione verso una nuova sessione di OnCommand Insight comporta la visualizzazione di una finestra di dialogo nativa che fornisce all'utente un elenco di certificati personali tra cui scegliere. Questi certificati vengono filtrati in base al set di certificati personali emessi dalle CA attendibili dal server OnCommand Insight. La maggior parte delle volte, esiste una singola scelta. Per impostazione predefinita, Internet Explorer salta questa finestra di dialogo se esiste una sola scelta.
 
-Per il client Java, viene visualizzata una finestra di dialogo personalizzata con tutti i certificati personali, indipendentemente dall'emittente.
-
 [NOTE]
 ====
 Per gli utenti CAC, le smart card contengono più certificati, uno solo dei quali può corrispondere alla CA attendibile. Il certificato CAC per `identification` deve essere utilizzato.

@@ -45,28 +45,6 @@ Stato dell'unità di acquisizione locale
 
 
  a| 
-Motore di rilevamento delle anomalie
- a| 
-Capacità del motore
- a| 
-Numero di applicazioni monitorate per il rilevamento delle anomalie
- a| 
-Numero e percentuale di applicazioni monitorate su 48 applicazioni possibili.
-
-
-
- a| 
-Motore di rilevamento delle anomalie
- a| 
-Stato del motore
- a| 
-Stato del motore di rilevamento delle anomalie
- a| 
-"`OK`" se non viene rilevato alcun errore, altrimenti visualizza le informazioni relative agli errori rilevati. Vedere `prelert.log` file per ulteriori informazioni.
-
-
-
- a| 
 DWH
  a| 
 Backup
@@ -263,12 +241,4 @@ Stato del backup settimanale
 "`OK`" se è attivato il backup settimanale, altrimenti viene visualizzato "`Weekly backup is not enabled`" (il backup settimanale non è abilitato).
 
 |===
-+
-[NOTE]
-====
-Se il motore di rilevamento delle anomalie visualizza un errore, consultare `prelert.log` File nel seguente percorso per ulteriori informazioni: - Windows: `disk drive:\install directory\SANscreen\Wildfly\Standalone\Logs`- Linux: `/var/log/netapp/oci/wildfly/`
-
-+
-
-====
 

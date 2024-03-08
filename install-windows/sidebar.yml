@@ -22,10 +22,6 @@ entries:
     url: "/install-windows/data-warehouse-and-reporting-server-requirements.html"
   - title: Requisiti del server Remote Acquisition Unit
     url: "/install-windows/remote-acquisition-unit-server-requirements.html"
-  - title: Requisiti di rilevamento delle anomalie
-    url: "/install-windows/anomaly-detection-requirements.html"
-  - title: Requisiti dell'interfaccia utente di Insight Java
-    url: "/install-windows/insight-java-ui-requirements.html"
   - title: Browser supportati da OnCommand Insight
     url: "/install-windows/insight-browser-support.html"
 - title: Istruzioni di installazione di Insight
@@ -49,10 +45,6 @@ entries:
       url: "/install-windows/verifying-the-rau-service.html"
     - title: Convalida dell'installazione dell'unità di acquisizione remota
       url: "/install-windows/validating-the-rau-installation.html"
-  - title: Installazione del software di rilevamento delle anomalie
-    url: "/install-windows/installing-the-anomaly-detection-software.html"
-  - title: Installazione di un'unità di monitoraggio Ethernet
-    url: "/install-windows/installing-an-ethernet-monitoring-unit-linux.html"
   - title: Verifica dell'installazione
     url: "/install-windows/checking-the-installation.html"
     entries:
@@ -112,8 +104,6 @@ entries:
       url: "/install-windows/back-up-the-security-configuration.html"
     - title: Aggiornamento dei server delle unità di acquisizione remota
       url: "/install-windows/upgrading-remote-acquisition-servers.html"
-    - title: Aggiornamento del motore di rilevamento delle anomalie
-      url: "/install-windows/upgrading-the-anomaly-detection-engine.html"
   - title: Completamento delle attività post-aggiornamento
     url: "/install-windows/completing-post-upgrade-tasks.html"
     entries:
@@ -150,5 +140,3 @@ entries:
     url: "/install-windows/uninstalling-the-data-warehouse-software.html"
   - title: Disinstallazione del software dell'unità di acquisizione remota
     url: "/install-windows/uninstalling-the-remote-acquisition-unit-software.html"
-  - title: Disinstallazione del motore di rilevamento delle anomalie
-    url: "/install-windows/uninstalling-the-anomaly-detection-engine-linux.html"

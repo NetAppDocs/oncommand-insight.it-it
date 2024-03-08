@@ -59,29 +59,7 @@ Per le istruzioni più aggiornate sul CAC e sul certificato, consulta i seguenti
 Ripetere questo passaggio per tutti i certificati intermedi.
 
 . Specificare il dominio in LDAP da associare a questo esempio.
-. Sul server OnCommand Insight, la `wildfly/standalone/configuration/standalone-full.xml` Il file deve essere modificato aggiornando verify-client su "REQUESTED" in ``/subsystem=undertow/server=default-server/https-listener=default-https``Per attivare CAC. Eseguire il comando appropriato:
-+
-|===
 
-
-| SISTEMA OPERATIVO | Script 
-
-
- a| 
-Windows
- a| 
-<install dir>/SANscreen/wildfly/bin/enableCACforRemoteEJB.bat
-
-
-
- a| 
-Linux
- a| 
-/Opt/netapp/oci/wildfly/bin/enableCACforRemoteEJB.sh
-
-|===
-+
-Dopo aver eseguito lo script, attendere il completamento del ricaricamento del server wildfly prima di passare al punto successivo.
 
 . Riavviare il server.
 

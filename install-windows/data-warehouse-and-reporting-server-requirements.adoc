@@ -60,7 +60,7 @@ Disco rigido da 300 GB 8 core
  a| 
 Sistema operativo
  a| 
-Computer che esegue Microsoft Windows Server 2012, 2012 R2, 2016 o 2019 a 64 bit con il service pack più recente.
+Un computer con Microsoft Windows Server 2016, 2019 o 2022 a 64 bit con il Service Pack più recente.
 
 
 

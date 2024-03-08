@@ -34,12 +34,6 @@ Se si desidera associare l'applicazione a un'entità aziendale, è necessario ch
 +
 Dopo aver definito un'applicazione, la pagina applicazioni visualizza il nome dell'applicazione, la relativa priorità e, se applicabile, l'entità aziendale associata all'applicazione.
 
-+
-[NOTE]
-====
-Se è installato il motore di rilevamento delle anomalie, la pagina del pannello delle applicazioni mostra anche un punteggio di anomalia per l'applicazione. Per ulteriori informazioni sull'installazione e la configurazione del motore di rilevamento delle anomalie, consultare la _Guida alla configurazione e all'amministrazione di OnCommand Insight_.
-
-====
 . Fare clic su *Aggiungi*.
 +
 Viene visualizzata la finestra di dialogo Add Application (Aggiungi applicazione).

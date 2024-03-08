@@ -27,7 +27,7 @@ Assicurarsi che le annotazioni inserite in OnCommand Insight siano incluse nel d
 +
 A tale scopo, è possibile eseguire manualmente l'opzione *Troubleshooting* > *Force Update of Annotations for Data Warehouse* (risoluzione dei problemi* > *Force Update of Annotations for Data Warehouse*) o attendere il successivo processo di esecuzione dei dati temporanei pianificato. Quando si forza l'aggiornamento delle annotazioni, si forza il server OnCommand Insight a calcolare e posizionare i dati transitori (come i valori delle annotazioni) nelle tabelle del database in modo che il processo ETL del data warehouse possa leggere i dati. L'aggiornamento dei dati delle annotazioni avviene automaticamente ogni quindici minuti; tuttavia, è possibile forzarne l'esecuzione più frequente.
 
-* Quindi, è possibile importare le annotazioni nel Data Warehouse utilizzando l'opzione Data Warehouse**Annotations**.
+* È quindi possibile importare le annotazioni in Data Warehouse utilizzando l'opzione **Annotazioni** Data Warehouse.
 * Se si desidera includere annotazioni nei report creati utilizzando gli strumenti di creazione dei report del portale di reporting di OnCommand Insight, è necessario aggiornare il modello di metadati dei report di OnCommand Insight.
 
 

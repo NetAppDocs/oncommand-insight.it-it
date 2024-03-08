@@ -102,7 +102,7 @@ Applicazione
  a| 
 Sì
  a| 
-Nessun grafico o dati sulle performance; nessun widget correlato al rilevamento delle anomalie
+Nessun grafico o dati sulle performance
 
 
 

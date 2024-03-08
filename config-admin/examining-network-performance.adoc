@@ -39,7 +39,6 @@ I server Insight possono avere firewall software installati. I "fori" da aprire 
 * Unità di acquisizione remota che cercano di connettersi al server Insight
 * Server OCI DWH con connettori per questo server Insight.
 * Qualsiasi interazione programmatica con l'API REST Insight
-* Modulo di rilevamento delle anomalie che cerca di reperire i dati delle performance Insight per il rendering delle informazioni sulle anomalie
 
 
 Il nostro consiglio generale per chiunque desideri implementare il firewalling a livello di host del server Insight è consentire l'accesso HTTPS a tutti i blocchi IP della rete aziendale.

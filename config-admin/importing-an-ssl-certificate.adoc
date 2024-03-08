@@ -125,7 +125,7 @@ Ciò significa che se gli amministratori di Active Directory spingono i certific
 
 ** Java e Mozilla Firefox dispongono di archivi di certificati personalizzati.
 +
-Se gli amministratori di sistema non automatizzano l'acquisizione dei certificati CA negli archivi di certificati attendibili di queste applicazioni, utilizzando il client Insight Java o il browser Firefox potrebbe continuare a generare avvisi di certificato a causa di un certificato non attendibile, anche quando il certificato autofirmato è stato sostituito. L'installazione della catena di certificati della tua organizzazione nel trustore è un requisito aggiuntivo.
+Se gli amministratori di sistema non automatizzano l'acquisizione dei certificati CA negli archivi di certificati attendibili di queste applicazioni, l'utilizzo del browser Firefox potrebbe continuare a generare avvisi sui certificati a causa di un certificato non attendibile, anche quando il certificato autofirmato è stato sostituito. L'installazione della catena di certificati della tua organizzazione nel trustore è un requisito aggiuntivo.
 
 
 

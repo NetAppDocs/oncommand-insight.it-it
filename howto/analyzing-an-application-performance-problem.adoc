@@ -35,7 +35,7 @@ Quando si esegue una ricerca, è possibile aggiungere un descrittore di oggetti 
 ====
 . Quando si seleziona "Exchange 2016" dai risultati della ricerca, viene visualizzata la pagina di destinazione dell'applicazione.
 +
-image::../media/exch2016-land-page.gif[exch2016 pagina iniziale]
+image::../media/exch2016-land-page.png[exch2016 pagina iniziale]
 
 +
 Nella landing page dell'applicazione sono disponibili le seguenti informazioni:

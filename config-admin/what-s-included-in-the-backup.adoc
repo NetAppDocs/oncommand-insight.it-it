@@ -20,13 +20,10 @@ Il backup settimanale o on-demand include quanto segue:
 * Origini dati e impostazioni dell'origine dati
 * Pacchetti di integrazione
 * Unità di acquisizione remota
-* Unità di monitoraggio Ethernet
 * Impostazioni ASUP/proxy
 * Impostazioni della posizione di backup
 * Impostazioni della posizione di archiviazione
 * Impostazioni di notifica
-* Punteggi e dispositivi di rilevamento delle anomalie
-* Impostazioni dell'applicazione per il rilevamento delle anomalie
 * Utenti
 * Policy sulle performance
 * Entità aziendali e applicazioni
