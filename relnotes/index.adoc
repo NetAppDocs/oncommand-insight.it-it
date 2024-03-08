@@ -12,4 +12,4 @@ summary:
 
 Le note di rilascio di OnCommand Insight sono disponibili al di fuori del Centro documentazione. Ti verrà richiesto di effettuare l'accesso utilizzando le credenziali del sito di supporto NetApp.
 
-link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2652943["Note sulla versione .PDF"^]
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2652943["Note sulla versione .PDF"^] (si apre in una nuova finestra)
