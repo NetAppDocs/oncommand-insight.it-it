@@ -44,4 +44,8 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2683210["Avviso per OnCommand Insight 7.3"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2887138["Avviso per OnCommand Insight 7.3.15"^]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2882721["Avviso per OnCommand Insight 7.3.14"^]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2881199["Avviso per OnCommand Insight 7.3.13"^]
