@@ -1,0 +1,409 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_docker.html 
+keywords: telegraf, installation, install, docker 
+summary: Configurazione del data collector Docker 
+---
+= Docker Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilizza questo data collector per raccogliere le metriche da Docker.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegli Docker.
++
+Se non è stato configurato un agente per la raccolta, viene richiesto di link:task_config_telegraf_agent.html["installare un agente"] nel tuo ambiente.
+
++
+Se si dispone di un agente già configurato, selezionare il sistema operativo o la piattaforma appropriati e fare clic su *continua*.
+
+. Seguire le istruzioni nella schermata Configurazione Docker per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:DockerDCConfigLinux.png["Configurazione di Docker"]
+
+
+
+== Setup (Configurazione)
+
+Il plug-in di input Telegraf per Docker raccoglie le metriche attraverso un socket UNIX specificato o un endpoint TCP.
+
+
+
+=== Compatibilità
+
+La configurazione è stata sviluppata rispetto alla versione 1.12.6 di Docker.
+
+
+
+=== Configurazione
+
+
+
+=== Accesso a Docker tramite un socket UNIX
+
+Se l'agente Telegraf è in esecuzione su baretal, aggiungere l'utente telegraf Unix al gruppo docker Unix eseguendo quanto segue:
+
+ sudo usermod -aG docker telegraf
+Se l'agente Telegraf viene eseguito all'interno di un pod Kubernetes, esporre il socket Unix di Docker mappando il socket nel pod come volume e montandolo su /var/run/docker.sock.  Ad esempio, aggiungere quanto segue al PodSpec:
+
+[listing]
+----
+volumes:
+...
+- name: docker-sock
+hostPath:
+path: /var/run/docker.sock
+type: File
+----
+Quindi, aggiungere quanto segue al contenitore:
+
+[listing]
+----
+volumeMounts:
+...
+- name: docker-sock
+mountPath: /var/run/docker.sock
+----
+Si noti che il programma di installazione di Cloud Insights fornito per la piattaforma Kubernetes si occupa automaticamente di questa mappatura.
+
+
+
+=== Accedere a Docker tramite un endpoint TCP
+
+Per impostazione predefinita, Docker utilizza la porta 2375 per l'accesso non crittografato e la porta 2376 per l'accesso crittografato.
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Motore Docker | Namespace
+Motore Docker | Nome del nodo
+IP nodo
+UUID nodo
+Sistema operativo del nodo
+Cluster Kubernetes
+Versione di Docker
+Unità | Memoria
+Container
+Contenitori in pausa
+Esecuzione di container
+Contenitori arrestati
+CPU
+Vai routine
+Immagini
+Eventi ascoltatori
+Descrittori file utilizzati
+Dati disponibili
+Totale dati
+Dati utilizzati
+Metadati disponibili
+Totale metadati
+Metadati utilizzati
+Dimensione del blocco della piscina 
+
+
+| Container Docker | Namespace
+Nome container
+Motore Docker | Hash dei container Kubernetes
+Porte del container Kubernetes
+Conteggio dei riavvii del container Kubernetes
+Percorso del messaggio di terminazione del contenitore Kubernetes
+Policy sul messaggio di terminazione dei container Kubernetes
+Periodo di tolleranza alla terminazione del pod Kubernetes
+Immagine contenitore
+Stato contenitore
+Versione contenitore
+Nome del nodo
+Percorso di log dei container Kubernetes
+Nome del container Kubernetes
+Tipo di Docker su Kubernetes
+Nome del pod Kubernetes
+Namespace del pod Kubernetes
+UID pod Kubernetes
+ID Kubernetes Sandbox
+IP nodo
+UUID nodo
+Versione di Docker
+Configurazione io di Kubernetes rilevata
+Origine configurazione i/o Kubernetes
+OpenShift io SCC
+Descrizione di Kubernetes
+Nome visualizzato di Kubernetes
+Tag OpenShift
+Servizio Kompose
+Hash modello pod
+Hash revisione centralina
+Generazione modello pod
+Licenza
+Data di creazione dello schema
+Licenza schema
+Nome schema
+URL schema
+URL VCS dello schema
+Fornitore di schemi
+Versione dello schema
+Versione schema
+Manutentore
+Pod cliente
+Nome del Pod StatefulSet di Kubernetes
+Tenant
+Console Web
+Architettura
+URL di origine autorevole
+Data di costruzione
+RH Build host
+Componente DX
+Ambito di distribuzione
+Installare
+Rilasciare
+Eseguire
+Riepilogo
+Disinstallare
+Rif. VCS
+Tipo VCS
+Vendor
+Versione
+Stato di salute
+ID contenitore | Memoria anonima attiva
+File attivo della memoria
+Cache di memoria
+Limite gerarchico della memoria
+Memoria inattiva Anonimo
+Memoria file inattivo
+Limite di memoria
+File mappato in memoria
+Utilizzo massimo della memoria
+Errore pagina di memoria
+Errore principale pagina di memoria
+Memoria paginata in
+Memoria esaurita
+Dimensione set residente memoria
+Memoria residente dimensione set enorme
+Memoria totale anonimato attivo
+Memoria totale file attivo
+Memoria cache totale
+Memoria totale anonimato inattivo
+Memoria totale file inattivo
+Memoria file mappato totale
+Errore di pagina totale della memoria
+Errore principale pagina totale memoria
+Memoria totale paging in
+Memoria totale esaurita
+Memoria dimensione totale set residente
+Memoria dimensione totale set residente enorme
+Totale memoria non recuperabile
+Memoria non recuperabile
+Utilizzo della memoria
+Percentuale di utilizzo della memoria
+Codice di uscita
+OOM ucciso
+PID
+Iniziato alle
+Streak non funzionante 
+
+
+| Io blocco container Docker | Namespace
+Nome container
+Dispositivo
+Motore Docker | Hash dei container Kubernetes
+Porte del container Kubernetes
+Conteggio dei riavvii del container Kubernetes
+Percorso del messaggio di terminazione del contenitore Kubernetes
+Policy sul messaggio di terminazione dei container Kubernetes
+Periodo di tolleranza alla terminazione del pod Kubernetes
+Immagine contenitore
+Stato contenitore
+Versione contenitore
+Nome del nodo
+Percorso di log dei container Kubernetes
+Nome del container Kubernetes
+Tipo di Docker su Kubernetes
+Nome del pod Kubernetes
+Namespace del pod Kubernetes
+UID pod Kubernetes
+ID Kubernetes Sandbox
+IP nodo
+UUID nodo
+Versione di Docker
+Configurazione di Kubernetes rilevata
+Origine configurazione Kubernetes
+SCC OpenShift
+Descrizione di Kubernetes
+Nome visualizzato di Kubernetes
+Tag OpenShift
+Versione schema
+Hash modello pod
+Hash revisione centralina
+Generazione modello pod
+Servizio Kompose
+Data di creazione dello schema
+Licenza schema
+Nome schema
+Fornitore di schemi
+Pod cliente
+Nome del Pod StatefulSet di Kubernetes
+Tenant
+Console Web
+Data di costruzione
+Licenza
+Vendor
+Architettura
+URL di origine autorevole
+RH Build host
+Componente DX
+Ambito di distribuzione
+Installare
+Manutentore
+Rilasciare
+Eseguire
+Riepilogo
+Disinstallare
+Rif. VCS
+Tipo VCS
+Versione
+URL schema
+URL VCS dello schema
+Versione dello schema
+ID contenitore | Memoria ricorsiva byte del servizio io
+Lettura ricorsiva byte del servizio io
+Sincronizzazione ricorsiva dei byte del servizio io
+Totale ricusivo byte servizio io
+Io Service Bytes Recursive Write
+Io Serviced Recursive Async
+Io Serviced Recursive Read
+Sincronizzazione ricorsiva io servita
+Io servito Recursive totale
+Io Serviced Recursive Write 
+
+
+| Docker Container Network | Namespace
+Nome container
+Rete
+Motore Docker | Immagine contenitore
+Stato contenitore
+Versione contenitore
+Nome del nodo
+IP nodo
+UUID nodo
+Sistema operativo del nodo
+K8s cluster
+Versione di Docker
+ID contenitore | RX interrotta
+Byte RX
+Errori RX
+Pacchetti RX
+TX caduto
+Byte Tx
+Errori Tx
+Pacchetti Tx 
+
+
+| CPU Docker Container | Namespace
+Nome container
+CPU
+Motore Docker | Hash dei container Kubernetes
+Porte del container Kubernetes
+Conteggio dei riavvii del container Kubernetes
+Percorso del messaggio di terminazione del contenitore Kubernetes
+Policy sul messaggio di terminazione dei container Kubernetes
+Periodo di tolleranza alla terminazione del pod Kubernetes
+Configurazione di Kubernetes rilevata
+Origine configurazione Kubernetes
+SCC OpenShift
+Immagine contenitore
+Stato contenitore
+Versione contenitore
+Nome del nodo
+Percorso di log dei container Kubernetes
+Nome del container Kubernetes
+Tipo di Docker su Kubernetes
+Nome del pod Kubernetes
+Namespace del pod Kubernetes
+UID pod Kubernetes
+ID Kubernetes Sandbox
+IP nodo
+UUID nodo
+Sistema operativo del nodo
+Cluster Kubernetes
+Versione di Docker
+Descrizione di Kubernetes
+Nome visualizzato di Kubernetes
+Tag OpenShift
+Versione dello schema
+Hash modello pod
+Hash revisione centralina
+Generazione modello pod
+Servizio Kompose
+Data di creazione dello schema
+Licenza schema
+Nome schema
+Fornitore di schemi
+Pod cliente
+Nome del Pod StatefulSet di Kubernetes
+Tenant
+Console Web
+Data di costruzione
+Licenza
+Vendor
+Architettura
+URL di origine autorevole
+RH Build host
+Componente DX
+Ambito di distribuzione
+Installare
+Manutentore
+Rilasciare
+Eseguire
+Riepilogo
+Disinstallare
+Rif. VCS
+Tipo VCS
+Versione
+URL schema
+URL VCS dello schema
+Versione dello schema
+ID contenitore | Periodi di rallentamento
+Periodi di rallentamento
+Tempo di rallentamento
+Uso in modalità kernel
+Utilizzo in modalità utente
+Percentuale di utilizzo
+Sistema di utilizzo
+Totale utilizzo 
+|===
+
+
+== Risoluzione dei problemi
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Dopo aver seguito le istruzioni riportate nella pagina di configurazione, non riesco a visualizzare le metriche di Docker in Cloud Insights. | Controllare i registri dell'agente Telegraf per verificare se riporta il seguente errore:
+
+ E! Errore nel plugin [inputs.docker]: Autorizzazione negata durante il tentativo di connessione al socket del daemon Docker
+
+In caso affermativo, eseguire le operazioni necessarie per fornire all'agente Telegraf l'accesso al socket Unix Docker come specificato sopra. 
+|===
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

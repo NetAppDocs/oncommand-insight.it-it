@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_dcos.html 
+keywords: telegraf, installation, install, dcos 
+summary: configurazione dcos 
+---
+= Data Collector DC/OS
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilizza questo data collector per raccogliere metriche da DC/OS.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere *DC/OS*.
++
+Se non è stato configurato un agente per la raccolta, viene richiesto di link:task_config_telegraf_agent.html["installare un agente"] nel tuo ambiente.
+
++
+Se si dispone di un agente già configurato, selezionare il sistema operativo o la piattaforma appropriati e fare clic su *continua*.
+
+. Seguire le istruzioni nella schermata DC/OS Configuration (Configurazione DC/OS) per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+
+
+== Setup (Configurazione)
+
+Le informazioni di configurazione sono disponibili in https://docs.mesosphere.com["Documentazione DC/OS"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto | Identificatori | Attributi | Punti dati 
+
+
+| nodo_dcos | dcos_container
+dcos_app | cluster
+nome host
+percorso (solo campi del file system)
+interfaccia (solo campi di rete)
+id_contenitore
+nome_attività | system_uptime (flottante)
+cpu_core (float)
+cpu_total (a virgola mobile)
+cpu_user (mobile)
+cpu_system (float)
+cpu_idle (flottante)
+cpu_wait (mobile)
+load_1min (flottante)
+load_5min (flottante)
+load_15min (flottante)
+filesystem_capacity_total_bytes (int)
+filesystem_capacity_used_bytes (int)
+filesystem_capacity_free_bytes (int)
+filesystem_inode_total (float)
+filesystem_inode_used (float)
+filesystem_inode_free (float)
+memory_total_bytes (int)
+memory_free_bytes (int)
+memory_buffers_bytes (int)
+memory_cached_bytes (int)
+swap_total_bytes (int)
+swap_free_bytes (int)
+swap_used_bytes (int)
+network_in_bytes (int)
+network_out_bytes (int)
+network_in_packets (float)
+pacchetti_uscita_rete (float)
+network_in_declined (float)
+network_out_drop (float)
+network_in_errors (float)
+network_out_errors (float)
+conteggio_processo (a virgola mobile) 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

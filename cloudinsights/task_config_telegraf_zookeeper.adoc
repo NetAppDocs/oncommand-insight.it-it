@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_zookeeper.html 
+keywords: telegraf, installation, install, apache, zookeeper 
+summary: Configurazione del data collector di Apache Zooseeper 
+---
+= Data Collector di Zooseeper
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilizza questo data collector per raccogliere metriche da Apache Zoosekeeper.
+
+
+
+== Installazione
+
+. Da *Admin > Data Collector*, fare clic su *+Data Collector*. Scegli Apache Zookeeper.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per la raccolta o se si desidera installare un Agent per un sistema operativo o una piattaforma differente, fare clic su _Show Instructions_ (Mostra istruzioni) per espandere la link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:ZookeeperDCConfigLinux.png["Configurazione di Zoosekeeper"]
+
+
+
+== Setup (Configurazione)
+
+Almeno, è necessario consentire a Zookeeper quattro comandi server di lettere _mntr_, _srvr_ e _stat_.
+È possibile attivare questi comandi utilizzando il seguente formato: _4lw.commands.whitelist=mntr, srvr, stat_ nel file _zoo.cfg_.
+Nella configurazione potrebbero essere necessari altri comandi di quattro lettere. Vedere link:https://zookeeper.apache.org/["Zoosekeeper"] documentazione per ulteriori informazioni.
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Zoosekeeper | Namespace
+Server | Stato
+IP nodo
+Nome del nodo
+Porta | Dimensione approssimativa dei dati
+Latenza media
+Conteggio Ephemerals
+Conteggio massimo descrittore file
+Latenza massima
+Latenza minima
+Numero di connessioni Alive
+Apri conteggio descrittore file
+Richieste in sospeso
+Conteggio orologi
+Conteggio nodi Z 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

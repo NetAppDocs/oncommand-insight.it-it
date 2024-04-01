@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_postgresql.html 
+keywords: telegraf, installation, install, postgresql 
+summary: Configurazione del data collector PostgreSQL 
+---
+= PostgreSQL Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilizza questo data collector per raccogliere le metriche da PostgreSQL.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere PostgreSQL.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per la raccolta o se si desidera installare un Agent per un sistema operativo o una piattaforma differente, fare clic su _Show Instructions_ (Mostra istruzioni) per espandere la link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:PostgreSQLDCConfigLinux.png["Configurazione PostgreSQL"]
+
+
+
+== Setup (Configurazione)
+
+Le informazioni sono disponibili in link:https://www.postgresql.org/docs/["Documentazione PostgreSQL"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Server PostgreSQL | Namespace
+Database
+Server | Nome del nodo
+IP nodo | Buffer allocati
+Backend dei buffer
+Buffer sincronizzazione file backend
+Punto di controllo buffer
+Pulizia dei tamponi
+Ora di sincronizzazione checkpoint
+Tempo di scrittura punti di verifica
+Richieste di checkpoint
+Checkpoint temporizzati
+Pulizia scritta max 
+
+
+| Database PostgreSQL | Namespace
+Database
+Server | OID database
+Nome del nodo
+IP nodo | Blocca il tempo di lettura
+Blocca il tempo di scrittura
+Riscontri blocchi
+Letture a blocchi
+Conflitti
+Deadlock
+Numero cliente
+Byte file temporanei
+Numero file temporanei
+Righe eliminate
+Righe recuperate
+Righe inserite
+Righe restituite
+Righe aggiornate
+Transazioni commesse
+Transazioni con rollback 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

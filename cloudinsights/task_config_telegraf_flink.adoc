@@ -1,0 +1,264 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_flink.html 
+keywords: telegraf, installation, install, flink 
+summary: Configurazione del data collector Flink 
+---
+= Flink Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilizza questo data collector per raccogliere le metriche da Flink.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Flink.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per la raccolta o se si desidera installare un Agent per un sistema operativo o una piattaforma differente, fare clic su _Show Instructions_ (Mostra istruzioni) per espandere la link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:FlinkDCConfigWindows.png["Configurazione Flink"]
+
+
+
+== Setup (Configurazione)
+
+Un'implementazione Flink completa comprende i seguenti componenti:
+
+JobManager: Il sistema primario Flink. Coordina una serie di TaskManager. In una configurazione ad alta disponibilità, il sistema avrà più di un JobManager.
+Taskmanager: Qui vengono eseguiti gli operatori Flink.
+Il plugin Flink si basa sul plugin di telegraf, Jolokia. Come requisito per la raccolta di informazioni da tutti i componenti Flink, JMX deve essere configurato ed esposto tramite Jolokia su tutti i componenti.
+
+
+
+=== Compatibilità
+
+La configurazione è stata sviluppata rispetto alla versione 1.7 di Flink.
+
+
+
+=== Configurazione
+
+
+
+==== Jolokia Agent Jar
+
+Per tutti i singoli componenti, è necessario scaricare una versione del file Jar dell'agente di Jlokia. La versione testata con è stata link:https://jolokia.org/download.html["Agente di Jookia 1.6.0"].
+
+Le istruzioni riportate di seguito presuppongono che il file jar scaricato (jookia-jvm-1.6.0-Agent.jar) sia posizionato nella posizione '/opt/flink/lib/'.
+
+
+
+==== JobManager
+
+Per configurare JobManager in modo da esporre l'API di Jookia, è possibile impostare la seguente variabile di ambiente sui nodi e riavviare JobManager:
+
+ export FLINK_ENV_JAVA_OPTS="-javaagent:/opt/flink/lib/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0"
+È possibile scegliere una porta diversa per Jlokia (8778). Se si dispone di un IP interno su cui bloccare Jolokia, è possibile sostituire il "catch all" 0.0.0.0 con il proprio IP. Si noti che questo IP deve essere accessibile dal plugin telegraf.
+
+
+
+==== Taskmanager
+
+Per configurare TaskManager in modo che esponga l'API di Jookia, è possibile impostare la seguente variabile di ambiente sui nodi e riavviare TaskManager:
+
+ export FLINK_ENV_JAVA_OPTS="-javaagent:/opt/flink/lib/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0"
+È possibile scegliere una porta diversa per Jlokia (8778). Se si dispone di un IP interno su cui bloccare Jolokia, è possibile sostituire il "catch all" 0.0.0.0 con il proprio IP. Si noti che questo IP deve essere accessibile dal plugin telegraf.
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Task Manager Flink | Cluster
+Namespace
+Server | Nome del nodo
+ID Gestione attività
+IP nodo | Segmenti di memoria disponibili in rete
+Segmenti della memoria totale di rete
+Garbage Collection - Conteggio selezioni PS
+Garbage Collection tempo di scansione dei marcatori PS
+Conteggio vendemmia PS Garbage Collection
+Garbage Collection - tempo di recupero PS
+Memoria heap impegnata
+Inizializzazione memoria heap
+Memoria heap max
+Memoria heap utilizzata
+Daemon conteggio thread
+Picco conteggio thread
+Conteggio thread
+Totale conteggio thread iniziato 
+
+
+| Flink Job (collega lavoro) | Cluster
+Namespace
+server
+ID lavoro | Nome del nodo
+Nome lavoro
+IP nodo
+Percorso esterno ultimo punto di controllo
+Tempo di riavvio | Downtime
+Riavvio completo
+Ultimo allineamento punto di verifica con buffer
+Durata ultimo punto di controllo
+Dimensione ultimo punto di controllo
+Numero di checkpoint completati
+Numero di checkpoint non riusciti
+Numero di punti di controllo in corso
+Numero di punti di controllo
+Uptime 
+
+
+| Flink Job Manager | Cluster
+Namespace
+Server | Nome del nodo
+IP nodo | Garbage Collection - Conteggio selezioni PS
+Garbage Collection tempo di scansione dei marcatori PS
+Conteggio vendemmia PS Garbage Collection
+Garbage Collection - tempo di recupero PS
+Memoria heap impegnata
+Inizializzazione memoria heap
+Memoria heap max
+Memoria heap utilizzata
+Numero di Task Manager registrati
+Numero processi in esecuzione
+Slot attività disponibili
+Totale slot attività
+Daemon conteggio thread
+Picco conteggio thread
+Conteggio thread
+Totale conteggio thread iniziato 
+
+
+| Attività Flink | Cluster
+Namespace
+ID lavoro
+ID attività | Server
+Nome del nodo
+Nome lavoro
+Indice attività secondaria
+ID tentativo attività
+Numero tentativo attività
+Nome attività
+ID Gestione attività
+IP nodo
+Watermark di input corrente | Buffer in utilizzo pool
+Buffer in lunghezza coda
+Buffer out Pool Usage
+Buffer fuori lunghezza coda
+Buffer numerici in locale
+Numero di buffer nel conteggio locale al secondo
+Buffer numerici in velocità locale al secondo
+Buffer numerici in remoto
+Numero di buffer in remoto al secondo
+Buffer numerici in Remote per Second Rate
+Buffer numeri fuori
+Numero buffer out al secondo
+Numero buffer fuori al secondo tasso
+Numero byte in locale
+Numero di byte nel conteggio locale al secondo
+Numero di byte in velocità locale al secondo
+Numero byte in remoto
+Numero di byte nel conteggio remoto al secondo
+Numero di byte in Remote per Second Rate (velocità remota per secondo)
+Numero byte in uscita
+Numero byte in uscita al secondo
+Numero di byte in uscita per secondo velocità
+Numero record in
+Numero di record per secondo
+Numero di record per secondo tasso
+Record numero in uscita
+Numero record in uscita per secondo
+Numero record fuori per secondo tasso 
+
+
+| Operatore attività Flink | Cluster
+Namespace
+ID lavoro
+ID operatore
+ID attività | Server
+Nome del nodo
+Nome lavoro
+Nome operatore
+Indice attività secondaria
+ID tentativo attività
+Numero tentativo attività
+Nome attività
+ID Gestione attività
+IP nodo | Watermark di input corrente
+Watermark uscita corrente
+Numero record in
+Numero di record per secondo
+Numero di record per secondo tasso
+Record numero in uscita
+Numero record in uscita per secondo
+Numero record fuori per secondo tasso
+Numero di registrazioni tardive escluse
+Partizioni assegnate
+Velocità di consumo byte
+Latenza media commit
+Latenza commit max
+Tasso di impegno
+Commit non riusciti
+Commit riusciti
+Velocità di chiusura connessione
+Numero di connessioni
+Velocità di creazione della connessione
+Conta
+Latenza media recupero
+Latenza recupero max
+Velocità di recupero
+Dimensione di recupero media
+Dimensioni max. Recupero
+Tempo medio di recupero acceleratore
+Tempo max. Accelerazione recupero
+Frequenza heartbeat
+Velocità byte in entrata
+Rapporto io
+Media tempo io (ns)
+Rapporto di attesa io
+Media tempo di attesa io (ns)
+Tariffa di iscrizione
+Media tempo di registrazione
+Ultimo heartbeat fa
+Velocità i/o rete
+Velocità byte in uscita
+Registra il tasso di consumo
+Lag. Record max
+Media record per richiesta
+Richiedi tariffa
+Dimensione richiesta media
+Dimensione richiesta max
+Velocità di risposta
+Selezionare velocità
+Velocità di sincronizzazione
+Media tempo di sincronizzazione
+Tempo di risposta heartbeat max
+Tempo di registrazione max
+Tempo di sincronizzazione max 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_couchdb.html 
+keywords: telegraf, installation, install, couchdb 
+summary: Configurazione del data collector di CouchDB 
+---
+= Data Collector di CouchDB
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilizza questo data collector per raccogliere le metriche da CouchDB.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere CouchDB.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per la raccolta o se si desidera installare un Agent per un sistema operativo o una piattaforma differente, fare clic su _Show Instructions_ (Mostra istruzioni) per espandere la link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:CouchDBDCConfigLinux.png["Configurazione di CouchDB"]
+
+
+
+== Setup (Configurazione)
+
+Le informazioni sono disponibili in link:http://docs.couchdb.org/en/stable/["Documentazione di CouchDB"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Database dei CouchDB | Namespace
+Server | Nome del nodo
+IP nodo | Riscontri cache di autenticazione
+Errore cache autenticazione
+Letture del database
+Scritture database
+Database aperti
+Aprire i file del sistema operativo
+Tempo di richiesta massimo
+Ora richiesta minima
+Httpd - Copia metodi di richiesta
+Metodi di richiesta httpd Elimina
+Httpd metodi di richiesta get
+Httpd Request Methods Head
+Httpd metodi di richiesta Post
+Metodi di richiesta httpd put
+Codici di stato 200
+Codici di stato 201
+Codici di stato 202
+Codici di stato 301
+Codici di stato 304
+Codici di stato 400
+Codici di stato 401
+Codici di stato 403
+Codici di stato 404
+Codici di stato 405
+Codici di stato 409
+Codici di stato 412
+Codici di stato 500 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

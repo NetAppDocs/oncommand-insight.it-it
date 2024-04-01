@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_nginx.html 
+keywords: telegraf, installation, install, nginx 
+summary: Configurazione del data collector nginx 
+---
+= Data Collector nginx
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilizza questo data collector per raccogliere metriche da Nginx.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Nginx.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per la raccolta o se si desidera installare un Agent per un sistema operativo o una piattaforma differente, fare clic su _Show Instructions_ (Mostra istruzioni) per espandere la link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:NginxDCConfigLinux-1.png["Configurazione di Linux Nginx"]
+image:NginxDCConfigLinux-2.png["Configurazione di Linux Nginx"]
+
+
+
+== Setup (Configurazione)
+
+La raccolta di metriche nginx richiede che Nginx link:http://nginx.org/en/docs/http/ngx_http_stub_status_module.html["http_stub_status_module"] essere attivato.
+
+Per ulteriori informazioni, consultare link:http://nginx.org/en/docs/["Documentazione nginx"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Nginx | Namespace
+Server | IP nodo
+Nome del nodo
+Porta | Accetta
+Attivo
+Maneggiate
+Lettura
+Richieste
+In attesa
+Scrittura 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

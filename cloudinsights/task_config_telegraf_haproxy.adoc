@@ -1,0 +1,263 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_haproxy.html 
+keywords: telegraf, installation, install, haproxy 
+summary: HAConfigurazione del data collector Proxy 
+---
+= HAProxy Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilizza questo data collector per raccogliere le metriche da HAProxy.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere HAProxy.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per la raccolta o se si desidera installare un Agent per un sistema operativo o una piattaforma differente, fare clic su _Show Instructions_ (Mostra istruzioni) per espandere la link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:HAProxyDCConfigLinux.png["Configurazione HAProxy"]
+
+
+
+== Setup (Configurazione)
+
+Il plug-in di Telegraf per HAProxy si basa sull'abilitazione delle statistiche HAProxy. Si tratta di una configurazione integrata in HAProxy, ma non è attivata subito. Se attivato, HAProxy espone un endpoint HTML che può essere visualizzato sul browser o scartato per l'estrazione dello stato di tutte le configurazioni HAProxy.
+
+
+
+=== Compatibilità:
+
+La configurazione è stata sviluppata con la versione 1.9 di HAProxy.
+
+
+
+=== Configurazione:
+
+Per abilitare le statistiche, modificare il file di configurazione hadproxy e aggiungere le seguenti righe dopo la sezione 'default', utilizzando il proprio utente/password e/o URL hadproxy:
+
+[listing]
+----
+stats enable
+stats auth myuser:mypassword
+stats uri  /haproxy?stats
+----
+Di seguito viene riportato un esempio semplificato di file di configurazione con le statistiche attivate:
+
+[listing]
+----
+global
+  daemon
+  maxconn 256
+
+defaults
+  mode http
+  stats enable
+  stats uri /haproxy?stats
+  stats auth myuser:mypassword
+  timeout connect 5000ms
+  timeout client 50000ms
+  timeout server 50000ms
+
+frontend http-in
+  bind *:80
+  default_backend servers
+
+frontend http-in9080
+  bind *:9080
+  default_backend servers_2
+
+backend servers
+  server server1 10.128.0.55:8080 check ssl verify none
+  server server2 10.128.0.56:8080 check ssl verify none
+
+backend servers_2
+  server server3 10.128.0.57:8080 check ssl verify none
+  server server4 10.128.0.58:8080 check ssl verify none
+----
+Per istruzioni complete e aggiornate, consultare link:https://cbonte.github.io/haproxy-dconv/1.8/configuration.html#4-stats%20enable["Documentazione HAProxy"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| HAProxy Frontend | Namespace
+Indirizzo
+Proxy | IP nodo
+Nome del nodo
+ID proxy
+Modalità
+id processo
+Limite velocità sessioni
+id server
+Limite sessioni
+Stato | Byte in
+Byte in uscita
+Riscontri cache
+Ricerche nella cache
+Byte di compressione ignorati
+Byte di compressione in
+Byte di compressione in uscita
+Risposte alle compressioni
+Velocità di connessione
+Velocità di connessione max
+Connessioni totale
+Richieste rifiutate dalla regola di connessione
+Richieste negate da problemi di sicurezza
+Risposte negate da problemi di sicurezza
+Richieste rifiutate dalla regola della sessione
+Richiede errori
+Risposte 1xx
+Risposte 2xx
+Risposte 3xx
+Risposte 4xx
+Risposte 5xx
+Risposte altre
+Richieste intercettate
+Frequenza sessioni
+Velocità max. Sessioni
+Tasso di richieste
+Velocità richieste max
+Totale richieste
+Sessioni
+Max. Sessioni
+Totale sessioni
+Richieste riscritture 
+
+
+| Server HAProxy | Namespace
+Indirizzo
+Proxy
+Server | IP nodo
+Nome del nodo
+Controllare l'ora di fine
+Controllare la configurazione di caduta
+Controllare il valore di integrità
+Controllare la configurazione di sollevamento
+Verificare lo stato
+ID proxy
+Ora ultima modifica
+Ora ultima sessione
+Modalità
+id processo
+id server
+Stato
+Peso | Server attivi
+Server di backup
+Byte in
+Byte in uscita
+Controlla le Downs
+Controllo non riuscito
+Il client si interrompe
+Connessioni
+Tempo medio di connessione
+Downtime totale
+Risposte rifiutate
+Errori di connessione
+Errori di risposta
+Risposte 1xx
+Risposte 2xx
+Risposte 3xx
+Risposte 4xx
+Risposte 5xx
+Risposte altre
+Totale server selezionato
+Coda corrente
+Coda Max
+Tempo medio coda
+Sessioni al secondo
+Max. Sessioni al secondo
+Riutilizzo della connessione
+Media dei tempi di risposta
+Sessioni
+Max. Sessioni
+Il trasferimento server viene interrotto
+Totale sessioni
+Media del tempo totale delle sessioni
+Redispatch richieste
+Richieste tentativi
+Richieste riscritture 
+
+
+| HAProxy back-end | Namespace
+Indirizzo
+Proxy | IP nodo
+Nome del nodo
+ID proxy
+Ora ultima modifica
+Ora ultima sessione
+Modalità
+id processo
+id server
+Limite sessioni
+Stato
+Peso | Server attivi
+Server di backup
+Byte in
+Byte in uscita
+Riscontri cache
+Ricerche nella cache
+Controlla le Downs
+Il client si interrompe
+Byte di compressione ignorati
+Byte di compressione in
+Byte di compressione in uscita
+Risposte alle compressioni
+Connessioni
+Tempo medio di connessione
+Downtime totale
+Richieste negate da problemi di sicurezza
+Risposte negate da problemi di sicurezza
+Errori di connessione
+Errori di risposta
+Risposte 1xx
+Risposte 2xx
+Risposte 3xx
+Risposte 4xx
+Risposte 5xx
+Risposte altre
+Totale server selezionato
+Coda corrente
+Coda Max
+Tempo medio coda
+Sessioni al secondo
+Max. Sessioni al secondo
+Totale richieste
+Riutilizzo della connessione
+Media dei tempi di risposta
+Sessioni
+Max. Sessioni
+Il trasferimento server viene interrotto
+Totale sessioni
+Media del tempo totale delle sessioni
+Redispatch richieste
+Richieste tentativi
+Richieste riscritture 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

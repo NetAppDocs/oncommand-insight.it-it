@@ -1,0 +1,477 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_agent.html 
+keywords: telegraf, installation, install, agent, telegraf agent 
+summary: Cloud Insights supporta Telegraf come agente per la raccolta dei dati di integrazione e può essere configurato su Windows o Linux. 
+---
+= Configurazione di un agente per la raccolta dei dati (Windows/Linux)
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilizza link:https://docs.influxdata.com/telegraf["Telefono"] come agente per la raccolta di dati di integrazione. Telegraf è un agente server basato su plug-in che può essere utilizzato per raccogliere e generare report su metriche, eventi e registri. I plug-in di input vengono utilizzati per raccogliere le informazioni desiderate nell'agente accedendo direttamente al sistema/sistema operativo, chiamando API di terze parti o ascoltando flussi configurati (ad esempio Kafka, statsD, ecc.). I plug-in di output vengono utilizzati per inviare metriche, eventi e registri raccolti dall'agente a Cloud Insights.
+
+La versione corrente di Telegraf per Cloud Insights è *1.24.0*.
+
+Per informazioni sull'installazione su Kubernetes, vedere link:task_config_telegraf_agent_k8s.html["questa pagina"].
+
+
+NOTE: Per un audit e un reporting dei dati accurati, si consiglia di sincronizzare l'ora sul computer dell'agente utilizzando *Network Time Protocol (NTP)* o *Simple Network Time Protocol (SNTP)*.
+
+
+NOTE: Se si desidera verificare i file di installazione prima di installare Agent, consultare la sezione seguente a. <<Verifica dei checksum>>.
+
+
+
+== Installazione di un agente
+
+Se si sta installando un servizio di raccolta dati e non si è ancora configurato un agente, viene richiesto di installare prima un agente per il sistema operativo appropriato. In questo argomento vengono fornite istruzioni per l'installazione di Telegraf Agent sui seguenti sistemi operativi:
+
+* <<Windows>>
+* <<RHEL e CentOS>>
+* <<Ubuntu e Debian>>
+
+
+Per installare un agente, indipendentemente dalla piattaforma in uso, è necessario prima effettuare le seguenti operazioni:
+
+. Accedere all'host da utilizzare per l'agente.
+. Accedere all'ambiente Cloud Insights e accedere a *osservabilità > Collector*.
+. Fare clic su *+Data Collector* e scegliere un data collector da installare.
+. Scegli la piattaforma appropriata per il tuo host (Windows, Linux)
+. Seguire i passaggi rimanenti per ciascuna piattaforma.
+
+
+
+NOTE: Una volta installato un agente su un host, non è necessario installare nuovamente un agente su tale host.
+
+
+TIP: Una volta installato un agente su un server/macchina virtuale, Cloud Insights raccoglie le metriche da quel sistema oltre a raccogliere dati da qualsiasi raccolta di dati configurata. Queste metriche vengono raccolte come link:task_config_telegraf_node.html["Metriche "nodo""].
+
+
+NOTE: Se si utilizza un proxy, leggere le istruzioni per il proxy della piattaforma prima di installare l'agente Telegraf.
+
+
+
+=== Posizioni dei log
+
+I messaggi di log di Telegraf vengono reindirizzati da stdout ai seguenti file di log.
+
+* RHEL/CentOS: /Var/log/telegraf/telegraf.log
+* Ubuntu/Debian: /Var/log/telegraf/telegraf.log
+* Windows: C: File di programma telegraf.log
+
+
+
+
+=== Windows
+
+
+
+==== Prerequisiti:
+
+* PowerShell deve essere installato
+* Se si utilizza un proxy, seguire le istruzioni nella sezione *Configurazione del supporto proxy per Windows*.
+
+
+
+
+==== Configurazione del supporto proxy per Windows
+
+
+NOTE: Se l'ambiente in uso utilizza un proxy, leggere questa sezione prima di procedere con l'installazione.
+
+
+NOTE: I passaggi riportati di seguito illustrano le azioni necessarie per impostare le variabili di ambiente _http_proxy/https_proxy_. Per alcuni ambienti proxy, potrebbe essere necessario impostare la variabile _no_proxy environment_.
+
+Per i sistemi che risiedono dietro un proxy, eseguire le seguenti operazioni per impostare le variabili di ambiente _https_proxy_ e/o _http_proxy_ *PRIMA* dell'installazione dell'agente Telegrafe:
+
+ [System.Environment]::SetEnvironmentVariable(“https_proxy”, “<proxy_server>:<proxy_port>”, [System.EnvironmentVariableTarget]::Machine)
+
+
+==== Installazione dell'agente
+
+image:AgentInstallWindows.png["Installazione di Windows Agent"]
+
+.Procedura per l'installazione dell'agente su Windows:
+. Scegliere un tasto di accesso dell'agente.
+. Copiare il blocco di comandi dalla finestra di dialogo di installazione dell'agente. È possibile fare clic sull'icona degli Appunti per copiare rapidamente il comando negli Appunti.
+. Aprire una finestra PowerShell
+. Incollare il comando nella finestra PowerShell e premere Invio.
+. Il comando scarica il programma di installazione dell'agente appropriato, lo installa e imposta una configurazione predefinita. Al termine, il servizio dell'agente verrà riavviato. Il comando ha una chiave univoca ed è valido per 24 ore.
+. Fare clic su *fine* o *continua*
+
+
+Una volta installato l'agente, è possibile utilizzare i seguenti comandi per avviare/arrestare il servizio:
+
+....
+Start-Service telegraf
+Stop-Service telegraf
+....
+
+
+==== Disinstallazione dell'agente
+
+Per disinstallare l'agente su Windows, eseguire le seguenti operazioni in una finestra PowerShell:
+
+. Interrompere ed eliminare il servizio Telegraf:
++
+....
+Stop-Service telegraf
+sc.exe delete telegraf
+....
+. Rimuovere il certificato dal trustore:
++
+....
+cd Cert:\CurrentUser\Root
+//rm E5FB7B68C08B1CA902708584C274F8EFC7BE8ABC
+rm 1A918038E8E127BB5C87A202DF173B97A05B4996
+....
+. Eliminare la cartella _C:/Program Files/telegraf_ per rimuovere i file binari, i log e i file di configurazione
+. Rimuovere la chiave _SYSTEM/CurrentControlSet/Services/EventLog/Application/telegraf_ dal Registro di sistema
+
+
+
+
+==== Aggiornamento dell'Agent
+
+Per aggiornare telegraf Agent, procedere come segue:
+
+. Interrompere ed eliminare il servizio telegraf:
++
+....
+Stop-Service telegraf
+sc.exe delete telegraf
+....
+. Eliminare la chiave _SYSTEM/CurrentControlSet/Services/EventLog/Application/telegraf_ dal Registro di sistema
+. Delete _C:/Program Files/telegraf.conf_
+. Delete _C:/Program Files/telegraf/telegraf.exe_
+. link:#windows["Installare il nuovo agente"].
+
+
+
+
+=== RHEL e CentOS
+
+
+
+==== Prerequisiti:
+
+* Devono essere disponibili i seguenti comandi: Curl, sudo, ping, sha256sum, openssl, e dmidecode
+* Se si utilizza un proxy, seguire le istruzioni nella sezione *Configurazione del supporto proxy per RHEL/CentOS*.
+
+
+
+
+==== Configurazione del supporto proxy per RHEL/CentOS
+
+
+NOTE: Se l'ambiente in uso utilizza un proxy, leggere questa sezione prima di procedere con l'installazione.
+
+
+NOTE: I passaggi riportati di seguito illustrano le azioni necessarie per impostare le variabili di ambiente _http_proxy/https_proxy_. Per alcuni ambienti proxy, potrebbe essere necessario impostare la variabile _no_proxy environment_.
+
+Per i sistemi che risiedono dietro un proxy, eseguire i seguenti passaggi *PRIMA* dell'installazione dell'agente Telegraf:
+
+. Impostare le variabili di ambiente _https_proxy_ e/o _http_proxy_ per l'utente corrente:
++
+ export https_proxy=<proxy_server>:<proxy_port>
+. Creare _/etc/default/telegraf_ e inserire le definizioni per le variabili _https_proxy_ e/o _http_proxy_:
++
+ https_proxy=<proxy_server>:<proxy_port>
+
+
+
+
+==== Installazione dell'agente
+
+image:Agent_Requirements_Rhel.png["Installazione di RHEL/CentOS Agent"]
+
+.Procedura per l'installazione dell'agente su RHEL/CentOS:
+. Scegliere un tasto di accesso dell'agente.
+. Copiare il blocco di comandi dalla finestra di dialogo di installazione dell'agente. È possibile fare clic sull'icona degli Appunti per copiare rapidamente il comando negli Appunti.
+. Aprire una finestra Bash
+. Incollare il comando nella finestra Bash e premere Invio.
+. Il comando scarica il programma di installazione dell'agente appropriato, lo installa e imposta una configurazione predefinita. Al termine, il servizio dell'agente verrà riavviato. Il comando ha una chiave univoca ed è valido per 24 ore.
+. Fare clic su *fine* o *continua*
+
+
+Una volta installato l'agente, è possibile utilizzare i seguenti comandi per avviare/arrestare il servizio:
+
+Se il sistema operativo utilizza systemd (CentOS 7+ e RHEL 7+):
+
+....
+sudo systemctl start telegraf
+sudo systemctl stop telegraf
+....
+Se il sistema operativo in uso non utilizza systemd (CentOS 7+ e RHEL 7+):
+
+....
+sudo service telegraf start
+sudo service telegraf stop
+....
+
+
+==== Disinstallazione dell'agente
+
+Per disinstallare l'agente su RHEL/CentOS, in un terminale Bash, procedere come segue:
+
+. Interrompere il servizio Telegraf:
++
+....
+systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ and RHEL 7+)
+/etc/init.d/telegraf stop (for systems without systemd support)
+....
+. Rimuovere l'agente Telegraf:
++
+ yum remove telegraf
+. Rimuovere eventuali file di configurazione o log che potrebbero essere lasciati indietro:
++
+....
+rm -rf /etc/telegraf*
+rm -rf /var/log/telegraf*
+....
+
+
+
+
+==== Aggiornamento dell'Agent
+
+Per aggiornare telegraf Agent, procedere come segue:
+
+. Interrompere il servizio telegraf:
++
+....
+systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ and RHEL 7+)
+/etc/init.d/telegraf stop (for systems without systemd support)
+....
+. Rimuovere l'agente telegrafo precedente:
++
+ yum remove telegraf
+. link:#rhel-and-centos["Installare il nuovo agente"].
+
+
+
+
+=== Ubuntu e Debian
+
+
+
+==== Prerequisiti:
+
+* Devono essere disponibili i seguenti comandi: Curl, sudo, ping, sha256sum, openssl, e dmidecode
+* Se si utilizza un proxy, seguire le istruzioni nella sezione *Configurazione del supporto proxy per Ubuntu/Debian*.
+
+
+
+
+==== Configurazione del supporto proxy per Ubuntu/Debian
+
+
+NOTE: Se l'ambiente in uso utilizza un proxy, leggere questa sezione prima di procedere con l'installazione.
+
+
+NOTE: I passaggi riportati di seguito illustrano le azioni necessarie per impostare le variabili di ambiente _http_proxy/https_proxy_. Per alcuni ambienti proxy, potrebbe essere necessario impostare la variabile _no_proxy environment_.
+
+Per i sistemi che risiedono dietro un proxy, eseguire i seguenti passaggi *PRIMA* dell'installazione dell'agente Telegraf:
+
+. Impostare le variabili di ambiente _https_proxy_ e/o _http_proxy_ per l'utente corrente:
++
+ export https_proxy=<proxy_server>:<proxy_port>
+. Creare /etc/default/telegraf e inserire le definizioni per le variabili _https_proxy_ e/o _http_proxy_:
++
+ https_proxy=<proxy_server>:<proxy_port>
+
+
+
+
+==== Installazione dell'agente
+
+image:Agent_Requirements_Ubuntu.png["Installazione di Ubuntu/Debian Agent"]
+
+.Procedura per installare Agent su Debian o Ubuntu:
+. Scegliere un tasto di accesso dell'agente.
+. Copiare il blocco di comandi dalla finestra di dialogo di installazione dell'agente. È possibile fare clic sull'icona degli Appunti per copiare rapidamente il comando negli Appunti.
+. Aprire una finestra Bash
+. Incollare il comando nella finestra Bash e premere Invio.
+. Il comando scarica il programma di installazione dell'agente appropriato, lo installa e imposta una configurazione predefinita. Al termine, il servizio dell'agente verrà riavviato. Il comando ha una chiave univoca ed è valido per 24 ore.
+. Fare clic su *fine* o *continua*
+
+
+Una volta installato l'agente, è possibile utilizzare i seguenti comandi per avviare/arrestare il servizio:
+
+Se il sistema operativo in uso utilizza systemd:
+
+....
+sudo systemctl start telegraf
+sudo systemctl stop telegraf
+....
+Se il sistema operativo non utilizza systemd:
+
+....
+sudo service telegraf start
+sudo service telegraf stop
+....
+
+
+==== Disinstallazione dell'agente
+
+Per disinstallare l'agente su Ubuntu/Debian, in un terminale Bash, eseguire quanto segue:
+
+. Interrompere il servizio Telegraf:
++
+....
+systemctl stop telegraf (If your operating system is using systemd)
+/etc/init.d/telegraf stop (for systems without systemd support)
+....
+. Rimuovere l'agente Telegraf:
++
+ dpkg -r telegraf
+. Rimuovere eventuali file di configurazione o log che potrebbero essere lasciati indietro:
++
+....
+rm -rf /etc/telegraf*
+rm -rf /var/log/telegraf*
+....
+
+
+
+
+==== Aggiornamento dell'Agent
+
+Per aggiornare telegraf Agent, procedere come segue:
+
+. Interrompere il servizio telegraf:
++
+....
+systemctl stop telegraf (If your operating system is using systemd)
+/etc/init.d/telegraf stop (for systems without systemd support)
+....
+. Rimuovere l'agente telegrafo precedente:
++
+ dpkg -r telegraf
+. link:#ubuntu-and-debian["Installare il nuovo agente"].
+
+
+
+
+== Verifica dei checksum
+
+Il programma di installazione dell'agente Cloud Insights esegue controlli di integrità, ma alcuni utenti potrebbero voler eseguire le proprie verifiche prima di installare o applicare gli artefatti scaricati. Questo può essere fatto scaricando il programma di installazione e generando un checksum per il pacchetto scaricato, quindi confrontando il checksum con il valore mostrato nelle istruzioni di installazione.
+
+
+
+=== Scaricare il pacchetto di installazione senza eseguire l'installazione
+
+Per eseguire un'operazione di solo download (invece del download e dell'installazione predefiniti), gli utenti possono modificare il comando di installazione dell'agente ottenuto dall'interfaccia utente e rimuovere l'opzione finale di "installazione".
+
+Attenersi alla seguente procedura:
+
+. Copiare il frammento del programma di installazione dell'agente come indicato.
+. Invece di incollare il frammento in una finestra di comando, incollarlo in un editor di testo.
+. Rimuovere "--install" (Linux) o "-install" (Windows) dal comando.
+. Copiare l'intero comando dall'editor di testo.
+. Incollarlo nella finestra di comando (in una directory di lavoro) ed eseguirlo.
+
+
+Non Windows (questi esempi sono per Kubernetes; i nomi degli script effettivi possono variare):
+
+* Download e installazione (impostazione predefinita):
++
+ installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download –-install
+* Solo download:
++
+ installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download
+
+
+Finestre:
+
+* Download e installazione (impostazione predefinita):
++
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download -install)
+* Solo download:
++
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download)
+
+
+Il comando di solo download scaricherà tutti gli artefatti richiesti da Cloud Insights nella directory di lavoro. Gli artefatti includono, ma non possono essere limitati a:
+
+* uno script di installazione
+* un file di ambiente
+* File YAML
+* un file checksum (che termina con sha256.signed o sha256.ps1)
+
+
+Lo script di installazione, il file di ambiente e i file YAML possono essere verificati utilizzando l'ispezione visiva.
+
+
+
+=== Generare un valore di checksum
+
+Per generare il valore del checksum, eseguire il seguente comando per la piattaforma appropriata:
+
+* RHEL/Ubuntu:
++
+ sha256sum <package_name>
+* Finestre:
++
+ Get-FileHash telegraf.zip -Algorithm SHA256 | Format-List
+
+
+
+
+=== Verificare il checksum
+
+Estrarre il checksum previsto dal file checksum
+
+* Non Windows:
++
+ openssl smime -verify -in telegraf*.sha256.signed -CAfile netapp_cert.pem -purpose any -nosigs -noverify
+* Finestre:
++
+ (Get-Content telegraf.zip.sha256.ps1 -First 1).toUpper()
+
+
+
+
+=== Installare il pacchetto scaricato
+
+Una volta verificati correttamente tutti gli artefatti, l'installazione dell'agente può essere avviata eseguendo:
+
+Non Windows:
+
+ sudo -E -H ./<installation_script_name> --install
+Finestre:
+
+ .\cloudinsights-windows.ps1 -install
+
+
+== Risoluzione dei problemi
+
+Alcuni suggerimenti da provare in caso di problemi durante la configurazione di un agente:
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Dopo aver configurato un nuovo plug-in e aver riavviato Telegraf, Telegraf non si avvia. I registri indicano un errore simile a quello riportato di seguito:
+
+"[telegraf] errore durante l'esecuzione dell'agente: Errore durante il caricamento del file di configurazione /etc/telegraf/telegraf.d/cloudinsights-default.conf: Plugin outputs.http: Line <linenumber>: Configuration specificò i campi ["use_system_proxy"], ma non erano utilizzati" | La versione installata di Telegraf è obsoleta. Seguire la procedura riportata in questa pagina per *aggiornare l'Agent* per la piattaforma appropriata. 
+
+
+| Ho eseguito lo script del programma di installazione su una vecchia installazione e ora l'agente non invia dati | Disinstallare telegraf Agent ed eseguire nuovamente lo script di installazione. Seguire la procedura *Upgrade the Agent* riportata in questa pagina per la piattaforma appropriata. 
+
+
+| È già stato installato un agente utilizzando Cloud Insights | Se un agente è già stato installato sull'host/VM, non è necessario installarlo di nuovo. In questo caso, è sufficiente scegliere la piattaforma e la chiave appropriate nella schermata Installazione agente e fare clic su *continua* o *fine*. 
+
+
+| Un agente è già installato, ma non tramite il programma di installazione di Cloud Insights | Rimuovere l'agente precedente ed eseguire l'installazione dell'agente Cloud Insights per verificare che le impostazioni predefinite del file di configurazione siano corrette. Al termine, fare clic su *continua* o *fine*. 
+|===
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
