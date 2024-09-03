@@ -75,9 +75,9 @@ Il gestore unificato di OnCommand opera nel layer di storage array "evice manage
 
 
 
-== Qual è l'ETL secondario OnCommand Insight menzionato nello storefront di automazione?
+== Che cos'è l'ETL secondario di OnCommand Insight?
 
-Il requisito "ETL secondario" a cui si fa riferimento in alcuni download di report di OnCommand Insight Automation Storefront si riferisce a un'implementazione di servizi professionali sviluppata utilizzata per richiamare l'estrazione, la trasformazione e il carico (ETL) aggiuntivi dei dati acquisiti per la popolazione nel data warehouse OnCommand Insight.
+"ETL secondario" si riferisce a un'implementazione di servizi professionali sviluppata utilizzata per richiamare l'estrazione, la trasformazione e il carico aggiuntivi (ETL) dei dati acquisiti, per la popolazione nel data warehouse di OnCommand Insight.
 
 Lo scopo principale del processo ETL secondario consiste nel precaricare i dati "batch", consentendo la generazione più rapida di report più complessi o la pianificazione dell'esecuzione giornaliera.
 

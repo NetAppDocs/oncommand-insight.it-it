@@ -214,16 +214,6 @@ entries:
     url: "/howto/processing-cloud-cost-data-in-insight.html"
   - title: Reporting sui dati dei costi del cloud in Insight
     url: "/howto/reporting-on-cloud-cost-data-task.html"
-- title: Integrazione con ServiceNow
-  url: "/howto/integrating-with-servicenow.html"
-  entries:
-  - title: Preparazione e prerequisiti per l'integrazione di Service Now
-    url: "/howto/preparation-and-prerequisites-for-servicenow-integration.html"
-    entries:
-    - title: Download del connettore Python ServiceNow
-      url: "/howto/downloading-the-servicenow-connector.html"
-  - title: Configurazione di ServiceNow per l'integrazione
-    url: "/howto/configuring-servicenow-for-integration.html"
     entries:
     - title: Elevare il ruolo
       url: "/howto/servicenow-integration-elevate-role.html"
