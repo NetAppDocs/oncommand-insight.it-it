@@ -1,0 +1,16 @@
+---
+permalink: config-admin/reference_data_collector_support_matrix.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La matrice di supporto di Data Collector (origine dati) fornisce informazioni sui data collector supportati.' 
+---
+= Matrice di supporto per Data Collector OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La matrice di supporto per Data Collector fornisce riferimenti per Data Collector supportati da OCI , comprese le informazioni sul fornitore e sul modello.
+
+Questa pagina è un segnaposto.
