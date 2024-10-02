@@ -31,7 +31,7 @@ L'avviso di certificazione non influisce sull'usabilità del sistema. Quando vie
 
 . Elencare i contenuti del keystore: `C:\Program Files\SANscreen\java64\bin>keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
 +
-Quando viene richiesta una password, immettere `changeit`.
+Consultare la link:../config-admin/securityadmin-tool.html["Securityadmin"] documentazione per ulteriori informazioni sull'impostazione o la modifica della password per l'archivio chiavi.
 
 +
 Deve essere presente almeno un certificato nel keystore, `ssl certificate`.

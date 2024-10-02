@@ -37,9 +37,8 @@ Gli utenti LDAP vengono visualizzati insieme agli utenti definiti localmente nel
 . Nella barra degli strumenti Insight, fare clic su *Admin*.
 . Fare clic su *Setup*.
 . Fare clic sulla scheda *utenti*.
-. Scorrere fino alla sezione LDAP, come illustrato di seguito.
-+
-image::../media/ldap-setup.gif[configurazione ldap]
+. Scorrere fino alla sezione LDAP.
+
 
 . Fare clic su *Enable LDAP* (attiva LDAP) per consentire l'autenticazione e l'autorizzazione dell'utente LDAP.
 . Compilare i campi:

@@ -66,7 +66,7 @@ Prima di installare o aggiornare Insight, si consiglia di contattare il Sales En
  a| 
 Sistema operativo
  a| 
-Un computer con Microsoft Windows Server 2016, 2019 o 2022 a 64 bit con il Service Pack più recente.
+Un computer con Microsoft Windows Server 2016, 2019 o 2022 a 64 bit con il Service Pack più recente. Prima di installare OnCommand Insight, è necessario installare Windows .NET Framework versione 3,5.
 
 Il file system resiliente (REF) introdotto con Windows Server 2012 non è compatibile con OnCommand Insight. L'installazione di OnCommand Insight in Windows è supportata solo sul file system NTFS.
 

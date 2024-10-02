@@ -13,6 +13,13 @@ summary: 'È possibile disinstallare un"unità di acquisizione remota quando non
 [role="lead"]
 È possibile disinstallare un'unità di acquisizione remota quando non è più necessaria.
 
+[NOTE]
+====
+*Si consiglia vivamente di eseguire il backup del vault* prima di disinstallare OnCommand Insight.
+
+Per ulteriori informazioni, vedere le link:../config-admin\/security-management.html["Strumento securityadmin"]istruzioni.
+
+====
 
 
 == Fasi

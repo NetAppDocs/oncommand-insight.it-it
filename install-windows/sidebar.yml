@@ -100,8 +100,6 @@ entries:
       - title: Conservazione delle impostazioni Cognos personalizzate durante un aggiornamento
           del Data Warehouse
         url: "/install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html"
-    - title: Backup della configurazione di sicurezza
-      url: "/install-windows/back-up-the-security-configuration.html"
     - title: Aggiornamento dei server delle unità di acquisizione remota
       url: "/install-windows/upgrading-remote-acquisition-servers.html"
   - title: Completamento delle attività post-aggiornamento

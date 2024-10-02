@@ -13,6 +13,13 @@ summary: 'Prima di eseguire l"aggiornamento a una nuova versione, è necessario 
 [role="lead"]
 Prima di eseguire l'aggiornamento a una nuova versione, è necessario disinstallare la versione esistente del software dell'unità di acquisizione remota. Questa attività deve essere eseguita su tutti i server delle unità di acquisizione remote del proprio ambiente.
 
+[NOTE]
+====
+*Si consiglia vivamente di eseguire il backup del vault* prima di disinstallare OnCommand Insight. *È necessario eseguire il backup del vault* se si intende aggiornare OnCommand Insight.
+
+Per ulteriori informazioni, vedere le link:../config-admin\/security-management.html["Strumento securityadmin"]istruzioni.
+
+====
 
 
 == Fasi

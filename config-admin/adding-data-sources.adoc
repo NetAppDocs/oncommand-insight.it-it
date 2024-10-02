@@ -67,7 +67,7 @@ Per la maggior parte delle origini dati, queste opzioni saranno inventario e pre
 |===
 . Fare clic sul collegamento *Configuration* (Configurazione) e immettere le informazioni di configurazione di base richieste per l'origine dati con il tipo di raccolta dati selezionato.
 . Se questo tipo di origine dati richiede di solito informazioni più dettagliate per la configurazione nella rete, fare clic sul collegamento *Advanced Configuration* (Configurazione avanzata) per inserire ulteriori informazioni.
-. Per ulteriori informazioni sulla configurazione o sulle informazioni di configurazione avanzate richieste o disponibili per l'origine dati specifica, consultare la link:vendor-specific-data-source-reference.md#["Riferimento all'origine dati specifica del vendor"].
+. Per informazioni dettagliate sulla configurazione o sulle informazioni di configurazione avanzate richieste o disponibili per l'origine dati specifica, consultare la link:vendor-specific-data-source-reference.html["Riferimento all'origine dati specifica del vendor"].
 . Fare clic sul collegamento *Test* per verificare che l'origine dati sia configurata correttamente.
 . Fare clic su *Save* (Salva).
 

@@ -41,6 +41,7 @@ Per impostazione predefinita, la porta di acquisizione è 443, ma potrebbe esser
 ** *OnCommand Insight* *Nome o indirizzo del server* - Nome host o indirizzo IP per identificare il server OnCommand Insight. La RAU utilizza questo nome/IP per aprire un collegamento di comunicazione con il server. Se si specifica un nome host, assicurarsi che sia possibile risolverlo tramite DNS.
 ** *Acquisition Unit Name* (Nome unità di acquisizione) - Nome univoco che identifica la RAU.
 ** *Porta di acquisizione remota protetta OnCommand Insight (HTTPS)* - porta utilizzata dalle unità di acquisizione remota per inviare informazioni sulle modifiche dell'ambiente al server OnCommand Insight. Questa impostazione deve corrispondere al valore immesso durante l'installazione del server OnCommand Insight e deve essere la stessa su tutti i server Raus.
+** Immettere la password utente _acquisizione_.
 
 
 . Rivedere le selezioni. Fare clic su *Indietro* per tornare indietro e apportare modifiche. Fare clic su *Avanti*.
@@ -55,3 +56,24 @@ Attendere il completamento dell'installazione. Questa operazione dovrebbe richie
 == Al termine
 
 Al termine dell'installazione, viene visualizzata una finestra finale. Fare clic sulla casella *Start Remote Acquisition Service* (Avvia servizio di acquisizione remota) per avviare la RAU, quindi fare clic su *Finish* (fine) per terminare l'operazione.
+
+Se i dati iniziano l'acquisizione, si è tutti impostati; _non_ è necessario sincronizzare il server e la RAU come indicato di seguito.
+
+
+
+== Sincronizza server e RAU
+
+
+IMPORTANT: Se l'acquisizione dei dati non inizia dopo l'installazione dell'unità di acquisizione remota, sincronizzare la RAU con il server OnCommand Insight. Attenersi alla seguente procedura:
+
+. Sul sistema del server OnCommand Insight, avviare lo strumento *securityadmin* in modalità interattiva
++
+ securityadmin -i
+. Modificare la password dell'utente _acquisition_ per Insight Server impostandola su una password a scelta. *Prendere nota di questa password*, in quanto sarà necessaria di seguito.
+. Riavviare il server/LAU.
+. Sul sistema RAU (Remote Acquisition Unit), avviare lo strumento *securityadmin* in modalità interattiva. Sarà necessaria la password annotata al punto 2.
++
+ securityadmin -i
+. Modificare la password per l'utente _acquisition_ con la password utilizzata nel passaggio 2.
+. Riavviare l'RAU.
+

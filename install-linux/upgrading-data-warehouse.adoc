@@ -15,6 +15,17 @@ Dopo aver aggiornato il software del server Insight, è necessario aggiornare il
 
 
 
+== A proposito di questa attività
+
+[NOTE]
+====
+Si consiglia vivamente di eseguire il backup del vault e del database prima di aggiornare DWH.
+
+Vedere le link:../config-admin\/security-management.html["Strumento securityadmin"] istruzioni per ulteriori informazioni sul vault.
+
+====
+
+
 == Fasi
 
 . Accedere al server Data Warehouse (DWH) utilizzando un account con privilegi sudo.

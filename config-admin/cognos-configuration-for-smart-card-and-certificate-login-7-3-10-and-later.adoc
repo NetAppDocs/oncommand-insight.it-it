@@ -38,17 +38,20 @@ Per le istruzioni più aggiornate sul CAC e sul certificato, consulta i seguenti
 . Aggiungere le autorità di certificazione (CA) al trustore Cognos.
 +
 .. In una finestra di comando, passare a. `..\SANscreen\cognos\analytics\configuration\certs\`
-.. Utilizzare `keytool` Utility per elencare le CA attendibili: `..\..\ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass NoPassWordSet`
+.. Utilizzare l' `keytool`utilità per elencare le CA attendibili: `..\..\ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass <password>
+
+
 +
 La prima parola in ciascuna riga indica l'alias della CA.
 
++
 .. Se non esistono file adatti, fornire un file di certificato CA, di solito un `.pem` file.
 .. Per includere le CA del cliente con le CA attendibili di OnCommand Insight, visitare il sito Web all'indirizzo `..\SANscreen\cognos\analytics\configuration\certs\`.
 .. Utilizzare `keytool` utility per importare `.pem` file: `..\..\ibm-jre\jre\bin\keytool.exe -importcert -keystore CAMKeystore.jks -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
 +
-`my_alias` È in genere un alias che identificherebbe facilmente la CA in``keytool -list`` operazione.
+`my_alias` È in genere un alias che identifica facilmente la CA nell'``keytool -list``operazione.
 
-.. Quando viene richiesta una password, immettere `NoPassWordSet`.
+.. Quando viene richiesta una password, immetterla nel file _/SANscreen/bin/cognos_info.dat_.
 .. Risposta `yes` quando viene richiesto di considerare attendibile il certificato.
 
 

@@ -13,6 +13,13 @@ summary: Dopo aver aggiornato il software del server Insight, è necessario aggi
 [role="lead"]
 Dopo aver aggiornato il software del server Insight, è necessario aggiornare il software di acquisizione remota.
 
+[NOTE]
+====
+Si consiglia vivamente di eseguire il backup del vault e del database prima di aggiornare DWH.
+
+Vedere le link:../config-admin\/security-management.html["Strumento securityadmin"] istruzioni per ulteriori informazioni sul vault.
+
+====
 
 
 == Fasi

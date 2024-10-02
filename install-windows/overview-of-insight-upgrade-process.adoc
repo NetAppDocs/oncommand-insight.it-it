@@ -13,6 +13,13 @@ summary: 'Prima di iniziare l"aggiornamento di Insight, è importante comprender
 [role="lead"]
 Prima di iniziare l'aggiornamento di Insight, è importante comprendere il processo di aggiornamento. Il processo di aggiornamento è lo stesso per la maggior parte delle versioni di Insight.
 
+[NOTE]
+====
+*È necessario eseguire il backup del vault* prima di aggiornare OnCommand Insight.
+
+Per ulteriori informazioni, vedere le link:../config-admin\/security-management.html["Strumento securityadmin"]istruzioni.
+
+====
 Il processo di aggiornamento di Insight include le seguenti attività di alto livello:
 
 * Scaricare i pacchetti di installazione

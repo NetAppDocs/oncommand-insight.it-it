@@ -19,6 +19,13 @@ Dopo aver completato tutte le attività dei prerequisiti, accedere al server Ins
 
 Il pacchetto di installazione di Insight deve trovarsi sul server.
 
+[NOTE]
+====
+*È necessario eseguire il backup del vault* prima di aggiornare OnCommand Insight.
+
+Per ulteriori informazioni, vedere le link:../config-admin\/security-management.html["Strumento securityadmin"]istruzioni.
+
+====
 
 
 == Fasi

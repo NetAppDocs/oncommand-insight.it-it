@@ -51,7 +51,7 @@ Per Linux, modificare `clientAuth` parametro in `/opt/netapp/oci/scripts/wildfly
 . Aggiungere le autorità di certificazione (CA) al trustore del Data Warehouse:
 +
 .. In una finestra di comando, passare a. `..\SANscreen\wildfly\standalone\configuration`.
-.. Utilizzare `keytool` Utility per elencare le CA attendibili: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass changeit`
+.. Utilizzare l' `keytool`utilità per elencare le CA attendibili: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass <password>` + consultare la link:../config-admin/securityadmin-tool.html["Securityadmin"]documentazione per ulteriori informazioni sull'impostazione o la modifica della password per server_trustore.
 +
 La prima parola in ciascuna riga indica l'alias della CA.
 

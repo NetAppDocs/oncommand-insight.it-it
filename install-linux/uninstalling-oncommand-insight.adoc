@@ -13,4 +13,11 @@ summary: Se necessario, è possibile disinstallare i componenti di OnCommand Ins
 [role="lead"]
 Se necessario, è possibile disinstallare i componenti di OnCommand Insight. È necessario disinstallare i componenti di OnCommand Insight separatamente.
 
+[NOTE]
+====
+*Si consiglia vivamente di eseguire il backup del vault* prima di disinstallare OnCommand Insight.
+
+Per ulteriori informazioni, vedere le link:../config-admin\/security-management.html["Strumento securityadmin"]istruzioni.
+
+====
 Ogni componente viene disinstallato separatamente.

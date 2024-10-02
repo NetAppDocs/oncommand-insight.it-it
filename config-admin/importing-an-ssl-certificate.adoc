@@ -25,7 +25,9 @@ Assicurarsi che il sistema soddisfi il livello di bit minimo richiesto (1024 bit
 
 [NOTE]
 ====
-Prima di tentare di eseguire questa procedura, è necessario eseguire il backup di quella esistente `server.keystore` e assegnare un nome al backup `server.keystore.old`. Corrompendo o danneggiando `server.keystore` Dopo il riavvio del server Insight, il file potrebbe causare l'inoperabilità di un server Insight. Se si crea un backup, è possibile ripristinare il file precedente in caso di problemi.
+Si consiglia vivamente di eseguire il backup del vault prima dell'aggiornamento.
+
+Vedere le link:../config-admin\/security-management.html["Strumento securityadmin"] istruzioni per ulteriori informazioni sul vault e sulla gestione delle password.
 
 ====
 
@@ -34,10 +36,6 @@ Prima di tentare di eseguire questa procedura, è necessario eseguire il backup 
 
 . Creare una copia del file keystore originale: `cp c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore.old`
 . Elencare i contenuti del keystore: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
-+
-.. Quando viene richiesta una password, immettere `changeit`.
-
-
 +
 Il sistema visualizza il contenuto del keystore. Deve essere presente almeno un certificato nel keystore, `"ssl certificate"`.
 

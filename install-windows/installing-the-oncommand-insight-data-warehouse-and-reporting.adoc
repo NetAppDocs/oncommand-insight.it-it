@@ -47,7 +47,7 @@ Prima di installare o aggiornare, tenere presente quanto segue.
 
 []
 ====
-Il nome utente DB2 e il nome di accesso Windows hanno le seguenti restrizioni: * I caratteri validi sono: Da 'A' a 'Z'; da 'A' a 'z'; da '0' a '9'; ' N.'; '@'; '_'; '!'; '('; ')'; '{'; '}'; '-'; e '.'. * Se si utilizzano i caratteri speciali '!'; '('; ')'; '{'; '}'; '-'; e '.' il nome utente deve essere composto da lettere maiuscole. * Il primo carattere della stringa deve essere un carattere alfabetico, @, N. o €; non può essere un numero o le sequenze di lettere _SYS_, _DBM_ o _IBM_ * e non può superare i 128 byte di lunghezza. * Non possono essere UTENTI, AMMINISTRATORI, OSPITI, PUBBLICO, LOCALE o qualsiasi parola riservata SQL.
+Il nome utente DB2 e il nome di accesso di Windows hanno le seguenti restrizioni: * I caratteri validi sono: Da 'A' a 'Z'; da 'A' a 'z'; da '0' a '9'; '@'; '_'; '!'; '('; ')'; '{'; '}'; '-'; e '.'. * Se si utilizzano i caratteri speciali '!'; '('; ')'; '{'; '}'; '-'; e '.' il nome utente deve essere composto da lettere maiuscole. * Il primo carattere della stringa deve essere un carattere alfabetico, @, N. o €; non può essere un numero o le sequenze di lettere _SYS_, _DBM_ o _IBM_ * e non può superare i 128 byte di lunghezza. * Non possono essere UTENTI, AMMINISTRATORI, OSPITI, PUBBLICO, LOCALE o qualsiasi parola riservata SQL.
 
 ====
 * L'utente DB2 non può essere lo stesso dell'utente che esegue l'installazione.
@@ -76,4 +76,24 @@ Con OnCommand Insight 7.3.10 e versioni successive, è necessario eseguire lo sc
 +
 Il completamento di Data Warehouse con creazione di report può richiedere fino a un'ora.
 
+
+
+
+
+== Sincronizza server e DWH
+
+
+IMPORTANT: Dopo aver installato il Data Warehouse, è *necessario* sincronizzare il Data Warehouse con il server OnCommand Insight. Attenersi alla seguente procedura:
+
+. Sul sistema del server OnCommand Insight, avviare lo strumento *securityadmin* in modalità interattiva
++
+ securityadmin -i
+. Modificare la password per gli utenti _inventory_ e _dwh_internal_ in password di propria scelta. *Prendere nota di queste password*, in quanto saranno necessarie di seguito.
+. Riavviare il servizio DWH.
+. Su *ogni connettore* avvia lo strumento *securityadmin* in modalità interattiva. Saranno necessarie le password annotate al punto 2.
++
+ securityadmin -i
+. Modificare le password per gli utenti _inventory_ e _dwh_internal_ con le password utilizzate nel passaggio 2.
+. Riavviare i servizi sui connettori.
+. Aggiungere i connettori a DWH, utilizzando le password per gli utenti _inventory_ e _dwh_internal_ del passaggio 2
 

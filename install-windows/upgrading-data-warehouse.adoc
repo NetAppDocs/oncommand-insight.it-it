@@ -21,29 +21,33 @@ L'aggiornamento inline non è supportato dal Data Warehouse (DWH). Per eseguire 
 
 [NOTE]
 ====
-Quando si aggiorna DWH, la cartella contenente il backup del vault dello strumento _securityadmin_ viene eliminata. Si consiglia vivamente di eseguire il backup del vault prima di aggiornare DWH. Per riferimento, le cartelle predefinite del vault sono le seguenti:
+*È necessario eseguire il backup del vault* prima di aggiornare DWH.
 
-* Cartella del vault (vault in uso):``%SANSCREEN_HOME%\wildfly\standalone\configuration\vault``
-* Backup del vault: `%SANSCREEN_HOME%\backup\vault`
-
-
-Vedere http://ie-docs.rtp.openeng.netapp.com/oci-73_ram/topic/com.netapp.doc.oci-acg/GUID-E3351676-2088-4767-AAB5-CB1D8476291C.html?resultof=%22%76%61%75%6c%74%22%20["Gestione della sicurezza nel Data Warehouse"] per ulteriori informazioni.
+Per ulteriori informazioni, vedere le link:../config-admin\/security-management.html["Strumento securityadmin"]istruzioni.
 
 ====
 
 
 == Fasi
 
+Quando si aggiorna il Data Warehouse, è necessario effettuare le seguenti operazioni:
+
+. Dopo aver installato DWH 7,3.16, ripristinare il vault e il database nel seguente ordine:
++
+.. Vault
+.. Database
+
+
 . Accedere al server DWH utilizzando un account che dispone delle autorizzazioni di amministratore locale di Windows.
 . Eseguire il backup di DWH DB e Reports utilizzando l'interfaccia del portale DWH.
-. Eseguire il backup della configurazione di protezione se il server utilizza una configurazione di protezione non predefinita.
+. Eseguire il backup del vault. Consultare la link:../config-admin/security-management.html["Securityadmin"] documentazione.
 . Disinstallare il software DWH dal server.
 . Riavviare il server per rimuovere i componenti dalla memoria.
 . Installare la nuova versione di DWH sul server.
 +
 L'installazione richiede circa 2 ore. Si consiglia di lasciare selezionate tutte le impostazioni predefinite.
 
-. Ripristinare la configurazione di sicurezza non predefinita sul server DWH.
+. Ripristinare il vault sul server DWH.
 . Ripristinare il database DWH sul server.
 
 

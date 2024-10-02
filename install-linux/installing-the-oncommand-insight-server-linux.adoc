@@ -39,6 +39,14 @@ Verificare il numero di versione del file di installazione; il numero di version
 +
 `sudo ./oci-<version>-linux-x86_64/oci-install.sh`
 
++
+Quando si installa Insight Server su CentOS 9 Stream, Red Hat Enterprise Linux 9,4 o Oracle Linux 9,4, è necessario prima passare alla directory contenente il file di installazione e quindi eseguire il comando install utilizzando l'opzione della riga di comando "--install-mysql-dependencies":
+
++
+....
+cd /tmp/oci-7.3.16.1.297-linux-x86_64
+sudo ./oci-install.sh --install-mysql-dependencies
+....
 . Leggere il Contratto di licenza, accettarlo e seguire le istruzioni.
 . Se si utilizza il modello di licenza Insight Consumption, è necessario abilitare l'invio di informazioni sull'utilizzo a NetApp. Invio `Y` a questo prompt.
 
@@ -48,3 +56,24 @@ Verificare il numero di versione del file di installazione; il numero di version
 == Risultati
 
 Dopo aver risposto a tutte le richieste, l'installazione inizia e richiede circa 10 minuti, a seconda delle applicazioni installate.
+
+. Se si desidera installare un'unità di acquisizione remota (RAU), è necessario eseguire lo strumento securityadmin per creare una password per l'utente _acquisition_. Questa password è necessaria per l'installazione della RAU.
++
+Nota: Se è stata creata questa password, _non_ è necessario sincronizzare il server e la RAU come indicato di seguito.
+
+
+
+
+
+== Sincronizzare il server con DWH e RAU
+
+
+IMPORTANT: Dopo aver installato l'unità di acquisizione remota e/o il data warehouse, è *necessario* sincronizzare RAU/DWH con il server OnCommand Insight. Attenersi alla procedura indicata di seguito:
+
+link:../install-windows/installing-a-remote-acquisition-unit-rau.html#synchronize-server-and-rau["Sincronizza server e RAU (Windows)"]
+
+link:../install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html#synchronize-server-and-dwh["Sincronizza server e DWH (Windows)"]
+
+link:../install-linux/installing-a-remote-acquisition-unit-rau-linux.html#synchronize-server-and-rau["Sincronizza server e RAU (Linux)"]
+
+link:../install-linux/installing-oncommand-insight-data-warehouse-linux.html#synchronize-server-and-dwh["Sincronizza server e DWH (Linux)"]

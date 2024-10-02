@@ -13,4 +13,11 @@ summary: 'Prima di eseguire l"aggiornamento, è necessario eseguire il backup de
 [role="lead"]
 Prima di eseguire l'aggiornamento, è necessario eseguire il backup dei database Data Warehouse e OnCommand Insight. L'aggiornamento richiede un backup del database Data Warehouse in modo da poter ripristinare il database in un secondo momento del processo di aggiornamento. L'aggiornamento in-place per Insight esegue il backup del database; tuttavia, è necessario eseguire il backup del database prima dell'aggiornamento come Best practice.
 
+[NOTE]
+====
+*È necessario eseguire il backup del vault* prima di aggiornare OnCommand Insight.
+
+Per ulteriori informazioni, vedere le link:../config-admin\/security-management.html["Strumento securityadmin"]istruzioni.
+
+====
 Per evitare errori di reporting dei dati, è necessario eseguire il backup del database Data Warehouse prima di eseguire il backup del database Insight. Inoltre, se si dispone di un ambiente di test, si consiglia di assicurarsi di poter ripristinare il backup prima di continuare con l'aggiornamento.

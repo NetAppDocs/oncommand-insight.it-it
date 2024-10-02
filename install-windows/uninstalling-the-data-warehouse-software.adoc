@@ -13,6 +13,13 @@ summary: 'Prima di eseguire l"aggiornamento, è necessario disinstallare il soft
 [role="lead"]
 Prima di eseguire l'aggiornamento, è necessario disinstallare il software Data Warehouse.
 
+[NOTE]
+====
+*Si consiglia vivamente di eseguire il backup del vault* prima di disinstallare OnCommand Insight. *È necessario eseguire il backup del vault* se si intende aggiornare OnCommand Insight.
+
+Per ulteriori informazioni, vedere le link:../config-admin\/security-management.html["Strumento securityadmin"]istruzioni.
+
+====
 
 
 == Prima di iniziare

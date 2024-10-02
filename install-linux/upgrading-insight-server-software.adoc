@@ -13,6 +13,13 @@ summary: 'Dopo aver effettuato l"accesso al server, è possibile verificare la d
 [role="lead"]
 Dopo aver effettuato l'accesso al server, è possibile verificare la disponibilità di aggiornamenti del server OnCommand Insight.
 
+[NOTE]
+====
+Si consiglia vivamente di eseguire il backup del vault e del database prima di aggiornare OnCommand Insight.
+
+Vedere le link:../config-admin\/security-management.html["Strumento securityadmin"] istruzioni per ulteriori informazioni sul vault.
+
+====
 
 
 == Fasi

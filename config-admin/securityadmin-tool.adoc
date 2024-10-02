@@ -1,17 +1,17 @@
 ---
-permalink: config-admin/security-management.html 
+permalink: config-admin/securityadmin-tool.html 
 sidebar: sidebar 
 keywords: SecurityAdmin, security, password, keystore, truststore, trustore, 
 summary: Lo strumento di amministrazione della sicurezza di OnCommand Insight include funzionalità che consentono agli ambienti Insight di operare con una protezione avanzata, tra cui crittografia, hash delle password e la possibilità di modificare le password interne degli utenti e le coppie di chiavi che crittografano e decrittografano le password. 
 ---
-= Insight Security
+= Strumento securityadmin
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-OnCommand Insight fornisce funzionalità che consentono agli ambienti Insight di operare con una maggiore sicurezza. Queste funzioni includono crittografia, hash delle password e la possibilità di modificare le password interne degli utenti e le coppie di chiavi che crittografano e decrittografano le password. È possibile gestire queste funzioni su tutti i server dell'ambiente Insight utilizzando Securityadmin Tool.
+OnCommand Insight fornisce funzionalità che consentono agli ambienti Insight di operare con una maggiore sicurezza. Queste funzioni includono crittografia, hash delle password e la possibilità di modificare le password interne degli utenti e le coppie di chiavi che crittografano e decrittografano le password. È possibile gestire queste funzionalità su tutti i server dell'ambiente Insight utilizzando *securityadmin Tool*.
 
 
 
@@ -105,6 +105,8 @@ Creare un file zip contenente il vault. Il percorso relativo ai file del vault c
 * acq/conf/vault/*
 
 
+Si consiglia vivamente di eseguire il backup del vault ogni volta che si esegue il backup di un database OnCommand Insight.
+
 
 
  a| 
@@ -124,9 +126,8 @@ Questo può essere utilizzato quando il vault e l'installazione non sono coerent
 
 
  a| 
-change-trust-store-password
  a| 
-Modificare la password utilizzata per un archivio attendibile e memorizzare la nuova password nel vault. La password corrente dell'archivio di fiducia deve essere "conosciuta".
+Change-trust-store-password modificare la password utilizzata per un trust-store e memorizzare la nuova password nel vault. La password corrente dell'archivio di fiducia deve essere "conosciuta".
 
 
 
@@ -207,29 +208,6 @@ Creare un nuovo vault vuoto (che avrà chiavi diverse da quelle esistenti). Quin
 |===
 
 
-=== Comandi nascosti
-
-Lo strumento SA fornisce i seguenti comandi che non richiedono l'autenticazione ma apportano modifiche coordinate all'installazione.
-
-[cols="25a,75a"]
-|===
-
-
- a| 
-aggiornamento list-keys (server)
- a| 
-Se l'utente non ha eseguito l'autenticazione, eseguire l'autenticazione utilizzando l'account _interno e la password nel vault corrente. Quindi sostituire il vault corrente con il vault nel file di backup ed eseguire le azioni coordinate.
-
-
-
- a| 
-aggiornamento (acquisizione)
- a| 
-Sostituire il vault corrente con il vault nel file di backup ed eseguire le azioni coordinate.
-
-|===
-
-
 == Azioni coordinate
 
 
@@ -243,30 +221,30 @@ Sostituire il vault corrente con il vault nel file di backup ed eseguire le azio
  a| 
 _interno
  a| 
-Aggiorna hash password per l'utente nel database
+aggiorna hash password per l'utente nel database
 
 
 
  a| 
 acquisizione
  a| 
-Aggiorna hash password per l'utente nel database
+aggiorna hash password per l'utente nel database
 
-Se il vault di acquisizione è presente, aggiornare anche la voce nel vault di acquisizione
+se il vault di acquisizione è presente, aggiornare anche la voce nel vault di acquisizione
 
 
 
  a| 
 dwh_internal
  a| 
-Aggiorna hash password per l'utente nel database
+aggiorna hash password per l'utente nel database
 
 
 
  a| 
 cognos_admin
  a| 
-Aggiorna hash password per l'utente nel database
+aggiorna hash password per l'utente nel database
 
 Se DWH e Windows, aggiornare SANscreen/cognos/Analytics/Configuration/SANscreenAP.properties per impostare la proprietà cognos.admin sulla password.
 
@@ -322,28 +300,28 @@ Eseguire SQL per aggiornare la password utente nell'istanza MySQL
  a| 
 password_keystore
  a| 
-Riscrivere il keystore con la nuova password - wildfly/standalone/Configuration/server.keystore
+riscrivere il keystore con la nuova password - wildfly/standalone/configuration/server.keystore
 
 
 
  a| 
 truststore_password
  a| 
-Riscrivere il keystore con la nuova password - wildfly/standalone/Configuration/server.trustore
+riscrivere il keystore con la nuova password - wildfly/standalone/configuration/server.trustore
 
 
 
  a| 
 password_chiave
  a| 
-Riscrivere il keystore con la nuova password - wildfly/standalone/Configuration/sso.jks
+riscrivere il keystore con la nuova password - wildfly/standalone/configuration/sso.jks
 
 
 
  a| 
 archivio_cognos
  a| 
-Nessuno
+nessuno
 
 |===
 
@@ -357,14 +335,14 @@ Nessuno
  a| 
 acquisizione
  a| 
-Nessuno
+nessuno
 
 
 
  a| 
 truststore_password
  a| 
-Riscrivere il keystore con la nuova password (se esiste) - acq/conf/cert/client.keystore
+riscrivere il keystore con la nuova password (se esiste) - acq/conf/cert/client.keystore
 
 |===
 

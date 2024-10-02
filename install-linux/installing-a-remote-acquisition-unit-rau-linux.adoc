@@ -55,3 +55,24 @@ Per gli ambienti che utilizzano Network Address Translation o Port Address Trans
 Dopo aver risposto a tutte le richieste, l'installazione inizia e richiede circa 10 minuti, a seconda delle applicazioni installate.
 
 
+
+Se i dati iniziano l'acquisizione, si è tutti impostati; _non_ è necessario sincronizzare il server e la RAU come indicato di seguito.
+
+
+
+== Sincronizza server e RAU
+
+
+IMPORTANT: Se l'acquisizione dei dati non inizia dopo l'installazione dell'unità di acquisizione remota, sincronizzare la RAU con il server OnCommand Insight. Attenersi alla seguente procedura:
+
+. Sul sistema del server OnCommand Insight, avviare lo strumento *securityadmin* in modalità interattiva
++
+ securityadmin -i
+. Modificare la password dell'utente _acquisition_ per Insight Server impostandola su una password a scelta. *Prendere nota di questa password*, in quanto sarà necessaria di seguito.
+. Riavviare il server/LAU.
+. Sul sistema RAU (Remote Acquisition Unit), avviare lo strumento *securityadmin* in modalità interattiva. Sarà necessaria la password annotata al punto 2.
++
+ securityadmin -i
+. Modificare la password per l'utente _acquisition_ con la password utilizzata nel passaggio 2.
+. Riavviare l'RAU.
+

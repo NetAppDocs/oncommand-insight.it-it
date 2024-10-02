@@ -13,12 +13,14 @@ summary: Alcune modifiche sono necessarie per abilitare il CAC su un server Linu
 [role="lead"]
 Alcune modifiche sono necessarie per abilitare il CAC su un server Linux OnCommand Insight.
 
+La CA principale deve essere importata nel truststore.
+
 
 
 == Fasi
 
 . Selezionare `/opt/netapp/oci/conf/`
 . Modifica `wildfly.properties` e modificare il valore di `CLIENT_AUTH_ENABLED` A "vero"
-. Importare il "`certificato root`" esistente in `/opt/netapp/oci/wildfly/standalone/configuration/server.keystore`
+. Importare il "`certificato di origine'' esistente in `/opt/netapp/oci/wildfly/standalone/configuration/server.truststore`
 . Riavviare il server
 
