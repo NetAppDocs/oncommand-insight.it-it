@@ -21,6 +21,9 @@ summary: 'È necessario apportare modifiche alla configurazione dell"host OnComm
 * LDAP `User principal account name` L'attributo deve corrispondere al campo LDAP che contiene l'ID dell'utente.
 
 
+
+NOTE: Se sono state modificate le password _server.keystore_ e/o _server.trustore_ utilizzando link:../config-admin/security-management.html["securityadmin"], riavviare il servizio _SANscreen_ prima di importare il certificato LDAP.
+
 [NOTE]
 ====
 Per le istruzioni più aggiornate sul CAC e sul certificato, consulta i seguenti articoli della Knowledge base (è richiesto l'accesso al supporto):

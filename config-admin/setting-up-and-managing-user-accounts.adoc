@@ -25,6 +25,9 @@ Gli account utente, l'autenticazione utente e l'autorizzazione utente possono es
 * Assegnare i ruoli utente corretti.
 
 
+
+NOTE: Se si sta importando un certificato LDAP e sono state modificate le password _server.keystore_ e/o _server.trustore_ utilizzando link:../config-admin/security-management.html["securityadmin"], riavviare il servizio _SANscreen_ prima di importare il certificato LDAP.
+
 [NOTE]
 ====
 Le Best practice di sicurezza impongono agli amministratori di configurare il sistema operativo host per impedire l'accesso interattivo di utenti non amministratori/standard.

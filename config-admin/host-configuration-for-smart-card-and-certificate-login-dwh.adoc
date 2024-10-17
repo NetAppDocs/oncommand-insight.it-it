@@ -24,6 +24,9 @@ Il nome comune (CN) memorizzato nei CAC emessi dal governo è normalmente nel se
 
 
 
+
+NOTE: Se sono state modificate le password _server.keystore_ e/o _server.trustore_ utilizzando link:../config-admin/security-management.html["securityadmin"], riavviare il servizio _SANscreen_ prima di importare il certificato LDAP.
+
 [NOTE]
 ====
 Per le istruzioni più aggiornate sul CAC e sul certificato, consulta i seguenti articoli della Knowledge base (è richiesto l'accesso al supporto):

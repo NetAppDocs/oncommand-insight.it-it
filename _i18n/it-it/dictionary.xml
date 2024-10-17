@@ -8697,4 +8697,8 @@ L'installazione include le seguenti attività principali:</block>
   <block id="90264ebb70e49e99bceb1035bdcc8307" category="sidebar">Documentazione OnCommand Insight</block>
   <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="sidebar">Matrice di supporto Data Collector</block>
   <block id="b0430548e2edafebde6bfdf10cf93cc6" category="sidebar">Insight Security (strumento di amministrazione della sicurezza)</block>
+  <block id="4924cdf1992856713a11ebac184ceb81" category="inline-link-macro">securityadmin</block>
+  <block id="280dd41aa1500bfa7ef3a8678e713080" category="admonition">Se sono state modificate le password _server.keystore_ e/o _server.trustore_ utilizzando <block ref="5055fc7731112a1043a6604413e43539" category="inline-link-macro-rx"></block>, riavviare il servizio _SANscreen_ prima di importare il certificato LDAP.</block>
+  <block id="ec4ef90f124e4475455cd66560c26fde" category="admonition">Se sono state modificate le password _server.keystore_ e/o _server.trustore_ utilizzando <block ref="5055fc7731112a1043a6604413e43539" category="inline-link-macro-rx"></block>, riavviare il servizio _SANscreen_ prima di importare il certificato LDAP.</block>
+  <block id="a10389a2280f5287a5b5a38c80d3521f" category="admonition">Se si sta importando un certificato LDAP e sono state modificate le password _server.keystore_ e/o _server.trustore_ utilizzando <block ref="5055fc7731112a1043a6604413e43539" category="inline-link-macro-rx"></block>, riavviare il servizio _SANscreen_ prima di importare il certificato LDAP.</block>
 </blocks>

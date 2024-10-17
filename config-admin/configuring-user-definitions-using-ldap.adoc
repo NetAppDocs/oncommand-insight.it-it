@@ -23,6 +23,9 @@ Per configurare OnCommand Insight (OCI) per l'autenticazione utente e l'autorizz
 Per tutti gli utenti di Secure Active Directory (ad esempio LDAPS), è necessario utilizzare il nome del server ad esattamente come definito nel certificato. Non è possibile utilizzare l'indirizzo IP per l'accesso ad sicuro.
 
 
+NOTE: Se sono state modificate le password _server.keystore_ e/o _server.trustore_ utilizzando link:../config-admin/security-management.html["securityadmin"], riavviare il servizio _SANscreen_ prima di importare il certificato LDAP.
+
+
 
 == A proposito di questa attività
 
